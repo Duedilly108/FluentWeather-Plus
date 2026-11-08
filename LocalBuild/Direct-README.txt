@@ -2,14 +2,14 @@ FluentWeather-Plus {PLUS}
 =====================
 
 A weather app for Windows with saved locations and weather icons in the taskbar.
-Based on FluentWeather by Gabboxl, with additions by duedilly108.
+Based on FluentWeather by Gabboxl, with copious additions by duedilly108.
 Build {VERSION}
 
 Saves locations and switches between them with one click.
 Temperature and conditions icon in the system tray.
 Hover over the tray icons for a range of selectable details.
 Radar map for US locations.
-View of the past two days.
+Memory view of the past two days.
 Air quality for every location.
 Customize text size, background contrast, card tint, forecast length and language.
 
@@ -26,14 +26,14 @@ Install
 3. In the setup window, pick the options you want, then select Install.
 4. Approve the administrator prompt once.
 
-FluentWeather-Plus opens when the setup is done.
+FluentWeather-Plus opens when setup is done.
 
 
 Notes
 -----
-The app connects to weather.com for the weather data.
+Connects to weather.com for the weather data.
 For US locations it also connects to NOAA and USGS for the radar map.
-It connects to Open-Meteo for the air quality.
+Connects to Open-Meteo for the air quality.
 
 
 VirusTotal:
@@ -48,7 +48,7 @@ uninstaller:
 
 Versions
 --------
-Check here for new versions.
+For new versions:
 https://github.com/Duedilly108/FluentWeather-Plus/releases
 
 
