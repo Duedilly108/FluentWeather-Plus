@@ -20,10 +20,22 @@ namespace FluentWeather.Models
         public MoonTimes? v3wxforecastdaily3day { get; set; }
     }
 
-    /// <summary>Only the moonrise and moonset times of the daily forecast. Both lists can hold nulls.</summary>
+    /// <summary>
+    /// The parts of the 3-day forecast that the small request needs: the moonrise and moonset times,
+    /// and the day and night conditions for the "Past days" record. All lists can hold nulls.
+    /// </summary>
     public class MoonTimes
     {
         public List<DateTimeOffset?>? moonriseTimeLocal { get; set; }
         public List<DateTimeOffset?>? moonsetTimeLocal { get; set; }
+        public List<DaypartConditions>? daypart { get; set; }
+    }
+
+    /// <summary>Day and night conditions of the forecast: entry 0 is today's day part, entry 1 tonight.</summary>
+    public class DaypartConditions
+    {
+        public List<int?>? iconCode { get; set; }
+        public List<string?>? wxPhraseLong { get; set; }
+        public List<int?>? precipChance { get; set; }
     }
 }

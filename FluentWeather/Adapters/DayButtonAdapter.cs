@@ -16,7 +16,10 @@ namespace FluentWeather.Adapters
         {
             get
             {
-                var maxTemp = CurrentObject.temperatureMax[ItemIndex];
+                // In the evening weather.com leaves today's daytime high empty, because only the night
+                // part of the day is left. The high of the whole calendar day stays, so use that one.
+                var maxTemp = CurrentObject.temperatureMax[ItemIndex]
+                              ?? CurrentObject.calendarDayTemperatureMax?[ItemIndex];
                 var minTemp = CurrentObject.temperatureMin[ItemIndex];
 
 

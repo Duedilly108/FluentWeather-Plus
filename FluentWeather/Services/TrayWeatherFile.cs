@@ -114,6 +114,11 @@ namespace FluentWeather.Services
                         if (data?.v3wxobservationscurrent == null || data.v3locationpoint?.LocationV3 == null)
                             return previous.TryGetValue(location.PlaceId, out var old) ? old : null;
 
+                        // "Past days": the data is here anyway, so it also updates today's record.
+                        var part = data.v3wxforecastdaily3day?.daypart?.FirstOrDefault();
+                        await PastDaysService.ObserveAsync(location.PlaceId, data.v3wxobservationscurrent,
+                            part?.iconCode, part?.wxPhraseLong, part?.precipChance, units.ToString());
+
                         return "[" + location.PlaceId + "]\n" +
                                await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
                                    data.v3wxforecastdaily3day?.moonriseTimeLocal, data.v3wxforecastdaily3day?.moonsetTimeLocal);

@@ -103,8 +103,8 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Direct\FluentWeather-Setup.exe
-    FluentWeather-Direct\FluentWeather-Uninstall.exe
+    FluentWeather-Direct\FluentWeather-Setup-<version>.exe
+    FluentWeather-Direct\FluentWeather-Uninstall-<version>.exe
     FluentWeather-Direct\README.txt
 and a zip of these three files, FluentWeather-Direct-<version>.zip.
 

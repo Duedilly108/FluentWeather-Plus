@@ -39,8 +39,8 @@ using Windows.Management.Deployment;
 #endif
 [assembly: AssemblyProduct("FluentWeather (Local)")]
 [assembly: AssemblyCompany("duedilly")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// AssemblyVersion, AssemblyFileVersion, AssemblyInformationalVersion and AssemblyCopyright come from
+// VersionInfo.cs, which Make-DirectInstaller.ps1 writes with the version of the app it packs.
 
 namespace FluentWeatherLocal
 {
@@ -96,6 +96,16 @@ namespace FluentWeatherLocal
         }
 
         // ---- Shared helpers -----------------------------------------------------------------------
+
+        // The version of the app in this setup, for example 2.1.0.19.
+        private static string VersionText
+        {
+            get
+            {
+                try { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
+                catch { return ""; }
+            }
+        }
 
         private static string LocalAppData { get { return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData); } }
         private static string InstallDir { get { return Path.Combine(LocalAppData, @"Programs\FluentWeather"); } }
@@ -292,6 +302,25 @@ namespace FluentWeatherLocal
             finally { store.Close(); }
         }
 
+        // Ends the tray icons that run from the install folder. Windows cannot replace or delete a
+        // program file while it runs. Tray icons from another folder are left alone.
+        private static void StopTray()
+        {
+            foreach (Process p in Process.GetProcessesByName("FluentWeatherTray"))
+            {
+                try
+                {
+                    string path = p.MainModule.FileName;
+                    if (path != null && path.StartsWith(InstallDir + "\\", StringComparison.OrdinalIgnoreCase))
+                    {
+                        p.Kill();
+                        p.WaitForExit(5000);
+                    }
+                }
+                catch { }
+            }
+        }
+
 #if !UNINSTALL
         // ---- Install ------------------------------------------------------------------------------
 
@@ -334,6 +363,10 @@ namespace FluentWeatherLocal
                     }
                 }
 
+                // The tray icons of an earlier version run from the install folder. End them first, so
+                // their program file can be replaced. The setup starts them again at the end.
+                StopTray();
+
                 InstallPackage(folder, info);
                 string pfn = CopyFilesAndShortcuts(folder, info, addStartMenu, startWithWindows);
                 StartApp(pfn);
@@ -357,7 +390,7 @@ namespace FluentWeatherLocal
 
             using (var form = new Form())
             {
-                form.Text = Title + " setup";
+                form.Text = Title + " " + VersionText + " setup";
                 form.FormBorderStyle = FormBorderStyle.FixedDialog;
                 form.StartPosition = FormStartPosition.CenterScreen;
                 form.MaximizeBox = false;
@@ -563,23 +596,6 @@ namespace FluentWeatherLocal
 
             MessageBox.Show("FluentWeather (Local) is removed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             return 0;
-        }
-
-        private static void StopTray()
-        {
-            foreach (Process p in Process.GetProcessesByName("FluentWeatherTray"))
-            {
-                try
-                {
-                    string path = p.MainModule.FileName;
-                    if (path != null && path.StartsWith(InstallDir + "\\", StringComparison.OrdinalIgnoreCase))
-                    {
-                        p.Kill();
-                        p.WaitForExit(5000);
-                    }
-                }
-                catch { }
-            }
         }
 
         private static void RemovePackage(string pfn)

@@ -524,6 +524,7 @@ namespace FluentWeather.Views
             UpdateActiveChip();
             UpdateSaveLocationButton();
             UpdateRadar(locationV3.latitude, locationV3.longitude, locationV3.countryCode);
+            _ = UpdateAirQualityAsync(locationV3.latitude, locationV3.longitude, locationV3.countryCode, placeId);
 
             MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
 
@@ -568,6 +569,9 @@ namespace FluentWeather.Views
 
             //select first day button
             EmulateDayButtonClick(0);
+
+            // Local build: record today for "Past days" and show the recorded days left of today.
+            _ = UpdatePastDaysAsync(rootV3Response, placeId);
         }
 
         private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
@@ -1622,8 +1626,11 @@ namespace FluentWeather.Views
             }
 
             var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
-            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl })
+            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl })
                 chip?.SetCardBackground(chipBrush);
+
+            foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
+                ApplyCardTintToDayButton(pastCard);
 
             var count = RepeaterDays.ItemsSourceView?.Count ?? 0;
             for (var i = 0; i < count; i++)
@@ -1664,6 +1671,283 @@ namespace FluentWeather.Views
             {
                 // The choice still applies until the app closes.
             }
+        }
+
+        // --- Air quality ---
+        // One small request to Open-Meteo per location and hour. See AirQualityService.
+        // US locations use the US EPA scale, other locations the European scale.
+
+        private async Task UpdateAirQualityAsync(double latitude, double longitude, string? countryCode, string placeId)
+        {
+            try
+            {
+                var data = await AirQualityService.GetAsync(latitude, longitude);
+
+                // Another location may be shown by now.
+                if (_displayedPlaceId != placeId)
+                    return;
+
+                var usScale = countryCode?.ToUpperInvariant() is "US" or "PR" or "VI" or "GU" or "MP" or "AS";
+                var index = usScale ? data?.UsAqi : data?.EuropeanAqi;
+                if (data == null || index == null)
+                {
+                    AirQualityChipControl.Visibility = Visibility.Collapsed;
+                    return;
+                }
+
+                var value = (int) Math.Round(index.Value);
+                AirQualityChipControl.Value = value + " " + AirQualityService.CategoryText(value, usScale);
+
+                // The readings behind the index, and the credit that the data license asks for.
+                var unit = " µg/m³";
+                string Reading(string name, double? amount) => amount == null ? "" : "\n" + name + ": " + Math.Round(amount.Value) + unit;
+                var tip = (usScale ? "AirQualityUsScale" : "AirQualityEuScale").GetLocalized() + ": " + value
+                          + Reading("PM2.5", data.Pm25) + Reading("PM10", data.Pm10)
+                          + Reading("AirQualityOzone".GetLocalized(), data.Ozone)
+                          + Reading("AirQualityNitrogenDioxide".GetLocalized(), data.NitrogenDioxide)
+                          + "\n\n" + "AirQualityCredit".GetLocalized();
+                ToolTipService.SetToolTip(AirQualityChipControl, tip);
+                AirQualityChipControl.Visibility = Visibility.Visible;
+            }
+            catch (Exception)
+            {
+                AirQualityChipControl.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        // --- Past days ---
+        // The recorded days before today, left of today in the day row. See PastDaysService.
+        // The cards show what was recorded. They have no hourly view, so a click does nothing.
+
+        private async Task UpdatePastDaysAsync(RootV3Response data, string placeId)
+        {
+            try
+            {
+                var observation = data.v3wxobservationscurrent;
+                var units = (await VariousUtils.GetUnitsCode()).ToString();
+
+                if (await SavedLocationsService.ContainsAsync(placeId))
+                {
+                    await PastDaysService.UpdateScheduleAsync(placeId, data.v3wxforecasthourly10day, observation.validTimeLocal.Offset);
+                    var part = data.v3wxforecastdaily10day?.daypart?.FirstOrDefault();
+                    await PastDaysService.ObserveAsync(placeId, observation, part?.iconCode, part?.wxPhraseLong, part?.precipChance, units);
+                }
+
+                await ShowPastDaysAsync(placeId, observation.validTimeLocal, units);
+                _ = PastDaysService.RunDueCapturesAsync();
+            }
+            catch (Exception)
+            {
+                // The day row still shows today and the forecast.
+            }
+        }
+
+        private async Task ShowPastDaysAsync(string placeId, DateTimeOffset locationNow, string units)
+        {
+            var records = await PastDaysService.GetPastDaysAsync(placeId, locationNow, units);
+
+            // Another location may be shown by now.
+            if (_displayedPlaceId != placeId)
+                return;
+
+            PastDaysPanel.Children.Clear();
+            foreach (var record in records)
+            {
+                var card = CreatePastDayCard(record, locationNow);
+                ApplyCardTintToDayButton(card);
+                PastDaysPanel.Children.Add(card);
+            }
+
+            PastDaysPanel.Visibility = records.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
+
+            // Today stays the first day in view. The past days are reached by scrolling left.
+            DaysScroll.UpdateLayout();
+            DaysScroll.ChangeView(records.Count > 0 ? PastDaysPanel.ActualWidth + PastDaysPanel.Margin.Right : 0, null, null, true);
+        }
+
+        private static Button CreatePastDayCard(PastDayRecord record, DateTimeOffset locationNow)
+        {
+            var date = DateTime.ParseExact(record.Date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            string title;
+            if (date.Date == locationNow.Date.AddDays(-1))
+            {
+                title = "PastDaysYesterday".GetLocalized();
+            }
+            else
+            {
+                var language = Windows.System.UserProfile.GlobalizationPreferences.Languages[0];
+                var dayName = new System.Globalization.CultureInfo(language).DateTimeFormat.GetAbbreviatedDayName(date.DayOfWeek);
+                title = VariousUtils.UppercaseFirst(dayName) + " " + date.Day;
+            }
+
+            var panel = new RelativePanel
+            {
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch
+            };
+
+            if (record.IconCode != null)
+            {
+                var icon = new Image
+                {
+                    Width = 28,
+                    Source = new Media.Imaging.SvgImageSource { UriSource = new Uri("ms-appx:///Assets/weticons/" + record.IconCode + ".svg") }
+                };
+                RelativePanel.SetAlignTopWithPanel(icon, true);
+                RelativePanel.SetAlignLeftWithPanel(icon, true);
+                panel.Children.Add(icon);
+            }
+
+            var titleText = new TextBlock { Text = title };
+            RelativePanel.SetAlignTopWithPanel(titleText, true);
+            RelativePanel.SetAlignRightWithPanel(titleText, true);
+            panel.Children.Add(titleText);
+
+            var temperatures = (record.High?.ToString() ?? "--") + "° / " + (record.Low?.ToString() ?? "--") + "°";
+            var temperatureText = new TextBlock { Text = temperatures };
+            RelativePanel.SetAlignBottomWithPanel(temperatureText, true);
+            RelativePanel.SetAlignLeftWithPanel(temperatureText, true);
+            panel.Children.Add(temperatureText);
+
+            if (record.PrecipChance != null)
+            {
+                var chanceText = new TextBlock { Text = record.PrecipChance + "%" };
+                RelativePanel.SetAlignBottomWithPanel(chanceText, true);
+                RelativePanel.SetAlignRightWithPanel(chanceText, true);
+                panel.Children.Add(chanceText);
+
+                var drop = new Image
+                {
+                    Width = 16,
+                    Stretch = Media.Stretch.Uniform,
+                    Margin = new Thickness(0, 0, 4, 0),
+                    Source = new Media.Imaging.SvgImageSource
+                    {
+                        UriSource = new Uri("ms-appx:///Assets/varicons/" + VariousUtils.GetPrecipIconChance(record.PrecipChance) + ".svg")
+                    }
+                };
+                RelativePanel.SetAlignBottomWithPanel(drop, true);
+                RelativePanel.SetLeftOf(drop, chanceText);
+                panel.Children.Add(drop);
+            }
+
+            var card = new Button
+            {
+                Width = 135,
+                Height = 70,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Stretch,
+                VerticalContentAlignment = VerticalAlignment.Stretch,
+                Content = panel
+            };
+
+            var description = string.IsNullOrEmpty(record.Phrase) ? title : title + ": " + record.Phrase;
+            ToolTipService.SetToolTip(card, description);
+            AutomationProperties.SetName(card, description + ", " + temperatures);
+            return card;
+        }
+
+        // --- Day row scrolling ---
+        // Every day card is 135 pixels wide with 8 pixels between cards, the past day cards too.
+        // So each card starts at a multiple of 143 pixels. The row can be scrolled freely with the
+        // scroll bar, touch or a touchpad. When the scroll ends it moves to the nearest card, so no
+        // card is left cut off. Each mouse wheel notch over the row moves it by exactly one card,
+        // whatever the Windows wheel setting is. The arrow keys move one card, Home and End go to
+        // the ends. When all days fit, the row does not scroll and the wheel scrolls the page.
+
+        private const double DayCardPitch = 143;
+        private const int WheelNotch = 120;
+
+        private int _dayWheelDelta;
+
+        private double SnapDayOffset(double offset)
+        {
+            var max = DaysScroll.ScrollableWidth;
+            if (max <= 0)
+                return 0;
+
+            // The end of the row is a stop too, so the last card can be seen in full.
+            if (max - offset < DayCardPitch / 2)
+                return max;
+
+            return Math.Clamp(Math.Round(offset / DayCardPitch) * DayCardPitch, 0, max);
+        }
+
+        private DispatcherTimer? _daySnapTimer;
+
+        // The row snaps a quarter second after the scrolling stops, so dragging the scroll bar
+        // stays smooth.
+        private void DaysScroll_OnViewChanged(object? sender, ScrollViewerViewChangedEventArgs e)
+        {
+            if (_daySnapTimer == null)
+            {
+                _daySnapTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(250) };
+                _daySnapTimer.Tick += (_, _) =>
+                {
+                    _daySnapTimer.Stop();
+                    var target = SnapDayOffset(DaysScroll.HorizontalOffset);
+                    if (Math.Abs(target - DaysScroll.HorizontalOffset) > 0.5)
+                        DaysScroll.ChangeView(target, null, null, false);
+                };
+            }
+
+            _daySnapTimer.Stop();
+            _daySnapTimer.Start();
+        }
+
+        private void StepDays(int cards)
+        {
+            var from = SnapDayOffset(DaysScroll.HorizontalOffset);
+            var target = Math.Clamp(from + cards * DayCardPitch, 0, DaysScroll.ScrollableWidth);
+            DaysScroll.ChangeView(SnapDayOffset(target), null, null, false);
+        }
+
+        private void DaysRowPanel_OnPointerWheelChanged(object sender, PointerRoutedEventArgs e)
+        {
+            if (DaysScroll.ScrollableWidth <= 0)
+                return; // all days fit, so the wheel scrolls the page
+
+            // A horizontal wheel turns positive to the right. A vertical wheel turns positive upward,
+            // which moves the row back toward the past days.
+            var properties = e.GetCurrentPoint(DaysScroll).Properties;
+            var delta = properties.IsHorizontalMouseWheel ? properties.MouseWheelDelta : -properties.MouseWheelDelta;
+            e.Handled = true;
+
+            // Small wheel movements, from some touchpads, add up to one notch.
+            if (Math.Sign(delta) != Math.Sign(_dayWheelDelta))
+                _dayWheelDelta = 0;
+            _dayWheelDelta += delta;
+
+            var cards = _dayWheelDelta / WheelNotch;
+            if (cards == 0)
+                return;
+
+            _dayWheelDelta -= cards * WheelNotch;
+            StepDays(cards);
+        }
+
+        private void DaysRowPanel_OnKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case VirtualKey.Left:
+                    StepDays(-1);
+                    break;
+                case VirtualKey.Right:
+                    StepDays(1);
+                    break;
+                case VirtualKey.Home:
+                    DaysScroll.ChangeView(0, null, null, false);
+                    break;
+                case VirtualKey.End:
+                    DaysScroll.ChangeView(DaysScroll.ScrollableWidth, null, null, false);
+                    break;
+                default:
+                    return;
+            }
+
+            e.Handled = true;
         }
 
         // --- Radar (US locations) ---

@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Makes FluentWeather-Setup.exe, FluentWeather-Uninstall.exe and README.txt from the app that is
+    Makes FluentWeather-Setup-<version>.exe, FluentWeather-Uninstall-<version>.exe and README.txt from the app that is
     built and installed on this PC.
 
 .DESCRIPTION
@@ -118,6 +118,7 @@ function Invoke-Compile([string]$Out, [string[]]$Defines, $Resources) {
     if (Test-Path -LiteralPath $ico) { $cscArgs += "/win32icon:$ico" }
     foreach ($d in $Defines) { $cscArgs += "/define:$d" }
     foreach ($r in $Resources) { $cscArgs += "/resource:$($r.Path),payload/$($r.Name)" }
+    if ($script:VersionInfoPath) { $cscArgs += $script:VersionInfoPath }
     $cscArgs += (Join-Path $InstallDir 'FluentWeatherDirect.cs')
 
     $ErrorActionPreference = 'Continue'
@@ -261,7 +262,8 @@ try {
 
     # Splits the README at its "VirusTotal" section. The section runs to the next heading, which is a
     # line followed by a line of dashes. Returns the lines before and after the section.
-    $readmeLines = @(Get-Content -LiteralPath $readme)
+    # {VERSION} in the README becomes the version of this build, for example 2.1.0.19.
+    $readmeLines = @(Get-Content -LiteralPath $readme | ForEach-Object { $_.Replace('{VERSION}', $version) })
     $vtStart = -1
     for ($i = 0; $i -lt $readmeLines.Count; $i++) { if ($readmeLines[$i] -match '^VirusTotal') { $vtStart = $i; break } }
     $vtEnd = $readmeLines.Count
@@ -285,19 +287,30 @@ try {
         if ($vtEnd -lt $readmeLines.Count) { $inner += $readmeLines[$vtEnd..($readmeLines.Count - 1)] }
         Write-Readme $innerReadme $inner
     } else {
-        Copy-Item -LiteralPath $readme -Destination $innerReadme
+        Write-Readme $innerReadme $readmeLines
     }
+
+    # The version of this build in the Properties > Details of both programs.
+    $script:VersionInfoPath = Join-Path $stage 'VersionInfo.cs'
+    @(
+        "[assembly: System.Reflection.AssemblyVersion(""$version"")]",
+        "[assembly: System.Reflection.AssemblyFileVersion(""$version"")]",
+        "[assembly: System.Reflection.AssemblyInformationalVersion(""$version"")]",
+        '[assembly: System.Reflection.AssemblyCopyright("Gabboxl and duedilly. GNU General Public License version 3.")]'
+    ) | Set-Content -LiteralPath $script:VersionInfoPath -Encoding ASCII
 
     $outDir = Join-Path (Get-DesktopPath) 'FluentWeather-Direct'
     if (Test-Path -LiteralPath $outDir) { Remove-Item -LiteralPath $outDir -Recurse -Force }
     New-Item -ItemType Directory -Path $outDir | Out-Null
-    $uninstallExe = Join-Path $outDir 'FluentWeather-Uninstall.exe'
-    $setupExe = Join-Path $outDir 'FluentWeather-Setup.exe'
+    # The file names carry the version. The copy of the uninstaller inside the setup keeps the plain
+    # name FluentWeather-Uninstall.exe, because the Start menu and Settings > Apps point to it.
+    $uninstallExe = Join-Path $outDir "FluentWeather-Uninstall-$version.exe"
+    $setupExe = Join-Path $outDir "FluentWeather-Setup-$version.exe"
 
-    Write-Step 'Compiling FluentWeather-Uninstall.exe'
+    Write-Step "Compiling FluentWeather-Uninstall-$version.exe"
     Invoke-Compile $uninstallExe @('UNINSTALL') @()
 
-    Write-Step 'Compiling FluentWeather-Setup.exe'
+    Write-Step "Compiling FluentWeather-Setup-$version.exe"
     $resources.Add([pscustomobject]@{ Path = $cerPath; Name = 'FluentWeatherLocalBuild.cer' })
     $resources.Add([pscustomobject]@{ Path = $stagedMsix; Name = $msix.Name })
     $resources.Add([pscustomobject]@{ Path = $tray; Name = 'FluentWeatherTray.exe' })
@@ -323,7 +336,7 @@ try {
         if ($vtEnd -lt $readmeLines.Count) { $outer += $readmeLines[$vtEnd..($readmeLines.Count - 1)] }
         Write-Readme $outReadme $outer
     } else {
-        Copy-Item -LiteralPath $readme -Destination $outReadme
+        Write-Readme $outReadme $readmeLines
     }
 
     $zip = Join-Path (Get-DesktopPath) "FluentWeather-Direct-$version.zip"
@@ -332,7 +345,7 @@ try {
 
     $mb = [Math]::Round((Get-Item -LiteralPath $setupExe).Length / 1MB, 1)
     Write-Ok "Done. Folder: $outDir"
-    Write-Host "    FluentWeather-Setup.exe ($mb MB), FluentWeather-Uninstall.exe and README.txt"
+    Write-Host "    FluentWeather-Setup-$version.exe ($mb MB), FluentWeather-Uninstall-$version.exe and README.txt"
     Write-Ok "Zip of the same three files, to share: $zip"
     if ($vtStart -ge 0) {
         Write-Host '    README.txt has the VirusTotal links of these two files. Upload both files at'

@@ -117,7 +117,7 @@ $FilesToCopy   = @(
     'Direct-README.txt'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '54'
+$SetupVersion  = '64'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
 

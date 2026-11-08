@@ -39,6 +39,12 @@ The "Updated on" line shows the date in the Windows date format and the time in 
 The window opens at 820 by 600 pixels the first time. After that Windows remembers the size and position the user sets.
 The app accepts the link fluentweather-local:switch?placeId=<id> and opens at that location. It accepts saved locations only.
 
+"Past days" shows the last two days left of today in the daily forecast, titled "Yesterday" and with the weekday and date of the day before. The app records each saved location twice a day: about an hour after the low and about an hour after the high that the hourly forecast predicts. Each capture is one small request. The current conditions hold the measured lowest temperature of the last 24 hours and the measured highest temperature since 7 AM, so a late capture still records the right values. A background task checks every 15 minutes which captures are due, so the window does not need to be open. Each PC adds a random delay of 0 to 20 minutes, and a failed capture waits an hour before the next try. The record keeps today and the two days before, in a file of about 1 KB. Recording starts when the app is installed, so "Yesterday" appears the next day. Scroll left from today to see the past days. The day row has a scroll bar for free scrolling, and it settles on the nearest whole card when the scrolling stops. Each mouse wheel notch over the row moves it one card, and so do the left and right arrow keys. Home and End go to the ends.
+
+The detail cards are in this order: Wind, Humidity, UV index, Air quality, Visibility, Pressure and Dew point. In a narrow window they scroll sideways, with a scroll bar below them. The "Air quality" card follows the UV index card. It shows the index and its category, for example "22 Good". US locations use the US EPA scale, and other locations use the European scale. The tooltip shows the PM2.5, PM10, ozone and nitrogen dioxide readings. The data comes from the free Open-Meteo air quality API, which needs no key and uses no weather.com request. Its source is the Copernicus Atmosphere Monitoring Service, licensed CC BY 4.0, and the tooltip names it. Each location is downloaded at most once an hour, because the values change hourly. The card stays hidden when no data is available.
+
+In the evening weather.com no longer sends the daytime high of today. The day card then shows the high of the whole calendar day, where it showed "--" before.
+
 
 The app writes weather data for the tray icons.
 
@@ -144,7 +150,7 @@ Each PC that runs the installer creates its own signing certificate.
 
 The direct installer has these features.
 
-"Make FluentWeather direct installer" in the Start menu makes FluentWeather-Setup.exe, FluentWeather-Uninstall.exe and README.txt in a folder FluentWeather-Direct on the Desktop, plus a zip of the three files.
+"Make FluentWeather direct installer" in the Start menu makes FluentWeather-Setup-<version>.exe, FluentWeather-Uninstall-<version>.exe and README.txt in a folder FluentWeather-Direct on the Desktop, plus a zip of the three files. The version, for example 2.1.0.19, is also in README.txt, in the title of the setup window and in Properties > Details of both programs.
 README.txt in that folder gets the VirusTotal links of the two new files. The copy of README.txt inside the setup points to the release page for the VirusTotal results, because the setup cannot hold its own scan link.
 The setup holds the app as it is built on this PC, the Microsoft packages it needs and the tray icons program. Another Windows 10 or 11 PC installs it in about a minute, with no download and no build.
 Each run creates a throwaway signing certificate, signs a copy of the app with it, puts its public part into the setup and deletes the certificate and its private key. The own signing certificate of the PC is never used, so no other package can ever be signed with the certificate that other PCs trust.

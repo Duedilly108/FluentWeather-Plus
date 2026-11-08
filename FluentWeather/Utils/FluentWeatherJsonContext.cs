@@ -6,6 +6,8 @@ using System.Text.Json.Serialization;
 [JsonSerializable(typeof(SearchLocationResponse))]
 [JsonSerializable(typeof(System.Collections.Generic.List<SavedLocation>))]
 [JsonSerializable(typeof(CurrentConditionsResponse))]
+[JsonSerializable(typeof(PastDaysStore))]
+[JsonSerializable(typeof(AirQualityResponse))]
 [JsonSerializable(typeof(bool?))]
 [JsonSourceGenerationOptions(
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,

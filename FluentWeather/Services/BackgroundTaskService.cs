@@ -60,7 +60,7 @@ namespace FluentWeather.Services
 
         private static IEnumerable<BackgroundTask> CreateInstances()
         {
-            var backgroundTasks = new List<BackgroundTask> { new LiveTileBackgroundTask(), new AppUpdateBackgroundTask() };
+            var backgroundTasks = new List<BackgroundTask> { new LiveTileBackgroundTask(), new AppUpdateBackgroundTask(), new PastDaysBackgroundTask() };
             return backgroundTasks;
         }
     }

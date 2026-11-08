@@ -342,6 +342,57 @@ Live Tiles are available natively on Windows 10 only.</value>
   <data name="CardTintHint.Text" xml:space="preserve">
     <value>Tints the cards so their text stays readable over the background image. 0 percent keeps the original look.</value>
   </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Air quality</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Very poor</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Extremely poor</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Unhealthy for some</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Unhealthy</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Very unhealthy</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Hazardous</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>US air quality index</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>European air quality index</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozone</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Nitrogen dioxide</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Air quality data: Open-Meteo.com and the Copernicus Atmosphere Monitoring Service (CC BY 4.0).</value>
+  </data>
   <data name="RadarTitleText.Text" xml:space="preserve">
     <value>Radar</value>
   </data>

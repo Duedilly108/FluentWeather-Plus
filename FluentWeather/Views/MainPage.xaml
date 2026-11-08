@@ -878,23 +878,20 @@
                         </RelativePanel>
 
 
-                        <StackPanel Grid.Row="2"
-                                    Orientation="Horizontal"
-                                    Margin="0,16,0,0">
+                        <!-- Local build: the detail cards scroll sideways in a narrow window, with a scroll bar
+                             below them. The bottom margin leaves room for the scroll bar. -->
+                        <ScrollViewer Grid.Row="2"
+                                      Margin="0,16,0,0"
+                                      VerticalScrollMode="Disabled"
+                                      VerticalScrollBarVisibility="Disabled"
+                                      HorizontalScrollMode="Enabled"
+                                      HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,14">
 
                             <controls:DetailChipControl
                                 x:Name="WindChipControl"
                                 x:Uid="WindChipControl">
-                            </controls:DetailChipControl>
-
-                            <!--<controls:DetailChipControl
-                                x:Name="CloudCoverChipControl"
-                                x:Uid="CloudCoverChipControl">
-                            </controls:DetailChipControl>-->
-
-                            <controls:DetailChipControl
-                                x:Name="PressureChipControl"
-                                x:Uid="PressureChipControl">
                             </controls:DetailChipControl>
 
                             <controls:DetailChipControl
@@ -903,8 +900,25 @@
                             </controls:DetailChipControl>
 
                             <controls:DetailChipControl
+                                x:Name="UVIndexChipControl"
+                                x:Uid="UVIndexChipControl">
+                            </controls:DetailChipControl>
+
+                            <!-- Local build: air quality from Open-Meteo. Hidden until the data arrives. -->
+                            <controls:DetailChipControl
+                                x:Name="AirQualityChipControl"
+                                x:Uid="AirQualityChipControl"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+
+                            <controls:DetailChipControl
                                 x:Name="VisibilityChipControl"
                                 x:Uid="VisibilityChipControl">
+                            </controls:DetailChipControl>
+
+                            <controls:DetailChipControl
+                                x:Name="PressureChipControl"
+                                x:Uid="PressureChipControl">
                             </controls:DetailChipControl>
 
                             <controls:DetailChipControl
@@ -912,12 +926,13 @@
                                 x:Uid="DewPointChipControl">
                             </controls:DetailChipControl>
 
-                            <controls:DetailChipControl
-                                x:Name="UVIndexChipControl"
-                                x:Uid="UVIndexChipControl">
-                            </controls:DetailChipControl>
+                            <!--<controls:DetailChipControl
+                                x:Name="CloudCoverChipControl"
+                                x:Uid="CloudCoverChipControl">
+                            </controls:DetailChipControl>-->
 
                         </StackPanel>
+                        </ScrollViewer>
 
                         <Grid Grid.Row="3"
                               Margin="0,32,0,0">
@@ -933,10 +948,27 @@
 
                                 Margin="0,0,0,16" />
 
-                            <ScrollViewer Grid.Row="1"
+                            <ScrollViewer x:Name="DaysScroll"
+                                          Grid.Row="1"
                                           VerticalScrollMode="Disabled"
                                           VerticalScrollBarVisibility="Disabled"
-                                          HorizontalScrollBarVisibility="Hidden">
+                                          HorizontalScrollBarVisibility="Auto"
+                                          ViewChanged="DaysScroll_OnViewChanged">
+
+                                <!-- The bottom margin leaves room for the scroll bar below the cards. -->
+                                <StackPanel x:Name="DaysRowPanel"
+                                            Orientation="Horizontal"
+                                            Margin="0,0,0,14"
+                                            PointerWheelChanged="DaysRowPanel_OnPointerWheelChanged"
+                                            KeyDown="DaysRowPanel_OnKeyDown">
+
+                                <!-- Local build: "Past days". The recorded days before today, oldest first. The code
+                                     fills this panel and scrolls the row so that today is the first day in view. -->
+                                <StackPanel x:Name="PastDaysPanel"
+                                            Orientation="Horizontal"
+                                            Spacing="8"
+                                            Margin="0,0,8,0"
+                                            Visibility="Collapsed" />
 
                                 <muxc:ItemsRepeater
                                     x:Name="RepeaterDays">
@@ -1002,6 +1034,8 @@
                                                           Orientation="Horizontal" />
                                     </muxc:ItemsRepeater.Layout>
                                 </muxc:ItemsRepeater>
+
+                                </StackPanel>
 
                             </ScrollViewer>
                         </Grid>

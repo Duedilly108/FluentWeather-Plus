@@ -70,6 +70,22 @@ index 0000000000000000000000000000000000000000..81d184fe35674ea6d2a4be59afd5bcca
 +        }
 +    }
 +}
+diff --git a/FluentWeather/Adapters/DayButtonAdapter.cs b/FluentWeather/Adapters/DayButtonAdapter.cs
+index ab1ad2cdc8c34bd3255525730ed8cd44fb69a12c..594ba5ca56eb924b8060a5bcfff66c0150037c35 100644
+--- a/FluentWeather/Adapters/DayButtonAdapter.cs
++++ b/FluentWeather/Adapters/DayButtonAdapter.cs
+@@ -16,7 +16,10 @@ namespace FluentWeather.Adapters
+         {
+             get
+             {
+-                var maxTemp = CurrentObject.temperatureMax[ItemIndex];
++                // In the evening weather.com leaves today's daytime high empty, because only the night
++                // part of the day is left. The high of the whole calendar day stays, so use that one.
++                var maxTemp = CurrentObject.temperatureMax[ItemIndex]
++                              ?? CurrentObject.calendarDayTemperatureMax?[ItemIndex];
+                 var minTemp = CurrentObject.temperatureMin[ItemIndex];
+ 
+ 
 diff --git a/FluentWeather/Adapters/HourDataAdapter.cs b/FluentWeather/Adapters/HourDataAdapter.cs
 index 21e7a92ea8ce993414219aac1fd2b72165a02b40..0c420c1760a97ab6851e4ed656f092e3bb8df9c1 100644
 --- a/FluentWeather/Adapters/HourDataAdapter.cs
@@ -122,6 +138,71 @@ index d6f4fb815bd7dc1c66b837d7424c999a76ee5d76..479e2e553987162bbf19310974c55b1b
              await ActivationService.ActivateAsync(args);
          }
      }
+diff --git a/FluentWeather/BackgroundTasks/PastDaysBackgroundTask.cs b/FluentWeather/BackgroundTasks/PastDaysBackgroundTask.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..3c547db94bfbe913f334ca1b97c112f708403774
+--- /dev/null
++++ b/FluentWeather/BackgroundTasks/PastDaysBackgroundTask.cs
+@@ -0,0 +1,59 @@
++﻿using System.Linq;
++using System.Threading.Tasks;
++using FluentWeather.Services;
++using Windows.ApplicationModel.Background;
++
++namespace FluentWeather.BackgroundTasks
++{
++    /// <summary>
++    /// Runs every 15 minutes, the shortest interval Windows allows, and downloads the "Past days"
++    /// captures that are due. When none is due it returns at once and downloads nothing.
++    /// </summary>
++    public sealed class PastDaysBackgroundTask : BackgroundTask
++    {
++        private BackgroundTaskDeferral? _deferral;
++
++        public override void Register()
++        {
++            const string taskName = nameof(PastDaysBackgroundTask);
++            if (BackgroundTaskRegistration.AllTasks.Any(t => t.Value.Name == taskName))
++                return;
++
++            var builder = new BackgroundTaskBuilder
++            {
++                Name = taskName,
++                IsNetworkRequested = true,
++                CancelOnConditionLoss = true
++            };
++
++            builder.SetTrigger(new TimeTrigger(15, false));
++            builder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));
++            builder.Register();
++        }
++
++        protected override Task RunAsyncInternal(IBackgroundTaskInstance taskInstance)
++        {
++            if (taskInstance == null)
++                return Task.CompletedTask;
++
++            _deferral = taskInstance.GetDeferral();
++
++            return Task.Run(async () =>
++            {
++                try
++                {
++                    await PastDaysService.RunDueCapturesAsync();
++                }
++                finally
++                {
++                    _deferral.Complete();
++                }
++            });
++        }
++
++        protected override void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
++        {
++            // A capture that was cut off is downloaded at the next run.
++        }
++    }
++}
 diff --git a/FluentWeather/Controls/DetailChipControl.xaml b/FluentWeather/Controls/DetailChipControl.xaml
 index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..4af4e6240492149bb4a4eb8175bee203b18c234b 100644
 --- a/FluentWeather/Controls/DetailChipControl.xaml
@@ -157,12 +238,51 @@ index 84658ce13f94a7c754edb6079c115e553b1352f2..a85e3071392732f0aba3e87b74361c6c
          }
      }
  }
+diff --git a/FluentWeather/Models/AirQuality.cs b/FluentWeather/Models/AirQuality.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..7bdfeee6dfc503b310444ccaab0c999c86b0499d
+--- /dev/null
++++ b/FluentWeather/Models/AirQuality.cs
+@@ -0,0 +1,33 @@
++using System.Text.Json.Serialization;
++
++namespace FluentWeather.Models
++{
++    /// <summary>The current air quality from the Open-Meteo air quality API. All values can be null.</summary>
++    public class AirQualityResponse
++    {
++        [JsonPropertyName("current")]
++        public AirQualityCurrent? Current { get; set; }
++    }
++
++    public class AirQualityCurrent
++    {
++        [JsonPropertyName("us_aqi")]
++        public double? UsAqi { get; set; }
++
++        [JsonPropertyName("european_aqi")]
++        public double? EuropeanAqi { get; set; }
++
++        // Concentrations in micrograms per cubic meter
++        [JsonPropertyName("pm2_5")]
++        public double? Pm25 { get; set; }
++
++        [JsonPropertyName("pm10")]
++        public double? Pm10 { get; set; }
++
++        [JsonPropertyName("ozone")]
++        public double? Ozone { get; set; }
++
++        [JsonPropertyName("nitrogen_dioxide")]
++        public double? NitrogenDioxide { get; set; }
++    }
++}
 diff --git a/FluentWeather/Models/CurrentConditionsResponse.cs b/FluentWeather/Models/CurrentConditionsResponse.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..b9bf91728ffcce5b4ae3e91417da314a8bf245d7
+index 0000000000000000000000000000000000000000..c5ab50bdcbb7fa1059088427775b78d992f911cf
 --- /dev/null
 +++ b/FluentWeather/Models/CurrentConditionsResponse.cs
-@@ -0,0 +1,29 @@
+@@ -0,0 +1,41 @@
 +using System;
 +using System.Collections.Generic;
 +using System.Text.Json.Serialization;
@@ -185,11 +305,80 @@ index 0000000000000000000000000000000000000000..b9bf91728ffcce5b4ae3e91417da314a
 +        public MoonTimes? v3wxforecastdaily3day { get; set; }
 +    }
 +
-+    /// <summary>Only the moonrise and moonset times of the daily forecast. Both lists can hold nulls.</summary>
++    /// <summary>
++    /// The parts of the 3-day forecast that the small request needs: the moonrise and moonset times,
++    /// and the day and night conditions for the "Past days" record. All lists can hold nulls.
++    /// </summary>
 +    public class MoonTimes
 +    {
 +        public List<DateTimeOffset?>? moonriseTimeLocal { get; set; }
 +        public List<DateTimeOffset?>? moonsetTimeLocal { get; set; }
++        public List<DaypartConditions>? daypart { get; set; }
++    }
++
++    /// <summary>Day and night conditions of the forecast: entry 0 is today's day part, entry 1 tonight.</summary>
++    public class DaypartConditions
++    {
++        public List<int?>? iconCode { get; set; }
++        public List<string?>? wxPhraseLong { get; set; }
++        public List<int?>? precipChance { get; set; }
++    }
++}
+diff --git a/FluentWeather/Models/PastDays.cs b/FluentWeather/Models/PastDays.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..65fbdc01cc9af12f1f2c8858f82f021452f32b95
+--- /dev/null
++++ b/FluentWeather/Models/PastDays.cs
+@@ -0,0 +1,51 @@
++using System.Collections.Generic;
++
++namespace FluentWeather.Models
++{
++    /// <summary>
++    /// One recorded day of a saved location, for the "Past days" cards.
++    /// Date is the location's own local date, as yyyy-MM-dd.
++    /// </summary>
++    public class PastDayRecord
++    {
++        public string PlaceId { get; set; } = "";
++        public string Date { get; set; } = "";
++        public int? High { get; set; }
++        public int? Low { get; set; }
++        public int? IconCode { get; set; }
++        public string? Phrase { get; set; }
++        public int? PrecipChance { get; set; }
++
++        // The units of High and Low: "e" is Fahrenheit, the other unit codes are Celsius.
++        public string Units { get; set; } = "e";
++
++        public bool LowCaptured { get; set; }
++        public bool HighCaptured { get; set; }
++    }
++
++    /// <summary>
++    /// When to capture a location. The times are minutes after the location's local midnight,
++    /// taken from the hourly forecast: the predicted low and the predicted high of the next 24 hours.
++    /// </summary>
++    public class PastDaySchedule
++    {
++        public string PlaceId { get; set; } = "";
++        public int LowMinutes { get; set; } = 8 * 60;
++        public int HighMinutes { get; set; } = 17 * 60;
++        public int UtcOffsetMinutes { get; set; }
++        public bool OffsetKnown { get; set; }
++
++        // The last capture request that failed, as UTC ticks. The next attempt waits an hour.
++        public long LastFailedUtcTicks { get; set; }
++    }
++
++    public class PastDaysStore
++    {
++        public List<PastDayRecord> Records { get; set; } = [];
++        public List<PastDaySchedule> Schedules { get; set; } = [];
++
++        // A random delay of 0 to 20 minutes for this PC, added to every capture time, so the
++        // captures of many PCs do not reach weather.com at the same minute.
++        public int SpreadMinutes { get; set; } = -1;
 +    }
 +}
 diff --git a/FluentWeather/Models/SavedLocation.cs b/FluentWeather/Models/SavedLocation.cs
@@ -243,6 +432,120 @@ index 61f373a29ae8887af4f6b81995be9fb1b95deb9c..2efbe1428c6fae95ff0b2f1373efc754
          }
  
          private bool IsInteractive(object args)
+diff --git a/FluentWeather/Services/AirQualityService.cs b/FluentWeather/Services/AirQualityService.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..c995c9db14dd772312ce7ee2d88de62949885763
+--- /dev/null
++++ b/FluentWeather/Services/AirQualityService.cs
+@@ -0,0 +1,95 @@
++using FluentWeather.Helpers;
++using FluentWeather.Models;
++using FluentWeather.Utils;
++using System;
++using System.Collections.Generic;
++using System.Globalization;
++using System.Net.Http;
++using System.Text.Json;
++using System.Threading;
++using System.Threading.Tasks;
++
++namespace FluentWeather.Services
++{
++    /// <summary>
++    /// The current air quality of a location, from the free Open-Meteo air quality API
++    /// (air-quality-api.open-meteo.com). It needs no key and uses no weather.com request. The data
++    /// comes from the Copernicus Atmosphere Monitoring Service (CAMS) and is licensed CC BY 4.0, so
++    /// the app shows a credit with it. The values change once an hour, so each location is
++    /// downloaded at most once an hour.
++    /// </summary>
++    public static class AirQualityService
++    {
++        private static readonly HttpClient Http = ApiUtils.CreateClient("https://air-quality-api.open-meteo.com/");
++        private static readonly TimeSpan CacheTime = TimeSpan.FromMinutes(60);
++        private static readonly Dictionary<string, (DateTime FetchedUtc, AirQualityCurrent Data)> Cache = new();
++        private static readonly SemaphoreSlim Lock = new(1, 1);
++
++        public static async Task<AirQualityCurrent?> GetAsync(double latitude, double longitude)
++        {
++            var ci = CultureInfo.InvariantCulture;
++            var lat = latitude.ToString("0.00", ci);
++            var lon = longitude.ToString("0.00", ci);
++            var key = lat + "," + lon;
++
++            await Lock.WaitAsync();
++            try
++            {
++                if (Cache.TryGetValue(key, out var cached) && DateTime.UtcNow - cached.FetchedUtc < CacheTime)
++                    return cached.Data;
++
++                try
++                {
++                    var url = "v1/air-quality?latitude=" + lat + "&longitude=" + lon +
++                              "&current=us_aqi,european_aqi,pm2_5,pm10,ozone,nitrogen_dioxide";
++                    using var response = await ApiUtils.GetWithRetryAsync(Http, url);
++                    if (!response.IsSuccessStatusCode)
++                        return cached.Data;
++
++                    var json = await response.Content.ReadAsStringAsync();
++                    var data = JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.AirQualityResponse)?.Current;
++                    if (data == null)
++                        return cached.Data;
++
++                    Cache[key] = (DateTime.UtcNow, data);
++                    return data;
++                }
++                catch (Exception)
++                {
++                    // An older value, or null when there is none. The card is then hidden.
++                    return cached.Data;
++                }
++            }
++            finally
++            {
++                Lock.Release();
++            }
++        }
++
++        /// <summary>The category name of an index value, on the US EPA scale or the European scale.</summary>
++        public static string CategoryText(int index, bool usScale)
++        {
++            string key;
++            if (usScale)
++            {
++                key = index <= 50 ? "AirQualityGood"
++                    : index <= 100 ? "AirQualityModerate"
++                    : index <= 150 ? "AirQualityUnhealthySensitive"
++                    : index <= 200 ? "AirQualityUnhealthy"
++                    : index <= 300 ? "AirQualityVeryUnhealthy"
++                    : "AirQualityHazardous";
++            }
++            else
++            {
++                key = index <= 20 ? "AirQualityGood"
++                    : index <= 40 ? "AirQualityFair"
++                    : index <= 60 ? "AirQualityModerate"
++                    : index <= 80 ? "AirQualityPoor"
++                    : index <= 100 ? "AirQualityVeryPoor"
++                    : "AirQualityExtremelyPoor";
++            }
++
++            return key.GetLocalized();
++        }
++    }
++}
+diff --git a/FluentWeather/Services/BackgroundTaskService.cs b/FluentWeather/Services/BackgroundTaskService.cs
+index bced2bd36a6940dc098ee339b795a29d76eff5c7..b5ecd3b005cd5c0381d3b6fc9d2a0c0cf0cf7733 100644
+--- a/FluentWeather/Services/BackgroundTaskService.cs
++++ b/FluentWeather/Services/BackgroundTaskService.cs
+@@ -60,7 +60,7 @@ namespace FluentWeather.Services
+ 
+         private static IEnumerable<BackgroundTask> CreateInstances()
+         {
+-            var backgroundTasks = new List<BackgroundTask> { new LiveTileBackgroundTask(), new AppUpdateBackgroundTask() };
++            var backgroundTasks = new List<BackgroundTask> { new LiveTileBackgroundTask(), new AppUpdateBackgroundTask(), new PastDaysBackgroundTask() };
+             return backgroundTasks;
+         }
+     }
 diff --git a/FluentWeather/Services/LiveTileService.WeatherMain.cs b/FluentWeather/Services/LiveTileService.WeatherMain.cs
 index 5976438c8e1b87e7d049a73dc2065f321fc681eb..6bd5490e305362165622b07616ebd35a0157fd69 100644
 --- a/FluentWeather/Services/LiveTileService.WeatherMain.cs
@@ -270,6 +573,404 @@ index 5976438c8e1b87e7d049a73dc2065f321fc681eb..6bd5490e305362165622b07616ebd35a
              var newIconUri = new Uri("ms-appx:///Assets/weticons/" + apiDataResponse.v3wxobservationscurrent.iconCode + ".svg");
  
              string cityName = string.Join(", ",
+diff --git a/FluentWeather/Services/PastDaysService.cs b/FluentWeather/Services/PastDaysService.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..b8e05ba9588c6b084e5cf1458f09709242c15c70
+--- /dev/null
++++ b/FluentWeather/Services/PastDaysService.cs
+@@ -0,0 +1,392 @@
++using FluentWeather.Helpers;
++using FluentWeather.Models;
++using FluentWeather.Utils;
++using System;
++using System.Collections.Generic;
++using System.Globalization;
++using System.Linq;
++using System.Text.Json;
++using System.Threading;
++using System.Threading.Tasks;
++using Windows.Storage;
++
++namespace FluentWeather.Services
++{
++    /// <summary>
++    /// Records the high, the low and the conditions of each saved location, for the "Past days"
++    /// cards left of today.
++    ///
++    /// Two captures per saved location per day, each one small request (current conditions and
++    /// the 3-day forecast, the same request the tray icons use):
++    ///   the low capture, 60 minutes after the low that the hourly forecast predicts, and
++    ///   the high capture, 60 minutes after the predicted high.
++    /// The current conditions hold measured values: the lowest temperature of the last 24 hours
++    /// and the highest since 7 AM. So a capture that comes late still records the right values.
++    /// A background task checks every 15 minutes which captures are due. Data that the app or
++    /// the tray icons download anyway also updates the record, without an extra request.
++    ///
++    /// The records are kept in LocalFolder\pastDays.json: today and the two days before, for each
++    /// saved location.
++    /// </summary>
++    public static class PastDaysService
++    {
++        private const string FileName = "pastDays";
++        private const int CaptureDelayMinutes = 60;
++        private const int KeepDays = 2;
++
++        private static readonly TimeSpan RetryAfterFailure = TimeSpan.FromHours(1);
++        private static readonly TimeSpan GapBetweenRequests = TimeSpan.FromSeconds(3);
++
++        private static readonly SemaphoreSlim Lock = new(1, 1);
++        private static readonly SemaphoreSlim RunLock = new(1, 1);
++
++        /// <summary>The recorded days before today, oldest first. Temperatures are in the given units.</summary>
++        public static async Task<List<PastDayRecord>> GetPastDaysAsync(string placeId, DateTimeOffset locationNow, string units)
++        {
++            var result = new List<PastDayRecord>();
++            if (string.IsNullOrEmpty(placeId))
++                return result;
++
++            PastDaysStore store;
++            await Lock.WaitAsync();
++            try
++            {
++                store = await LoadUnlockedAsync();
++            }
++            finally
++            {
++                Lock.Release();
++            }
++
++            for (var back = KeepDays; back >= 1; back--)
++            {
++                var date = DateKey(locationNow.AddDays(-back));
++                var record = store.Records.FirstOrDefault(r => r.PlaceId == placeId && r.Date == date);
++                if (record == null || (record.High == null && record.Low == null))
++                    continue;
++
++                result.Add(new PastDayRecord
++                {
++                    PlaceId = record.PlaceId,
++                    Date = record.Date,
++                    High = ConvertTemperature(record.High, record.Units, units),
++                    Low = ConvertTemperature(record.Low, record.Units, units),
++                    IconCode = record.IconCode,
++                    Phrase = record.Phrase,
++                    PrecipChance = record.PrecipChance,
++                    Units = units,
++                    LowCaptured = record.LowCaptured,
++                    HighCaptured = record.HighCaptured
++                });
++            }
++
++            return result;
++        }
++
++        /// <summary>
++        /// Sets the capture times of a location from its hourly forecast: the hours of the lowest and
++        /// the highest temperature in the next 24 hours.
++        /// </summary>
++        public static async Task UpdateScheduleAsync(string placeId, V3WxForecastHourly? hourly, TimeSpan utcOffset)
++        {
++            if (hourly == null || string.IsNullOrEmpty(placeId))
++                return;
++
++            var count = Math.Min(24, Math.Min(hourly.temperature.Count, hourly.validTimeLocal.Count));
++            if (count < 6)
++                return;
++
++            int lowIndex = 0, highIndex = 0;
++            for (var i = 1; i < count; i++)
++            {
++                if (hourly.temperature[i] < hourly.temperature[lowIndex]) lowIndex = i;
++                if (hourly.temperature[i] > hourly.temperature[highIndex]) highIndex = i;
++            }
++
++            var low = hourly.validTimeLocal[lowIndex];
++            var high = hourly.validTimeLocal[highIndex];
++
++            // The low capture needs the night behind it, and the high capture needs the
++            // "since 7 AM" value. Both captures stay before midnight.
++            var lowMinutes = Math.Clamp(low.Hour * 60 + low.Minute, 4 * 60, 22 * 60);
++            var highMinutes = Math.Clamp(high.Hour * 60 + high.Minute, 9 * 60, 22 * 60);
++
++            await Lock.WaitAsync();
++            try
++            {
++                var store = await LoadUnlockedAsync();
++                var schedule = GetOrAddSchedule(store, placeId);
++                if (schedule.LowMinutes == lowMinutes && schedule.HighMinutes == highMinutes &&
++                    schedule.OffsetKnown && schedule.UtcOffsetMinutes == (int) utcOffset.TotalMinutes)
++                    return;
++
++                schedule.LowMinutes = lowMinutes;
++                schedule.HighMinutes = highMinutes;
++                schedule.UtcOffsetMinutes = (int) utcOffset.TotalMinutes;
++                schedule.OffsetKnown = true;
++                await SaveUnlockedAsync(store);
++            }
++            catch (Exception)
++            {
++                // The default capture times stay.
++            }
++            finally
++            {
++                Lock.Release();
++            }
++        }
++
++        /// <summary>
++        /// Updates today's record of a saved location from data that was downloaded anyway, or from a
++        /// capture. Only a capture marks the low or the high as final.
++        /// </summary>
++        public static async Task ObserveAsync(string placeId, V3WxObservationsCurrent? observation,
++            IReadOnlyList<int?>? iconCodes, IReadOnlyList<string?>? phrases, IReadOnlyList<int?>? precipChances,
++            string units, bool lowCapture = false, bool highCapture = false)
++        {
++            if (observation == null || string.IsNullOrEmpty(placeId))
++                return;
++
++            await Lock.WaitAsync();
++            try
++            {
++                var store = await LoadUnlockedAsync();
++                var local = observation.validTimeLocal;
++                var date = DateKey(local);
++
++                var record = store.Records.FirstOrDefault(r => r.PlaceId == placeId && r.Date == date);
++                if (record == null)
++                {
++                    record = new PastDayRecord { PlaceId = placeId, Date = date, Units = units };
++                    store.Records.Add(record);
++                }
++
++                var before = Fingerprint(record);
++
++                if (record.Units != units)
++                {
++                    record.High = ConvertTemperature(record.High, record.Units, units);
++                    record.Low = ConvertTemperature(record.Low, record.Units, units);
++                    record.Units = units;
++                }
++
++                // The highest temperature since 7 AM belongs to today only after 7 AM.
++                if (local.Hour >= 8)
++                {
++                    record.High = record.High == null
++                        ? observation.temperatureMaxSince7Am
++                        : Math.Max(record.High.Value, observation.temperatureMaxSince7Am);
++                    if (highCapture)
++                        record.HighCaptured = true;
++                }
++
++                // The lowest temperature of the last 24 hours includes the night. It is updated until
++                // the low capture makes it final.
++                if (local.Hour >= 4 && !record.LowCaptured)
++                {
++                    record.Low = observation.temperatureMin24Hour;
++                    if (lowCapture)
++                        record.LowCaptured = true;
++                }
++
++                // The conditions of the day: the day part of the forecast, or the night part when the
++                // day part has passed and nothing was recorded yet.
++                var dayIcon = iconCodes is { Count: > 0 } ? iconCodes[0] : null;
++                if (dayIcon != null)
++                {
++                    record.IconCode = dayIcon;
++                    record.Phrase = phrases is { Count: > 0 } ? phrases[0] : record.Phrase;
++                    record.PrecipChance = precipChances is { Count: > 0 } ? precipChances[0] : record.PrecipChance;
++                }
++                else if (record.IconCode == null && iconCodes is { Count: > 1 })
++                {
++                    record.IconCode = iconCodes[1];
++                    record.Phrase = phrases is { Count: > 1 } ? phrases[1] : null;
++                    record.PrecipChance = precipChances is { Count: > 1 } ? precipChances[1] : null;
++                }
++
++                var schedule = GetOrAddSchedule(store, placeId);
++                var offsetChanged = !schedule.OffsetKnown || schedule.UtcOffsetMinutes != (int) local.Offset.TotalMinutes;
++                schedule.UtcOffsetMinutes = (int) local.Offset.TotalMinutes;
++                schedule.OffsetKnown = true;
++                if (lowCapture || highCapture)
++                    schedule.LastFailedUtcTicks = 0;
++
++                // Keep today and the two days before.
++                var oldest = DateKey(local.AddDays(-KeepDays));
++                var removed = store.Records.RemoveAll(r => r.PlaceId == placeId && string.CompareOrdinal(r.Date, oldest) < 0);
++
++                if (before != Fingerprint(record) || offsetChanged || removed > 0 || lowCapture || highCapture)
++                    await SaveUnlockedAsync(store);
++            }
++            catch (Exception)
++            {
++                // A failed record only means a missing past day later.
++            }
++            finally
++            {
++                Lock.Release();
++            }
++        }
++
++        /// <summary>
++        /// Downloads the captures that are due for the saved locations, one location at a time with a
++        /// short gap between requests. Called by the background task every 15 minutes and when the
++        /// app shows new data.
++        /// </summary>
++        public static async Task RunDueCapturesAsync()
++        {
++            if (!await RunLock.WaitAsync(0))
++                return; // a run is already going
++
++            try
++            {
++                var saved = await SavedLocationsService.GetAllAsync();
++                var savedIds = new HashSet<string>(saved.Select(s => s.PlaceId));
++                var units = (await VariousUtils.GetUnitsCode()).ToString();
++
++                PastDaysStore store;
++                await Lock.WaitAsync();
++                try
++                {
++                    store = await LoadUnlockedAsync();
++                    var changed = false;
++                    if (store.SpreadMinutes < 0)
++                    {
++                        store.SpreadMinutes = Random.Shared.Next(0, 21);
++                        changed = true;
++                    }
++
++                    // Locations that are no longer saved are not kept.
++                    changed |= store.Records.RemoveAll(r => !savedIds.Contains(r.PlaceId)) > 0;
++                    changed |= store.Schedules.RemoveAll(s => !savedIds.Contains(s.PlaceId)) > 0;
++                    if (changed)
++                        await SaveUnlockedAsync(store);
++                }
++                finally
++                {
++                    Lock.Release();
++                }
++
++                var requests = 0;
++                foreach (var location in saved)
++                {
++                    var schedule = store.Schedules.FirstOrDefault(s => s.PlaceId == location.PlaceId)
++                                   ?? new PastDaySchedule { PlaceId = location.PlaceId };
++                    var nowUtc = DateTimeOffset.UtcNow;
++
++                    if (schedule.LastFailedUtcTicks > 0 && nowUtc.UtcTicks - schedule.LastFailedUtcTicks < RetryAfterFailure.Ticks)
++                        continue;
++
++                    var local = schedule.OffsetKnown
++                        ? nowUtc.ToOffset(TimeSpan.FromMinutes(schedule.UtcOffsetMinutes))
++                        : DateTimeOffset.Now;
++                    var date = DateKey(local);
++                    var record = store.Records.FirstOrDefault(r => r.PlaceId == location.PlaceId && r.Date == date);
++                    var minutes = local.Hour * 60 + local.Minute;
++                    var wait = CaptureDelayMinutes + store.SpreadMinutes;
++
++                    var lowDue = record is not { LowCaptured: true } && minutes >= schedule.LowMinutes + wait;
++                    var highDue = record is not { HighCaptured: true } && minutes >= schedule.HighMinutes + wait;
++                    if (!lowDue && !highDue)
++                        continue;
++
++                    if (requests > 0)
++                        await Task.Delay(GapBetweenRequests);
++                    requests++;
++
++                    try
++                    {
++                        using var response = await ApiUtils.GetCurrentConditions(location.PlaceId);
++                        var json = await response.Content.ReadAsStringAsync();
++                        var data = JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.CurrentConditionsResponse);
++                        var observation = data?.v3wxobservationscurrent;
++                        if (observation == null)
++                            throw new InvalidOperationException("No current conditions.");
++
++                        var part = data?.v3wxforecastdaily3day?.daypart?.FirstOrDefault();
++                        await ObserveAsync(location.PlaceId, observation, part?.iconCode, part?.wxPhraseLong, part?.precipChance,
++                            units, lowDue, highDue);
++                    }
++                    catch (Exception)
++                    {
++                        await MarkFailedAsync(location.PlaceId);
++                    }
++                }
++            }
++            catch (Exception)
++            {
++                // The next run tries again.
++            }
++            finally
++            {
++                RunLock.Release();
++            }
++        }
++
++        private static async Task MarkFailedAsync(string placeId)
++        {
++            await Lock.WaitAsync();
++            try
++            {
++                var store = await LoadUnlockedAsync();
++                GetOrAddSchedule(store, placeId).LastFailedUtcTicks = DateTimeOffset.UtcNow.UtcTicks;
++                await SaveUnlockedAsync(store);
++            }
++            catch (Exception)
++            {
++                // The next run tries again.
++            }
++            finally
++            {
++                Lock.Release();
++            }
++        }
++
++        private static PastDaySchedule GetOrAddSchedule(PastDaysStore store, string placeId)
++        {
++            var schedule = store.Schedules.FirstOrDefault(s => s.PlaceId == placeId);
++            if (schedule == null)
++            {
++                schedule = new PastDaySchedule { PlaceId = placeId };
++                store.Schedules.Add(schedule);
++            }
++
++            return schedule;
++        }
++
++        private static string DateKey(DateTimeOffset local) => local.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
++
++        private static string Fingerprint(PastDayRecord r) =>
++            r.High + "|" + r.Low + "|" + r.IconCode + "|" + r.Phrase + "|" + r.PrecipChance + "|" + r.Units + "|" + r.LowCaptured + "|" + r.HighCaptured;
++
++        private static bool IsFahrenheit(string units) => units == "e";
++
++        public static int? ConvertTemperature(int? value, string from, string to)
++        {
++            if (value == null || IsFahrenheit(from) == IsFahrenheit(to))
++                return value;
++
++            return IsFahrenheit(from)
++                ? (int) Math.Round((value.Value - 32) * 5 / 9.0)
++                : (int) Math.Round(value.Value * 9 / 5.0 + 32);
++        }
++
++        private static async Task<PastDaysStore> LoadUnlockedAsync()
++        {
++            try
++            {
++                return await ApplicationData.Current.LocalFolder.ReadAsync<PastDaysStore>(FileName) ?? new PastDaysStore();
++            }
++            catch (Exception)
++            {
++                return new PastDaysStore();
++            }
++        }
++
++        private static async Task SaveUnlockedAsync(PastDaysStore store)
++        {
++            await ApplicationData.Current.LocalFolder.SaveAsync(FileName, store);
++        }
++    }
++}
 diff --git a/FluentWeather/Services/SavedLocationsService.cs b/FluentWeather/Services/SavedLocationsService.cs
 new file mode 100644
 index 0000000000000000000000000000000000000000..8255c5af70435a2d96500b95fbb7fa14a6dc00ce
@@ -543,10 +1244,10 @@ index 0000000000000000000000000000000000000000..418740c8142516b859301a66e4f3c936
 +}
 diff --git a/FluentWeather/Services/TrayWeatherFile.cs b/FluentWeather/Services/TrayWeatherFile.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..2245bccb50f417a737774bee77983ec0e5b5a189
+index 0000000000000000000000000000000000000000..b5ad65afac1a5f7fe28edde883f5e206e867ee3f
 --- /dev/null
 +++ b/FluentWeather/Services/TrayWeatherFile.cs
-@@ -0,0 +1,349 @@
+@@ -0,0 +1,354 @@
 +using System;
 +using System.Collections.Generic;
 +using System.Globalization;
@@ -662,6 +1363,11 @@ index 0000000000000000000000000000000000000000..2245bccb50f417a737774bee77983ec0
 +                        var data = System.Text.Json.JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.CurrentConditionsResponse);
 +                        if (data?.v3wxobservationscurrent == null || data.v3locationpoint?.LocationV3 == null)
 +                            return previous.TryGetValue(location.PlaceId, out var old) ? old : null;
++
++                        // "Past days": the data is here anyway, so it also updates today's record.
++                        var part = data.v3wxforecastdaily3day?.daypart?.FirstOrDefault();
++                        await PastDaysService.ObserveAsync(location.PlaceId, data.v3wxobservationscurrent,
++                            part?.iconCode, part?.wxPhraseLong, part?.precipChance, units.ToString());
 +
 +                        return "[" + location.PlaceId + "]\n" +
 +                               await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
@@ -897,7 +1603,7 @@ index 0000000000000000000000000000000000000000..2245bccb50f417a737774bee77983ec0
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b97540e1c3e342b991ff0149b462c3181ca839ec 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..dd35b15213702dc994f32ff08cd1ea416d1d4692 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -146,7 +146,7 @@
@@ -909,7 +1615,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b97540e1c3e342b991ff0149b462c318
    </data>
    <data name="FeelsLikeText" xml:space="preserve">
      <value>Feels like</value>
-@@ -297,4 +297,148 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -297,4 +297,199 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -957,6 +1663,57 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b97540e1c3e342b991ff0149b462c318
 +  </data>
 +  <data name="CardTintHint.Text" xml:space="preserve">
 +    <value>Tints the cards so their text stays readable over the background image. 0 percent keeps the original look.</value>
++  </data>
++  <data name="PastDaysYesterday" xml:space="preserve">
++    <value>Yesterday</value>
++  </data>
++  <data name="AirQualityChipControl.Title" xml:space="preserve">
++    <value>Air quality</value>
++  </data>
++  <data name="AirQualityGood" xml:space="preserve">
++    <value>Good</value>
++  </data>
++  <data name="AirQualityFair" xml:space="preserve">
++    <value>Fair</value>
++  </data>
++  <data name="AirQualityModerate" xml:space="preserve">
++    <value>Moderate</value>
++  </data>
++  <data name="AirQualityPoor" xml:space="preserve">
++    <value>Poor</value>
++  </data>
++  <data name="AirQualityVeryPoor" xml:space="preserve">
++    <value>Very poor</value>
++  </data>
++  <data name="AirQualityExtremelyPoor" xml:space="preserve">
++    <value>Extremely poor</value>
++  </data>
++  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
++    <value>Unhealthy for some</value>
++  </data>
++  <data name="AirQualityUnhealthy" xml:space="preserve">
++    <value>Unhealthy</value>
++  </data>
++  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
++    <value>Very unhealthy</value>
++  </data>
++  <data name="AirQualityHazardous" xml:space="preserve">
++    <value>Hazardous</value>
++  </data>
++  <data name="AirQualityUsScale" xml:space="preserve">
++    <value>US air quality index</value>
++  </data>
++  <data name="AirQualityEuScale" xml:space="preserve">
++    <value>European air quality index</value>
++  </data>
++  <data name="AirQualityOzone" xml:space="preserve">
++    <value>Ozone</value>
++  </data>
++  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
++    <value>Nitrogen dioxide</value>
++  </data>
++  <data name="AirQualityCredit" xml:space="preserve">
++    <value>Air quality data: Open-Meteo.com and the Copernicus Atmosphere Monitoring Service (CC BY 4.0).</value>
 +  </data>
 +  <data name="RadarTitleText.Text" xml:space="preserve">
 +    <value>Radar</value>
@@ -1225,15 +1982,17 @@ index 9c07a12037569243fc915fcf6b3fda7befeed576..6512fabcb4eb07c251fa8b6f070390e3
      }
  }
 diff --git a/FluentWeather/Utils/FluentWeatherJsonContext.cs b/FluentWeather/Utils/FluentWeatherJsonContext.cs
-index a54725317adb750a3f5f01a0bc3a926fd5d88c03..0311e64b312b6d78ad14dbbd50d00137d5a75094 100644
+index a54725317adb750a3f5f01a0bc3a926fd5d88c03..48bce1141e1ae543c0d2fc100fb29c7307d76baa 100644
 --- a/FluentWeather/Utils/FluentWeatherJsonContext.cs
 +++ b/FluentWeather/Utils/FluentWeatherJsonContext.cs
-@@ -4,6 +4,8 @@ using System.Text.Json.Serialization;
+@@ -4,6 +4,10 @@ using System.Text.Json.Serialization;
  
  [JsonSerializable(typeof(RootV3Response))]
  [JsonSerializable(typeof(SearchLocationResponse))]
 +[JsonSerializable(typeof(System.Collections.Generic.List<SavedLocation>))]
 +[JsonSerializable(typeof(CurrentConditionsResponse))]
++[JsonSerializable(typeof(PastDaysStore))]
++[JsonSerializable(typeof(AirQualityResponse))]
  [JsonSerializable(typeof(bool?))]
  [JsonSourceGenerationOptions(
      PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
@@ -1256,7 +2015,7 @@ index d01caa15d224c7a1e6c46932e29727535e6f2115..3b56ebabd6bfa49ff01ec83636d930d2
      }
  }
 diff --git a/FluentWeather/Views/MainPage.xaml b/FluentWeather/Views/MainPage.xaml
-index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..dcd237808b57912da57959a866e07fcb16fb10ec 100644
+index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea9011bb62 100644
 --- a/FluentWeather/Views/MainPage.xaml
 +++ b/FluentWeather/Views/MainPage.xaml
 @@ -187,6 +187,14 @@
@@ -1462,13 +2221,13 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..dcd237808b57912da57959a866e07fcb
 +                                                        <controls1:SegmentedItem Content="30 min" />
 +                                                        <controls1:SegmentedItem Content="1 h" />
 +                                                    </controls1:Segmented>
- 
--                                                    </ComboBox>
++
 +                                                    <!-- Local build: language of the app and of the weather text -->
 +                                                    <TextBlock x:Uid="LanguageSettingsTitle"
 +                                                               Margin="0,16,0,0"
 +                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-+
+ 
+-                                                    </ComboBox>
 +                                                    <!-- Opens a separate window with the full list of languages.
 +                                                         A long drop-down list does not scroll well inside this flyout. -->
 +                                                    <Button x:Name="LanguageButton"
@@ -1670,7 +2429,122 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..dcd237808b57912da57959a866e07fcb
                          </Grid>
  
  
-@@ -1325,12 +1593,91 @@
+@@ -610,28 +878,37 @@
+                         </RelativePanel>
+ 
+ 
+-                        <StackPanel Grid.Row="2"
+-                                    Orientation="Horizontal"
+-                                    Margin="0,16,0,0">
++                        <!-- Local build: the detail cards scroll sideways in a narrow window, with a scroll bar
++                             below them. The bottom margin leaves room for the scroll bar. -->
++                        <ScrollViewer Grid.Row="2"
++                                      Margin="0,16,0,0"
++                                      VerticalScrollMode="Disabled"
++                                      VerticalScrollBarVisibility="Disabled"
++                                      HorizontalScrollMode="Enabled"
++                                      HorizontalScrollBarVisibility="Auto">
++                        <StackPanel Orientation="Horizontal"
++                                    Margin="0,0,0,14">
+ 
+                             <controls:DetailChipControl
+                                 x:Name="WindChipControl"
+                                 x:Uid="WindChipControl">
+                             </controls:DetailChipControl>
+ 
+-                            <!--<controls:DetailChipControl
+-                                x:Name="CloudCoverChipControl"
+-                                x:Uid="CloudCoverChipControl">
+-                            </controls:DetailChipControl>-->
++                            <controls:DetailChipControl
++                                x:Name="HumidityChipControl"
++                                x:Uid="HumidityChipControl">
++                            </controls:DetailChipControl>
+ 
+                             <controls:DetailChipControl
+-                                x:Name="PressureChipControl"
+-                                x:Uid="PressureChipControl">
++                                x:Name="UVIndexChipControl"
++                                x:Uid="UVIndexChipControl">
+                             </controls:DetailChipControl>
+ 
++                            <!-- Local build: air quality from Open-Meteo. Hidden until the data arrives. -->
+                             <controls:DetailChipControl
+-                                x:Name="HumidityChipControl"
+-                                x:Uid="HumidityChipControl">
++                                x:Name="AirQualityChipControl"
++                                x:Uid="AirQualityChipControl"
++                                Visibility="Collapsed">
+                             </controls:DetailChipControl>
+ 
+                             <controls:DetailChipControl
+@@ -640,16 +917,22 @@
+                             </controls:DetailChipControl>
+ 
+                             <controls:DetailChipControl
+-                                x:Name="DewPointChipControl"
+-                                x:Uid="DewPointChipControl">
++                                x:Name="PressureChipControl"
++                                x:Uid="PressureChipControl">
+                             </controls:DetailChipControl>
+ 
+                             <controls:DetailChipControl
+-                                x:Name="UVIndexChipControl"
+-                                x:Uid="UVIndexChipControl">
++                                x:Name="DewPointChipControl"
++                                x:Uid="DewPointChipControl">
+                             </controls:DetailChipControl>
+ 
++                            <!--<controls:DetailChipControl
++                                x:Name="CloudCoverChipControl"
++                                x:Uid="CloudCoverChipControl">
++                            </controls:DetailChipControl>-->
++
+                         </StackPanel>
++                        </ScrollViewer>
+ 
+                         <Grid Grid.Row="3"
+                               Margin="0,32,0,0">
+@@ -665,10 +948,27 @@
+ 
+                                 Margin="0,0,0,16" />
+ 
+-                            <ScrollViewer Grid.Row="1"
++                            <ScrollViewer x:Name="DaysScroll"
++                                          Grid.Row="1"
+                                           VerticalScrollMode="Disabled"
+                                           VerticalScrollBarVisibility="Disabled"
+-                                          HorizontalScrollBarVisibility="Hidden">
++                                          HorizontalScrollBarVisibility="Auto"
++                                          ViewChanged="DaysScroll_OnViewChanged">
++
++                                <!-- The bottom margin leaves room for the scroll bar below the cards. -->
++                                <StackPanel x:Name="DaysRowPanel"
++                                            Orientation="Horizontal"
++                                            Margin="0,0,0,14"
++                                            PointerWheelChanged="DaysRowPanel_OnPointerWheelChanged"
++                                            KeyDown="DaysRowPanel_OnKeyDown">
++
++                                <!-- Local build: "Past days". The recorded days before today, oldest first. The code
++                                     fills this panel and scrolls the row so that today is the first day in view. -->
++                                <StackPanel x:Name="PastDaysPanel"
++                                            Orientation="Horizontal"
++                                            Spacing="8"
++                                            Margin="0,0,8,0"
++                                            Visibility="Collapsed" />
+ 
+                                 <muxc:ItemsRepeater
+                                     x:Name="RepeaterDays">
+@@ -735,6 +1035,8 @@
+                                     </muxc:ItemsRepeater.Layout>
+                                 </muxc:ItemsRepeater>
+ 
++                                </StackPanel>
++
+                             </ScrollViewer>
+                         </Grid>
+ 
+@@ -1325,12 +1627,91 @@
  
                          </Grid>
  
@@ -1763,7 +2637,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..dcd237808b57912da57959a866e07fcb
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d77e236f3 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0c7449edd 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -2022,7 +2896,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
  
              //join the variables displayName, city, adminDistrict, country together in a single string with a comma between each variable (some may be empty) and remove duplicate names
              string placeName = string.Join(", ",
-@@ -410,6 +515,16 @@ namespace FluentWeather.Views
+@@ -410,6 +515,17 @@ namespace FluentWeather.Views
  
              PlaceText.Text = placeName;
  
@@ -2035,11 +2909,22 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
 +            UpdateActiveChip();
 +            UpdateSaveLocationButton();
 +            UpdateRadar(locationV3.latitude, locationV3.longitude, locationV3.countryCode);
++            _ = UpdateAirQualityAsync(locationV3.latitude, locationV3.longitude, locationV3.countryCode, placeId);
 +
              MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
  
              CurrentTempText.Text = rootV3Response.v3wxobservationscurrent.temperature + "°" +
-@@ -475,6 +590,8 @@ namespace FluentWeather.Views
+@@ -453,6 +569,9 @@ namespace FluentWeather.Views
+ 
+             //select first day button
+             EmulateDayButtonClick(0);
++
++            // Local build: record today for "Past days" and show the recorded days left of today.
++            _ = UpdatePastDaysAsync(rootV3Response, placeId);
+         }
+ 
+         private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
+@@ -475,6 +594,8 @@ namespace FluentWeather.Views
          {
              if (_lastApiData == null) return;
  
@@ -2048,7 +2933,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
              List<HourDataAdapter> hourlyDataAdapters = [];
  
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
-@@ -486,6 +603,24 @@ namespace FluentWeather.Views
+@@ -486,6 +607,24 @@ namespace FluentWeather.Views
              //subtract daytoload to firstdate to get the index of the first day to load
              int daysDiff = dayToLoad.Date.Subtract(firstDate.Date).Days;
  
@@ -2073,7 +2958,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
              if (daysDiff == -1 ||
                  (daysDiff == 0 &&
                   _lastApiData.v3wxforecasthourly10day.validTimeLocal[0].Hour > 7)) //this means that we are still in a tonight/today state and we add hours only until 7AM
-@@ -629,7 +764,13 @@ namespace FluentWeather.Views
+@@ -629,7 +768,13 @@ namespace FluentWeather.Views
              button.Style = (Style) Resources["SelectedDayButtonStyle"];
  
              // Keep track of the selected button
@@ -2087,7 +2972,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
          }
  
          private void EmulateDayButtonClick(int index)
-@@ -713,18 +854,19 @@ namespace FluentWeather.Views
+@@ -713,18 +858,19 @@ namespace FluentWeather.Views
                  CrossfadeToImageApiData();
              else
                  CrossfadeToImage(null);
@@ -2116,7 +3001,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +884,1239 @@ namespace FluentWeather.Views
+@@ -742,5 +888,1519 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }
@@ -2858,8 +3743,11 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
 +            }
 +
 +            var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
-+            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl })
++            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl })
 +                chip?.SetCardBackground(chipBrush);
++
++            foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
++                ApplyCardTintToDayButton(pastCard);
 +
 +            var count = RepeaterDays.ItemsSourceView?.Count ?? 0;
 +            for (var i = 0; i < count; i++)
@@ -2900,6 +3788,283 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..3386c29adfc50b37bddbeda9e1a0a41d
 +            {
 +                // The choice still applies until the app closes.
 +            }
++        }
++
++        // --- Air quality ---
++        // One small request to Open-Meteo per location and hour. See AirQualityService.
++        // US locations use the US EPA scale, other locations the European scale.
++
++        private async Task UpdateAirQualityAsync(double latitude, double longitude, string? countryCode, string placeId)
++        {
++            try
++            {
++                var data = await AirQualityService.GetAsync(latitude, longitude);
++
++                // Another location may be shown by now.
++                if (_displayedPlaceId != placeId)
++                    return;
++
++                var usScale = countryCode?.ToUpperInvariant() is "US" or "PR" or "VI" or "GU" or "MP" or "AS";
++                var index = usScale ? data?.UsAqi : data?.EuropeanAqi;
++                if (data == null || index == null)
++                {
++                    AirQualityChipControl.Visibility = Visibility.Collapsed;
++                    return;
++                }
++
++                var value = (int) Math.Round(index.Value);
++                AirQualityChipControl.Value = value + " " + AirQualityService.CategoryText(value, usScale);
++
++                // The readings behind the index, and the credit that the data license asks for.
++                var unit = " µg/m³";
++                string Reading(string name, double? amount) => amount == null ? "" : "\n" + name + ": " + Math.Round(amount.Value) + unit;
++                var tip = (usScale ? "AirQualityUsScale" : "AirQualityEuScale").GetLocalized() + ": " + value
++                          + Reading("PM2.5", data.Pm25) + Reading("PM10", data.Pm10)
++                          + Reading("AirQualityOzone".GetLocalized(), data.Ozone)
++                          + Reading("AirQualityNitrogenDioxide".GetLocalized(), data.NitrogenDioxide)
++                          + "\n\n" + "AirQualityCredit".GetLocalized();
++                ToolTipService.SetToolTip(AirQualityChipControl, tip);
++                AirQualityChipControl.Visibility = Visibility.Visible;
++            }
++            catch (Exception)
++            {
++                AirQualityChipControl.Visibility = Visibility.Collapsed;
++            }
++        }
++
++        // --- Past days ---
++        // The recorded days before today, left of today in the day row. See PastDaysService.
++        // The cards show what was recorded. They have no hourly view, so a click does nothing.
++
++        private async Task UpdatePastDaysAsync(RootV3Response data, string placeId)
++        {
++            try
++            {
++                var observation = data.v3wxobservationscurrent;
++                var units = (await VariousUtils.GetUnitsCode()).ToString();
++
++                if (await SavedLocationsService.ContainsAsync(placeId))
++                {
++                    await PastDaysService.UpdateScheduleAsync(placeId, data.v3wxforecasthourly10day, observation.validTimeLocal.Offset);
++                    var part = data.v3wxforecastdaily10day?.daypart?.FirstOrDefault();
++                    await PastDaysService.ObserveAsync(placeId, observation, part?.iconCode, part?.wxPhraseLong, part?.precipChance, units);
++                }
++
++                await ShowPastDaysAsync(placeId, observation.validTimeLocal, units);
++                _ = PastDaysService.RunDueCapturesAsync();
++            }
++            catch (Exception)
++            {
++                // The day row still shows today and the forecast.
++            }
++        }
++
++        private async Task ShowPastDaysAsync(string placeId, DateTimeOffset locationNow, string units)
++        {
++            var records = await PastDaysService.GetPastDaysAsync(placeId, locationNow, units);
++
++            // Another location may be shown by now.
++            if (_displayedPlaceId != placeId)
++                return;
++
++            PastDaysPanel.Children.Clear();
++            foreach (var record in records)
++            {
++                var card = CreatePastDayCard(record, locationNow);
++                ApplyCardTintToDayButton(card);
++                PastDaysPanel.Children.Add(card);
++            }
++
++            PastDaysPanel.Visibility = records.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
++
++            // Today stays the first day in view. The past days are reached by scrolling left.
++            DaysScroll.UpdateLayout();
++            DaysScroll.ChangeView(records.Count > 0 ? PastDaysPanel.ActualWidth + PastDaysPanel.Margin.Right : 0, null, null, true);
++        }
++
++        private static Button CreatePastDayCard(PastDayRecord record, DateTimeOffset locationNow)
++        {
++            var date = DateTime.ParseExact(record.Date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
++            string title;
++            if (date.Date == locationNow.Date.AddDays(-1))
++            {
++                title = "PastDaysYesterday".GetLocalized();
++            }
++            else
++            {
++                var language = Windows.System.UserProfile.GlobalizationPreferences.Languages[0];
++                var dayName = new System.Globalization.CultureInfo(language).DateTimeFormat.GetAbbreviatedDayName(date.DayOfWeek);
++                title = VariousUtils.UppercaseFirst(dayName) + " " + date.Day;
++            }
++
++            var panel = new RelativePanel
++            {
++                HorizontalAlignment = HorizontalAlignment.Stretch,
++                VerticalAlignment = VerticalAlignment.Stretch
++            };
++
++            if (record.IconCode != null)
++            {
++                var icon = new Image
++                {
++                    Width = 28,
++                    Source = new Media.Imaging.SvgImageSource { UriSource = new Uri("ms-appx:///Assets/weticons/" + record.IconCode + ".svg") }
++                };
++                RelativePanel.SetAlignTopWithPanel(icon, true);
++                RelativePanel.SetAlignLeftWithPanel(icon, true);
++                panel.Children.Add(icon);
++            }
++
++            var titleText = new TextBlock { Text = title };
++            RelativePanel.SetAlignTopWithPanel(titleText, true);
++            RelativePanel.SetAlignRightWithPanel(titleText, true);
++            panel.Children.Add(titleText);
++
++            var temperatures = (record.High?.ToString() ?? "--") + "° / " + (record.Low?.ToString() ?? "--") + "°";
++            var temperatureText = new TextBlock { Text = temperatures };
++            RelativePanel.SetAlignBottomWithPanel(temperatureText, true);
++            RelativePanel.SetAlignLeftWithPanel(temperatureText, true);
++            panel.Children.Add(temperatureText);
++
++            if (record.PrecipChance != null)
++            {
++                var chanceText = new TextBlock { Text = record.PrecipChance + "%" };
++                RelativePanel.SetAlignBottomWithPanel(chanceText, true);
++                RelativePanel.SetAlignRightWithPanel(chanceText, true);
++                panel.Children.Add(chanceText);
++
++                var drop = new Image
++                {
++                    Width = 16,
++                    Stretch = Media.Stretch.Uniform,
++                    Margin = new Thickness(0, 0, 4, 0),
++                    Source = new Media.Imaging.SvgImageSource
++                    {
++                        UriSource = new Uri("ms-appx:///Assets/varicons/" + VariousUtils.GetPrecipIconChance(record.PrecipChance) + ".svg")
++                    }
++                };
++                RelativePanel.SetAlignBottomWithPanel(drop, true);
++                RelativePanel.SetLeftOf(drop, chanceText);
++                panel.Children.Add(drop);
++            }
++
++            var card = new Button
++            {
++                Width = 135,
++                Height = 70,
++                HorizontalAlignment = HorizontalAlignment.Stretch,
++                VerticalAlignment = VerticalAlignment.Stretch,
++                HorizontalContentAlignment = HorizontalAlignment.Stretch,
++                VerticalContentAlignment = VerticalAlignment.Stretch,
++                Content = panel
++            };
++
++            var description = string.IsNullOrEmpty(record.Phrase) ? title : title + ": " + record.Phrase;
++            ToolTipService.SetToolTip(card, description);
++            AutomationProperties.SetName(card, description + ", " + temperatures);
++            return card;
++        }
++
++        // --- Day row scrolling ---
++        // Every day card is 135 pixels wide with 8 pixels between cards, the past day cards too.
++        // So each card starts at a multiple of 143 pixels. The row can be scrolled freely with the
++        // scroll bar, touch or a touchpad. When the scroll ends it moves to the nearest card, so no
++        // card is left cut off. Each mouse wheel notch over the row moves it by exactly one card,
++        // whatever the Windows wheel setting is. The arrow keys move one card, Home and End go to
++        // the ends. When all days fit, the row does not scroll and the wheel scrolls the page.
++
++        private const double DayCardPitch = 143;
++        private const int WheelNotch = 120;
++
++        private int _dayWheelDelta;
++
++        private double SnapDayOffset(double offset)
++        {
++            var max = DaysScroll.ScrollableWidth;
++            if (max <= 0)
++                return 0;
++
++            // The end of the row is a stop too, so the last card can be seen in full.
++            if (max - offset < DayCardPitch / 2)
++                return max;
++
++            return Math.Clamp(Math.Round(offset / DayCardPitch) * DayCardPitch, 0, max);
++        }
++
++        private DispatcherTimer? _daySnapTimer;
++
++        // The row snaps a quarter second after the scrolling stops, so dragging the scroll bar
++        // stays smooth.
++        private void DaysScroll_OnViewChanged(object? sender, ScrollViewerViewChangedEventArgs e)
++        {
++            if (_daySnapTimer == null)
++            {
++                _daySnapTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(250) };
++                _daySnapTimer.Tick += (_, _) =>
++                {
++                    _daySnapTimer.Stop();
++                    var target = SnapDayOffset(DaysScroll.HorizontalOffset);
++                    if (Math.Abs(target - DaysScroll.HorizontalOffset) > 0.5)
++                        DaysScroll.ChangeView(target, null, null, false);
++                };
++            }
++
++            _daySnapTimer.Stop();
++            _daySnapTimer.Start();
++        }
++
++        private void StepDays(int cards)
++        {
++            var from = SnapDayOffset(DaysScroll.HorizontalOffset);
++            var target = Math.Clamp(from + cards * DayCardPitch, 0, DaysScroll.ScrollableWidth);
++            DaysScroll.ChangeView(SnapDayOffset(target), null, null, false);
++        }
++
++        private void DaysRowPanel_OnPointerWheelChanged(object sender, PointerRoutedEventArgs e)
++        {
++            if (DaysScroll.ScrollableWidth <= 0)
++                return; // all days fit, so the wheel scrolls the page
++
++            // A horizontal wheel turns positive to the right. A vertical wheel turns positive upward,
++            // which moves the row back toward the past days.
++            var properties = e.GetCurrentPoint(DaysScroll).Properties;
++            var delta = properties.IsHorizontalMouseWheel ? properties.MouseWheelDelta : -properties.MouseWheelDelta;
++            e.Handled = true;
++
++            // Small wheel movements, from some touchpads, add up to one notch.
++            if (Math.Sign(delta) != Math.Sign(_dayWheelDelta))
++                _dayWheelDelta = 0;
++            _dayWheelDelta += delta;
++
++            var cards = _dayWheelDelta / WheelNotch;
++            if (cards == 0)
++                return;
++
++            _dayWheelDelta -= cards * WheelNotch;
++            StepDays(cards);
++        }
++
++        private void DaysRowPanel_OnKeyDown(object sender, KeyRoutedEventArgs e)
++        {
++            switch (e.Key)
++            {
++                case VirtualKey.Left:
++                    StepDays(-1);
++                    break;
++                case VirtualKey.Right:
++                    StepDays(1);
++                    break;
++                case VirtualKey.Home:
++                    DaysScroll.ChangeView(0, null, null, false);
++                    break;
++                case VirtualKey.End:
++                    DaysScroll.ChangeView(DaysScroll.ScrollableWidth, null, null, false);
++                    break;
++                default:
++                    return;
++            }
++
++            e.Handled = true;
 +        }
 +
 +        // --- Radar (US locations) ---
