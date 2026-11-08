@@ -1,39 +1,35 @@
-<h1> <img align="center" src="https://github.com/Gabboxl/FluentWeather/assets/26819478/cc001a70-bfa4-4e3e-84cf-ea86652dcb98" width=6% height=6%> FluentWeather <a title="Crowdin" target="_blank" href="https://crowdin.com/project/FluentWeather"><img src="https://badges.crowdin.net/FluentWeather/localized.svg"></a> </h1>  
-A beautiful & modern UWP weather app for Windows.
+<h1> <img align="center" src="https://github.com/Gabboxl/FluentWeather/assets/26819478/cc001a70-bfa4-4e3e-84cf-ea86652dcb98" width=6% height=6%> FluentWeather-Plus</h1>
+A weather app for Windows with saved locations and weather icons in the taskbar.
 
-This is a fork of FluentWeather by Gabboxl. It adds saved locations, tray icons, a card tint setting, a radar map for US locations, an air quality card, a view of the past two days, and resizing in a local build setup. duedilly made these changes on November 3, 2026. FEATURES.txt lists the added features. To install this version without building it, download FluentWeather-Setup-<version>.exe from the [latest release](https://github.com/Duedilly108/FluentWeather/releases/latest). To build it on your own PC, follow LocalBuild/README.txt.
+FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by duedilly108. It keeps all features of the original app. FEATURES.txt lists everything it adds.
 
 ![dropshad2](https://github.com/Gabboxl/FluentWeather/assets/26819478/4170effe-4594-415b-b1ca-02c61087f539)
 
-## Translate the app
+## Download
 
-Everyone is invited to help with the translation of the app, [help us translate here!](https://crwd.in/FluentWeather/c07dfb9bf12c2e9ed8566e525d6ee8172645390)
+The current version is v27. Download FluentWeather-Plus-Setup-v27.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click it. Windows asks for administrator approval once. New versions appear on the same page.
 
-## Downloads
+Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
-### Requirements
+To build the app on your own PC, follow LocalBuild/README.txt.
 
-* Windows 10 version 1809 (build 17763) and up, 64-bit
+## What FluentWeather-Plus adds
 
---------
+* Saved locations. A star saves a location, and a row of buttons switches between up to 25 of them.
+* Two tray icons, one with the temperature and one with the conditions. Hovering shows a panel with a choice of details.
+* A radar map for US locations.
+* An air quality card for every location.
+* The past two days in the daily forecast.
+* Settings for text size, background contrast, card tint, forecast length and language.
+* A resizable window that remembers its size and position.
 
-***This fork, with saved locations and tray icons***: [FluentWeather-Setup from the latest release](https://github.com/Duedilly108/FluentWeather/releases/latest)
+## Version history
 
-(*Download FluentWeather-Setup-<version>.exe and double-click it. Windows asks for administrator approval once.*)
+v27 is the first public release of FluentWeather-Plus. It includes all of the changes above. Earlier builds were private test versions.
 
-----
+## The original FluentWeather
 
-***The original FluentWeather by Gabboxl***, without the additions of this fork:
-
- <a href="https://apps.microsoft.com/store/detail/9PFD136M8457?launch=true&mode=mini" > <img src="https://get.microsoft.com/images/en-us%20dark.svg" width=20% height=20%/> </a>
-
-[Standalone package from Gabboxl's GitHub Releases](https://github.com/Gabboxl/FluentWeather/releases/latest) (*run the `Install.ps1` script, or trust the certificate inside the release package manually*)
-
-
-
-## Roadmap
-
-You can find this project's [roadmap here](https://github.com/users/Gabboxl/projects/6/views/1)!
+The original FluentWeather by Gabboxl is on the [Microsoft Store](https://apps.microsoft.com/store/detail/9PFD136M8457) and on [Gabboxl's GitHub](https://github.com/Gabboxl/FluentWeather).
 
 ## Credits
 
@@ -41,7 +37,7 @@ You can find this project's [roadmap here](https://github.com/users/Gabboxl/proj
 
 * All background pictures used in this app are under the [Unsplash License](https://unsplash.com/license)
 
-* Duedilly Fork images:
+* FluentWeather-Plus images:
 
 Draggable Re-sizable Main Screen
 

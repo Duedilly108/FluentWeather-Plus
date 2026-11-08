@@ -140,8 +140,6 @@ namespace FluentWeather.Views
         public Dictionary<int, string> AutoRefreshSteps => new()
         {
             {0, "Off"},
-            {5, "5 min"},
-            {10, "10 min"},
             {15, "15 min"},
             {30, "30 min"},
             {60, "1 hour"}
@@ -153,7 +151,13 @@ namespace FluentWeather.Views
             {
                 //run in background to avoid a deadlock/ui freeze
                 var savedVal = Task.Run(async () => await ApplicationData.Current.LocalSettings.ReadAsync<int>("autoRefreshDataMinutes")).Result;
-                return AutoRefreshSteps.Keys.ToList().IndexOf(savedVal);
+                var keys = AutoRefreshSteps.Keys.ToList();
+
+                // The shortest interval is 15 minutes. An older saved value of 5 or 10 minutes uses 15.
+                if (!keys.Contains(savedVal))
+                    savedVal = savedVal <= 0 ? 0 : keys.Where(k => k > 0).OrderBy(k => Math.Abs(k - savedVal)).First();
+
+                return keys.IndexOf(savedVal);
             }
         }
 
@@ -194,6 +198,10 @@ namespace FluentWeather.Views
             //NavigationService.Navigate(typeof(Views.DashWet));
 
             MainPageViewModel.AppVersionText = GetVersionDescription();
+            MainPageViewModel.PlusVersionText = GetPlusVersionDescription();
+            ToolTipService.SetToolTip(TitleIconHost, Package.Current.DisplayName + " " +
+                                                     MainPageViewModel.PlusVersionText + "\n" +
+                                                     GetFullVersionDescription());
 
             InitializeStoryboards();
 
@@ -248,6 +256,18 @@ namespace FluentWeather.Views
         private async void RefreshTimerTickEvent(object? sender, object e)
         {
             await LoadApiData();
+        }
+
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.27 is v27.
+        private static string GetPlusVersionDescription()
+        {
+            return $"v{Package.Current.Id.Version.Revision}";
+        }
+
+        private static string GetFullVersionDescription()
+        {
+            var version = Package.Current.Id.Version;
+            return $"Build {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
         }
 
         private static string GetVersionDescription()
@@ -1217,20 +1237,27 @@ namespace FluentWeather.Views
             }
         }
 
-        // --- Settings size ---
-        // The settings flyout is drawn at this fraction of its normal size. The Viewbox gets a fixed
-        // width (natural width x scale). It then scales its content down to fit that width.
-        private const double SettingsScale = 0.8;
+        // --- Settings height ---
+        // The settings panel opens below the top bar. It fills the window height down to a small gap
+        // at the bottom. The star rows between its sections share the extra height. In a short
+        // window the panel keeps its natural height and scrolls.
+        private const double SettingsTopOffset = 48;
+        private const double SettingsBottomGap = 16;
 
-        private void SettingsViewbox_Loaded(object sender, RoutedEventArgs e)
+        private void SettingsPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            if (sender is not Viewbox box || box.Child is not FrameworkElement content)
+            if (sender is not FrameworkElement panel)
                 return;
 
-            content.Measure(new Windows.Foundation.Size(double.PositiveInfinity, double.PositiveInfinity));
-            var natural = content.DesiredSize.Width;
-            if (natural > 0)
-                box.Width = Math.Ceiling(natural * SettingsScale);
+            var available = Window.Current.Bounds.Height - SettingsTopOffset - SettingsBottomGap;
+            panel.MinHeight = Math.Max(0, available);
+        }
+
+        private async void ChangelogHyperlink_Click(Windows.UI.Xaml.Documents.Hyperlink sender,
+            Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args)
+        {
+            var dialog = new WhatsNewDialog();
+            await dialog.ShowAsync();
         }
 
         // --- Top bar layout ---
@@ -1238,7 +1265,7 @@ namespace FluentWeather.Views
         // and the window buttons of Windows. The column widths follow the real width of the app name
         // and of the window buttons. In a narrow window the app name is hidden, so nothing overlaps.
 
-        private const double TitleIconArea = 16 + 24 + 8;   // icon margin, icon, gap column
+        private const double TitleIconArea = 12 + 36 + 8;   // icon margin, icon with its P badge, gap column
         private const double TopBarButtonWidth = 52;
         private const double TopBarGap = 8;
         private const double MinSearchWidth = 150;

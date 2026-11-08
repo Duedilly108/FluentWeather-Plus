@@ -1,9 +1,9 @@
 // FluentWeatherDirect.cs
 //
-// The program behind FluentWeather-Setup.exe and FluentWeather-Uninstall.exe.
+// The program behind FluentWeather-Plus-Setup.exe and FluentWeather-Plus-Uninstall.exe.
 // Make-DirectInstaller.ps1 compiles this file twice with the C# compiler that ships with Windows:
-//   without symbols       FluentWeather-Setup.exe      installs the app that was built on the sender's PC
-//   /define:UNINSTALL     FluentWeather-Uninstall.exe  removes everything the setup added
+//   without symbols       FluentWeather-Plus-Setup.exe      installs the app that was built on the sender's PC
+//   /define:UNINSTALL     FluentWeather-Plus-Uninstall.exe  removes everything the setup added
 //
 // Everything runs in this program. It uses the normal Windows interfaces, so it starts no
 // PowerShell and no command prompt. The files to install are embedded as resources named
@@ -31,13 +31,13 @@ using Microsoft.Win32;
 using Windows.Management.Deployment;
 
 #if UNINSTALL
-[assembly: AssemblyTitle("FluentWeather uninstaller")]
-[assembly: AssemblyDescription("Removes FluentWeather (Local), its tray icons and its signing certificate")]
+[assembly: AssemblyTitle("FluentWeather-Plus uninstaller")]
+[assembly: AssemblyDescription("Removes FluentWeather-Plus, its tray icons and its signing certificate")]
 #else
-[assembly: AssemblyTitle("FluentWeather setup")]
-[assembly: AssemblyDescription("Installs FluentWeather (Local) with its tray icons")]
+[assembly: AssemblyTitle("FluentWeather-Plus setup")]
+[assembly: AssemblyDescription("Installs FluentWeather-Plus with its tray icons")]
 #endif
-[assembly: AssemblyProduct("FluentWeather (Local)")]
+[assembly: AssemblyProduct("FluentWeather-Plus")]
 [assembly: AssemblyCompany("duedilly")]
 // AssemblyVersion, AssemblyFileVersion, AssemblyInformationalVersion and AssemblyCopyright come from
 // VersionInfo.cs, which Make-DirectInstaller.ps1 writes with the version of the app it packs.
@@ -59,7 +59,7 @@ namespace FluentWeatherLocal
 
     internal static class DirectSetup
     {
-        private const string Title = "FluentWeather (Local)";
+        private const string Title = "FluentWeather-Plus";
         private const string Prefix = "payload/";
         private const string PackageName = "FluentWeather.LocalBuild";
 
@@ -97,12 +97,19 @@ namespace FluentWeatherLocal
 
         // ---- Shared helpers -----------------------------------------------------------------------
 
-        // The version of the app in this setup, for example 2.1.0.19.
+        // The FluentWeather-Plus version of the app in this setup, for example v27. It is the
+        // informational version. The build number, for example 2.1.0.27, is the file version.
         private static string VersionText
         {
             get
             {
-                try { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
+                try
+                {
+                    var attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyInformationalVersionAttribute), false);
+                    if (attributes.Length > 0)
+                        return ((AssemblyInformationalVersionAttribute)attributes[0]).InformationalVersion;
+                    return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                }
                 catch { return ""; }
             }
         }
@@ -110,7 +117,10 @@ namespace FluentWeatherLocal
         private static string LocalAppData { get { return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData); } }
         private static string InstallDir { get { return Path.Combine(LocalAppData, @"Programs\FluentWeather"); } }
         private static string TrayWorkDir { get { return Path.Combine(LocalAppData, "FluentWeatherLocal"); } }
-        private static string StartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather"); } }
+        private static string StartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather-Plus"); } }
+
+        // The Start menu folder of versions before the rename to FluentWeather-Plus, when the app was named "FluentWeather (Local)".
+        private static string OldStartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather"); } }
         private static string StartupDir { get { return Environment.GetFolderPath(Environment.SpecialFolder.Startup); } }
         private const string UninstallKey = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherDirect";
 
@@ -371,7 +381,7 @@ namespace FluentWeatherLocal
                 string pfn = CopyFilesAndShortcuts(folder, info, addStartMenu, startWithWindows);
                 StartApp(pfn);
 
-                MessageBox.Show("FluentWeather (Local) is installed and opens now." + Environment.NewLine + Environment.NewLine +
+                MessageBox.Show("FluentWeather-Plus is installed and opens now." + Environment.NewLine + Environment.NewLine +
                     "The tray icons are in the notification area. If you do not see them, click the ^ arrow " +
                     "next to the clock.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return 0;
@@ -406,8 +416,8 @@ namespace FluentWeatherLocal
                 var intro = new Label();
                 intro.AutoSize = false;
                 intro.SetBounds(16, 14, 400, 54);
-                intro.Text = "FluentWeather (Local) is a weather app with saved locations and tray icons. " +
-                    "It is FluentWeather by Gabboxl with features added by duedilly.";
+                intro.Text = "FluentWeather-Plus is a weather app with saved locations and tray icons. " +
+                    "It is based on FluentWeather by Gabboxl, with features added by duedilly108.";
 
                 var optionStartMenu = new CheckBox();
                 optionStartMenu.SetBounds(16, 78, 400, 24);
@@ -509,27 +519,28 @@ namespace FluentWeatherLocal
             string ico = Path.Combine(InstallDir, "FluentWeather.ico");
             string explorer = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "explorer.exe");
 
+            try { if (Directory.Exists(OldStartMenuDir)) Directory.Delete(OldStartMenuDir, true); } catch { }
             if (addStartMenu)
             {
                 Directory.CreateDirectory(StartMenuDir);
-                Shortcut.Create(Path.Combine(StartMenuDir, "FluentWeather.lnk"), explorer, "shell:AppsFolder\\" + pfn + "!App", InstallDir, ico, "Open FluentWeather");
-                Shortcut.Create(Path.Combine(StartMenuDir, "FluentWeather tray icons.lnk"), tray, null, InstallDir, ico, "Start the FluentWeather tray icons");
-                Shortcut.Create(Path.Combine(StartMenuDir, "Read me.lnk"), Path.Combine(InstallDir, "README.txt"), null, InstallDir, null, "How FluentWeather is installed, used and removed");
-                Shortcut.Create(Path.Combine(StartMenuDir, "Uninstall FluentWeather.lnk"), uninstaller, null, InstallDir, ico, "Remove FluentWeather (Local)");
+                Shortcut.Create(Path.Combine(StartMenuDir, "FluentWeather-Plus.lnk"), explorer, "shell:AppsFolder\\" + pfn + "!App", InstallDir, ico, "Open FluentWeather-Plus");
+                Shortcut.Create(Path.Combine(StartMenuDir, "FluentWeather-Plus tray icons.lnk"), tray, null, InstallDir, ico, "Start the FluentWeather-Plus tray icons");
+                Shortcut.Create(Path.Combine(StartMenuDir, "Read me.lnk"), Path.Combine(InstallDir, "README.txt"), null, InstallDir, null, "How FluentWeather-Plus is installed, used and removed");
+                Shortcut.Create(Path.Combine(StartMenuDir, "Uninstall FluentWeather-Plus.lnk"), uninstaller, null, InstallDir, ico, "Remove FluentWeather-Plus");
             }
             if (startWithWindows)
-                Shortcut.Create(Path.Combine(StartupDir, "FluentWeather Tray.lnk"), tray, null, InstallDir, ico, "FluentWeather tray icons");
+                Shortcut.Create(Path.Combine(StartupDir, "FluentWeather Tray.lnk"), tray, null, InstallDir, ico, "FluentWeather-Plus tray icons");
 
             using (RegistryKey key = Registry.CurrentUser.CreateSubKey(UninstallKey))
             {
-                key.SetValue("DisplayName", "FluentWeather (Local) with tray icons");
+                key.SetValue("DisplayName", "FluentWeather-Plus with tray icons");
                 key.SetValue("DisplayVersion", info.Version);
                 key.SetValue("Publisher", "duedilly");
                 key.SetValue("InstallLocation", InstallDir);
                 key.SetValue("UninstallString", "\"" + uninstaller + "\"");
                 key.SetValue("DisplayIcon", ico);
-                key.SetValue("Comments", "FluentWeather by Gabboxl with saved locations and tray icons");
-                key.SetValue("URLInfoAbout", "https://github.com/Duedilly108/FluentWeather");
+                key.SetValue("Comments", "Based on FluentWeather by Gabboxl, with saved locations and tray icons");
+                key.SetValue("URLInfoAbout", "https://github.com/Duedilly108/FluentWeather-Plus");
                 key.SetValue("NoModify", 1, RegistryValueKind.DWord);
                 key.SetValue("NoRepair", 1, RegistryValueKind.DWord);
             }
@@ -562,10 +573,10 @@ namespace FluentWeatherLocal
             }
 
             string question =
-                "This removes FluentWeather (Local) from this PC: the app with its saved locations and " +
+                "This removes FluentWeather-Plus from this PC: the app with its saved locations and " +
                 "settings, the tray icons, the Start menu items and the signing certificate." + Environment.NewLine + Environment.NewLine +
                 "Windows asks for administrator approval once, to remove the certificate." + Environment.NewLine + Environment.NewLine +
-                "Remove FluentWeather now?";
+                "Remove FluentWeather-Plus now?";
             if (MessageBox.Show(question, Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) != DialogResult.Yes)
                 return 0;
@@ -594,7 +605,7 @@ namespace FluentWeatherLocal
             RemoveTrayWorkDir();
             DeleteInstallFiles();
 
-            MessageBox.Show("FluentWeather (Local) is removed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("FluentWeather-Plus is removed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             return 0;
         }
 
@@ -623,6 +634,7 @@ namespace FluentWeatherLocal
         {
             try { File.Delete(Path.Combine(StartupDir, "FluentWeather Tray.lnk")); } catch { }
             try { if (Directory.Exists(StartMenuDir)) Directory.Delete(StartMenuDir, true); } catch { }
+            try { if (Directory.Exists(OldStartMenuDir)) Directory.Delete(OldStartMenuDir, true); } catch { }
             try { Registry.CurrentUser.DeleteSubKeyTree(UninstallKey, false); } catch { }
         }
 

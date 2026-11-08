@@ -57,6 +57,29 @@
 
         <!--<media:BackdropBlurBrush x:Key="TonyBrush" Amount="7" />-->
 
+        <!-- Local build: the settings panel. An opaque gradient from dark grey at the top
+             to blue grey at the bottom. -->
+        <LinearGradientBrush x:Key="PanelBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#2B2B2D" Offset="0" />
+            <GradientStop Color="#2B3547" Offset="1" />
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="PanelBorderBrush" Color="#24FFFFFF" />
+
+        <Style x:Key="SettingsHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="0,0,0,7" />
+        </Style>
+
+        <Style x:Key="SettingsHintStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11.5" />
+            <Setter Property="Opacity" Value="0.7" />
+            <Setter Property="TextWrapping" Value="WrapWholeWords" />
+            <Setter Property="MaxWidth" Value="400" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Margin" Value="0,6,0,0" />
+        </Style>
+
         <Style x:Key="ControlFullStretchStyle" TargetType="ListViewItem"
                BasedOn="{StaticResource DefaultListViewItemStyle}">
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -215,12 +238,11 @@
                     <ColumnDefinition x:Name="RightPaddingColumn" Width="0" />
                 </Grid.ColumnDefinitions>
 
-
-                <Image Source="/Assets/Square44x44Logo.png"
-                       Grid.Column="1"
-                       HorizontalAlignment="Left"
-                       Width="24" Height="24"
-                       Margin="16,0,0,0" />
+                <!-- Local build: keeps the room of the app icon. The icon itself is TitleIconHost
+                     further down, outside this drag area, so it can show a tooltip. -->
+                <Border Grid.Column="1"
+                        Width="36" Height="28"
+                        Margin="12,0,0,0" />
                 <TextBlock x:Name="AppTitleTextBlock"
                            Text="test"
                            Style="{StaticResource CaptionTextBlockStyle}"
@@ -240,7 +262,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button x:Name="AppbarSettingsButton" Width="52">
+                    <Button x:Name="AppbarSettingsButton" Width="52" x:Uid="AppbarSettingsButton">
                         <StackPanel>
                             <muxc:AnimatedIcon Width="20" x:Name='AnimatedIcon'>
                                 <muxc:AnimatedIcon.Source>
@@ -254,337 +276,313 @@
 
                         <Button.Flyout>
                             <MenuFlyout x:Name="SettingsFlyout">
+                                <!-- Local build: an opaque panel with a grey to blue grey gradient.
+                                     Its text is always light. -->
+                                <MenuFlyout.MenuFlyoutPresenterStyle>
+                                    <Style TargetType="MenuFlyoutPresenter">
+                                        <Setter Property="Background" Value="{StaticResource PanelBackgroundBrush}" />
+                                        <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}" />
+                                        <Setter Property="BorderThickness" Value="1" />
+                                        <Setter Property="CornerRadius" Value="8" />
+                                        <Setter Property="Padding" Value="0" />
+                                        <Setter Property="MaxWidth" Value="520" />
+                                        <Setter Property="RequestedTheme" Value="Dark" />
+                                    </Style>
+                                </MenuFlyout.MenuFlyoutPresenterStyle>
 
                                 <MenuFlyoutItem>
                                     <MenuFlyoutItem.Template>
                                         <ControlTemplate x:Name="FlyoutItemSettingsTemp">
-                                            <ScrollViewer VerticalScrollBarVisibility="Visible"
+                                            <ScrollViewer VerticalScrollBarVisibility="Auto"
                                                           HorizontalScrollMode="Disabled"
                                                           HorizontalScrollBarVisibility="Disabled">
-                                                <!-- Local build: the Viewbox draws the settings at 80% of their size.
-                                                     Its width is set in SettingsViewbox_Loaded. -->
-                                                <Viewbox Stretch="Uniform"
-                                                         HorizontalAlignment="Left"
-                                                         Loaded="SettingsViewbox_Loaded">
-                                                <StackPanel VerticalAlignment="Center" Margin="16">
-                                                    <TextBlock x:Uid="UnitsSettingsTitle"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+                                                <!-- Local build: the sections sit in Auto rows. The star rows between
+                                                     them share the extra height, so the panel fills the window height.
+                                                     SettingsPanel_Loaded sets the height. -->
+                                                <Grid Width="470"
+                                                      Padding="18,12,18,12"
+                                                      RequestedTheme="Dark"
+                                                      Loaded="SettingsPanel_Loaded">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" MinHeight="18" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
 
-                                                    <controls1:Segmented
-                                                        SelectedIndex="{Binding SettingsUnitsSelectedIndex}"
-                                                        Margin="0,8,0,0"
-                                                        x:Name="UnitsSegmented"
-                                                        SelectionChanged="UnitsSegmented_OnSelectionChanged"
-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <controls1:SegmentedItem x:Uid="MetricUnitsItem" />
-                                                        <controls1:SegmentedItem x:Uid="ImperialUnitsItem" />
-                                                        <controls1:SegmentedItem x:Uid="HybridUnitsItem" />
-
-                                                    </controls1:Segmented>
-
-                                                    <!-- 12/24 hour format segmented -->
-                                                    <TextBlock x:Uid="TimeFormatSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <controls1:Segmented
-                                                        SelectedIndex="{Binding SettingsTimeFormatSelectedIndex}"
-                                                        Margin="0,8,0,0"
-                                                        x:Name="TimeFormatSegmented"
-                                                        SelectionChanged="TimeFormatSegmented_OnSelectionChanged"
-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <controls1:SegmentedItem x:Uid="Segmented24hours" />
-                                                        <controls1:SegmentedItem x:Uid="Segmented12hours" />
-                                                    </controls1:Segmented>
-
-                                                    <!-- Local build: size of the text and pictures in the main area -->
-                                                    <TextBlock x:Uid="UiSizeSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <!-- Buttons, because a drop-down list does not take mouse clicks
-                                                         reliably inside this flyout. -->
-                                                    <StackPanel Orientation="Horizontal"
-                                                                Margin="8,8,0,0"
-                                                                Spacing="8"
+                                                    <!-- Units and time format -->
+                                                    <Grid Grid.Row="0" ColumnSpacing="20">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <StackPanel>
+                                                            <TextBlock x:Uid="UnitsSettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <controls1:Segmented
+                                                                SelectedIndex="{Binding SettingsUnitsSelectedIndex}"
+                                                                FontSize="13"
+                                                                x:Name="UnitsSegmented"
+                                                                SelectionChanged="UnitsSegmented_OnSelectionChanged"
                                                                 d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <Button MinWidth="44"
-                                                                Content="&#x2212;"
-                                                                ToolTipService.ToolTip="Ctrl+Minus"
-                                                                Click="UiScaleSmallerButton_OnClick" />
-                                                        <TextBlock Tag="UiScaleValue"
-                                                                   Text="{Binding UiScaleText}"
-                                                                   MinWidth="52"
-                                                                   TextAlignment="Center"
-                                                                   VerticalAlignment="Center"
-                                                                   FontWeight="SemiBold" />
-                                                        <Button MinWidth="44"
-                                                                Content="+"
-                                                                ToolTipService.ToolTip="Ctrl+Plus"
-                                                                Click="UiScaleLargerButton_OnClick" />
-                                                        <Button Content="100%"
-                                                                ToolTipService.ToolTip="Ctrl+0"
-                                                                Click="UiScaleResetButton_OnClick" />
+                                                                <controls1:SegmentedItem x:Uid="MetricUnitsItem" />
+                                                                <controls1:SegmentedItem x:Uid="ImperialUnitsItem" />
+                                                                <controls1:SegmentedItem x:Uid="HybridUnitsItem" />
+                                                            </controls1:Segmented>
+                                                        </StackPanel>
+                                                        <StackPanel Grid.Column="1">
+                                                            <TextBlock x:Uid="TimeFormatSettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <controls1:Segmented
+                                                                SelectedIndex="{Binding SettingsTimeFormatSelectedIndex}"
+                                                                FontSize="13"
+                                                                x:Name="TimeFormatSegmented"
+                                                                SelectionChanged="TimeFormatSegmented_OnSelectionChanged"
+                                                                d:DataContext="{d:DesignInstance views:MainPage }">
+                                                                <controls1:SegmentedItem x:Uid="Segmented24hours" />
+                                                                <controls1:SegmentedItem x:Uid="Segmented12hours" />
+                                                            </controls1:Segmented>
+                                                        </StackPanel>
+                                                    </Grid>
+
+                                                    <!-- Size of the text and pictures in the main area.
+                                                         Buttons, because a drop-down list does not take mouse clicks
+                                                         reliably inside this flyout. -->
+                                                    <StackPanel Grid.Row="2">
+                                                        <TextBlock x:Uid="UiSizeSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <StackPanel Orientation="Horizontal"
+                                                                    Spacing="8"
+                                                                    d:DataContext="{d:DesignInstance views:MainPage }">
+                                                            <Button MinWidth="40"
+                                                                    FontSize="13"
+                                                                    Content="&#x2212;"
+                                                                    ToolTipService.ToolTip="Ctrl+Minus"
+                                                                    Click="UiScaleSmallerButton_OnClick" />
+                                                            <TextBlock Tag="UiScaleValue"
+                                                                       Text="{Binding UiScaleText}"
+                                                                       MinWidth="48"
+                                                                       FontSize="13"
+                                                                       TextAlignment="Center"
+                                                                       VerticalAlignment="Center"
+                                                                       FontWeight="SemiBold" />
+                                                            <Button MinWidth="40"
+                                                                    FontSize="13"
+                                                                    Content="+"
+                                                                    ToolTipService.ToolTip="Ctrl+Plus"
+                                                                    Click="UiScaleLargerButton_OnClick" />
+                                                            <Button Content="100%"
+                                                                    FontSize="13"
+                                                                    ToolTipService.ToolTip="Ctrl+0"
+                                                                    Click="UiScaleResetButton_OnClick" />
+                                                        </StackPanel>
+                                                        <TextBlock x:Uid="UiSizeSettingsHint"
+                                                                   Style="{StaticResource SettingsHintStyle}" />
                                                     </StackPanel>
 
-                                                    <TextBlock x:Uid="UiSizeSettingsHint"
-                                                               Margin="0,4,0,0"
-                                                               Opacity="0.7"
-                                                               TextWrapping="WrapWholeWords"
-                                                               MaxWidth="300"
-                                                               HorizontalAlignment="Left"
-                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-
-                                                    <!-- Local build: how many hours the hourly forecast shows -->
-                                                    <TextBlock x:Uid="HourlyRangeSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <controls1:Segmented
-                                                        SelectedIndex="{Binding SettingsHourlyRangeSelectedIndex}"
-                                                        Margin="0,8,0,0"
-                                                        x:Name="HourlyRangeSegmented"
-                                                        SelectionChanged="HourlyRangeSegmented_OnSelectionChanged"
-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <controls1:SegmentedItem x:Uid="HourlyRangeDay" />
-                                                        <controls1:SegmentedItem x:Uid="HourlyRange24" />
-                                                        <controls1:SegmentedItem x:Uid="HourlyRange36" />
-                                                        <controls1:SegmentedItem x:Uid="HourlyRange48" />
-                                                    </controls1:Segmented>
-
-                                                    <TextBlock x:Uid="HourlyRangeHint"
-                                                               Margin="0,4,0,0"
-                                                               Opacity="0.7"
-                                                               TextWrapping="WrapWholeWords"
-                                                               MaxWidth="300"
-                                                               HorizontalAlignment="Left"
-                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-
-
-                                                    <!-- toggle control to enable/disable acrylic effect -->
-                                                    <TextBlock x:Uid="AcrylicEffectsSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <ToggleSwitch x:Name="AcrylicToggle"
-                                                                  Margin="8,8,0,0"
-                                                                  d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                  IsOn="{Binding AcrylicEffectsService.EffectsEnabled, Mode=OneWay}"
-                                                                  Toggled="AcrylicToggle_OnToggled" />
-
-                                                    <TextBlock x:Uid="BackgroundImageSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <ToggleSwitch x:Name="BackgroundImageToggle"
-                                                                  Margin="8,8,0,0"
-                                                                  d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                  IsOn="{Binding BackgroundImageToggleStatus}"
-                                                                  Toggled="BackgroundImageToggle_OnToggled" />
-
-                                                    <!-- Local build: contrast between the background image and the text -->
-                                                    <TextBlock x:Uid="BackgroundContrastSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <controls1:Segmented
-                                                        SelectedIndex="{Binding SettingsBackgroundContrastSelectedIndex}"
-                                                        Margin="0,8,0,0"
-                                                        x:Name="BackgroundContrastSegmented"
-                                                        SelectionChanged="BackgroundContrastSegmented_OnSelectionChanged"
-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastOriginal" />
-                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastDark" />
-                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastDarker" />
-                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastLight" />
-                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastLighter" />
-                                                    </controls1:Segmented>
-
-                                                    <TextBlock x:Uid="BackgroundContrastHint"
-                                                               Margin="0,4,0,0"
-                                                               Opacity="0.7"
-                                                               TextWrapping="WrapWholeWords"
-                                                               MaxWidth="300"
-                                                               HorizontalAlignment="Left"
-                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-
-                                                    <!-- Local build: how strongly the cards are tinted over the background image -->
-                                                    <TextBlock x:Uid="CardTintSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <StackPanel Orientation="Horizontal"
-                                                                Margin="0,4,0,0">
-                                                        <Slider x:Name="CardTintSlider"
-                                                                x:Uid="CardTintSlider"
-                                                                Width="240"
-                                                                Minimum="0"
-                                                                Maximum="100"
-                                                                StepFrequency="5"
-                                                                SmallChange="5"
-                                                                LargeChange="10"
-                                                                Value="{Binding SettingsCardTint, Mode=OneTime}"
-                                                                ValueChanged="CardTintSlider_OnValueChanged"
-                                                                d:DataContext="{d:DesignInstance views:MainPage }" />
-                                                        <TextBlock Loaded="CardTintValueText_OnLoaded"
-                                                                   Text="0%"
-                                                                   Margin="12,0,0,0"
-                                                                   MinWidth="40"
-                                                                   VerticalAlignment="Center" />
+                                                    <!-- How many hours the hourly forecast shows -->
+                                                    <StackPanel Grid.Row="4">
+                                                        <TextBlock x:Uid="HourlyRangeSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <controls1:Segmented
+                                                            SelectedIndex="{Binding SettingsHourlyRangeSelectedIndex}"
+                                                            FontSize="13"
+                                                            x:Name="HourlyRangeSegmented"
+                                                            SelectionChanged="HourlyRangeSegmented_OnSelectionChanged"
+                                                            d:DataContext="{d:DesignInstance views:MainPage }">
+                                                            <controls1:SegmentedItem x:Uid="HourlyRangeDay" />
+                                                            <controls1:SegmentedItem x:Uid="HourlyRange24" />
+                                                            <controls1:SegmentedItem x:Uid="HourlyRange36" />
+                                                            <controls1:SegmentedItem x:Uid="HourlyRange48" />
+                                                        </controls1:Segmented>
+                                                        <TextBlock x:Uid="HourlyRangeHint"
+                                                                   Style="{StaticResource SettingsHintStyle}" />
                                                     </StackPanel>
 
-                                                    <TextBlock x:Uid="CardTintHint"
-                                                               Margin="0,0,0,0"
-                                                               Opacity="0.7"
-                                                               TextWrapping="WrapWholeWords"
-                                                               MaxWidth="300"
-                                                               HorizontalAlignment="Left"
-                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
+                                                    <!-- Acrylic effects and background image -->
+                                                    <Grid Grid.Row="6" ColumnSpacing="30">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <StackPanel>
+                                                            <TextBlock x:Uid="AcrylicEffectsSettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <ToggleSwitch x:Name="AcrylicToggle"
+                                                                          MinWidth="0"
+                                                                          FontSize="13"
+                                                                          d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                          IsOn="{Binding AcrylicEffectsService.EffectsEnabled, Mode=OneWay}"
+                                                                          Toggled="AcrylicToggle_OnToggled" />
+                                                        </StackPanel>
+                                                        <StackPanel Grid.Column="1">
+                                                            <TextBlock x:Uid="BackgroundImageSettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <ToggleSwitch x:Name="BackgroundImageToggle"
+                                                                          MinWidth="0"
+                                                                          FontSize="13"
+                                                                          d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                          IsOn="{Binding BackgroundImageToggleStatus}"
+                                                                          Toggled="BackgroundImageToggle_OnToggled" />
+                                                        </StackPanel>
+                                                    </Grid>
 
+                                                    <!-- Contrast between the background image and the text -->
+                                                    <StackPanel Grid.Row="8">
+                                                        <TextBlock x:Uid="BackgroundContrastSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <controls1:Segmented
+                                                            SelectedIndex="{Binding SettingsBackgroundContrastSelectedIndex}"
+                                                            FontSize="13"
+                                                            x:Name="BackgroundContrastSegmented"
+                                                            SelectionChanged="BackgroundContrastSegmented_OnSelectionChanged"
+                                                            d:DataContext="{d:DesignInstance views:MainPage }">
+                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastOriginal" />
+                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastDark" />
+                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastDarker" />
+                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastLight" />
+                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastLighter" />
+                                                        </controls1:Segmented>
+                                                        <TextBlock x:Uid="BackgroundContrastHint"
+                                                                   Style="{StaticResource SettingsHintStyle}" />
+                                                    </StackPanel>
 
-                                                    <TextBlock x:Uid="AutoRefreshSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+                                                    <!-- How strongly the cards are tinted over the background image -->
+                                                    <StackPanel Grid.Row="10">
+                                                        <TextBlock x:Uid="CardTintSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Slider x:Name="CardTintSlider"
+                                                                    x:Uid="CardTintSlider"
+                                                                    Width="250"
+                                                                    Minimum="0"
+                                                                    Maximum="100"
+                                                                    StepFrequency="5"
+                                                                    SmallChange="5"
+                                                                    LargeChange="10"
+                                                                    Value="{Binding SettingsCardTint, Mode=OneTime}"
+                                                                    ValueChanged="CardTintSlider_OnValueChanged"
+                                                                    d:DataContext="{d:DesignInstance views:MainPage }" />
+                                                            <TextBlock Loaded="CardTintValueText_OnLoaded"
+                                                                       Text="0%"
+                                                                       FontSize="13"
+                                                                       Margin="12,0,0,0"
+                                                                       MinWidth="40"
+                                                                       VerticalAlignment="Center" />
+                                                        </StackPanel>
+                                                        <TextBlock x:Uid="CardTintHint"
+                                                                   Margin="0"
+                                                                   Style="{StaticResource SettingsHintStyle}" />
+                                                    </StackPanel>
 
-                                                    <!-- Local build: option buttons instead of a drop-down list,
+                                                    <!-- Option buttons instead of a drop-down list,
                                                          which does not take mouse clicks reliably inside this flyout. -->
-                                                    <controls1:Segmented
-                                                        SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
-                                                        Margin="0,8,0,0"
-                                                        x:Name="AutoRefreshSegmented"
-                                                        SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-                                                        <controls1:SegmentedItem Content="Off" />
-                                                        <controls1:SegmentedItem Content="5 min" />
-                                                        <controls1:SegmentedItem Content="10 min" />
-                                                        <controls1:SegmentedItem Content="15 min" />
-                                                        <controls1:SegmentedItem Content="30 min" />
-                                                        <controls1:SegmentedItem Content="1 h" />
-                                                    </controls1:Segmented>
+                                                    <StackPanel Grid.Row="12">
+                                                        <TextBlock x:Uid="AutoRefreshSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <controls1:Segmented
+                                                            SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
+                                                            FontSize="13"
+                                                            x:Name="AutoRefreshSegmented"
+                                                            SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
+                                                            d:DataContext="{d:DesignInstance views:MainPage }">
+                                                            <controls1:SegmentedItem Content="Off" />
+                                                            <controls1:SegmentedItem Content="15 min" />
+                                                            <controls1:SegmentedItem Content="30 min" />
+                                                            <controls1:SegmentedItem Content="1 h" />
+                                                        </controls1:Segmented>
+                                                    </StackPanel>
 
-                                                    <!-- Local build: language of the app and of the weather text -->
-                                                    <TextBlock x:Uid="LanguageSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+                                                    <!-- Language of the app and of the weather text. Opens a separate
+                                                         window with the full list. A long drop-down list does not
+                                                         scroll well inside this flyout. -->
+                                                    <StackPanel Grid.Row="14">
+                                                        <TextBlock x:Uid="LanguageSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
+                                                        <Button x:Name="LanguageButton"
+                                                                MinWidth="200"
+                                                                FontSize="13"
+                                                                HorizontalContentAlignment="Left"
+                                                                d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                Content="{Binding CurrentLanguageName}"
+                                                                Click="LanguageButton_OnClick" />
+                                                    </StackPanel>
 
-                                                    <!-- Opens a separate window with the full list of languages.
-                                                         A long drop-down list does not scroll well inside this flyout. -->
-                                                    <Button x:Name="LanguageButton"
-                                                            Margin="8,8,0,0"
-                                                            MinWidth="220"
-                                                            HorizontalContentAlignment="Left"
-                                                            d:DataContext="{d:DesignInstance views:MainPage }"
-                                                            Content="{Binding CurrentLanguageName}"
-                                                            Click="LanguageButton_OnClick" />
+                                                    <!-- Credits -->
+                                                    <StackPanel Grid.Row="16">
+                                                        <TextBlock x:Uid="CreditsSettingsTitle"
+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
 
-                                                    <TextBlock x:Uid="CreditsSettingsTitle"
-                                                               Margin="0,16,0,0"
-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                                    <StackPanel>
-
-                                                        <RichTextBlock
-                                                            Margin="0,16,0,0">
+                                                        <RichTextBlock FontSize="13" LineHeight="21">
                                                             <Paragraph>
-                                                                <Run x:Uid="InspiredByRun"></Run>
+                                                                <Run Text="FluentWeather-Plus" FontWeight="Bold" />
                                                                 <Hyperlink
                                                                     Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    NavigateUri="https://twitter.com/zeealeid">
-                                                                    @zeealeid
-                                                                </Hyperlink>
+                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
+                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                        Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
+                                                                <Run x:Uid="UpdatedByRun" />
+                                                                <Hyperlink
+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                    NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
+                                                            </Paragraph>
+                                                            <Paragraph>
+                                                                <Run x:Uid="BasedOnRun" />
+                                                                <Run Text="FluentWeather" FontWeight="Bold" />
+                                                                <Hyperlink
+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                    Click="ChangelogHyperlink_Click"><Run
+                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                        Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
+                                                                <Run x:Uid="DevelopedByRun" />
+                                                                <Hyperlink
+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                    NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
+                                                            </Paragraph>
+                                                            <Paragraph>
+                                                                <Run x:Uid="InspiredByRun" />
+                                                                <Hyperlink
+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                    NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
                                                             </Paragraph>
                                                         </RichTextBlock>
 
-                                                        <RelativePanel Margin="0,16,0,0">
+                                                        <StackPanel Orientation="Horizontal"
+                                                                    Spacing="4"
+                                                                    Margin="-12,2,0,0">
+                                                            <HyperlinkButton
+                                                                NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus">
+                                                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                                                    <Grid Width="16" Height="16">
+                                                                        <Path
+                                                                            Data="{StaticResource GithubIconPath}"
+                                                                            Stretch="Uniform"
+                                                                            Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                                                                    </Grid>
+                                                                    <TextBlock x:Uid="GithubProjectButton" FontSize="13" />
+                                                                </StackPanel>
+                                                            </HyperlinkButton>
 
-                                                            <TextBlock x:Name="AppText" Text="FluentWeather"
-                                                                       FontWeight="Bold"
-                                                                       RelativePanel.AlignLeftWithPanel="True" />
-
-                                                            <Button Style="{ThemeResource TextButtonStyle}"
-                                                                    x:Name="ChangelogButton"
-                                                                    Click="VersionText_Click" Margin="-6,2,0,0"
-                                                                    RelativePanel.AlignVerticalCenterWith="AppText"
-                                                                    RelativePanel.RightOf="AppText">
-                                                                <Button.Content>
-                                                                    <TextBlock
-                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                        Text="{Binding MainPageViewModel.AppVersionText}" />
-                                                                </Button.Content>
-                                                            </Button>
-
-                                                            <RichTextBlock RelativePanel.RightOf="ChangelogButton"
-                                                                           Margin="-8,0,0,0">
-                                                                <Paragraph>
-                                                                    <Run x:Uid="DevelopedByRun"></Run>
-                                                                    <Hyperlink
-                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                        NavigateUri="https://github.com/Gabboxl">
-                                                                        Gabboxl
-                                                                    </Hyperlink>
-                                                                </Paragraph>
-                                                            </RichTextBlock>
-                                                        </RelativePanel>
+                                                        </StackPanel>
                                                     </StackPanel>
-
-                                                    <StackPanel Orientation="Horizontal"
-                                                                Margin="0,6,0,0"
-                                                                HorizontalAlignment="Center">
-
-                                                        <HyperlinkButton
-                                                            NavigateUri="http://github.com/Gabboxl/FluentWeather">
-                                                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                                                <Grid Width="18" Height="18">
-                                                                    <Path
-                                                                        Data="{StaticResource GithubIconPath}"
-                                                                        Stretch="Uniform"
-                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
-                                                                </Grid>
-
-                                                                <TextBlock x:Uid="GithubProjectButton" />
-                                                            </StackPanel>
-                                                        </HyperlinkButton>
-
-
-                                                        <HyperlinkButton x:Name="hyperlinkTranslate"
-                                                                         RelativePanel.RightOf="hyperlinkVote"
-                                                                         NavigateUri="https://crwd.in/FluentWeather/c07dfb9bf12c2e9ed8566e525d6ee8172645390">
-
-                                                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                                                <Grid Width="18" Height="18">
-                                                                    <Path
-                                                                        Data="{StaticResource TranslateIconPath}"
-                                                                        Stretch="Uniform"
-                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
-                                                                </Grid>
-
-                                                                <TextBlock x:Uid="TranslateAppText" />
-                                                            </StackPanel>
-                                                        </HyperlinkButton>
-
-                                                    </StackPanel>
-
-                                                </StackPanel>
-                                                </Viewbox>
+                                                </Grid>
                                             </ScrollViewer>
                                         </ControlTemplate>
                                     </MenuFlyoutItem.Template>
                                 </MenuFlyoutItem>
-
-                                <!--<MenuFlyoutSeparator />
-
-
-                                    <MenuFlyoutItem Text="Esci"
-                                                    x:Name="LogoutButton2"
-                                                    Height="32"
-                                                    RenderTransformOrigin="2.13,0.797" HorizontalAlignment="Stretch"
-                                                    VerticalAlignment="Top">
-
-                                        <MenuFlyoutItem.Icon>
-                                            <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xf3b1;" />
-                                            ~1~ or e966 @1@
-                                        </MenuFlyoutItem.Icon>
-                                    </MenuFlyoutItem>-->
                             </MenuFlyout>
                         </Button.Flyout>
                     </Button>
@@ -625,6 +623,7 @@
 
                     <AutoSuggestBox
                         x:Uid="SearchAutoSuggestBox"
+                        FontSize="13"
                         x:Name="AutoSuggestBoxMain"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Center"
@@ -666,6 +665,34 @@
                 </Grid>
             </Grid>
 
+            <!-- Local build: the app icon with a small "P" badge for FluentWeather-Plus. It sits in the
+                 top left corner, on top of the title bar but outside its drag area, so hovering
+                 shows the name and the version. -->
+            <Grid x:Name="TitleIconHost"
+                  Grid.Row="0"
+                  Width="36" Height="32"
+                  Margin="12,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Background="Transparent">
+                <Image Source="/Assets/Square44x44Logo.png"
+                       Width="28" Height="28"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+                <Border Background="#4AA3FF"
+                        CornerRadius="2"
+                        Padding="2,0,2,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="0,2,0,0">
+                    <TextBlock Text="P"
+                               FontSize="7"
+                               FontWeight="Bold"
+                               LineHeight="9"
+                               LineStackingStrategy="BlockLineHeight"
+                               Foreground="#06203D" />
+                </Border>
+            </Grid>
         </Grid>
 
 

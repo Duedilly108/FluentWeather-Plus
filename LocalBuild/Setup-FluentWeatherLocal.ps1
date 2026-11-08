@@ -25,7 +25,7 @@
 
     Firewall: during updates, git and MSBuild connect only to the relay on 127.0.0.1.
     The relay connects only to the hosts in allowed-hosts.txt. Allow FluentWeatherNet.exe
-    and the FluentWeather (Local) app in your firewall. git and MSBuild need no exception.
+    and the FluentWeather-Plus app in your firewall. git and MSBuild need no exception.
 
 .PARAMETER StartApp
     Also open the FluentWeather window when you sign in. By default only the tray icons
@@ -117,7 +117,7 @@ $FilesToCopy   = @(
     'Direct-README.txt'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '64'
+$SetupVersion  = '65'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
 
@@ -554,13 +554,13 @@ function Write-Config($Cert) {
 }
 
 # Adds "FluentWeather local build" to Settings > Apps, so it can be removed from there.
-# The FluentWeather (Local) app has its own entry. Removing that one removes only the app.
+# The FluentWeather-Plus app has its own entry. Removing that one removes only the app.
 function Register-UninstallEntry {
     $setupPath = Join-Path $InstallDir 'Setup-FluentWeatherLocal.ps1'
     $powershell = Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\powershell.exe'
     New-Item -Path $UninstallKey -Force | Out-Null
     $values = @{
-        DisplayName     = 'FluentWeather local build (setup, tray icons and updates)'
+        DisplayName     = 'FluentWeather-Plus build tools (setup and tray icons)'
         DisplayVersion  = $SetupVersion
         Publisher       = 'Local build'
         InstallLocation = $InstallDir
@@ -613,8 +613,10 @@ function Invoke-Uninstall {
     if (Test-Path $directLnk) { Remove-Item -LiteralPath $directLnk -Force }
     if (Test-Path $UninstallKey) { Remove-Item -LiteralPath $UninstallKey -Recurse -Force }
     Get-AppxPackage -Name $PackageName -ErrorAction SilentlyContinue | Remove-AppxPackage
-    $lnk = Join-Path ([Environment]::GetFolderPath('Startup')) 'FluentWeather (Local).lnk'
-    if (Test-Path $lnk) { Remove-Item -LiteralPath $lnk -Force }
+    foreach ($name in @('FluentWeather-Plus.lnk', 'FluentWeather (Local).lnk')) {
+        $lnk = Join-Path ([Environment]::GetFolderPath('Startup')) $name
+        if (Test-Path $lnk) { Remove-Item -LiteralPath $lnk -Force }
+    }
 
     $config = Read-Config
     if ($config -and @($config.PSObject.Properties.Match('CertThumbprint')).Count -gt 0) {
@@ -668,17 +670,10 @@ else {
     Add-TrustedCertificate $cert
     Write-Config $cert
 
-    if ($NoLogonTask -or $UpdateMode -eq 'Off') {
-        Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false -ErrorAction SilentlyContinue
-        Write-Note 'No automatic checks. Run "Update FluentWeather.cmd" or the tray menu item "Check for updates now" to check by hand.'
-    } else {
-        Register-UpdateTask
-        if ($UpdateMode -eq 'Ask') {
-            Write-Ok 'Update mode: Ask. A new release shows its release notes and asks before it installs.'
-        } else {
-            Write-Ok 'Update mode: Auto. A new release builds and installs without asking.'
-        }
-    }
+    # FluentWeather-Plus builds on FluentWeather 2.1.0 only, so there is nothing to check for.
+    # Earlier setups registered a logon task that checked for new releases. It is removed here.
+    Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false -ErrorAction SilentlyContinue
+    Write-Note 'No automatic update checks. New versions are on the GitHub releases page.'
 
     if (-not $NoRelay) { Install-Relay }
 
@@ -715,7 +710,7 @@ else {
     } else {
         Write-Host '  git-remote-https.exe and MSBuild.exe   (direct connections, -NoRelay was used)'
     }
-    Write-Host '  FluentWeather (Local)   (the app, for weather data)'
+    Write-Host '  FluentWeather-Plus      (the app, for weather data)'
     Write-Host '  The tray icon, git, MSBuild and PowerShell need no exception.'
 }
 

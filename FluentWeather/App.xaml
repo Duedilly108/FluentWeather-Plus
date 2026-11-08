@@ -9,6 +9,21 @@
             <FontFamily x:Key="FluentIcons">/Assets/Fonts/SegoeFluentIcons.ttf#Segoe Fluent Icons</FontFamily>
 
             <x:Double x:Key="ContentDialogMaxWidth">2000</x:Double>
+
+            <!-- Local build: tooltips use the grey to blue grey gradient of the settings panel. -->
+            <Style TargetType="ToolTip">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="#2B2B2D" Offset="0" />
+                            <GradientStop Color="#2B3547" Offset="1" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderBrush" Value="#24FFFFFF" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="RequestedTheme" Value="Dark" />
+            </Style>
             <ResourceDictionary.MergedDictionaries>
 
                 <ResourceDictionary Source="Assets/insighticons/Insighticons.xaml" />

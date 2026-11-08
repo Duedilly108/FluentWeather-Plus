@@ -71,7 +71,7 @@ namespace FluentWeather.Services
                     Date = record.Date,
                     High = ConvertTemperature(record.High, record.Units, units),
                     Low = ConvertTemperature(record.Low, record.Units, units),
-                    IconCode = record.IconCode,
+                    IconCode = DayIcon(record.IconCode),
                     Phrase = record.Phrase,
                     PrecipChance = record.PrecipChance,
                     Units = units,
@@ -200,7 +200,7 @@ namespace FluentWeather.Services
                 }
                 else if (record.IconCode == null && iconCodes is { Count: > 1 })
                 {
-                    record.IconCode = iconCodes[1];
+                    record.IconCode = DayIcon(iconCodes[1]);
                     record.Phrase = phrases is { Count: > 1 } ? phrases[1] : null;
                     record.PrecipChance = precipChances is { Count: > 1 } ? precipChances[1] : null;
                 }
@@ -359,6 +359,22 @@ namespace FluentWeather.Services
 
         private static string Fingerprint(PastDayRecord r) =>
             r.High + "|" + r.Low + "|" + r.IconCode + "|" + r.Phrase + "|" + r.PrecipChance + "|" + r.Units + "|" + r.LowCaptured + "|" + r.HighCaptured;
+
+        /// <summary>
+        /// The day version of a weather.com night icon code. A day that was first recorded in the
+        /// evening only has the night forecast, and a past day card shows the day.
+        /// </summary>
+        public static int? DayIcon(int? code) => code switch
+        {
+            27 => 28, // mostly cloudy
+            29 => 30, // partly cloudy
+            31 => 32, // clear
+            33 => 34, // fair
+            45 => 39, // scattered showers
+            46 => 41, // scattered snow showers
+            47 => 38, // scattered thunderstorms
+            _ => code
+        };
 
         private static bool IsFahrenheit(string units) => units == "e";
 

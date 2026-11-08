@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Makes FluentWeather-Setup-<version>.exe, FluentWeather-Uninstall-<version>.exe and README.txt from the app that is
+    Makes FluentWeather-Plus-Setup-<version>.exe, FluentWeather-Plus-Uninstall-<version>.exe and README.txt from the app that is
     built and installed on this PC.
 
 .DESCRIPTION
@@ -14,7 +14,7 @@
       - the tray icons program FluentWeatherTray.exe that Setup compiled on this PC,
       - Direct-README.txt, the README for recipients.
     It compiles FluentWeatherDirect.cs twice with the C# compiler that ships with Windows and writes
-    the result to a new folder "FluentWeather-Direct" on the Desktop, plus a zip of that folder.
+    the result to a new folder "FluentWeather-Plus" on the Desktop, plus a zip of that folder.
 
     The throwaway certificate: your own signing certificate is never used and never leaves this
     PC. Each run creates a new certificate with the same name, signs the copy of the app with it,
@@ -141,8 +141,11 @@ $config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
 $thumb = [string]$config.CertThumbprint
 
 $pkg = Get-AppxPackage -Name $PackageName | Select-Object -First 1
-if (-not $pkg) { Stop-Make 'FluentWeather (Local) is not installed on this PC. Run "Update FluentWeather.cmd" first.' }
+if (-not $pkg) { Stop-Make 'FluentWeather-Plus is not installed on this PC. Run "Update FluentWeather.cmd" first.' }
 $version = [string]$pkg.Version
+# The FluentWeather-Plus version is the fourth part of the build number: 2.1.0.27 is v27.
+# It names the files, the README and the setup window.
+$PlusVersion = 'v' + ([version]$version).Revision
 $arch = ([string]$pkg.Architecture).ToLowerInvariant()
 Write-Step "Installed app: $($pkg.PackageFullName)"
 
@@ -263,7 +266,9 @@ try {
     # Splits the README at its "VirusTotal" section. The section runs to the next heading, which is a
     # line followed by a line of dashes. Returns the lines before and after the section.
     # {VERSION} in the README becomes the version of this build, for example 2.1.0.19.
-    $readmeLines = @(Get-Content -LiteralPath $readme | ForEach-Object { $_.Replace('{VERSION}', $version) })
+    # {PLUS} becomes the FluentWeather-Plus version, for example v27. {VERSION} becomes the build number.
+    $plus = $PlusVersion
+    $readmeLines = @(Get-Content -LiteralPath $readme | ForEach-Object { $_.Replace('{VERSION}', $version).Replace('{PLUS}', $plus) })
     $vtStart = -1
     for ($i = 0; $i -lt $readmeLines.Count; $i++) { if ($readmeLines[$i] -match '^VirusTotal') { $vtStart = $i; break } }
     $vtEnd = $readmeLines.Count
@@ -283,7 +288,7 @@ try {
         $inner = @()
         if ($vtStart -gt 0) { $inner += $readmeLines[0..($vtStart - 1)] }
         $inner += @('VirusTotal:', '', 'Each version on the release page lists its VirusTotal results.',
-            'https://github.com/Duedilly108/FluentWeather/releases', '', '', '')
+            'https://github.com/Duedilly108/FluentWeather-Plus/releases', '', '', '')
         if ($vtEnd -lt $readmeLines.Count) { $inner += $readmeLines[$vtEnd..($readmeLines.Count - 1)] }
         Write-Readme $innerReadme $inner
     } else {
@@ -295,22 +300,22 @@ try {
     @(
         "[assembly: System.Reflection.AssemblyVersion(""$version"")]",
         "[assembly: System.Reflection.AssemblyFileVersion(""$version"")]",
-        "[assembly: System.Reflection.AssemblyInformationalVersion(""$version"")]",
-        '[assembly: System.Reflection.AssemblyCopyright("Gabboxl and duedilly. GNU General Public License version 3.")]'
+        "[assembly: System.Reflection.AssemblyInformationalVersion(""$PlusVersion"")]",
+        '[assembly: System.Reflection.AssemblyCopyright("Gabboxl and duedilly108. GNU General Public License version 3.")]'
     ) | Set-Content -LiteralPath $script:VersionInfoPath -Encoding ASCII
 
-    $outDir = Join-Path (Get-DesktopPath) 'FluentWeather-Direct'
+    $outDir = Join-Path (Get-DesktopPath) 'FluentWeather-Plus'
     if (Test-Path -LiteralPath $outDir) { Remove-Item -LiteralPath $outDir -Recurse -Force }
     New-Item -ItemType Directory -Path $outDir | Out-Null
     # The file names carry the version. The copy of the uninstaller inside the setup keeps the plain
     # name FluentWeather-Uninstall.exe, because the Start menu and Settings > Apps point to it.
-    $uninstallExe = Join-Path $outDir "FluentWeather-Uninstall-$version.exe"
-    $setupExe = Join-Path $outDir "FluentWeather-Setup-$version.exe"
+    $uninstallExe = Join-Path $outDir "FluentWeather-Plus-Uninstall-$PlusVersion.exe"
+    $setupExe = Join-Path $outDir "FluentWeather-Plus-Setup-$PlusVersion.exe"
 
-    Write-Step "Compiling FluentWeather-Uninstall-$version.exe"
+    Write-Step "Compiling FluentWeather-Plus-Uninstall-$PlusVersion.exe"
     Invoke-Compile $uninstallExe @('UNINSTALL') @()
 
-    Write-Step "Compiling FluentWeather-Setup-$version.exe"
+    Write-Step "Compiling FluentWeather-Plus-Setup-$PlusVersion.exe"
     $resources.Add([pscustomobject]@{ Path = $cerPath; Name = 'FluentWeatherLocalBuild.cer' })
     $resources.Add([pscustomobject]@{ Path = $stagedMsix; Name = $msix.Name })
     $resources.Add([pscustomobject]@{ Path = $tray; Name = 'FluentWeatherTray.exe' })
@@ -339,13 +344,13 @@ try {
         Write-Readme $outReadme $readmeLines
     }
 
-    $zip = Join-Path (Get-DesktopPath) "FluentWeather-Direct-$version.zip"
+    $zip = Join-Path (Get-DesktopPath) "FluentWeather-Plus-$PlusVersion.zip"
     if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
     Compress-Archive -Path (Join-Path $outDir '*') -DestinationPath $zip
 
     $mb = [Math]::Round((Get-Item -LiteralPath $setupExe).Length / 1MB, 1)
     Write-Ok "Done. Folder: $outDir"
-    Write-Host "    FluentWeather-Setup-$version.exe ($mb MB), FluentWeather-Uninstall-$version.exe and README.txt"
+    Write-Host "    FluentWeather-Plus-Setup-$PlusVersion.exe ($mb MB), FluentWeather-Plus-Uninstall-$PlusVersion.exe and README.txt"
     Write-Ok "Zip of the same three files, to share: $zip"
     if ($vtStart -ge 0) {
         Write-Host '    README.txt has the VirusTotal links of these two files. Upload both files at'

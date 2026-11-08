@@ -120,6 +120,32 @@ index 21e7a92ea8ce993414219aac1fd2b72165a02b40..0c420c1760a97ab6851e4ed656f092e3
                  
              }
          }
+diff --git a/FluentWeather/App.xaml b/FluentWeather/App.xaml
+index 33c9541f71d0a2e16c2d97a0a561b19a59637c45..5cdc823bb1d8449e0c5690836d0cf9682296c0d9 100644
+--- a/FluentWeather/App.xaml
++++ b/FluentWeather/App.xaml
+@@ -9,6 +9,21 @@
+             <FontFamily x:Key="FluentIcons">/Assets/Fonts/SegoeFluentIcons.ttf#Segoe Fluent Icons</FontFamily>
+ 
+             <x:Double x:Key="ContentDialogMaxWidth">2000</x:Double>
++
++            <!-- Local build: tooltips use the grey to blue grey gradient of the settings panel. -->
++            <Style TargetType="ToolTip">
++                <Setter Property="Background">
++                    <Setter.Value>
++                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
++                            <GradientStop Color="#2B2B2D" Offset="0" />
++                            <GradientStop Color="#2B3547" Offset="1" />
++                        </LinearGradientBrush>
++                    </Setter.Value>
++                </Setter>
++                <Setter Property="BorderBrush" Value="#24FFFFFF" />
++                <Setter Property="Foreground" Value="White" />
++                <Setter Property="RequestedTheme" Value="Dark" />
++            </Style>
+             <ResourceDictionary.MergedDictionaries>
+ 
+                 <ResourceDictionary Source="Assets/insighticons/Insighticons.xaml" />
 diff --git a/FluentWeather/App.xaml.cs b/FluentWeather/App.xaml.cs
 index d6f4fb815bd7dc1c66b837d7424c999a76ee5d76..479e2e553987162bbf19310974c55b1bdd3080a7 100644
 --- a/FluentWeather/App.xaml.cs
@@ -575,10 +601,10 @@ index 5976438c8e1b87e7d049a73dc2065f321fc681eb..6bd5490e305362165622b07616ebd35a
              string cityName = string.Join(", ",
 diff --git a/FluentWeather/Services/PastDaysService.cs b/FluentWeather/Services/PastDaysService.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..b8e05ba9588c6b084e5cf1458f09709242c15c70
+index 0000000000000000000000000000000000000000..d41ec4cbdda4a470b1c3921add21692cf1813c85
 --- /dev/null
 +++ b/FluentWeather/Services/PastDaysService.cs
-@@ -0,0 +1,392 @@
+@@ -0,0 +1,408 @@
 +using FluentWeather.Helpers;
 +using FluentWeather.Models;
 +using FluentWeather.Utils;
@@ -652,7 +678,7 @@ index 0000000000000000000000000000000000000000..b8e05ba9588c6b084e5cf1458f097092
 +                    Date = record.Date,
 +                    High = ConvertTemperature(record.High, record.Units, units),
 +                    Low = ConvertTemperature(record.Low, record.Units, units),
-+                    IconCode = record.IconCode,
++                    IconCode = DayIcon(record.IconCode),
 +                    Phrase = record.Phrase,
 +                    PrecipChance = record.PrecipChance,
 +                    Units = units,
@@ -781,7 +807,7 @@ index 0000000000000000000000000000000000000000..b8e05ba9588c6b084e5cf1458f097092
 +                }
 +                else if (record.IconCode == null && iconCodes is { Count: > 1 })
 +                {
-+                    record.IconCode = iconCodes[1];
++                    record.IconCode = DayIcon(iconCodes[1]);
 +                    record.Phrase = phrases is { Count: > 1 } ? phrases[1] : null;
 +                    record.PrecipChance = precipChances is { Count: > 1 } ? precipChances[1] : null;
 +                }
@@ -940,6 +966,22 @@ index 0000000000000000000000000000000000000000..b8e05ba9588c6b084e5cf1458f097092
 +
 +        private static string Fingerprint(PastDayRecord r) =>
 +            r.High + "|" + r.Low + "|" + r.IconCode + "|" + r.Phrase + "|" + r.PrecipChance + "|" + r.Units + "|" + r.LowCaptured + "|" + r.HighCaptured;
++
++        /// <summary>
++        /// The day version of a weather.com night icon code. A day that was first recorded in the
++        /// evening only has the night forecast, and a past day card shows the day.
++        /// </summary>
++        public static int? DayIcon(int? code) => code switch
++        {
++            27 => 28, // mostly cloudy
++            29 => 30, // partly cloudy
++            31 => 32, // clear
++            33 => 34, // fair
++            45 => 39, // scattered showers
++            46 => 41, // scattered snow showers
++            47 => 38, // scattered thunderstorms
++            _ => code
++        };
 +
 +        private static bool IsFahrenheit(string units) => units == "e";
 +
@@ -1603,7 +1645,7 @@ index 0000000000000000000000000000000000000000..b5ad65afac1a5f7fe28edde883f5e206
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..dd35b15213702dc994f32ff08cd1ea416d1d4692 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..107d90aaa61bad60f1f3f36a5be5bfd7e0754295 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -146,7 +146,7 @@
@@ -1611,11 +1653,33 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..dd35b15213702dc994f32ff08cd1ea41
    </data>
    <data name="SearchAutoSuggestBox.PlaceholderText" xml:space="preserve">
 -    <value>Search a place...</value>
-+    <value>Search a location...</value>
++    <value>Location search</value>
    </data>
    <data name="FeelsLikeText" xml:space="preserve">
      <value>Feels like</value>
-@@ -297,4 +297,199 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -247,6 +247,21 @@
+   <data name="DevelopedByRun.Text" xml:space="preserve">
+     <value>developed by</value>
+   </data>
++  <data name="UpdatedByRun.Text" xml:space="preserve">
++    <value>updated by</value>
++  </data>
++  <data name="BasedOnRun.Text" xml:space="preserve">
++    <value>Based on</value>
++  </data>
++  <data name="VersionsLinkText.Text" xml:space="preserve">
++    <value>Versions</value>
++  </data>
++  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
++    <value>Refresh</value>
++  </data>
++  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
++    <value>Settings</value>
++  </data>
+   <data name="TranslateAppText.Text" xml:space="preserve">
+     <value>Translate the app</value>
+   </data>
+@@ -297,4 +312,199 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -2014,11 +2078,54 @@ index d01caa15d224c7a1e6c46932e29727535e6f2115..3b56ebabd6bfa49ff01ec83636d930d2
 +
      }
  }
+diff --git a/FluentWeather/ViewModels/MainPageViewModel.cs b/FluentWeather/ViewModels/MainPageViewModel.cs
+index 66acbb217a8f36a6aa1530dac39184639bbda281..87791e5c3ce2117892e9daa4a9735f705fae6f0b 100644
+--- a/FluentWeather/ViewModels/MainPageViewModel.cs
++++ b/FluentWeather/ViewModels/MainPageViewModel.cs
+@@ -11,5 +11,8 @@ namespace FluentWeather.ViewModels
+ 
+         [ObservableProperty]
+         public partial string AppVersionText { get; set; }
++
++        [ObservableProperty]
++        public partial string PlusVersionText { get; set; }
+     }
+ }
 diff --git a/FluentWeather/Views/MainPage.xaml b/FluentWeather/Views/MainPage.xaml
-index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea9011bb62 100644
+index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167aeb6075c2 100644
 --- a/FluentWeather/Views/MainPage.xaml
 +++ b/FluentWeather/Views/MainPage.xaml
-@@ -187,6 +187,14 @@
+@@ -57,6 +57,29 @@
+ 
+         <!--<media:BackdropBlurBrush x:Key="TonyBrush" Amount="7" />-->
+ 
++        <!-- Local build: the settings panel. An opaque gradient from dark grey at the top
++             to blue grey at the bottom. -->
++        <LinearGradientBrush x:Key="PanelBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
++            <GradientStop Color="#2B2B2D" Offset="0" />
++            <GradientStop Color="#2B3547" Offset="1" />
++        </LinearGradientBrush>
++        <SolidColorBrush x:Key="PanelBorderBrush" Color="#24FFFFFF" />
++
++        <Style x:Key="SettingsHeaderStyle" TargetType="TextBlock">
++            <Setter Property="FontSize" Value="15" />
++            <Setter Property="FontWeight" Value="SemiBold" />
++            <Setter Property="Margin" Value="0,0,0,7" />
++        </Style>
++
++        <Style x:Key="SettingsHintStyle" TargetType="TextBlock">
++            <Setter Property="FontSize" Value="11.5" />
++            <Setter Property="Opacity" Value="0.7" />
++            <Setter Property="TextWrapping" Value="WrapWholeWords" />
++            <Setter Property="MaxWidth" Value="400" />
++            <Setter Property="HorizontalAlignment" Value="Left" />
++            <Setter Property="Margin" Value="0,6,0,0" />
++        </Style>
++
+         <Style x:Key="ControlFullStretchStyle" TargetType="ListViewItem"
+                BasedOn="{StaticResource DefaultListViewItemStyle}">
+             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+@@ -187,6 +210,14 @@
              </Grid>
          </ParallaxView>
  
@@ -2033,7 +2140,25 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
  
          <Grid Grid.Row="0">
              <Grid.RowDefinitions>
-@@ -221,12 +229,14 @@
+@@ -207,12 +238,11 @@
+                     <ColumnDefinition x:Name="RightPaddingColumn" Width="0" />
+                 </Grid.ColumnDefinitions>
+ 
+-
+-                <Image Source="/Assets/Square44x44Logo.png"
+-                       Grid.Column="1"
+-                       HorizontalAlignment="Left"
+-                       Width="24" Height="24"
+-                       Margin="16,0,0,0" />
++                <!-- Local build: keeps the room of the app icon. The icon itself is TitleIconHost
++                     further down, outside this drag area, so it can show a tooltip. -->
++                <Border Grid.Column="1"
++                        Width="36" Height="28"
++                        Margin="12,0,0,0" />
+                 <TextBlock x:Name="AppTitleTextBlock"
+                            Text="test"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+@@ -221,16 +251,18 @@
                             Margin="0,0,0,0" />
              </Grid>
  
@@ -2050,205 +2175,489 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                  </Grid.ColumnDefinitions>
  
                  <Grid Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
-@@ -251,6 +261,11 @@
-                                             <ScrollViewer VerticalScrollBarVisibility="Visible"
+-                    <Button x:Name="AppbarSettingsButton" Width="52">
++                    <Button x:Name="AppbarSettingsButton" Width="52" x:Uid="AppbarSettingsButton">
+                         <StackPanel>
+                             <muxc:AnimatedIcon Width="20" x:Name='AnimatedIcon'>
+                                 <muxc:AnimatedIcon.Source>
+@@ -244,187 +276,313 @@
+ 
+                         <Button.Flyout>
+                             <MenuFlyout x:Name="SettingsFlyout">
++                                <!-- Local build: an opaque panel with a grey to blue grey gradient.
++                                     Its text is always light. -->
++                                <MenuFlyout.MenuFlyoutPresenterStyle>
++                                    <Style TargetType="MenuFlyoutPresenter">
++                                        <Setter Property="Background" Value="{StaticResource PanelBackgroundBrush}" />
++                                        <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}" />
++                                        <Setter Property="BorderThickness" Value="1" />
++                                        <Setter Property="CornerRadius" Value="8" />
++                                        <Setter Property="Padding" Value="0" />
++                                        <Setter Property="MaxWidth" Value="520" />
++                                        <Setter Property="RequestedTheme" Value="Dark" />
++                                    </Style>
++                                </MenuFlyout.MenuFlyoutPresenterStyle>
+ 
+                                 <MenuFlyoutItem>
+                                     <MenuFlyoutItem.Template>
+                                         <ControlTemplate x:Name="FlyoutItemSettingsTemp">
+-                                            <ScrollViewer VerticalScrollBarVisibility="Visible"
++                                            <ScrollViewer VerticalScrollBarVisibility="Auto"
                                                            HorizontalScrollMode="Disabled"
                                                            HorizontalScrollBarVisibility="Disabled">
-+                                                <!-- Local build: the Viewbox draws the settings at 80% of their size.
-+                                                     Its width is set in SettingsViewbox_Loaded. -->
-+                                                <Viewbox Stretch="Uniform"
-+                                                         HorizontalAlignment="Left"
-+                                                         Loaded="SettingsViewbox_Loaded">
-                                                 <StackPanel VerticalAlignment="Center" Margin="16">
-                                                     <TextBlock x:Uid="UnitsSettingsTitle"
-                                                                Style="{ThemeResource SubtitleTextBlockStyle}" />
-@@ -282,6 +297,69 @@
-                                                         <controls1:SegmentedItem x:Uid="Segmented12hours" />
-                                                     </controls1:Segmented>
- 
-+                                                    <!-- Local build: size of the text and pictures in the main area -->
-+                                                    <TextBlock x:Uid="UiSizeSettingsTitle"
-+                                                               Margin="0,16,0,0"
-+                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-+
-+                                                    <!-- Buttons, because a drop-down list does not take mouse clicks
-+                                                         reliably inside this flyout. -->
-+                                                    <StackPanel Orientation="Horizontal"
-+                                                                Margin="8,8,0,0"
-+                                                                Spacing="8"
-+                                                                d:DataContext="{d:DesignInstance views:MainPage }">
-+                                                        <Button MinWidth="44"
-+                                                                Content="&#x2212;"
-+                                                                ToolTipService.ToolTip="Ctrl+Minus"
-+                                                                Click="UiScaleSmallerButton_OnClick" />
-+                                                        <TextBlock Tag="UiScaleValue"
-+                                                                   Text="{Binding UiScaleText}"
-+                                                                   MinWidth="52"
-+                                                                   TextAlignment="Center"
-+                                                                   VerticalAlignment="Center"
-+                                                                   FontWeight="SemiBold" />
-+                                                        <Button MinWidth="44"
-+                                                                Content="+"
-+                                                                ToolTipService.ToolTip="Ctrl+Plus"
-+                                                                Click="UiScaleLargerButton_OnClick" />
-+                                                        <Button Content="100%"
-+                                                                ToolTipService.ToolTip="Ctrl+0"
-+                                                                Click="UiScaleResetButton_OnClick" />
-+                                                    </StackPanel>
-+
-+                                                    <TextBlock x:Uid="UiSizeSettingsHint"
-+                                                               Margin="0,4,0,0"
-+                                                               Opacity="0.7"
-+                                                               TextWrapping="WrapWholeWords"
-+                                                               MaxWidth="300"
-+                                                               HorizontalAlignment="Left"
-+                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-+
-+                                                    <!-- Local build: how many hours the hourly forecast shows -->
-+                                                    <TextBlock x:Uid="HourlyRangeSettingsTitle"
-+                                                               Margin="0,16,0,0"
-+                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-+
-+                                                    <controls1:Segmented
-+                                                        SelectedIndex="{Binding SettingsHourlyRangeSelectedIndex}"
-+                                                        Margin="0,8,0,0"
-+                                                        x:Name="HourlyRangeSegmented"
-+                                                        SelectionChanged="HourlyRangeSegmented_OnSelectionChanged"
-+                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-+                                                        <controls1:SegmentedItem x:Uid="HourlyRangeDay" />
-+                                                        <controls1:SegmentedItem x:Uid="HourlyRange24" />
-+                                                        <controls1:SegmentedItem x:Uid="HourlyRange36" />
-+                                                        <controls1:SegmentedItem x:Uid="HourlyRange48" />
-+                                                    </controls1:Segmented>
-+
-+                                                    <TextBlock x:Uid="HourlyRangeHint"
-+                                                               Margin="0,4,0,0"
-+                                                               Opacity="0.7"
-+                                                               TextWrapping="WrapWholeWords"
-+                                                               MaxWidth="300"
-+                                                               HorizontalAlignment="Left"
-+                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-+
- 
-                                                     <!-- toggle control to enable/disable acrylic effect -->
-                                                     <TextBlock x:Uid="AcrylicEffectsSettingsTitle"
-@@ -304,19 +382,100 @@
-                                                                   IsOn="{Binding BackgroundImageToggleStatus}"
-                                                                   Toggled="BackgroundImageToggle_OnToggled" />
- 
-+                                                    <!-- Local build: contrast between the background image and the text -->
-+                                                    <TextBlock x:Uid="BackgroundContrastSettingsTitle"
-+                                                               Margin="0,16,0,0"
-+                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-+
-+                                                    <controls1:Segmented
-+                                                        SelectedIndex="{Binding SettingsBackgroundContrastSelectedIndex}"
-+                                                        Margin="0,8,0,0"
-+                                                        x:Name="BackgroundContrastSegmented"
-+                                                        SelectionChanged="BackgroundContrastSegmented_OnSelectionChanged"
-+                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-+                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastOriginal" />
-+                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastDark" />
-+                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastDarker" />
-+                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastLight" />
-+                                                        <controls1:SegmentedItem x:Uid="BackgroundContrastLighter" />
-+                                                    </controls1:Segmented>
-+
-+                                                    <TextBlock x:Uid="BackgroundContrastHint"
-+                                                               Margin="0,4,0,0"
-+                                                               Opacity="0.7"
-+                                                               TextWrapping="WrapWholeWords"
-+                                                               MaxWidth="300"
-+                                                               HorizontalAlignment="Left"
-+                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-+
-+                                                    <!-- Local build: how strongly the cards are tinted over the background image -->
-+                                                    <TextBlock x:Uid="CardTintSettingsTitle"
-+                                                               Margin="0,16,0,0"
-+                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
-+
-+                                                    <StackPanel Orientation="Horizontal"
-+                                                                Margin="0,4,0,0">
-+                                                        <Slider x:Name="CardTintSlider"
-+                                                                x:Uid="CardTintSlider"
-+                                                                Width="240"
-+                                                                Minimum="0"
-+                                                                Maximum="100"
-+                                                                StepFrequency="5"
-+                                                                SmallChange="5"
-+                                                                LargeChange="10"
-+                                                                Value="{Binding SettingsCardTint, Mode=OneTime}"
-+                                                                ValueChanged="CardTintSlider_OnValueChanged"
-+                                                                d:DataContext="{d:DesignInstance views:MainPage }" />
-+                                                        <TextBlock Loaded="CardTintValueText_OnLoaded"
-+                                                                   Text="0%"
-+                                                                   Margin="12,0,0,0"
-+                                                                   MinWidth="40"
-+                                                                   VerticalAlignment="Center" />
-+                                                    </StackPanel>
-+
-+                                                    <TextBlock x:Uid="CardTintHint"
-+                                                               Margin="0,0,0,0"
-+                                                               Opacity="0.7"
-+                                                               TextWrapping="WrapWholeWords"
-+                                                               MaxWidth="300"
-+                                                               HorizontalAlignment="Left"
-+                                                               Style="{ThemeResource CaptionTextBlockStyle}" />
-+
- 
-                                                     <TextBlock x:Uid="AutoRefreshSettingsTitle"
-                                                                Margin="0,16,0,0"
-                                                                Style="{ThemeResource SubtitleTextBlockStyle}" />
- 
+-                                                <StackPanel VerticalAlignment="Center" Margin="16">
+-                                                    <TextBlock x:Uid="UnitsSettingsTitle"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
+-                                                    <controls1:Segmented
+-                                                        SelectedIndex="{Binding SettingsUnitsSelectedIndex}"
+-                                                        Margin="0,8,0,0"
+-                                                        x:Name="UnitsSegmented"
+-                                                        SelectionChanged="UnitsSegmented_OnSelectionChanged"
+-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
+-                                                        <controls1:SegmentedItem x:Uid="MetricUnitsItem" />
+-                                                        <controls1:SegmentedItem x:Uid="ImperialUnitsItem" />
+-                                                        <controls1:SegmentedItem x:Uid="HybridUnitsItem" />
+-
+-                                                    </controls1:Segmented>
+-
+-                                                    <!-- 12/24 hour format segmented -->
+-                                                    <TextBlock x:Uid="TimeFormatSettingsTitle"
+-                                                               Margin="0,16,0,0"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
+-                                                    <controls1:Segmented
+-                                                        SelectedIndex="{Binding SettingsTimeFormatSelectedIndex}"
+-                                                        Margin="0,8,0,0"
+-                                                        x:Name="TimeFormatSegmented"
+-                                                        SelectionChanged="TimeFormatSegmented_OnSelectionChanged"
+-                                                        d:DataContext="{d:DesignInstance views:MainPage }">
+-                                                        <controls1:SegmentedItem x:Uid="Segmented24hours" />
+-                                                        <controls1:SegmentedItem x:Uid="Segmented12hours" />
+-                                                    </controls1:Segmented>
+-
+-
+-                                                    <!-- toggle control to enable/disable acrylic effect -->
+-                                                    <TextBlock x:Uid="AcrylicEffectsSettingsTitle"
+-                                                               Margin="0,16,0,0"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
+-                                                    <ToggleSwitch x:Name="AcrylicToggle"
+-                                                                  Margin="8,8,0,0"
+-                                                                  d:DataContext="{d:DesignInstance views:MainPage }"
+-                                                                  IsOn="{Binding AcrylicEffectsService.EffectsEnabled, Mode=OneWay}"
+-                                                                  Toggled="AcrylicToggle_OnToggled" />
+-
+-                                                    <TextBlock x:Uid="BackgroundImageSettingsTitle"
+-                                                               Margin="0,16,0,0"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
+-                                                    <ToggleSwitch x:Name="BackgroundImageToggle"
+-                                                                  Margin="8,8,0,0"
+-                                                                  d:DataContext="{d:DesignInstance views:MainPage }"
+-                                                                  IsOn="{Binding BackgroundImageToggleStatus}"
+-                                                                  Toggled="BackgroundImageToggle_OnToggled" />
+-
+-
+-                                                    <TextBlock x:Uid="AutoRefreshSettingsTitle"
+-                                                               Margin="0,16,0,0"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
 -                                                    <ComboBox x:Name="AutoRefreshDataComboBox"
 -                                                              Margin="8,8,0,0"
 -                                                              d:DataContext="{d:DesignInstance views:MainPage }"
 -                                                              ItemsSource="{Binding AutoRefreshStepsValues}"
 -                                                              SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
 -                                                              SelectionChanged="AutoRefreshComboBox_OnSelectionChanged">
-+                                                    <!-- Local build: option buttons instead of a drop-down list,
-+                                                         which does not take mouse clicks reliably inside this flyout. -->
-+                                                    <controls1:Segmented
-+                                                        SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
-+                                                        Margin="0,8,0,0"
-+                                                        x:Name="AutoRefreshSegmented"
-+                                                        SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
-+                                                        d:DataContext="{d:DesignInstance views:MainPage }">
-+                                                        <controls1:SegmentedItem Content="Off" />
-+                                                        <controls1:SegmentedItem Content="5 min" />
-+                                                        <controls1:SegmentedItem Content="10 min" />
-+                                                        <controls1:SegmentedItem Content="15 min" />
-+                                                        <controls1:SegmentedItem Content="30 min" />
-+                                                        <controls1:SegmentedItem Content="1 h" />
-+                                                    </controls1:Segmented>
-+
-+                                                    <!-- Local build: language of the app and of the weather text -->
-+                                                    <TextBlock x:Uid="LanguageSettingsTitle"
-+                                                               Margin="0,16,0,0"
-+                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
- 
+-
 -                                                    </ComboBox>
-+                                                    <!-- Opens a separate window with the full list of languages.
-+                                                         A long drop-down list does not scroll well inside this flyout. -->
-+                                                    <Button x:Name="LanguageButton"
-+                                                            Margin="8,8,0,0"
-+                                                            MinWidth="220"
-+                                                            HorizontalContentAlignment="Left"
-+                                                            d:DataContext="{d:DesignInstance views:MainPage }"
-+                                                            Content="{Binding CurrentLanguageName}"
-+                                                            Click="LanguageButton_OnClick" />
+-
+-                                                    <TextBlock x:Uid="CreditsSettingsTitle"
+-                                                               Margin="0,16,0,0"
+-                                                               Style="{ThemeResource SubtitleTextBlockStyle}" />
+-
+-                                                    <StackPanel>
+-
+-                                                        <RichTextBlock
+-                                                            Margin="0,16,0,0">
+-                                                            <Paragraph>
+-                                                                <Run x:Uid="InspiredByRun"></Run>
+-                                                                <Hyperlink
+-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+-                                                                    NavigateUri="https://twitter.com/zeealeid">
+-                                                                    @zeealeid
+-                                                                </Hyperlink>
+-                                                            </Paragraph>
+-                                                        </RichTextBlock>
++                                                <!-- Local build: the sections sit in Auto rows. The star rows between
++                                                     them share the extra height, so the panel fills the window height.
++                                                     SettingsPanel_Loaded sets the height. -->
++                                                <Grid Width="470"
++                                                      Padding="18,12,18,12"
++                                                      RequestedTheme="Dark"
++                                                      Loaded="SettingsPanel_Loaded">
++                                                    <Grid.RowDefinitions>
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                        <RowDefinition Height="*" MinHeight="18" />
++                                                        <RowDefinition Height="Auto" />
++                                                    </Grid.RowDefinitions>
++
++                                                    <!-- Units and time format -->
++                                                    <Grid Grid.Row="0" ColumnSpacing="20">
++                                                        <Grid.ColumnDefinitions>
++                                                            <ColumnDefinition Width="Auto" />
++                                                            <ColumnDefinition Width="Auto" />
++                                                        </Grid.ColumnDefinitions>
++                                                        <StackPanel>
++                                                            <TextBlock x:Uid="UnitsSettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <controls1:Segmented
++                                                                SelectedIndex="{Binding SettingsUnitsSelectedIndex}"
++                                                                FontSize="13"
++                                                                x:Name="UnitsSegmented"
++                                                                SelectionChanged="UnitsSegmented_OnSelectionChanged"
++                                                                d:DataContext="{d:DesignInstance views:MainPage }">
++                                                                <controls1:SegmentedItem x:Uid="MetricUnitsItem" />
++                                                                <controls1:SegmentedItem x:Uid="ImperialUnitsItem" />
++                                                                <controls1:SegmentedItem x:Uid="HybridUnitsItem" />
++                                                            </controls1:Segmented>
++                                                        </StackPanel>
++                                                        <StackPanel Grid.Column="1">
++                                                            <TextBlock x:Uid="TimeFormatSettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <controls1:Segmented
++                                                                SelectedIndex="{Binding SettingsTimeFormatSelectedIndex}"
++                                                                FontSize="13"
++                                                                x:Name="TimeFormatSegmented"
++                                                                SelectionChanged="TimeFormatSegmented_OnSelectionChanged"
++                                                                d:DataContext="{d:DesignInstance views:MainPage }">
++                                                                <controls1:SegmentedItem x:Uid="Segmented24hours" />
++                                                                <controls1:SegmentedItem x:Uid="Segmented12hours" />
++                                                            </controls1:Segmented>
++                                                        </StackPanel>
++                                                    </Grid>
++
++                                                    <!-- Size of the text and pictures in the main area.
++                                                         Buttons, because a drop-down list does not take mouse clicks
++                                                         reliably inside this flyout. -->
++                                                    <StackPanel Grid.Row="2">
++                                                        <TextBlock x:Uid="UiSizeSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <StackPanel Orientation="Horizontal"
++                                                                    Spacing="8"
++                                                                    d:DataContext="{d:DesignInstance views:MainPage }">
++                                                            <Button MinWidth="40"
++                                                                    FontSize="13"
++                                                                    Content="&#x2212;"
++                                                                    ToolTipService.ToolTip="Ctrl+Minus"
++                                                                    Click="UiScaleSmallerButton_OnClick" />
++                                                            <TextBlock Tag="UiScaleValue"
++                                                                       Text="{Binding UiScaleText}"
++                                                                       MinWidth="48"
++                                                                       FontSize="13"
++                                                                       TextAlignment="Center"
++                                                                       VerticalAlignment="Center"
++                                                                       FontWeight="SemiBold" />
++                                                            <Button MinWidth="40"
++                                                                    FontSize="13"
++                                                                    Content="+"
++                                                                    ToolTipService.ToolTip="Ctrl+Plus"
++                                                                    Click="UiScaleLargerButton_OnClick" />
++                                                            <Button Content="100%"
++                                                                    FontSize="13"
++                                                                    ToolTipService.ToolTip="Ctrl+0"
++                                                                    Click="UiScaleResetButton_OnClick" />
++                                                        </StackPanel>
++                                                        <TextBlock x:Uid="UiSizeSettingsHint"
++                                                                   Style="{StaticResource SettingsHintStyle}" />
++                                                    </StackPanel>
  
-                                                     <TextBlock x:Uid="CreditsSettingsTitle"
-                                                                Margin="0,16,0,0"
-@@ -406,6 +565,7 @@
+-                                                        <RelativePanel Margin="0,16,0,0">
++                                                    <!-- How many hours the hourly forecast shows -->
++                                                    <StackPanel Grid.Row="4">
++                                                        <TextBlock x:Uid="HourlyRangeSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <controls1:Segmented
++                                                            SelectedIndex="{Binding SettingsHourlyRangeSelectedIndex}"
++                                                            FontSize="13"
++                                                            x:Name="HourlyRangeSegmented"
++                                                            SelectionChanged="HourlyRangeSegmented_OnSelectionChanged"
++                                                            d:DataContext="{d:DesignInstance views:MainPage }">
++                                                            <controls1:SegmentedItem x:Uid="HourlyRangeDay" />
++                                                            <controls1:SegmentedItem x:Uid="HourlyRange24" />
++                                                            <controls1:SegmentedItem x:Uid="HourlyRange36" />
++                                                            <controls1:SegmentedItem x:Uid="HourlyRange48" />
++                                                        </controls1:Segmented>
++                                                        <TextBlock x:Uid="HourlyRangeHint"
++                                                                   Style="{StaticResource SettingsHintStyle}" />
++                                                    </StackPanel>
+ 
+-                                                            <TextBlock x:Name="AppText" Text="FluentWeather"
+-                                                                       FontWeight="Bold"
+-                                                                       RelativePanel.AlignLeftWithPanel="True" />
++                                                    <!-- Acrylic effects and background image -->
++                                                    <Grid Grid.Row="6" ColumnSpacing="30">
++                                                        <Grid.ColumnDefinitions>
++                                                            <ColumnDefinition Width="Auto" />
++                                                            <ColumnDefinition Width="Auto" />
++                                                        </Grid.ColumnDefinitions>
++                                                        <StackPanel>
++                                                            <TextBlock x:Uid="AcrylicEffectsSettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <ToggleSwitch x:Name="AcrylicToggle"
++                                                                          MinWidth="0"
++                                                                          FontSize="13"
++                                                                          d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                          IsOn="{Binding AcrylicEffectsService.EffectsEnabled, Mode=OneWay}"
++                                                                          Toggled="AcrylicToggle_OnToggled" />
++                                                        </StackPanel>
++                                                        <StackPanel Grid.Column="1">
++                                                            <TextBlock x:Uid="BackgroundImageSettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <ToggleSwitch x:Name="BackgroundImageToggle"
++                                                                          MinWidth="0"
++                                                                          FontSize="13"
++                                                                          d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                          IsOn="{Binding BackgroundImageToggleStatus}"
++                                                                          Toggled="BackgroundImageToggle_OnToggled" />
++                                                        </StackPanel>
++                                                    </Grid>
++
++                                                    <!-- Contrast between the background image and the text -->
++                                                    <StackPanel Grid.Row="8">
++                                                        <TextBlock x:Uid="BackgroundContrastSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <controls1:Segmented
++                                                            SelectedIndex="{Binding SettingsBackgroundContrastSelectedIndex}"
++                                                            FontSize="13"
++                                                            x:Name="BackgroundContrastSegmented"
++                                                            SelectionChanged="BackgroundContrastSegmented_OnSelectionChanged"
++                                                            d:DataContext="{d:DesignInstance views:MainPage }">
++                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastOriginal" />
++                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastDark" />
++                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastDarker" />
++                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastLight" />
++                                                            <controls1:SegmentedItem x:Uid="BackgroundContrastLighter" />
++                                                        </controls1:Segmented>
++                                                        <TextBlock x:Uid="BackgroundContrastHint"
++                                                                   Style="{StaticResource SettingsHintStyle}" />
++                                                    </StackPanel>
+ 
+-                                                            <Button Style="{ThemeResource TextButtonStyle}"
+-                                                                    x:Name="ChangelogButton"
+-                                                                    Click="VersionText_Click" Margin="-6,2,0,0"
+-                                                                    RelativePanel.AlignVerticalCenterWith="AppText"
+-                                                                    RelativePanel.RightOf="AppText">
+-                                                                <Button.Content>
+-                                                                    <TextBlock
+-                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
+-                                                                        Text="{Binding MainPageViewModel.AppVersionText}" />
+-                                                                </Button.Content>
+-                                                            </Button>
+-
+-                                                            <RichTextBlock RelativePanel.RightOf="ChangelogButton"
+-                                                                           Margin="-8,0,0,0">
+-                                                                <Paragraph>
+-                                                                    <Run x:Uid="DevelopedByRun"></Run>
+-                                                                    <Hyperlink
+-                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+-                                                                        NavigateUri="https://github.com/Gabboxl">
+-                                                                        Gabboxl
+-                                                                    </Hyperlink>
+-                                                                </Paragraph>
+-                                                            </RichTextBlock>
+-                                                        </RelativePanel>
++                                                    <!-- How strongly the cards are tinted over the background image -->
++                                                    <StackPanel Grid.Row="10">
++                                                        <TextBlock x:Uid="CardTintSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <StackPanel Orientation="Horizontal">
++                                                            <Slider x:Name="CardTintSlider"
++                                                                    x:Uid="CardTintSlider"
++                                                                    Width="250"
++                                                                    Minimum="0"
++                                                                    Maximum="100"
++                                                                    StepFrequency="5"
++                                                                    SmallChange="5"
++                                                                    LargeChange="10"
++                                                                    Value="{Binding SettingsCardTint, Mode=OneTime}"
++                                                                    ValueChanged="CardTintSlider_OnValueChanged"
++                                                                    d:DataContext="{d:DesignInstance views:MainPage }" />
++                                                            <TextBlock Loaded="CardTintValueText_OnLoaded"
++                                                                       Text="0%"
++                                                                       FontSize="13"
++                                                                       Margin="12,0,0,0"
++                                                                       MinWidth="40"
++                                                                       VerticalAlignment="Center" />
++                                                        </StackPanel>
++                                                        <TextBlock x:Uid="CardTintHint"
++                                                                   Margin="0"
++                                                                   Style="{StaticResource SettingsHintStyle}" />
                                                      </StackPanel>
  
-                                                 </StackPanel>
-+                                                </Viewbox>
+-                                                    <StackPanel Orientation="Horizontal"
+-                                                                Margin="0,6,0,0"
+-                                                                HorizontalAlignment="Center">
+-
+-                                                        <HyperlinkButton
+-                                                            NavigateUri="http://github.com/Gabboxl/FluentWeather">
+-                                                            <StackPanel Orientation="Horizontal" Spacing="10">
+-                                                                <Grid Width="18" Height="18">
+-                                                                    <Path
+-                                                                        Data="{StaticResource GithubIconPath}"
+-                                                                        Stretch="Uniform"
+-                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+-                                                                </Grid>
+-
+-                                                                <TextBlock x:Uid="GithubProjectButton" />
+-                                                            </StackPanel>
+-                                                        </HyperlinkButton>
+-
+-
+-                                                        <HyperlinkButton x:Name="hyperlinkTranslate"
+-                                                                         RelativePanel.RightOf="hyperlinkVote"
+-                                                                         NavigateUri="https://crwd.in/FluentWeather/c07dfb9bf12c2e9ed8566e525d6ee8172645390">
+-
+-                                                            <StackPanel Orientation="Horizontal" Spacing="10">
+-                                                                <Grid Width="18" Height="18">
+-                                                                    <Path
+-                                                                        Data="{StaticResource TranslateIconPath}"
+-                                                                        Stretch="Uniform"
+-                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+-                                                                </Grid>
+-
+-                                                                <TextBlock x:Uid="TranslateAppText" />
+-                                                            </StackPanel>
+-                                                        </HyperlinkButton>
++                                                    <!-- Option buttons instead of a drop-down list,
++                                                         which does not take mouse clicks reliably inside this flyout. -->
++                                                    <StackPanel Grid.Row="12">
++                                                        <TextBlock x:Uid="AutoRefreshSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <controls1:Segmented
++                                                            SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
++                                                            FontSize="13"
++                                                            x:Name="AutoRefreshSegmented"
++                                                            SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
++                                                            d:DataContext="{d:DesignInstance views:MainPage }">
++                                                            <controls1:SegmentedItem Content="Off" />
++                                                            <controls1:SegmentedItem Content="15 min" />
++                                                            <controls1:SegmentedItem Content="30 min" />
++                                                            <controls1:SegmentedItem Content="1 h" />
++                                                        </controls1:Segmented>
++                                                    </StackPanel>
+ 
++                                                    <!-- Language of the app and of the weather text. Opens a separate
++                                                         window with the full list. A long drop-down list does not
++                                                         scroll well inside this flyout. -->
++                                                    <StackPanel Grid.Row="14">
++                                                        <TextBlock x:Uid="LanguageSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <Button x:Name="LanguageButton"
++                                                                MinWidth="200"
++                                                                FontSize="13"
++                                                                HorizontalContentAlignment="Left"
++                                                                d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                Content="{Binding CurrentLanguageName}"
++                                                                Click="LanguageButton_OnClick" />
+                                                     </StackPanel>
+ 
+-                                                </StackPanel>
++                                                    <!-- Credits -->
++                                                    <StackPanel Grid.Row="16">
++                                                        <TextBlock x:Uid="CreditsSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++
++                                                        <RichTextBlock FontSize="13" LineHeight="21">
++                                                            <Paragraph>
++                                                                <Run Text="FluentWeather-Plus" FontWeight="Bold" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
++                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                        Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
++                                                                <Run x:Uid="UpdatedByRun" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
++                                                            </Paragraph>
++                                                            <Paragraph>
++                                                                <Run x:Uid="BasedOnRun" />
++                                                                <Run Text="FluentWeather" FontWeight="Bold" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    Click="ChangelogHyperlink_Click"><Run
++                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                        Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
++                                                                <Run x:Uid="DevelopedByRun" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
++                                                            </Paragraph>
++                                                            <Paragraph>
++                                                                <Run x:Uid="InspiredByRun" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
++                                                            </Paragraph>
++                                                        </RichTextBlock>
++
++                                                        <StackPanel Orientation="Horizontal"
++                                                                    Spacing="4"
++                                                                    Margin="-12,2,0,0">
++                                                            <HyperlinkButton
++                                                                NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus">
++                                                                <StackPanel Orientation="Horizontal" Spacing="8">
++                                                                    <Grid Width="16" Height="16">
++                                                                        <Path
++                                                                            Data="{StaticResource GithubIconPath}"
++                                                                            Stretch="Uniform"
++                                                                            Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
++                                                                    </Grid>
++                                                                    <TextBlock x:Uid="GithubProjectButton" FontSize="13" />
++                                                                </StackPanel>
++                                                            </HyperlinkButton>
++
++                                                        </StackPanel>
++                                                    </StackPanel>
++                                                </Grid>
                                              </ScrollViewer>
                                          </ControlTemplate>
                                      </MenuFlyoutItem.Template>
-@@ -434,9 +594,9 @@
+                                 </MenuFlyoutItem>
+-
+-                                <!--<MenuFlyoutSeparator />
+-
+-
+-                                    <MenuFlyoutItem Text="Esci"
+-                                                    x:Name="LogoutButton2"
+-                                                    Height="32"
+-                                                    RenderTransformOrigin="2.13,0.797" HorizontalAlignment="Stretch"
+-                                                    VerticalAlignment="Top">
+-
+-                                        <MenuFlyoutItem.Icon>
+-                                            <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xf3b1;" />
+-                                            ~1~ or e966 @1@
+-                                        </MenuFlyoutItem.Icon>
+-                                    </MenuFlyoutItem>-->
+                             </MenuFlyout>
+                         </Button.Flyout>
+                     </Button>
+@@ -434,9 +592,9 @@
  
              <Grid Grid.Row="0" HorizontalAlignment="Stretch">
                  <Grid.ColumnDefinitions>
@@ -2260,7 +2669,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                  </Grid.ColumnDefinitions>
  
                  <muxc:ProgressRing x:Name="DataProgressRing"
-@@ -458,7 +618,7 @@
+@@ -458,13 +616,14 @@
                  <Grid.ColumnDefinitions>
                      <ColumnDefinition x:Name="LeftMarginColumn" Width="190" />
                      <ColumnDefinition Width="*" />
@@ -2269,7 +2678,14 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                  </Grid.ColumnDefinitions>
  
                  <Grid Grid.Column="1" MaxWidth="500">
-@@ -494,7 +654,10 @@
+ 
+                     <AutoSuggestBox
+                         x:Uid="SearchAutoSuggestBox"
++                        FontSize="13"
+                         x:Name="AutoSuggestBoxMain"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Center"
+@@ -494,7 +653,10 @@
  
                                      <TextBlock x:Name="text1" Text="{x:Bind address}"
                                                 Margin="8,0,0,0"
@@ -2281,7 +2697,38 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                                  </RelativePanel>
                              </DataTemplate>
                          </AutoSuggestBox.ItemTemplate>
-@@ -506,7 +669,10 @@
+@@ -503,10 +665,41 @@
+                 </Grid>
+             </Grid>
+ 
++            <!-- Local build: the app icon with a small "P" badge for FluentWeather-Plus. It sits in the
++                 top left corner, on top of the title bar but outside its drag area, so hovering
++                 shows the name and the version. -->
++            <Grid x:Name="TitleIconHost"
++                  Grid.Row="0"
++                  Width="36" Height="32"
++                  Margin="12,0,0,0"
++                  HorizontalAlignment="Left"
++                  VerticalAlignment="Center"
++                  Background="Transparent">
++                <Image Source="/Assets/Square44x44Logo.png"
++                       Width="28" Height="28"
++                       HorizontalAlignment="Left"
++                       VerticalAlignment="Center" />
++                <Border Background="#4AA3FF"
++                        CornerRadius="2"
++                        Padding="2,0,2,0"
++                        HorizontalAlignment="Right"
++                        VerticalAlignment="Top"
++                        Margin="0,2,0,0">
++                    <TextBlock Text="P"
++                               FontSize="7"
++                               FontWeight="Bold"
++                               LineHeight="9"
++                               LineStackingStrategy="BlockLineHeight"
++                               Foreground="#06203D" />
++                </Border>
++            </Grid>
          </Grid>
  
  
@@ -2293,7 +2740,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                Visibility="Collapsed">
              <Grid.RowDefinitions>
                  <RowDefinition Height="Auto" />
-@@ -539,6 +705,7 @@
+@@ -539,6 +732,7 @@
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
@@ -2301,7 +2748,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                          </Grid.RowDefinitions>
                          <Grid.ColumnDefinitions>
                              <ColumnDefinition Width="*" />
-@@ -546,12 +713,18 @@
+@@ -546,12 +740,18 @@
  
                          <Grid Grid.Row="0"
                                Margin="0,0,0,16">
@@ -2320,7 +2767,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                                  Grid.Column="0"
                                  Margin="4,0,0,0">
                                  <FontIcon x:Name="PlaceIcon"
-@@ -564,6 +737,21 @@
+@@ -564,6 +764,21 @@
                                             Margin="8,0,0,0"
                                             RelativePanel.RightOf="PlaceIcon" />
  
@@ -2342,7 +2789,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                                  <TextBlock x:Name="UpdatedOnText" Text="updatedOn"
                                             Style="{StaticResource CaptionTextBlockStyle}"
                                             Opacity="{ThemeResource TextControlBackgroundThemeOpacity}"
-@@ -573,6 +761,86 @@
+@@ -573,6 +788,86 @@
  
                              </RelativePanel>
  
@@ -2429,7 +2876,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                          </Grid>
  
  
-@@ -610,28 +878,37 @@
+@@ -610,28 +905,37 @@
                          </RelativePanel>
  
  
@@ -2478,7 +2925,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
-@@ -640,16 +917,22 @@
+@@ -640,16 +944,22 @@
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
@@ -2505,7 +2952,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
  
                          <Grid Grid.Row="3"
                                Margin="0,32,0,0">
-@@ -665,10 +948,27 @@
+@@ -665,10 +975,27 @@
  
                                  Margin="0,0,0,16" />
  
@@ -2535,7 +2982,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
  
                                  <muxc:ItemsRepeater
                                      x:Name="RepeaterDays">
-@@ -735,6 +1035,8 @@
+@@ -735,6 +1062,8 @@
                                      </muxc:ItemsRepeater.Layout>
                                  </muxc:ItemsRepeater>
  
@@ -2544,7 +2991,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
                              </ScrollViewer>
                          </Grid>
  
-@@ -1325,12 +1627,91 @@
+@@ -1325,12 +1654,91 @@
  
                          </Grid>
  
@@ -2637,7 +3084,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..4e46f9ce73b9ba6d68fdb9c6d6cc34ea
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0c7449edd 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..134511a2fb9fe5f3326911eb9e83312cb335240a 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -2750,7 +3197,42 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          public bool BackgroundImageToggleStatus
          {
              get
-@@ -164,6 +218,31 @@ namespace FluentWeather.Views
+@@ -86,8 +140,6 @@ namespace FluentWeather.Views
+         public Dictionary<int, string> AutoRefreshSteps => new()
+         {
+             {0, "Off"},
+-            {5, "5 min"},
+-            {10, "10 min"},
+             {15, "15 min"},
+             {30, "30 min"},
+             {60, "1 hour"}
+@@ -99,7 +151,13 @@ namespace FluentWeather.Views
+             {
+                 //run in background to avoid a deadlock/ui freeze
+                 var savedVal = Task.Run(async () => await ApplicationData.Current.LocalSettings.ReadAsync<int>("autoRefreshDataMinutes")).Result;
+-                return AutoRefreshSteps.Keys.ToList().IndexOf(savedVal);
++                var keys = AutoRefreshSteps.Keys.ToList();
++
++                // The shortest interval is 15 minutes. An older saved value of 5 or 10 minutes uses 15.
++                if (!keys.Contains(savedVal))
++                    savedVal = savedVal <= 0 ? 0 : keys.Where(k => k > 0).OrderBy(k => Math.Abs(k - savedVal)).First();
++
++                return keys.IndexOf(savedVal);
+             }
+         }
+ 
+@@ -140,6 +198,10 @@ namespace FluentWeather.Views
+             //NavigationService.Navigate(typeof(Views.DashWet));
+ 
+             MainPageViewModel.AppVersionText = GetVersionDescription();
++            MainPageViewModel.PlusVersionText = GetPlusVersionDescription();
++            ToolTipService.SetToolTip(TitleIconHost, Package.Current.DisplayName + " " +
++                                                     MainPageViewModel.PlusVersionText + "\n" +
++                                                     GetFullVersionDescription());
+ 
+             InitializeStoryboards();
+ 
+@@ -164,6 +226,31 @@ namespace FluentWeather.Views
                  }
              };
  
@@ -2782,7 +3264,26 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          }
  
          private async void RefreshTimerTickEvent(object? sender, object e)
-@@ -192,7 +271,7 @@ namespace FluentWeather.Views
+@@ -171,6 +258,18 @@ namespace FluentWeather.Views
+             await LoadApiData();
+         }
+ 
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.27 is v27.
++        private static string GetPlusVersionDescription()
++        {
++            return $"v{Package.Current.Id.Version.Revision}";
++        }
++
++        private static string GetFullVersionDescription()
++        {
++            var version = Package.Current.Id.Version;
++            return $"Build {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
++        }
++
+         private static string GetVersionDescription()
+         {
+             var package = Package.Current;
+@@ -192,7 +291,7 @@ namespace FluentWeather.Views
              {
                  try
                  {
@@ -2791,7 +3292,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
                                                                 "&language=" +
                                                                 SystemLanguage +
                                                                 "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230&format=json");
-@@ -224,12 +303,15 @@ namespace FluentWeather.Views
+@@ -224,12 +323,15 @@ namespace FluentWeather.Views
              AutoSuggestBoxSuggestionChosenEventArgs args)
          {
              var selectedPlaceId = ((SearchedLocation) args.SelectedItem).placeId;
@@ -2809,7 +3310,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
              await CoreApplication.MainView.Dispatcher.RunAsync(
                  CoreDispatcherPriority.Normal, () =>
                  {
-@@ -247,22 +329,38 @@ namespace FluentWeather.Views
+@@ -247,22 +349,38 @@ namespace FluentWeather.Views
  
                  var response = await ApiUtils.GetFullData(lastPlaceId);
                  var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -2850,7 +3351,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
                  if (e is HttpRequestException or TaskCanceledException)
                  {
                      await CoreApplication.MainView.Dispatcher.RunAsync(
-@@ -294,13 +392,17 @@ namespace FluentWeather.Views
+@@ -294,13 +412,17 @@ namespace FluentWeather.Views
              }
              finally
              {
@@ -2875,7 +3376,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
              }
          }
  
-@@ -382,7 +484,7 @@ namespace FluentWeather.Views
+@@ -382,7 +504,7 @@ namespace FluentWeather.Views
              return storyboard;
          }
  
@@ -2884,7 +3385,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          {
              CrossfadeToImageApiData(rootV3Response);
  
-@@ -396,7 +498,10 @@ namespace FluentWeather.Views
+@@ -396,7 +518,10 @@ namespace FluentWeather.Views
              //update chips
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
  
@@ -2896,7 +3397,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
  
              //join the variables displayName, city, adminDistrict, country together in a single string with a comma between each variable (some may be empty) and remove duplicate names
              string placeName = string.Join(", ",
-@@ -410,6 +515,17 @@ namespace FluentWeather.Views
+@@ -410,6 +535,17 @@ namespace FluentWeather.Views
  
              PlaceText.Text = placeName;
  
@@ -2914,7 +3415,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
              MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
  
              CurrentTempText.Text = rootV3Response.v3wxobservationscurrent.temperature + "°" +
-@@ -453,6 +569,9 @@ namespace FluentWeather.Views
+@@ -453,6 +589,9 @@ namespace FluentWeather.Views
  
              //select first day button
              EmulateDayButtonClick(0);
@@ -2924,7 +3425,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          }
  
          private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
-@@ -475,6 +594,8 @@ namespace FluentWeather.Views
+@@ -475,6 +614,8 @@ namespace FluentWeather.Views
          {
              if (_lastApiData == null) return;
  
@@ -2933,7 +3434,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
              List<HourDataAdapter> hourlyDataAdapters = [];
  
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
-@@ -486,6 +607,24 @@ namespace FluentWeather.Views
+@@ -486,6 +627,24 @@ namespace FluentWeather.Views
              //subtract daytoload to firstdate to get the index of the first day to load
              int daysDiff = dayToLoad.Date.Subtract(firstDate.Date).Days;
  
@@ -2958,7 +3459,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
              if (daysDiff == -1 ||
                  (daysDiff == 0 &&
                   _lastApiData.v3wxforecasthourly10day.validTimeLocal[0].Hour > 7)) //this means that we are still in a tonight/today state and we add hours only until 7AM
-@@ -629,7 +768,13 @@ namespace FluentWeather.Views
+@@ -629,7 +788,13 @@ namespace FluentWeather.Views
              button.Style = (Style) Resources["SelectedDayButtonStyle"];
  
              // Keep track of the selected button
@@ -2972,7 +3473,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          }
  
          private void EmulateDayButtonClick(int index)
-@@ -713,18 +858,19 @@ namespace FluentWeather.Views
+@@ -713,18 +878,19 @@ namespace FluentWeather.Views
                  CrossfadeToImageApiData();
              else
                  CrossfadeToImage(null);
@@ -3001,7 +3502,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +888,1519 @@ namespace FluentWeather.Views
+@@ -742,5 +908,1526 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }
@@ -3334,20 +3835,27 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
 +            }
 +        }
 +
-+        // --- Settings size ---
-+        // The settings flyout is drawn at this fraction of its normal size. The Viewbox gets a fixed
-+        // width (natural width x scale). It then scales its content down to fit that width.
-+        private const double SettingsScale = 0.8;
++        // --- Settings height ---
++        // The settings panel opens below the top bar. It fills the window height down to a small gap
++        // at the bottom. The star rows between its sections share the extra height. In a short
++        // window the panel keeps its natural height and scrolls.
++        private const double SettingsTopOffset = 48;
++        private const double SettingsBottomGap = 16;
 +
-+        private void SettingsViewbox_Loaded(object sender, RoutedEventArgs e)
++        private void SettingsPanel_Loaded(object sender, RoutedEventArgs e)
 +        {
-+            if (sender is not Viewbox box || box.Child is not FrameworkElement content)
++            if (sender is not FrameworkElement panel)
 +                return;
 +
-+            content.Measure(new Windows.Foundation.Size(double.PositiveInfinity, double.PositiveInfinity));
-+            var natural = content.DesiredSize.Width;
-+            if (natural > 0)
-+                box.Width = Math.Ceiling(natural * SettingsScale);
++            var available = Window.Current.Bounds.Height - SettingsTopOffset - SettingsBottomGap;
++            panel.MinHeight = Math.Max(0, available);
++        }
++
++        private async void ChangelogHyperlink_Click(Windows.UI.Xaml.Documents.Hyperlink sender,
++            Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args)
++        {
++            var dialog = new WhatsNewDialog();
++            await dialog.ShowAsync();
 +        }
 +
 +        // --- Top bar layout ---
@@ -3355,7 +3863,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..4757f01a0782a4f04cb78364a888c7f0
 +        // and the window buttons of Windows. The column widths follow the real width of the app name
 +        // and of the window buttons. In a narrow window the app name is hidden, so nothing overlaps.
 +
-+        private const double TitleIconArea = 16 + 24 + 8;   // icon margin, icon, gap column
++        private const double TitleIconArea = 12 + 36 + 8;   // icon margin, icon with its P badge, gap column
 +        private const double TopBarButtonWidth = 52;
 +        private const double TopBarGap = 8;
 +        private const double MinSearchWidth = 150;

@@ -146,7 +146,7 @@
     <comment>First use prompt message primary button text</comment>
   </data>
   <data name="SearchAutoSuggestBox.PlaceholderText" xml:space="preserve">
-    <value>Search a location...</value>
+    <value>Location search</value>
   </data>
   <data name="FeelsLikeText" xml:space="preserve">
     <value>Feels like</value>
@@ -246,6 +246,21 @@
   </data>
   <data name="DevelopedByRun.Text" xml:space="preserve">
     <value>developed by</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>updated by</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Based on</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Versions</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="TranslateAppText.Text" xml:space="preserve">
     <value>Translate the app</value>

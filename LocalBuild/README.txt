@@ -1,11 +1,12 @@
-FluentWeather Local Build with saved locations
-==============================================
+FluentWeather-Plus build
+========================
 
-This folder builds the FluentWeather app from the developer's public source code,
-adds the saved-locations feature, signs it with a certificate that only exists on
-your PC, and installs it. A scheduled task checks for a new release at sign-in.
-When a new release exists, it shows the developer's release notes and asks before
-it updates.
+This folder builds FluentWeather-Plus. It downloads release 2.1.0 of FluentWeather
+by Gabboxl from GitHub, adds the FluentWeather-Plus changes, signs the app with a
+certificate that only exists on your PC, and installs it. It always builds on
+release 2.1.0. It does not check for newer releases, because a newer release can
+break the changes. New versions of FluentWeather-Plus are on its releases page.
+https://github.com/Duedilly108/FluentWeather-Plus/releases
 
 
 What you need
@@ -38,17 +39,11 @@ Setup steps (one time)
      Setup.cmd -StartApp               also open the app window when you sign in
      Setup.cmd -NoTray                 do not install the tray icon
      Setup.cmd -NoRelay                git and MSBuild connect directly (see Firewall)
-     Setup.cmd -CheckEveryDays 60      check for a new release every 60 days (default 30)
      Setup.cmd -RemoveStoreVersion     uninstall a Microsoft Store copy, if you have one
-     Setup.cmd -NoLogonTask            no automatic checks. You update by hand.
-     Setup.cmd -UpdateMode Ask         ask before each update (default)
-     Setup.cmd -UpdateMode Auto        install new releases without asking
-     Setup.cmd -UpdateMode Off         no automatic checks. A manual check still asks.
    You can combine them, for example:
-     Setup.cmd -CheckEveryDays 60 -RemoveStoreVersion
-   By default only the tray icons start when you sign in (the app window does
-   not open), new releases are checked every 30 days, and you are asked before
-   each update.
+     Setup.cmd -StartApp -RemoveStoreVersion
+   By default only the tray icons start when you sign in. The app window does
+   not open.
 
 4. If Git or Visual Studio 2026 Build Tools are missing, Setup downloads them.
    Git comes from the Git for Windows release page on GitHub. Build Tools come
@@ -57,12 +52,11 @@ Setup steps (one time)
    The Build Tools download is several GB and can take 20 minutes or more.
    If Windows asks for a restart, restart and run Setup.cmd again.
 
-5. Setup creates your signing certificate, registers the logon task, builds and
-   starts the tray icon, and opens a second window for the first build. The first
+5. Setup creates your signing certificate, builds and starts the tray icon, and opens a second window for the first build. The first
    build takes 5 to 15 minutes.
 
 6. When the second window shows "Installed FluentWeather ... with saved locations",
-   open "FluentWeather (Local)" from the Start menu. Pick your first location.
+   open "FluentWeather-Plus" from the Start menu. Pick your first location.
    Click the star next to the place name to save it. Search for more cities and
    save them the same way. The app window shows these steps until you save a place.
 
@@ -103,10 +97,12 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Direct\FluentWeather-Setup-<version>.exe
-    FluentWeather-Direct\FluentWeather-Uninstall-<version>.exe
-    FluentWeather-Direct\README.txt
-and a zip of these three files, FluentWeather-Direct-<version>.zip.
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v27.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v27.exe
+    FluentWeather-Plus\README.txt
+and a zip of these three files, FluentWeather-Plus-v27.zip. The version is the last
+part of the build number, so build 2.1.0.27 is v27. Each build on your PC adds one.
+The build number is also in README.txt and in Properties > Details of both programs.
 
 The setup holds the app as it is built and installed on your PC, signed again with
 a throwaway certificate, the Microsoft packages it needs and the tray icons program. The other PC installs it in about a minute. It needs no Visual Studio,
@@ -125,7 +121,7 @@ What the other person should know:
     The installed app does not update itself. Send them a new direct installer after
     each update. It installs over the old version and keeps their saved locations.
     README.txt in the folder explains the install. To remove the app, they use
-    Start menu > FluentWeather > Uninstall FluentWeather, or Settings > Apps.
+    Start menu > FluentWeather-Plus > Uninstall FluentWeather-Plus, or Settings > Apps.
     The setup and the uninstaller are not signed by a publisher, so SmartScreen
     shows "Windows protected your PC". They select More info, then Run anyway.
     Do not run the direct installer on your own PC. It stops there, because your PC
@@ -136,8 +132,8 @@ Where the files go
 ------------------
 C:\Program Files\FluentWeatherLocal
     The scripts, the patch, the C# sources, Make-Installer.cmd and config.json.
-    Only administrators can change these files. The logon task runs the script from here, so another program running
-    as you cannot change what runs at each sign-in.
+    Only administrators can change these files. So another program running as you
+    cannot change what the build runs.
 
 %LOCALAPPDATA%\FluentWeatherLocal
     Source code, build output, state.json and logs. The logs folder keeps the
@@ -149,53 +145,19 @@ Your certificate
     under Trusted People. Windows accepts app packages signed with this key only.
 
 
-How updates work
-----------------
-The task "FluentWeather Local Update" runs 3 minutes after you sign in. If the last
-check was less than 30 days ago (or the number set with -CheckEveryDays), it stops
-at once without going online. Otherwise it reads the newest release number from the
-developer's GitHub page. If you already have that release, it stops within a few
-seconds.
+How new versions work
+---------------------
+FluentWeather-Plus does not check for updates. A new version comes as a new package
+of this folder. Extract it and double-click Setup.cmd. Setup copies the new files
+and builds the new version. Your saved locations and settings are kept.
 
-If a new release exists, a window opens. It shows:
-    the new release number and its date, and your current version
-    the developer's release notes from GitHub
-    the list of changes made since your version
-It has three buttons:
-    Update now          downloads the source, applies the patch, builds, checks the
-                        signature, and installs. This takes 5 to 15 minutes. Your
-                        saved locations and settings are kept.
-    Not now             keeps your version. You are asked again at the next check
-                        (30 days by default), or when you check by hand.
-    Skip this version   keeps your version. The automatic check does not ask about
-                        this release again. It asks when a newer release appears.
-                        A manual check still shows the skipped release.
-If nobody answers within 60 minutes, the window closes and counts as "Not now".
-If the release notes or the change list cannot be read, the window says so and
-gives the web address. The update itself does not need them.
-
-A change to the patch file alone (same developer release) is built without asking.
-
-To change the update mode later, open a command prompt in
-C:\Program Files\FluentWeatherLocal and run one of:
-    Setup.cmd -UpdateMode Ask         ask before each update (default)
-    Setup.cmd -UpdateMode Auto        install new releases without asking
-    Setup.cmd -UpdateMode Off         remove the automatic check
-Running Setup.cmd again also re-creates and re-enables the scheduled task. If you
-turned the task off in Task Scheduler, use -UpdateMode Off to keep it off.
-
-To check right now, select "Check for updates now" in the tray icon menu, or
-double-click "Update FluentWeather.cmd" in C:\Program Files\FluentWeatherLocal.
-Do not use "Run as administrator". A manual run always checks, whatever the
-interval, and asks before it updates.
-
-To rebuild the same release without a question, for example after a failed install:
+To rebuild the installed version, for example after a failed install, open a command
+prompt in C:\Program Files\FluentWeatherLocal and run:
     "Update FluentWeather.cmd" -Force
+Do not use "Run as administrator".
 
-If a new release changes the same code as the patch, the update stops and keeps
-your current version. The notification says so, once per check interval.
-The developer plans a locations feature of their own. If that release adds it,
-remove this local build (Setup.cmd -Uninstall) and install the official release.
+Earlier versions had a logon task that checked GitHub for a new FluentWeather release.
+Setup removes that task.
 
 
 Firewall (TinyWall or similar)
@@ -213,7 +175,7 @@ and download the two installers with your browser as described in step 2.
 
 Allow only these two programs permanently:
     C:\Program Files\FluentWeatherLocal\FluentWeatherNet.exe
-    FluentWeather (Local)      the app itself, for weather data
+    FluentWeather-Plus         the app itself, for weather data
 
 FluentWeatherNet.exe is a network relay that Setup compiles from FluentWeatherNet.cs.
 During an update, git and MSBuild connect only to the relay on your own PC
@@ -277,17 +239,10 @@ one for the city shown in the app, one for every saved city. The tray program re
 them and updates within a second of a change. The app's background task refreshes
 them about every 15 minutes, even when the app window is closed.
 
-While the app window is closed or minimized, the tray program also asks the app every
-5 minutes to refresh the files. Windows runs this inside the app for a few seconds,
-without opening its window. The app downloads the data, so the firewall rules stay the
-same, and the tray program still makes no internet connection. Each refresh downloads
-about 6 KB for the app's city and for each saved city. With the window open, the app's
-own "Auto refresh" setting (5 to 60 minutes) applies instead. Turn this off or on with
-"Update weather every 5 minutes while the window is closed" in the right-click menu.
-Setup turns it on when Windows' C# compiler can use the Windows SDK. If it cannot,
-Setup says so, and the tray uses the 15-minute updates only.
+With the window open, the app's own "Auto refresh" setting (15 minutes to 1 hour)
+also refreshes the files.
 
-Left-click either icon         open FluentWeather (Local), at the city the tray shows.
+Left-click either icon         open FluentWeather-Plus, at the city the tray shows.
                                If the app window is the active window, left-click
                                closes it again, so only the tray icons stay. If the
                                window is behind other windows, left-click brings it
@@ -297,10 +252,6 @@ Right-click either icon        choose "Number shows temperature" or
                                "Tray shows": pick a saved city (each with its current
                                temperature), or "Same city as the app". The tray
                                switches at once. The app window stays closed.
-                               "Update weather every 5 minutes while the window is
-                               closed" turns the 5-minute updates on or off.
-                               "Check for updates now" checks for a new release
-                               and asks before it updates.
                                "Restart FluentWeather (app and tray icons)" closes
                                both and starts them again.
                                "Close FluentWeather window" closes the app window
@@ -314,7 +265,8 @@ Hover over either icon         a panel with the city and the details you choose.
                                background runs from very dark blue at the top to
                                dark blue at the bottom and stretches with the number of
                                details. The panel has rounded corners and a shadow.
-                               "Hover details" in the right-click menu: tick any of
+                               "Hover details" in the right-click menu (the item
+                               with the blue arrow): tick any of
                                conditions, temperature, feels like, 24 h high / low,
                                24 h change, dew point, heat index, wind chill,
                                humidity, wind and gusts, UV index, pressure and trend,
@@ -325,9 +277,8 @@ Hover over either icon         a panel with the city and the details you choose.
                                station are off by default.
                                "Show all" and "Reset to defaults" are at the bottom.
                                To move the hover panel, drag it with the left mouse
-                               button. It then opens at that place. "Hover panel
-                               next to the icons" in the right-click menu puts it
-                               back. After the pointer leaves the icons, the panel
+                               button. It then opens at that place. Double-click
+                               the panel to put it back next to the icons. After the pointer leaves the icons, the panel
                                stays 0.9 seconds, so you can reach it to drag it.
                                The panel opens only when the pointer stays on the
                                icons for the whole 1.2 seconds. If it leaves sooner,
@@ -335,11 +286,11 @@ Hover over either icon         a panel with the city and the details you choose.
 
 The number shows "--" when there is no data yet, or when the data is older than
 3 hours. Open the app once to refresh it. If it stays at "--", check that
-FluentWeather (Local) may run in the background: Settings > Apps > Installed apps >
-FluentWeather (Local) > Advanced options > Background app permissions.
+FluentWeather-Plus may run in the background: Settings > Apps > Installed apps >
+FluentWeather-Plus > Advanced options > Background app permissions.
 
 Start menu items:
-    FluentWeather (Local)        open the app
+    FluentWeather-Plus           open the app
     FluentWeather tray icons     start the tray icons again after closing them
     Restart FluentWeather        close the app and the tray icons, then start both
 You can also start the tray icons by double-clicking
@@ -434,12 +385,12 @@ are in English only. The tray icons menu is in English.
 
 Remove everything
 -----------------
-Settings > Apps > Installed apps > "FluentWeather local build (setup, tray icons and
-updates)" > Uninstall. Or open a command prompt in C:\Program Files\FluentWeatherLocal
+Settings > Apps > Installed apps > "FluentWeather-Plus build tools (setup and tray
+icons)" > Uninstall. Or open a command prompt in C:\Program Files\FluentWeatherLocal
 and run:
     Setup.cmd -Uninstall
-This removes the app, the tray icons, the task, the certificate and these folders.
-The separate "FluentWeather (Local)" entry in Settings > Apps removes only the app.
+This removes the app, the tray icons, the certificate and these folders.
+The separate "FluentWeather-Plus" entry in Settings > Apps removes only the app.
 Git and Visual Studio Build Tools stay installed. Remove them in
 Settings > Apps if you no longer need them.
 

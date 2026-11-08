@@ -11,7 +11,7 @@
 //      The pictures are drawn in code (WeatherArt).
 //   2. the temperature or the "feels like" temperature, as a number
 // Right-click either icon to choose which number is shown, to choose which saved city the
-// tray shows (without opening the app window), to check for updates, to close the app window,
+// tray shows (without opening the app window), to close the app window,
 // or to exit. Left-click opens the app at the city the tray shows. When the app window is the
 // active window, left-click closes it again, so only the tray icons stay.
 // After "Exit tray icons", start them again from the Start menu item "FluentWeather tray icons".
@@ -22,12 +22,6 @@
 // in its own LocalState folder after every update. The app's
 // background task refreshes it about every 15 minutes, even when the app is closed.
 // This helper watches and reads that file, so a city change shows within a second. It does not connect to the internet.
-//
-// 5-minute updates: while the app window is closed or minimized, this helper asks the app every
-// 5 minutes to refresh the weather files. It does this through the app's "FluentWeatherTrayRefresh"
-// app service, which Windows runs inside the app without opening its window. The app downloads the
-// data. This helper still makes no internet connection. Setup compiles this part only when the
-// Windows Runtime references are found (symbol WINRT). Without them the helper works as before.
 //
 // Language level: C# 5, so the compiler built into Windows can build it.
 
@@ -894,7 +888,7 @@ namespace FluentWeatherLocal
         private bool _light;
 
         // Dragging: hold the left mouse button on the panel and move it. After the drop the panel
-        // opens at that place, until "Hover panel next to the icons" in the tray menu is chosen.
+        // opens at that place. A double-click puts it back next to the icons.
         private bool _dragging;
         private Point _dragStartCursor;
         private Point _dragStartLocation;
@@ -904,6 +898,9 @@ namespace FluentWeatherLocal
 
         /// <summary>Raised after a drag ends, with the new top-left corner.</summary>
         public event Action<Point> Moved;
+
+        /// <summary>Raised after a double-click, which puts the panel back next to the icons.</summary>
+        public event Action MovedToIcons;
 
         public bool IsDragging { get { return _dragging; } }
 
@@ -958,6 +955,18 @@ namespace FluentWeatherLocal
             var handler = Moved;
             if (handler != null)
                 handler(Location);
+        }
+
+        protected override void OnMouseDoubleClick(MouseEventArgs e)
+        {
+            base.OnMouseDoubleClick(e);
+            if (e.Button != MouseButtons.Left || !CustomLocation.HasValue)
+                return;
+            CustomLocation = null;
+            Hide();
+            var handler = MovedToIcons;
+            if (handler != null)
+                handler();
         }
 
         protected override void OnMouseCaptureChanged(EventArgs e)
@@ -1251,10 +1260,43 @@ namespace FluentWeatherLocal
         }
     }
 
+    // Draws a larger, colored arrow on menu items that open a submenu, such as "Hover details",
+    // so the submenu is easy to notice. Everything else looks like the standard menu.
+    internal sealed class MenuRenderer : ToolStripProfessionalRenderer
+    {
+        protected override void OnRenderArrow(ToolStripArrowRenderEventArgs e)
+        {
+            var item = e.Item as ToolStripMenuItem;
+            if (item == null || !item.HasDropDownItems || e.Direction != ArrowDirection.Right)
+            {
+                base.OnRenderArrow(e);
+                return;
+            }
+
+            var r = e.ArrowRectangle;
+            var height = Math.Max(10f, item.Height * 0.5f);
+            var width = height * 0.62f;
+            var cx = r.Left + r.Width / 2f;
+            var cy = r.Top + r.Height / 2f;
+            var points = new[]
+            {
+                new PointF(cx - width / 2f, cy - height / 2f),
+                new PointF(cx + width / 2f, cy),
+                new PointF(cx - width / 2f, cy + height / 2f)
+            };
+            var color = item.Enabled ? Color.FromArgb(0, 95, 184) : SystemColors.GrayText;
+            var oldMode = e.Graphics.SmoothingMode;
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            using (var brush = new SolidBrush(color))
+                e.Graphics.FillPolygon(brush, points);
+            e.Graphics.SmoothingMode = oldMode;
+        }
+    }
+
     internal sealed class TrayContext : ApplicationContext
     {
         private const string Protocol = "fluentweather-local:";
-        private const string AppTitle = "FluentWeather (Local)";
+        private const string AppTitle = "FluentWeather-Plus";
         private const string Degree = "\u00B0";
         private static readonly TimeSpan StaleAfter = TimeSpan.FromHours(3);
 
@@ -1286,13 +1328,6 @@ namespace FluentWeatherLocal
         private string _trayCity = AppCity;   // "app" = same city as the app, otherwise a saved placeId
         private const string AppCity = "app";
 
-        // 5-minute updates while the app window is closed or minimized.
-        private static readonly TimeSpan QuickRefreshInterval = TimeSpan.FromMinutes(5);
-        private readonly System.Windows.Forms.Timer _quickRefreshTimer = new System.Windows.Forms.Timer();
-        private bool _quickRefresh = true;
-        private bool _quickRefreshRunning;
-        private DateTime _lastQuickRefreshUtc = DateTime.MinValue;
-
         // Left-click toggle. A click on the notification area makes the taskbar the active window,
         // so the active window is checked a few times a second and remembered before the click.
         private readonly System.Windows.Forms.Timer _foregroundWatch = new System.Windows.Forms.Timer();
@@ -1306,6 +1341,7 @@ namespace FluentWeatherLocal
             LoadSettings();
 
             _menu = new ContextMenuStrip();
+            _menu.Renderer = new MenuRenderer();
             _menu.Opening += OnMenuOpening;
 
             // Created in this order so the temperature usually sits to the left of the weather picture.
@@ -1338,49 +1374,6 @@ namespace FluentWeatherLocal
             _foregroundWatch.Tick += delegate { WatchForeground(); };
             _foregroundWatch.Start();
 
-            if (AppBridge.Available)
-            {
-                _quickRefreshTimer.Interval = 60 * 1000;   // check once a minute
-                _quickRefreshTimer.Tick += delegate { MaybeQuickRefresh(); };
-                _quickRefreshTimer.Start();
-            }
-        }
-
-        // Asks the app for new weather data when the window is closed or minimized and the data
-        // is at least 5 minutes old. With the window open, the app's own "Auto refresh" applies.
-        private async void MaybeQuickRefresh()
-        {
-            if (!_quickRefresh || _quickRefreshRunning)
-                return;
-            if (DateTime.UtcNow - _lastQuickRefreshUtc < QuickRefreshInterval)
-                return;
-
-            var window = AppWindow.Find();
-            if (window != IntPtr.Zero && !AppWindow.IsMinimized(window))
-                return;
-
-            var current = ReadWeather();
-            if (current != null && DateTime.UtcNow - current.WrittenUtc < QuickRefreshInterval - TimeSpan.FromSeconds(30))
-                return;   // fresh enough, for example after the app's background task
-
-            var pfn = GetPackageFamilyName();
-            if (pfn == null)
-                return;
-
-            _quickRefreshRunning = true;
-            _lastQuickRefreshUtc = DateTime.UtcNow;
-            try
-            {
-                await AppBridge.RequestRefreshAsync(pfn);
-            }
-            catch (Exception)
-            {
-                // Tried again in 5 minutes. The 15-minute background task still runs.
-            }
-            finally
-            {
-                _quickRefreshRunning = false;
-            }
         }
 
         private void WatchForeground()
@@ -1550,6 +1543,11 @@ namespace FluentWeatherLocal
             _hover.Moved += delegate (Point location)
             {
                 _hoverLocation = location;
+                SaveSettings();
+            };
+            _hover.MovedToIcons += delegate
+            {
+                _hoverLocation = null;
                 SaveSettings();
             };
             _menu.Opening += delegate { HideHover(); };
@@ -1985,8 +1983,6 @@ namespace FluentWeatherLocal
                         int.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out version);
                     else if (k.Equals("city", StringComparison.OrdinalIgnoreCase) && v.Length > 0)
                         _trayCity = v;
-                    else if (k.Equals("quickrefresh", StringComparison.OrdinalIgnoreCase))
-                        _quickRefresh = !v.Equals("off", StringComparison.OrdinalIgnoreCase);
                     else if (k.Equals("hoverpos", StringComparison.OrdinalIgnoreCase))
                     {
                         // "hoverpos=x,y" in screen pixels, or "hoverpos=auto" for next to the icons.
@@ -2018,7 +2014,6 @@ namespace FluentWeatherLocal
                     "city=" + _trayCity + "\r\n" +
                     "details=" + string.Join(",", _hoverDetails) + "\r\n" +
                     "detailsversion=" + DetailCatalog.Version.ToString(CultureInfo.InvariantCulture) + "\r\n" +
-                    "quickrefresh=" + (_quickRefresh ? "on" : "off") + "\r\n" +
                     "hoverpos=" + (_hoverLocation.HasValue
                         ? _hoverLocation.Value.X.ToString(CultureInfo.InvariantCulture) + "," + _hoverLocation.Value.Y.ToString(CultureInfo.InvariantCulture)
                         : "auto") + "\r\n");
@@ -2117,16 +2112,6 @@ namespace FluentWeatherLocal
             };
             _menu.Items.Add(details);
 
-            var nextToIcons = new ToolStripMenuItem("Hover panel next to the icons");
-            nextToIcons.Checked = !_hoverLocation.HasValue;
-            nextToIcons.ToolTipText = "Drag the hover panel to move it. It then opens at that place until you choose this item.";
-            nextToIcons.Click += delegate
-            {
-                _hoverLocation = null;
-                _hover.CustomLocation = null;
-                SaveSettings();
-            };
-            _menu.Items.Add(nextToIcons);
             _menu.Items.Add(new ToolStripSeparator());
 
             var locations = ReadSavedLocations();
@@ -2166,34 +2151,6 @@ namespace FluentWeatherLocal
             }
 
             _menu.Items.Add(new ToolStripSeparator());
-
-            if (AppBridge.Available)
-            {
-                var quick = new ToolStripMenuItem("Update weather every 5 minutes while the window is closed");
-                quick.Checked = _quickRefresh;
-                quick.Click += delegate
-                {
-                    _quickRefresh = !_quickRefresh;
-                    SaveSettings();
-                    if (_quickRefresh)
-                    {
-                        _lastQuickRefreshUtc = DateTime.MinValue;
-                        MaybeQuickRefresh();
-                    }
-                };
-                _menu.Items.Add(quick);
-                _menu.Items.Add(new ToolStripSeparator());
-            }
-
-            // Only with the build setup. A direct install (FluentWeather-Setup.exe) has no update script.
-            if (File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Update FluentWeather.cmd")))
-            {
-                var update = new ToolStripMenuItem("Check for updates now");
-                update.Click += delegate { RunUpdate(); };
-                _menu.Items.Add(update);
-
-                _menu.Items.Add(new ToolStripSeparator());
-            }
 
             var restart = new ToolStripMenuItem("Restart FluentWeather (app and tray icons)");
             restart.Click += delegate { RestartAll(); };
@@ -2310,7 +2267,7 @@ namespace FluentWeatherLocal
             catch (Win32Exception)
             {
                 _numberIcon.ShowBalloonTip(5000, AppTitle,
-                    "The app is not installed yet. Choose \"Check for updates now\" to build and install it.",
+                    "The app is not installed yet. Run its setup first.",
                     ToolTipIcon.Warning);
             }
         }
@@ -2332,24 +2289,8 @@ namespace FluentWeatherLocal
             }
         }
 
-        private void RunUpdate()
-        {
-            var cmd = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Update FluentWeather.cmd");
-            if (!File.Exists(cmd))
-            {
-                _numberIcon.ShowBalloonTip(5000, AppTitle, "Update FluentWeather.cmd was not found next to the tray helper.", ToolTipIcon.Error);
-                return;
-            }
-            var info = new ProcessStartInfo(cmd);
-            info.UseShellExecute = true;
-            info.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            Process.Start(info);
-        }
-
         protected override void ExitThreadCore()
         {
-            _quickRefreshTimer.Stop();
-            _quickRefreshTimer.Dispose();
             _foregroundWatch.Stop();
             _foregroundWatch.Dispose();
             _timer.Stop();
@@ -2463,7 +2404,7 @@ namespace FluentWeatherLocal
             }
         }
 
-        // Opens FluentWeather (Local) through its link type.
+        // Opens FluentWeather-Plus through its link type.
         internal static bool LaunchApp()
         {
             try
@@ -2517,14 +2458,15 @@ namespace FluentWeatherLocal
 #endif
     }
 
-    // Finds and closes the FluentWeather (Local) window.
+    // Finds and closes the FluentWeather-Plus window.
     // Store-type apps run inside a frame window of class "ApplicationFrameWindow". Its title is the
     // app's display name. Closing that frame window works like the window's X button, so Windows
     // saves the window size and position as usual.
     internal static class AppWindow
     {
         private const string FrameClass = "ApplicationFrameWindow";
-        private const string AppTitle = "FluentWeather (Local)";
+        // The app's display name. Builds before the rename to FluentWeather-Plus were named "FluentWeather (Local)".
+        private static readonly string[] AppTitles = { "FluentWeather-Plus", "FluentWeather (Local)" };
         private const uint WM_CLOSE = 0x0010;
 
         private delegate bool EnumWindowsProc(IntPtr hwnd, IntPtr lParam);
@@ -2589,7 +2531,15 @@ namespace FluentWeatherLocal
                 return false;
             var title = new StringBuilder(256);
             GetWindowText(hwnd, title, title.Capacity);
-            return title.ToString().IndexOf(AppTitle, StringComparison.Ordinal) >= 0;
+            return HasAppTitle(title.ToString());
+        }
+
+        private static bool HasAppTitle(string title)
+        {
+            foreach (var appTitle in AppTitles)
+                if (title.IndexOf(appTitle, StringComparison.Ordinal) >= 0)
+                    return true;
+            return false;
         }
 
         internal static bool IsTaskbarOrOwn(IntPtr hwnd)
@@ -2615,7 +2565,7 @@ namespace FluentWeatherLocal
                     return true;
                 name.Length = 0;
                 GetWindowText(hwnd, name, name.Capacity);
-                if (name.ToString().IndexOf(AppTitle, StringComparison.Ordinal) < 0)
+                if (!HasAppTitle(name.ToString()))
                     return true;
                 found = hwnd;
                 return false;

@@ -11,5 +11,8 @@ namespace FluentWeather.ViewModels
 
         [ObservableProperty]
         public partial string AppVersionText { get; set; }
+
+        [ObservableProperty]
+        public partial string PlusVersionText { get; set; }
     }
 }

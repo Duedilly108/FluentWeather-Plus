@@ -6,10 +6,10 @@
     Run by the "FluentWeather Local Update" scheduled task at logon, or by hand
     through "Update FluentWeather.cmd".
 
-    1. Reads the newest release tag from the developer's GitHub repository.
-    2. Stops if that release is already built and installed.
-       If it is a new release and UpdateMode in config.json is Ask (the default),
-       shows the release notes and the change list, and asks before it continues.
+    1. Uses release 2.1.0 of the developer's GitHub repository, the release this patch
+       is made for. It does not check for newer releases, because a newer release can
+       break the patch.
+    2. Stops if that release and this patch are already built and installed.
     3. Downloads that release's source code with git.
     4. Applies FluentWeather-saved-locations.patch.
     5. Sets the package name and publisher to your local signing certificate.
@@ -56,8 +56,9 @@ Set-StrictMode -Version 3.0
 $ErrorActionPreference = 'Stop'
 
 $RepoUrl     = 'https://github.com/Gabboxl/FluentWeather'
+$PinnedTag   = '2.1.0'   # FluentWeather-Plus builds on this release only
 $PackageName = 'FluentWeather.LocalBuild'
-$DisplayName = 'FluentWeather (Local)'
+$DisplayName = 'FluentWeather-Plus'
 $ProtocolName = 'fluentweather-local'
 $AppServiceName = 'FluentWeatherTrayRefresh'
 $TaskTitle   = 'FluentWeather local update'
@@ -441,6 +442,9 @@ function Assert-Signatures($Built, [string]$Thumbprint) {
 
 function Set-StartupShortcut([bool]$Enabled) {
     $lnk = Join-Path ([Environment]::GetFolderPath('Startup')) "$DisplayName.lnk"
+    # Builds before the rename to FluentWeather-Plus were named "FluentWeather (Local)". Their shortcut would start the app twice.
+    $oldLnk = Join-Path ([Environment]::GetFolderPath('Startup')) 'FluentWeather (Local).lnk'
+    if (-not $StoreTest -and (Test-Path $oldLnk)) { Remove-Item -LiteralPath $oldLnk -Force }
     if (-not $Enabled) {
         if (Test-Path $lnk) { Remove-Item -LiteralPath $lnk -Force }
         return
@@ -756,12 +760,12 @@ try {
     if (-not $skipCheck) {
         if ([bool](Get-Value $config 'UseRelay' $true)) { Start-Relay }
         $script:Git = Get-GitPath
-        $releaseTag = if ($Tag) { $Tag } else { Get-LatestTag }
+        $releaseTag = if ($Tag) { $Tag } else { $PinnedTag }
         $patchHash = (Get-FileHash -LiteralPath $PatchPath -Algorithm SHA256).Hash
         $state = Read-JsonFile $StatePath
         $installed = Get-AppxPackage -Name $PackageName -ErrorAction SilentlyContinue
 
-        Write-UpdateLog "Newest release: $releaseTag"
+        Write-UpdateLog "Base release: $releaseTag"
         if (Get-Value $state 'Tag') { Write-UpdateLog "Last local build: $(Get-Value $state 'Tag')" }
 
         $upToDate = $installed -and ((Get-Value $state 'Tag') -eq $releaseTag) -and ((Get-Value $state 'PatchSha256') -eq $patchHash)
