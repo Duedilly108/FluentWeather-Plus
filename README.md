@@ -41,24 +41,41 @@ The original open source FluentWeather by Gabboxl is on the [Microsoft Store](ht
 
 * FluentWeather-Plus images:
 
+
+
 Full main window:
+
+
 <img width="2540" height="1544" alt="mainscreenfull" src="https://github.com/user-attachments/assets/e8e86b84-4ccf-455c-81c9-4b657b43ee84" />
 
 
+
+
 Draggable and Resizable:
+
+
 <img width="744" height="1529" alt="draggable_re-sizeable_mainscreen_narrow" src="https://github.com/user-attachments/assets/fd8cce94-b7e5-4896-9343-8b72d5acdd62" />
+
+
 
 <img width="715" height="1077" alt="draggable_mainscreen_narrow_short" src="https://github.com/user-attachments/assets/be650a55-47c5-4b7f-9b4c-82524e99ccdb" />
 
 
+
+
 Updated Settings additions such as Main Window Size, Contrast levels and Windows Language selection 
 
+
 <img width="684" height="1419" alt="main settings" src="https://github.com/user-attachments/assets/4c747af0-8291-47fb-818f-2badafaaefdf" />
+
+
 
 
 Search in Location pulldown
 
 <img width="765" height="1055" alt="location1" src="https://github.com/user-attachments/assets/ca49819f-09fd-4325-b09f-ef60926adcd6" />
+
+
 
 
 Location Saving (by star)
@@ -67,23 +84,36 @@ Location Saving (by star)
 
 <img width="746" height="700" alt="location_save2" src="https://github.com/user-attachments/assets/ecadac53-f469-4934-9d76-efecad4e6ad7" />
 
+
+
+
 Re-order locations:
 
 <img width="679" height="289" alt="location_save3" src="https://github.com/user-attachments/assets/2c2cd72d-1617-4d76-ab8b-94ec272aee16" />
+
+
 
 
 Tray Icons (optional) - Temperature and Conditions
 
 <img width="65" height="33" alt="tray_temp_condition_icons" src="https://github.com/user-attachments/assets/bde969e9-3a41-434d-af74-6241f02eebb1" />
 
+
+
 <img width="70" height="29" alt="system_tray_icon3" src="https://github.com/user-attachments/assets/3c167bb7-477a-4bb6-9538-41505dd53571" />
 
+
+
 <img width="64" height="32" alt="tray_temp_condition_icons2" src="https://github.com/user-attachments/assets/eed84140-ecdc-4df0-b1aa-55bc0502459d" />
+
+
 
 
 Draggable Tray Icon Mouse-over popup details display
 
 <img width="510" height="473" alt="draggable_system_tray_icon_popup_details" src="https://github.com/user-attachments/assets/5dc2365c-2a03-4236-9fa6-84aaf449168a" />
+
+
 
 
 Tray Icons Hover Popup Menu
@@ -92,16 +122,10 @@ Tray Icons Hover Popup Menu
 
 
 
+
 Selectable Hover Over Popup Details
 
 <img width="642" height="871" alt="tray_menu_hover_select_details" src="https://github.com/user-attachments/assets/4e0b51d5-4053-4f54-960a-046bd117cb4c" />
-
-
-
-Moveable Hover over Tray Icon Popup
-
-<img width="704" height="463" alt="moveable_hover_over_tray_icon_popup" src="https://github.com/user-attachments/assets/9d0ad3d4-0b8b-4745-a99d-d2a40cd1dfd2" />
-
 
 
 
