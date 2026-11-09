@@ -32,7 +32,7 @@ The original open source FluentWeather by Gabboxl is on the [Microsoft Store](ht
 
 ## Credits
 
-* TFluentWeather-Plus v28 updated by duedilly108
+* FluentWeather-Plus v28 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 
