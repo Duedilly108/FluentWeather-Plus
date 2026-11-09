@@ -117,7 +117,7 @@ $FilesToCopy   = @(
     'Direct-README.txt'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '65'
+$SetupVersion  = '66'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
 
@@ -412,6 +412,8 @@ function Register-UpdateTask {
 $TrayExeName  = 'FluentWeatherTray.exe'
 $TrayShortcut = 'FluentWeather Tray.lnk'
 $TrayMenuShortcut = 'FluentWeather tray icons.lnk'
+# The link type that the app's "Show tray icons" button opens. It starts the tray program.
+$TrayProtocolKey = 'HKCU:\Software\Classes\fluentweather-tray'
 $RestartShortcut = 'Restart FluentWeather.lnk'
 
 function Stop-TrayHelper { Stop-HelperProcess $TrayExeName }
@@ -491,6 +493,19 @@ function Get-WinRtReferences {
     return $refs
 }
 
+function Register-TrayProtocol([string]$Exe) {
+    New-Item -Path $TrayProtocolKey -Force | Out-Null
+    Set-Item -Path $TrayProtocolKey -Value 'URL:FluentWeather-Plus tray icons'
+    New-ItemProperty -Path $TrayProtocolKey -Name 'URL Protocol' -Value '' -PropertyType String -Force | Out-Null
+    $command = Join-Path $TrayProtocolKey 'shell\open\command'
+    New-Item -Path $command -Force | Out-Null
+    Set-Item -Path $command -Value "`"$Exe`" `"%1`""
+}
+
+function Unregister-TrayProtocol {
+    if (Test-Path $TrayProtocolKey) { Remove-Item -LiteralPath $TrayProtocolKey -Recurse -Force }
+}
+
 function Install-TrayHelper {
     $exe = Join-Path $InstallDir $TrayExeName
     $baseRefs = @('System.Windows.Forms.dll', 'System.Drawing.dll', 'System.Web.Extensions.dll')
@@ -534,6 +549,9 @@ function Install-TrayHelper {
     $restartShortcut.WorkingDirectory = $InstallDir
     $restartShortcut.Description = 'Close FluentWeather and its tray icons, then start both again'
     $restartShortcut.Save()
+
+    # The app's "Show tray icons" button opens fluentweather-tray:, which starts the tray program.
+    Register-TrayProtocol $exe
 
     # Start it now as the signed-in user, not as administrator.
     Start-Process -FilePath (Join-Path $env:WINDIR 'explorer.exe') -ArgumentList "`"$exe`""
@@ -607,6 +625,7 @@ function Invoke-Uninstall {
     if (Test-Path $trayMenuLnk) { Remove-Item -LiteralPath $trayMenuLnk -Force }
     $restartLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $RestartShortcut
     if (Test-Path $restartLnk) { Remove-Item -LiteralPath $restartLnk -Force }
+    Unregister-TrayProtocol
     $makeLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $MakeInstallerShortcut
     if (Test-Path $makeLnk) { Remove-Item -LiteralPath $makeLnk -Force }
     $directLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $MakeDirectShortcut
@@ -685,6 +704,7 @@ else {
         if (Test-Path $trayMenuLnk) { Remove-Item -LiteralPath $trayMenuLnk -Force }
         $restartLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $RestartShortcut
         if (Test-Path $restartLnk) { Remove-Item -LiteralPath $restartLnk -Force }
+        Unregister-TrayProtocol
     } else {
         Install-TrayHelper
     }

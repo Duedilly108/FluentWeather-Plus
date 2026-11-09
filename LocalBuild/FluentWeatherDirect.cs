@@ -97,8 +97,8 @@ namespace FluentWeatherLocal
 
         // ---- Shared helpers -----------------------------------------------------------------------
 
-        // The FluentWeather-Plus version of the app in this setup, for example v27. It is the
-        // informational version. The build number, for example 2.1.0.27, is the file version.
+        // The FluentWeather-Plus version of the app in this setup, for example v28. It is the
+        // informational version. The build number, for example 2.1.0.28, is the file version.
         private static string VersionText
         {
             get
@@ -118,6 +118,9 @@ namespace FluentWeatherLocal
         private static string InstallDir { get { return Path.Combine(LocalAppData, @"Programs\FluentWeather"); } }
         private static string TrayWorkDir { get { return Path.Combine(LocalAppData, "FluentWeatherLocal"); } }
         private static string StartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather-Plus"); } }
+
+        // The link type that the app's "Show tray icons" button opens.
+        private const string TrayProtocolKey = @"Software\Classes\fluentweather-tray";
 
         // The Start menu folder of versions before the rename to FluentWeather-Plus, when the app was named "FluentWeather (Local)".
         private static string OldStartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather"); } }
@@ -531,6 +534,15 @@ namespace FluentWeatherLocal
             if (startWithWindows)
                 Shortcut.Create(Path.Combine(StartupDir, "FluentWeather Tray.lnk"), tray, null, InstallDir, ico, "FluentWeather-Plus tray icons");
 
+            // The app's "Show tray icons" button opens fluentweather-tray:, which starts the tray program.
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(TrayProtocolKey))
+            {
+                key.SetValue("", "URL:FluentWeather-Plus tray icons");
+                key.SetValue("URL Protocol", "");
+                using (RegistryKey command = key.CreateSubKey(@"shell\open\command"))
+                    command.SetValue("", "\"" + tray + "\" \"%1\"");
+            }
+
             using (RegistryKey key = Registry.CurrentUser.CreateSubKey(UninstallKey))
             {
                 key.SetValue("DisplayName", "FluentWeather-Plus with tray icons");
@@ -636,6 +648,7 @@ namespace FluentWeatherLocal
             try { if (Directory.Exists(StartMenuDir)) Directory.Delete(StartMenuDir, true); } catch { }
             try { if (Directory.Exists(OldStartMenuDir)) Directory.Delete(OldStartMenuDir, true); } catch { }
             try { Registry.CurrentUser.DeleteSubKeyTree(UninstallKey, false); } catch { }
+            try { Registry.CurrentUser.DeleteSubKeyTree(TrayProtocolKey, false); } catch { }
         }
 
         private static void RemoveTrayWorkDir()

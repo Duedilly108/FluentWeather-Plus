@@ -509,17 +509,44 @@
                                                     <!-- Language of the app and of the weather text. Opens a separate
                                                          window with the full list. A long drop-down list does not
                                                          scroll well inside this flyout. -->
-                                                    <StackPanel Grid.Row="14">
-                                                        <TextBlock x:Uid="LanguageSettingsTitle"
-                                                                   Style="{StaticResource SettingsHeaderStyle}" />
-                                                        <Button x:Name="LanguageButton"
-                                                                MinWidth="200"
-                                                                FontSize="13"
-                                                                HorizontalContentAlignment="Left"
-                                                                d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                Content="{Binding CurrentLanguageName}"
-                                                                Click="LanguageButton_OnClick" />
-                                                    </StackPanel>
+                                                    <Grid Grid.Row="14" ColumnSpacing="20">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                        </Grid.RowDefinitions>
+                                                        <StackPanel>
+                                                            <TextBlock x:Uid="LanguageSettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <Button x:Name="LanguageButton"
+                                                                    MinWidth="200"
+                                                                    FontSize="13"
+                                                                    HorizontalContentAlignment="Left"
+                                                                    d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                    Content="{Binding CurrentLanguageName}"
+                                                                    Click="LanguageButton_OnClick" />
+                                                        </StackPanel>
+
+                                                        <!-- Local build: starts the tray icons again after "Exit tray icons".
+                                                             It opens the fluentweather-tray: link, which setup registers
+                                                             for the tray program. -->
+                                                        <StackPanel Grid.Column="1">
+                                                            <TextBlock x:Uid="TraySettingsTitle"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+                                                            <Button MinWidth="150"
+                                                                    FontSize="13"
+                                                                    x:Uid="ShowTrayButton"
+                                                                    Click="ShowTrayButton_OnClick" />
+                                                        </StackPanel>
+
+                                                        <TextBlock Grid.Row="1"
+                                                                   Grid.ColumnSpan="2"
+                                                                   x:Uid="ShowTrayHint"
+                                                                   Style="{StaticResource SettingsHintStyle}" />
+                                                    </Grid>
 
                                                     <!-- Credits -->
                                                     <StackPanel Grid.Row="16">

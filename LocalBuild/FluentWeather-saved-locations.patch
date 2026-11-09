@@ -1645,7 +1645,7 @@ index 0000000000000000000000000000000000000000..b5ad65afac1a5f7fe28edde883f5e206
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..107d90aaa61bad60f1f3f36a5be5bfd7e0754295 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..a3bac292d82b472f413a8b00312a5c0046ad1c87 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -146,7 +146,7 @@
@@ -1657,10 +1657,22 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..107d90aaa61bad60f1f3f36a5be5bfd7
    </data>
    <data name="FeelsLikeText" xml:space="preserve">
      <value>Feels like</value>
-@@ -247,6 +247,21 @@
+@@ -247,6 +247,33 @@
    <data name="DevelopedByRun.Text" xml:space="preserve">
      <value>developed by</value>
    </data>
++  <data name="TraySettingsTitle.Text" xml:space="preserve">
++    <value>Tray icons</value>
++  </data>
++  <data name="ShowTrayButton.Content" xml:space="preserve">
++    <value>Show tray icons</value>
++  </data>
++  <data name="ShowTrayHint.Text" xml:space="preserve">
++    <value>Show tray icons starts the temperature and conditions icons again after "Exit tray icons".</value>
++  </data>
++  <data name="TrayNotInstalledText" xml:space="preserve">
++    <value>Not installed</value>
++  </data>
 +  <data name="UpdatedByRun.Text" xml:space="preserve">
 +    <value>updated by</value>
 +  </data>
@@ -1679,7 +1691,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..107d90aaa61bad60f1f3f36a5be5bfd7
    <data name="TranslateAppText.Text" xml:space="preserve">
      <value>Translate the app</value>
    </data>
-@@ -297,4 +312,199 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -297,4 +324,199 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -2092,7 +2104,7 @@ index 66acbb217a8f36a6aa1530dac39184639bbda281..87791e5c3ce2117892e9daa4a9735f70
      }
  }
 diff --git a/FluentWeather/Views/MainPage.xaml b/FluentWeather/Views/MainPage.xaml
-index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167aeb6075c2 100644
+index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..091e5967078b895e214ec6dd0ee09ef8dcbcaac1 100644
 --- a/FluentWeather/Views/MainPage.xaml
 +++ b/FluentWeather/Views/MainPage.xaml
 @@ -57,6 +57,29 @@
@@ -2180,7 +2192,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                          <StackPanel>
                              <muxc:AnimatedIcon Width="20" x:Name='AnimatedIcon'>
                                  <muxc:AnimatedIcon.Source>
-@@ -244,187 +276,313 @@
+@@ -244,187 +276,340 @@
  
                          <Button.Flyout>
                              <MenuFlyout x:Name="SettingsFlyout">
@@ -2280,15 +2292,6 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 -
 -                                                        <RichTextBlock
 -                                                            Margin="0,16,0,0">
--                                                            <Paragraph>
--                                                                <Run x:Uid="InspiredByRun"></Run>
--                                                                <Hyperlink
--                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
--                                                                    NavigateUri="https://twitter.com/zeealeid">
--                                                                    @zeealeid
--                                                                </Hyperlink>
--                                                            </Paragraph>
--                                                        </RichTextBlock>
 +                                                <!-- Local build: the sections sit in Auto rows. The star rows between
 +                                                     them share the extra height, so the panel fills the window height.
 +                                                     SettingsPanel_Loaded sets the height. -->
@@ -2385,8 +2388,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 +                                                        <TextBlock x:Uid="UiSizeSettingsHint"
 +                                                                   Style="{StaticResource SettingsHintStyle}" />
 +                                                    </StackPanel>
- 
--                                                        <RelativePanel Margin="0,16,0,0">
++
 +                                                    <!-- How many hours the hourly forecast shows -->
 +                                                    <StackPanel Grid.Row="4">
 +                                                        <TextBlock x:Uid="HourlyRangeSettingsTitle"
@@ -2405,10 +2407,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 +                                                        <TextBlock x:Uid="HourlyRangeHint"
 +                                                                   Style="{StaticResource SettingsHintStyle}" />
 +                                                    </StackPanel>
- 
--                                                            <TextBlock x:Name="AppText" Text="FluentWeather"
--                                                                       FontWeight="Bold"
--                                                                       RelativePanel.AlignLeftWithPanel="True" />
++
 +                                                    <!-- Acrylic effects and background image -->
 +                                                    <Grid Grid.Row="6" ColumnSpacing="30">
 +                                                        <Grid.ColumnDefinitions>
@@ -2456,31 +2455,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 +                                                        <TextBlock x:Uid="BackgroundContrastHint"
 +                                                                   Style="{StaticResource SettingsHintStyle}" />
 +                                                    </StackPanel>
- 
--                                                            <Button Style="{ThemeResource TextButtonStyle}"
--                                                                    x:Name="ChangelogButton"
--                                                                    Click="VersionText_Click" Margin="-6,2,0,0"
--                                                                    RelativePanel.AlignVerticalCenterWith="AppText"
--                                                                    RelativePanel.RightOf="AppText">
--                                                                <Button.Content>
--                                                                    <TextBlock
--                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
--                                                                        Text="{Binding MainPageViewModel.AppVersionText}" />
--                                                                </Button.Content>
--                                                            </Button>
--
--                                                            <RichTextBlock RelativePanel.RightOf="ChangelogButton"
--                                                                           Margin="-8,0,0,0">
--                                                                <Paragraph>
--                                                                    <Run x:Uid="DevelopedByRun"></Run>
--                                                                    <Hyperlink
--                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
--                                                                        NavigateUri="https://github.com/Gabboxl">
--                                                                        Gabboxl
--                                                                    </Hyperlink>
--                                                                </Paragraph>
--                                                            </RichTextBlock>
--                                                        </RelativePanel>
++
 +                                                    <!-- How strongly the cards are tinted over the background image -->
 +                                                    <StackPanel Grid.Row="10">
 +                                                        <TextBlock x:Uid="CardTintSettingsTitle"
@@ -2507,7 +2482,142 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 +                                                        <TextBlock x:Uid="CardTintHint"
 +                                                                   Margin="0"
 +                                                                   Style="{StaticResource SettingsHintStyle}" />
-                                                     </StackPanel>
++                                                    </StackPanel>
++
++                                                    <!-- Option buttons instead of a drop-down list,
++                                                         which does not take mouse clicks reliably inside this flyout. -->
++                                                    <StackPanel Grid.Row="12">
++                                                        <TextBlock x:Uid="AutoRefreshSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++                                                        <controls1:Segmented
++                                                            SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
++                                                            FontSize="13"
++                                                            x:Name="AutoRefreshSegmented"
++                                                            SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
++                                                            d:DataContext="{d:DesignInstance views:MainPage }">
++                                                            <controls1:SegmentedItem Content="Off" />
++                                                            <controls1:SegmentedItem Content="15 min" />
++                                                            <controls1:SegmentedItem Content="30 min" />
++                                                            <controls1:SegmentedItem Content="1 h" />
++                                                        </controls1:Segmented>
++                                                    </StackPanel>
++
++                                                    <!-- Language of the app and of the weather text. Opens a separate
++                                                         window with the full list. A long drop-down list does not
++                                                         scroll well inside this flyout. -->
++                                                    <Grid Grid.Row="14" ColumnSpacing="20">
++                                                        <Grid.ColumnDefinitions>
++                                                            <ColumnDefinition Width="Auto" />
++                                                            <ColumnDefinition Width="Auto" />
++                                                        </Grid.ColumnDefinitions>
++                                                        <Grid.RowDefinitions>
++                                                            <RowDefinition Height="Auto" />
++                                                            <RowDefinition Height="Auto" />
++                                                        </Grid.RowDefinitions>
++                                                        <StackPanel>
++                                                            <TextBlock x:Uid="LanguageSettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <Button x:Name="LanguageButton"
++                                                                    MinWidth="200"
++                                                                    FontSize="13"
++                                                                    HorizontalContentAlignment="Left"
++                                                                    d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                    Content="{Binding CurrentLanguageName}"
++                                                                    Click="LanguageButton_OnClick" />
++                                                        </StackPanel>
++
++                                                        <!-- Local build: starts the tray icons again after "Exit tray icons".
++                                                             It opens the fluentweather-tray: link, which setup registers
++                                                             for the tray program. -->
++                                                        <StackPanel Grid.Column="1">
++                                                            <TextBlock x:Uid="TraySettingsTitle"
++                                                                       Style="{StaticResource SettingsHeaderStyle}" />
++                                                            <Button MinWidth="150"
++                                                                    FontSize="13"
++                                                                    x:Uid="ShowTrayButton"
++                                                                    Click="ShowTrayButton_OnClick" />
++                                                        </StackPanel>
++
++                                                        <TextBlock Grid.Row="1"
++                                                                   Grid.ColumnSpan="2"
++                                                                   x:Uid="ShowTrayHint"
++                                                                   Style="{StaticResource SettingsHintStyle}" />
++                                                    </Grid>
++
++                                                    <!-- Credits -->
++                                                    <StackPanel Grid.Row="16">
++                                                        <TextBlock x:Uid="CreditsSettingsTitle"
++                                                                   Style="{StaticResource SettingsHeaderStyle}" />
++
++                                                        <RichTextBlock FontSize="13" LineHeight="21">
+                                                             <Paragraph>
+-                                                                <Run x:Uid="InspiredByRun"></Run>
++                                                                <Run Text="FluentWeather-Plus" FontWeight="Bold" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
++                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
++                                                                        Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
++                                                                <Run x:Uid="UpdatedByRun" />
+                                                                 <Hyperlink
+                                                                     Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+-                                                                    NavigateUri="https://twitter.com/zeealeid">
+-                                                                    @zeealeid
+-                                                                </Hyperlink>
++                                                                    NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
+                                                             </Paragraph>
+-                                                        </RichTextBlock>
+-
+-                                                        <RelativePanel Margin="0,16,0,0">
+-
+-                                                            <TextBlock x:Name="AppText" Text="FluentWeather"
+-                                                                       FontWeight="Bold"
+-                                                                       RelativePanel.AlignLeftWithPanel="True" />
+-
+-                                                            <Button Style="{ThemeResource TextButtonStyle}"
+-                                                                    x:Name="ChangelogButton"
+-                                                                    Click="VersionText_Click" Margin="-6,2,0,0"
+-                                                                    RelativePanel.AlignVerticalCenterWith="AppText"
+-                                                                    RelativePanel.RightOf="AppText">
+-                                                                <Button.Content>
+-                                                                    <TextBlock
++                                                            <Paragraph>
++                                                                <Run x:Uid="BasedOnRun" />
++                                                                <Run Text="FluentWeather" FontWeight="Bold" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    Click="ChangelogHyperlink_Click"><Run
+                                                                         d:DataContext="{d:DesignInstance views:MainPage }"
+-                                                                        Text="{Binding MainPageViewModel.AppVersionText}" />
+-                                                                </Button.Content>
+-                                                            </Button>
+-
+-                                                            <RichTextBlock RelativePanel.RightOf="ChangelogButton"
+-                                                                           Margin="-8,0,0,0">
+-                                                                <Paragraph>
+-                                                                    <Run x:Uid="DevelopedByRun"></Run>
+-                                                                    <Hyperlink
+-                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+-                                                                        NavigateUri="https://github.com/Gabboxl">
+-                                                                        Gabboxl
+-                                                                    </Hyperlink>
+-                                                                </Paragraph>
+-                                                            </RichTextBlock>
+-                                                        </RelativePanel>
+-                                                    </StackPanel>
++                                                                        Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
++                                                                <Run x:Uid="DevelopedByRun" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
++                                                            </Paragraph>
++                                                            <Paragraph>
++                                                                <Run x:Uid="InspiredByRun" />
++                                                                <Hyperlink
++                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
++                                                                    NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
++                                                            </Paragraph>
++                                                        </RichTextBlock>
  
 -                                                    <StackPanel Orientation="Horizontal"
 -                                                                Margin="0,6,0,0"
@@ -2543,79 +2653,6 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 -                                                                <TextBlock x:Uid="TranslateAppText" />
 -                                                            </StackPanel>
 -                                                        </HyperlinkButton>
-+                                                    <!-- Option buttons instead of a drop-down list,
-+                                                         which does not take mouse clicks reliably inside this flyout. -->
-+                                                    <StackPanel Grid.Row="12">
-+                                                        <TextBlock x:Uid="AutoRefreshSettingsTitle"
-+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
-+                                                        <controls1:Segmented
-+                                                            SelectedIndex="{Binding AutoRefreshPeriodSelectedIndex, Mode=OneWay}"
-+                                                            FontSize="13"
-+                                                            x:Name="AutoRefreshSegmented"
-+                                                            SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
-+                                                            d:DataContext="{d:DesignInstance views:MainPage }">
-+                                                            <controls1:SegmentedItem Content="Off" />
-+                                                            <controls1:SegmentedItem Content="15 min" />
-+                                                            <controls1:SegmentedItem Content="30 min" />
-+                                                            <controls1:SegmentedItem Content="1 h" />
-+                                                        </controls1:Segmented>
-+                                                    </StackPanel>
- 
-+                                                    <!-- Language of the app and of the weather text. Opens a separate
-+                                                         window with the full list. A long drop-down list does not
-+                                                         scroll well inside this flyout. -->
-+                                                    <StackPanel Grid.Row="14">
-+                                                        <TextBlock x:Uid="LanguageSettingsTitle"
-+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
-+                                                        <Button x:Name="LanguageButton"
-+                                                                MinWidth="200"
-+                                                                FontSize="13"
-+                                                                HorizontalContentAlignment="Left"
-+                                                                d:DataContext="{d:DesignInstance views:MainPage }"
-+                                                                Content="{Binding CurrentLanguageName}"
-+                                                                Click="LanguageButton_OnClick" />
-                                                     </StackPanel>
- 
--                                                </StackPanel>
-+                                                    <!-- Credits -->
-+                                                    <StackPanel Grid.Row="16">
-+                                                        <TextBlock x:Uid="CreditsSettingsTitle"
-+                                                                   Style="{StaticResource SettingsHeaderStyle}" />
-+
-+                                                        <RichTextBlock FontSize="13" LineHeight="21">
-+                                                            <Paragraph>
-+                                                                <Run Text="FluentWeather-Plus" FontWeight="Bold" />
-+                                                                <Hyperlink
-+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
-+                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
-+                                                                        Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
-+                                                                <Run x:Uid="UpdatedByRun" />
-+                                                                <Hyperlink
-+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                    NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
-+                                                            </Paragraph>
-+                                                            <Paragraph>
-+                                                                <Run x:Uid="BasedOnRun" />
-+                                                                <Run Text="FluentWeather" FontWeight="Bold" />
-+                                                                <Hyperlink
-+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                    Click="ChangelogHyperlink_Click"><Run
-+                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
-+                                                                        Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
-+                                                                <Run x:Uid="DevelopedByRun" />
-+                                                                <Hyperlink
-+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                    NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
-+                                                            </Paragraph>
-+                                                            <Paragraph>
-+                                                                <Run x:Uid="InspiredByRun" />
-+                                                                <Hyperlink
-+                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                    NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
-+                                                            </Paragraph>
-+                                                        </RichTextBlock>
-+
 +                                                        <StackPanel Orientation="Horizontal"
 +                                                                    Spacing="4"
 +                                                                    Margin="-12,2,0,0">
@@ -2631,9 +2668,11 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
 +                                                                    <TextBlock x:Uid="GithubProjectButton" FontSize="13" />
 +                                                                </StackPanel>
 +                                                            </HyperlinkButton>
-+
+ 
 +                                                        </StackPanel>
-+                                                    </StackPanel>
+                                                     </StackPanel>
+-
+-                                                </StackPanel>
 +                                                </Grid>
                                              </ScrollViewer>
                                          </ControlTemplate>
@@ -2657,7 +2696,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                              </MenuFlyout>
                          </Button.Flyout>
                      </Button>
-@@ -434,9 +592,9 @@
+@@ -434,9 +619,9 @@
  
              <Grid Grid.Row="0" HorizontalAlignment="Stretch">
                  <Grid.ColumnDefinitions>
@@ -2669,7 +2708,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                  </Grid.ColumnDefinitions>
  
                  <muxc:ProgressRing x:Name="DataProgressRing"
-@@ -458,13 +616,14 @@
+@@ -458,13 +643,14 @@
                  <Grid.ColumnDefinitions>
                      <ColumnDefinition x:Name="LeftMarginColumn" Width="190" />
                      <ColumnDefinition Width="*" />
@@ -2685,7 +2724,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                          x:Name="AutoSuggestBoxMain"
                          HorizontalAlignment="Stretch"
                          VerticalAlignment="Center"
-@@ -494,7 +653,10 @@
+@@ -494,7 +680,10 @@
  
                                      <TextBlock x:Name="text1" Text="{x:Bind address}"
                                                 Margin="8,0,0,0"
@@ -2697,7 +2736,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                                  </RelativePanel>
                              </DataTemplate>
                          </AutoSuggestBox.ItemTemplate>
-@@ -503,10 +665,41 @@
+@@ -503,10 +692,41 @@
                  </Grid>
              </Grid>
  
@@ -2740,7 +2779,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                Visibility="Collapsed">
              <Grid.RowDefinitions>
                  <RowDefinition Height="Auto" />
-@@ -539,6 +732,7 @@
+@@ -539,6 +759,7 @@
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
@@ -2748,7 +2787,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                          </Grid.RowDefinitions>
                          <Grid.ColumnDefinitions>
                              <ColumnDefinition Width="*" />
-@@ -546,12 +740,18 @@
+@@ -546,12 +767,18 @@
  
                          <Grid Grid.Row="0"
                                Margin="0,0,0,16">
@@ -2767,7 +2806,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                                  Grid.Column="0"
                                  Margin="4,0,0,0">
                                  <FontIcon x:Name="PlaceIcon"
-@@ -564,6 +764,21 @@
+@@ -564,6 +791,21 @@
                                             Margin="8,0,0,0"
                                             RelativePanel.RightOf="PlaceIcon" />
  
@@ -2789,7 +2828,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                                  <TextBlock x:Name="UpdatedOnText" Text="updatedOn"
                                             Style="{StaticResource CaptionTextBlockStyle}"
                                             Opacity="{ThemeResource TextControlBackgroundThemeOpacity}"
-@@ -573,6 +788,86 @@
+@@ -573,6 +815,86 @@
  
                              </RelativePanel>
  
@@ -2876,7 +2915,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                          </Grid>
  
  
-@@ -610,28 +905,37 @@
+@@ -610,28 +932,37 @@
                          </RelativePanel>
  
  
@@ -2925,7 +2964,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
-@@ -640,16 +944,22 @@
+@@ -640,16 +971,22 @@
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
@@ -2952,7 +2991,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
  
                          <Grid Grid.Row="3"
                                Margin="0,32,0,0">
-@@ -665,10 +975,27 @@
+@@ -665,10 +1002,27 @@
  
                                  Margin="0,0,0,16" />
  
@@ -2982,7 +3021,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
  
                                  <muxc:ItemsRepeater
                                      x:Name="RepeaterDays">
-@@ -735,6 +1062,8 @@
+@@ -735,6 +1089,8 @@
                                      </muxc:ItemsRepeater.Layout>
                                  </muxc:ItemsRepeater>
  
@@ -2991,7 +3030,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
                              </ScrollViewer>
                          </Grid>
  
-@@ -1325,12 +1654,91 @@
+@@ -1325,12 +1681,91 @@
  
                          </Grid>
  
@@ -3084,7 +3123,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..21710b59499f62479ab2a780d253167a
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..134511a2fb9fe5f3326911eb9e83312cb335240a 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..41f03373730de18d5cffcd08cab3b02270aae008 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -3268,7 +3307,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..134511a2fb9fe5f3326911eb9e83312c
              await LoadApiData();
          }
  
-+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.27 is v27.
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.28 is v28.
 +        private static string GetPlusVersionDescription()
 +        {
 +            return $"v{Package.Current.Id.Version.Revision}";
@@ -3502,7 +3541,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..134511a2fb9fe5f3326911eb9e83312c
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +908,1526 @@ namespace FluentWeather.Views
+@@ -742,5 +908,1554 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }
@@ -3849,6 +3888,34 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..134511a2fb9fe5f3326911eb9e83312c
 +
 +            var available = Window.Current.Bounds.Height - SettingsTopOffset - SettingsBottomGap;
 +            panel.MinHeight = Math.Max(0, available);
++        }
++
++        // --- Tray icons ---
++        // Setup registers the link type "fluentweather-tray:" for the tray program. Opening it starts
++        // the tray icons. A running tray program ignores a second start. Windows may ask once whether
++        // to switch apps.
++        private static readonly Uri TrayStartUri = new("fluentweather-tray:start");
++
++        private async void ShowTrayButton_OnClick(object sender, RoutedEventArgs e)
++        {
++            bool started;
++            try
++            {
++                started = await Windows.System.Launcher.LaunchUriAsync(TrayStartUri);
++            }
++            catch (Exception)
++            {
++                started = false;
++            }
++
++            if (started || sender is not Button button)
++                return;
++
++            // The link type is missing: the tray icons are not installed on this PC.
++            var label = button.Content;
++            button.Content = "TrayNotInstalledText".GetLocalized();
++            await Task.Delay(TimeSpan.FromSeconds(4));
++            button.Content = label;
 +        }
 +
 +        private async void ChangelogHyperlink_Click(Windows.UI.Xaml.Documents.Hyperlink sender,

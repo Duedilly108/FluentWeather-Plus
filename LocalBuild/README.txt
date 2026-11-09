@@ -97,11 +97,11 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v27.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v27.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v28.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v28.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v27.zip. The version is the last
-part of the build number, so build 2.1.0.27 is v27. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v28.zip. The version is the last
+part of the build number, so build 2.1.0.28 is v28. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
 
 The setup holds the app as it is built and installed on your PC, signed again with
@@ -259,6 +259,9 @@ Right-click either icon        choose "Number shows temperature" or
                                4 seconds, it is ended.
                                "Exit tray icons" closes the icons.
                                "Exit tray icons and close FluentWeather" does both.
+                               To show the icons again, select "Show tray icons"
+                               in the app's settings, or "FluentWeather tray icons"
+                               in the Start menu. They also start at the next sign-in.
 Hover over either icon         a panel with the city and the details you choose.
                                The panel shows a large, detailed version of the
                                weather picture with a soft glow behind it. The

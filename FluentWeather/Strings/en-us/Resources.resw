@@ -247,6 +247,18 @@
   <data name="DevelopedByRun.Text" xml:space="preserve">
     <value>developed by</value>
   </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Tray icons</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Show tray icons</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Show tray icons starts the temperature and conditions icons again after "Exit tray icons".</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Not installed</value>
+  </data>
   <data name="UpdatedByRun.Text" xml:space="preserve">
     <value>updated by</value>
   </data>

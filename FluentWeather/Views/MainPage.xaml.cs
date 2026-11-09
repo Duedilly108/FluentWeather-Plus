@@ -258,7 +258,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.27 is v27.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.28 is v28.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -1251,6 +1251,34 @@ namespace FluentWeather.Views
 
             var available = Window.Current.Bounds.Height - SettingsTopOffset - SettingsBottomGap;
             panel.MinHeight = Math.Max(0, available);
+        }
+
+        // --- Tray icons ---
+        // Setup registers the link type "fluentweather-tray:" for the tray program. Opening it starts
+        // the tray icons. A running tray program ignores a second start. Windows may ask once whether
+        // to switch apps.
+        private static readonly Uri TrayStartUri = new("fluentweather-tray:start");
+
+        private async void ShowTrayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            bool started;
+            try
+            {
+                started = await Windows.System.Launcher.LaunchUriAsync(TrayStartUri);
+            }
+            catch (Exception)
+            {
+                started = false;
+            }
+
+            if (started || sender is not Button button)
+                return;
+
+            // The link type is missing: the tray icons are not installed on this PC.
+            var label = button.Content;
+            button.Content = "TrayNotInstalledText".GetLocalized();
+            await Task.Delay(TimeSpan.FromSeconds(4));
+            button.Content = label;
         }
 
         private async void ChangelogHyperlink_Click(Windows.UI.Xaml.Documents.Hyperlink sender,

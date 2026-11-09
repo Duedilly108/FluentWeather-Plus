@@ -1,4 +1,4 @@
-FluentWeather-Plus is FluentWeather 2.1.0 by Gabboxl (github.com/Gabboxl/FluentWeather) with the features in this file. It keeps all features of the original app. Its version is the last part of the build number, so build 2.1.0.27 is v27. Each build on a PC adds one. Each PC builds and signs its own copy with the files in the LocalBuild folder. LocalBuild/README.txt has the setup steps.
+FluentWeather-Plus is FluentWeather 2.1.0 by Gabboxl (github.com/Gabboxl/FluentWeather) with the features in this file. It keeps all features of the original app. Its version is the last part of the build number, so build 2.1.0.28 is v28. Each build on a PC adds one. Each PC builds and signs its own copy with the files in the LocalBuild folder. LocalBuild/README.txt has the setup steps.
 
 
 The app window has these features.
@@ -33,9 +33,10 @@ The search box reads "Location search" in a slightly smaller font, so it fits th
 The top bar fits narrow windows. The refresh button, the search box and the settings button never cover the app name or the window buttons. In a narrow window the app name is hidden.
 The saved locations tip wraps to the width of the window.
 The settings panel under the gear button is opaque, with a gradient from dark grey at the top to blue grey at the bottom. Its text is always light. It fills the window height down to a small gap at the bottom. Units and time format share one row, and so do acrylic effects and background image. In a short window the panel scrolls.
-The credits in the settings panel list "FluentWeather-Plus v27 updated by duedilly108" first. The second line reads "Based on FluentWeather v2.1.0 developed by Gabboxl". The version link, for example v27, opens the releases page, where each version can be downloaded. The "GitHub project" link opens the FluentWeather-Plus repository with its source code.
-The app icon sits in the top left corner of the window, with a small blue "P" badge. Hovering over the icon shows the app name, the version and the build number, for example "FluentWeather-Plus v27" and "Build 2.1.0.27". Hovering over the refresh button shows "Refresh", and hovering over the gear button shows "Settings".
+The credits in the settings panel list "FluentWeather-Plus v28 updated by duedilly108" first. The second line reads "Based on FluentWeather v2.1.0 developed by Gabboxl". The version link, for example v28, opens the releases page, where each version can be downloaded. The "GitHub project" link opens the FluentWeather-Plus repository with its source code.
+The app icon sits in the top left corner of the window, with a small blue "P" badge. Hovering over the icon shows the app name, the version and the build number, for example "FluentWeather-Plus v28" and "Build 2.1.0.28". Hovering over the refresh button shows "Refresh", and hovering over the gear button shows "Settings".
 Tooltips use the same grey to blue grey gradient as the settings panel.
+The settings panel has a "Show tray icons" button next to the language button. It starts the tray icons again after "Exit tray icons" in the tray menu. Setup registers the link type fluentweather-tray: for the tray program, and the button opens that link. Windows may ask once whether to switch apps. If the tray icons are not installed, the button shows "Not installed" for a few seconds.
 The "Auto refresh" setting uses option buttons for Off, 15 minutes, 30 minutes and 1 hour. A saved setting of 5 or 10 minutes from an earlier version becomes 15 minutes.
 The list of locations below the search box stays at least 340 pixels wide in a narrow window. Long names wrap onto a second line.
 The "Updated on" line shows the date in the Windows date format and the time in the 12 or 24 hour setting of the app.
@@ -146,7 +147,7 @@ Each PC that runs the installer creates its own signing certificate.
 
 The direct installer has these features.
 
-"Make FluentWeather direct installer" in the Start menu makes FluentWeather-Plus-Setup-v27.exe, FluentWeather-Plus-Uninstall-v27.exe and README.txt in a folder FluentWeather-Plus on the Desktop, plus a zip of the three files named FluentWeather-Plus-v27.zip, for build 2.1.0.27. The version is also in README.txt, in the title of the setup window and in Properties > Details of both programs.
+"Make FluentWeather direct installer" in the Start menu makes FluentWeather-Plus-Setup-v28.exe, FluentWeather-Plus-Uninstall-v28.exe and README.txt in a folder FluentWeather-Plus on the Desktop, plus a zip of the three files named FluentWeather-Plus-v28.zip, for build 2.1.0.28. The version is also in README.txt, in the title of the setup window and in Properties > Details of both programs.
 README.txt in that folder gets the VirusTotal links of the two new files. The copy of README.txt inside the setup points to the release page for the VirusTotal results, because the setup cannot hold its own scan link.
 The setup holds the app as it is built on this PC, the Microsoft packages it needs and the tray icons program. Another Windows 10 or 11 PC installs it in about a minute, with no download and no build.
 Each run creates a throwaway signing certificate, signs a copy of the app with it, puts its public part into the setup and deletes the certificate and its private key. The own signing certificate of the PC is never used, so no other package can ever be signed with the certificate that other PCs trust.
