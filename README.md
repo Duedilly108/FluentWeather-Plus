@@ -63,11 +63,12 @@ v46 adds the Full History page, the optional water and extra data cards, the mov
 
 
 
-Full main window:
+Full main window (at 55%):
 
 <br>
 
-<img width="2540" height="1544" alt="mainscreenfull" src="https://github.com/user-attachments/assets/e8e86b84-4ccf-455c-81c9-4b657b43ee84" />
+<img width="2555" height="1539" alt="FW_full_main" src="https://github.com/user-attachments/assets/0da0fb9d-a4e0-4520-82d8-37a298b3af2d" />
+
 
 <br>
 <br>
@@ -77,23 +78,20 @@ Draggable and Resizable:
 
 <br>
 
-<img width="744" height="1529" alt="draggable_re-sizeable_mainscreen_narrow" src="https://github.com/user-attachments/assets/fd8cce94-b7e5-4896-9343-8b72d5acdd62" />
+<img width="1272" height="1275" alt="Resizable and draggable main" src="https://github.com/user-attachments/assets/84503cbf-500d-4ac7-a36e-4a0177124de5" />
 
 <br>
 <br>
 <br>
 
-<img width="715" height="1077" alt="draggable_mainscreen_narrow_short" src="https://github.com/user-attachments/assets/be650a55-47c5-4b7f-9b4c-82524e99ccdb" />
 
-<br>
-<br>
-<br>
 
 Updated Settings additions such as Main Window Size, Contrast levels and Windows Language selection 
 
 <br>
 
-<img width="684" height="1419" alt="main settings" src="https://github.com/user-attachments/assets/4c747af0-8291-47fb-818f-2badafaaefdf" />
+<img width="1997" height="1290" alt="Updated Settings" src="https://github.com/user-attachments/assets/c8e96ab9-49cf-4a84-a669-6dc5757d78ac" />
+
 
 <br>
 <br>
@@ -181,7 +179,7 @@ Selectable Hover Over Popup Details
 
 <br>
 
-<img width="642" height="871" alt="tray_menu_hover_select_details" src="https://github.com/user-attachments/assets/4e0b51d5-4053-4f54-960a-046bd117cb4c" />
+<img width="794" height="1097" alt="selectable_hover_over_popup_details" src="https://github.com/user-attachments/assets/38506bb9-12b8-4389-8d0d-4963fd6d30a2" />
 
 
-
+<br>
