@@ -65,85 +65,121 @@ v45 adds the Full History page, the optional water and extra data cards, the mov
 
 Full main window:
 
+<br>
 
 <img width="2540" height="1544" alt="mainscreenfull" src="https://github.com/user-attachments/assets/e8e86b84-4ccf-455c-81c9-4b657b43ee84" />
 
-
-
+<br>
+<br>
+<br>
 
 Draggable and Resizable:
 
+<br>
 
 <img width="744" height="1529" alt="draggable_re-sizeable_mainscreen_narrow" src="https://github.com/user-attachments/assets/fd8cce94-b7e5-4896-9343-8b72d5acdd62" />
 
-
+<br>
+<br>
+<br>
 
 <img width="715" height="1077" alt="draggable_mainscreen_narrow_short" src="https://github.com/user-attachments/assets/be650a55-47c5-4b7f-9b4c-82524e99ccdb" />
 
-
-
+<br>
+<br>
+<br>
 
 Updated Settings additions such as Main Window Size, Contrast levels and Windows Language selection 
 
+<br>
 
 <img width="684" height="1419" alt="main settings" src="https://github.com/user-attachments/assets/4c747af0-8291-47fb-818f-2badafaaefdf" />
 
-
-
+<br>
+<br>
+<br>
 
 Search in Location pulldown
 
+<br>
+
 <img width="765" height="1055" alt="location1" src="https://github.com/user-attachments/assets/ca49819f-09fd-4325-b09f-ef60926adcd6" />
 
-
-
+<br>
+<br>
+<br>
 
 Location Saving (by star)
 
+<br>
+
 <img width="746" height="942" alt="location_save1" src="https://github.com/user-attachments/assets/7ac579b0-d0d4-4ce6-b5eb-a8db1552d539" />
+
+<br>
+<br>
+<br>
 
 <img width="746" height="700" alt="location_save2" src="https://github.com/user-attachments/assets/ecadac53-f469-4934-9d76-efecad4e6ad7" />
 
-
-
+<br>
+<br>
+<br>
 
 Re-order locations:
 
+<br>
+
 <img width="679" height="289" alt="location_save3" src="https://github.com/user-attachments/assets/2c2cd72d-1617-4d76-ab8b-94ec272aee16" />
 
-
-
+<br>
+<br>
+<br>
 
 Tray Icons (optional) - Temperature and Conditions
 
+<br>
+
 <img width="65" height="33" alt="tray_temp_condition_icons" src="https://github.com/user-attachments/assets/bde969e9-3a41-434d-af74-6241f02eebb1" />
 
-
+<br>
+<br>
+<br>
 
 <img width="70" height="29" alt="system_tray_icon3" src="https://github.com/user-attachments/assets/3c167bb7-477a-4bb6-9538-41505dd53571" />
 
-
+<br>
+<br>
+<br>
 
 <img width="64" height="32" alt="tray_temp_condition_icons2" src="https://github.com/user-attachments/assets/eed84140-ecdc-4df0-b1aa-55bc0502459d" />
 
-
-
+<br>
+<br>
+<br>
 
 Draggable Tray Icon Mouse-over popup details display
 
+<br>
+
 <img width="510" height="473" alt="draggable_system_tray_icon_popup_details" src="https://github.com/user-attachments/assets/5dc2365c-2a03-4236-9fa6-84aaf449168a" />
 
-
-
+<br>
+<br>
+<br>
 
 Tray Icons Hover Popup Menu
 
+<br>
+
 <img width="468" height="480" alt="tray_menu_right_click" src="https://github.com/user-attachments/assets/5a5da011-7c9f-4af5-861d-b31331153bab" />
 
-
-
+<br>
+<br>
+<br>
 
 Selectable Hover Over Popup Details
+
+<br>
 
 <img width="642" height="871" alt="tray_menu_hover_select_details" src="https://github.com/user-attachments/assets/4e0b51d5-4053-4f54-960a-046bd117cb4c" />
 
