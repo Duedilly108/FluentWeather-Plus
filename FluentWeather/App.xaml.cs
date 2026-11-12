@@ -51,6 +51,8 @@ namespace FluentWeather
             }
 #endif
 
+            // Local build: crash.log in the app data folder. See CrashLog.
+            CrashLog.Install();
             UnhandledException += OnAppUnhandledException;
 
             InitializeComponent();
@@ -87,6 +89,7 @@ namespace FluentWeather
         {
             //http://blog.wpdev.fr/inspecting-unhandled-exceptions-youve-got-only-one-chance/
             Exception exceptionThatDoesntGoAway = e.Exception;
+            CrashLog.Write(exceptionThatDoesntGoAway, "Application.UnhandledException", e.Message);
 
             if (exceptionThatDoesntGoAway != null)
             {

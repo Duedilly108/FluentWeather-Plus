@@ -61,8 +61,16 @@ namespace FluentWeatherLocal
         [STAThread]
         // FluentWeatherTray.exe            start the tray icons (does nothing if they already run)
         // FluentWeatherTray.exe /restart   close the app and any running tray icons, then start both again
+        // FluentWeatherTray.exe fluentweather-tray:stop
+        //                                  ask the running tray icons to exit (the app's "Hide tray icons")
         private static void Main(string[] args)
         {
+            if (Array.Exists(args, a => a.StartsWith("fluentweather-tray:stop", StringComparison.OrdinalIgnoreCase)))
+            {
+                TrayContext.SignalStop();
+                return;
+            }
+
             var restart = Array.Exists(args, a => string.Equals(a, "/restart", StringComparison.OrdinalIgnoreCase));
             if (restart)
             {
@@ -146,6 +154,17 @@ namespace FluentWeatherLocal
             // The nearest official station that reports (usually an airport). weather.com blends many
             // sources for the exact location, so the conditions are not taken from this station alone.
             new[] { "Station", "Nearest station" },
+            // The nearest water station (NOAA CO-OPS or USGS). The app writes these lines only when the
+            // "Nearby water" tray setting is on in the app.
+            new[] { "WaterTemp", "Water temperature" },
+            new[] { "WaterWind", "Wind at water station" },
+            // Extra Open-Meteo data. The app writes these lines only when the "Tray" box of the feed
+            // is ticked under "Extra data" in the app settings.
+            new[] { "ExtraMarine", "Waves and sea temperature" },
+            new[] { "ExtraWind", "Wind forecast (gusts, 80 m)" },
+            new[] { "ExtraModels", "Other forecast models" },
+            new[] { "ExtraRiver", "River flow" },
+            new[] { "ExtraPollen", "Pollen" },
         };
 
         public static readonly string[] Defaults =
@@ -1334,6 +1353,72 @@ namespace FluentWeatherLocal
         private IntPtr _lastForeground = IntPtr.Zero;
         private bool _appWasActive;
 
+        // Local build: the app's "Show tray icons" and "Hide tray icons" button. While the tray icons run,
+        // tray-status.txt in the app's LocalState folder holds the time of the last heartbeat, written
+        // every 30 seconds. The file is deleted at exit. The app reads it to label its button.
+        // "fluentweather-tray:stop" sets a named event that makes the running copy exit.
+        private const string StopEventName = @"Local\FluentWeatherLocalTrayStop";
+        private const string StatusFileName = "tray-status.txt";
+        private EventWaitHandle _stopEvent;
+        private RegisteredWaitHandle _stopWait;
+        private readonly System.Windows.Forms.Timer _statusTimer = new System.Windows.Forms.Timer();
+
+        internal static void SignalStop()
+        {
+            try
+            {
+                EventWaitHandle handle;
+                if (EventWaitHandle.TryOpenExisting(StopEventName, out handle))
+                {
+                    using (handle)
+                        handle.Set();
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void StartStatusAndStop()
+        {
+            try
+            {
+                _stopEvent = new EventWaitHandle(false, EventResetMode.AutoReset, StopEventName);
+                _stopWait = ThreadPool.RegisterWaitForSingleObject(_stopEvent, delegate
+                {
+                    try { _uiInvoker.BeginInvoke((MethodInvoker) ExitThread); }
+                    catch (Exception) { }
+                }, null, Timeout.Infinite, true);
+            }
+            catch (Exception) { }
+
+            WriteStatus();
+            _statusTimer.Interval = 30000;
+            _statusTimer.Tick += delegate { WriteStatus(); };
+            _statusTimer.Start();
+        }
+
+        private void WriteStatus()
+        {
+            try
+            {
+                var path = GetLocalStatePath(StatusFileName);
+                if (path == null || !Directory.Exists(Path.GetDirectoryName(path)))
+                    return;
+                File.WriteAllText(path, "running=1\r\nheartbeat=" + DateTime.UtcNow.ToString("o", CultureInfo.InvariantCulture) + "\r\n");
+            }
+            catch (Exception) { }
+        }
+
+        private void DeleteStatus()
+        {
+            try
+            {
+                var path = GetLocalStatePath(StatusFileName);
+                if (path != null && File.Exists(path))
+                    File.Delete(path);
+            }
+            catch (Exception) { }
+        }
+
         public TrayContext()
         {
             _workDir = Path.Combine(
@@ -1357,6 +1442,7 @@ namespace FluentWeatherLocal
             // A hidden control so file change events arrive on this (the UI) thread.
             _uiInvoker = new Control();
             _uiInvoker.CreateControl();
+            StartStatusAndStop();
 
             // When the app writes a new reading, wait a quarter second for the write to finish, then redraw.
             _changeDelay = new System.Windows.Forms.Timer();
@@ -2291,6 +2377,13 @@ namespace FluentWeatherLocal
 
         protected override void ExitThreadCore()
         {
+            _statusTimer.Stop();
+            _statusTimer.Dispose();
+            DeleteStatus();
+            if (_stopWait != null)
+                _stopWait.Unregister(null);
+            if (_stopEvent != null)
+                _stopEvent.Dispose();
             _foregroundWatch.Stop();
             _foregroundWatch.Dispose();
             _timer.Stop();

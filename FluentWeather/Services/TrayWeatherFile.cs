@@ -46,6 +46,10 @@ namespace FluentWeather.Services
             {
                 var units = await VariousUtils.GetUnitsCode();
                 var daily = data.v3wxforecastdaily10day;
+                var point = data.v3locationpoint?.LocationV3;
+                if (point != null)
+                    OpenMeteoExtrasService.RememberWeatherComPollen(point.latitude, point.longitude,
+                        data.v2idxPollenDaypart10days?.PollenForecastDaypart);
                 var text = await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
                     daily?.moonriseTimeLocal, daily?.moonsetTimeLocal);
                 await WriteFileAsync(CurrentFileName, text);
@@ -113,6 +117,9 @@ namespace FluentWeather.Services
                         var data = System.Text.Json.JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.CurrentConditionsResponse);
                         if (data?.v3wxobservationscurrent == null || data.v3locationpoint?.LocationV3 == null)
                             return previous.TryGetValue(location.PlaceId, out var old) ? old : null;
+
+                        OpenMeteoExtrasService.RememberWeatherComPollen(data.v3locationpoint.LocationV3.latitude,
+                            data.v3locationpoint.LocationV3.longitude, data.pollen?.Forecast);
 
                         // "Past days": the data is here anyway, so it also updates today's record.
                         var part = data.v3wxforecastdaily3day?.daypart?.FirstOrDefault();
@@ -214,7 +221,79 @@ namespace FluentWeather.Services
                 .Append(await FormatMoonTimeAsync("Moonrise", moonrises))
                 .Append(await FormatMoonTimeAsync("Moonset", moonsets))
                 .Append(await FormatStationAsync(loc, units))
+                .Append(await FormatWaterAsync(loc, obs, units))
+                .Append(await FormatExtrasAsync(loc, units))
                 .ToString();
+        }
+
+        // Local build: the extra Open-Meteo lines, "d.ExtraMarine=1.2 m 14 s, sea 74F" and so on,
+        // for each feed whose "Tray" box is ticked in the app settings. See OpenMeteoExtrasService.
+        private static async Task<string> FormatExtrasAsync(LocationV3 loc, WetUnits units)
+        {
+            var sb = new StringBuilder();
+            foreach (var feed in OpenMeteoExtrasService.AllFeeds)
+            {
+                try
+                {
+                    if (!await OpenMeteoExtrasService.IsOnAsync(feed, true))
+                        continue;
+                    var text = await OpenMeteoExtrasService.DescribeAsync(feed, loc.latitude, loc.longitude, units);
+                    if (text != null)
+                        sb.Append("d.Extra").Append(feed).Append('=').Append(OneLine(text.Value.TrayLine)).Append('\n');
+                }
+                catch (Exception)
+                {
+                    // The line is left out.
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        // Local build: "d.WaterTemp=56°F, Des Moines River at Keosauqua, 19 mi" and
+        // "d.WaterWind=12 mph N" for the tray hover panel, when the "Nearby water" tray setting is on.
+        // The wind is the station's own wind when it has one, otherwise the location's current wind.
+        private static async Task<string> FormatWaterAsync(LocationV3 loc, V3WxObservationsCurrent obs, WetUnits units)
+        {
+            try
+            {
+                if (!await WaterService.IsTrayEnabledAsync())
+                    return string.Empty;
+
+                var reading = await WaterService.GetNearestAsync(loc.latitude, loc.longitude);
+                if (reading == null)
+                    return string.Empty;
+
+                var degrees = "\u00B0" + MeasureUnitUtils.GetTemperatureUnits(units);
+                var temp = WaterService.TemperatureFor(reading.WaterTemperatureC, units) + degrees + ", " +
+                           reading.StationName + ", " + WaterService.DistanceFor(reading.DistanceKm, units);
+                // The station's own wind, otherwise the Open-Meteo wind and gusts of the location,
+                // otherwise the weather.com wind.
+                string wind;
+                if (reading.WindSpeedKmh != null)
+                {
+                    wind = OpenMeteoExtrasService.Wind(reading.WindSpeedKmh.Value, units) +
+                           (string.IsNullOrEmpty(reading.WindDirection) ? "" : " " + reading.WindDirection) +
+                           (reading.WindGustKmh != null ? ", " + string.Format(CultureInfo.CurrentCulture, "WaterGust".GetLocalized(),
+                               OpenMeteoExtrasService.Wind(reading.WindGustKmh.Value, units)) : "");
+                }
+                else
+                {
+                    var model = await OpenMeteoExtrasService.GetWindAsync(loc.latitude, loc.longitude);
+                    wind = model?.SpeedKmh != null
+                        ? OpenMeteoExtrasService.Wind(model.SpeedKmh.Value, units) + OpenMeteoExtrasService.Direction(model.Direction) +
+                          (model.GustKmh != null ? ", " + string.Format(CultureInfo.CurrentCulture, "WaterGust".GetLocalized(),
+                              OpenMeteoExtrasService.Wind(model.GustKmh.Value, units)) : "") + " (" + "WaterWindForecastShort".GetLocalized() + ")"
+                        : obs.windSpeed + " " + MeasureUnitUtils.GetWindSpeedUnits(units) + " " + obs.windDirectionCardinal + " (" +
+                          "WaterWindForecastShort".GetLocalized() + ")";
+                }
+
+                return "d.WaterTemp=" + OneLine(temp) + "\n" + "d.WaterWind=" + OneLine(wind) + "\n";
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
         }
 
         // Every current-conditions value the service provides, as display text in the user's units.
@@ -259,8 +338,9 @@ namespace FluentWeather.Services
             Add("Pressure", pressure);
 
             Add("Visibility", Num(obs.visibility) + " " + MeasureUnitUtils.GetVisibilityUnits(units));
-            if (obs.cloudCeiling.HasValue)
-                Add("CloudCeiling", obs.cloudCeiling.Value.ToString("N0", c) + " " + MeasureUnitUtils.GetAltitudeUnits(units));
+            // The Open-Meteo backup sends BackupWeatherService.CeilingUnknown when no station tells the ceiling.
+            if (obs.cloudCeiling is >= 0)
+                Add("CloudCeiling", MeasureUnitUtils.CeilingInUnits(obs.cloudCeiling.Value, units).ToString("N0", c) + " " + MeasureUnitUtils.GetAltitudeUnits(units));
             Add("Rain1h", Num(obs.precip1Hour) + " " + rain);
             Add("Rain6h", Num(obs.precip6Hour) + " " + rain);
             Add("Rain24h", Num(obs.precip24Hour) + " " + rain);

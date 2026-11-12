@@ -29,12 +29,21 @@ namespace FluentWeather.Utils
             };
         }
 
+        /// <summary>
+        /// Local build: weather.com sends the cloud ceiling in feet for every unit setting.
+        /// This gives it in the unit of GetAltitudeUnits: feet, or meters rounded to 10 m.
+        /// </summary>
+        public static int CeilingInUnits(int feet, WetUnits wetUnits)
+        {
+            return wetUnits is WetUnits.e or WetUnits.h ? feet : (int) Math.Round(feet * 0.3048 / 10) * 10;
+        }
+
         public static string GetPressureUnits(WetUnits wetUnits)
         {
             return wetUnits switch
             {
                 WetUnits.m => "mb/hPa",
-                WetUnits.e => "hg",
+                WetUnits.e => "inHg",
                 WetUnits.h => "mb",
                 WetUnits.s => "mb",
                 _ => throw new ArgumentOutOfRangeException(nameof(wetUnits), wetUnits, null)

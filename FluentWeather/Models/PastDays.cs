@@ -16,7 +16,15 @@ namespace FluentWeather.Models
         public string? Phrase { get; set; }
         public int? PrecipChance { get; set; }
 
-        // The units of High and Low: "e" is Fahrenheit, the other unit codes are Celsius.
+        // Measured totals of the day, for the history page: the largest 24-hour liquid
+        // precipitation and snow seen in the day's observations, and the highest wind speed and gust.
+        public double? Precip { get; set; }
+        public double? Snow { get; set; }
+        public int? WindMax { get; set; }
+        public int? GustMax { get; set; }
+
+        // The unit code of all values: "e" is Fahrenheit, inches and mph. "m" is Celsius, mm, cm
+        // and km/h. "h" is Celsius, mm, cm and mph. "s" is Celsius, mm, cm and m/s.
         public string Units { get; set; } = "e";
 
         public bool LowCaptured { get; set; }
@@ -37,6 +45,12 @@ namespace FluentWeather.Models
 
         // The last capture request that failed, as UTC ticks. The next attempt waits an hour.
         public long LastFailedUtcTicks { get; set; }
+
+        // The coordinates of the location, for the history archive. Set when the app shows the
+        // location.
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public bool HasCoordinates { get; set; }
     }
 
     public class PastDaysStore

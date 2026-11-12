@@ -135,6 +135,13 @@ namespace FluentWeather.Views
             }
         }
 
+        // Local build: the "Nearby water" switches. See WaterService.
+        public bool WaterCardToggleStatus =>
+            Task.Run(async () => await WaterService.IsCardEnabledAsync()).Result;
+
+        public bool WaterTrayToggleStatus =>
+            Task.Run(async () => await WaterService.IsTrayEnabledAsync()).Result;
+
         public List<string> AutoRefreshStepsValues => AutoRefreshSteps.Values.ToList();
 
         public Dictionary<int, string> AutoRefreshSteps => new()
@@ -205,6 +212,9 @@ namespace FluentWeather.Views
 
             InitializeStoryboards();
 
+            // Local build: the saved order of the detail cards.
+            _ = ApplyCardLayoutAsync();
+
             _appViewModel.UpdateUiAction += async () => { await Task.Run(LoadApiData); };
             KeyDown += MainPage_KeyDown;
 
@@ -258,7 +268,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.28 is v28.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.45 is v45.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -291,10 +301,8 @@ namespace FluentWeather.Views
             {
                 try
                 {
-                    var response = await ApiUtils.GetWithRetryAsync(SharedClient, "v3/location/searchflat?query=" + sender.Text +
-                                                               "&language=" +
-                                                               SystemLanguage +
-                                                               "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230&format=json");
+                    // Local build: weather.com, or the Open-Meteo backup. See DataSourceService.
+                    var response = await ApiUtils.SearchLocations(sender.Text);
                     //&locationType=city (x solo citta)
 
                     if (response.IsSuccessStatusCode)
@@ -391,7 +399,11 @@ namespace FluentWeather.Views
                             {
                                 Title = "Weather data update failed",
                                 Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
-                                Content = "We couldn't update weather data. Verify your internet connection.\n\n" + e.InnerException?.Message,
+                                // Local build: error 10013 means Windows blocked the connection. The internet can still work.
+                                Content = (ApiUtils.IsConnectionBlocked(e)
+                                              ? "Windows blocked the connection to the weather service. A firewall, antivirus program, VPN or proxy may be blocking FluentWeather-Plus. Allow FluentWeather-Plus in that program, or try again with the VPN turned off.\n\n"
+                                              : "We couldn't update weather data. Verify your internet connection.\n\n")
+                                          + e.InnerException?.Message,
                                 CloseButtonText = "OK",
                                 Tag = "WeatherDataUpdateFailedDialog"
                             };
@@ -522,6 +534,9 @@ namespace FluentWeather.Views
             var updatedDate = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("shortdate").Format(DateTimeOffset.Now);
             var updatedTime = await VariousUtils.GetTimeBasedOnUserSettings(DateTime.Now);
             UpdatedOnText.Text = "UpdatedOnText".GetLocalized() + updatedDate + " " + updatedTime + " " + TimeZoneInfo.Local.Id;
+            _noteLatitude = rootV3Response.v3locationpoint.LocationV3.latitude;
+            _noteLongitude = rootV3Response.v3locationpoint.LocationV3.longitude;
+            _ = UpdateDataSourceNoteAsync();
 
             //join the variables displayName, city, adminDistrict, country together in a single string with a comma between each variable (some may be empty) and remove duplicate names
             string placeName = string.Join(", ",
@@ -545,6 +560,13 @@ namespace FluentWeather.Views
             UpdateSaveLocationButton();
             UpdateRadar(locationV3.latitude, locationV3.longitude, locationV3.countryCode);
             _ = UpdateAirQualityAsync(locationV3.latitude, locationV3.longitude, locationV3.countryCode, placeId);
+            _lastWaterLookup = (locationV3.latitude, locationV3.longitude, placeId,
+                rootV3Response.v3wxobservationscurrent.windSpeed + " " + MeasureUnitUtils.GetWindSpeedUnits(currentUnits) + " " +
+                rootV3Response.v3wxobservationscurrent.windDirectionCardinal);
+            OpenMeteoExtrasService.RememberWeatherComPollen(locationV3.latitude, locationV3.longitude,
+                rootV3Response.v2idxPollenDaypart10days?.PollenForecastDaypart);
+            _ = UpdateWaterAsync();
+            _ = UpdateExtrasAsync();
 
             MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
 
@@ -563,7 +585,7 @@ namespace FluentWeather.Views
 
             HumidityChipControl.Value = rootV3Response.v3wxobservationscurrent.relativeHumidity + "%";
 
-            PressureChipControl.Value = rootV3Response.v3wxobservationscurrent.pressureMeanSeaLevel + " " +
+            PressureChipControl.Value = ShownPressure(rootV3Response.v3wxobservationscurrent, currentUnits) + " " +
                                         MeasureUnitUtils.GetPressureUnits(currentUnits);
 
             VisibilityChipControl.Value = rootV3Response.v3wxobservationscurrent.visibility + " " +
@@ -574,6 +596,9 @@ namespace FluentWeather.Views
 
             UVIndexChipControl.Value = rootV3Response.v3wxobservationscurrent.uvIndex + " (" +
                                        rootV3Response.v3wxobservationscurrent.uvDescription + ")";
+
+            // Local build: hover text for the standard cards. See SetStandardCardTips.
+            SetStandardCardTips(rootV3Response.v3wxobservationscurrent, currentUnits);
 
             //update days repeater itemssource with creating for every day a new DayButtonAdapter class
             List<DayButtonAdapter> dayButtonAdapters = [];
@@ -1237,20 +1262,122 @@ namespace FluentWeather.Views
             }
         }
 
-        // --- Settings height ---
-        // The settings panel opens below the top bar. It fills the window height down to a small gap
-        // at the bottom. The star rows between its sections share the extra height. In a short
-        // window the panel keeps its natural height and scrolls.
+        // --- Settings layout ---
+        // The settings panel opens below the top bar. It has three columns of sections and the credits
+        // in a card centered below them. It fills the window height down to a small gap at the bottom.
+        // The star rows between the sections share the extra height. A window narrower than
+        // ThreeColumnWidth gets two columns, with the right column below the middle one. A window
+        // narrower than TwoColumnWidth gets one column. In a short window the panel scrolls.
         private const double SettingsTopOffset = 48;
         private const double SettingsBottomGap = 16;
+        // Column widths: left, middle, right. The left one is widest so Units and Time format fit.
+        private const double SettingsLeftWidth = 440;
+        private const double SettingsMiddleWidth = 400;
+        private const double SettingsRightWidth = 380;
+        private const double ThreeColumnWidth = 1360;
+        private const double TwoColumnWidth = 940;
+
+        private Grid? _settingsPanel;
+        private bool _settingsUnconstrained;
+
+        // The width the panel can use: the screen width when the panel may leave the window,
+        // otherwise the window width.
+        private double SettingsAvailableWidth()
+        {
+            var windowWidth = Window.Current.Bounds.Width;
+            if (!_settingsUnconstrained)
+                return windowWidth;
+            try
+            {
+                var display = Windows.Graphics.Display.DisplayInformation.GetForCurrentView();
+                var screenWidth = display.ScreenWidthInRawPixels / display.RawPixelsPerViewPixel;
+                return Math.Max(windowWidth, screenWidth - 40);
+            }
+            catch (Exception)
+            {
+                return windowWidth;
+            }
+        }
 
         private void SettingsPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            if (sender is not FrameworkElement panel)
+            if (sender is not Grid panel)
                 return;
 
-            var available = Window.Current.Bounds.Height - SettingsTopOffset - SettingsBottomGap;
-            panel.MinHeight = Math.Max(0, available);
+            // The layout is set again each time the panel opens and when the window size changes,
+            // so a window that was resized after the first open gets the right number of columns.
+            if (_settingsPanel == null)
+            {
+                // Windows 10 1903 and later can show the panel outside the app window. Then the
+                // number of columns follows the screen width, not the window width.
+                try
+                {
+                    if (Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(
+                            "Windows.UI.Xaml.Controls.Primitives.FlyoutBase", "ShouldConstrainToRootBounds"))
+                    {
+                        SettingsFlyout.ShouldConstrainToRootBounds = false;
+                        _settingsUnconstrained = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    _settingsUnconstrained = false;
+                }
+
+                SettingsFlyout.Opening += (_, _) => ApplySettingsLayout();
+                SizeChanged += (_, _) => ApplySettingsLayout();
+            }
+            _settingsPanel = panel;
+            ApplySettingsLayout();
+        }
+
+        private void ApplySettingsLayout()
+        {
+            var panel = _settingsPanel;
+            if (panel == null || panel.ColumnDefinitions.Count < 5)
+                return;
+
+            var bounds = Window.Current.Bounds;
+            var available = SettingsAvailableWidth();
+            var columns = available >= ThreeColumnWidth ? 3 : available >= TwoColumnWidth ? 2 : 1;
+            panel.MinHeight = Math.Max(0, bounds.Height - SettingsTopOffset - SettingsBottomGap);
+
+            FrameworkElement? middle = null, right = null, divider1 = null, divider2 = null;
+            foreach (var child in panel.Children)
+            {
+                if (child is not FrameworkElement element)
+                    continue;
+                switch (element.Tag as string)
+                {
+                    case "SettingsMiddle": middle = element; break;
+                    case "SettingsRight": right = element; break;
+                    case "SettingsDivider1": divider1 = element; break;
+                    case "SettingsDivider2": divider2 = element; break;
+                }
+            }
+
+            if (middle == null || right == null || divider1 == null || divider2 == null)
+                return;
+
+            var zero = new GridLength(0);
+            panel.ColumnDefinitions[0].Width = new GridLength(SettingsLeftWidth);
+            panel.ColumnDefinitions[1].Width = columns >= 2 ? GridLength.Auto : zero;
+            panel.ColumnDefinitions[2].Width = columns >= 2 ? new GridLength(SettingsMiddleWidth) : zero;
+            panel.ColumnDefinitions[3].Width = columns == 3 ? GridLength.Auto : zero;
+            panel.ColumnDefinitions[4].Width = columns == 3 ? new GridLength(SettingsRightWidth) : zero;
+            divider1.Visibility = columns >= 2 ? Visibility.Visible : Visibility.Collapsed;
+            divider2.Visibility = columns == 3 ? Visibility.Visible : Visibility.Collapsed;
+            Grid.SetRowSpan(divider1, columns == 2 ? 2 : 1);
+
+            // Middle column: beside the left one, or below it.
+            Grid.SetColumn(middle, columns >= 2 ? 2 : 0);
+            Grid.SetRow(middle, columns >= 2 ? 0 : 1);
+            middle.Margin = columns >= 2 ? new Thickness(0) : new Thickness(0, 18, 0, 0);
+
+            // Right column: its own column, below the middle one, or below everything.
+            Grid.SetColumn(right, columns == 3 ? 4 : columns == 2 ? 2 : 0);
+            Grid.SetRow(right, columns == 3 ? 0 : columns == 2 ? 1 : 2);
+            right.Margin = columns == 3 ? new Thickness(0) : new Thickness(0, 18, 0, 0);
         }
 
         // --- Tray icons ---
@@ -1259,26 +1386,125 @@ namespace FluentWeather.Views
         // to switch apps.
         private static readonly Uri TrayStartUri = new("fluentweather-tray:start");
 
-        private async void ShowTrayButton_OnClick(object sender, RoutedEventArgs e)
+        // --- History window ---
+        private async void HistoryButton_OnClick(object sender, RoutedEventArgs e)
         {
-            bool started;
+            SettingsFlyout.Hide();
+            var placeId = _displayedPlaceId;
+            if (placeId != null && !await SavedLocationsService.ContainsAsync(placeId))
+                placeId = null;
+            ShowHistory(placeId);
+        }
+
+        // The history page covers the content of the main window. A new page each time, so it
+        // lists the saved locations as they are now.
+        private void ShowHistory(string? placeId)
+        {
             try
             {
-                started = await Windows.System.Launcher.LaunchUriAsync(TrayStartUri);
+                HistoryFrame.Navigate(typeof(HistoryPage), placeId);
+                HistoryFrame.BackStack.Clear();
+                if (HistoryFrame.Content is HistoryPage page)
+                    page.CloseRequested += (_, _) => CloseHistory();
+                HistoryFrame.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "ShowHistory");
+                CloseHistory();
+            }
+        }
+
+        private void CloseHistory()
+        {
+            HistoryFrame.Visibility = Visibility.Collapsed;
+            HistoryFrame.Content = null;
+        }
+
+        // Local build: the button shows "Show tray icons" or "Hide tray icons" by the current state.
+        // The tray program writes tray-status.txt in the app data folder every 30 seconds while it
+        // runs and deletes it when it exits. "fluentweather-tray:stop" asks it to exit.
+        private static readonly Uri TrayStopUri = new("fluentweather-tray:stop");
+        private static readonly TimeSpan TrayHeartbeatAge = TimeSpan.FromSeconds(90);
+        private Button? _trayButton;
+
+        private static async Task<bool> IsTrayRunningAsync()
+        {
+            try
+            {
+                var item = await ApplicationData.Current.LocalFolder.TryGetItemAsync("tray-status.txt");
+                if (item is not StorageFile file)
+                    return false;
+                var text = await FileIO.ReadTextAsync(file);
+                foreach (var line in text.Split('\n'))
+                {
+                    var trimmed = line.Trim();
+                    if (trimmed.StartsWith("heartbeat=", StringComparison.Ordinal) &&
+                        DateTimeOffset.TryParse(trimmed.Substring(10), System.Globalization.CultureInfo.InvariantCulture,
+                            System.Globalization.DateTimeStyles.AssumeUniversal, out var heartbeat))
+                        return DateTimeOffset.UtcNow - heartbeat < TrayHeartbeatAge;
+                }
             }
             catch (Exception)
             {
-                started = false;
+                // Treated as not running.
             }
+            return false;
+        }
 
-            if (started || sender is not Button button)
+        private async Task UpdateTrayButtonAsync()
+        {
+            if (_trayButton == null)
+                return;
+            var running = await IsTrayRunningAsync();
+            _trayButton.Content = (running ? "HideTrayButtonText" : "ShowTrayButtonText").GetLocalized();
+            _trayButton.Tag = running;
+        }
+
+        private async void ShowTrayButton_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (sender is not Button button)
+                return;
+            if (_trayButton == null)
+                SettingsFlyout.Opening += async (_, _) => await UpdateTrayButtonAsync();
+            _trayButton = button;
+            await UpdateTrayButtonAsync();
+        }
+
+        private async void ShowTrayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (sender is not Button button)
                 return;
 
-            // The link type is missing: the tray icons are not installed on this PC.
-            var label = button.Content;
-            button.Content = "TrayNotInstalledText".GetLocalized();
-            await Task.Delay(TimeSpan.FromSeconds(4));
-            button.Content = label;
+            var hide = button.Tag is true;
+            bool launched;
+            try
+            {
+                launched = await Windows.System.Launcher.LaunchUriAsync(hide ? TrayStopUri : TrayStartUri);
+            }
+            catch (Exception)
+            {
+                launched = false;
+            }
+
+            if (!launched)
+            {
+                // The link type is missing: the tray icons are not installed on this PC.
+                var label = button.Content;
+                button.Content = "TrayNotInstalledText".GetLocalized();
+                await Task.Delay(TimeSpan.FromSeconds(4));
+                button.Content = label;
+                return;
+            }
+
+            // Wait up to 6 seconds for the tray to start or stop, then label the button by its state.
+            for (var i = 0; i < 12; i++)
+            {
+                await Task.Delay(500);
+                if (await IsTrayRunningAsync() != hide)
+                    break;
+            }
+            await UpdateTrayButtonAsync();
         }
 
         private async void ChangelogHyperlink_Click(Windows.UI.Xaml.Documents.Hyperlink sender,
@@ -1681,8 +1907,25 @@ namespace FluentWeather.Views
             }
 
             var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
-            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl })
+            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl,
+                         ExtraMarineChip, ExtraWindChip, ExtraModelsChip, ExtraRiverChip, ExtraPollenChip })
                 chip?.SetCardBackground(chipBrush);
+
+            // Local build: the water card and the History button follow the card tint too.
+            if (WaterCard != null)
+            {
+                if (chipBrush != null)
+                    WaterCard.Background = chipBrush;
+                else
+                    WaterCard.Background = new Windows.UI.Xaml.Media.SolidColorBrush(Color.FromArgb(0x1D, 0xFF, 0xFF, 0xFF));
+            }
+            if (HistoryOpenButton != null)
+            {
+                if (chipBrush != null)
+                    HistoryOpenButton.Background = chipBrush;
+                else
+                    HistoryOpenButton.ClearValue(Control.BackgroundProperty);
+            }
 
             foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
                 ApplyCardTintToDayButton(pastCard);
@@ -1761,13 +2004,701 @@ namespace FluentWeather.Views
                           + Reading("AirQualityOzone".GetLocalized(), data.Ozone)
                           + Reading("AirQualityNitrogenDioxide".GetLocalized(), data.NitrogenDioxide)
                           + "\n\n" + "AirQualityCredit".GetLocalized();
-                ToolTipService.SetToolTip(AirQualityChipControl, tip);
+                HoverTip.Set(AirQualityChipControl, tip);
                 AirQualityChipControl.Visibility = Visibility.Visible;
             }
             catch (Exception)
             {
                 AirQualityChipControl.Visibility = Visibility.Collapsed;
             }
+        }
+
+        // --- Nearby water ---
+        // The nearest water station with a current reading. See WaterService. The card is two chips
+        // wide in the detail row. It shows the water temperature, the wind (the station's own wind
+        // when it has one, otherwise the forecast wind of the location) and the station line.
+
+        private (double Latitude, double Longitude, string PlaceId, string ForecastWind)? _lastWaterLookup;
+
+        private async void WaterCardToggle_OnToggled(object sender, RoutedEventArgs e)
+        {
+            await ApplicationData.Current.LocalSettings.SaveAsync(WaterService.CardSettingKey, ((ToggleSwitch) sender).IsOn);
+            await UpdateWaterAsync();
+        }
+
+        private async void WaterTrayToggle_OnToggled(object sender, RoutedEventArgs e)
+        {
+            await ApplicationData.Current.LocalSettings.SaveAsync(WaterService.TraySettingKey, ((ToggleSwitch) sender).IsOn);
+            // The tray file is written again with or without the water lines.
+            _ = TrayWeatherFile.RefreshCurrentAsync();
+        }
+
+        private async Task UpdateWaterAsync()
+        {
+            try
+            {
+                var lookup = _lastWaterLookup;
+                if (lookup == null || !await WaterService.IsCardEnabledAsync())
+                {
+                    WaterCard.Visibility = Visibility.Collapsed;
+                    return;
+                }
+
+                var (latitude, longitude, placeId, forecastWind) = lookup.Value;
+                var reading = await WaterService.GetNearestAsync(latitude, longitude);
+
+                // Waves, swell and the wind detail of the location, from Open-Meteo.
+                var marine = await OpenMeteoExtrasService.GetMarineAsync(latitude, longitude);
+                var wind = await OpenMeteoExtrasService.GetWindAsync(latitude, longitude);
+
+                // Another location may be shown by now.
+                if (_displayedPlaceId != placeId)
+                    return;
+
+                if (reading == null)
+                {
+                    WaterCard.Visibility = Visibility.Collapsed;
+                    return;
+                }
+
+                var units = await VariousUtils.GetUnitsCode();
+                var degrees = OpenMeteoExtrasService.Degrees(units);
+                WaterTempText.Text = WaterService.TemperatureFor(reading.WaterTemperatureC, units) + degrees;
+
+                // The wind on the card: the station's own wind when it has one, otherwise the
+                // Open-Meteo wind of the location with its gusts, otherwise the weather.com wind.
+                string windLine;
+                string windNote;
+                if (reading.WindSpeedKmh != null)
+                {
+                    windLine = OpenMeteoExtrasService.Wind(reading.WindSpeedKmh.Value, units) +
+                               (string.IsNullOrEmpty(reading.WindDirection) ? "" : " " + reading.WindDirection);
+                    windNote = "WaterWindStation".GetLocalized();
+                    if (reading.WindGustKmh != null)
+                        windNote += ", " + string.Format(System.Globalization.CultureInfo.CurrentCulture, "WaterGust".GetLocalized(),
+                            OpenMeteoExtrasService.Wind(reading.WindGustKmh.Value, units));
+                }
+                else if (wind?.SpeedKmh != null)
+                {
+                    windLine = OpenMeteoExtrasService.Wind(wind.SpeedKmh.Value, units) + OpenMeteoExtrasService.Direction(wind.Direction);
+                    windNote = "WaterWindModel".GetLocalized();
+                }
+                else
+                {
+                    windLine = forecastWind;
+                    windNote = "WaterWindForecast".GetLocalized();
+                }
+                WaterWindText.Text = windLine;
+
+                var age = WaterService.AgeText(reading.ObservedUtc);
+                var modelOnly = reading.Source == WaterSource.OpenMeteoMarine;
+                var distance = modelOnly ? "" : WaterService.DistanceFor(reading.DistanceKm, units);
+                var waves = marine?.WaveHeightM ?? reading.WaveHeightM;
+                WaterStationText.Text = modelOnly
+                    ? reading.StationName + (waves != null ? ", " + "ExtraWaves".GetLocalized() + " " + OpenMeteoExtrasService.Height(waves.Value, units) : "")
+                    : reading.StationName + ", " + distance + ", " + age;
+
+                var tip = "WaterTipIntro".GetLocalized() + "\n";
+                tip += modelOnly
+                    ? reading.StationName + "\n"
+                    : reading.StationName + " (" + WaterService.SourceName(reading.Source) + " " + reading.StationId + "), " + distance + "\n";
+                tip += "WaterTipWater".GetLocalized() + " " + WaterTempText.Text +
+                       (modelOnly ? "" : ", " + await VariousUtils.GetTimeBasedOnUserSettings(reading.ObservedUtc.ToLocalTime().DateTime)) + "\n" +
+                       "WaterTipWind".GetLocalized() + " " + windLine + " (" + windNote + ")";
+                if (reading.AirTemperatureC != null)
+                    tip += "\n" + "WaterTipAir".GetLocalized() + " " + WaterService.TemperatureFor(reading.AirTemperatureC.Value, units) + degrees;
+                if (reading.WaveHeightM != null && !modelOnly)
+                    tip += "\n" + "WaterTipWaves".GetLocalized() + " " + WaterService.WaveHeightFor(reading.WaveHeightM.Value, units);
+
+                // Open-Meteo detail for the location.
+                var detail = "";
+                if (wind?.GustKmh != null)
+                    detail += "\n" + "ExtraGustsNow".GetLocalized() + ": " + OpenMeteoExtrasService.Wind(wind.GustKmh.Value, units);
+                if (wind?.MaxGustNext6hKmh != null)
+                    detail += "\n" + "ExtraGusts6h".GetLocalized() + ": " + OpenMeteoExtrasService.Wind(wind.MaxGustNext6hKmh.Value, units);
+                if (wind?.Speed80mKmh != null)
+                    detail += "\n" + "ExtraWind80m".GetLocalized() + ": " + OpenMeteoExtrasService.Wind(wind.Speed80mKmh.Value, units);
+                if (marine?.WaveHeightM != null)
+                    detail += "\n" + "ExtraWaves".GetLocalized() + ": " + OpenMeteoExtrasService.Height(marine.WaveHeightM.Value, units) +
+                              OpenMeteoExtrasService.Period(marine.WavePeriodS) + OpenMeteoExtrasService.Direction(marine.WaveDirection);
+                if (marine?.SwellHeightM != null)
+                    detail += "\n" + "ExtraSwell".GetLocalized() + ": " + OpenMeteoExtrasService.Height(marine.SwellHeightM.Value, units) +
+                              OpenMeteoExtrasService.Period(marine.SwellPeriodS) + OpenMeteoExtrasService.Direction(marine.SwellDirection);
+                if (marine?.SeaTemperatureC != null && !modelOnly)
+                    detail += "\n" + "ExtraSeaTemp".GetLocalized() + ": " + OpenMeteoExtrasService.Temperature(marine.SeaTemperatureC.Value, units);
+                if (detail.Length > 0)
+                    tip += "\n\n" + "WaterTipModel".GetLocalized() + detail;
+
+                tip += "\n\n" + "WaterCredit".GetLocalized();
+                if (detail.Length > 0 || modelOnly)
+                    tip += "\n" + "ExtraCredit".GetLocalized();
+                HoverTip.Set(WaterCard, tip);
+                WaterCard.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "UpdateWaterAsync");
+                WaterCard.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        // --- Weather data source ---
+        // The "Weather data source" setting and the "Data: Open-Meteo" note under the update time.
+        // See DataSourceService and BackupWeatherService.
+
+        private bool _dataSourceLoading;
+        private bool _dataSourceEventHooked;
+
+        private async void DataSourceSegmented_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (sender is not CommunityToolkit.WinUI.Controls.Segmented segmented)
+                return;
+            _dataSourceLoading = true;
+            segmented.SelectedIndex = (int) await DataSourceService.GetModeAsync();
+            _dataSourceLoading = false;
+        }
+
+        private async void DataSourceSegmented_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_dataSourceLoading || sender is not CommunityToolkit.WinUI.Controls.Segmented segmented || segmented.SelectedIndex < 0)
+                return;
+            var mode = (DataSourceMode) segmented.SelectedIndex;
+            if (mode == await DataSourceService.GetModeAsync())
+                return;
+            await DataSourceService.SetModeAsync(mode);
+            // Load the shown location again from the chosen source, not from the memory cache.
+            _weatherCache.Clear();
+            _appViewModel.UpdateUi();
+            _ = TrayWeatherFile.RefreshCurrentAsync();
+        }
+
+        // The location of the shown data, for the station in the data note.
+        private double? _noteLatitude;
+        private double? _noteLongitude;
+
+        private async Task UpdateDataSourceNoteAsync()
+        {
+            if (!_dataSourceEventHooked)
+            {
+                _dataSourceEventHooked = true;
+                DataSourceService.ActiveSourceChanged += (_, _) =>
+                    _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () => await UpdateDataSourceNoteAsync());
+            }
+            try
+            {
+                var backup = await DataSourceService.IsBackupActiveAsync();
+                // The note names the airport station when the backup uses one.
+                var station = backup && _noteLatitude != null && _noteLongitude != null
+                    ? MetarService.Cached(_noteLatitude.Value, _noteLongitude.Value)
+                    : null;
+                DataSourceNoteText.Text = station != null
+                    ? string.Format(System.Globalization.CultureInfo.CurrentCulture, "DataNoteStation".GetLocalized(), station.Id)
+                    : "DataNoteOpenMeteo".GetLocalized();
+                DataSourceNoteText.Visibility = backup ? Visibility.Visible : Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
+                DataSourceNoteText.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        // --- Hover text of the standard cards ---
+        // Wind, Humidity, UV index, Visibility, Pressure and Dew point show more of the current
+        // weather.com reading when the mouse is over them. All values are in the units setting.
+        // weather.com sends the sea level pressure in mb for every unit system.
+        // The altimeter value is in inHg for US units, so the card shows that one.
+        private static string ShownPressure(V3WxObservationsCurrent obs, WetUnits units)
+        {
+            return units == WetUnits.e
+                ? obs.pressureAltimeter.ToString("0.00")
+                : obs.pressureMeanSeaLevel.ToString("0.#");
+        }
+
+        private void SetStandardCardTips(V3WxObservationsCurrent obs, WetUnits units)
+        {
+            try
+            {
+                var ci = System.Globalization.CultureInfo.CurrentCulture;
+                var degrees = "°" + MeasureUnitUtils.GetTemperatureUnits(units);
+                var speed = " " + MeasureUnitUtils.GetWindSpeedUnits(units);
+                var fahrenheit = units == WetUnits.e;
+                double ToF(int value) => fahrenheit ? value : value * 9.0 / 5 + 32;
+
+                // Wind
+                var wind = "TipWindIntro".GetLocalized() + "\n" +
+                           "TipWindSpeed".GetLocalized() + ": " + obs.windSpeed + speed + "\n" +
+                           "TipWindDirection".GetLocalized() + ": " + obs.windDirectionCardinal +
+                           (obs.windDirectionCardinal is "CALM" or "VAR" ? "" : " (" + obs.windDirection + "°)");
+                wind += "\n" + "TipWindGusts".GetLocalized() + ": " + (obs.windGust != null ? obs.windGust + speed : "TipNone".GetLocalized());
+                if (obs.temperatureWindChill < obs.temperature)
+                    wind += "\n" + "TipWindChill".GetLocalized() + ": " + obs.temperatureWindChill + degrees;
+                HoverTip.Set(WindChipControl, wind);
+
+                // Humidity
+                var humidityKey = obs.relativeHumidity < 30 ? "TipHumidityDry" : obs.relativeHumidity <= 60 ? "TipHumidityComfortable" : "TipHumidityHumid";
+                var humidity = "TipHumidityIntro".GetLocalized() + "\n" + obs.relativeHumidity + "%: " + humidityKey.GetLocalized();
+                if (obs.temperatureHeatIndex > obs.temperature)
+                    humidity += "\n" + "TipHeatIndex".GetLocalized() + ": " + obs.temperatureHeatIndex + degrees;
+                humidity += "\n" + "TipDewPoint".GetLocalized() + ": " + obs.temperatureDewPoint + degrees;
+                HoverTip.Set(HumidityChipControl, humidity);
+
+                // UV index
+                var uvKey = obs.uvIndex <= 2 ? "TipUvLow" : obs.uvIndex <= 5 ? "TipUvModerate" : obs.uvIndex <= 7 ? "TipUvHigh" : obs.uvIndex <= 10 ? "TipUvVeryHigh" : "TipUvExtreme";
+                HoverTip.Set(UVIndexChipControl,
+                    "TipUvIntro".GetLocalized() + "\n" + obs.uvIndex + " (" + obs.uvDescription + "): " + uvKey.GetLocalized());
+
+                // Visibility
+                var visibilityUnit = " " + MeasureUnitUtils.GetVisibilityUnits(units);
+                // Only US units give the visibility in miles. The UK setting (h) gives kilometers.
+                var visibilityKm = units == WetUnits.e ? obs.visibility * 1.609344 : obs.visibility;
+                var visibilityKey = visibilityKm < 1 ? "TipVisibilityFog" : visibilityKm < 5 ? "TipVisibilityHaze" : visibilityKm < 10 ? "TipVisibilityModerate" : "TipVisibilityGood";
+                var visibility = "TipVisibilityIntro".GetLocalized() + "\n" +
+                                 obs.visibility.ToString("0.#", ci) + visibilityUnit + ": " + visibilityKey.GetLocalized() + "\n" +
+                                 "TipCloudCeiling".GetLocalized() + ": " +
+                                 (obs.cloudCeiling == BackupWeatherService.CeilingUnknown ? "TipCeilingUnknown".GetLocalized()
+                                     : obs.cloudCeiling != null ? MeasureUnitUtils.CeilingInUnits(obs.cloudCeiling.Value, units).ToString("#,0", ci) + " " + MeasureUnitUtils.GetAltitudeUnits(units)
+                                     : "TipCeilingNone".GetLocalized());
+                HoverTip.Set(VisibilityChipControl, visibility);
+
+                // Pressure
+                var pressureUnit = " " + MeasureUnitUtils.GetPressureUnits(units);
+                var pressure = "TipPressureIntro".GetLocalized() + "\n" +
+                               "TipPressureNow".GetLocalized() + ": " + ShownPressure(obs, units) + pressureUnit + "\n" +
+                               "TipPressureTrend".GetLocalized() + ": " + (string.IsNullOrEmpty(obs.pressureTendencyTrend) ? "-" : obs.pressureTendencyTrend) + "\n" +
+                               "TipPressureChange".GetLocalized() + ": " + (obs.pressureChange > 0 ? "+" : "") + obs.pressureChange.ToString("0.##", ci) + pressureUnit + "\n" +
+                               "TipPressureMeaning".GetLocalized();
+                HoverTip.Set(PressureChipControl, pressure);
+
+                // Dew point
+                var dewF = ToF(obs.temperatureDewPoint);
+                var dewKey = dewF < 40 ? "TipDewDry" : dewF < 55 ? "TipDewComfortable" : dewF < 60 ? "TipDewSlightlyHumid" : dewF < 65 ? "TipDewHumid" : dewF < 70 ? "TipDewMuggy" : "TipDewOppressive";
+                HoverTip.Set(DewPointChipControl,
+                    "TipDewIntro".GetLocalized() + "\n" + obs.temperatureDewPoint + degrees + ": " + dewKey.GetLocalized() + "\n" +
+                    "TipDewSpread".GetLocalized() + ": " + (obs.temperature - obs.temperatureDewPoint) + "°");
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "SetStandardCardTips");
+            }
+        }
+
+        // --- Detail cards layout ---
+        // The cards in the detail row can be put in any order and hidden or added.
+        //   Drag a card and drop it at a new place in the row.
+        //   Right-click a card for Move left, Move right, Move to start, Move to end, Hide this card,
+        //   Add card (a list of the cards that are not in the row) and Reset cards.
+        // The order is kept in the setting "cardsOrder" and the hidden standard cards in "cardsHidden",
+        // as comma lists of card keys. One layout serves every location. Nearby water and the extra
+        // Open-Meteo cards are hidden and added through their own settings, so the settings panel and
+        // this menu always agree. A card that hides because a location has no data keeps its place.
+
+        private const string CardsOrderKey = "cardsOrder";
+        private const string CardsHiddenKey = "cardsHidden";
+        private static readonly string[] DefaultCardOrder =
+        [
+            "Wind", "Humidity", "UVIndex", "AirQuality", "Water",
+            "ExtraMarine", "ExtraWind", "ExtraModels", "ExtraRiver", "ExtraPollen",
+            "Visibility", "Pressure", "DewPoint"
+        ];
+
+        private List<string> _cardOrder = new(DefaultCardOrder);
+        private HashSet<string> _cardsHidden = new();
+        private string? _draggedCard;
+        private bool _cardsReady;
+
+        private FrameworkElement CardElement(string key) => key switch
+        {
+            "Wind" => WindChipControl,
+            "Humidity" => HumidityChipControl,
+            "UVIndex" => UVIndexChipControl,
+            "AirQuality" => AirQualityChipControl,
+            "Water" => WaterCard,
+            "ExtraMarine" => ExtraMarineChip,
+            "ExtraWind" => ExtraWindChip,
+            "ExtraModels" => ExtraModelsChip,
+            "ExtraRiver" => ExtraRiverChip,
+            "ExtraPollen" => ExtraPollenChip,
+            "Visibility" => VisibilityChipControl,
+            "Pressure" => PressureChipControl,
+            _ => DewPointChipControl
+        };
+
+        private static bool IsExtraCard(string key) => key.StartsWith("Extra", StringComparison.Ordinal);
+
+        private static ExtraFeed ExtraFeedOf(string key) =>
+            Enum.TryParse<ExtraFeed>(key.Substring(5), out var feed) ? feed : ExtraFeed.Marine;
+
+        private string CardName(string key)
+        {
+            if (key == "Water")
+                return "WaterCardTitleName".GetLocalized();
+            if (IsExtraCard(key))
+                return ("Extra" + ExtraFeedOf(key) + "LabelName").GetLocalized();
+            return CardElement(key) is DetailChipControl chip && !string.IsNullOrEmpty(chip.Title) ? chip.Title : key;
+        }
+
+        // Whether the card is in the row, by its own setting.
+        private async Task<bool> IsCardShownAsync(string key)
+        {
+            if (key == "Water")
+                return await WaterService.IsCardEnabledAsync();
+            if (IsExtraCard(key))
+                return await OpenMeteoExtrasService.IsOnAsync(ExtraFeedOf(key), false);
+            return !_cardsHidden.Contains(key);
+        }
+
+        private async Task SetCardShownAsync(string key, bool shown)
+        {
+            if (key == "Water")
+            {
+                await ApplicationData.Current.LocalSettings.SaveAsync(WaterService.CardSettingKey, shown);
+                await UpdateWaterAsync();
+            }
+            else if (IsExtraCard(key))
+            {
+                await OpenMeteoExtrasService.SetAsync(ExtraFeedOf(key), false, shown);
+                await UpdateExtrasAsync();
+            }
+            else
+            {
+                if (shown) _cardsHidden.Remove(key); else _cardsHidden.Add(key);
+                await ApplicationData.Current.LocalSettings.SaveAsync(CardsHiddenKey, string.Join(",", _cardsHidden));
+            }
+            await ApplyCardLayoutAsync();
+            RefreshSettingsSwitches();
+        }
+
+        private async Task LoadCardLayoutAsync()
+        {
+            try
+            {
+                var order = await ApplicationData.Current.LocalSettings.ReadAsync<string>(CardsOrderKey);
+                var hidden = await ApplicationData.Current.LocalSettings.ReadAsync<string>(CardsHiddenKey);
+                var saved = (order ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Where(k => DefaultCardOrder.Contains(k)).Distinct().ToList();
+                // Cards that a newer build adds go after their neighbour in the default order.
+                foreach (var key in DefaultCardOrder)
+                {
+                    if (saved.Contains(key))
+                        continue;
+                    var index = Array.IndexOf(DefaultCardOrder, key);
+                    var before = index > 0 ? saved.IndexOf(DefaultCardOrder[index - 1]) : -1;
+                    saved.Insert(before + 1, key);
+                }
+                _cardOrder = saved;
+                _cardsHidden = new HashSet<string>((hidden ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Where(k => DefaultCardOrder.Contains(k) && k != "Water" && !IsExtraCard(k)));
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "LoadCardLayoutAsync");
+                _cardOrder = new List<string>(DefaultCardOrder);
+                _cardsHidden = new HashSet<string>();
+            }
+        }
+
+        private async Task SaveCardOrderAsync() =>
+            await ApplicationData.Current.LocalSettings.SaveAsync(CardsOrderKey, string.Join(",", _cardOrder));
+
+        /// <summary>Puts the cards in the row in the saved order. Hidden standard cards leave the row.</summary>
+        private async Task ApplyCardLayoutAsync()
+        {
+            try
+            {
+                if (!_cardsReady)
+                {
+                    await LoadCardLayoutAsync();
+                    foreach (var key in DefaultCardOrder)
+                    {
+                        var element = CardElement(key);
+                        element.Tag = key;
+                        element.CanDrag = true;
+                        element.DragStarting += Card_DragStarting;
+                        var menu = new MenuFlyout();
+                        menu.Opening += CardMenu_Opening;
+                        element.ContextFlyout = menu;
+                    }
+                    _cardsReady = true;
+                }
+
+                DetailCardsPanel.Children.Clear();
+                foreach (var key in _cardOrder)
+                {
+                    if (_cardsHidden.Contains(key))
+                        continue;
+                    DetailCardsPanel.Children.Add(CardElement(key));
+                }
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "ApplyCardLayoutAsync");
+            }
+        }
+
+        private void Card_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+            _draggedCard = (sender as FrameworkElement)?.Tag as string;
+            args.AllowedOperations = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
+            args.Data.SetText(_draggedCard ?? "");
+        }
+
+        private void DetailCardsPanel_DragOver(object sender, DragEventArgs e)
+        {
+            if (_draggedCard == null)
+                return;
+            e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
+            e.DragUIOverride.IsCaptionVisible = false;
+            e.DragUIOverride.IsGlyphVisible = false;
+        }
+
+        private async void DetailCardsPanel_Drop(object sender, DragEventArgs e)
+        {
+            var dragged = _draggedCard;
+            _draggedCard = null;
+            if (dragged == null)
+                return;
+
+            // The card goes before the first visible card whose middle is right of the drop point.
+            var x = e.GetPosition(DetailCardsPanel).X;
+            string? beforeKey = null;
+            foreach (var child in DetailCardsPanel.Children)
+            {
+                if (child is not FrameworkElement element || element.Visibility != Visibility.Visible || element.Tag is not string key || key == dragged)
+                    continue;
+                var left = element.TransformToVisual(DetailCardsPanel).TransformPoint(new Windows.Foundation.Point(0, 0)).X;
+                if (x < left + element.ActualWidth / 2)
+                {
+                    beforeKey = key;
+                    break;
+                }
+            }
+
+            _cardOrder.Remove(dragged);
+            var index = beforeKey == null ? _cardOrder.Count : _cardOrder.IndexOf(beforeKey);
+            _cardOrder.Insert(index, dragged);
+            await SaveCardOrderAsync();
+            await ApplyCardLayoutAsync();
+        }
+
+        // The keys of the cards that are in the row and can be seen, in order.
+        private List<string> VisibleCardKeys() =>
+            DetailCardsPanel.Children.OfType<FrameworkElement>()
+                .Where(c => c.Visibility == Visibility.Visible && c.Tag is string)
+                .Select(c => (string) c.Tag).ToList();
+
+        private async void CardMenu_Opening(object? sender, object e)
+        {
+            if (sender is not MenuFlyout menu || menu.Target is not FrameworkElement target || target.Tag is not string key)
+                return;
+
+            menu.Items.Clear();
+            var visible = VisibleCardKeys();
+            var position = visible.IndexOf(key);
+
+            void AddMove(string textKey, bool enabled, Func<int> newIndex)
+            {
+                var item = new MenuFlyoutItem { Text = textKey.GetLocalized(), IsEnabled = enabled };
+                item.Click += async (_, _) => await MoveCardAsync(key, newIndex());
+                menu.Items.Add(item);
+            }
+
+            AddMove("CardMoveLeft", position > 0, () => position - 1);
+            AddMove("CardMoveRight", position >= 0 && position < visible.Count - 1, () => position + 1);
+            AddMove("CardMoveStart", position > 0, () => 0);
+            AddMove("CardMoveEnd", position >= 0 && position < visible.Count - 1, () => visible.Count - 1);
+            menu.Items.Add(new MenuFlyoutSeparator());
+
+            var hide = new MenuFlyoutItem { Text = "CardHide".GetLocalized() };
+            hide.Click += async (_, _) => await SetCardShownAsync(key, false);
+            menu.Items.Add(hide);
+
+            // Nearby water and the extra cards have their own settings, with their source and a tray option.
+            if (key == "Water" || IsExtraCard(key))
+            {
+                var settings = new MenuFlyoutItem { Text = "CardSettings".GetLocalized() };
+                settings.Click += (_, _) =>
+                {
+                    try
+                    {
+                        SettingsFlyout.ShowAt(AppbarSettingsButton);
+                    }
+                    catch (Exception)
+                    {
+                        // The gear button opens the settings too.
+                    }
+                };
+                menu.Items.Add(settings);
+            }
+
+            var add = new MenuFlyoutSubItem { Text = "CardAdd".GetLocalized() };
+            foreach (var other in DefaultCardOrder)
+            {
+                if (await IsCardShownAsync(other))
+                    continue;
+                // The short description shows in dim text at the right of the name.
+                var item = new MenuFlyoutItem { Text = CardName(other), KeyboardAcceleratorTextOverride = ("CardInfo" + other).GetLocalized() };
+                var otherKey = other;
+                item.Click += async (_, _) =>
+                {
+                    // The added card goes right after the card that was right-clicked.
+                    _cardOrder.Remove(otherKey);
+                    _cardOrder.Insert(_cardOrder.IndexOf(key) + 1, otherKey);
+                    await SaveCardOrderAsync();
+                    await SetCardShownAsync(otherKey, true);
+                };
+                add.Items.Add(item);
+            }
+            if (add.Items.Count == 0)
+                add.Items.Add(new MenuFlyoutItem { Text = "CardAddNone".GetLocalized(), IsEnabled = false });
+            menu.Items.Add(add);
+            menu.Items.Add(new MenuFlyoutSeparator());
+
+            var reset = new MenuFlyoutItem { Text = "CardReset".GetLocalized() };
+            reset.Click += async (_, _) =>
+            {
+                _cardOrder = new List<string>(DefaultCardOrder);
+                _cardsHidden.Clear();
+                await ApplicationData.Current.LocalSettings.SaveAsync(CardsHiddenKey, "");
+                await SaveCardOrderAsync();
+                await ApplyCardLayoutAsync();
+            };
+            menu.Items.Add(reset);
+        }
+
+        // Moves a card to a place among the visible cards. Cards without data keep their places.
+        private async Task MoveCardAsync(string key, int visibleIndex)
+        {
+            var visible = VisibleCardKeys();
+            visible.Remove(key);
+            visibleIndex = Math.Max(0, Math.Min(visibleIndex, visible.Count));
+            _cardOrder.Remove(key);
+            var index = visibleIndex < visible.Count ? _cardOrder.IndexOf(visible[visibleIndex]) : _cardOrder.IndexOf(visible[visible.Count - 1]) + 1;
+            _cardOrder.Insert(Math.Max(0, index), key);
+            await SaveCardOrderAsync();
+            await ApplyCardLayoutAsync();
+        }
+
+        // The settings switches and check boxes read their state again, so they match the card menu.
+        private readonly List<CheckBox> _extraCheckBoxes = new();
+        private readonly List<ToggleSwitch> _waterSwitches = new();
+
+        private async void RefreshSettingsSwitches()
+        {
+            try
+            {
+                foreach (var box in _extraCheckBoxes)
+                    if (TryParseExtraTag(box.Tag as string, out var feed, out var tray))
+                        box.IsChecked = await OpenMeteoExtrasService.IsOnAsync(feed, tray);
+                foreach (var toggle in _waterSwitches)
+                {
+                    var on = toggle.Name == "WaterTrayToggle" ? await WaterService.IsTrayEnabledAsync() : await WaterService.IsCardEnabledAsync();
+                    if (toggle.IsOn != on)
+                        toggle.IsOn = on;
+                }
+            }
+            catch (Exception)
+            {
+                // The switches show the right state the next time the panel opens.
+            }
+        }
+
+        private void WaterToggle_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (sender is ToggleSwitch toggle && !_waterSwitches.Contains(toggle))
+                _waterSwitches.Add(toggle);
+        }
+
+        // --- Extra Open-Meteo data ---
+        // One chip per feed after the air quality chip, each shown when its "Main" box is ticked in
+        // settings and the location has data. See OpenMeteoExtrasService.
+
+        private DetailChipControl ExtraChip(ExtraFeed feed) => feed switch
+        {
+            ExtraFeed.Marine => ExtraMarineChip,
+            ExtraFeed.Wind => ExtraWindChip,
+            ExtraFeed.Models => ExtraModelsChip,
+            ExtraFeed.River => ExtraRiverChip,
+            _ => ExtraPollenChip
+        };
+
+        private async Task UpdateExtrasAsync()
+        {
+            var lookup = _lastWaterLookup;
+            WetUnits units;
+            try
+            {
+                units = await VariousUtils.GetUnitsCode();
+            }
+            catch (Exception)
+            {
+                units = WetUnits.e;
+            }
+
+            foreach (var feed in OpenMeteoExtrasService.AllFeeds)
+            {
+                var chip = ExtraChip(feed);
+                try
+                {
+                    if (lookup == null || !await OpenMeteoExtrasService.IsOnAsync(feed, false))
+                    {
+                        chip.Visibility = Visibility.Collapsed;
+                        continue;
+                    }
+
+                    var (latitude, longitude, placeId, _) = lookup.Value;
+                    var text = await OpenMeteoExtrasService.DescribeAsync(feed, latitude, longitude, units);
+                    if (_displayedPlaceId != placeId)
+                        return;
+                    if (text == null)
+                    {
+                        chip.Visibility = Visibility.Collapsed;
+                        continue;
+                    }
+
+                    chip.Value = text.Value.Value;
+                    HoverTip.Set(chip, text.Value.Tip);
+                    chip.Visibility = Visibility.Visible;
+                }
+                catch (Exception ex)
+                {
+                    CrashLog.Write(ex, "UpdateExtrasAsync " + feed);
+                    chip.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        // The check boxes in the "Extra data" settings section. Tag is "Marine.main", "Marine.tray" and so on.
+        private async void ExtraCheckBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox box && TryParseExtraTag(box.Tag as string, out var feed, out var tray))
+            {
+                if (!_extraCheckBoxes.Contains(box))
+                    _extraCheckBoxes.Add(box);
+                box.IsChecked = await OpenMeteoExtrasService.IsOnAsync(feed, tray);
+            }
+        }
+
+        private async void ExtraCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is not CheckBox box || !TryParseExtraTag(box.Tag as string, out var feed, out var tray))
+                return;
+            await OpenMeteoExtrasService.SetAsync(feed, tray, box.IsChecked == true);
+            if (tray)
+                _ = TrayWeatherFile.RefreshCurrentAsync();
+            else
+                await UpdateExtrasAsync();
+            await ApplyCardLayoutAsync();
+        }
+
+        private static bool TryParseExtraTag(string? tag, out ExtraFeed feed, out bool tray)
+        {
+            feed = ExtraFeed.Marine;
+            tray = false;
+            var parts = tag?.Split('.');
+            if (parts == null || parts.Length != 2 || !Enum.TryParse(parts[0], out feed))
+                return false;
+            tray = parts[1] == "tray";
+            return true;
         }
 
         // --- Past days ---
@@ -1783,6 +2714,9 @@ namespace FluentWeather.Views
 
                 if (await SavedLocationsService.ContainsAsync(placeId))
                 {
+                    var point = data.v3locationpoint?.LocationV3;
+                    if (point != null)
+                        await PastDaysService.SetCoordinatesAsync(placeId, point.latitude, point.longitude);
                     await PastDaysService.UpdateScheduleAsync(placeId, data.v3wxforecasthourly10day, observation.validTimeLocal.Offset);
                     var part = data.v3wxforecastdaily10day?.daypart?.FirstOrDefault();
                     await PastDaysService.ObserveAsync(placeId, observation, part?.iconCode, part?.wxPhraseLong, part?.precipChance, units);

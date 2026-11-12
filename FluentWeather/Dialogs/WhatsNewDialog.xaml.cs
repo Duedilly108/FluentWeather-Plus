@@ -10,7 +10,16 @@ namespace FluentWeather.Dialogs
         {
             RequestedTheme = ((FrameworkElement) Window.Current.Content).RequestedTheme;
             InitializeComponent();
-            WhatsNewTextBlock.Text = "WhatsNew_Body".GetLocalized(true);
+            // Local build: the FluentWeather-Plus feature list and the version from the package.
+            WhatsNewTextBlock.Text = "PlusWhatsNewBody".GetLocalized();
+            try
+            {
+                PlusVersionBannerText.Text = "PlusWhatsNewVersion".GetLocalized() + " " + Windows.ApplicationModel.Package.Current.Id.Version.Revision;
+            }
+            catch (System.Exception)
+            {
+                PlusVersionBannerText.Text = "";
+            }
         }
     }
 }

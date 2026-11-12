@@ -18,6 +18,33 @@ namespace FluentWeather.Models
 
         [JsonPropertyName("v3-wx-forecast-daily-3day")]
         public MoonTimes? v3wxforecastdaily3day { get; set; }
+
+        // Local build: the pollen forecast, for the Pollen card and tray line. Null where weather.com
+        // has no pollen data.
+        [JsonPropertyName("v2idxPollenDaypart10")]
+        public WeatherComPollenResult? pollen { get; set; }
+    }
+
+    /// <summary>
+    /// The weather.com pollen forecast in 12-hour parts (today, tonight, tomorrow and so on). Every
+    /// field can be missing, so a location without pollen data never breaks the request.
+    /// Indexes run from 0 (none) to 4 (very high).
+    /// </summary>
+    public class WeatherComPollenResult
+    {
+        [JsonPropertyName("pollenForecast12hour")]
+        public WeatherComPollen? Forecast { get; set; }
+    }
+
+    public class WeatherComPollen
+    {
+        public List<string?>? daypartName { get; set; }
+        public List<int?>? treePollenIndex { get; set; }
+        public List<string?>? treePollenCategory { get; set; }
+        public List<int?>? grassPollenIndex { get; set; }
+        public List<string?>? grassPollenCategory { get; set; }
+        public List<int?>? ragweedPollenIndex { get; set; }
+        public List<string?>? ragweedPollenCategory { get; set; }
     }
 
     /// <summary>

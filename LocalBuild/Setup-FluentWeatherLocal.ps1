@@ -114,12 +114,15 @@ $FilesToCopy   = @(
     'FluentWeatherDirect.manifest',
     'Make-DirectInstaller.cmd',
     'Make-DirectInstaller.ps1',
-    'Direct-README.txt'
+    'Direct-README.txt',
+    'Get-FluentWeatherCrashReport.ps1',
+    'FluentWeather crash report.cmd'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '66'
+$SetupVersion  = '68'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
+$CrashReportShortcut   = 'FluentWeather crash report.lnk'
 
 function Write-Step([string]$Text) { Write-Host "[*] $Text" -ForegroundColor Cyan }
 function Write-Ok([string]$Text)   { Write-Host "[+] $Text" -ForegroundColor Green }
@@ -612,6 +615,14 @@ function Add-MakeInstallerShortcut {
     $direct.IconLocation = (Join-Path $InstallDir 'FluentWeather.ico') + ',0'
     $direct.Description = 'Make FluentWeather-Setup.exe and FluentWeather-Uninstall.exe on your Desktop from the app built on this PC'
     $direct.Save()
+
+    # Collects crash.log of the app and the Windows event log entries into a text file on the Desktop.
+    $report = $shell.CreateShortcut((Join-Path ([Environment]::GetFolderPath('Programs')) $CrashReportShortcut))
+    $report.TargetPath = Join-Path $InstallDir 'FluentWeather crash report.cmd'
+    $report.WorkingDirectory = $InstallDir
+    $report.IconLocation = (Join-Path $InstallDir 'FluentWeather.ico') + ',0'
+    $report.Description = 'Write FluentWeather-crash-report.txt on your Desktop with the recent app errors'
+    $report.Save()
 }
 
 function Invoke-Uninstall {
@@ -629,6 +640,8 @@ function Invoke-Uninstall {
     $makeLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $MakeInstallerShortcut
     if (Test-Path $makeLnk) { Remove-Item -LiteralPath $makeLnk -Force }
     $directLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $MakeDirectShortcut
+    $reportLnk = Join-Path ([Environment]::GetFolderPath('Programs')) $CrashReportShortcut
+    if (Test-Path $reportLnk) { Remove-Item -LiteralPath $reportLnk -Force }
     if (Test-Path $directLnk) { Remove-Item -LiteralPath $directLnk -Force }
     if (Test-Path $UninstallKey) { Remove-Item -LiteralPath $UninstallKey -Recurse -Force }
     Get-AppxPackage -Name $PackageName -ErrorAction SilentlyContinue | Remove-AppxPackage

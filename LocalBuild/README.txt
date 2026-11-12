@@ -97,11 +97,11 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v28.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v28.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v45.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v45.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v28.zip. The version is the last
-part of the build number, so build 2.1.0.28 is v28. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v45.zip. The version is the last
+part of the build number, so build 2.1.0.45 is v45. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
 
 The setup holds the app as it is built and installed on your PC, signed again with
@@ -262,6 +262,8 @@ Right-click either icon        choose "Number shows temperature" or
                                To show the icons again, select "Show tray icons"
                                in the app's settings, or "FluentWeather tray icons"
                                in the Start menu. They also start at the next sign-in.
+                               While they run, the same settings button reads
+                               "Hide tray icons" and closes them.
 Hover over either icon         a panel with the city and the details you choose.
                                The panel shows a large, detailed version of the
                                weather picture with a soft glow behind it. The
@@ -312,6 +314,81 @@ reports, usually an airport, with its code and distance, for example
 30 days. weather.com does not take the current conditions from this one station. It
 blends nearby stations, radar, satellite and forecast models for the exact location.
 The station is shown for reference.
+
+
+Full History
+------------
+The "Full History" button at the right of the "Daily forecast" title shows the
+history of a saved location over the main window, by month or by year, with charts
+for temperature, wind, rain and snow, air quality, humidity, pressure, and clouds
+and sun. The mouse wheel zooms the chart. Shift with the wheel, dragging the chart,
+or the scroll bar below it scroll through the year. A view shorter than 26 days
+shows every hour. Clicking a day zooms to that day. The minus, plus and Fit
+buttons zoom without a wheel. The Back button or Esc closes the page. The app records
+the days it runs (see Past days). The Open-Meteo historical weather archive fills
+the days it missed, about five days behind today. The table marks each day
+"recorded" or "archive". The app downloads one month of one location per request
+and keeps it in its data folder. The hours load one month at a time, only when a
+short view needs them. A complete month is never downloaded again.
+The app connects to archive-api.open-meteo.com, api.open-meteo.com and
+air-quality-api.open-meteo.com for this. The firewall rule for the
+app covers it.
+
+
+Nearby water
+------------
+Two switches under "Nearby water" in the settings panel, both off by default.
+"Card in the main window" adds a card with the water temperature and the wind at
+the nearest water station. "Line in the tray hover panel" writes two lines to the
+tray data, which the tray shows when "Water temperature" and "Wind at water
+station" are ticked under Hover details. The stations come from the NOAA National
+Data Buoy Center (buoys and shore stations on the coasts and Great Lakes) and USGS
+Water Data (rivers and some lakes). The app uses
+the closest station within 50 km with a reading under 6 hours old and hides the
+card when there is none. On the ocean with no station near, it shows the Open-Meteo
+marine model instead. The app connects to www.ndbc.noaa.gov,
+api.waterdata.usgs.gov and marine-api.open-meteo.com for this. The firewall rule
+for the app covers it.
+
+
+Extra data
+----------
+Five feeds under "Extra data" in the settings panel, each with a Main box (a card
+in the main window) and a Tray box (a line for the tray hover panel). All are off
+by default: waves and sea temperature, wind forecast (gusts, 80 m), other forecast
+models (ECMWF, GFS, ICON), river flow, and pollen (weather.com in the US,
+Open-Meteo in Europe). The app connects to
+api.open-meteo.com, marine-api.open-meteo.com, flood-api.open-meteo.com and
+air-quality-api.open-meteo.com, at most once an hour per location and feed.
+
+
+Weather data source
+-------------------
+The setting "Weather data source" in the settings panel picks weather.com or
+Open-Meteo. Automatic uses weather.com and switches to Open-Meteo when weather.com
+refuses the app's key twice in a row. It tries weather.com again every hour. While
+Open-Meteo is in use, "Data: Open-Meteo" shows under the update time. The app
+connects to api.open-meteo.com and geocoding-api.open-meteo.com for this. The
+firewall rule for the app covers it.
+
+With Open-Meteo the app also reads the nearest airport weather report (METAR)
+from aviationweather.gov. It is free and needs no key. The app uses the nearest
+station within 50 km that has a report from the last 2 hours. The report gives
+the cloud ceiling, the visibility, the pressure and the station for the tray line
+"Nearest station". A station within 25 km also gives the measured temperature,
+dew point, humidity, wind and gusts. The note under the update time then names
+the station, for example "Data: Open-Meteo and station KFFL". Without a station
+in range, the ceiling shows "not available". The app asks once per location every
+30 minutes. The firewall rule for the app covers aviationweather.gov too.
+
+
+Crash report
+------------
+The app writes errors it catches to crash.log in its data folder. A crash that
+closes the app goes to the Windows event log instead. "FluentWeather crash report"
+in the Start menu writes FluentWeather-crash-report.txt on the Desktop with both,
+for the last 3 days, and opens it. Run it without "Run as administrator". It reads
+local files only and makes no internet connection.
 
 
 Using saved locations

@@ -31,16 +31,57 @@
     </ContentDialog.TitleTemplate>
     <ScrollViewer>
         <StackPanel>
-            <Image Width="870"
-                   Height="350"
-                   Margin="-14,-36,0,-52"
-                   Source="/Assets/BannerRelease.png"
-                   Stretch="Uniform" />
+            <!-- Local build: the FluentWeather-Plus banner, drawn in XAML. The version number is filled in
+                 from the package version, so it always matches the installer and the credits. -->
+            <Grid Height="220" CornerRadius="10" Margin="0,4,0,0" BorderThickness="1" BorderBrush="#3C5078">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#0E1630" Offset="0" />
+                        <GradientStop Color="#18306C" Offset="1" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Rectangle IsHitTestVisible="False">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0.25,1" EndPoint="0.75,0">
+                            <GradientStop Color="#00508CFF" Offset="0.40" />
+                            <GradientStop Color="#40508CFF" Offset="0.50" />
+                            <GradientStop Color="#00508CFF" Offset="0.56" />
+                            <GradientStop Color="#28508CFF" Offset="0.62" />
+                            <GradientStop Color="#00508CFF" Offset="0.70" />
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Grid Margin="30,22,30,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Spacing="14">
+                        <Grid Width="92" Height="92">
+                            <Image Source="/Assets/Square44x44Logo.targetsize-256.png" Width="80" Height="80"
+                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                            <Border Width="24" Height="24" CornerRadius="5" Background="#3B82F6"
+                                    HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <TextBlock Text="P" FontSize="16" FontWeight="Bold" Foreground="White"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </Grid>
+                        <TextBlock Text="FluentWeather-Plus" FontSize="30" FontWeight="SemiBold" Foreground="#F0F0F5"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock x:Name="PlusVersionBannerText" Grid.Row="1" FontSize="44" FontWeight="Bold"
+                               Foreground="#A0CDFF" VerticalAlignment="Bottom" />
+                    <TextBlock x:Uid="PlusWhatsNewCredit" Grid.Row="2" FontSize="14" Foreground="#CDD7EB" Margin="2,4,0,0" />
+                </Grid>
+            </Grid>
             
-            <TextBlock x:Name="WhatsNewTextBlock" TextWrapping="WrapWholeWords"
-                       Margin="0,8,0,0"  FontWeight="SemiBold" FontSize="14"/>
+            <TextBlock x:Uid="PlusWhatsNewIntro" TextWrapping="WrapWholeWords"
+                       Margin="0,18,0,6" FontWeight="SemiBold" FontSize="14"/>
+            <TextBlock x:Name="WhatsNewTextBlock" TextWrapping="WrapWholeWords" LineHeight="24"
+                       Margin="16,0,0,0" FontSize="14"/>
             
-            <HyperlinkButton Margin="0,12,0,0" NavigateUri="http://github.com/Gabboxl/FluentWeather/releases/latest">
+            <HyperlinkButton Margin="0,12,0,0" NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases">
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <Grid Width="18" Height="18">
                         <Path Data="{StaticResource GithubIconPath}"

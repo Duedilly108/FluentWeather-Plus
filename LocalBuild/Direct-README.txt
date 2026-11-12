@@ -10,7 +10,10 @@ Temperature and conditions icon in the system tray.
 Hover over the tray icons for a range of selectable details.
 Radar map for US locations.
 Memory view of the past two days.
+History of any saved location by month or by year, as a chart and a table.
 Air quality for every location.
+Optional card with the water temperature, wind and waves at the nearest water station.
+Optional cards for waves, wind gusts, other forecast models, river flow and pollen.
 Customize text size, background contrast, card tint, forecast length and language.
 
 
@@ -33,7 +36,9 @@ Notes
 -----
 Connects to weather.com for the weather data.
 For US locations it also connects to NOAA and USGS for the radar map.
-Connects to Open-Meteo for the air quality.
+Connects to Open-Meteo for the air quality and for the weather history archive.
+With "Nearby water" turned on, connects to NOAA and USGS for the water station data.
+With extra data turned on, connects to Open-Meteo for it.
 
 
 VirusTotal:

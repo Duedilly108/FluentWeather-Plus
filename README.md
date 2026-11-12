@@ -2,37 +2,57 @@
 
 A weather app for Windows with saved locations and weather icons in the taskbar.
 
-FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by duedilly108. It keeps all features of the original app. FEATURES.txt lists everything it adds.
+FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by duedilly108. It keeps all features of the original app. FEATURES.txt lists everything it adds, and then the features of the original app.
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v28.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download FluentWeather-Plus-Setup-v45.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
-Instead of a pre-compilied executable, to build the Github project app on your Windows PC, follow LocalBuild/README.txt.
+Instead of a pre-compiled executable, to build the Github project app on your Windows PC, follow LocalBuild/README.txt.
 
 ## What FluentWeather-Plus adds
 
 * Saved locations. A star saves a location, and a row of buttons switches between up to 25 of them.
 * Two tray icons, one with the temperature and one with the conditions. Hovering shows a panel with a choice of details.
+* A Full History page for any saved location, with charts and a table, from a whole year down to single hours.
 * A radar map for US locations.
 * An air quality card for every location.
 * The past two days in the daily forecast.
+* Optional cards for nearby water, waves, wind gusts, other forecast models, river flow and pollen.
+* Detail cards that can be dragged, hidden or added, with more detail on hover.
+* A backup weather source, Open-Meteo with the nearest airport report, if weather.com stops working.
 * Settings for text size, background contrast, card tint, forecast length and language.
 * A resizable window that remembers its size and position.
+* Many additional GUI refinements.
 
-## Version history
+## Features of the original FluentWeather
 
-v28 is the first public release version of FluentWeather-Plus. It includes all of the changes above. Earlier builds were private beta versions.
+FluentWeather-Plus keeps these main features of FluentWeather 2.1.0 by Gabboxl.
 
-## The original FluentWeather
+* Current weather from weather.com with the temperature, the feels like temperature and the conditions.
+* Place search with suggestions while typing.
+* Detail cards for wind, humidity, pressure, visibility, dew point and UV index.
+* A 10-day forecast. Clicking a day shows its hourly forecast and its weather insights.
+* An hourly forecast with a detail panel for each hour.
+* Weather insights with day and night summaries, sun and moon times, the lunar phase, and indices for running, driving, dry skin and watering.
+* A background photo that matches the weather.
+* Metric, imperial and hybrid units, and a 12 or 24 hour clock.
+* Automatic refresh, acrylic effects and a live tile on Windows 10.
+* Translations into 33 languages.
 
 The original open source FluentWeather by Gabboxl is on the [Microsoft Store](https://apps.microsoft.com/store/detail/9PFD136M8457) and on [Gabboxl's GitHub](https://github.com/Gabboxl/FluentWeather).
 
+## Version history
+
+v28 is the first public release version of FluentWeather-Plus. Earlier builds were private beta versions.
+
+v45 adds the Full History page, the optional water and extra data cards, the movable detail cards, a backup weather source, and many GUI refinements.
+
 ## Credits
 
-* FluentWeather-Plus v28 updated by duedilly108
+* FluentWeather-Plus v45 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

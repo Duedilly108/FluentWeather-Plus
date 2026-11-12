@@ -25,14 +25,16 @@ namespace FluentWeather.Services
     /// A background task checks every 15 minutes which captures are due. Data that the app or
     /// the tray icons download anyway also updates the record, without an extra request.
     ///
-    /// The records are kept in LocalFolder\pastDays.json: today and the two days before, for each
-    /// saved location.
+    /// The records are kept in LocalFolder\pastDays.json for each saved location. The cards show
+    /// the two days before today. The history window (HistoryService) shows up to a year, so the
+    /// records are kept for 366 days.
     /// </summary>
     public static class PastDaysService
     {
         private const string FileName = "pastDays";
         private const int CaptureDelayMinutes = 60;
         private const int KeepDays = 2;
+        private const int RetainDays = 366;
 
         private static readonly TimeSpan RetryAfterFailure = TimeSpan.FromHours(1);
         private static readonly TimeSpan GapBetweenRequests = TimeSpan.FromSeconds(3);
@@ -81,6 +83,124 @@ namespace FluentWeather.Services
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// The recorded days of a location between two dates (yyyy-MM-dd, both included), by date,
+        /// converted to the given units. For the history window.
+        /// </summary>
+        public static async Task<Dictionary<string, PastDayRecord>> GetRecordedDaysAsync(string placeId, string fromDate, string toDate, string units)
+        {
+            var result = new Dictionary<string, PastDayRecord>();
+            if (string.IsNullOrEmpty(placeId))
+                return result;
+
+            PastDaysStore store;
+            await Lock.WaitAsync();
+            try
+            {
+                store = await LoadUnlockedAsync();
+            }
+            finally
+            {
+                Lock.Release();
+            }
+
+            foreach (var record in store.Records)
+            {
+                if (record.PlaceId != placeId ||
+                    string.CompareOrdinal(record.Date, fromDate) < 0 ||
+                    string.CompareOrdinal(record.Date, toDate) > 0)
+                    continue;
+
+                result[record.Date] = new PastDayRecord
+                {
+                    PlaceId = record.PlaceId,
+                    Date = record.Date,
+                    High = ConvertTemperature(record.High, record.Units, units),
+                    Low = ConvertTemperature(record.Low, record.Units, units),
+                    IconCode = DayIcon(record.IconCode),
+                    Phrase = record.Phrase,
+                    PrecipChance = record.PrecipChance,
+                    Precip = HistoryUnits.ConvertPrecip(record.Precip, record.Units, units),
+                    Snow = HistoryUnits.ConvertSnow(record.Snow, record.Units, units),
+                    WindMax = HistoryUnits.ConvertWind(record.WindMax, record.Units, units),
+                    GustMax = HistoryUnits.ConvertWind(record.GustMax, record.Units, units),
+                    Units = units,
+                    LowCaptured = record.LowCaptured,
+                    HighCaptured = record.HighCaptured
+                };
+            }
+
+            return result;
+        }
+
+        /// <summary>Remembers the coordinates of a saved location, for the history archive.</summary>
+        public static async Task SetCoordinatesAsync(string placeId, double latitude, double longitude)
+        {
+            if (string.IsNullOrEmpty(placeId))
+                return;
+
+            await Lock.WaitAsync();
+            try
+            {
+                var store = await LoadUnlockedAsync();
+                var schedule = GetOrAddSchedule(store, placeId);
+                if (schedule.HasCoordinates && Math.Abs(schedule.Latitude - latitude) < 0.0001 && Math.Abs(schedule.Longitude - longitude) < 0.0001)
+                    return;
+
+                schedule.Latitude = latitude;
+                schedule.Longitude = longitude;
+                schedule.HasCoordinates = true;
+                await SaveUnlockedAsync(store);
+            }
+            catch (Exception)
+            {
+                // The history window then shows recorded days only.
+            }
+            finally
+            {
+                Lock.Release();
+            }
+        }
+
+        /// <summary>The current time at a location, from its last known UTC offset, or the PC time.</summary>
+        public static async Task<DateTimeOffset> GetLocationNowAsync(string placeId)
+        {
+            await Lock.WaitAsync();
+            try
+            {
+                var store = await LoadUnlockedAsync();
+                var schedule = store.Schedules.FirstOrDefault(s => s.PlaceId == placeId);
+                if (schedule is { OffsetKnown: true })
+                    return DateTimeOffset.UtcNow.ToOffset(TimeSpan.FromMinutes(schedule.UtcOffsetMinutes));
+                return DateTimeOffset.Now;
+            }
+            catch (Exception)
+            {
+                return DateTimeOffset.Now;
+            }
+            finally
+            {
+                Lock.Release();
+            }
+        }
+
+        public static async Task<(double Latitude, double Longitude)?> GetCoordinatesAsync(string placeId)
+        {
+            await Lock.WaitAsync();
+            try
+            {
+                var store = await LoadUnlockedAsync();
+                var schedule = store.Schedules.FirstOrDefault(s => s.PlaceId == placeId);
+                if (schedule is { HasCoordinates: true })
+                    return (schedule.Latitude, schedule.Longitude);
+                return null;
+            }
+            finally
+            {
+                Lock.Release();
+            }
         }
 
         /// <summary>
@@ -167,8 +287,23 @@ namespace FluentWeather.Services
                 {
                     record.High = ConvertTemperature(record.High, record.Units, units);
                     record.Low = ConvertTemperature(record.Low, record.Units, units);
+                    record.Precip = HistoryUnits.ConvertPrecip(record.Precip, record.Units, units);
+                    record.Snow = HistoryUnits.ConvertSnow(record.Snow, record.Units, units);
+                    record.WindMax = HistoryUnits.ConvertWind(record.WindMax, record.Units, units);
+                    record.GustMax = HistoryUnits.ConvertWind(record.GustMax, record.Units, units);
                     record.Units = units;
                 }
+
+                // The totals of the day, for the history window. The 24-hour totals grow through the
+                // day, so the largest value seen is kept. The wind is the highest speed seen.
+                if (local.Hour >= 4)
+                {
+                    record.Precip = record.Precip == null ? observation.precip24Hour : Math.Max(record.Precip.Value, observation.precip24Hour);
+                    record.Snow = record.Snow == null ? observation.snow24Hour : Math.Max(record.Snow.Value, observation.snow24Hour);
+                }
+                record.WindMax = record.WindMax == null ? observation.windSpeed : Math.Max(record.WindMax.Value, observation.windSpeed);
+                if (observation.windGust != null)
+                    record.GustMax = record.GustMax == null ? observation.windGust : Math.Max(record.GustMax.Value, observation.windGust.Value);
 
                 // The highest temperature since 7 AM belongs to today only after 7 AM.
                 if (local.Hour >= 8)
@@ -212,8 +347,8 @@ namespace FluentWeather.Services
                 if (lowCapture || highCapture)
                     schedule.LastFailedUtcTicks = 0;
 
-                // Keep today and the two days before.
-                var oldest = DateKey(local.AddDays(-KeepDays));
+                // Keep a year of days for the history window.
+                var oldest = DateKey(local.AddDays(-RetainDays));
                 var removed = store.Records.RemoveAll(r => r.PlaceId == placeId && string.CompareOrdinal(r.Date, oldest) < 0);
 
                 if (before != Fingerprint(record) || offsetChanged || removed > 0 || lowCapture || highCapture)
@@ -358,7 +493,8 @@ namespace FluentWeather.Services
         private static string DateKey(DateTimeOffset local) => local.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
 
         private static string Fingerprint(PastDayRecord r) =>
-            r.High + "|" + r.Low + "|" + r.IconCode + "|" + r.Phrase + "|" + r.PrecipChance + "|" + r.Units + "|" + r.LowCaptured + "|" + r.HighCaptured;
+            r.High + "|" + r.Low + "|" + r.IconCode + "|" + r.Phrase + "|" + r.PrecipChance + "|" + r.Units + "|" + r.LowCaptured + "|" + r.HighCaptured +
+            "|" + r.Precip + "|" + r.Snow + "|" + r.WindMax + "|" + r.GustMax;
 
         /// <summary>
         /// The day version of a weather.com night icon code. A day that was first recorded in the
