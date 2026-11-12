@@ -189,7 +189,8 @@ namespace FluentWeather.Utils
         {
             if (await Services.DataSourceService.ShouldTryWeatherComAsync())
             {
-                var response = await GetWithRetryAsync(SharedClient, "v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
+                // The full address: the base address of SharedClient ends in /v2/, and the search is under /v3/.
+                var response = await GetWithRetryAsync(SharedClient, "https://api.weather.com/v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
                                                                      "&language=" + SystemLanguage +
                                                                      "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230&format=json");
                 if (response.IsSuccessStatusCode)

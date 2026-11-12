@@ -6,7 +6,7 @@ FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v45.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download FluentWeather-Plus-Setup-v46.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
@@ -48,11 +48,11 @@ The original open source FluentWeather by Gabboxl is on the [Microsoft Store](ht
 
 v28 is the first public release version of FluentWeather-Plus. Earlier builds were private beta versions.
 
-v45 adds the Full History page, the optional water and extra data cards, the movable detail cards, a backup weather source, and many GUI refinements.
+v46 adds the Full History page, the optional water and extra data cards, the movable detail cards, a backup weather source, and many GUI refinements.
 
 ## Credits
 
-* FluentWeather-Plus v45 updated by duedilly108
+* FluentWeather-Plus v46 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

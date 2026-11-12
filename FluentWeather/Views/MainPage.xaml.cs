@@ -268,7 +268,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.45 is v45.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.46 is v46.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";

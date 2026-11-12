@@ -7404,10 +7404,10 @@ index 80cba1cbfc056ad6fd9df6755b13dbcf47c8dbd4..278a3d3552d3db5abf3d2b03f6cc4606
                                  Background="{ThemeResource AutoSuggestBoxSuggestionsListBackground}"
                                  BorderBrush="{ThemeResource AutoSuggestBoxSuggestionsListBorderBrush}"
 diff --git a/FluentWeather/Utils/ApiUtils.cs b/FluentWeather/Utils/ApiUtils.cs
-index 9c07a12037569243fc915fcf6b3fda7befeed576..972d01a28eb70ea13afa175cb59a9c9045d0c33b 100644
+index 9c07a12037569243fc915fcf6b3fda7befeed576..200f0f500524c332d335037491aeb75661b48626 100644
 --- a/FluentWeather/Utils/ApiUtils.cs
 +++ b/FluentWeather/Utils/ApiUtils.cs
-@@ -1,34 +1,291 @@
+@@ -1,34 +1,292 @@
  ﻿using System;
 +using System.Globalization;
  using System.Net.Http;
@@ -7610,7 +7610,8 @@ index 9c07a12037569243fc915fcf6b3fda7befeed576..972d01a28eb70ea13afa175cb59a9c90
 +        {
 +            if (await Services.DataSourceService.ShouldTryWeatherComAsync())
 +            {
-+                var response = await GetWithRetryAsync(SharedClient, "v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
++                // The full address: the base address of SharedClient ends in /v2/, and the search is under /v3/.
++                var response = await GetWithRetryAsync(SharedClient, "https://api.weather.com/v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
 +                                                                     "&language=" + SystemLanguage +
 +                                                                     "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230&format=json");
 +                if (response.IsSuccessStatusCode)
@@ -10843,7 +10844,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..a5ed18e69456a1e3294bace8098c00a6
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..32067b1c208752c4ef45817611d4bd488374dbaa 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452bb154a78 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -11045,7 +11046,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..32067b1c208752c4ef45817611d4bd48
              await LoadApiData();
          }
  
-+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.45 is v45.
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.46 is v46.
 +        private static string GetPlusVersionDescription()
 +        {
 +            return $"v{Package.Current.Id.Version.Revision}";

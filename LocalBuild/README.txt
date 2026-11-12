@@ -97,11 +97,11 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v45.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v45.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v46.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v46.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v45.zip. The version is the last
-part of the build number, so build 2.1.0.45 is v45. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v46.zip. The version is the last
+part of the build number, so build 2.1.0.46 is v46. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
 
 The setup holds the app as it is built and installed on your PC, signed again with
