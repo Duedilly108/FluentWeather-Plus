@@ -386,16 +386,18 @@ namespace FluentWeather.Services
                     var peak = w?.MaxGustNext6hKmh ?? w?.GustKmh;
                     if (w == null || peak == null)
                         return null;
-                    var value = string.Format(CultureInfo.CurrentCulture, "ExtraWindForecastValue".GetLocalized(), Wind(peak.Value, units));
+                    // The card shows the speed. MainPage adds the note "top gust, next 6 hours" under it.
+                    // The model gust for this hour is left out: it often differs from the gust
+                    // measured now, which the Wind card shows.
+                    var value = Wind(peak.Value, units);
                     var tip = "ExtraWindTip".GetLocalized();
                     if (w.MaxGustNext6hKmh != null)
                         tip += "\n" + "ExtraGusts6h".GetLocalized() + ": " + Wind(w.MaxGustNext6hKmh.Value, units);
-                    if (w.GustKmh != null)
-                        tip += "\n" + "ExtraGustsModelNow".GetLocalized() + ": " + Wind(w.GustKmh.Value, units);
                     if (w.Speed80mKmh != null)
                         tip += "\n" + "ExtraWind80m".GetLocalized() + ": " + Wind(w.Speed80mKmh.Value, units);
                     tip += "\n" + "ExtraWindWhere".GetLocalized();
-                    var tray = value + (w.Speed80mKmh != null ? ", 80 m " + Wind(w.Speed80mKmh.Value, units) : "");
+                    var tray = string.Format(CultureInfo.CurrentCulture, "ExtraWindForecastValue".GetLocalized(), value) +
+                               (w.Speed80mKmh != null ? ", 80 m " + Wind(w.Speed80mKmh.Value, units) : "");
                     return (value, tip + credit, tray);
                 }
                 case ExtraFeed.Models:

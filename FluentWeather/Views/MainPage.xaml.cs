@@ -268,7 +268,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.46 is v46.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.47 is v47.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -577,9 +577,13 @@ namespace FluentWeather.Views
                                  rootV3Response.v3wxobservationscurrent.temperatureFeelsLike + "°" +
                                  MeasureUnitUtils.GetTemperatureUnits(currentUnits);
 
+            // Local build: the gust goes on a second line, as in a wind report ("gusts to 18").
+            // weather.com sends a gust only when there is one.
+            var windGust = rootV3Response.v3wxobservationscurrent.windGust;
             WindChipControl.Value = rootV3Response.v3wxobservationscurrent.windSpeed + " " +
                                     MeasureUnitUtils.GetWindSpeedUnits(currentUnits) + " " +
-                                    rootV3Response.v3wxobservationscurrent.windDirectionCardinal;
+                                    rootV3Response.v3wxobservationscurrent.windDirectionCardinal +
+                                    (windGust != null ? "\n" + string.Format(System.Globalization.CultureInfo.CurrentCulture, "WindCardGusts".GetLocalized(), windGust) : "");
 
             //CloudCoverChipControl.Value = rootV3Response.v3wxobservationscurrent.phrase;
 
@@ -2656,6 +2660,7 @@ namespace FluentWeather.Views
                     }
 
                     chip.Value = text.Value.Value;
+                    chip.Note = feed == ExtraFeed.Wind ? "ExtraWindNote".GetLocalized() : "";
                     HoverTip.Set(chip, text.Value.Tip);
                     chip.Visibility = Visibility.Visible;
                 }

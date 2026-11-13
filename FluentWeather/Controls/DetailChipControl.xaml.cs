@@ -50,6 +50,17 @@ namespace FluentWeather.Controls
             currentInstance.ValueText.Text = newValue;
         }
 
+        /// <summary>Local build: an optional smaller line under the value. Empty or null hides it.</summary>
+        public string Note
+        {
+            get { return NoteText.Text; }
+            set
+            {
+                NoteText.Text = value ?? "";
+                NoteText.Visibility = string.IsNullOrEmpty(value) ? Visibility.Collapsed : Visibility.Visible;
+            }
+        }
+
         private readonly Windows.UI.Xaml.Media.Brush _originalBackground;
 
         public DetailChipControl()

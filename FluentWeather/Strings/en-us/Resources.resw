@@ -1035,14 +1035,17 @@ Live Tiles are available natively on Windows 10 only.</value>
   <data name="ExtraPollenUsCredit" xml:space="preserve">
     <value>Data: weather.com.</value>
   </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>gusts to {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>top gust, next 6 hours</value>
+  </data>
   <data name="ExtraWindForecastValue" xml:space="preserve">
     <value>gusts to {0}</value>
   </data>
-  <data name="ExtraGustsModelNow" xml:space="preserve">
-    <value>Model gust now</value>
-  </data>
   <data name="ExtraWindWhere" xml:space="preserve">
-    <value>The Wind card shows the current wind. The Nearby water card shows the wind measured at the water, when the station has a wind sensor.</value>
+    <value>This is a model forecast. The Wind card shows the wind and gusts measured now. The Nearby water card shows the wind measured at the water, when the station has a wind sensor.</value>
   </data>
   <data name="PlusWhatsNewVersion" xml:space="preserve">
     <value>Version</value>

@@ -97,8 +97,8 @@ namespace FluentWeatherLocal
 
         // ---- Shared helpers -----------------------------------------------------------------------
 
-        // The FluentWeather-Plus version of the app in this setup, for example v46. It is the
-        // informational version. The build number, for example 2.1.0.46, is the file version.
+        // The FluentWeather-Plus version of the app in this setup, for example v47. It is the
+        // informational version. The build number, for example 2.1.0.47, is the file version.
         private static string VersionText
         {
             get

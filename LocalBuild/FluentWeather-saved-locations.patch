@@ -247,7 +247,7 @@ index 0000000000000000000000000000000000000000..3c547db94bfbe913f334ca1b97c112f7
 +    }
 +}
 diff --git a/FluentWeather/Controls/DetailChipControl.xaml b/FluentWeather/Controls/DetailChipControl.xaml
-index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..4af4e6240492149bb4a4eb8175bee203b18c234b 100644
+index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..fd2ccfbad99951230f5bb1b1d672dbc209599ab2 100644
 --- a/FluentWeather/Controls/DetailChipControl.xaml
 +++ b/FluentWeather/Controls/DetailChipControl.xaml
 @@ -9,6 +9,7 @@
@@ -258,14 +258,41 @@ index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..4af4e6240492149bb4a4eb8175bee203
          Margin="4"
          CornerRadius="6"
          Padding="8"
+@@ -28,6 +29,15 @@
+                    Margin="0,0,0,0"
+                    RelativePanel.Below="TitleText" />
+ 
++        <!-- Local build: an optional smaller line under the value. Hidden when empty. -->
++        <TextBlock x:Name="NoteText"
++                   FontSize="12"
++                   Opacity="0.7"
++                   TextWrapping="Wrap"
++                   Margin="0,2,0,0"
++                   Visibility="Collapsed"
++                   RelativePanel.Below="ValueText" />
++
+ 
+     </RelativePanel>
+ </UserControl>
 diff --git a/FluentWeather/Controls/DetailChipControl.xaml.cs b/FluentWeather/Controls/DetailChipControl.xaml.cs
-index 84658ce13f94a7c754edb6079c115e553b1352f2..a85e3071392732f0aba3e87b74361c6c8d1ed2d7 100644
+index 84658ce13f94a7c754edb6079c115e553b1352f2..4411eb833e9a146b89930ae30ab9fee812a17e77 100644
 --- a/FluentWeather/Controls/DetailChipControl.xaml.cs
 +++ b/FluentWeather/Controls/DetailChipControl.xaml.cs
-@@ -50,9 +50,18 @@ namespace FluentWeather.Controls
+@@ -50,9 +50,29 @@ namespace FluentWeather.Controls
              currentInstance.ValueText.Text = newValue;
          }
  
++        /// <summary>Local build: an optional smaller line under the value. Empty or null hides it.</summary>
++        public string Note
++        {
++            get { return NoteText.Text; }
++            set
++            {
++                NoteText.Text = value ?? "";
++                NoteText.Visibility = string.IsNullOrEmpty(value) ? Visibility.Collapsed : Visibility.Visible;
++            }
++        }
++
 +        private readonly Windows.UI.Xaml.Media.Brush _originalBackground;
 +
          public DetailChipControl()
@@ -4175,10 +4202,10 @@ index 0000000000000000000000000000000000000000..b0e48f57f9af02bc512856ad77e74e78
 +}
 diff --git a/FluentWeather/Services/OpenMeteoExtrasService.cs b/FluentWeather/Services/OpenMeteoExtrasService.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..b0f8caa5cf669be97659895b62e2b6783ae9f65e
+index 0000000000000000000000000000000000000000..18d2a3c4552f0c3b424327af473d293eaa6c6092
 --- /dev/null
 +++ b/FluentWeather/Services/OpenMeteoExtrasService.cs
-@@ -0,0 +1,463 @@
+@@ -0,0 +1,465 @@
 +using FluentWeather.Helpers;
 +using FluentWeather.Models;
 +using FluentWeather.Utils;
@@ -4567,16 +4594,18 @@ index 0000000000000000000000000000000000000000..b0f8caa5cf669be97659895b62e2b678
 +                    var peak = w?.MaxGustNext6hKmh ?? w?.GustKmh;
 +                    if (w == null || peak == null)
 +                        return null;
-+                    var value = string.Format(CultureInfo.CurrentCulture, "ExtraWindForecastValue".GetLocalized(), Wind(peak.Value, units));
++                    // The card shows the speed. MainPage adds the note "top gust, next 6 hours" under it.
++                    // The model gust for this hour is left out: it often differs from the gust
++                    // measured now, which the Wind card shows.
++                    var value = Wind(peak.Value, units);
 +                    var tip = "ExtraWindTip".GetLocalized();
 +                    if (w.MaxGustNext6hKmh != null)
 +                        tip += "\n" + "ExtraGusts6h".GetLocalized() + ": " + Wind(w.MaxGustNext6hKmh.Value, units);
-+                    if (w.GustKmh != null)
-+                        tip += "\n" + "ExtraGustsModelNow".GetLocalized() + ": " + Wind(w.GustKmh.Value, units);
 +                    if (w.Speed80mKmh != null)
 +                        tip += "\n" + "ExtraWind80m".GetLocalized() + ": " + Wind(w.Speed80mKmh.Value, units);
 +                    tip += "\n" + "ExtraWindWhere".GetLocalized();
-+                    var tray = value + (w.Speed80mKmh != null ? ", 80 m " + Wind(w.Speed80mKmh.Value, units) : "");
++                    var tray = string.Format(CultureInfo.CurrentCulture, "ExtraWindForecastValue".GetLocalized(), value) +
++                               (w.Speed80mKmh != null ? ", 80 m " + Wind(w.Speed80mKmh.Value, units) : "");
 +                    return (value, tip + credit, tray);
 +                }
 +                case ExtraFeed.Models:
@@ -6393,7 +6422,7 @@ index 0000000000000000000000000000000000000000..cff20e19feca63b5245151e900296a31
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..e7103483691de61dd083985b660faac63e023208 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..f0c894e615ef4d3f1edd85338094bb5b7c7dacf2 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -126,11 +126,11 @@
@@ -6453,7 +6482,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..e7103483691de61dd083985b660faac6
    <data name="TranslateAppText.Text" xml:space="preserve">
      <value>Translate the app</value>
    </data>
-@@ -297,4 +324,932 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -297,4 +324,935 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -7168,14 +7197,17 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..e7103483691de61dd083985b660faac6
 +  <data name="ExtraPollenUsCredit" xml:space="preserve">
 +    <value>Data: weather.com.</value>
 +  </data>
++  <data name="WindCardGusts" xml:space="preserve">
++    <value>gusts to {0}</value>
++  </data>
++  <data name="ExtraWindNote" xml:space="preserve">
++    <value>top gust, next 6 hours</value>
++  </data>
 +  <data name="ExtraWindForecastValue" xml:space="preserve">
 +    <value>gusts to {0}</value>
 +  </data>
-+  <data name="ExtraGustsModelNow" xml:space="preserve">
-+    <value>Model gust now</value>
-+  </data>
 +  <data name="ExtraWindWhere" xml:space="preserve">
-+    <value>The Wind card shows the current wind. The Nearby water card shows the wind measured at the water, when the station has a wind sensor.</value>
++    <value>This is a model forecast. The Wind card shows the wind and gusts measured now. The Nearby water card shows the wind measured at the water, when the station has a wind sensor.</value>
 +  </data>
 +  <data name="PlusWhatsNewVersion" xml:space="preserve">
 +    <value>Version</value>
@@ -10844,7 +10876,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..a5ed18e69456a1e3294bace8098c00a6
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452bb154a78 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..d5d60496f6b5c1d77f57e0e0e7ab48ed44a5e6f0 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -11046,7 +11078,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
              await LoadApiData();
          }
  
-+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.46 is v46.
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.47 is v47.
 +        private static string GetPlusVersionDescription()
 +        {
 +            return $"v{Package.Current.Id.Version.Revision}";
@@ -11220,7 +11252,20 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
              MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
  
              CurrentTempText.Text = rootV3Response.v3wxobservationscurrent.temperature + "°" +
-@@ -427,7 +585,7 @@ namespace FluentWeather.Views
+@@ -419,15 +577,19 @@ namespace FluentWeather.Views
+                                  rootV3Response.v3wxobservationscurrent.temperatureFeelsLike + "°" +
+                                  MeasureUnitUtils.GetTemperatureUnits(currentUnits);
+ 
++            // Local build: the gust goes on a second line, as in a wind report ("gusts to 18").
++            // weather.com sends a gust only when there is one.
++            var windGust = rootV3Response.v3wxobservationscurrent.windGust;
+             WindChipControl.Value = rootV3Response.v3wxobservationscurrent.windSpeed + " " +
+                                     MeasureUnitUtils.GetWindSpeedUnits(currentUnits) + " " +
+-                                    rootV3Response.v3wxobservationscurrent.windDirectionCardinal;
++                                    rootV3Response.v3wxobservationscurrent.windDirectionCardinal +
++                                    (windGust != null ? "\n" + string.Format(System.Globalization.CultureInfo.CurrentCulture, "WindCardGusts".GetLocalized(), windGust) : "");
+ 
+             //CloudCoverChipControl.Value = rootV3Response.v3wxobservationscurrent.phrase;
  
              HumidityChipControl.Value = rootV3Response.v3wxobservationscurrent.relativeHumidity + "%";
  
@@ -11229,7 +11274,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
                                          MeasureUnitUtils.GetPressureUnits(currentUnits);
  
              VisibilityChipControl.Value = rootV3Response.v3wxobservationscurrent.visibility + " " +
-@@ -439,6 +597,9 @@ namespace FluentWeather.Views
+@@ -439,6 +601,9 @@ namespace FluentWeather.Views
              UVIndexChipControl.Value = rootV3Response.v3wxobservationscurrent.uvIndex + " (" +
                                         rootV3Response.v3wxobservationscurrent.uvDescription + ")";
  
@@ -11239,7 +11284,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
              //update days repeater itemssource with creating for every day a new DayButtonAdapter class
              List<DayButtonAdapter> dayButtonAdapters = [];
  
-@@ -453,6 +614,9 @@ namespace FluentWeather.Views
+@@ -453,6 +618,9 @@ namespace FluentWeather.Views
  
              //select first day button
              EmulateDayButtonClick(0);
@@ -11249,7 +11294,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
          }
  
          private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
-@@ -475,6 +639,8 @@ namespace FluentWeather.Views
+@@ -475,6 +643,8 @@ namespace FluentWeather.Views
          {
              if (_lastApiData == null) return;
  
@@ -11258,7 +11303,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
              List<HourDataAdapter> hourlyDataAdapters = [];
  
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
-@@ -486,6 +652,24 @@ namespace FluentWeather.Views
+@@ -486,6 +656,24 @@ namespace FluentWeather.Views
              //subtract daytoload to firstdate to get the index of the first day to load
              int daysDiff = dayToLoad.Date.Subtract(firstDate.Date).Days;
  
@@ -11283,7 +11328,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
              if (daysDiff == -1 ||
                  (daysDiff == 0 &&
                   _lastApiData.v3wxforecasthourly10day.validTimeLocal[0].Hour > 7)) //this means that we are still in a tonight/today state and we add hours only until 7AM
-@@ -629,7 +813,13 @@ namespace FluentWeather.Views
+@@ -629,7 +817,13 @@ namespace FluentWeather.Views
              button.Style = (Style) Resources["SelectedDayButtonStyle"];
  
              // Keep track of the selected button
@@ -11297,7 +11342,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
          }
  
          private void EmulateDayButtonClick(int index)
-@@ -713,18 +903,19 @@ namespace FluentWeather.Views
+@@ -713,18 +907,19 @@ namespace FluentWeather.Views
                  CrossfadeToImageApiData();
              else
                  CrossfadeToImage(null);
@@ -11326,7 +11371,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +933,2463 @@ namespace FluentWeather.Views
+@@ -742,5 +937,2464 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }
@@ -13053,6 +13098,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..52d192026b26df7a99cb3f2063434452
 +                    }
 +
 +                    chip.Value = text.Value.Value;
++                    chip.Note = feed == ExtraFeed.Wind ? "ExtraWindNote".GetLocalized() : "";
 +                    HoverTip.Set(chip, text.Value.Tip);
 +                    chip.Visibility = Visibility.Visible;
 +                }
