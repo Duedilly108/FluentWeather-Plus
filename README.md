@@ -76,7 +76,8 @@ Full main window (at 55%):
 
 <br>
 
-<img width="2555" height="1539" alt="FW_full_main" src="https://github.com/user-attachments/assets/0da0fb9d-a4e0-4520-82d8-37a298b3af2d" />
+<img width="2560" height="1546" alt="full_main_Page" src="https://github.com/user-attachments/assets/c09f9852-027a-47ee-939d-5b6a2e83c9a0" />
+
 
 
 <br>
@@ -99,7 +100,8 @@ Updated Settings additions such as Main Window Size, Contrast levels and Windows
 
 <br>
 
-<img width="1997" height="1290" alt="Updated Settings" src="https://github.com/user-attachments/assets/c8e96ab9-49cf-4a84-a669-6dc5757d78ac" />
+<img width="1991" height="1454" alt="main_settings" src="https://github.com/user-attachments/assets/6478bdb1-e9c6-4c11-aa62-d78e63a78013" />
+
 
 
 <br>
@@ -142,6 +144,37 @@ Re-order locations:
 <br>
 <br>
 
+Severe Weather Alert Main Settings Options:
+
+<br>
+
+<img width="660" height="1208" alt="severe_weather_alert_main_options" src="https://github.com/user-attachments/assets/3d0108a5-4dd3-41bb-bebc-517d6a4e7783" />
+
+<br>
+<br>
+<br>
+
+Scrollable 10 Day Hourly With Dropdown Details
+
+<br>
+
+<img width="2555" height="1543" alt="scrollable_10_day_hourly_with_dropdown_details" src="https://github.com/user-attachments/assets/f3c38cbc-77e4-4986-b7db-53771a6c46fe" />
+
+<br>
+<br>
+<br>
+
+Alternate Scrollable 10 Day Hourly in Table Details
+
+<br>
+
+<img width="2547" height="1498" alt="scrollable_10_day_hourly_with_table_details" src="https://github.com/user-attachments/assets/948cc3ae-b850-494b-a637-d1e0c611e4ff" />
+
+
+<br>
+<br>
+<br>
+
 Tray Icons (optional) - Temperature and Conditions
 
 <br>
@@ -159,6 +192,17 @@ Tray Icons (optional) - Temperature and Conditions
 <br>
 
 <img width="64" height="32" alt="tray_temp_condition_icons2" src="https://github.com/user-attachments/assets/eed84140-ecdc-4df0-b1aa-55bc0502459d" />
+
+<br>
+<br>
+<br>
+
+Tray Icon Severe Weather Alert Popup Options:
+
+<br>
+
+<img width="1308" height="491" alt="tray_popup_severe_weather_alert_display_options" src="https://github.com/user-attachments/assets/454edd77-239a-4abc-ae3d-a5e922812311" />
+
 
 <br>
 <br>
