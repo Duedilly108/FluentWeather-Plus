@@ -15853,7 +15853,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..01732ed50274c55e7880f7f23490406457a3d930 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904f1b34fd5 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -16056,7 +16056,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..01732ed50274c55e7880f7f234904064
              await LoadApiData();
          }
  
-+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.51 is v51.
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.50 is v50.
 +        private static string GetPlusVersionDescription()
 +        {
 +            return $"v{Package.Current.Id.Version.Revision}";

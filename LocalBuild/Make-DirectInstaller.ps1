@@ -145,7 +145,7 @@ $thumb = [string]$config.CertThumbprint
 $pkg = Get-AppxPackage -Name $PackageName | Select-Object -First 1
 if (-not $pkg) { Stop-Make 'FluentWeather-Plus is not installed on this PC. Run "Update FluentWeather.cmd" first.' }
 $version = [string]$pkg.Version
-# The FluentWeather-Plus version is the fourth part of the build number: 2.1.0.51 is v51.
+# The FluentWeather-Plus version is the fourth part of the build number: 2.1.0.50 is v50.
 # It names the files, the README and the setup window.
 $PlusVersion = 'v' + ([version]$version).Revision
 $arch = ([string]$pkg.Architecture).ToLowerInvariant()
@@ -268,7 +268,7 @@ try {
     # Splits the README at its "VirusTotal" section. The section runs to the next heading, which is a
     # line followed by a line of dashes. Returns the lines before and after the section.
     # {VERSION} in the README becomes the version of this build, for example 2.1.0.19.
-    # {PLUS} becomes the FluentWeather-Plus version, for example v51. {VERSION} becomes the build number.
+    # {PLUS} becomes the FluentWeather-Plus version, for example v50. {VERSION} becomes the build number.
     $plus = $PlusVersion
     $readmeLines = @(Get-Content -LiteralPath $readme | ForEach-Object { $_.Replace('{VERSION}', $version).Replace('{PLUS}', $plus) })
     $vtStart = -1
