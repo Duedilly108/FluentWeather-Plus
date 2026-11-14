@@ -6,7 +6,7 @@ FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v47.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download FluentWeather-Plus-Setup-v49.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
@@ -19,8 +19,10 @@ Instead of a pre-compiled executable, to build the Github project app on your Wi
 * A Full History page for any saved location, with charts and a table, from a whole year down to single hours.
 * A radar map for US locations.
 * An air quality card for every location.
+* Severe weather alerts under the location name, and as a bubble or a Windows notification from the tray.
 * The past two days in the daily forecast.
 * Optional cards for nearby water, waves, wind gusts, other forecast models, river flow and pollen.
+* Optional more data for the main window and the tray: airport weather and forecast, recent snow, heat stress, storm energy, soil, freezing level, sunshine, buoys, river gauges, day details, an hourly chart and the forecaster's discussion.
 * Detail cards that can be dragged, hidden or added, with more detail on hover.
 * A backup weather source, Open-Meteo with the nearest airport report, if weather.com stops working.
 * Settings for text size, background contrast, card tint, forecast length and language.
@@ -52,9 +54,11 @@ v46 adds the Full History page, the optional water and extra data cards, the mov
 
 v47 shows the current gust on the Wind card and makes the Wind forecast card clearer.
 
+v49 adds severe weather alerts and 12 more data items. Each item can be turned on for the main window and for the tray.
+
 ## Credits
 
-* FluentWeather-Plus v47 updated by duedilly108
+* FluentWeather-Plus v49 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

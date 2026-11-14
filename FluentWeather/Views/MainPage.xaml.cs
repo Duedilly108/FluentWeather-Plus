@@ -255,6 +255,7 @@ namespace FluentWeather.Views
             InitializeBackgroundContrast();
             InitializeRadar();
             InitializeHourlyRange();
+            InitializeMoreData();
             InitializeTitleBarLayout();
             _ = ApplyCompactWindowSizeOnceAsync();
             _ = ReloadSavedLocationsAsync();
@@ -268,7 +269,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.47 is v47.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.49 is v49.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -605,6 +606,9 @@ namespace FluentWeather.Views
             SetStandardCardTips(rootV3Response.v3wxobservationscurrent, currentUnits);
 
             //update days repeater itemssource with creating for every day a new DayButtonAdapter class
+            // Local build: the "Day details" setting adds thunder and snow marks to the buttons.
+            DayButtonAdapter.ShowBadges = await MoreDataService.IsOnAsync(MoreItem.Days, false);
+            DayButtonAdapter.Units = currentUnits;
             List<DayButtonAdapter> dayButtonAdapters = [];
 
             int i = 0;
@@ -621,6 +625,10 @@ namespace FluentWeather.Views
 
             // Local build: record today for "Past days" and show the recorded days left of today.
             _ = UpdatePastDaysAsync(rootV3Response, placeId);
+
+            // Local build: alerts and the "More data" items. After SetStandardCardTips, because the
+            // airport report adds to the Visibility card.
+            _ = UpdateMoreAsync(rootV3Response, placeId);
         }
 
         private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
@@ -671,6 +679,7 @@ namespace FluentWeather.Views
                 }
 
                 HourlyListview.ItemsSource = hourlyDataAdapters;
+                SetChartHours(hourlyDataAdapters);
                 return;
             }
 
@@ -700,6 +709,7 @@ namespace FluentWeather.Views
             }
 
             HourlyListview.ItemsSource = hourlyDataAdapters;
+            SetChartHours(hourlyDataAdapters);
         }
 
         private async void LoadInsightsData(DateTimeOffset dayToLoad)
@@ -791,6 +801,9 @@ namespace FluentWeather.Views
 
             var svgImageSource = new SvgImageSource(new Uri($"ms-appx:///Assets/varicons/{moonPhaseIcon}.svg"));
             LunarphaseIcon.Source = svgImageSource;
+
+            // Local build: wind text, notes and amounts of the day, when "Day details" is on.
+            await UpdateDayMoreAsync(indexOfDayDailyData);
         }
 
         private void DayButtonClick(object sender, RoutedEventArgs e)
@@ -1912,7 +1925,7 @@ namespace FluentWeather.Views
 
             var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
             foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl,
-                         ExtraMarineChip, ExtraWindChip, ExtraModelsChip, ExtraRiverChip, ExtraPollenChip })
+                         ExtraMarineChip, ExtraWindChip, ExtraModelsChip, ExtraRiverChip, ExtraPollenChip }.Concat(MoreChips))
                 chip?.SetCardBackground(chipBrush);
 
             // Local build: the water card and the History button follow the card tint too.
@@ -2302,6 +2315,7 @@ namespace FluentWeather.Views
         [
             "Wind", "Humidity", "UVIndex", "AirQuality", "Water",
             "ExtraMarine", "ExtraWind", "ExtraModels", "ExtraRiver", "ExtraPollen",
+            "MoreSnow", "MoreHeat", "MoreStorm", "MoreGround", "MoreFreezing", "MoreSun", "MoreBuoy", "MoreGauge",
             "Visibility", "Pressure", "DewPoint"
         ];
 
@@ -2322,6 +2336,7 @@ namespace FluentWeather.Views
             "ExtraModels" => ExtraModelsChip,
             "ExtraRiver" => ExtraRiverChip,
             "ExtraPollen" => ExtraPollenChip,
+            _ when IsMoreCard(key) => MoreChip(MoreItemOf(key)),
             "Visibility" => VisibilityChipControl,
             "Pressure" => PressureChipControl,
             _ => DewPointChipControl
@@ -2338,6 +2353,8 @@ namespace FluentWeather.Views
                 return "WaterCardTitleName".GetLocalized();
             if (IsExtraCard(key))
                 return ("Extra" + ExtraFeedOf(key) + "LabelName").GetLocalized();
+            if (IsMoreCard(key))
+                return ("More" + MoreItemOf(key) + "Label").GetLocalized();
             return CardElement(key) is DetailChipControl chip && !string.IsNullOrEmpty(chip.Title) ? chip.Title : key;
         }
 
@@ -2348,6 +2365,8 @@ namespace FluentWeather.Views
                 return await WaterService.IsCardEnabledAsync();
             if (IsExtraCard(key))
                 return await OpenMeteoExtrasService.IsOnAsync(ExtraFeedOf(key), false);
+            if (IsMoreCard(key))
+                return await MoreDataService.IsOnAsync(MoreItemOf(key), false);
             return !_cardsHidden.Contains(key);
         }
 
@@ -2362,6 +2381,12 @@ namespace FluentWeather.Views
             {
                 await OpenMeteoExtrasService.SetAsync(ExtraFeedOf(key), false, shown);
                 await UpdateExtrasAsync();
+            }
+            else if (IsMoreCard(key))
+            {
+                await MoreDataService.SetAsync(MoreItemOf(key), false, shown);
+                if (_moreContext != null && _displayedPlaceId != null)
+                    await UpdateMoreCardsAsync(_moreContext, _displayedPlaceId);
             }
             else
             {
@@ -2391,7 +2416,7 @@ namespace FluentWeather.Views
                 }
                 _cardOrder = saved;
                 _cardsHidden = new HashSet<string>((hidden ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .Where(k => DefaultCardOrder.Contains(k) && k != "Water" && !IsExtraCard(k)));
+                    .Where(k => DefaultCardOrder.Contains(k) && k != "Water" && !IsExtraCard(k) && !IsMoreCard(k)));
             }
             catch (Exception ex)
             {
@@ -2517,7 +2542,7 @@ namespace FluentWeather.Views
             menu.Items.Add(hide);
 
             // Nearby water and the extra cards have their own settings, with their source and a tray option.
-            if (key == "Water" || IsExtraCard(key))
+            if (key == "Water" || IsExtraCard(key) || IsMoreCard(key))
             {
                 var settings = new MenuFlyoutItem { Text = "CardSettings".GetLocalized() };
                 settings.Click += (_, _) =>
@@ -2593,6 +2618,7 @@ namespace FluentWeather.Views
                 foreach (var box in _extraCheckBoxes)
                     if (TryParseExtraTag(box.Tag as string, out var feed, out var tray))
                         box.IsChecked = await OpenMeteoExtrasService.IsOnAsync(feed, tray);
+                RefreshMoreCheckBoxes();
                 foreach (var toggle in _waterSwitches)
                 {
                     var on = toggle.Name == "WaterTrayToggle" ? await WaterService.IsTrayEnabledAsync() : await WaterService.IsCardEnabledAsync();

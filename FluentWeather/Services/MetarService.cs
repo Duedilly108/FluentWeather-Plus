@@ -165,11 +165,142 @@ namespace FluentWeather.Services
                     SeaLevelHpa = Number(e, "slp"),
                     TendencyHpa = Number(e, "presTend"),
                     CeilingFeet = ceiling,
-                    SkyKnown = skyKnown
+                    SkyKnown = skyKnown,
+                    WxString = Text(e, "wxString"),
+                    FlightCategory = Text(e, "fltCat"),
+                    Raw = Text(e, "rawOb")
                 });
             }
 
             return list.OrderBy(r => r.DistanceKm).ToList();
+        }
+
+        // --- Local build: airport forecasts (TAF) ---
+
+        private static readonly ConcurrentDictionary<string, (DateTime FetchedAt, TafReport? Report)> TafCache = new();
+
+        /// <summary>
+        /// The airport forecast of a station. Small airports have none, so then the nearest airport
+        /// with a forecast within SearchKm of the location is used. Null when there is none. Kept for 30 minutes.
+        /// </summary>
+        public static async Task<TafReport?> TafAsync(string stationId, double latitude, double longitude)
+        {
+            if (string.IsNullOrEmpty(stationId))
+                return null;
+            if (TafCache.TryGetValue(stationId, out var hit) &&
+                DateTime.UtcNow - hit.FetchedAt < (hit.Report == null ? EmptyCacheTime : CacheTime))
+                return hit.Report;
+
+            TafReport? report = null;
+            try
+            {
+                using (var response = await ApiUtils.GetWithRetryAsync(Http, "api/data/taf?ids=" + Uri.EscapeDataString(stationId) + "&format=json"))
+                    if (response.IsSuccessStatusCode)
+                        report = ParseTaf(await response.Content.ReadAsStringAsync(), latitude, longitude);
+                if (report == null)
+                {
+                    using var nearby = await ApiUtils.GetWithRetryAsync(Http, BoxQuery(latitude, longitude).Replace("api/data/metar?", "api/data/taf?"));
+                    if (nearby.IsSuccessStatusCode)
+                        report = ParseTaf(await nearby.Content.ReadAsStringAsync(), latitude, longitude);
+                }
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "MetarService TAF");
+            }
+
+            TafCache[stationId] = (DateTime.UtcNow, report);
+            return report;
+        }
+
+        /// <summary>The forecast nearest to the location in a TAF reply. Separate from the download, so it can be tested.</summary>
+        public static TafReport? ParseTaf(string json, double latitude, double longitude)
+        {
+            if (string.IsNullOrWhiteSpace(json))
+                return null;
+            using var doc = JsonDocument.Parse(json);
+            if (doc.RootElement.ValueKind != JsonValueKind.Array || doc.RootElement.GetArrayLength() == 0)
+                return null;
+
+            var t = doc.RootElement.EnumerateArray()
+                .OrderBy(x => Number(x, "lat") is { } la && Number(x, "lon") is { } lo ? DistanceKm(latitude, longitude, la, lo) : double.MaxValue)
+                .First();
+            var periods = new List<TafPeriod>();
+            if (t.TryGetProperty("fcsts", out var fcsts) && fcsts.ValueKind == JsonValueKind.Array)
+            {
+                foreach (var f in fcsts.EnumerateArray())
+                {
+                    var from = Number(f, "timeFrom");
+                    var to = Number(f, "timeTo");
+                    if (from == null || to == null)
+                        continue;
+                    int? ceiling = null;
+                    if (f.TryGetProperty("clouds", out var clouds) && clouds.ValueKind == JsonValueKind.Array)
+                    {
+                        foreach (var layer in clouds.EnumerateArray())
+                        {
+                            var layerBase = Number(layer, "base");
+                            if (Text(layer, "cover") is "BKN" or "OVC" or "OVX" && layerBase != null)
+                                ceiling = Math.Min(ceiling ?? int.MaxValue, (int) layerBase.Value);
+                        }
+                    }
+                    var probability = Number(f, "probability");
+                    periods.Add(new TafPeriod
+                    {
+                        From = DateTimeOffset.FromUnixTimeSeconds((long) from.Value),
+                        To = DateTimeOffset.FromUnixTimeSeconds((long) to.Value),
+                        Change = Text(f, "fcstChange"),
+                        Probability = probability == null ? null : (int) probability.Value,
+                        VisibilityMiles = Miles(f),
+                        WxString = Text(f, "wxString"),
+                        CeilingFeet = ceiling
+                    });
+                }
+            }
+
+            return new TafReport { Id = Text(t, "icaoId") ?? "", Raw = Text(t, "rawTAF") ?? "", Periods = periods };
+        }
+
+        // Weather codes of airport reports in words. The words are English, as in the reports.
+        // "-SN BR" becomes "light snow, mist".
+        private static readonly Dictionary<string, string> WxWords = new()
+        {
+            ["MI"] = "shallow", ["BC"] = "patches of", ["PR"] = "partial", ["DR"] = "drifting", ["BL"] = "blowing",
+            ["SH"] = "showers of", ["TS"] = "thunderstorm with", ["FZ"] = "freezing",
+            ["DZ"] = "drizzle", ["RA"] = "rain", ["SN"] = "snow", ["SG"] = "snow grains", ["IC"] = "ice crystals",
+            ["PL"] = "ice pellets", ["GR"] = "hail", ["GS"] = "small hail", ["UP"] = "unknown precipitation",
+            ["BR"] = "mist", ["FG"] = "fog", ["FU"] = "smoke", ["VA"] = "volcanic ash", ["DU"] = "dust",
+            ["SA"] = "sand", ["HZ"] = "haze", ["PY"] = "spray", ["PO"] = "dust whirls", ["SQ"] = "squalls",
+            ["FC"] = "funnel cloud", ["SS"] = "sandstorm", ["DS"] = "dust storm"
+        };
+
+        /// <summary>Weather codes such as "-SN BR" in words, or an empty string.</summary>
+        public static string WxInWords(string? codes)
+        {
+            if (string.IsNullOrWhiteSpace(codes))
+                return "";
+            var groups = new List<string>();
+            foreach (var raw in codes!.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+            {
+                var g = raw;
+                var words = new List<string>();
+                if (g.StartsWith("-")) { words.Add("light"); g = g[1..]; }
+                else if (g.StartsWith("+")) { words.Add("heavy"); g = g[1..]; }
+                var nearby = false;
+                if (g.StartsWith("VC")) { nearby = true; g = g[2..]; }
+                if (g == "TS") { words.Add("thunderstorm"); g = ""; }
+                if (g == "SH") { words.Add("showers"); g = ""; }
+                for (var i = 0; i + 2 <= g.Length; i += 2)
+                {
+                    var code = g.Substring(i, 2);
+                    words.Add(WxWords.TryGetValue(code, out var word) ? word : code);
+                }
+                if (nearby)
+                    words.Add("nearby");
+                if (words.Count > 0)
+                    groups.Add(string.Join(" ", words));
+            }
+            return string.Join(", ", groups);
         }
 
         private static string? Text(JsonElement e, string name) =>
@@ -249,5 +380,36 @@ namespace FluentWeather.Services
         public bool SkyKnown { get; init; }
 
         public bool IsNear => DistanceKm <= MetarService.MeasuredKm;
+
+        /// <summary>Local build: the weather codes, for example "-SN BR". Null when there is no weather.</summary>
+        public string? WxString { get; init; }
+
+        /// <summary>Local build: VFR, MVFR, IFR or LIFR, worked out by the Aviation Weather Center.</summary>
+        public string? FlightCategory { get; init; }
+
+        /// <summary>Local build: the report as sent by the station.</summary>
+        public string? Raw { get; init; }
+    }
+
+    /// <summary>Local build: one period of an airport forecast (TAF).</summary>
+    public sealed class TafPeriod
+    {
+        public DateTimeOffset From { get; init; }
+        public DateTimeOffset To { get; init; }
+
+        /// <summary>FM, BECMG, TEMPO or PROB, or null for the first period.</summary>
+        public string? Change { get; init; }
+        public int? Probability { get; init; }
+        public double? VisibilityMiles { get; init; }
+        public string? WxString { get; init; }
+        public int? CeilingFeet { get; init; }
+    }
+
+    /// <summary>Local build: an airport forecast (TAF).</summary>
+    public sealed class TafReport
+    {
+        public string Id { get; init; } = "";
+        public string Raw { get; init; } = "";
+        public List<TafPeriod> Periods { get; init; } = new();
     }
 }

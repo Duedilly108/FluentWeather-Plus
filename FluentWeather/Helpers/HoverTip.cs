@@ -31,6 +31,10 @@ namespace FluentWeather.Helpers
             public string Text = "";
         }
 
+        /// <summary>Local build: the hover text of an element, or an empty string.</summary>
+        public static string Get(UIElement element) =>
+            Entries.TryGetValue(element, out var entry) ? entry.Text : "";
+
         /// <summary>Sets or changes the hover text of an element.</summary>
         public static void Set(UIElement element, string text)
         {

@@ -1,0 +1,21 @@
+FluentWeather-Plus {PLUS}
+
+Download FluentWeather-Plus-Setup-{PLUS}.exe below and double-click it to install. FluentWeather-Plus-{PLUS}.zip holds the same setup, the uninstaller and a README. Windows may ask for administrator approval once.
+
+New in {PLUS}:
+
+Severe weather alerts. A colored band under the location name shows each active alert. A click on the band shows the full text. The tray shows a bubble for each new alert. The bubble closes after a time that you choose. With "Honor Do Not Disturb" the tray uses a Windows notification, which waits while Do Not Disturb is on.
+
+More data. The settings panel has a "More data" section with a Main box and a Tray box for each item. The items are weather now and the airport forecast from the nearest airport, snow of the last 1, 6 and 24 hours, heat stress, storm energy and thunder risk, soil temperature and moisture, freezing level, sunshine and evaporation, buoy waves and tide, river gauge height and flow, day details, an hourly chart, and the forecaster's discussion for US locations.
+
+The tray menu has a "Severe weather alerts" submenu, and the Hover details submenu has a line for each new item.
+
+Build {VERSION}
+
+VirusTotal:
+
+installer:
+{SETUP_LINK}
+
+uninstaller:
+{UNINSTALL_LINK}

@@ -97,12 +97,14 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v47.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v47.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v49.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v49.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v47.zip. The version is the last
-part of the build number, so build 2.1.0.47 is v47. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v49.zip. The version is the last
+part of the build number, so build 2.1.0.49 is v49. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
+It also writes FluentWeather-Plus-v49-release-notes.txt on the Desktop. Copy its text into
+the description of the GitHub release. It has the VirusTotal links of both files filled in.
 
 The setup holds the app as it is built and installed on your PC, signed again with
 a throwaway certificate, the Microsoft packages it needs and the tray icons program. The other PC installs it in about a minute. It needs no Visual Studio,
@@ -353,7 +355,8 @@ for the app covers it.
 
 Extra data
 ----------
-Five feeds under "Extra data" in the settings panel, each with a Main box (a card
+Five feeds at the top of "More data options" in the settings panel, each with
+a Main box (a card
 in the main window) and a Tray box (a line for the tray hover panel). All are off
 by default: waves and sea temperature, wind forecast (gusts, 80 m), other forecast
 models (ECMWF, GFS, ICON), river flow, and pollen (weather.com in the US,

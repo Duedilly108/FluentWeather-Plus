@@ -53,6 +53,10 @@ namespace FluentWeather.Utils
             return (WetUnits) await ApplicationData.Current.LocalSettings.ReadAsync<int>("selectedUnits");
         }
 
+        /// <summary>Local build: true when the app shows times in the 12 hour format.</summary>
+        public static async Task<bool> Is12HourAsync() =>
+            await ApplicationData.Current.LocalSettings.ReadAsync<bool>("is12HourFormat");
+
         public static async Task<string> GetTimeBasedOnUserSettings(DateTime time)
         {
             bool is12HourFormat = await ApplicationData.Current.LocalSettings.ReadAsync<bool>("is12HourFormat").ConfigureAwait(false);

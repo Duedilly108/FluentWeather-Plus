@@ -23,6 +23,12 @@
 // background task refreshes it about every 15 minutes, even when the app is closed.
 // This helper watches and reads that file, so a city change shows within a second. It does not connect to the internet.
 //
+// Severe weather alerts: the app writes "alert=" lines for each city when "Severe weather alerts"
+// has its Tray box ticked in the app settings (on by default). A new alert opens a bubble above
+// the tray icons, in the colors of the hover panel, or a Windows notification when "Honor Do Not
+// Disturb" is on. The weather picture gets a small warning mark while an alert is active.
+// The choices are in the tray menu under "Severe weather alerts".
+//
 // Language level: C# 5, so the compiler built into Windows can build it.
 
 using System;
@@ -51,8 +57,8 @@ using Windows.Foundation.Collections;
 [assembly: System.Reflection.AssemblyDescription("Shows the FluentWeather temperature and weather icon in the notification area.")]
 [assembly: System.Reflection.AssemblyProduct("FluentWeather Local")]
 [assembly: System.Reflection.AssemblyCompany("Built on this PC by FluentWeatherLocal Setup")]
-[assembly: System.Reflection.AssemblyVersion("1.25.1.0")]
-[assembly: System.Reflection.AssemblyFileVersion("1.25.1.0")]
+[assembly: System.Reflection.AssemblyVersion("1.26.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.26.0.0")]
 
 namespace FluentWeatherLocal
 {
@@ -119,6 +125,68 @@ namespace FluentWeatherLocal
         public DateTime WrittenUtc;
         // Ready-to-show details written by the app ("d.Humidity=96%" becomes Details["Humidity"] = "96%").
         public Dictionary<string, string> Details = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        public string PlaceId = string.Empty;
+        public List<AlertInfo> Alerts = new List<AlertInfo>();
+    }
+
+    // One active weather alert, from an "alert=" line of the app:
+    // alert=key|significance|severity|end (ISO)|name|until text|area|source|summary
+    internal sealed class AlertInfo
+    {
+        public string Key = string.Empty;
+        public string Significance = string.Empty;   // W warning, A watch, Y advisory, S statement
+        public int Severity = 5;                     // 1 extreme to 5 unknown
+        public DateTime EndUtc = DateTime.MaxValue;
+        public string Name = string.Empty;
+        public string Until = string.Empty;
+        public string Area = string.Empty;
+        public string Source = string.Empty;
+        public string Summary = string.Empty;
+        public string PlaceId = string.Empty;
+        public string Place = string.Empty;
+
+        public int Rank
+        {
+            get
+            {
+                var group = Significance == "W" ? 0 : Significance == "A" ? 1 : Significance == "Y" ? 2 : 3;
+                return group * 10 + Severity;
+            }
+        }
+
+        public static AlertInfo Parse(string value)
+        {
+            var parts = value.Split(new[] { '|' }, 9);
+            if (parts.Length < 9 || parts[0].Length == 0 || parts[4].Length == 0)
+                return null;
+            var a = new AlertInfo();
+            a.Key = parts[0];
+            a.Significance = parts[1];
+            int severity;
+            if (int.TryParse(parts[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out severity))
+                a.Severity = severity;
+            DateTimeOffset end;
+            if (DateTimeOffset.TryParse(parts[3], CultureInfo.InvariantCulture, DateTimeStyles.None, out end))
+                a.EndUtc = end.UtcDateTime;
+            a.Name = parts[4];
+            a.Until = parts[5];
+            a.Area = parts[6];
+            a.Source = parts[7];
+            a.Summary = parts[8];
+            return a;
+        }
+
+        // Red for warnings, orange for watches, dark yellow for advisories, blue for statements.
+        public Color Color
+        {
+            get
+            {
+                if (Significance == "W") return Severity <= 1 ? Color.FromArgb(255, 142, 14, 18) : Color.FromArgb(255, 214, 48, 40);
+                if (Significance == "A") return Color.FromArgb(255, 230, 110, 20);
+                if (Significance == "Y") return Color.FromArgb(255, 214, 170, 20);
+                return Color.FromArgb(255, 80, 130, 200);
+            }
+        }
     }
 
     // The details the hover panel can show, in display order, with their labels.
@@ -165,15 +233,29 @@ namespace FluentWeatherLocal
             new[] { "ExtraModels", "Other forecast models" },
             new[] { "ExtraRiver", "River flow" },
             new[] { "ExtraPollen", "Pollen" },
+            // "More data" (v49). The app writes these lines only when the "Tray" box of the item is
+            // ticked under "More data" in the app settings. "Weather alert" is ticked there by default.
+            new[] { "Alert", "Weather alert" },
+            new[] { "MoreAirport", "Weather now (airport)" },
+            new[] { "MoreSnow", "Snow, last 1 h and 6 h" },
+            new[] { "MoreStorm", "Thunder risk today" },
+            new[] { "MoreHeat", "Heat stress (WBGT)" },
+            new[] { "MoreFreezing", "Freezing level" },
+            new[] { "MoreGround", "Soil temperature and moisture" },
+            new[] { "MoreSun", "Sunshine today" },
+            new[] { "MoreBuoy", "Buoy: waves and tide" },
+            new[] { "MoreGauge", "River height and flow" },
+            new[] { "MoreHourly", "Next 12 h rain, snow and ice" },
         };
 
         public static readonly string[] Defaults =
         {
-            "Conditions", "Temperature", "FeelsLike", "HighLow", "Humidity", "Wind", "UV", "Rain24h", "Sunrise", "Sunset", "Moon", "Observed"
+            "Conditions", "Temperature", "FeelsLike", "HighLow", "Humidity", "Wind", "UV", "Rain24h", "Sunrise", "Sunset", "Moon", "Observed", "Alert"
         };
 
         // Raised when a new detail joins the defaults. Saved choices from an older version get it once.
-        public const int Version = 2;
+        // Version 2 added "Moon phase". Version 3 added "Weather alert".
+        public const int Version = 3;
     }
 
     // The 14 weather pictures of the tray icon and the hover panel. They are drawn in code on a
@@ -1279,6 +1361,266 @@ namespace FluentWeatherLocal
         }
     }
 
+    // The alert bubble. It opens above the notification area, in the colors of the hover panel, with
+    // a bar in the alert color on the left. It never takes the focus from the window you work in.
+    internal sealed class AlertBubble : Form
+    {
+        private const int WS_EX_TOOLWINDOW = 0x80;
+        private const int WS_EX_NOACTIVATE = 0x08000000;
+        private const int WS_EX_TOPMOST = 0x8;
+        private const int CS_DROPSHADOW = 0x00020000;
+        private const int DWMWA_WINDOW_CORNER_PREFERENCE = 33;
+        private const int DWMWCP_ROUND = 2;
+        private const TextFormatFlags TextFlags = TextFormatFlags.NoPrefix | TextFormatFlags.NoPadding;
+
+        private static readonly Color SkyTop = Color.FromArgb(255, 4, 12, 32);
+        private static readonly Color SkyBottom = Color.FromArgb(255, 22, 52, 110);
+        private static readonly Color TextColor = Color.FromArgb(255, 248, 250, 255);
+        private static readonly Color LabelColor = Color.FromArgb(255, 176, 200, 236);
+        private static readonly Color BorderColor = Color.FromArgb(255, 48, 80, 140);
+        private static readonly Color LinkColor = Color.FromArgb(255, 140, 196, 255);
+
+        private AlertInfo _alert;
+        private int _more;
+        private string _countdown = string.Empty;
+        private Rectangle _closeRect;
+        private Rectangle _detailsRect;
+        private Rectangle _countdownRect;
+
+        public event Action<AlertInfo> DetailsClicked;
+        public event Action CloseClicked;
+
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attribute, ref int value, int size);
+
+        public AlertBubble()
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            TopMost = true;
+            DoubleBuffered = true;
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = SkyTop;
+        }
+
+        protected override bool ShowWithoutActivation
+        {
+            get { return true; }
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE | WS_EX_TOPMOST;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            try
+            {
+                var round = DWMWCP_ROUND;
+                DwmSetWindowAttribute(Handle, DWMWA_WINDOW_CORNER_PREFERENCE, ref round, sizeof(int));
+            }
+            catch (Exception)
+            {
+                // The corners are cosmetic.
+            }
+        }
+
+        private int Scale(int value)
+        {
+            using (var g = CreateGraphics())
+                return (int)Math.Round(value * g.DpiX / 96f);
+        }
+
+        private Font SmallFont { get { return new Font("Segoe UI", 8.5f); } }
+        private Font NameFont { get { return new Font("Segoe UI", 11f, FontStyle.Bold); } }
+        private Font BodyFont { get { return new Font("Segoe UI", 9f); } }
+        private Font LinkFont { get { return new Font("Segoe UI", 9f, FontStyle.Underline); } }
+
+        private string Line2
+        {
+            get
+            {
+                if (_alert == null) return string.Empty;
+                var until = _alert.Until.Length > 0 ? char.ToUpper(_alert.Until[0], CultureInfo.CurrentCulture) + _alert.Until.Substring(1) + ". " : string.Empty;
+                return until + _alert.Summary;
+            }
+        }
+
+        private string MoreText
+        {
+            get { return _more > 0 ? "And " + _more + (_more == 1 ? " more alert." : " more alerts.") : string.Empty; }
+        }
+
+        public void SetContent(AlertInfo alert, int more, bool lightTheme)
+        {
+            _alert = alert;
+            _more = more;
+            Layout2();
+            Invalidate();
+        }
+
+        public void SetCountdown(TimeSpan? left)
+        {
+            var text = left.HasValue
+                ? "Closes in " + ((int)left.Value.TotalMinutes).ToString(CultureInfo.InvariantCulture) + ":" + left.Value.Seconds.ToString("00", CultureInfo.InvariantCulture)
+                : string.Empty;
+            if (text == _countdown)
+                return;
+            _countdown = text;
+            if (Visible)
+                Invalidate(_countdownRect);
+        }
+
+        private int _height;
+
+        // Works out the height from the text, wrapped to the fixed width.
+        private void Layout2()
+        {
+            using (var g = CreateGraphics())
+            using (var small = SmallFont)
+            using (var name = NameFont)
+            using (var body = BodyFont)
+            {
+                var width = Scale(360);
+                var left = Scale(18);
+                var textWidth = width - left - Scale(14);
+                var y = Scale(10);
+                y += Measure(g, "FluentWeather-Plus alert", small, textWidth) + Scale(6);
+                y += Measure(g, _alert.Name, name, textWidth) + Scale(2);
+                y += Measure(g, _alert.Place, body, textWidth) + Scale(6);
+                y += Measure(g, Line2, body, textWidth) + Scale(6);
+                if (_alert.Source.Length > 0)
+                    y += Measure(g, _alert.Source, small, textWidth) + Scale(4);
+                if (_more > 0)
+                    y += Measure(g, MoreText, small, textWidth) + Scale(4);
+                y += Scale(6) + Measure(g, "Show details", body, textWidth) + Scale(12);
+                _height = y;
+                Size = new Size(width, _height);
+            }
+        }
+
+        private static int Measure(Graphics g, string text, Font font, int width)
+        {
+            if (string.IsNullOrEmpty(text))
+                return 0;
+            return TextRenderer.MeasureText(g, text, font, new Size(Math.Max(1, width), int.MaxValue), TextFlags | TextFormatFlags.WordBreak).Height;
+        }
+
+        // Bottom right of the screen with the taskbar, above the notification area.
+        public void ShowAtCorner()
+        {
+            var area = Screen.PrimaryScreen.WorkingArea;
+            var gap = Scale(12);
+            Location = new Point(area.Right - Width - gap, area.Bottom - Height - gap);
+            if (!Visible)
+                Show();
+            else
+                Invalidate();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            // The whole bubble is painted in OnPaint.
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            if (_alert == null)
+                return;
+            var g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            var area = new Rectangle(0, 0, Width, Height);
+            using (var sky = new LinearGradientBrush(area, SkyTop, SkyBottom, LinearGradientMode.Vertical))
+                g.FillRectangle(sky, area);
+            using (var shine = new LinearGradientBrush(new Rectangle(0, 0, Width, Scale(28) + 1),
+                       Color.FromArgb(34, 255, 255, 255), Color.FromArgb(0, 255, 255, 255), LinearGradientMode.Vertical))
+                g.FillRectangle(shine, 0, 0, Width, Scale(28));
+            using (var bar = new SolidBrush(_alert.Color))
+                g.FillRectangle(bar, 0, 0, Scale(6), Height);
+            using (var pen = new Pen(BorderColor))
+                g.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
+
+            using (var small = SmallFont)
+            using (var name = NameFont)
+            using (var body = BodyFont)
+            using (var link = LinkFont)
+            {
+                var left = Scale(18);
+                var textWidth = Width - left - Scale(14);
+                var y = Scale(10);
+                var flags = TextFlags | TextFormatFlags.WordBreak;
+
+                var h = Measure(g, "FluentWeather-Plus alert", small, textWidth);
+                TextRenderer.DrawText(g, "FluentWeather-Plus alert", small, new Rectangle(left, y, textWidth, h), LabelColor, flags);
+                _closeRect = new Rectangle(Width - Scale(34), Scale(4), Scale(28), Scale(24));
+                TextRenderer.DrawText(g, "\u2715", body, _closeRect, LabelColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPrefix);
+                y += h + Scale(6);
+
+                h = Measure(g, _alert.Name, name, textWidth);
+                TextRenderer.DrawText(g, _alert.Name, name, new Rectangle(left, y, textWidth, h), TextColor, flags);
+                y += h + Scale(2);
+                h = Measure(g, _alert.Place, body, textWidth);
+                TextRenderer.DrawText(g, _alert.Place, body, new Rectangle(left, y, textWidth, h), LabelColor, flags);
+                y += h + Scale(6);
+                h = Measure(g, Line2, body, textWidth);
+                TextRenderer.DrawText(g, Line2, body, new Rectangle(left, y, textWidth, h), TextColor, flags);
+                y += h + Scale(6);
+                if (_alert.Source.Length > 0)
+                {
+                    h = Measure(g, _alert.Source, small, textWidth);
+                    TextRenderer.DrawText(g, _alert.Source, small, new Rectangle(left, y, textWidth, h), LabelColor, flags);
+                    y += h + Scale(4);
+                }
+                if (_more > 0)
+                {
+                    h = Measure(g, MoreText, small, textWidth);
+                    TextRenderer.DrawText(g, MoreText, small, new Rectangle(left, y, textWidth, h), LabelColor, flags);
+                    y += h + Scale(4);
+                }
+                y += Scale(6);
+                var linkSize = TextRenderer.MeasureText(g, "Show details", link, Size.Empty, TextFlags);
+                _detailsRect = new Rectangle(left, y, linkSize.Width, linkSize.Height);
+                TextRenderer.DrawText(g, "Show details", link, _detailsRect, LinkColor, TextFlags);
+                _countdownRect = new Rectangle(left + linkSize.Width + Scale(8), y, Width - left - linkSize.Width - Scale(8) - Scale(14), linkSize.Height);
+                if (_countdown.Length > 0)
+                    TextRenderer.DrawText(g, _countdown, small, _countdownRect, LabelColor, TextFlags | TextFormatFlags.Right);
+            }
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            Cursor = _detailsRect.Contains(e.Location) || _closeRect.Contains(e.Location) ? Cursors.Hand : Cursors.Default;
+        }
+
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+            if (e.Button != MouseButtons.Left || _alert == null)
+                return;
+            if (_closeRect.Contains(e.Location))
+            {
+                var close = CloseClicked;
+                if (close != null) close();
+            }
+            else if (_detailsRect.Contains(e.Location))
+            {
+                var details = DetailsClicked;
+                if (details != null) details(_alert);
+            }
+        }
+    }
+
     // Draws a larger, colored arrow on menu items that open a submenu, such as "Hover details",
     // so the submenu is easy to notice. Everything else looks like the standard menu.
     internal sealed class MenuRenderer : ToolStripProfessionalRenderer
@@ -1346,6 +1688,18 @@ namespace FluentWeatherLocal
         private DateTime _keepMenuOpenUntil = DateTime.MinValue;
         private string _trayCity = AppCity;   // "app" = same city as the app, otherwise a saved placeId
         private const string AppCity = "app";
+
+        // Severe weather alerts. See CheckAlerts.
+        private string _alertShow = "watches";   // off, warnings, watches (warnings and watches) or all
+        private bool _alertDnd;                  // true: Windows notifications, which Do Not Disturb holds back
+        private int _alertCloseSeconds = 300;    // 0: the bubble stays until it is closed
+        private bool _alertAllPlaces;            // false: the city the tray shows, true: all saved cities
+        private readonly AlertBubble _bubble = new AlertBubble();
+        private readonly System.Windows.Forms.Timer _bubbleTimer = new System.Windows.Forms.Timer();
+        private DateTime _bubbleCloseUtc = DateTime.MaxValue;
+        private Dictionary<string, DateTime> _seenAlerts;
+        private string _alertFilesStamp = string.Empty;
+        private AlertInfo _balloonAlert;
 
         // Left-click toggle. A click on the notification area makes the taskbar the active window,
         // so the active window is checked a few times a second and remembered before the click.
@@ -1436,6 +1790,7 @@ namespace FluentWeatherLocal
             _pictureIcon = CreateIcon();
 
             InitHover();
+            InitAlerts();
             BuildMenu();
             Refresh(true);
 
@@ -1529,9 +1884,11 @@ namespace FluentWeatherLocal
             var reading = GetDisplayReading(out waitingFor);
             var size = NativeMethods.GetSmallIconSize();
             var light = TaskbarIsLight();
+            CheckAlerts(reading);
+            var mark = reading == null ? null : TopAlert(reading.Alerts);
 
             var moonStep = (int)(WeatherArt.MoonPhase(DateTime.UtcNow) * 50);   // redraw the moon as the phase changes
-            var key = _trayCity + "|" + moonStep + "|" + string.Format(CultureInfo.InvariantCulture, "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+            var key = _trayCity + "|" + moonStep + "|" + (mark == null ? "-" : mark.Significance + mark.Severity) + "|" + string.Format(CultureInfo.InvariantCulture, "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
                 reading == null ? "none" : reading.WrittenUtc.Ticks.ToString(CultureInfo.InvariantCulture),
                 reading != null && IsStale(reading), _showFeelsLike, size, light,
                 reading == null ? 0 : reading.Temp, reading == null ? 0 : reading.Feels,
@@ -1556,7 +1913,7 @@ namespace FluentWeatherLocal
             }
             else
             {
-                newPicture = LoadWeatherIcon(reading.IconCode, reading.Phrase, reading.IsNight, reading.Latitude, size, light) ?? LoadAppIcon(size);
+                newPicture = LoadWeatherIcon(reading.IconCode, reading.Phrase, reading.IsNight, reading.Latitude, size, light, mark) ?? LoadAppIcon(size);
                 var value = _showFeelsLike ? reading.Feels : reading.Temp;
                 newNumber = RenderNumber(value.ToString(CultureInfo.InvariantCulture), size, light);
                 tip = BuildTooltip(reading);
@@ -1775,7 +2132,8 @@ namespace FluentWeatherLocal
         }
 
         // One of the eight weather pictures, drawn for the taskbar color. Null for an unknown code.
-        private static Icon LoadWeatherIcon(int iconCode, string phrase, bool night, double latitude, int size, bool lightTaskbar)
+        // With an active alert, a small warning triangle in the alert color sits in the lower right corner.
+        private static Icon LoadWeatherIcon(int iconCode, string phrase, bool night, double latitude, int size, bool lightTaskbar, AlertInfo alert)
         {
             var kind = WeatherArt.FromReading(iconCode, phrase, night);
             if (kind == WeatherKind.None)
@@ -1783,11 +2141,47 @@ namespace FluentWeatherLocal
             try
             {
                 using (var bitmap = WeatherArt.Render(kind, size, lightTaskbar, latitude))
+                {
+                    if (alert != null)
+                        DrawAlertMark(bitmap, alert.Color);
                     return ToIcon(bitmap);
+                }
             }
             catch (Exception)
             {
                 return null;
+            }
+        }
+
+        private static void DrawAlertMark(Bitmap bitmap, Color color)
+        {
+            var size = bitmap.Width;
+            var side = Math.Max(7f, size * 0.5f);
+            var x0 = size - side;
+            var y0 = size - side * 0.9f;
+            using (var g = Graphics.FromImage(bitmap))
+            using (var path = new GraphicsPath())
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                path.AddPolygon(new[]
+                {
+                    new PointF(x0 + side / 2f, y0),
+                    new PointF(size - 0.5f, size - 0.5f),
+                    new PointF(x0 + 0.5f, size - 0.5f)
+                });
+                using (var brush = new SolidBrush(color))
+                    g.FillPath(brush, path);
+                using (var pen = new Pen(Color.FromArgb(220, 0, 0, 0), Math.Max(1f, size / 24f)))
+                    g.DrawPath(pen, path);
+                if (size >= 20)
+                {
+                    using (var mark = new Pen(Color.Black, Math.Max(1.2f, size / 16f)))
+                    {
+                        var cx = x0 + side / 2f;
+                        g.DrawLine(mark, cx, y0 + side * 0.32f, cx, y0 + side * 0.62f);
+                        g.DrawLine(mark, cx, y0 + side * 0.72f, cx, y0 + side * 0.80f);
+                    }
+                }
             }
         }
 
@@ -1934,11 +2328,21 @@ namespace FluentWeatherLocal
         private static WeatherReading ParseReading(IEnumerable<string> lines)
         {
             var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            var alerts = new List<AlertInfo>();
             foreach (var line in lines)
             {
                 var eq = line.IndexOf('=');
-                if (eq > 0)
-                    values[line.Substring(0, eq).Trim()] = line.Substring(eq + 1).Trim();
+                if (eq <= 0)
+                    continue;
+                var name = line.Substring(0, eq).Trim();
+                if (name.Equals("alert", StringComparison.OrdinalIgnoreCase))
+                {
+                    var alert = AlertInfo.Parse(line.Substring(eq + 1).Trim());
+                    if (alert != null)
+                        alerts.Add(alert);
+                    continue;
+                }
+                values[name] = line.Substring(eq + 1).Trim();
             }
 
             var r = new WeatherReading();
@@ -1954,6 +2358,13 @@ namespace FluentWeatherLocal
             r.FullPlace = Get(values, "fullplace");
             r.Unit = Get(values, "unit");
             r.Phrase = Get(values, "phrase");
+            r.PlaceId = Get(values, "placeid");
+            foreach (var alert in alerts)
+            {
+                alert.PlaceId = r.PlaceId;
+                alert.Place = string.IsNullOrEmpty(r.FullPlace) ? r.Place : r.FullPlace;
+                r.Alerts.Add(alert);
+            }
             foreach (var kv in values)
             {
                 if (kv.Key.StartsWith("d.", StringComparison.OrdinalIgnoreCase) && kv.Key.Length > 2)
@@ -2044,6 +2455,8 @@ namespace FluentWeatherLocal
         }
 
         // tray-settings.txt: "show=temp" or "show=feels", and "city=app" or "city=<placeId>".
+        // Alerts: "alertshow=off|warnings|watches|all", "alertdnd=0|1", "alertclose=<seconds, 0 = never>",
+        // "alertplaces=shown|all".
         private void LoadSettings()
         {
             try
@@ -2069,6 +2482,14 @@ namespace FluentWeatherLocal
                         int.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out version);
                     else if (k.Equals("city", StringComparison.OrdinalIgnoreCase) && v.Length > 0)
                         _trayCity = v;
+                    else if (k.Equals("alertshow", StringComparison.OrdinalIgnoreCase) && v.Length > 0)
+                        _alertShow = v.ToLowerInvariant();
+                    else if (k.Equals("alertdnd", StringComparison.OrdinalIgnoreCase))
+                        _alertDnd = v == "1";
+                    else if (k.Equals("alertclose", StringComparison.OrdinalIgnoreCase))
+                        int.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out _alertCloseSeconds);
+                    else if (k.Equals("alertplaces", StringComparison.OrdinalIgnoreCase))
+                        _alertAllPlaces = v.Equals("all", StringComparison.OrdinalIgnoreCase);
                     else if (k.Equals("hoverpos", StringComparison.OrdinalIgnoreCase))
                     {
                         // "hoverpos=x,y" in screen pixels, or "hoverpos=auto" for next to the icons.
@@ -2083,6 +2504,9 @@ namespace FluentWeatherLocal
                 // Version 2 added "Moon phase" to the defaults. Before, the moon line showed by itself at night.
                 if (hadDetails && version < 2 && !_hoverDetails.Contains("Moon"))
                     _hoverDetails.Add("Moon");
+                // Version 3 added "Weather alert" to the defaults.
+                if (hadDetails && version < 3 && !_hoverDetails.Contains("Alert"))
+                    _hoverDetails.Add("Alert");
             }
             catch (Exception)
             {
@@ -2100,6 +2524,10 @@ namespace FluentWeatherLocal
                     "city=" + _trayCity + "\r\n" +
                     "details=" + string.Join(",", _hoverDetails) + "\r\n" +
                     "detailsversion=" + DetailCatalog.Version.ToString(CultureInfo.InvariantCulture) + "\r\n" +
+                    "alertshow=" + _alertShow + "\r\n" +
+                    "alertdnd=" + (_alertDnd ? "1" : "0") + "\r\n" +
+                    "alertclose=" + _alertCloseSeconds.ToString(CultureInfo.InvariantCulture) + "\r\n" +
+                    "alertplaces=" + (_alertAllPlaces ? "all" : "shown") + "\r\n" +
                     "hoverpos=" + (_hoverLocation.HasValue
                         ? _hoverLocation.Value.X.ToString(CultureInfo.InvariantCulture) + "," + _hoverLocation.Value.Y.ToString(CultureInfo.InvariantCulture)
                         : "auto") + "\r\n");
@@ -2132,6 +2560,305 @@ namespace FluentWeatherLocal
                 Launch(Protocol);
             else
                 Launch(Protocol + "switch?placeId=" + Uri.EscapeDataString(_trayCity));
+        }
+
+        // ------------------------------------------------------------------
+        // Severe weather alerts
+        // ------------------------------------------------------------------
+
+        private string SeenAlertsPath
+        {
+            get { return Path.Combine(_workDir, "tray-alerts-seen.txt"); }
+        }
+
+        private void InitAlerts()
+        {
+            LoadSeenAlerts();
+            _bubbleTimer.Interval = 1000;
+            _bubbleTimer.Tick += delegate
+            {
+                if (!_bubble.Visible)
+                {
+                    _bubbleTimer.Stop();
+                    return;
+                }
+                // The countdown waits while the pointer is on the bubble.
+                if (_bubble.Bounds.Contains(Cursor.Position) && _bubbleCloseUtc != DateTime.MaxValue)
+                    _bubbleCloseUtc = _bubbleCloseUtc.AddSeconds(1);
+                var left = _bubbleCloseUtc - DateTime.UtcNow;
+                if (left <= TimeSpan.Zero)
+                {
+                    _bubble.Hide();
+                    _bubbleTimer.Stop();
+                    return;
+                }
+                _bubble.SetCountdown(_bubbleCloseUtc == DateTime.MaxValue ? null : (TimeSpan?)left);
+            };
+            _bubble.DetailsClicked += delegate (AlertInfo alert)
+            {
+                _bubble.Hide();
+                OpenAlertDetails(alert);
+            };
+            _bubble.CloseClicked += delegate { _bubble.Hide(); };
+            _numberIcon.BalloonTipClicked += delegate
+            {
+                if (_balloonAlert != null)
+                    OpenAlertDetails(_balloonAlert);
+            };
+        }
+
+        private void OpenAlertDetails(AlertInfo alert)
+        {
+            var query = string.IsNullOrEmpty(alert.PlaceId) ? string.Empty : "placeId=" + Uri.EscapeDataString(alert.PlaceId) + "&";
+            Launch(Protocol + "switch?" + query + "alerts=open");
+        }
+
+        private bool PassesLevel(AlertInfo a)
+        {
+            if (a.EndUtc <= DateTime.UtcNow)
+                return false;
+            switch (_alertShow)
+            {
+                case "off": return false;
+                case "warnings": return a.Significance == "W";
+                case "watches": return a.Significance == "W" || a.Significance == "A";
+                default: return true;
+            }
+        }
+
+        // The most important active alert that passes the "Show alerts" choice, or null.
+        private AlertInfo TopAlert(List<AlertInfo> alerts)
+        {
+            AlertInfo best = null;
+            foreach (var a in alerts)
+                if (PassesLevel(a) && (best == null || a.Rank < best.Rank))
+                    best = a;
+            return best;
+        }
+
+        // Shows the bubble (or a Windows notification) for alerts that were not shown before.
+        // The files are read again only after the app wrote them.
+        private void CheckAlerts(WeatherReading shown)
+        {
+            try
+            {
+                if (_alertShow == "off")
+                    return;
+                var stamp = FileStamp("tray-weather.txt") + "|" + FileStamp("tray-weather-all.txt") + "|" + _trayCity + "|" + _alertShow + "|" + _alertAllPlaces;
+                if (stamp == _alertFilesStamp)
+                    return;
+                _alertFilesStamp = stamp;
+
+                var all = new List<AlertInfo>();
+                if (shown != null)
+                    all.AddRange(shown.Alerts);
+                if (_alertAllPlaces)
+                {
+                    var current = ReadWeather();
+                    if (current != null)
+                        all.AddRange(current.Alerts);
+                    foreach (var r in ReadAllCities().Values)
+                        all.AddRange(r.Alerts);
+                }
+
+                var fresh = new List<AlertInfo>();
+                var keys = new HashSet<string>();
+                foreach (var a in all)
+                {
+                    if (!PassesLevel(a) || _seenAlerts.ContainsKey(a.Key) || !keys.Add(a.Key))
+                        continue;
+                    fresh.Add(a);
+                }
+                if (fresh.Count == 0)
+                    return;
+
+                fresh.Sort(delegate (AlertInfo x, AlertInfo y) { return x.Rank.CompareTo(y.Rank); });
+                foreach (var a in fresh)
+                    _seenAlerts[a.Key] = a.EndUtc == DateTime.MaxValue ? DateTime.UtcNow.AddDays(3) : a.EndUtc;
+                SaveSeenAlerts();
+                ShowAlert(fresh[0], fresh.Count - 1);
+            }
+            catch (Exception)
+            {
+                // The next check tries again.
+            }
+        }
+
+        private string FileStamp(string name)
+        {
+            try
+            {
+                var path = GetLocalStatePath(name);
+                return path != null && File.Exists(path) ? File.GetLastWriteTimeUtc(path).Ticks.ToString(CultureInfo.InvariantCulture) : "0";
+            }
+            catch (Exception)
+            {
+                return "0";
+            }
+        }
+
+        private void ShowAlert(AlertInfo alert, int more)
+        {
+            if (_alertDnd)
+            {
+                // A Windows notification. Windows holds it back while Do Not Disturb is on.
+                _balloonAlert = alert;
+                var text = alert.Place + "\n" + (alert.Until.Length > 0 ? Capital(alert.Until) + ". " : string.Empty) + alert.Summary;
+                if (more > 0)
+                    text += "\n" + string.Format(CultureInfo.InvariantCulture, "And {0} more.", more);
+                if (text.Length > 250)
+                    text = text.Substring(0, 249) + "\u2026";
+                _numberIcon.ShowBalloonTip(10000, alert.Name, text, alert.Significance == "W" ? ToolTipIcon.Error : ToolTipIcon.Warning);
+                return;
+            }
+
+            _bubble.SetContent(alert, more, TaskbarIsLight());
+            _bubbleCloseUtc = _alertCloseSeconds > 0 ? DateTime.UtcNow.AddSeconds(_alertCloseSeconds) : DateTime.MaxValue;
+            _bubble.SetCountdown(_alertCloseSeconds > 0 ? (TimeSpan?)TimeSpan.FromSeconds(_alertCloseSeconds) : null);
+            _bubble.ShowAtCorner();
+            _bubbleTimer.Start();
+        }
+
+        private static string Capital(string text)
+        {
+            return string.IsNullOrEmpty(text) ? text : char.ToUpper(text[0], CultureInfo.CurrentCulture) + text.Substring(1);
+        }
+
+        private void LoadSeenAlerts()
+        {
+            _seenAlerts = new Dictionary<string, DateTime>(StringComparer.Ordinal);
+            try
+            {
+                if (!File.Exists(SeenAlertsPath))
+                    return;
+                foreach (var line in File.ReadAllLines(SeenAlertsPath))
+                {
+                    var bar = line.LastIndexOf('|');
+                    long ticks;
+                    if (bar > 0 && long.TryParse(line.Substring(bar + 1), NumberStyles.Integer, CultureInfo.InvariantCulture, out ticks))
+                        _seenAlerts[line.Substring(0, bar)] = new DateTime(ticks, DateTimeKind.Utc);
+                }
+            }
+            catch (Exception)
+            {
+                // Start with an empty list.
+            }
+        }
+
+        // "key|end ticks" per line. Alerts that ended more than a day ago are dropped.
+        private void SaveSeenAlerts()
+        {
+            try
+            {
+                var sb = new StringBuilder();
+                var limit = DateTime.UtcNow.AddDays(-1);
+                foreach (var kv in new List<KeyValuePair<string, DateTime>>(_seenAlerts))
+                {
+                    if (kv.Value < limit)
+                    {
+                        _seenAlerts.Remove(kv.Key);
+                        continue;
+                    }
+                    sb.Append(kv.Key).Append('|').Append(kv.Value.Ticks.ToString(CultureInfo.InvariantCulture)).Append("\r\n");
+                }
+                Directory.CreateDirectory(_workDir);
+                File.WriteAllText(SeenAlertsPath, sb.ToString());
+            }
+            catch (Exception)
+            {
+                // The list is kept in memory until the tray helper restarts.
+            }
+        }
+
+        private void SetAlertSetting(Action change)
+        {
+            _keepMenuOpenUntil = DateTime.UtcNow.AddMilliseconds(500);
+            change();
+            _alertFilesStamp = string.Empty;
+            SaveSettings();
+            Refresh(true);
+        }
+
+        private ToolStripMenuItem BuildAlertMenu()
+        {
+            var menu = new ToolStripMenuItem("Severe weather alerts");
+
+            var show = new ToolStripMenuItem("Show alerts");
+            foreach (var choice in new[] { new[] { "off", "Off" }, new[] { "warnings", "Warnings" },
+                         new[] { "watches", "Warnings and watches" }, new[] { "all", "All alerts" } })
+            {
+                var value = choice[0];
+                var item = new ToolStripMenuItem(choice[1]);
+                item.Checked = _alertShow == value;
+                item.Click += delegate { SetAlertSetting(delegate { _alertShow = value; }); };
+                show.DropDownItems.Add(item);
+            }
+            menu.DropDownItems.Add(show);
+
+            var dnd = new ToolStripMenuItem("Honor Do Not Disturb (use Windows notifications)");
+            dnd.Checked = _alertDnd;
+            dnd.ToolTipText = "Windows notifications wait while Do Not Disturb is on. The bubble does not wait.";
+            dnd.Click += delegate { SetAlertSetting(delegate { _alertDnd = !_alertDnd; }); };
+            menu.DropDownItems.Add(dnd);
+
+            var close = new ToolStripMenuItem("Close the bubble after");
+            close.Enabled = !_alertDnd;
+            foreach (var seconds in new[] { 0, 30, 60, 300, 900 })
+            {
+                var value = seconds;
+                var text = value == 0 ? "Never" : value < 60 ? value + " seconds" : value == 60 ? "1 minute" : (value / 60) + " minutes";
+                var item = new ToolStripMenuItem(text);
+                item.Checked = _alertCloseSeconds == value;
+                item.Click += delegate { SetAlertSetting(delegate { _alertCloseSeconds = value; }); };
+                close.DropDownItems.Add(item);
+            }
+            menu.DropDownItems.Add(close);
+
+            var places = new ToolStripMenuItem("Locations");
+            var shownPlace = new ToolStripMenuItem("The city the tray shows");
+            shownPlace.Checked = !_alertAllPlaces;
+            shownPlace.Click += delegate { SetAlertSetting(delegate { _alertAllPlaces = false; }); };
+            places.DropDownItems.Add(shownPlace);
+            var allPlaces = new ToolStripMenuItem("All saved locations");
+            allPlaces.Checked = _alertAllPlaces;
+            allPlaces.Click += delegate { SetAlertSetting(delegate { _alertAllPlaces = true; }); };
+            places.DropDownItems.Add(allPlaces);
+            menu.DropDownItems.Add(places);
+
+            menu.DropDownItems.Add(new ToolStripSeparator());
+            var test = new ToolStripMenuItem("Show a test alert");
+            test.ToolTipText = "Shows how an alert looks with the current choices. It is not a real alert.";
+            test.Click += delegate
+            {
+                var sample = new AlertInfo();
+                sample.Key = "test";
+                sample.Significance = "W";
+                sample.Severity = 2;
+                sample.Name = "Test alert";
+                sample.Until = "until " + DateTime.Now.AddHours(6).ToString("ddd t", CultureInfo.CurrentCulture);
+                sample.Place = _lastReading != null ? (string.IsNullOrEmpty(_lastReading.FullPlace) ? _lastReading.Place : _lastReading.FullPlace) : "Your city";
+                sample.PlaceId = _lastReading != null ? _lastReading.PlaceId : string.Empty;
+                sample.Summary = "This is a test. A real alert shows the summary of the weather service here.";
+                sample.Source = "FluentWeather-Plus";
+                ShowAlert(sample, 0);
+            };
+            menu.DropDownItems.Add(test);
+
+            var note = new ToolStripMenuItem("The app sends alerts when Severe weather alerts has its Tray box ticked in the app settings.");
+            note.Enabled = false;
+            menu.DropDownItems.Add(note);
+
+            foreach (ToolStripItem sub in new ToolStripItem[] { menu, show, close, places })
+            {
+                var drop = sub as ToolStripMenuItem;
+                if (drop != null)
+                    drop.DropDown.Closing += (sender, e) =>
+                    {
+                        if (e.CloseReason == ToolStripDropDownCloseReason.ItemClicked && DateTime.UtcNow < _keepMenuOpenUntil)
+                            e.Cancel = true;
+                    };
+            }
+            return menu;
         }
 
         // ------------------------------------------------------------------
@@ -2197,6 +2924,7 @@ namespace FluentWeatherLocal
                     e.Cancel = true;
             };
             _menu.Items.Add(details);
+            _menu.Items.Add(BuildAlertMenu());
 
             _menu.Items.Add(new ToolStripSeparator());
 
@@ -2397,6 +3125,9 @@ namespace FluentWeatherLocal
             _hoverShow.Dispose();
             _hoverWatch.Dispose();
             _hover.Dispose();
+            _bubbleTimer.Stop();
+            _bubbleTimer.Dispose();
+            _bubble.Dispose();
             foreach (var icon in new[] { _pictureIcon, _numberIcon })
             {
                 icon.Visible = false;

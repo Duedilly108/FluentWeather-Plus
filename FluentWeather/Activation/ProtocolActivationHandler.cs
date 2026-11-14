@@ -10,7 +10,8 @@ using Windows.Storage;
 namespace FluentWeather.Activation
 {
     /// <summary>
-    /// Handles links such as "fluentweather-local:switch?placeId=...".
+    /// Handles links such as "fluentweather-local:switch?placeId=..." and
+    /// "fluentweather-local:switch?placeId=...&amp;alerts=open".
     /// The tray helper uses them to open the app at a saved location.
     /// The link name is registered in the package manifest by the local build script.
     /// Only locations that are already saved are accepted. Any other link just opens the app.
@@ -26,6 +27,10 @@ namespace FluentWeather.Activation
 
         protected override async Task HandleInternalAsync(ProtocolActivatedEventArgs args)
         {
+            // Local build: "alerts=open" (from the tray alert bubble) opens the alert details.
+            if (string.Equals(GetQueryValue(args.Uri, "alerts"), "open", StringComparison.OrdinalIgnoreCase))
+                AlertService.RequestOpenDetails();
+
             var placeId = GetQueryValue(args.Uri, "placeId");
             if (string.IsNullOrEmpty(placeId) || !await SavedLocationsService.ContainsAsync(placeId))
                 return;

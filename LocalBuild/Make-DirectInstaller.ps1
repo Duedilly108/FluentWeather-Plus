@@ -15,6 +15,8 @@
       - Direct-README.txt, the README for recipients.
     It compiles FluentWeatherDirect.cs twice with the C# compiler that ships with Windows and writes
     the result to a new folder "FluentWeather-Plus" on the Desktop, plus a zip of that folder.
+    It also writes FluentWeather-Plus-<version>-release-notes.txt on the Desktop. That file holds the
+    text for the GitHub release page from Release-notes.txt, with the VirusTotal links of both files.
 
     The throwaway certificate: your own signing certificate is never used and never leaves this
     PC. Each run creates a new certificate with the same name, signs the copy of the app with it,
@@ -143,7 +145,7 @@ $thumb = [string]$config.CertThumbprint
 $pkg = Get-AppxPackage -Name $PackageName | Select-Object -First 1
 if (-not $pkg) { Stop-Make 'FluentWeather-Plus is not installed on this PC. Run "Update FluentWeather.cmd" first.' }
 $version = [string]$pkg.Version
-# The FluentWeather-Plus version is the fourth part of the build number: 2.1.0.47 is v47.
+# The FluentWeather-Plus version is the fourth part of the build number: 2.1.0.49 is v49.
 # It names the files, the README and the setup window.
 $PlusVersion = 'v' + ([version]$version).Revision
 $arch = ([string]$pkg.Architecture).ToLowerInvariant()
@@ -266,7 +268,7 @@ try {
     # Splits the README at its "VirusTotal" section. The section runs to the next heading, which is a
     # line followed by a line of dashes. Returns the lines before and after the section.
     # {VERSION} in the README becomes the version of this build, for example 2.1.0.19.
-    # {PLUS} becomes the FluentWeather-Plus version, for example v47. {VERSION} becomes the build number.
+    # {PLUS} becomes the FluentWeather-Plus version, for example v49. {VERSION} becomes the build number.
     $plus = $PlusVersion
     $readmeLines = @(Get-Content -LiteralPath $readme | ForEach-Object { $_.Replace('{VERSION}', $version).Replace('{PLUS}', $plus) })
     $vtStart = -1
@@ -348,10 +350,26 @@ try {
     if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
     Compress-Archive -Path (Join-Path $outDir '*') -DestinationPath $zip
 
+    # The text for the GitHub release page, with the VirusTotal links of these two files filled in.
+    # It goes on the Desktop next to the zip, so the zip keeps its three files.
+    # Release-notes.txt holds the text. {PLUS}, {VERSION}, {SETUP_LINK} and {UNINSTALL_LINK} are replaced.
+    $notesFile = Join-Path (Get-DesktopPath) "FluentWeather-Plus-$PlusVersion-release-notes.txt"
+    $setupLink = 'https://www.virustotal.com/gui/file/' + (Get-FileHash -LiteralPath $setupExe -Algorithm SHA256).Hash.ToLowerInvariant()
+    $uninstallLink = 'https://www.virustotal.com/gui/file/' + (Get-FileHash -LiteralPath $uninstallExe -Algorithm SHA256).Hash.ToLowerInvariant()
+    $notesTemplate = Join-Path $InstallDir 'Release-notes.txt'
+    if (Test-Path -LiteralPath $notesTemplate) {
+        $notes = [IO.File]::ReadAllText($notesTemplate)
+    } else {
+        $notes = "FluentWeather-Plus {PLUS}`r`n`r`nVirusTotal:`r`n`r`ninstaller:`r`n{SETUP_LINK}`r`n`r`nuninstaller:`r`n{UNINSTALL_LINK}`r`n"
+    }
+    $notes = $notes.Replace('{PLUS}', $PlusVersion).Replace('{VERSION}', $version).Replace('{SETUP_LINK}', $setupLink).Replace('{UNINSTALL_LINK}', $uninstallLink)
+    [IO.File]::WriteAllText($notesFile, $notes, [Text.Encoding]::ASCII)
+
     $mb = [Math]::Round((Get-Item -LiteralPath $setupExe).Length / 1MB, 1)
     Write-Ok "Done. Folder: $outDir"
     Write-Host "    FluentWeather-Plus-Setup-$PlusVersion.exe ($mb MB), FluentWeather-Plus-Uninstall-$PlusVersion.exe and README.txt"
     Write-Ok "Zip of the same three files, to share: $zip"
+    Write-Ok "Text for the release page, with the VirusTotal links: $notesFile"
     if ($vtStart -ge 0) {
         Write-Host '    README.txt has the VirusTotal links of these two files. Upload both files at'
         Write-Host '    virustotal.com once, so the links show a result.'

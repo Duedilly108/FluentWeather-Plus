@@ -89,6 +89,69 @@ namespace FluentWeather.Adapters
             }
         }
 
+        /// <summary>Local build: set by the main page. When true, the buttons show the thunder risk and snow range.</summary>
+        public static bool ShowBadges;
+
+        /// <summary>Local build: the unit setting, for the snow range unit.</summary>
+        public static WetUnits Units = WetUnits.e;
+
+        /// <summary>
+        /// Local build: "❄ 1-3 in" when weather.com expects snow, and "⚡ 3/5" when the thunder risk
+        /// of the day or night is 1 or more (weather.com thunder index, 0 to 5). Empty otherwise.
+        /// </summary>
+        public string Badge
+        {
+            get
+            {
+                if (!ShowBadges)
+                    return "";
+                try
+                {
+                    var part = CurrentObject.daypart[0];
+                    var parts = new System.Collections.Generic.List<string>();
+
+                    string? snow = null;
+                    foreach (var i in new[] { ItemIndex * 2, ItemIndex * 2 + 1 })
+                    {
+                        var range = part.snowRange != null && i < part.snowRange.Count ? part.snowRange[i] : null;
+                        if (!string.IsNullOrWhiteSpace(range))
+                        {
+                            snow = range.Trim();
+                            break;
+                        }
+                    }
+                    // Without a range, the forecast amount of the day and night, when there is some.
+                    if (snow == null)
+                    {
+                        double amount = 0;
+                        foreach (var i in new[] { ItemIndex * 2, ItemIndex * 2 + 1 })
+                            if (part.qpfSnow != null && i < part.qpfSnow.Count && part.qpfSnow[i] != null)
+                                amount += part.qpfSnow[i]!.Value;
+                        if (amount >= 0.1)
+                            snow = amount.ToString("0.#", CultureInfo.CurrentCulture);
+                    }
+                    if (snow != null)
+                        parts.Add("\u2744 " + snow + " " + MeasureUnitUtils.GetSnowPrecipitationUnits(Units));
+
+                    int? thunder = null;
+                    foreach (var i in new[] { ItemIndex * 2, ItemIndex * 2 + 1 })
+                    {
+                        var value = part.thunderIndex != null && i < part.thunderIndex.Count ? part.thunderIndex[i] : null;
+                        if (value != null)
+                            thunder = Math.Max(thunder ?? 0, value.Value);
+                    }
+                    if (thunder is >= 1)
+                        parts.Add("\u26A1 " + thunder + "/5");
+
+                    return string.Join("  ", parts);
+                }
+                catch (Exception)
+                {
+                    return "";
+                }
+            }
+        }
+
         public string ShortDayName
         {
             get

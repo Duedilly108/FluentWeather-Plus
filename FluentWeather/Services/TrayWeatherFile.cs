@@ -50,8 +50,9 @@ namespace FluentWeather.Services
                 if (point != null)
                     OpenMeteoExtrasService.RememberWeatherComPollen(point.latitude, point.longitude,
                         data.v2idxPollenDaypart10days?.PollenForecastDaypart);
+                var (thunder, thunderText) = TodayThunder(daily?.daypart?.FirstOrDefault()?.thunderIndex, daily?.daypart?.FirstOrDefault()?.thunderCategory);
                 var text = await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
-                    daily?.moonriseTimeLocal, daily?.moonsetTimeLocal);
+                    daily?.moonriseTimeLocal, daily?.moonsetTimeLocal, thunder, thunderText, data.v3wxforecasthourly10day);
                 await WriteFileAsync(CurrentFileName, text);
             }
             catch (Exception)
@@ -79,8 +80,10 @@ namespace FluentWeather.Services
                     return;
 
                 var units = await VariousUtils.GetUnitsCode();
+                var part0 = data.v3wxforecastdaily3day?.daypart?.FirstOrDefault();
+                var (thunder, thunderText) = TodayThunder(part0?.thunderIndex, part0?.thunderCategory);
                 var text = await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
-                    data.v3wxforecastdaily3day?.moonriseTimeLocal, data.v3wxforecastdaily3day?.moonsetTimeLocal);
+                    data.v3wxforecastdaily3day?.moonriseTimeLocal, data.v3wxforecastdaily3day?.moonsetTimeLocal, thunder, thunderText);
                 await WriteFileAsync(CurrentFileName, text);
             }
             catch (Exception)
@@ -126,9 +129,10 @@ namespace FluentWeather.Services
                         await PastDaysService.ObserveAsync(location.PlaceId, data.v3wxobservationscurrent,
                             part?.iconCode, part?.wxPhraseLong, part?.precipChance, units.ToString());
 
+                        var (thunder, thunderText) = TodayThunder(part?.thunderIndex, part?.thunderCategory);
                         return "[" + location.PlaceId + "]\n" +
                                await FormatBlockAsync(data.v3wxobservationscurrent, data.v3locationpoint.LocationV3, units,
-                                   data.v3wxforecastdaily3day?.moonriseTimeLocal, data.v3wxforecastdaily3day?.moonsetTimeLocal);
+                                   data.v3wxforecastdaily3day?.moonriseTimeLocal, data.v3wxforecastdaily3day?.moonsetTimeLocal, thunder, thunderText);
                     }
                     catch (Exception)
                     {
@@ -195,8 +199,21 @@ namespace FluentWeather.Services
             }
         }
 
+        // Local build: the thunder risk of today. weather.com leaves the day part empty in the evening,
+        // so the night part counts then.
+        private static (int? Index, string? Category) TodayThunder(IReadOnlyList<int?>? index, IReadOnlyList<string?>? category)
+        {
+            if (index == null)
+                return (null, null);
+            for (var i = 0; i < Math.Min(2, index.Count); i++)
+                if (index[i] != null)
+                    return (index[i], category != null && i < category.Count ? category[i] : null);
+            return (null, null);
+        }
+
         private static async Task<string> FormatBlockAsync(V3WxObservationsCurrent obs, LocationV3 loc, WetUnits units,
-            List<DateTimeOffset?>? moonrises = null, List<DateTimeOffset?>? moonsets = null)
+            List<DateTimeOffset?>? moonrises = null, List<DateTimeOffset?>? moonsets = null,
+            int? thunderIndex = null, string? thunderCategory = null, V3WxForecastHourly? hourly = null)
         {
             var place = new[] { loc.displayName, loc.city }.FirstOrDefault(s => !string.IsNullOrEmpty(s)) ?? string.Empty;
             var fullPlace = string.Join(", ", new[] { loc.displayName, loc.adminDistrict, loc.country }
@@ -216,6 +233,8 @@ namespace FluentWeather.Services
                 .Append("lat=").Append(loc.latitude.ToString(System.Globalization.CultureInfo.InvariantCulture)).Append('\n')
                 .Append("phrase=").Append(OneLine(obs.wxPhraseLong ?? obs.cloudCoverPhrase)).Append('\n')
                 .Append("observed=").Append(obs.validTimeLocal.ToString("o")).Append('\n')
+                // Local build: the tray opens the app at this place for "Show details" of an alert.
+                .Append("placeid=").Append(OneLine(loc.placeId)).Append('\n')
                 .Append("written=").Append(DateTimeOffset.UtcNow.ToString("o")).Append('\n')
                 .Append(await FormatDetailsAsync(obs, units))
                 .Append(await FormatMoonTimeAsync("Moonrise", moonrises))
@@ -223,7 +242,68 @@ namespace FluentWeather.Services
                 .Append(await FormatStationAsync(loc, units))
                 .Append(await FormatWaterAsync(loc, obs, units))
                 .Append(await FormatExtrasAsync(loc, units))
+                .Append(await FormatMoreAsync(obs, loc, units, thunderIndex, thunderCategory, hourly))
                 .ToString();
+        }
+
+        // Local build: the "More data" lines for each item whose "Tray" box is ticked in the app settings.
+        //   alert=...           one line per active alert, for the tray bubble (see AlertService.TrayLinesAsync)
+        //   d.Alert=...         the first alert, for the hover panel
+        //   d.MoreAirport=...   and so on, for the hover panel
+        private static async Task<string> FormatMoreAsync(V3WxObservationsCurrent obs, LocationV3 loc, WetUnits units,
+            int? thunderIndex, string? thunderCategory, V3WxForecastHourly? hourly)
+        {
+            var sb = new StringBuilder();
+            try
+            {
+                if (await MoreDataService.IsOnAsync(MoreItem.Alerts, true))
+                {
+                    var alerts = await AlertService.GetAsync(loc.latitude, loc.longitude, loc.countryCode);
+                    sb.Append(await AlertService.TrayLinesAsync(alerts));
+                    if (alerts.Count > 0)
+                    {
+                        var first = alerts[0];
+                        var line = (first.Name + " " + await AlertService.UntilTextAsync(first)).Trim();
+                        if (alerts.Count > 1)
+                            line += ", " + string.Format(CultureInfo.CurrentCulture, "AlertMore".GetLocalized(), alerts.Count - 1);
+                        sb.Append("d.Alert=").Append(OneLine(line)).Append('\n');
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // The alert lines are left out.
+            }
+
+            var context = new MoreContext
+            {
+                Latitude = loc.latitude,
+                Longitude = loc.longitude,
+                Units = units,
+                CountryCode = loc.countryCode,
+                Observation = obs,
+                ThunderIndex = thunderIndex,
+                ThunderCategory = thunderCategory,
+                Hourly = hourly
+            };
+            foreach (var item in MoreDataService.All)
+            {
+                if (item == MoreItem.Alerts || !MoreDataService.HasTray(item))
+                    continue;
+                try
+                {
+                    if (!await MoreDataService.IsOnAsync(item, true))
+                        continue;
+                    var text = await MoreDataService.DescribeAsync(item, context);
+                    if (text != null && text.TrayLine.Length > 0)
+                        sb.Append("d.More").Append(item).Append('=').Append(OneLine(text.TrayLine)).Append('\n');
+                }
+                catch (Exception)
+                {
+                    // The line is left out.
+                }
+            }
+            return sb.ToString();
         }
 
         // Local build: the extra Open-Meteo lines, "d.ExtraMarine=1.2 m 14 s, sea 74F" and so on,

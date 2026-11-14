@@ -173,7 +173,7 @@ namespace FluentWeather.Services
             return best;
         }
 
-        private static async Task<string[]?> GetNdbcLatestAsync()
+        internal static async Task<string[]?> GetNdbcLatestAsync()
         {
             if (_ndbcLatest != null && DateTime.UtcNow - _ndbcLatestFetchedUtc < CacheTime)
                 return _ndbcLatest;
@@ -195,7 +195,7 @@ namespace FluentWeather.Services
         }
 
         // Station names come from the NDBC station list, about 270 KB, downloaded once a month.
-        private static async Task<string> GetNdbcNameAsync(string stationId)
+        internal static async Task<string> GetNdbcNameAsync(string stationId)
         {
             var list = await GetNdbcStationsAsync();
             var station = list?.FirstOrDefault(s => string.Equals(s.Id, stationId, StringComparison.OrdinalIgnoreCase));
@@ -367,7 +367,7 @@ namespace FluentWeather.Services
             return best;
         }
 
-        private static async Task<string> GetUsgsNameAsync(string monitoringLocationId)
+        internal static async Task<string> GetUsgsNameAsync(string monitoringLocationId)
         {
             if (_usgsNames == null)
             {

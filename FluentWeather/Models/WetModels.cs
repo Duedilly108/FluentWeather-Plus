@@ -70,6 +70,10 @@ namespace FluentWeather.Models
         public required List<string> precipType { get; set; }
         public required List<double?> qpf { get; set; }
         public required List<double?> qpfSnow { get; set; }
+
+        // Local build: rain and ice amounts, used by the day details. Not required, so the backup still works.
+        public List<double?>? qpfRain { get; set; }
+        public List<double?>? qpfIce { get; set; }
         public required List<string> qualifierCode { get; set; }
         public required List<string> qualifierPhrase { get; set; }
         public required List<int?> relativeHumidity { get; set; }
@@ -177,6 +181,10 @@ namespace FluentWeather.Models
         public required List<double> pressureMeanSeaLevel { get; set; }
         public required List<double> qpf { get; set; }
         public required List<double> qpfSnow { get; set; }
+
+        // Local build: rain and ice amounts per hour, used by the hourly chart and "Next 12 h".
+        public List<double?>? qpfRain { get; set; }
+        public List<double?>? qpfIce { get; set; }
         public required List<int> relativeHumidity { get; set; }
         public required List<int> temperature { get; set; }
         public required List<int> temperatureDewPoint { get; set; }
@@ -261,6 +269,9 @@ namespace FluentWeather.Models
         public required double snow1Hour { get; set; }
         public required double snow6Hour { get; set; }
         public required double snow24Hour { get; set; }
+
+        // Local build: the wet bulb globe temperature (heat stress). Not sent by the Open-Meteo backup.
+        public int? temperatureWetBulbGlobe { get; set; }
         public required DateTimeOffset sunriseTimeLocal { get; set; }
         public required int sunriseTimeUtc { get; set; }
         public required DateTimeOffset sunsetTimeLocal { get; set; }

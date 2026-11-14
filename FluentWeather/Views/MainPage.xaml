@@ -296,8 +296,8 @@
                                             <ScrollViewer VerticalScrollBarVisibility="Auto"
                                                           HorizontalScrollMode="Disabled"
                                                           HorizontalScrollBarVisibility="Disabled">
-                                                <!-- Local build: three columns of sections, with the credits in a card centered below
-                                                     them. Each column has its sections in Auto rows. The star rows between them share
+                                                <!-- Local build: three columns of sections, with the credits in a card at the bottom of
+                                                     the left column. Each column has its sections in Auto rows. The star rows between them share
                                                      the extra height, so the panel fills the window height. SettingsPanel_Loaded uses
                                                      three, two or one column, as the window width allows. In a short window it scrolls. -->
                                                 <Grid Padding="18,12,18,12"
@@ -461,6 +461,76 @@
                                                             <TextBlock x:Uid="DataSourceHint"
                                                                        Style="{StaticResource SettingsHintStyle}" />
                                                         </StackPanel>
+                                                        <!-- Credits, in a card below the last section of the left column -->
+                                                        <Border Grid.Row="9"
+                                                                Tag="SettingsCredits"
+                                                                HorizontalAlignment="Stretch"
+                                                                VerticalAlignment="Top"
+                                                                Margin="0,26,0,0"
+                                                                Padding="28,10,28,10"
+                                                                CornerRadius="8"
+                                                                BorderThickness="1"
+                                                                BorderBrush="{StaticResource PanelBorderBrush}"
+                                                                Background="#14FFFFFF">
+                                                        <StackPanel>
+                                                            <TextBlock x:Uid="CreditsSettingsTitle"
+                                                                       HorizontalAlignment="Center"
+                                                                       Style="{StaticResource SettingsHeaderStyle}" />
+
+                                                            <RichTextBlock FontSize="13" LineHeight="21" TextAlignment="Center">
+                                                                <Paragraph>
+                                                                    <Run Text="FluentWeather-Plus" FontWeight="Bold" />
+                                                                    <Hyperlink
+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                        NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
+                                                                            d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                            Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
+                                                                    <Run x:Uid="UpdatedByRun" />
+                                                                    <Hyperlink
+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                        NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
+                                                                </Paragraph>
+                                                                <Paragraph>
+                                                                    <Run x:Uid="BasedOnRun" />
+                                                                    <Run Text="FluentWeather" FontWeight="Bold" />
+                                                                    <Hyperlink
+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                        Click="ChangelogHyperlink_Click"><Run
+                                                                            d:DataContext="{d:DesignInstance views:MainPage }"
+                                                                            Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
+                                                                    <Run x:Uid="DevelopedByRun" />
+                                                                    <Hyperlink
+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                        NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
+                                                                </Paragraph>
+                                                                <Paragraph>
+                                                                    <Run x:Uid="InspiredByRun" />
+                                                                    <Hyperlink
+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                                        NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
+                                                                </Paragraph>
+                                                            </RichTextBlock>
+
+                                                            <StackPanel Orientation="Horizontal"
+                                                                        Spacing="4"
+                                                                        HorizontalAlignment="Center"
+                                                                        Margin="0,2,0,0">
+                                                                <HyperlinkButton
+                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus">
+                                                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                                                        <Grid Width="16" Height="16">
+                                                                            <Path
+                                                                                Data="{StaticResource GithubIconPath}"
+                                                                                Stretch="Uniform"
+                                                                                Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                                                                        </Grid>
+                                                                        <TextBlock x:Uid="GithubProjectButton" FontSize="13" />
+                                                                    </StackPanel>
+                                                                </HyperlinkButton>
+
+                                                            </StackPanel>
+                                                        </StackPanel>
+                                                        </Border>
                                                     </Grid>
 
                                                     <Rectangle Grid.Column="1"
@@ -473,6 +543,8 @@
                                                     <Grid Grid.Column="2"
                                                           Tag="SettingsMiddle">
                                                         <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="*" MinHeight="18" MaxHeight="60" />
                                                             <RowDefinition Height="Auto" />
                                                             <RowDefinition Height="*" MinHeight="18" MaxHeight="60" />
                                                             <RowDefinition Height="Auto" />
@@ -587,26 +659,9 @@
                                                                        x:Uid="ShowTrayHint"
                                                                        Style="{StaticResource SettingsHintStyle}" />
                                                         </Grid>
-                                                    </Grid>
-
-                                                    <Rectangle Grid.Column="3"
-                                                               Tag="SettingsDivider2"
-                                                               Width="1"
-                                                               Margin="18,4,18,4"
-                                                               Fill="{StaticResource PanelBorderBrush}" />
-
-                                                    <!-- Right column -->
-                                                    <Grid Grid.Column="4"
-                                                          Tag="SettingsRight">
-                                                        <Grid.RowDefinitions>
-                                                            <RowDefinition Height="Auto" />
-                                                            <RowDefinition Height="*" MinHeight="18" MaxHeight="60" />
-                                                            <RowDefinition Height="Auto" />
-                                                            <RowDefinition Height="*" />
-                                                        </Grid.RowDefinitions>
                                                         <!-- Local build: the nearest water station. Off by default. The card goes in the detail
                                                              chips row. The tray lines go in the tray file for the hover panel. See WaterService. -->
-                                                        <Grid Grid.Row="0" ColumnSpacing="16" RowSpacing="2">
+                                                        <Grid Grid.Row="8" ColumnSpacing="16" RowSpacing="2" Margin="0,22,0,0">
                                                             <Grid.ColumnDefinitions>
                                                                 <ColumnDefinition Width="*" />
                                                                 <ColumnDefinition Width="Auto" />
@@ -643,9 +698,27 @@
                                                                        x:Uid="WaterHint"
                                                                        Style="{StaticResource SettingsHintStyle}" />
                                                         </Grid>
+                                                    </Grid>
+
+                                                    <Rectangle Grid.Column="3"
+                                                               Tag="SettingsDivider2"
+                                                               Width="1"
+                                                               Margin="18,4,18,4"
+                                                               Fill="{StaticResource PanelBorderBrush}" />
+
+                                                    <!-- Right column -->
+                                                    <!-- Right column: "More data options". The Open-Meteo rows and the "More data" rows
+                                                         share one heading and one hint, so the column fits the window height. -->
+                                                    <Grid Grid.Column="4"
+                                                          Tag="SettingsRight">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="*" />
+                                                        </Grid.RowDefinitions>
                                                         <!-- Local build: the extra Open-Meteo data. One row per feed. "Main" shows a chip in the
                                                              detail row. "Tray" writes the tray lines. All off by default. See OpenMeteoExtrasService. -->
-                                                        <Grid Grid.Row="2" ColumnSpacing="16">
+                                                        <Grid Grid.Row="0" ColumnSpacing="16">
                                                             <Grid.ColumnDefinitions>
                                                                 <ColumnDefinition Width="*" />
                                                                 <ColumnDefinition Width="56" />
@@ -691,83 +764,18 @@
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="5" Grid.Column="2" Tag="Pollen.tray" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
-                                                            <TextBlock Grid.Row="6" Grid.ColumnSpan="3"
-                                                                       x:Uid="ExtraHint"
-                                                                       Style="{StaticResource SettingsHintStyle}" />
                                                         </Grid>
+                                                        <!-- Local build: "More data". The rows are made in code, one per item, with a
+                                                             "Main" and a "Tray" check box. See MoreDataService and MoreDataGrid_Loaded. -->
+                                                        <Grid Grid.Row="1"
+                                                              Tag="MoreDataGrid"
+                                                              Margin="0,0,0,0"
+                                                              VerticalAlignment="Top"
+                                                              ColumnSpacing="16"
+                                                              Loaded="MoreDataGrid_Loaded" />
                                                     </Grid>
 
 
-                                                    <!-- Credits, in a card centered below the columns -->
-                                                    <Border Grid.Row="3"
-                                                            Grid.ColumnSpan="5"
-                                                            Tag="SettingsCredits"
-                                                            HorizontalAlignment="Center"
-                                                            Margin="0,16,0,0"
-                                                            Padding="28,10,28,10"
-                                                            CornerRadius="8"
-                                                            BorderThickness="1"
-                                                            BorderBrush="{StaticResource PanelBorderBrush}"
-                                                            Background="#14FFFFFF">
-                                                    <StackPanel>
-                                                        <TextBlock x:Uid="CreditsSettingsTitle"
-                                                                   HorizontalAlignment="Center"
-                                                                   Style="{StaticResource SettingsHeaderStyle}" />
-
-                                                        <RichTextBlock FontSize="13" LineHeight="21" TextAlignment="Center">
-                                                            <Paragraph>
-                                                                <Run Text="FluentWeather-Plus" FontWeight="Bold" />
-                                                                <Hyperlink
-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus/releases"><Run
-                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                        Text="{Binding MainPageViewModel.PlusVersionText}" /></Hyperlink>
-                                                                <Run x:Uid="UpdatedByRun" />
-                                                                <Hyperlink
-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    NavigateUri="https://github.com/Duedilly108">duedilly108</Hyperlink>
-                                                            </Paragraph>
-                                                            <Paragraph>
-                                                                <Run x:Uid="BasedOnRun" />
-                                                                <Run Text="FluentWeather" FontWeight="Bold" />
-                                                                <Hyperlink
-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    Click="ChangelogHyperlink_Click"><Run
-                                                                        d:DataContext="{d:DesignInstance views:MainPage }"
-                                                                        Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
-                                                                <Run x:Uid="DevelopedByRun" />
-                                                                <Hyperlink
-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
-                                                            </Paragraph>
-                                                            <Paragraph>
-                                                                <Run x:Uid="InspiredByRun" />
-                                                                <Hyperlink
-                                                                    Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-                                                                    NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
-                                                            </Paragraph>
-                                                        </RichTextBlock>
-
-                                                        <StackPanel Orientation="Horizontal"
-                                                                    Spacing="4"
-                                                                    HorizontalAlignment="Center"
-                                                                    Margin="0,2,0,0">
-                                                            <HyperlinkButton
-                                                                NavigateUri="https://github.com/Duedilly108/FluentWeather-Plus">
-                                                                <StackPanel Orientation="Horizontal" Spacing="8">
-                                                                    <Grid Width="16" Height="16">
-                                                                        <Path
-                                                                            Data="{StaticResource GithubIconPath}"
-                                                                            Stretch="Uniform"
-                                                                            Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
-                                                                    </Grid>
-                                                                    <TextBlock x:Uid="GithubProjectButton" FontSize="13" />
-                                                                </StackPanel>
-                                                            </HyperlinkButton>
-
-                                                        </StackPanel>
-                                                    </StackPanel>
-                                                    </Border>
                                                 </Grid>
                                             </ScrollViewer>
                                         </ControlTemplate>
@@ -923,6 +931,7 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -931,6 +940,7 @@
                         <Grid Grid.Row="0"
                               Margin="0,0,0,16">
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -1066,6 +1076,18 @@
                                               Glyph="&#xE711;" />
                                 </Button>
                             </Grid>
+
+                            <!-- Local build: severe weather alerts of the shown location. A band per alert, and
+                                 the details below it after a click. Made in code. See AlertService and UpdateAlertsAsync. -->
+                            <StackPanel x:Name="AlertPanel"
+                                        Grid.Row="3"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        HorizontalAlignment="Left"
+                                        MaxWidth="760"
+                                        Margin="4,12,40,0"
+                                        Spacing="6"
+                                        Visibility="Collapsed" />
 
                         </Grid>
 
@@ -1210,6 +1232,48 @@
                                 Visibility="Collapsed">
                             </controls:DetailChipControl>
 
+                            <!-- Local build: the "More data" cards. See MoreDataService. -->
+                            <controls:DetailChipControl
+                                x:Name="MoreSnowChip"
+                                x:Uid="MoreSnowChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreHeatChip"
+                                x:Uid="MoreHeatChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreStormChip"
+                                x:Uid="MoreStormChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreGroundChip"
+                                x:Uid="MoreGroundChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreFreezingChip"
+                                x:Uid="MoreFreezingChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreSunChip"
+                                x:Uid="MoreSunChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreBuoyChip"
+                                x:Uid="MoreBuoyChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+                            <controls:DetailChipControl
+                                x:Name="MoreGaugeChip"
+                                x:Uid="MoreGaugeChip"
+                                Visibility="Collapsed">
+                            </controls:DetailChipControl>
+
                             <controls:DetailChipControl
                                 x:Name="VisibilityChipControl"
                                 x:Uid="VisibilityChipControl">
@@ -1317,6 +1381,13 @@
                                                                    RelativePanel.AlignTopWithPanel="True"
                                                                    RelativePanel.AlignRightWithPanel="True" />
 
+                                                        <!-- Local build: thunder risk and snow range, when "Day details" is on. -->
+                                                        <TextBlock Text="{x:Bind Badge}"
+                                                                   FontSize="11"
+                                                                   Opacity="0.85"
+                                                                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                                                                   RelativePanel.AlignRightWithPanel="True" />
+
                                                         <TextBlock
                                                             Text="{x:Bind Temperature }"
                                                             RelativePanel.AlignBottomWithPanel="True"
@@ -1386,6 +1457,10 @@
                                 BorderThickness="2"
                                 BorderBrush="{ThemeResource MyAcrylicBrush}"
                                 Background="{ThemeResource MyAcrylicBrush}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
                                 <ListView x:Name="HourlyListview"
 
@@ -1578,6 +1653,17 @@
                                     </ListView.ItemTemplate>
                                 </ListView>
 
+                                <!-- Local build: rain, snow and ice per hour, the chance, sunshine and severe hours.
+                                     Drawn in code when "Hourly chart" is on. See DrawHourlyChart. -->
+                                <Grid x:Name="HourlyChartHost"
+                                      Grid.Row="1"
+                                      Height="170"
+                                      Margin="0,10,0,0"
+                                      Visibility="Collapsed"
+                                      SizeChanged="HourlyChartHost_SizeChanged">
+                                    <Canvas x:Name="HourlyChartCanvas" />
+                                </Grid>
+
                             </Grid>
 
 
@@ -1690,6 +1776,16 @@
                                                    Margin="0,6,0,0"
                                                    IsTextSelectionEnabled="True"
                                                    RelativePanel.Below="NightSummaryInsightSubtitle" />
+
+                                        <!-- Local build: wind text, forecast notes and amounts, when "Day details" is on. -->
+                                        <TextBlock x:Name="DayMoreText"
+                                                   Style="{StaticResource BodyTextBlockStyle}"
+                                                   FontSize="13"
+                                                   Margin="0,10,0,0"
+                                                   Opacity="0.9"
+                                                   IsTextSelectionEnabled="True"
+                                                   Visibility="Collapsed"
+                                                   RelativePanel.Below="NightSummaryText" />
 
 
                                     </RelativePanel>
@@ -2023,6 +2119,47 @@
                             </Grid>
                         </Grid>
 
+
+
+                        <!-- Local build: the forecaster's discussion of the National Weather Service (US only).
+                             Shown when "Forecaster's discussion" is on. See MoreDataService.GetDiscussionAsync. -->
+                        <Grid x:Name="DiscussionSection"
+                              Grid.Row="8"
+                              Margin="0,32,0,0"
+                              Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock x:Name="DiscussionTitleText"
+                                       Style="{StaticResource BodyTextBlockStyle}"
+                                       FontSize="20"
+                                       Margin="0,0,0,16" />
+
+                            <Grid Grid.Row="1"
+                                  Margin="0,0,32,0"
+                                  CornerRadius="8"
+                                  Padding="16,12,16,12"
+                                  BorderThickness="2"
+                                  BorderBrush="{ThemeResource MyAcrylicBrush}"
+                                  Background="{ThemeResource MyAcrylicBrush}">
+                                <StackPanel Spacing="8" MaxWidth="900" HorizontalAlignment="Left">
+                                    <TextBlock x:Name="DiscussionMetaText"
+                                               Style="{StaticResource CaptionTextBlockStyle}"
+                                               Opacity="0.75" />
+                                    <TextBlock x:Name="DiscussionText"
+                                               Style="{StaticResource BodyTextBlockStyle}"
+                                               IsTextSelectionEnabled="True"
+                                               TextWrapping="Wrap"
+                                               MaxLines="8"
+                                               TextTrimming="WordEllipsis" />
+                                    <HyperlinkButton x:Name="DiscussionToggleButton"
+                                                     Padding="0,2,0,2"
+                                                     Click="DiscussionToggleButton_OnClick" />
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
 
                     </Grid>
                 </ScrollViewer>

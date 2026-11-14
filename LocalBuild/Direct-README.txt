@@ -14,6 +14,9 @@ History of any saved location by month or by year, as a chart and a table.
 Air quality for every location.
 Optional card with the water temperature, wind and waves at the nearest water station.
 Optional cards for waves, wind gusts, other forecast models, river flow and pollen.
+Severe weather alerts in the main window and as a bubble from the tray.
+Optional more data: airport weather, recent snow, heat stress, storm energy,
+soil, freezing level, sunshine, buoys, river gauges, an hourly chart and more.
 Customize text size, background contrast, card tint, forecast length and language.
 
 
@@ -39,6 +42,9 @@ For US locations it also connects to NOAA and USGS for the radar map.
 Connects to Open-Meteo for the air quality and for the weather history archive.
 With "Nearby water" turned on, connects to NOAA and USGS for the water station data.
 With extra data turned on, connects to Open-Meteo for it.
+For alerts it connects to weather.com, and for US locations also to the National Weather Service.
+With more data turned on, connects to Open-Meteo, the Aviation Weather Center,
+NOAA, USGS and the National Weather Service for it.
 
 
 VirusTotal:

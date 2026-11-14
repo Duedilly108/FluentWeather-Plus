@@ -115,11 +115,12 @@ $FilesToCopy   = @(
     'Make-DirectInstaller.cmd',
     'Make-DirectInstaller.ps1',
     'Direct-README.txt',
+    'Release-notes.txt',
     'Get-FluentWeatherCrashReport.ps1',
     'FluentWeather crash report.cmd'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '68'
+$SetupVersion  = '70'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
 $CrashReportShortcut   = 'FluentWeather crash report.lnk'

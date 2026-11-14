@@ -11,6 +11,9 @@ namespace FluentWeather.Adapters
     [GeneratedBindableCustomPropertyAttribute]
     internal partial class HourDataAdapter(V3WxForecastHourly fcst, int itemIndex, WetUnits wetUnits, bool showDay = false)
     {
+        /// <summary>Local build: the hour's place in the forecast lists, for the hourly chart.</summary>
+        public int Index => itemIndex;
+
         public string Temperature
         {
             get { return fcst.temperature[itemIndex] + "°"; }

@@ -685,7 +685,7 @@ Live Tiles are available natively on Windows 10 only.</value>
     <value>Open-Meteo for this location:</value>
   </data>
   <data name="ExtraSettingsTitle.Text" xml:space="preserve">
-    <value>Extra data</value>
+    <value>More data options</value>
   </data>
   <data name="ExtraMainHeader.Text" xml:space="preserve">
     <value>Main</value>
@@ -707,9 +707,6 @@ Live Tiles are available natively on Windows 10 only.</value>
   </data>
   <data name="ExtraPollenLabel.Text" xml:space="preserve">
     <value>Pollen</value>
-  </data>
-  <data name="ExtraHint.Text" xml:space="preserve">
-    <value>Main adds a card after Air quality. Tray writes a line that you tick under Hover details in the tray menu. Each card hides when the location has no data. The data is free from open-meteo.com, at most one request per hour for each location and feed. US pollen comes with the weather.com data the app already loads.</value>
   </data>
   <data name="ExtraMarineChip.Title" xml:space="preserve">
     <value>Waves</value>
@@ -1064,6 +1061,9 @@ Live Tiles are available natively on Windows 10 only.</value>
 - A radar map for US locations, and air quality for every location.
 - Nearby water: the water temperature and wind at the closest station.
 - Extra data: waves, a wind forecast, other forecast models, river flow and pollen.
+- Severe weather alerts in the main window and as a tray bubble.
+- More data: airport weather, snow, heat stress, storm energy, soil, freezing level,
+  sunshine, buoys, river gauges, day details, an hourly chart and the NWS discussion.
 - Detail cards with more detail on hover, in any order you choose.
 - Settings for text size, background contrast, card tint and the hourly range.
 - A language setting, a direct installer and a crash report.
@@ -1254,5 +1254,458 @@ Live Tiles are available natively on Windows 10 only.</value>
   </data>
   <data name="DataNoteStation" xml:space="preserve">
     <value>Data: Open-Meteo and station {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>until {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>and {0} more</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Details ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Hide details</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Issued {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Area: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Loading the full text...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>The full text is not available.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Source: weather.com alerts, from the national weather service of the country.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Source: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Tray</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Severe weather alerts</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Weather now (airport)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Snow, last 1, 6 and 24 h</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Heat stress (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Storm energy and thunder risk</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Soil and snow depth</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Freezing level</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Sunshine and evaporation</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Buoy: waves, air and tide</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>River gauge (US)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Day details: thunder, snow, wind</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Hourly chart, next 12 h in tray</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Forecaster's discussion (US)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Alerts in the main window</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>All alerts</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Warnings and watches</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Warnings only</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Main shows the item in this window. A card hides when the location has no data. Tray adds a line that you can tick in the tray icon menu under Hover details. The tray menu also sets when the alert bubble shows and how long it stays. The first five items come from open-meteo.com, with at most one request per hour for each location. Alerts are on by default. The other items are off by default. Hover over a name for its source.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>A band under the location name for each active alert. Source: weather.com, with the National Weather Service as backup for US places.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Weather and flight category from the nearest airport report, on the Visibility card. The hover text adds the airport forecast. Source: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Snow of the last 1, 6 and 24 hours. Source: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Wet bulb globe temperature, a measure of heat stress for work and sports. Source: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Storm energy (CAPE) and the thunder risk of today. Sources: Open-Meteo and weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Soil temperature at 6 cm, soil moisture and snow depth. Source: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>The height of the 0 degree level. Source: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Sunshine of today, daylight, solar radiation and evaporation. Source: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Waves, wave period and direction, air, pressure and tide at the nearest NOAA buoy or tide station within 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>River height, flow and the last 7 days at the nearest USGS gauge within 40 km. US only.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Thunder risk and snow range on the day buttons, and wind text, notes and amounts in the day details. Source: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>A chart under the hourly forecast with rain, snow, ice, chance, sunshine and severe hours. The tray line gives the amounts of the next 12 hours.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>The forecaster's discussion of the local National Weather Service office, below the radar map. US only.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Snow, 6 h</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Heat stress</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Storm energy</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Soil</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Freezing level</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Sunshine</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Buoy</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>River gauge</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>no rain, snow or fog</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Airport report: {0} ({1}), {2} away.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Weather:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Flight category:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>good visibility and ceiling</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>marginal: ceiling 1,000 to 3,000 ft or visibility 3 to 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>low: ceiling 500 to 1,000 ft or visibility 1 to 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>very low: ceiling below 500 ft or visibility below 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Cloud ceiling at the airport:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Airport forecast ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Reports as sent:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Source: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>From {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Changing at {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>At times from {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0}% chance</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>no ceiling</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>ceiling {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 h: {0}, 24 h: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Snow measured at the location.
+Last hour: {0}
+Last 6 hours: {1}
+Last 24 hours: {2}
+
+Source: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 h: {0}, 6 h: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Very high</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Wet bulb globe temperature: {0}, heat stress {1}.
+It combines temperature, humidity, wind and sun. Work and sports guidelines use it. Heat stress starts near 25 C (77 F) and is extreme above 32 C (90 F).
+
+Source: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Very low</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Thunder risk {0} of 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} of 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Storm energy (CAPE) is the energy that rising air can gain. Thunderstorms need it. Below 300 J/kg storms are unlikely. Above 2,500 J/kg strong storms are possible when something lifts the air.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Now: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Highest today: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Sources: Open-Meteo.com (CC BY 4.0) for the storm energy, weather.com for the thunder risk.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Moisture {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Snow depth {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Soil temperature at 6 cm depth: {0}
+Soil moisture at 3 to 9 cm: {1}
+Snow depth: {2}
+
+The values come from a weather model, not from a sensor. Source: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, moisture {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>At ground</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>Above sea level</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Freezing level: {0} above sea level.
+Above this height the air is below 0 C (32 F). Snow that falls from above melts below it.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Elevation of the location: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>of {0} daylight</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Sunshine today: {0}
+Daylight today: {1}
+Solar radiation now: {2}
+Evaporation today: {3}
+
+Evaporation is the reference evapotranspiration (FAO-56). It tells how much water a lawn loses in a day. Source: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>every {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>from {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Tide {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), {2} away, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Waves:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Air:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Water:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Pressure:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Tide, above the station datum:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Source: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Rising</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Falling</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Steady</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), {2} away, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Flow:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Change in the last 3 hours: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Last 7 days: {0}, from {1} to {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>The height is measured from the gauge datum, not from the river bed. Source: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Wind: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Wind at night: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Note: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>snow {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Amounts: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Amounts: none</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Bars: rain (blue), snow as water (white), ice (cyan). Dashed line: chance. Yellow: sunshine. Red mark: severe hour.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Rain, snow and ice per hour from weather.com. Snow is drawn as water, about 10 to 1. The dashed line is the chance of precipitation. The yellow bar at the top is the sunshine of the hour from Open-Meteo. A red mark shows an hour that weather.com rates as severe.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Total of the hours shown: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Dry, chance {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>chance {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>rain {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>snow {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>ice {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Forecaster's discussion, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Issued {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Source: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Show all</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Show less</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Below 0 C at the surface</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>The air is below 0 C (32 F) from the ground up. Snow does not melt on the way down.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Source: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>now</value>
   </data>
 </root>

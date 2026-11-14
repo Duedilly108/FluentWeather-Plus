@@ -11,11 +11,17 @@ namespace FluentWeather.Utils
     internal class ApiUtils
     {
         // Local build: the language chosen in the app settings, otherwise the Windows display language.
-        private static readonly string SystemLanguage = !string.IsNullOrEmpty(Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)
+        internal static readonly string SystemLanguage = !string.IsNullOrEmpty(Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)
             ? Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride
             : Windows.System.UserProfile.GlobalizationPreferences.Languages[0];
 
         private static readonly HttpClient SharedClient = CreateClient("https://api.weather.com/v2/");
+
+        // Local build: the weather.com key the app uses, for the alerts and the 2-day hourly forecast.
+        internal const string WeatherComKey = "793db2b6128c4bc2bdb2b6128c0bc230";
+
+        // Local build: a client for the full weather.com addresses (alerts, 2-day hourly forecast).
+        internal static readonly HttpClient WeatherComClient = CreateClient("https://api.weather.com/");
 
         /// <summary>
         /// An HttpClient that does not keep idle connections for long. While the app is suspended

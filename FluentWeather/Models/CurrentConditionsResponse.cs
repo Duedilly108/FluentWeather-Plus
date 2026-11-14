@@ -64,5 +64,9 @@ namespace FluentWeather.Models
         public List<int?>? iconCode { get; set; }
         public List<string?>? wxPhraseLong { get; set; }
         public List<int?>? precipChance { get; set; }
+
+        // Local build: the thunder risk (0 to 5) for "Thunder risk today" in the tray.
+        public List<int?>? thunderIndex { get; set; }
+        public List<string?>? thunderCategory { get; set; }
     }
 }
