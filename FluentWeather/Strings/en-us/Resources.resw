@@ -1708,4 +1708,247 @@ Evaporation is the reference evapotranspiration (FAO-56). It tells how much wate
   <data name="MoreTafNowLower" xml:space="preserve">
     <value>now</value>
   </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Wave height, wave period, swell and sea surface temperature from the Open-Meteo marine model, for points on or near the ocean. Source: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>The highest gust of the next 6 hours, the model gust now and the wind at 80 m. Source: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Today's high, low and precipitation from the ECMWF, GFS and ICON weather models. Source: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Today's modeled river discharge and the usual discharge for the day (GloFAS). Source: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tree, grass and ragweed levels. Source: weather.com in the US and some other countries, Open-Meteo in Europe.</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Lows {0}</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10-Day Hourly</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Every hour of the forecast, about 10 days</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Back to the main window (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10-Day Hourly Forecast</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Feels like</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Precipitation</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Gusts</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV index</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Cloud cover</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Dew point</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>The page shows the hourly forecast that the app already loaded for the shown location. Another location is loaded when it is chosen. Times are local to the location. A click on the chart scrolls the list to that hour. In List, a click on a row opens its other values.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Shown location</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, updated {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>No hourly forecast for this location</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>No gusts in this forecast</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} hours     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} snow</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>gusts {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>feels {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>rain</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>snow</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>precipitation</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Sky</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Feels</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Chance</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Rain</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Ice</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Dew pt</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Gust</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Clouds</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Vis</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Feels like</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Wind gust</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Dew point</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV index</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Cloud cover</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Feels like</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Chance of precipitation</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Rain</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Gusts</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Dew point</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperature ({0}) and chance of precipitation</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperature, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Feels like and temperature, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Rain ({0}) and snow ({1}) per hour, and chance of precipitation</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Wind and gusts, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Wind gusts, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Humidity, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV index</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Cloud cover, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Visibility, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Dew point and temperature, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Sea level pressure, {0}</value>
+  </data>
 </root>

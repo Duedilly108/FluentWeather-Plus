@@ -4,11 +4,13 @@ Download FluentWeather-Plus-Setup-{PLUS}.exe below and double-click it to instal
 
 New in {PLUS}:
 
-Severe weather alerts. A colored band under the location name shows each active alert. A click on the band shows the full text. The tray shows a bubble for each new alert. The bubble closes after a time that you choose. With "Honor Do Not Disturb" the tray uses a Windows notification, which waits while Do Not Disturb is on.
+10-Day Hourly page. A "10-Day Hourly" button at the right of the Hourly title opens a page with every hour of the forecast, about 240 hours. A chart shows all 10 days, and a chart picker chooses temperature, feels like, precipitation, wind, gusts, humidity, UV index, cloud cover, visibility, dew point or pressure. A click on the chart scrolls the list to that hour.
 
-More data. The settings panel has a "More data" section with a Main box and a Tray box for each item. The items are weather now and the airport forecast from the nearest airport, snow of the last 1, 6 and 24 hours, heat stress, storm energy and thunder risk, soil temperature and moisture, freezing level, sunshine and evaporation, buoy waves and tide, river gauge height and flow, day details, an hourly chart, and the forecaster's discussion for US locations.
+The page has two views. List shows the main values of each hour, and a click on a row opens the other values. Table shows every value in its own column.
 
-The tray menu has a "Severe weather alerts" submenu, and the Hover details submenu has a line for each new item.
+The Other forecast models card shows the range of the lows under the range of the highs.
+
+In the settings panel, hovering over the name of each of the five Open-Meteo rows of "More data options" shows what the row adds and its source.
 
 Build {VERSION}
 

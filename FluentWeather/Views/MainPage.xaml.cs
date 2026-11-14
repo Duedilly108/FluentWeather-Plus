@@ -269,7 +269,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.49 is v49.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.51 is v51.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -1436,6 +1436,48 @@ namespace FluentWeather.Views
         {
             HistoryFrame.Visibility = Visibility.Collapsed;
             HistoryFrame.Content = null;
+        }
+
+        // --- 10-Day Hourly page ---
+        // The page covers the content of the main window, in the same frame as the history page.
+        private void HourlyPageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            SettingsFlyout.Hide();
+            try
+            {
+                HistoryFrame.Navigate(typeof(HourlyPage), _displayedPlaceId);
+                HistoryFrame.BackStack.Clear();
+                if (HistoryFrame.Content is HourlyPage page)
+                {
+                    page.DisplayedPlaceName = PlaceText.Text;
+                    page.DataProvider = GetPlaceDataAsync;
+                    page.CloseRequested += (_, _) => CloseHistory();
+                }
+                HistoryFrame.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                CrashLog.Write(ex, "ShowHourly");
+                CloseHistory();
+            }
+        }
+
+        // The forecast of a place for the 10-Day Hourly page, and when it was loaded. The shown
+        // location and a location loaded in the last minutes add no request.
+        private async Task<(RootV3Response? Data, DateTimeOffset FetchedAt)> GetPlaceDataAsync(string placeId)
+        {
+            var hasCached = _weatherCache.TryGetValue(placeId, out var cached);
+            if (placeId == _displayedPlaceId && _lastApiData != null)
+                return (_lastApiData, hasCached ? cached.FetchedAt : DateTimeOffset.UtcNow);
+            if (hasCached && DateTimeOffset.UtcNow - cached.FetchedAt < LocationCacheMaxAge)
+                return (cached.Data, cached.FetchedAt);
+
+            var response = await ApiUtils.GetFullData(placeId);
+            var json = await response.Content.ReadAsStringAsync();
+            var data = System.Text.Json.JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.RootV3Response);
+            if (data != null)
+                _weatherCache[placeId] = (DateTimeOffset.UtcNow, data);
+            return (data, DateTimeOffset.UtcNow);
         }
 
         // Local build: the button shows "Show tray icons" or "Hide tray icons" by the current state.
@@ -2686,7 +2728,13 @@ namespace FluentWeather.Views
                     }
 
                     chip.Value = text.Value.Value;
-                    chip.Note = feed == ExtraFeed.Wind ? "ExtraWindNote".GetLocalized() : "";
+                    chip.Note = feed switch
+                    {
+                        ExtraFeed.Wind => "ExtraWindNote".GetLocalized(),
+                        // The card value is the range of the highs. The line below gives the range of the lows.
+                        ExtraFeed.Models => await OpenMeteoExtrasService.ModelsLowsNoteAsync(latitude, longitude, units),
+                        _ => ""
+                    };
                     HoverTip.Set(chip, text.Value.Tip);
                     chip.Visibility = Visibility.Visible;
                 }

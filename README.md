@@ -6,7 +6,7 @@ FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v49.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download FluentWeather-Plus-Setup-v51.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
@@ -17,6 +17,7 @@ Instead of a pre-compiled executable, to build the Github project app on your Wi
 * Saved locations. A star saves a location, and a row of buttons switches between up to 25 of them.
 * Two tray icons, one with the temperature and one with the conditions. Hovering shows a panel with a choice of details.
 * A Full History page for any saved location, with charts and a table, from a whole year down to single hours.
+* A 10-Day Hourly page with every hour of the forecast, as a list or a table, with a chart of all 10 days.
 * A radar map for US locations.
 * An air quality card for every location.
 * Severe weather alerts under the location name, and as a bubble or a Windows notification from the tray.
@@ -56,9 +57,11 @@ v47 shows the current gust on the Wind card and makes the Wind forecast card cle
 
 v49 adds severe weather alerts and 12 more data items. Each item can be turned on for the main window and for the tray.
 
+v51 adds the 10-Day Hourly page. It also shows the range of the lows on the Other forecast models card, and the source of the first five More data options on hover.
+
 ## Credits
 
-* FluentWeather-Plus v49 updated by duedilly108
+* FluentWeather-Plus v51 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

@@ -356,6 +356,20 @@ namespace FluentWeather.Services
         public static string PollenLevel(double count) =>
             (count <= 0 ? "PollenNone" : count < 10 ? "PollenLow" : count < 50 ? "PollenModerate" : count < 200 ? "PollenHigh" : "PollenVeryHigh").GetLocalized();
 
+        /// <summary>
+        /// The line under the value of the "Other forecast models" card: the range of the lows of the
+        /// models, for example "Lows 26-29°". Uses the cached data, so it adds no request.
+        /// </summary>
+        public static async Task<string> ModelsLowsNoteAsync(double lat, double lon, WetUnits units)
+        {
+            var list = await GetModelsAsync(lat, lon);
+            var lows = list?.Where(m => m.MinC != null).Select(m => WaterService.TemperatureFor(m.MinC!.Value, units)).ToList();
+            if (lows == null || lows.Count == 0)
+                return "";
+            var range = lows.Min() == lows.Max() ? lows.Min() + "\u00B0" : lows.Min() + "-" + lows.Max() + "\u00B0";
+            return string.Format(CultureInfo.CurrentCulture, "ExtraModelsLows".GetLocalized(), range);
+        }
+
         /// <summary>The chip value, the tooltip and the tray line of a feed. Null when there is nothing to show.</summary>
         public static async Task<(string Value, string Tip, string TrayLine)?> DescribeAsync(ExtraFeed feed, double lat, double lon, WetUnits units)
         {

@@ -97,13 +97,13 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v49.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v49.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v51.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v51.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v49.zip. The version is the last
-part of the build number, so build 2.1.0.49 is v49. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v51.zip. The version is the last
+part of the build number, so build 2.1.0.51 is v51. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
-It also writes FluentWeather-Plus-v49-release-notes.txt on the Desktop. Copy its text into
+It also writes FluentWeather-Plus-v51-release-notes.txt on the Desktop. Copy its text into
 the description of the GitHub release. It has the VirusTotal links of both files filled in.
 
 The setup holds the app as it is built and installed on your PC, signed again with
@@ -453,6 +453,12 @@ shows:
 For today, 24, 36 and 48 hours start at the current hour. For another day, they
 start at midnight of that day. The first hour and each midnight show the weekday,
 for example "Wed 00:00".
+
+The "10-Day Hourly" button at the right of the "Hourly" title opens a page with every
+hour of the forecast, about 240 hours. The chart shows all 10 days, and the chart
+picker chooses what it shows. A click on the chart scrolls the list to that hour.
+"List" shows the main values of each hour, and a click on a row opens the others.
+"Table" shows every value in its own column. "Back" and Esc close the page.
 
 
 Language

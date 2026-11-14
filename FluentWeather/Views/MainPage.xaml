@@ -1445,6 +1445,24 @@
                                     FontSize="20"
                                     Margin="0,0,0,16" />
 
+                                <!-- Local build: opens the 10-Day Hourly page of the shown location. See HourlyPage. -->
+                                <Button x:Name="HourlyPageOpenButton"
+                                        RelativePanel.AlignRightWithPanel="True"
+                                        VerticalAlignment="Top"
+                                        Padding="12,2,10,4"
+                                        Margin="0,-4,32,12"
+                                        BorderThickness="0"
+                                        x:Uid="HourlyPageOpenButton"
+                                        Click="HourlyPageButton_OnClick">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <TextBlock x:Uid="HourlyPageOpenText"
+                                                   Style="{StaticResource SubtitleTextBlockStyle}"
+                                                   VerticalAlignment="Center" />
+                                        <FontIcon FontFamily="{StaticResource FluentIcons}" Glyph="&#xE72A;" FontSize="16"
+                                                  VerticalAlignment="Center" Margin="0,2,0,0" />
+                                    </StackPanel>
+                                </Button>
+
                             </RelativePanel>
 
 
@@ -2168,7 +2186,8 @@
         </Grid>
         </Canvas>
 
-        <!-- Local build: the history page, over the content and below the title bar. See HistoryPage. -->
+        <!-- Local build: the history page, over the content and below the title bar. See HistoryPage.
+             The 10-Day Hourly page uses the same frame. See HourlyPage. -->
         <Frame x:Name="HistoryFrame"
                Grid.Row="1"
                Visibility="Collapsed" />
