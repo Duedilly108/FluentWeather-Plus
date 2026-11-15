@@ -211,7 +211,7 @@ Tray Icon Severe Weather Alert Popup Options:
 <br>
 <br>
 
-Draggable Tray Icon Mouse-over popup details display
+Draggable Remembered Tray Icon Mouse-over popup details display
 
 <br>
 
@@ -231,11 +231,14 @@ Tray Icons Hover Popup Menu
 <br>
 <br>
 
-Selectable Hover Over Popup Details
+Selectable Tray Icon Hover Over Popup Details
 
 <br>
 
 <img width="794" height="1097" alt="selectable_hover_over_popup_details" src="https://github.com/user-attachments/assets/38506bb9-12b8-4389-8d0d-4963fd6d30a2" />
+
+<br>
+
 
 
 <br>
