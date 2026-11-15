@@ -1,4 +1,5 @@
-<img width="1650" height="1277" alt="main-pic1" src="https://github.com/user-attachments/assets/096b993c-c15f-40cf-a45e-c26ff0947e47" />
+
+<img width="2550" height="1540" alt="full_main_top_100" src="https://github.com/user-attachments/assets/ef5228de-57ac-4ee1-b63b-14d42ee52192" />
 
 A weather app for Windows with saved locations and weather icons in the taskbar.
 
@@ -59,7 +60,7 @@ v49 adds severe weather alerts and 12 more data items. Each item can be turned o
 
 v50 adds the 10-Day Hourly page. It also shows the range of the lows on the Other forecast models card, and the source of the first five More data options on hover.
 
-v51 shows the location name and the section titles in a larger font with a drop shadow, gives the Full History and 10-Day Hourly buttons a matching darker card, and shows Highs and Lows on the Other models card.
+v51 shows the location name and the section titles in a larger font, gives the Full History and 10-Day Hourly buttons a matching darker card, and shows Highs and Lows on the "Other models" card.
 
 ## Credits
 
@@ -77,8 +78,8 @@ v51 shows the location name and the section titles in a larger font with a drop 
 Full main window (at 55%):
 
 <br>
+<img width="2555" height="1554" alt="full_main_newest" src="https://github.com/user-attachments/assets/475ccb4f-b031-4490-ad57-73d02fddcbfc" />
 
-<img width="2560" height="1546" alt="full_main_Page" src="https://github.com/user-attachments/assets/c09f9852-027a-47ee-939d-5b6a2e83c9a0" />
 
 
 
