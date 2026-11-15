@@ -65,6 +65,22 @@
         </LinearGradientBrush>
         <SolidColorBrush x:Key="PanelBorderBrush" Color="#24FFFFFF" />
 
+        <!-- Local build: the location name and the titles of the sections. 24 pixels, semibold. A drop
+             shadow is added in code. See TitleShadow. -->
+        <Style x:Key="SectionTitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+
+        <!-- Local build: the card of the "Full History" and "10-Day Hourly" buttons. It follows the
+             Card tint setting and stays 20 points darker than the cards. See ApplyCardTint. -->
+        <media2:AcrylicBrush x:Key="TitleButtonAcrylicBrush"
+                             BackgroundSource="Backdrop"
+                             TintColor="#1C1C1E"
+                             TintOpacity="0.2"
+                             TintLuminosityOpacity="0.2"
+                             FallbackColor="#331C1C1E"
+                             AlwaysUseFallback="{x:Bind AcrylicEffectsService.UseFallback, Mode=OneWay}" />
+
         <Style x:Key="SettingsHeaderStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="15" />
             <Setter Property="FontWeight" Value="SemiBold" />
@@ -960,7 +976,7 @@
                                           FontFamily="{StaticResource FluentIcons}" Glyph="&#xE707;" />
 
                                 <TextBlock x:Name="PlaceText" Text="place"
-                                           Style="{StaticResource SubtitleTextBlockStyle}"
+                                           Style="{StaticResource SectionTitleTextStyle}"
                                            Margin="8,0,0,0"
                                            RelativePanel.RightOf="PlaceIcon" />
 
@@ -1306,8 +1322,9 @@
 
                             <TextBlock
                                 Grid.Row="0"
+                                x:Name="DailyForecastTitleText"
                                 x:Uid="DailyForecastTitleTextBlock"
-                                Style="{StaticResource SubtitleTextBlockStyle}"
+                                Style="{StaticResource SectionTitleTextStyle}"
 
                                 Margin="0,0,0,16" />
 
@@ -1317,8 +1334,10 @@
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Top"
                                     Padding="12,2,10,4"
-                                    Margin="0,-4,0,12"
-                                    BorderThickness="0"
+                                    Margin="0,-4,32,12"
+                                    Background="{StaticResource TitleButtonAcrylicBrush}"
+                                    BorderBrush="#1AFFFFFF"
+                                    BorderThickness="1"
                                     x:Uid="HistoryOpenButton"
                                     Click="HistoryButton_OnClick">
                                 <StackPanel Orientation="Horizontal" Spacing="8">
@@ -1441,8 +1460,7 @@
                                 <TextBlock
                                     x:Name="HourlyTitleText"
                                     x:Uid="HourlyTitleText"
-                                    Style="{StaticResource BodyTextBlockStyle}"
-                                    FontSize="20"
+                                    Style="{StaticResource SectionTitleTextStyle}"
                                     Margin="0,0,0,16" />
 
                                 <!-- Local build: opens the 10-Day Hourly page of the shown location. See HourlyPage. -->
@@ -1451,7 +1469,9 @@
                                         VerticalAlignment="Top"
                                         Padding="12,2,10,4"
                                         Margin="0,-4,32,12"
-                                        BorderThickness="0"
+                                        Background="{StaticResource TitleButtonAcrylicBrush}"
+                                    BorderBrush="#1AFFFFFF"
+                                    BorderThickness="1"
                                         x:Uid="HourlyPageOpenButton"
                                         Click="HourlyPageButton_OnClick">
                                     <StackPanel Orientation="Horizontal" Spacing="8">
@@ -1699,8 +1719,7 @@
                                 <TextBlock
                                     x:Name="WeatherInsightsTitleText"
                                     x:Uid="WeatherInsightsTitleText"
-                                    Style="{StaticResource BodyTextBlockStyle}"
-                                    FontSize="20"
+                                    Style="{StaticResource SectionTitleTextStyle}"
                                     Margin="0,0,0,16" />
 
 
@@ -2070,9 +2089,9 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
 
-                            <TextBlock x:Uid="RadarTitleText"
-                                       Style="{StaticResource BodyTextBlockStyle}"
-                                       FontSize="20"
+                            <TextBlock x:Name="RadarTitleText"
+                                       x:Uid="RadarTitleText"
+                                       Style="{StaticResource SectionTitleTextStyle}"
                                        Margin="0,0,0,16" />
 
                             <Grid Grid.Row="1"

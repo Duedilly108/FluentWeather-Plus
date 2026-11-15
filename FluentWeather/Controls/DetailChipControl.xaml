@@ -29,6 +29,13 @@
                    Margin="0,0,0,0"
                    RelativePanel.Below="TitleText" />
 
+        <!-- Local build: lines of a plain label and a bold value, such as "Highs 36-39" and
+             "Lows 26-29". The values start at the same place. Shown in place of the value. -->
+        <Grid x:Name="LinesGrid"
+              ColumnSpacing="6"
+              Visibility="Collapsed"
+              RelativePanel.Below="TitleText" />
+
         <!-- Local build: an optional smaller line under the value. Hidden when empty. -->
         <TextBlock x:Name="NoteText"
                    FontSize="12"

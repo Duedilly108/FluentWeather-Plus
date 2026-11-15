@@ -700,7 +700,7 @@ Live Tiles are available natively on Windows 10 only.</value>
     <value>Wind forecast (gusts, 80 m)</value>
   </data>
   <data name="ExtraModelsLabel.Text" xml:space="preserve">
-    <value>Other forecast models</value>
+    <value>Other models</value>
   </data>
   <data name="ExtraRiverLabel.Text" xml:space="preserve">
     <value>River flow</value>
@@ -856,7 +856,7 @@ Live Tiles are available natively on Windows 10 only.</value>
     <value>Wind forecast</value>
   </data>
   <data name="ExtraModelsLabelName" xml:space="preserve">
-    <value>Other forecast models</value>
+    <value>Other models</value>
   </data>
   <data name="ExtraRiverLabelName" xml:space="preserve">
     <value>River flow</value>
@@ -1723,9 +1723,6 @@ Evaporation is the reference evapotranspiration (FAO-56). It tells how much wate
   <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Tree, grass and ragweed levels. Source: weather.com in the US and some other countries, Open-Meteo in Europe.</value>
   </data>
-  <data name="ExtraModelsLows" xml:space="preserve">
-    <value>Lows {0}</value>
-  </data>
   <data name="HourlyPageOpenText.Text" xml:space="preserve">
     <value>10-Day Hourly</value>
   </data>
@@ -1950,5 +1947,11 @@ Evaporation is the reference evapotranspiration (FAO-56). It tells how much wate
   </data>
   <data name="HourlyPageTitlePressure" xml:space="preserve">
     <value>Sea level pressure, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Highs</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Lows</value>
   </data>
 </root>

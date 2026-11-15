@@ -181,6 +181,10 @@ namespace FluentWeather.Views
 
             InitializeComponent();
 
+            // Local build: a drop shadow under the location name and the section titles.
+            foreach (var title in new[] { PlaceText, DailyForecastTitleText, HourlyTitleText, WeatherInsightsTitleText, RadarTitleText })
+                TitleShadow.Attach(title);
+
             DataContext = this; //DataContext = ViewModel;
             Initialize();
         }
@@ -269,7 +273,7 @@ namespace FluentWeather.Views
             await LoadApiData();
         }
 
-        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.50 is v50.
+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.51 is v51.
         private static string GetPlusVersionDescription()
         {
             return $"v{Package.Current.Id.Version.Revision}";
@@ -1936,6 +1940,9 @@ namespace FluentWeather.Views
         private const int DefaultCardTint = 40;
         private static readonly Color CardTintDark = Color.FromArgb(0xFF, 0x1C, 0x1C, 0x1E);
 
+        // Local build: how much darker the "Full History" and "10-Day Hourly" buttons are than the cards.
+        private const double ButtonTintStep = 0.2;
+
         private int _cardTint = DefaultCardTint;
 
         // The percentage next to the slider. It is inside the settings flyout, so the code gets it when it loads.
@@ -1965,12 +1972,21 @@ namespace FluentWeather.Views
                 }
             }
 
+            // Local build: the "Full History" and "10-Day Hourly" buttons follow the card tint and stay
+            // 20 points darker than the cards, up to 100%. At 0% the cards have no tint and the buttons
+            // keep a 20% tint. In the light theme the buttons are 20 points more opaque than the cards.
+            var bt = Math.Min(1.0, (_cardTint > 0 ? (isLight ? Math.Max(0.3, t) : t) : 0) + ButtonTintStep);
+            if (isLight && _cardTint > 0)
+                SetAcrylic("TitleButtonAcrylicBrush", Colors.White, bt, bt, Color.FromArgb((byte) Math.Round(bt * 255), 0xFF, 0xFF, 0xFF));
+            else
+                SetAcrylic("TitleButtonAcrylicBrush", CardTintDark, bt, bt, Color.FromArgb((byte) Math.Round(bt * 255), CardTintDark.R, CardTintDark.G, CardTintDark.B));
+
             var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
             foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl,
                          ExtraMarineChip, ExtraWindChip, ExtraModelsChip, ExtraRiverChip, ExtraPollenChip }.Concat(MoreChips))
                 chip?.SetCardBackground(chipBrush);
 
-            // Local build: the water card and the History button follow the card tint too.
+            // Local build: the water card follows the card tint too.
             if (WaterCard != null)
             {
                 if (chipBrush != null)
@@ -1978,14 +1994,6 @@ namespace FluentWeather.Views
                 else
                     WaterCard.Background = new Windows.UI.Xaml.Media.SolidColorBrush(Color.FromArgb(0x1D, 0xFF, 0xFF, 0xFF));
             }
-            if (HistoryOpenButton != null)
-            {
-                if (chipBrush != null)
-                    HistoryOpenButton.Background = chipBrush;
-                else
-                    HistoryOpenButton.ClearValue(Control.BackgroundProperty);
-            }
-
             foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
                 ApplyCardTintToDayButton(pastCard);
 
@@ -2728,13 +2736,14 @@ namespace FluentWeather.Views
                     }
 
                     chip.Value = text.Value.Value;
-                    chip.Note = feed switch
+                    if (feed == ExtraFeed.Models &&
+                        await OpenMeteoExtrasService.ModelsRangesAsync(latitude, longitude) is { } ranges)
                     {
-                        ExtraFeed.Wind => "ExtraWindNote".GetLocalized(),
-                        // The card value is the range of the highs. The line below gives the range of the lows.
-                        ExtraFeed.Models => await OpenMeteoExtrasService.ModelsLowsNoteAsync(latitude, longitude, units),
-                        _ => ""
-                    };
+                        // "Highs" and "Lows" in the plain font, the ranges in the bold font of the card.
+                        chip.SetLabeledLines(("ExtraModelsHighs".GetLocalized(), ranges.Highs),
+                                             ("ExtraModelsLows".GetLocalized(), ranges.Lows));
+                    }
+                    chip.Note = feed == ExtraFeed.Wind ? "ExtraWindNote".GetLocalized() : "";
                     HoverTip.Set(chip, text.Value.Tip);
                     chip.Visibility = Visibility.Visible;
                 }

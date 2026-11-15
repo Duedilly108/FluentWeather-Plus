@@ -120,7 +120,7 @@ $FilesToCopy   = @(
     'FluentWeather crash report.cmd'
 )
 $UninstallKey  = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FluentWeatherLocal'
-$SetupVersion  = '72'
+$SetupVersion  = '73'
 $MakeInstallerShortcut = 'Make FluentWeather installer.lnk'
 $MakeDirectShortcut    = 'Make FluentWeather direct installer.lnk'
 $CrashReportShortcut   = 'FluentWeather crash report.lnk'

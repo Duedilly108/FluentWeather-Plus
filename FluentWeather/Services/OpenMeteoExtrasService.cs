@@ -357,17 +357,22 @@ namespace FluentWeather.Services
             (count <= 0 ? "PollenNone" : count < 10 ? "PollenLow" : count < 50 ? "PollenModerate" : count < 200 ? "PollenHigh" : "PollenVeryHigh").GetLocalized();
 
         /// <summary>
-        /// The line under the value of the "Other forecast models" card: the range of the lows of the
-        /// models, for example "Lows 26-29°". Uses the cached data, so it adds no request.
+        /// The two lines of the "Other models" card: the range of the highs and the range of the lows
+        /// of the models, for example "36-39\u00B0" and "26-29\u00B0". The unit letter is left out, so
+        /// "Highs 36-39\u00B0" fits the width of the card. Uses the cached data, so it adds no request.
         /// </summary>
-        public static async Task<string> ModelsLowsNoteAsync(double lat, double lon, WetUnits units)
+        public static async Task<(string Highs, string Lows)?> ModelsRangesAsync(double lat, double lon)
         {
             var list = await GetModelsAsync(lat, lon);
-            var lows = list?.Where(m => m.MinC != null).Select(m => WaterService.TemperatureFor(m.MinC!.Value, units)).ToList();
-            if (lows == null || lows.Count == 0)
-                return "";
-            var range = lows.Min() == lows.Max() ? lows.Min() + "\u00B0" : lows.Min() + "-" + lows.Max() + "\u00B0";
-            return string.Format(CultureInfo.CurrentCulture, "ExtraModelsLows".GetLocalized(), range);
+            if (list == null || list.Count == 0)
+                return null;
+            var units = await VariousUtils.GetUnitsCode();
+            static string Range(List<int> v) => v.Min() == v.Max() ? v.Min() + "\u00B0" : v.Min() + "-" + v.Max() + "\u00B0";
+            var highs = list.Where(m => m.MaxC != null).Select(m => WaterService.TemperatureFor(m.MaxC!.Value, units)).ToList();
+            var lows = list.Where(m => m.MinC != null).Select(m => WaterService.TemperatureFor(m.MinC!.Value, units)).ToList();
+            if (highs.Count == 0 || lows.Count == 0)
+                return null;
+            return (Range(highs), Range(lows));
         }
 
         /// <summary>The chip value, the tooltip and the tray line of a feed. Null when there is nothing to show.</summary>

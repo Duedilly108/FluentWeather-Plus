@@ -6,7 +6,7 @@ FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v50.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download FluentWeather-Plus-Setup-v51.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
@@ -59,9 +59,11 @@ v49 adds severe weather alerts and 12 more data items. Each item can be turned o
 
 v50 adds the 10-Day Hourly page. It also shows the range of the lows on the Other forecast models card, and the source of the first five More data options on hover.
 
+v51 shows the location name and the section titles in a larger font with a drop shadow, gives the Full History and 10-Day Hourly buttons a matching darker card, and shows Highs and Lows on the Other models card.
+
 ## Credits
 
-* FluentWeather-Plus v50 updated by duedilly108
+* FluentWeather-Plus v51 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

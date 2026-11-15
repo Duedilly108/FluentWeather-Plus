@@ -326,7 +326,7 @@ index 0000000000000000000000000000000000000000..3c547db94bfbe913f334ca1b97c112f7
 +    }
 +}
 diff --git a/FluentWeather/Controls/DetailChipControl.xaml b/FluentWeather/Controls/DetailChipControl.xaml
-index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..fd2ccfbad99951230f5bb1b1d672dbc209599ab2 100644
+index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..c804b379281d249fa111ce3aef3edc0be7ed428e 100644
 --- a/FluentWeather/Controls/DetailChipControl.xaml
 +++ b/FluentWeather/Controls/DetailChipControl.xaml
 @@ -9,6 +9,7 @@
@@ -337,10 +337,17 @@ index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..fd2ccfbad99951230f5bb1b1d672dbc2
          Margin="4"
          CornerRadius="6"
          Padding="8"
-@@ -28,6 +29,15 @@
+@@ -28,6 +29,22 @@
                     Margin="0,0,0,0"
                     RelativePanel.Below="TitleText" />
  
++        <!-- Local build: lines of a plain label and a bold value, such as "Highs 36-39" and
++             "Lows 26-29". The values start at the same place. Shown in place of the value. -->
++        <Grid x:Name="LinesGrid"
++              ColumnSpacing="6"
++              Visibility="Collapsed"
++              RelativePanel.Below="TitleText" />
++
 +        <!-- Local build: an optional smaller line under the value. Hidden when empty. -->
 +        <TextBlock x:Name="NoteText"
 +                   FontSize="12"
@@ -354,13 +361,59 @@ index 3fd5a03fc0bab743d532ae29f15fc4a5f502fb70..fd2ccfbad99951230f5bb1b1d672dbc2
      </RelativePanel>
  </UserControl>
 diff --git a/FluentWeather/Controls/DetailChipControl.xaml.cs b/FluentWeather/Controls/DetailChipControl.xaml.cs
-index 84658ce13f94a7c754edb6079c115e553b1352f2..4411eb833e9a146b89930ae30ab9fee812a17e77 100644
+index 84658ce13f94a7c754edb6079c115e553b1352f2..c65fc59267efad74dceb8e7ea05219b403bc8972 100644
 --- a/FluentWeather/Controls/DetailChipControl.xaml.cs
 +++ b/FluentWeather/Controls/DetailChipControl.xaml.cs
-@@ -50,9 +50,29 @@ namespace FluentWeather.Controls
+@@ -48,11 +48,77 @@ namespace FluentWeather.Controls
+             var newValue = (string) e.NewValue;
+ 
              currentInstance.ValueText.Text = newValue;
++
++            // Local build: a plain value replaces the lines of SetLabeledLines.
++            if (currentInstance.LinesGrid.Visibility == Visibility.Visible &&
++                !string.Equals(newValue, currentInstance._linesValue))
++            {
++                currentInstance.LinesGrid.Visibility = Visibility.Collapsed;
++                currentInstance.ValueText.Visibility = Visibility.Visible;
++                RelativePanel.SetBelow(currentInstance.NoteText, currentInstance.ValueText);
++            }
          }
  
++        /// <summary>
++        /// Local build: shows the value as lines of a plain label and a bold value, for example
++        /// "Highs 36-39" and "Lows 26-29", with the values in one column. Setting Value later shows
++        /// a plain value again.
++        /// </summary>
++        public void SetLabeledLines(params (string Label, string Value)[] lines)
++        {
++            // Value holds the same text, so a later plain Value differs from it and shows it again.
++            var joined = string.Join("\n", System.Linq.Enumerable.Select(lines, l => l.Label + " " + l.Value));
++            _linesValue = joined;
++            SetValue(ValueProperty, joined);
++
++            LinesGrid.Children.Clear();
++            LinesGrid.RowDefinitions.Clear();
++            LinesGrid.ColumnDefinitions.Clear();
++            LinesGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
++            LinesGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
++            var bodyStyle = (Style) Application.Current.Resources["BodyTextBlockStyle"];
++            var strongStyle = (Style) Application.Current.Resources["BodyStrongTextBlockStyle"];
++            for (var i = 0; i < lines.Length; i++)
++            {
++                LinesGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
++                var label = new TextBlock { Text = lines[i].Label, Style = bodyStyle };
++                var value = new TextBlock { Text = lines[i].Value, Style = strongStyle };
++                Grid.SetRow(label, i);
++                Grid.SetRow(value, i);
++                Grid.SetColumn(value, 1);
++                LinesGrid.Children.Add(label);
++                LinesGrid.Children.Add(value);
++            }
++            LinesGrid.Visibility = Visibility.Visible;
++            ValueText.Visibility = Visibility.Collapsed;
++            RelativePanel.SetBelow(NoteText, LinesGrid);
++        }
++
 +        /// <summary>Local build: an optional smaller line under the value. Empty or null hides it.</summary>
 +        public string Note
 +        {
@@ -371,6 +424,8 @@ index 84658ce13f94a7c754edb6079c115e553b1352f2..4411eb833e9a146b89930ae30ab9fee8
 +                NoteText.Visibility = string.IsNullOrEmpty(value) ? Visibility.Collapsed : Visibility.Visible;
 +            }
 +        }
++
++        private string? _linesValue;
 +
 +        private readonly Windows.UI.Xaml.Media.Brush _originalBackground;
 +
@@ -641,6 +696,111 @@ index 0000000000000000000000000000000000000000..4fd23f893ebef093e95a93abf56138ed
 +            catch (Exception)
 +            {
 +                // No hover panel this time.
++            }
++        }
++    }
++}
+diff --git a/FluentWeather/Helpers/TitleShadow.cs b/FluentWeather/Helpers/TitleShadow.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..873ae8f19da95bdb9b4365ec52b36a6db5004b40
+--- /dev/null
++++ b/FluentWeather/Helpers/TitleShadow.cs
+@@ -0,0 +1,99 @@
++using System;
++using System.Numerics;
++using Windows.UI;
++using Windows.UI.Composition;
++using Windows.UI.Xaml;
++using Windows.UI.Xaml.Controls;
++using Windows.UI.Xaml.Hosting;
++using Windows.UI.Xaml.Shapes;
++using FluentWeather.Services;
++
++namespace FluentWeather.Helpers
++{
++    /// <summary>
++    /// Local build: a soft drop shadow under the text of a title, such as "Daily forecast".
++    ///
++    /// XAML has no text shadow. The shadow is a composition DropShadow that uses the shape of the
++    /// text (its alpha mask). It is drawn in an empty element that sits behind every other child of
++    /// the parent of the title, and it follows the place and the size of the title.
++    /// </summary>
++    public static class TitleShadow
++    {
++        private const float BlurRadius = 4f;
++        private const float Opacity = 0.65f;
++        private static readonly Vector3 Offset = new(0, 2, 0);
++
++        public static void Attach(TextBlock title)
++        {
++            if (title == null)
++                return;
++            if (title.IsLoaded)
++                Add(title);
++            else
++                title.Loaded += Title_Loaded;
++        }
++
++        private static void Title_Loaded(object sender, RoutedEventArgs e)
++        {
++            var title = (TextBlock) sender;
++            title.Loaded -= Title_Loaded;
++            Add(title);
++        }
++
++        private static void Add(TextBlock title)
++        {
++            try
++            {
++                if (title.Parent is not Panel parent || parent is StackPanel)
++                    return;
++
++                // An empty element at the top left corner of the parent, behind the other children.
++                var host = new Rectangle
++                {
++                    Width = 0,
++                    Height = 0,
++                    IsHitTestVisible = false,
++                    HorizontalAlignment = HorizontalAlignment.Left,
++                    VerticalAlignment = VerticalAlignment.Top
++                };
++                parent.Children.Insert(0, host);
++
++                var compositor = ElementCompositionPreview.GetElementVisual(host).Compositor;
++                var shadow = compositor.CreateDropShadow();
++                shadow.BlurRadius = BlurRadius;
++                shadow.Opacity = Opacity;
++                shadow.Color = Colors.Black;
++                shadow.Offset = Offset;
++                shadow.Mask = title.GetAlphaMask();
++
++                var sprite = compositor.CreateSpriteVisual();
++                sprite.Shadow = shadow;
++                ElementCompositionPreview.SetElementChildVisual(host, sprite);
++
++                void Place()
++                {
++                    try
++                    {
++                        var at = title.TransformToVisual(host).TransformPoint(new Windows.Foundation.Point(0, 0));
++                        sprite.Offset = new Vector3((float) at.X, (float) at.Y, 0);
++                        sprite.Size = new Vector2((float) title.ActualWidth, (float) title.ActualHeight);
++                        sprite.IsVisible = title.Visibility == Visibility.Visible && title.ActualWidth > 0;
++                    }
++                    catch (Exception)
++                    {
++                        // The title is not in the visual tree at this moment.
++                    }
++                }
++
++                // The title can move when the window or a neighbor changes size, and it can change
++                // its text. The place is checked after each layout pass.
++                title.LayoutUpdated += (_, _) => Place();
++                Place();
++            }
++            catch (Exception ex)
++            {
++                CrashLog.Write(ex, "TitleShadow");
 +            }
 +        }
 +    }
@@ -5908,10 +6068,10 @@ index 0000000000000000000000000000000000000000..73812a2bb8927d786a92473f91fcad37
 +}
 diff --git a/FluentWeather/Services/OpenMeteoExtrasService.cs b/FluentWeather/Services/OpenMeteoExtrasService.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..9b2184f8c9b65709ca196ed401a56cb71e058322
+index 0000000000000000000000000000000000000000..bf9d803a60d05239de3ef8bed4605024c4ff7cfe
 --- /dev/null
 +++ b/FluentWeather/Services/OpenMeteoExtrasService.cs
-@@ -0,0 +1,479 @@
+@@ -0,0 +1,484 @@
 +using FluentWeather.Helpers;
 +using FluentWeather.Models;
 +using FluentWeather.Utils;
@@ -6271,17 +6431,22 @@ index 0000000000000000000000000000000000000000..9b2184f8c9b65709ca196ed401a56cb7
 +            (count <= 0 ? "PollenNone" : count < 10 ? "PollenLow" : count < 50 ? "PollenModerate" : count < 200 ? "PollenHigh" : "PollenVeryHigh").GetLocalized();
 +
 +        /// <summary>
-+        /// The line under the value of the "Other forecast models" card: the range of the lows of the
-+        /// models, for example "Lows 26-29°". Uses the cached data, so it adds no request.
++        /// The two lines of the "Other models" card: the range of the highs and the range of the lows
++        /// of the models, for example "36-39\u00B0" and "26-29\u00B0". The unit letter is left out, so
++        /// "Highs 36-39\u00B0" fits the width of the card. Uses the cached data, so it adds no request.
 +        /// </summary>
-+        public static async Task<string> ModelsLowsNoteAsync(double lat, double lon, WetUnits units)
++        public static async Task<(string Highs, string Lows)?> ModelsRangesAsync(double lat, double lon)
 +        {
 +            var list = await GetModelsAsync(lat, lon);
-+            var lows = list?.Where(m => m.MinC != null).Select(m => WaterService.TemperatureFor(m.MinC!.Value, units)).ToList();
-+            if (lows == null || lows.Count == 0)
-+                return "";
-+            var range = lows.Min() == lows.Max() ? lows.Min() + "\u00B0" : lows.Min() + "-" + lows.Max() + "\u00B0";
-+            return string.Format(CultureInfo.CurrentCulture, "ExtraModelsLows".GetLocalized(), range);
++            if (list == null || list.Count == 0)
++                return null;
++            var units = await VariousUtils.GetUnitsCode();
++            static string Range(List<int> v) => v.Min() == v.Max() ? v.Min() + "\u00B0" : v.Min() + "-" + v.Max() + "\u00B0";
++            var highs = list.Where(m => m.MaxC != null).Select(m => WaterService.TemperatureFor(m.MaxC!.Value, units)).ToList();
++            var lows = list.Where(m => m.MinC != null).Select(m => WaterService.TemperatureFor(m.MinC!.Value, units)).ToList();
++            if (highs.Count == 0 || lows.Count == 0)
++                return null;
++            return (Range(highs), Range(lows));
 +        }
 +
 +        /// <summary>The chip value, the tooltip and the tray line of a feed. Null when there is nothing to show.</summary>
@@ -8222,7 +8387,7 @@ index 0000000000000000000000000000000000000000..e07497f4fa57b0106c95877153d276a2
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a7ae15a66 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b4661a542e1df9a68a56c41aa52d352e951e0dd9 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -126,11 +126,11 @@
@@ -8282,7 +8447,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a
    <data name="TranslateAppText.Text" xml:space="preserve">
      <value>Translate the app</value>
    </data>
-@@ -297,4 +324,1631 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -297,4 +324,1634 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -8662,7 +8827,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a
 +    <value>Wind forecast (gusts, 80 m)</value>
 +  </data>
 +  <data name="ExtraModelsLabel.Text" xml:space="preserve">
-+    <value>Other forecast models</value>
++    <value>Other models</value>
 +  </data>
 +  <data name="ExtraRiverLabel.Text" xml:space="preserve">
 +    <value>River flow</value>
@@ -8818,7 +8983,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a
 +    <value>Wind forecast</value>
 +  </data>
 +  <data name="ExtraModelsLabelName" xml:space="preserve">
-+    <value>Other forecast models</value>
++    <value>Other models</value>
 +  </data>
 +  <data name="ExtraRiverLabelName" xml:space="preserve">
 +    <value>River flow</value>
@@ -9685,9 +9850,6 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a
 +  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
 +    <value>Tree, grass and ragweed levels. Source: weather.com in the US and some other countries, Open-Meteo in Europe.</value>
 +  </data>
-+  <data name="ExtraModelsLows" xml:space="preserve">
-+    <value>Lows {0}</value>
-+  </data>
 +  <data name="HourlyPageOpenText.Text" xml:space="preserve">
 +    <value>10-Day Hourly</value>
 +  </data>
@@ -9912,6 +10074,12 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..6788fbffa6ce0c852804238bf63ada9a
 +  </data>
 +  <data name="HourlyPageTitlePressure" xml:space="preserve">
 +    <value>Sea level pressure, {0}</value>
++  </data>
++  <data name="ExtraModelsHighs" xml:space="preserve">
++    <value>Highs</value>
++  </data>
++  <data name="ExtraModelsLows" xml:space="preserve">
++    <value>Lows</value>
 +  </data>
  </root>
 \ No newline at end of file
@@ -14375,10 +14543,10 @@ index 0000000000000000000000000000000000000000..9b5d7da3f03ca81c7a67949f21d48f19
 +    }
 +}
 diff --git a/FluentWeather/Views/MainPage.xaml b/FluentWeather/Views/MainPage.xaml
-index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002fa75fa306 100644
+index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867120e2a4f 100644
 --- a/FluentWeather/Views/MainPage.xaml
 +++ b/FluentWeather/Views/MainPage.xaml
-@@ -57,6 +57,29 @@
+@@ -57,6 +57,45 @@
  
          <!--<media:BackdropBlurBrush x:Key="TonyBrush" Amount="7" />-->
  
@@ -14389,6 +14557,22 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +            <GradientStop Color="#2B3547" Offset="1" />
 +        </LinearGradientBrush>
 +        <SolidColorBrush x:Key="PanelBorderBrush" Color="#24FFFFFF" />
++
++        <!-- Local build: the location name and the titles of the sections. 24 pixels, semibold. A drop
++             shadow is added in code. See TitleShadow. -->
++        <Style x:Key="SectionTitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
++            <Setter Property="FontSize" Value="24" />
++        </Style>
++
++        <!-- Local build: the card of the "Full History" and "10-Day Hourly" buttons. It follows the
++             Card tint setting and stays 20 points darker than the cards. See ApplyCardTint. -->
++        <media2:AcrylicBrush x:Key="TitleButtonAcrylicBrush"
++                             BackgroundSource="Backdrop"
++                             TintColor="#1C1C1E"
++                             TintOpacity="0.2"
++                             TintLuminosityOpacity="0.2"
++                             FallbackColor="#331C1C1E"
++                             AlwaysUseFallback="{x:Bind AcrylicEffectsService.UseFallback, Mode=OneWay}" />
 +
 +        <Style x:Key="SettingsHeaderStyle" TargetType="TextBlock">
 +            <Setter Property="FontSize" Value="15" />
@@ -14408,7 +14592,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
          <Style x:Key="ControlFullStretchStyle" TargetType="ListViewItem"
                 BasedOn="{StaticResource DefaultListViewItemStyle}">
              <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-@@ -187,6 +210,14 @@
+@@ -187,6 +226,14 @@
              </Grid>
          </ParallaxView>
  
@@ -14423,7 +14607,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
  
          <Grid Grid.Row="0">
              <Grid.RowDefinitions>
-@@ -207,12 +238,11 @@
+@@ -207,12 +254,11 @@
                      <ColumnDefinition x:Name="RightPaddingColumn" Width="0" />
                  </Grid.ColumnDefinitions>
  
@@ -14441,7 +14625,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                  <TextBlock x:Name="AppTitleTextBlock"
                             Text="test"
                             Style="{StaticResource CaptionTextBlockStyle}"
-@@ -221,16 +251,18 @@
+@@ -221,16 +267,18 @@
                             Margin="0,0,0,0" />
              </Grid>
  
@@ -14463,7 +14647,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                          <StackPanel>
                              <muxc:AnimatedIcon Width="20" x:Name='AnimatedIcon'>
                                  <muxc:AnimatedIcon.Source>
-@@ -244,187 +276,511 @@
+@@ -244,187 +292,511 @@
  
                          <Button.Flyout>
                              <MenuFlyout x:Name="SettingsFlyout">
@@ -14775,7 +14959,8 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                                                       Style="{StaticResource SettingsHeaderStyle}" />
 +
 +                                                            <RichTextBlock FontSize="13" LineHeight="21" TextAlignment="Center">
-+                                                                <Paragraph>
+                                                                 <Paragraph>
+-                                                                    <Run x:Uid="DevelopedByRun"></Run>
 +                                                                    <Run Text="FluentWeather-Plus" FontWeight="Bold" />
 +                                                                    <Hyperlink
 +                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
@@ -14796,18 +14981,17 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                                                            d:DataContext="{d:DesignInstance views:MainPage }"
 +                                                                            Text="{Binding MainPageViewModel.AppVersionText}" /></Hyperlink>
 +                                                                    <Run x:Uid="DevelopedByRun" />
-+                                                                    <Hyperlink
-+                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
-+                                                                        NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
-+                                                                </Paragraph>
-                                                                 <Paragraph>
--                                                                    <Run x:Uid="DevelopedByRun"></Run>
-+                                                                    <Run x:Uid="InspiredByRun" />
                                                                      <Hyperlink
                                                                          Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
 -                                                                        NavigateUri="https://github.com/Gabboxl">
 -                                                                        Gabboxl
 -                                                                    </Hyperlink>
++                                                                        NavigateUri="https://github.com/Gabboxl">Gabboxl</Hyperlink>
++                                                                </Paragraph>
++                                                                <Paragraph>
++                                                                    <Run x:Uid="InspiredByRun" />
++                                                                    <Hyperlink
++                                                                        Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
 +                                                                        NavigateUri="https://twitter.com/zeealeid">@zeealeid</Hyperlink>
                                                                  </Paragraph>
                                                              </RichTextBlock>
@@ -14831,19 +15015,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 -                                                                <TextBlock x:Uid="GithubProjectButton" />
 -                                                            </StackPanel>
 -                                                        </HyperlinkButton>
--
--
--                                                        <HyperlinkButton x:Name="hyperlinkTranslate"
--                                                                         RelativePanel.RightOf="hyperlinkVote"
--                                                                         NavigateUri="https://crwd.in/FluentWeather/c07dfb9bf12c2e9ed8566e525d6ee8172645390">
  
--                                                            <StackPanel Orientation="Horizontal" Spacing="10">
--                                                                <Grid Width="18" Height="18">
--                                                                    <Path
--                                                                        Data="{StaticResource TranslateIconPath}"
--                                                                        Stretch="Uniform"
--                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
--                                                                </Grid>
 +                                                            <StackPanel Orientation="Horizontal"
 +                                                                        Spacing="4"
 +                                                                        HorizontalAlignment="Center"
@@ -14861,6 +15033,18 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                                                    </StackPanel>
 +                                                                </HyperlinkButton>
  
+-                                                        <HyperlinkButton x:Name="hyperlinkTranslate"
+-                                                                         RelativePanel.RightOf="hyperlinkVote"
+-                                                                         NavigateUri="https://crwd.in/FluentWeather/c07dfb9bf12c2e9ed8566e525d6ee8172645390">
+-
+-                                                            <StackPanel Orientation="Horizontal" Spacing="10">
+-                                                                <Grid Width="18" Height="18">
+-                                                                    <Path
+-                                                                        Data="{StaticResource TranslateIconPath}"
+-                                                                        Stretch="Uniform"
+-                                                                        Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+-                                                                </Grid>
+-
 -                                                                <TextBlock x:Uid="TranslateAppText" />
                                                              </StackPanel>
 -                                                        </HyperlinkButton>
@@ -15136,7 +15320,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                              </MenuFlyout>
                          </Button.Flyout>
                      </Button>
-@@ -434,9 +790,9 @@
+@@ -434,9 +806,9 @@
  
              <Grid Grid.Row="0" HorizontalAlignment="Stretch">
                  <Grid.ColumnDefinitions>
@@ -15148,7 +15332,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                  </Grid.ColumnDefinitions>
  
                  <muxc:ProgressRing x:Name="DataProgressRing"
-@@ -458,13 +814,14 @@
+@@ -458,13 +830,14 @@
                  <Grid.ColumnDefinitions>
                      <ColumnDefinition x:Name="LeftMarginColumn" Width="190" />
                      <ColumnDefinition Width="*" />
@@ -15164,7 +15348,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                          x:Name="AutoSuggestBoxMain"
                          HorizontalAlignment="Stretch"
                          VerticalAlignment="Center"
-@@ -494,7 +851,10 @@
+@@ -494,7 +867,10 @@
  
                                      <TextBlock x:Name="text1" Text="{x:Bind address}"
                                                 Margin="8,0,0,0"
@@ -15176,7 +15360,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                                  </RelativePanel>
                              </DataTemplate>
                          </AutoSuggestBox.ItemTemplate>
-@@ -503,10 +863,41 @@
+@@ -503,10 +879,41 @@
                  </Grid>
              </Grid>
  
@@ -15219,7 +15403,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                Visibility="Collapsed">
              <Grid.RowDefinitions>
                  <RowDefinition Height="Auto" />
-@@ -539,6 +930,8 @@
+@@ -539,6 +946,8 @@
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
                              <RowDefinition Height="Auto" />
@@ -15228,7 +15412,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                          </Grid.RowDefinitions>
                          <Grid.ColumnDefinitions>
                              <ColumnDefinition Width="*" />
-@@ -546,12 +939,19 @@
+@@ -546,12 +955,19 @@
  
                          <Grid Grid.Row="0"
                                Margin="0,0,0,16">
@@ -15248,7 +15432,12 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                                  Grid.Column="0"
                                  Margin="4,0,0,0">
                                  <FontIcon x:Name="PlaceIcon"
-@@ -564,6 +964,21 @@
+@@ -560,10 +976,25 @@
+                                           FontFamily="{StaticResource FluentIcons}" Glyph="&#xE707;" />
+ 
+                                 <TextBlock x:Name="PlaceText" Text="place"
+-                                           Style="{StaticResource SubtitleTextBlockStyle}"
++                                           Style="{StaticResource SectionTitleTextStyle}"
                                             Margin="8,0,0,0"
                                             RelativePanel.RightOf="PlaceIcon" />
  
@@ -15270,7 +15459,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                                  <TextBlock x:Name="UpdatedOnText" Text="updatedOn"
                                             Style="{StaticResource CaptionTextBlockStyle}"
                                             Opacity="{ThemeResource TextControlBackgroundThemeOpacity}"
-@@ -571,8 +986,109 @@
+@@ -571,8 +1002,109 @@
                                             RelativePanel.Below="PlaceText"
                                             RelativePanel.AlignLeftWith="PlaceText" />
  
@@ -15380,7 +15569,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                          </Grid>
  
  
-@@ -610,28 +1126,152 @@
+@@ -610,28 +1142,152 @@
                          </RelativePanel>
  
  
@@ -15543,7 +15732,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
-@@ -640,16 +1280,22 @@
+@@ -640,16 +1296,22 @@
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
@@ -15570,7 +15759,14 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
  
                          <Grid Grid.Row="3"
                                Margin="0,32,0,0">
-@@ -665,10 +1311,46 @@
+@@ -660,15 +1322,54 @@
+ 
+                             <TextBlock
+                                 Grid.Row="0"
++                                x:Name="DailyForecastTitleText"
+                                 x:Uid="DailyForecastTitleTextBlock"
+-                                Style="{StaticResource SubtitleTextBlockStyle}"
++                                Style="{StaticResource SectionTitleTextStyle}"
  
                                  Margin="0,0,0,16" />
  
@@ -15581,8 +15777,10 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                    HorizontalAlignment="Right"
 +                                    VerticalAlignment="Top"
 +                                    Padding="12,2,10,4"
-+                                    Margin="0,-4,0,12"
-+                                    BorderThickness="0"
++                                    Margin="0,-4,32,12"
++                                    Background="{StaticResource TitleButtonAcrylicBrush}"
++                                    BorderBrush="#1AFFFFFF"
++                                    BorderThickness="1"
 +                                    x:Uid="HistoryOpenButton"
 +                                    Click="HistoryButton_OnClick">
 +                                <StackPanel Orientation="Horizontal" Spacing="8">
@@ -15619,7 +15817,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
  
                                  <muxc:ItemsRepeater
                                      x:Name="RepeaterDays">
-@@ -699,6 +1381,13 @@
+@@ -699,6 +1400,13 @@
                                                                     RelativePanel.AlignTopWithPanel="True"
                                                                     RelativePanel.AlignRightWithPanel="True" />
  
@@ -15633,7 +15831,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                                                          <TextBlock
                                                              Text="{x:Bind Temperature }"
                                                              RelativePanel.AlignBottomWithPanel="True"
-@@ -735,6 +1424,8 @@
+@@ -735,6 +1443,8 @@
                                      </muxc:ItemsRepeater.Layout>
                                  </muxc:ItemsRepeater>
  
@@ -15642,8 +15840,13 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                              </ScrollViewer>
                          </Grid>
  
-@@ -754,6 +1445,24 @@
-                                     FontSize="20"
+@@ -750,10 +1460,29 @@
+                                 <TextBlock
+                                     x:Name="HourlyTitleText"
+                                     x:Uid="HourlyTitleText"
+-                                    Style="{StaticResource BodyTextBlockStyle}"
+-                                    FontSize="20"
++                                    Style="{StaticResource SectionTitleTextStyle}"
                                      Margin="0,0,0,16" />
  
 +                                <!-- Local build: opens the 10-Day Hourly page of the shown location. See HourlyPage. -->
@@ -15652,7 +15855,9 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                        VerticalAlignment="Top"
 +                                        Padding="12,2,10,4"
 +                                        Margin="0,-4,32,12"
-+                                        BorderThickness="0"
++                                        Background="{StaticResource TitleButtonAcrylicBrush}"
++                                    BorderBrush="#1AFFFFFF"
++                                    BorderThickness="1"
 +                                        x:Uid="HourlyPageOpenButton"
 +                                        Click="HourlyPageButton_OnClick">
 +                                    <StackPanel Orientation="Horizontal" Spacing="8">
@@ -15667,7 +15872,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                              </RelativePanel>
  
  
-@@ -766,6 +1475,10 @@
+@@ -766,6 +1495,10 @@
                                  BorderThickness="2"
                                  BorderBrush="{ThemeResource MyAcrylicBrush}"
                                  Background="{ThemeResource MyAcrylicBrush}">
@@ -15678,7 +15883,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
  
                                  <ListView x:Name="HourlyListview"
  
-@@ -958,6 +1671,17 @@
+@@ -958,6 +1691,17 @@
                                      </ListView.ItemTemplate>
                                  </ListView>
  
@@ -15696,7 +15901,17 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
                              </Grid>
  
  
-@@ -1071,6 +1795,16 @@
+@@ -975,8 +1719,7 @@
+                                 <TextBlock
+                                     x:Name="WeatherInsightsTitleText"
+                                     x:Uid="WeatherInsightsTitleText"
+-                                    Style="{StaticResource BodyTextBlockStyle}"
+-                                    FontSize="20"
++                                    Style="{StaticResource SectionTitleTextStyle}"
+                                     Margin="0,0,0,16" />
+ 
+ 
+@@ -1071,6 +1814,16 @@
                                                     IsTextSelectionEnabled="True"
                                                     RelativePanel.Below="NightSummaryInsightSubtitle" />
  
@@ -15713,7 +15928,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
  
                                      </RelativePanel>
  
-@@ -1325,12 +2059,138 @@
+@@ -1325,12 +2078,138 @@
  
                          </Grid>
  
@@ -15728,9 +15943,9 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
 +                                <RowDefinition Height="Auto" />
 +                            </Grid.RowDefinitions>
 +
-+                            <TextBlock x:Uid="RadarTitleText"
-+                                       Style="{StaticResource BodyTextBlockStyle}"
-+                                       FontSize="20"
++                            <TextBlock x:Name="RadarTitleText"
++                                       x:Uid="RadarTitleText"
++                                       Style="{StaticResource SectionTitleTextStyle}"
 +                                       Margin="0,0,0,16" />
 +
 +                            <Grid Grid.Row="1"
@@ -15853,7 +16068,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..034e5688eb762eddc2f142ca6f57002f
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904f1b34fd5 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee2921e1fa72 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -16002,7 +16217,18 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              }
          }
  
-@@ -140,9 +205,16 @@ namespace FluentWeather.Views
+@@ -116,6 +181,10 @@ namespace FluentWeather.Views
+ 
+             InitializeComponent();
+ 
++            // Local build: a drop shadow under the location name and the section titles.
++            foreach (var title in new[] { PlaceText, DailyForecastTitleText, HourlyTitleText, WeatherInsightsTitleText, RadarTitleText })
++                TitleShadow.Attach(title);
++
+             DataContext = this; //DataContext = ViewModel;
+             Initialize();
+         }
+@@ -140,9 +209,16 @@ namespace FluentWeather.Views
              //NavigationService.Navigate(typeof(Views.DashWet));
  
              MainPageViewModel.AppVersionText = GetVersionDescription();
@@ -16019,7 +16245,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              _appViewModel.UpdateUiAction += async () => { await Task.Run(LoadApiData); };
              KeyDown += MainPage_KeyDown;
  
-@@ -164,6 +236,32 @@ namespace FluentWeather.Views
+@@ -164,6 +240,32 @@ namespace FluentWeather.Views
                  }
              };
  
@@ -16052,11 +16278,11 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private async void RefreshTimerTickEvent(object? sender, object e)
-@@ -171,6 +269,18 @@ namespace FluentWeather.Views
+@@ -171,6 +273,18 @@ namespace FluentWeather.Views
              await LoadApiData();
          }
  
-+        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.50 is v50.
++        // The FluentWeather-Plus version is the fourth part of the package version: 2.1.0.51 is v51.
 +        private static string GetPlusVersionDescription()
 +        {
 +            return $"v{Package.Current.Id.Version.Revision}";
@@ -16071,7 +16297,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          private static string GetVersionDescription()
          {
              var package = Package.Current;
-@@ -192,10 +302,8 @@ namespace FluentWeather.Views
+@@ -192,10 +306,8 @@ namespace FluentWeather.Views
              {
                  try
                  {
@@ -16084,7 +16310,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
                      //&locationType=city (x solo citta)
  
                      if (response.IsSuccessStatusCode)
-@@ -224,12 +332,15 @@ namespace FluentWeather.Views
+@@ -224,12 +336,15 @@ namespace FluentWeather.Views
              AutoSuggestBoxSuggestionChosenEventArgs args)
          {
              var selectedPlaceId = ((SearchedLocation) args.SelectedItem).placeId;
@@ -16102,7 +16328,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              await CoreApplication.MainView.Dispatcher.RunAsync(
                  CoreDispatcherPriority.Normal, () =>
                  {
-@@ -247,22 +358,38 @@ namespace FluentWeather.Views
+@@ -247,22 +362,38 @@ namespace FluentWeather.Views
  
                  var response = await ApiUtils.GetFullData(lastPlaceId);
                  var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -16143,7 +16369,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
                  if (e is HttpRequestException or TaskCanceledException)
                  {
                      await CoreApplication.MainView.Dispatcher.RunAsync(
-@@ -273,7 +400,11 @@ namespace FluentWeather.Views
+@@ -273,7 +404,11 @@ namespace FluentWeather.Views
                              {
                                  Title = "Weather data update failed",
                                  Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
@@ -16156,7 +16382,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
                                  CloseButtonText = "OK",
                                  Tag = "WeatherDataUpdateFailedDialog"
                              };
-@@ -294,13 +425,17 @@ namespace FluentWeather.Views
+@@ -294,13 +429,17 @@ namespace FluentWeather.Views
              }
              finally
              {
@@ -16181,7 +16407,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              }
          }
  
-@@ -382,7 +517,7 @@ namespace FluentWeather.Views
+@@ -382,7 +521,7 @@ namespace FluentWeather.Views
              return storyboard;
          }
  
@@ -16190,7 +16416,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          {
              CrossfadeToImageApiData(rootV3Response);
  
-@@ -396,7 +531,13 @@ namespace FluentWeather.Views
+@@ -396,7 +535,13 @@ namespace FluentWeather.Views
              //update chips
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
  
@@ -16205,7 +16431,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
  
              //join the variables displayName, city, adminDistrict, country together in a single string with a comma between each variable (some may be empty) and remove duplicate names
              string placeName = string.Join(", ",
-@@ -410,6 +551,24 @@ namespace FluentWeather.Views
+@@ -410,6 +555,24 @@ namespace FluentWeather.Views
  
              PlaceText.Text = placeName;
  
@@ -16230,7 +16456,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
  
              CurrentTempText.Text = rootV3Response.v3wxobservationscurrent.temperature + "°" +
-@@ -419,15 +578,19 @@ namespace FluentWeather.Views
+@@ -419,15 +582,19 @@ namespace FluentWeather.Views
                                   rootV3Response.v3wxobservationscurrent.temperatureFeelsLike + "°" +
                                   MeasureUnitUtils.GetTemperatureUnits(currentUnits);
  
@@ -16252,7 +16478,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
                                          MeasureUnitUtils.GetPressureUnits(currentUnits);
  
              VisibilityChipControl.Value = rootV3Response.v3wxobservationscurrent.visibility + " " +
-@@ -439,7 +602,13 @@ namespace FluentWeather.Views
+@@ -439,7 +606,13 @@ namespace FluentWeather.Views
              UVIndexChipControl.Value = rootV3Response.v3wxobservationscurrent.uvIndex + " (" +
                                         rootV3Response.v3wxobservationscurrent.uvDescription + ")";
  
@@ -16266,7 +16492,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              List<DayButtonAdapter> dayButtonAdapters = [];
  
              int i = 0;
-@@ -453,6 +622,13 @@ namespace FluentWeather.Views
+@@ -453,6 +626,13 @@ namespace FluentWeather.Views
  
              //select first day button
              EmulateDayButtonClick(0);
@@ -16280,7 +16506,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
-@@ -475,6 +651,8 @@ namespace FluentWeather.Views
+@@ -475,6 +655,8 @@ namespace FluentWeather.Views
          {
              if (_lastApiData == null) return;
  
@@ -16289,7 +16515,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              List<HourDataAdapter> hourlyDataAdapters = [];
  
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
-@@ -486,6 +664,25 @@ namespace FluentWeather.Views
+@@ -486,6 +668,25 @@ namespace FluentWeather.Views
              //subtract daytoload to firstdate to get the index of the first day to load
              int daysDiff = dayToLoad.Date.Subtract(firstDate.Date).Days;
  
@@ -16315,7 +16541,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
              if (daysDiff == -1 ||
                  (daysDiff == 0 &&
                   _lastApiData.v3wxforecasthourly10day.validTimeLocal[0].Hour > 7)) //this means that we are still in a tonight/today state and we add hours only until 7AM
-@@ -512,6 +709,7 @@ namespace FluentWeather.Views
+@@ -512,6 +713,7 @@ namespace FluentWeather.Views
              }
  
              HourlyListview.ItemsSource = hourlyDataAdapters;
@@ -16323,7 +16549,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private async void LoadInsightsData(DateTimeOffset dayToLoad)
-@@ -603,6 +801,9 @@ namespace FluentWeather.Views
+@@ -603,6 +805,9 @@ namespace FluentWeather.Views
  
              var svgImageSource = new SvgImageSource(new Uri($"ms-appx:///Assets/varicons/{moonPhaseIcon}.svg"));
              LunarphaseIcon.Source = svgImageSource;
@@ -16333,7 +16559,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private void DayButtonClick(object sender, RoutedEventArgs e)
-@@ -629,7 +830,13 @@ namespace FluentWeather.Views
+@@ -629,7 +834,13 @@ namespace FluentWeather.Views
              button.Style = (Style) Resources["SelectedDayButtonStyle"];
  
              // Keep track of the selected button
@@ -16347,7 +16573,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private void EmulateDayButtonClick(int index)
-@@ -713,18 +920,19 @@ namespace FluentWeather.Views
+@@ -713,18 +924,19 @@ namespace FluentWeather.Views
                  CrossfadeToImageApiData();
              else
                  CrossfadeToImage(null);
@@ -16376,7 +16602,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +950,2525 @@ namespace FluentWeather.Views
+@@ -742,5 +954,2530 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }
@@ -17366,6 +17592,9 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
 +        private const int DefaultCardTint = 40;
 +        private static readonly Color CardTintDark = Color.FromArgb(0xFF, 0x1C, 0x1C, 0x1E);
 +
++        // Local build: how much darker the "Full History" and "10-Day Hourly" buttons are than the cards.
++        private const double ButtonTintStep = 0.2;
++
 +        private int _cardTint = DefaultCardTint;
 +
 +        // The percentage next to the slider. It is inside the settings flyout, so the code gets it when it loads.
@@ -17395,12 +17624,21 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
 +                }
 +            }
 +
++            // Local build: the "Full History" and "10-Day Hourly" buttons follow the card tint and stay
++            // 20 points darker than the cards, up to 100%. At 0% the cards have no tint and the buttons
++            // keep a 20% tint. In the light theme the buttons are 20 points more opaque than the cards.
++            var bt = Math.Min(1.0, (_cardTint > 0 ? (isLight ? Math.Max(0.3, t) : t) : 0) + ButtonTintStep);
++            if (isLight && _cardTint > 0)
++                SetAcrylic("TitleButtonAcrylicBrush", Colors.White, bt, bt, Color.FromArgb((byte) Math.Round(bt * 255), 0xFF, 0xFF, 0xFF));
++            else
++                SetAcrylic("TitleButtonAcrylicBrush", CardTintDark, bt, bt, Color.FromArgb((byte) Math.Round(bt * 255), CardTintDark.R, CardTintDark.G, CardTintDark.B));
++
 +            var chipBrush = _cardTint > 0 ? Resources["MyAcrylicBrush"] as Windows.UI.Xaml.Media.Brush : null;
 +            foreach (var chip in new[] { WindChipControl, PressureChipControl, HumidityChipControl, VisibilityChipControl, DewPointChipControl, UVIndexChipControl, AirQualityChipControl,
 +                         ExtraMarineChip, ExtraWindChip, ExtraModelsChip, ExtraRiverChip, ExtraPollenChip }.Concat(MoreChips))
 +                chip?.SetCardBackground(chipBrush);
 +
-+            // Local build: the water card and the History button follow the card tint too.
++            // Local build: the water card follows the card tint too.
 +            if (WaterCard != null)
 +            {
 +                if (chipBrush != null)
@@ -17408,14 +17646,6 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
 +                else
 +                    WaterCard.Background = new Windows.UI.Xaml.Media.SolidColorBrush(Color.FromArgb(0x1D, 0xFF, 0xFF, 0xFF));
 +            }
-+            if (HistoryOpenButton != null)
-+            {
-+                if (chipBrush != null)
-+                    HistoryOpenButton.Background = chipBrush;
-+                else
-+                    HistoryOpenButton.ClearValue(Control.BackgroundProperty);
-+            }
-+
 +            foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
 +                ApplyCardTintToDayButton(pastCard);
 +
@@ -18158,13 +18388,14 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..2cf47b3e11b0faa1d689e6d67a411904
 +                    }
 +
 +                    chip.Value = text.Value.Value;
-+                    chip.Note = feed switch
++                    if (feed == ExtraFeed.Models &&
++                        await OpenMeteoExtrasService.ModelsRangesAsync(latitude, longitude) is { } ranges)
 +                    {
-+                        ExtraFeed.Wind => "ExtraWindNote".GetLocalized(),
-+                        // The card value is the range of the highs. The line below gives the range of the lows.
-+                        ExtraFeed.Models => await OpenMeteoExtrasService.ModelsLowsNoteAsync(latitude, longitude, units),
-+                        _ => ""
-+                    };
++                        // "Highs" and "Lows" in the plain font, the ranges in the bold font of the card.
++                        chip.SetLabeledLines(("ExtraModelsHighs".GetLocalized(), ranges.Highs),
++                                             ("ExtraModelsLows".GetLocalized(), ranges.Lows));
++                    }
++                    chip.Note = feed == ExtraFeed.Wind ? "ExtraWindNote".GetLocalized() : "";
 +                    HoverTip.Set(chip, text.Value.Tip);
 +                    chip.Visibility = Visibility.Visible;
 +                }

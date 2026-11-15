@@ -230,7 +230,7 @@ namespace FluentWeatherLocal
             // is ticked under "Extra data" in the app settings.
             new[] { "ExtraMarine", "Waves and sea temperature" },
             new[] { "ExtraWind", "Wind forecast (gusts, 80 m)" },
-            new[] { "ExtraModels", "Other forecast models" },
+            new[] { "ExtraModels", "Other models" },
             new[] { "ExtraRiver", "River flow" },
             new[] { "ExtraPollen", "Pollen" },
             // "More data" (v49). The app writes these lines only when the "Tray" box of the item is
