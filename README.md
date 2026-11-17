@@ -7,11 +7,11 @@ FluentWeather-Plus is based on FluentWeather 2.1.0 by Gabboxl, with additions by
 
 ## Download
 
-Download FluentWeather-Plus-Setup-v51.exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases) and double-click to install. Windows may ask for administrator approval once. Any new versions appear on the same releases page.
+Download the latest FluentWeather-Plus-Setup exe from the [releases page](https://github.com/Duedilly108/FluentWeather-Plus/releases/latest) and double-click it to install. Windows may ask for administrator approval once. Each new version appears on the same page.
 
 Requirements: Windows 10 version 1809 (build 17763) or later, or Windows 11, 64-bit.
 
-Instead of a pre-compiled executable, to build the Github project app on your Windows PC, follow LocalBuild/README.txt.
+If preferred, to build the app from the source code on your own Windows PC, follow LocalBuild/README.txt.
 
 ## What FluentWeather-Plus adds
 
