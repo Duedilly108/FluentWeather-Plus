@@ -62,9 +62,11 @@ v50 adds the 10-Day Hourly page. It also shows the range of the lows on the Othe
 
 v51 shows the location name and the section titles in a larger font, gives the Full History and 10-Day Hourly buttons a matching darker card, and shows Highs and Lows on the "Other models" card.
 
+v53 adds a silent setup for scripts and package managers, a thunder bolt and a "Next 12 h" tray line for the Open-Meteo data source, and sideways scroll bars that show when the mouse is over a row.
+
 ## Credits
 
-* FluentWeather-Plus v51 updated by duedilly108
+* FluentWeather-Plus v53 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

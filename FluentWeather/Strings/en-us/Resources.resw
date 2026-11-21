@@ -1954,4 +1954,10 @@ Evaporation is the reference evapotranspiration (FAO-56). It tells how much wate
   <data name="ExtraModelsLows" xml:space="preserve">
     <value>Lows</value>
   </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Scroll left</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Scroll right</value>
+  </data>
 </root>

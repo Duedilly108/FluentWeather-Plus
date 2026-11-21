@@ -1,14 +1,30 @@
 FluentWeather-Plus {PLUS}
 
-Download FluentWeather-Plus-Setup-{PLUS}.exe below and double-click it to install. FluentWeather-Plus-{PLUS}.zip holds the same setup, the uninstaller and a README. Windows may ask for administrator approval once.
+A weather app for Windows with saved locations and weather icons in the taskbar. It is based on FluentWeather 2.1.0 by Gabboxl, with additions by Duedilly108.
 
-New in {PLUS}:
+Download FluentWeather-Plus-Setup-{PLUS}.exe below and double-click it to install. FluentWeather-Plus-{PLUS}.zip holds the same setup, the uninstaller and a README. FluentWeather-Plus-{PLUS}-SHA256.txt lists the SHA-256 hash of the setup file. Windows may ask for administrator approval once.
 
-The location name and the titles "Daily forecast", "Hourly", "Weather Insights" and "Radar" use one larger font with a soft drop shadow.
+![Main window](https://github.com/user-attachments/assets/475ccb4f-b031-4490-ad57-73d02fddcbfc)
 
-The "Full History" and "10-Day Hourly" buttons have the same look and end at the same place on the right. They sit on a card that follows the Card tint setting and stays a little darker than the forecast cards.
+![10-Day Hourly page with details](https://github.com/user-attachments/assets/f3c38cbc-77e4-4986-b7db-53771a6c46fe)
 
-The Other models card shows "Highs" and "Lows" with their ranges on two lines, and both ranges start at the same place.
+![Tray icon hover panel](https://github.com/user-attachments/assets/5dc2365c-2a03-4236-9fa6-84aaf449168a)
+
+![Settings](https://github.com/user-attachments/assets/6478bdb1-e9c6-4c11-aa62-d78e63a78013)
+
+The README has more screenshots and the full list of features: https://github.com/Duedilly108/FluentWeather-Plus/blob/main/README.md
+
+New in {PLUS}, compared with v51:
+
+The sideways scroll bars under the saved locations, the detail cards, the days and the hours stay hidden until the mouse is over their row. A bar then fades in over 0.45 seconds, with an arrow at each end and a faint track. It is 3 points thick and sits 6 points under the buttons. It fades out 0.15 seconds after the mouse leaves.
+
+Setup and the uninstaller accept /S for a silent run, for scripts and package managers. /SILENT, /VERYSILENT and /QUIET work the same way. No window appears and the exit code tells the result, 0 for success and 1 for failure. Setup does not start the app in this mode. /NOSTARTMENU and /NOSTARTUP turn off the Start menu items and the startup entry. FluentWeather-Uninstall.exe /S removes the app without a question, including the saved locations and settings.
+
+When Open-Meteo is the data source, a day with expected thunder shows a bolt on its button and a line in its details. The thunder risk number needs weather.com, so it stays hidden. Earlier builds showed a fixed risk of 2 of 5 for these days.
+
+The tray line "Next 12 h" also works when Open-Meteo is the data source. It has no ice amount in that case.
+
+The publisher name of the app and of its uninstall entry is Duedilly108.
 
 Build {VERSION}
 

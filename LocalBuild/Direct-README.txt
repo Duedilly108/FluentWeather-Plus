@@ -35,6 +35,17 @@ Install
 FluentWeather-Plus opens when setup is done.
 
 
+Silent install
+--------------
+For scripts and package managers, run FluentWeather-Plus-Setup-{PLUS}.exe /S.
+No window appears. The exit code is 0 when setup worked and 1 when it failed.
+Messages go to FluentWeather-Plus-setup.log in the temporary folder.
+Setup does not start the app in this mode. The tray icons start at the next sign-in.
+Run it from an administrator prompt to skip the approval prompt.
+/NOSTARTMENU and /NOSTARTUP turn off the two options of the setup window.
+FluentWeather-Uninstall.exe /S removes the app without asking. That includes the saved locations and settings.
+
+
 Notes
 -----
 Connects to weather.com for the weather data.

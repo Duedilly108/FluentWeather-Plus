@@ -76,7 +76,7 @@ index 0000000000000000000000000000000000000000..69db32f08d91da364a07badc7b5d33c9
 +    }
 +}
 diff --git a/FluentWeather/Adapters/DayButtonAdapter.cs b/FluentWeather/Adapters/DayButtonAdapter.cs
-index ab1ad2cdc8c34bd3255525730ed8cd44fb69a12c..61f179450ee716b91684548015756489ea2763ea 100644
+index ab1ad2cdc8c34bd3255525730ed8cd44fb69a12c..5223ad7bb2b06b7b0732a0fcbd26d0fb20703f57 100644
 --- a/FluentWeather/Adapters/DayButtonAdapter.cs
 +++ b/FluentWeather/Adapters/DayButtonAdapter.cs
 @@ -16,7 +16,10 @@ namespace FluentWeather.Adapters
@@ -91,7 +91,7 @@ index ab1ad2cdc8c34bd3255525730ed8cd44fb69a12c..61f179450ee716b91684548015756489
                  var minTemp = CurrentObject.temperatureMin[ItemIndex];
  
  
-@@ -86,6 +89,69 @@ namespace FluentWeather.Adapters
+@@ -86,6 +89,84 @@ namespace FluentWeather.Adapters
              }
          }
  
@@ -147,7 +147,22 @@ index ab1ad2cdc8c34bd3255525730ed8cd44fb69a12c..61f179450ee716b91684548015756489
 +                            thunder = Math.Max(thunder ?? 0, value.Value);
 +                    }
 +                    if (thunder is >= 1)
++                    {
 +                        parts.Add("\u26A1 " + thunder + "/5");
++                    }
++                    else if (thunder == null)
++                    {
++                        // The Open-Meteo backup has no risk number. It marks the day with a bolt when it expects thunder.
++                        foreach (var i in new[] { ItemIndex * 2, ItemIndex * 2 + 1 })
++                        {
++                            var category = part.thunderCategory != null && i < part.thunderCategory.Count ? part.thunderCategory[i] : null;
++                            if (string.Equals(category, FluentWeather.Services.BackupWeatherService.ThunderExpected, StringComparison.Ordinal))
++                            {
++                                parts.Add("\u26A1");
++                                break;
++                            }
++                        }
++                    }
 +
 +                    return string.Join("  ", parts);
 +                }
@@ -534,6 +549,483 @@ index 9640b624a3f4dc23081930aafb47713fca49b8ec..eb4f40c60db25ae18a5ccd687b4a0962
          }
      }
  }
+diff --git a/FluentWeather/Helpers/HoverScrollBar.cs b/FluentWeather/Helpers/HoverScrollBar.cs
+new file mode 100644
+index 0000000000000000000000000000000000000000..9dce01d3d40583fc622ca9175de3376f2e532c15
+--- /dev/null
++++ b/FluentWeather/Helpers/HoverScrollBar.cs
+@@ -0,0 +1,471 @@
++using System;
++using Windows.UI;
++using Windows.UI.Xaml;
++using Windows.UI.Xaml.Automation;
++using Windows.UI.Xaml.Controls;
++using Windows.UI.Xaml.Input;
++using Windows.UI.Xaml.Media;
++using Windows.UI.Xaml.Media.Animation;
++
++namespace FluentWeather.Helpers
++{
++    /// <summary>
++    /// Local build: the sideways scroll bar of the main page rows (saved locations, detail cards,
++    /// days and hours).
++    ///
++    /// The bar is hidden until the mouse is over the row or over the bar. It then fades in over
++    /// FadeInTime and shows a left arrow, a faint track and the thumb. It fades out over
++    /// FadeOutTime after the mouse leaves. The bar keeps the same thickness while it is visible.
++    ///
++    /// The bar is a small Grid that sits at the bottom of the row, in the same Grid cell as the
++    /// row. The space under the content of the row is reserved all the time, so the page does not
++    /// move when the bar appears. The content needs a bottom margin of BarHeight plus the gap.
++    /// The gap under the content is 6 points, so the bottom margin is 22.
++    ///
++    /// The default scroll bar of the row is hidden only after this bar is in place. When anything
++    /// fails here, the default scroll bar stays.
++    /// </summary>
++    public sealed class HoverScrollBar
++    {
++        public const double BarThickness = 3;
++        public const double ArrowSize = 16;
++        public const double BarHeight = ArrowSize;
++        public const double Gap = 6;
++        public static readonly TimeSpan FadeInTime = TimeSpan.FromMilliseconds(450);
++        public static readonly TimeSpan FadeOutTime = TimeSpan.FromMilliseconds(150);
++
++        private static readonly TimeSpan LeaveDelay = TimeSpan.FromMilliseconds(60);
++        private const double MinThumbWidth = 24;
++
++        private readonly FrameworkElement _host;
++        private readonly ScrollViewer _scroll;
++        private readonly double _stepWidth;
++        private readonly Action<int>? _step;
++
++        private readonly Grid _bar = new();
++        private readonly Grid _track = new();
++        private readonly Border _trackLine = new();
++        private readonly Grid _thumbHost = new();
++        private readonly Border _thumb = new();
++        private readonly Button _left = new();
++        private readonly Button _right = new();
++        private readonly SolidColorBrush _trackBrush = new();
++        private readonly SolidColorBrush _thumbBrush = new();
++        private readonly SolidColorBrush _arrowBrush = new();
++        private readonly SolidColorBrush _glyphBrush = new();
++        private readonly DispatcherTimer _leaveTimer = new() { Interval = LeaveDelay };
++
++        private Storyboard? _fade;
++        private bool _hostOver;
++        private bool _barOver;
++        private bool _dragging;
++        private bool _shown;
++        private double _dragStartX;
++        private double _dragStartOffset;
++
++        /// <summary>
++        /// Adds the bar to a row. The host is a ScrollViewer, or a control that has a ScrollViewer
++        /// inside, such as a ListView. A click on an arrow moves the row by stepWidth points, or
++        /// calls step when step is given (+1 to the right, -1 to the left).
++        /// </summary>
++        public static void Attach(FrameworkElement host, double stepWidth, Action<int>? step = null)
++        {
++            if (host == null)
++                return;
++
++            if (host.IsLoaded)
++            {
++                Create(host, stepWidth, step);
++                return;
++            }
++
++            RoutedEventHandler? onLoaded = null;
++            onLoaded = (_, _) =>
++            {
++                host.Loaded -= onLoaded;
++                Create(host, stepWidth, step);
++            };
++            host.Loaded += onLoaded;
++        }
++
++        private static void Create(FrameworkElement host, double stepWidth, Action<int>? step)
++        {
++            try
++            {
++                var scroll = host as ScrollViewer ?? FindScrollViewer(host);
++                if (scroll == null || host.Parent is not Grid parent)
++                    return;
++
++                var bar = new HoverScrollBar(host, scroll, stepWidth, step);
++                bar.Place(parent);
++            }
++            catch (Exception)
++            {
++                // The default scroll bar of the row stays when the new bar cannot be made.
++            }
++        }
++
++        private static ScrollViewer? FindScrollViewer(DependencyObject root)
++        {
++            var count = Windows.UI.Xaml.Media.VisualTreeHelper.GetChildrenCount(root);
++            for (var i = 0; i < count; i++)
++            {
++                var child = Windows.UI.Xaml.Media.VisualTreeHelper.GetChild(root, i);
++                if (child is ScrollViewer viewer)
++                    return viewer;
++
++                var found = FindScrollViewer(child);
++                if (found != null)
++                    return found;
++            }
++
++            return null;
++        }
++
++        private HoverScrollBar(FrameworkElement host, ScrollViewer scroll, double stepWidth, Action<int>? step)
++        {
++            _host = host;
++            _scroll = scroll;
++            _stepWidth = stepWidth;
++            _step = step;
++
++            _bar.Height = BarHeight;
++            _bar.VerticalAlignment = VerticalAlignment.Bottom;
++            _bar.HorizontalAlignment = HorizontalAlignment.Stretch;
++            _bar.ColumnSpacing = 6;
++            _bar.Opacity = 0;
++            _bar.IsHitTestVisible = false;
++            _bar.Visibility = Visibility.Collapsed;
++            _bar.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
++            _bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
++            _bar.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
++
++            // The track is as tall as the bar, so a click anywhere in that strip pages the row.
++            _track.Background = new SolidColorBrush(Colors.Transparent);
++            Grid.SetColumn(_track, 1);
++
++            _trackLine.Height = BarThickness;
++            _trackLine.VerticalAlignment = VerticalAlignment.Center;
++            _trackLine.CornerRadius = new CornerRadius(BarThickness / 2);
++            _trackLine.Background = _trackBrush;
++            _trackLine.IsHitTestVisible = false;
++
++            // The thumb is drawn BarThickness points tall. Its host is as tall as the bar, so the
++            // mouse can grab it easily.
++            _thumbHost.Background = new SolidColorBrush(Colors.Transparent);
++            _thumbHost.HorizontalAlignment = HorizontalAlignment.Left;
++            _thumbHost.Width = MinThumbWidth;
++
++            _thumb.Height = BarThickness;
++            _thumb.VerticalAlignment = VerticalAlignment.Center;
++            _thumb.CornerRadius = new CornerRadius(BarThickness / 2);
++            _thumb.Background = _thumbBrush;
++            _thumb.IsHitTestVisible = false;
++
++            _thumbHost.Children.Add(_thumb);
++            _track.Children.Add(_trackLine);
++            _track.Children.Add(_thumbHost);
++
++            ConfigureArrow(_left, "\uE76B", "ScrollBarLeftName", "Scroll left");
++            ConfigureArrow(_right, "\uE76C", "ScrollBarRightName", "Scroll right");
++            Grid.SetColumn(_left, 0);
++            Grid.SetColumn(_right, 2);
++
++            _bar.Children.Add(_left);
++            _bar.Children.Add(_track);
++            _bar.Children.Add(_right);
++
++            _leaveTimer.Tick += LeaveTimer_Tick;
++        }
++
++        private void ConfigureArrow(Button button, string glyph, string nameKey, string fallbackName)
++        {
++            button.Width = ArrowSize;
++            button.Height = ArrowSize;
++            button.MinWidth = 0;
++            button.MinHeight = 0;
++            button.Padding = new Thickness(0);
++            button.BorderThickness = new Thickness(0);
++            button.CornerRadius = new CornerRadius(4);
++            button.Background = _arrowBrush;
++            button.IsTabStop = false;
++            button.Content = new FontIcon
++            {
++                FontFamily = IconFont(),
++                Glyph = glyph,
++                FontSize = 10,
++                Foreground = _glyphBrush
++            };
++
++            var name = nameKey.GetLocalized();
++            AutomationProperties.SetName(button, string.IsNullOrEmpty(name) ? fallbackName : name);
++        }
++
++        private static FontFamily IconFont() =>
++            Application.Current.Resources.TryGetValue("FluentIcons", out var value) && value is FontFamily family
++                ? family
++                : new FontFamily("Segoe Fluent Icons");
++
++        private void Place(Grid parent)
++        {
++            Grid.SetRow(_bar, Grid.GetRow(_host));
++            Grid.SetColumn(_bar, Grid.GetColumn(_host));
++            Grid.SetRowSpan(_bar, Grid.GetRowSpan(_host));
++            Grid.SetColumnSpan(_bar, Grid.GetColumnSpan(_host));
++            _bar.Margin = new Thickness(_host.Margin.Left, 0, _host.Margin.Right, _host.Margin.Bottom);
++
++            ApplyTheme();
++            parent.Children.Add(_bar);
++
++            _host.PointerEntered += Host_PointerEntered;
++            _host.PointerExited += Host_PointerExited;
++            _bar.PointerEntered += Bar_PointerEntered;
++            _bar.PointerExited += Bar_PointerExited;
++            _host.ActualThemeChanged += (_, _) => ApplyTheme();
++            _host.RegisterPropertyChangedCallback(UIElement.VisibilityProperty, (_, _) => HostVisibilityChanged());
++
++            _scroll.ViewChanged += (_, _) => RefreshIfShown();
++            _scroll.SizeChanged += (_, _) => RefreshIfShown();
++            if (_scroll.Content is FrameworkElement content)
++                content.SizeChanged += (_, _) => RefreshIfShown();
++            _track.SizeChanged += (_, _) => RefreshIfShown();
++
++            _thumbHost.PointerPressed += Thumb_PointerPressed;
++            _thumbHost.PointerMoved += Thumb_PointerMoved;
++            _thumbHost.PointerReleased += Thumb_PointerReleased;
++            _thumbHost.PointerCanceled += Thumb_PointerReleased;
++            _thumbHost.PointerCaptureLost += Thumb_PointerReleased;
++            _track.PointerPressed += Track_PointerPressed;
++
++            _left.Click += (_, _) => Arrow(-1);
++            _right.Click += (_, _) => Arrow(1);
++
++            // Only now is the default scroll bar hidden. The row still scrolls with the wheel,
++            // the keys and touch.
++            ScrollViewer.SetHorizontalScrollBarVisibility(_host, ScrollBarVisibility.Hidden);
++        }
++
++        private void ApplyTheme()
++        {
++            var light = _host.ActualTheme == ElementTheme.Light;
++            var ink = light ? Colors.Black : Colors.White;
++            _thumbBrush.Color = Color.FromArgb(0x99, ink.R, ink.G, ink.B);
++            _trackBrush.Color = Color.FromArgb(0x24, ink.R, ink.G, ink.B);
++            _arrowBrush.Color = Color.FromArgb(0x24, ink.R, ink.G, ink.B);
++            _glyphBrush.Color = light ? Color.FromArgb(0xFF, 0x20, 0x20, 0x20) : Color.FromArgb(0xFF, 0xE1, 0xE4, 0xEE);
++        }
++
++        // Pointer state. The bar is a sibling of the row, so moving the mouse from the row onto the
++        // bar leaves the row first. The short delay keeps the bar from flickering at that moment.
++
++        private void Host_PointerEntered(object sender, PointerRoutedEventArgs e)
++        {
++            _hostOver = true;
++            HoverChanged();
++        }
++
++        private void Host_PointerExited(object sender, PointerRoutedEventArgs e)
++        {
++            _hostOver = false;
++            HoverChanged();
++        }
++
++        private void Bar_PointerEntered(object sender, PointerRoutedEventArgs e)
++        {
++            _barOver = true;
++            HoverChanged();
++        }
++
++        private void Bar_PointerExited(object sender, PointerRoutedEventArgs e)
++        {
++            _barOver = false;
++            HoverChanged();
++        }
++
++        private void HoverChanged()
++        {
++            _leaveTimer.Stop();
++            if (_hostOver || _barOver || _dragging)
++                Show();
++            else
++                _leaveTimer.Start();
++        }
++
++        private void LeaveTimer_Tick(object? sender, object e)
++        {
++            _leaveTimer.Stop();
++            if (!_hostOver && !_barOver && !_dragging)
++                Hide();
++        }
++
++        private void HostVisibilityChanged()
++        {
++            if (_host.Visibility == Visibility.Visible)
++                return;
++
++            // The row is gone. Drop the state, so the bar is not left open when the row returns.
++            _hostOver = false;
++            _barOver = false;
++            _dragging = false;
++            _leaveTimer.Stop();
++            _shown = false;
++            _fade?.Stop();
++            _bar.Opacity = 0;
++            _bar.IsHitTestVisible = false;
++            _bar.Visibility = Visibility.Collapsed;
++        }
++
++        private void Show()
++        {
++            Refresh();
++            if (_bar.Visibility != Visibility.Visible || _shown)
++                return;
++
++            _shown = true;
++            _bar.IsHitTestVisible = true;
++            FadeTo(1, FadeInTime);
++        }
++
++        private void Hide()
++        {
++            if (!_shown)
++                return;
++
++            _shown = false;
++            FadeTo(0, FadeOutTime);
++        }
++
++        private void FadeTo(double target, TimeSpan full)
++        {
++            // Stop() puts the local value back, so keep the value that is on screen now.
++            var current = _bar.Opacity;
++            _fade?.Stop();
++            _bar.Opacity = current;
++
++            var distance = Math.Abs(target - current);
++            if (distance < 0.01)
++            {
++                _bar.Opacity = target;
++                if (!_shown)
++                    _bar.IsHitTestVisible = false;
++                return;
++            }
++
++            var animation = new DoubleAnimation
++            {
++                From = current,
++                To = target,
++                Duration = new Duration(TimeSpan.FromMilliseconds(full.TotalMilliseconds * distance)),
++                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
++            };
++            Storyboard.SetTarget(animation, _bar);
++            Storyboard.SetTargetProperty(animation, "Opacity");
++
++            var board = new Storyboard();
++            board.Children.Add(animation);
++            board.Completed += (_, _) =>
++            {
++                if (_fade == board && !_shown)
++                    _bar.IsHitTestVisible = false;
++            };
++            _fade = board;
++            board.Begin();
++        }
++
++        // Size and place of the thumb, and the state of the arrows.
++
++        private void RefreshIfShown()
++        {
++            if (_shown)
++                Refresh();
++        }
++
++        private void Refresh()
++        {
++            var scrollable = _scroll.ScrollableWidth;
++            var canScroll = _host.Visibility == Visibility.Visible && scrollable > 0.5;
++            _bar.Visibility = canScroll ? Visibility.Visible : Visibility.Collapsed;
++            if (!canScroll)
++                return;
++
++            var trackWidth = _track.ActualWidth;
++            if (trackWidth <= 0)
++            {
++                _bar.UpdateLayout();
++                trackWidth = _track.ActualWidth;
++            }
++
++            var extent = _scroll.ExtentWidth;
++            if (trackWidth <= 0 || extent <= 0)
++                return;
++
++            var width = Math.Min(trackWidth, Math.Max(MinThumbWidth, trackWidth * _scroll.ViewportWidth / extent));
++            var room = trackWidth - width;
++            var left = room * Math.Clamp(_scroll.HorizontalOffset / scrollable, 0, 1);
++            _thumbHost.Width = width;
++            _thumbHost.Margin = new Thickness(left, 0, 0, 0);
++
++            _left.Opacity = _scroll.HorizontalOffset <= 0.5 ? 0.35 : 1;
++            _right.Opacity = _scroll.HorizontalOffset >= scrollable - 0.5 ? 0.35 : 1;
++        }
++
++        // Arrows, a click on the track and a drag of the thumb.
++
++        private void Arrow(int direction)
++        {
++            if (_step != null)
++            {
++                _step(direction);
++                return;
++            }
++
++            var target = Math.Clamp(_scroll.HorizontalOffset + direction * _stepWidth, 0, _scroll.ScrollableWidth);
++            _scroll.ChangeView(target, null, null, false);
++        }
++
++        private void Track_PointerPressed(object sender, PointerRoutedEventArgs e)
++        {
++            var x = e.GetCurrentPoint(_track).Position.X;
++            var direction = x < _thumbHost.Margin.Left ? -1 : 1;
++            var target = Math.Clamp(_scroll.HorizontalOffset + direction * _scroll.ViewportWidth * 0.9, 0, _scroll.ScrollableWidth);
++            _scroll.ChangeView(target, null, null, false);
++            e.Handled = true;
++        }
++
++        private void Thumb_PointerPressed(object sender, PointerRoutedEventArgs e)
++        {
++            if (_scroll.ScrollableWidth <= 0.5 || !_thumbHost.CapturePointer(e.Pointer))
++                return;
++
++            _dragging = true;
++            _dragStartX = e.GetCurrentPoint(_track).Position.X;
++            _dragStartOffset = _scroll.HorizontalOffset;
++            e.Handled = true;
++        }
++
++        private void Thumb_PointerMoved(object sender, PointerRoutedEventArgs e)
++        {
++            if (!_dragging)
++                return;
++
++            var room = _track.ActualWidth - _thumbHost.ActualWidth;
++            if (room <= 0)
++                return;
++
++            var dx = e.GetCurrentPoint(_track).Position.X - _dragStartX;
++            var target = Math.Clamp(_dragStartOffset + dx * (_scroll.ScrollableWidth / room), 0, _scroll.ScrollableWidth);
++            _scroll.ChangeView(target, null, null, true);
++            e.Handled = true;
++        }
++
++        private void Thumb_PointerReleased(object sender, PointerRoutedEventArgs e)
++        {
++            if (!_dragging)
++                return;
++
++            _dragging = false;
++            _thumbHost.ReleasePointerCaptures();
++            HoverChanged();
++        }
++    }
++}
 diff --git a/FluentWeather/Helpers/HoverTip.cs b/FluentWeather/Helpers/HoverTip.cs
 new file mode 100644
 index 0000000000000000000000000000000000000000..4fd23f893ebef093e95a93abf56138edb9aa7af1
@@ -2419,10 +2911,10 @@ index bced2bd36a6940dc098ee339b795a29d76eff5c7..b5ecd3b005cd5c0381d3b6fc9d2a0c0c
      }
 diff --git a/FluentWeather/Services/BackupWeatherService.cs b/FluentWeather/Services/BackupWeatherService.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..f8e014fee054cbfc5903c0c082b3fa0535132492
+index 0000000000000000000000000000000000000000..102d9b0a0188020c6c76533951c740162c8133a2
 --- /dev/null
 +++ b/FluentWeather/Services/BackupWeatherService.cs
-@@ -0,0 +1,1224 @@
+@@ -0,0 +1,1230 @@
 +using FluentWeather.Helpers;
 +using FluentWeather.Models;
 +using FluentWeather.Utils;
@@ -2465,6 +2957,12 @@ index 0000000000000000000000000000000000000000..f8e014fee054cbfc5903c0c082b3fa05
 +        /// "not available". weather.com itself sends null when there is no ceiling.
 +        /// </summary>
 +        public const int CeilingUnknown = -1;
++
++        /// <summary>
++        /// The thunder text of a day part when a thunderstorm weather code is in the forecast. Open-Meteo has no
++        /// thunder risk scale from 0 to 5, so the backup sends this text and no number.
++        /// </summary>
++        public const string ThunderExpected = "Thunder expected";
 +
 +        private static readonly HttpClient Forecast = ApiUtils.CreateClient("https://api.open-meteo.com/");
 +        private static readonly HttpClient Geocoding = ApiUtils.CreateClient("https://geocoding-api.open-meteo.com/");
@@ -3166,8 +3664,8 @@ index 0000000000000000000000000000000000000000..f8e014fee054cbfc5903c0c082b3fa05
 +                dp.temperature.Add(a.Temperature);
 +                dp.temperatureHeatIndex.Add(HeatIndex(a.Temperature, a.Humidity));
 +                dp.temperatureWindChill.Add(WindChill(a.Temperature, WindMph(a.Wind)));
-+                dp.thunderCategory.Add(a.Thunder ? "Thunder expected" : "No thunder");
-+                dp.thunderIndex.Add(a.Thunder ? 2 : 0);
++                dp.thunderCategory.Add(a.Thunder ? ThunderExpected : "No thunder");
++                dp.thunderIndex.Add(null);
 +                dp.uvDescription.Add(UvText(a.Uv));
 +                dp.uvIndex.Add(a.Uv);
 +                dp.windDirection.Add(a.Direction);
@@ -5048,10 +5546,10 @@ index 0000000000000000000000000000000000000000..dafb643d19e10cdb4c68d8dff8b72134
 +}
 diff --git a/FluentWeather/Services/MoreDataService.cs b/FluentWeather/Services/MoreDataService.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..73812a2bb8927d786a92473f91fcad37894c437a
+index 0000000000000000000000000000000000000000..de93d245b82396a115ecf36e854dc1b8229d0131
 --- /dev/null
 +++ b/FluentWeather/Services/MoreDataService.cs
-@@ -0,0 +1,1014 @@
+@@ -0,0 +1,1057 @@
 +using FluentWeather.Helpers;
 +using FluentWeather.Models;
 +using FluentWeather.Utils;
@@ -5335,6 +5833,9 @@ index 0000000000000000000000000000000000000000..73812a2bb8927d786a92473f91fcad37
 +        public static Task<V3WxForecastHourly?> GetHourlyAsync(double lat, double lon, WetUnits units) =>
 +            CachedAsync("hourly" + units, lat, lon, async () =>
 +            {
++                // While the Open-Meteo backup is in use, weather.com has refused the key, so the line is left out.
++                if (await DataSourceService.IsBackupActiveAsync())
++                    return null;
 +                var json = await GetTextAsync(ApiUtils.WeatherComClient, "v3/wx/forecast/hourly/2day?geocode=" + Place(lat, lon) +
 +                    "&units=" + units + "&language=" + ApiUtils.SystemLanguage + "&format=json&apiKey=" + ApiUtils.WeatherComKey);
 +                return json == null ? null : JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.V3WxForecastHourly);
@@ -6003,6 +6504,8 @@ index 0000000000000000000000000000000000000000..73812a2bb8927d786a92473f91fcad37
 +        // K (tray): rain, snow and ice of the next 12 hours, and the highest chance.
 +        private static async Task<MoreText?> DescribeNext12Async(MoreContext ctx)
 +        {
++            if (ctx.Hourly == null && await DataSourceService.IsBackupActiveAsync())
++                return await DescribeNext12FromOpenMeteoAsync(ctx);
 +            var h = ctx.Hourly ?? await GetHourlyAsync(ctx.Latitude, ctx.Longitude, ctx.Units);
 +            if (h?.validTimeLocal == null || h.validTimeLocal.Count == 0)
 +                return null;
@@ -6023,6 +6526,44 @@ index 0000000000000000000000000000000000000000..73812a2bb8927d786a92473f91fcad37
 +                    chance = Math.Max(chance, h.precipChance[i]);
 +            }
 +            var line = AmountsText(rain, snow, ice, ctx.Units);
++            line = line.Length == 0 ? F("MoreNext12Dry", chance) : line + ", " + F("MoreNext12Chance", chance);
++            return new MoreText { Value = line, TrayLine = line };
++        }
++
++        // The same line from the Open-Meteo hourly forecast, for the tray's quick refresh while the backup is in use.
++        // All of the precipitation counts as rain, as in the weather.com case without split amounts. Open-Meteo has no ice amount.
++        private static async Task<MoreText?> DescribeNext12FromOpenMeteoAsync(MoreContext ctx)
++        {
++            var json = await GetTextAsync(OpenMeteo, "v1/forecast?" + Point(ctx.Latitude, ctx.Longitude) +
++                "&hourly=precipitation,snowfall,precipitation_probability&forecast_days=2&timezone=auto&precipitation_unit=" +
++                (Imperial(ctx.Units) ? "inch" : "mm"));
++            if (json == null)
++                return null;
++            using var doc = JsonDocument.Parse(json);
++            var root = doc.RootElement;
++            if (!root.TryGetProperty("hourly", out var hourly) ||
++                !hourly.TryGetProperty("time", out var timeArray) || timeArray.ValueKind != JsonValueKind.Array)
++                return null;
++
++            var times = timeArray.EnumerateArray().Select(x => x.GetString()).ToList();
++            var rainList = Array(hourly, "precipitation");
++            var snowList = Array(hourly, "snowfall");
++            var chanceList = Array(hourly, "precipitation_probability");
++            var localNow = DateTime.UtcNow.AddSeconds(Number(root, "utc_offset_seconds") ?? 0);
++            var start = times.FindIndex(s => DateTime.TryParse(s, CultureInfo.InvariantCulture, DateTimeStyles.None, out var t) && t.AddHours(1) > localNow);
++            if (start < 0)
++                return null;
++
++            var end = Math.Min(times.Count, start + 12);
++            double rain = 0, snow = 0;
++            var chance = 0;
++            for (var i = start; i < end; i++)
++            {
++                rain += At(rainList, i) ?? 0;
++                snow += At(snowList, i) ?? 0;
++                chance = Math.Max(chance, (int) Math.Round(At(chanceList, i) ?? 0));
++            }
++            var line = AmountsText(rain, snow, 0, ctx.Units);
 +            line = line.Length == 0 ? F("MoreNext12Dry", chance) : line + ", " + F("MoreNext12Chance", chance);
 +            return new MoreText { Value = line, TrayLine = line };
 +        }
@@ -8387,7 +8928,7 @@ index 0000000000000000000000000000000000000000..e07497f4fa57b0106c95877153d276a2
 +    }
 +}
 diff --git a/FluentWeather/Strings/en-us/Resources.resw b/FluentWeather/Strings/en-us/Resources.resw
-index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b4661a542e1df9a68a56c41aa52d352e951e0dd9 100644
+index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..2066d68e5aff54323c11e01a1e5b7ed7b98a9f3f 100644
 --- a/FluentWeather/Strings/en-us/Resources.resw
 +++ b/FluentWeather/Strings/en-us/Resources.resw
 @@ -126,11 +126,11 @@
@@ -8447,7 +8988,7 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b4661a542e1df9a68a56c41aa52d352e
    <data name="TranslateAppText.Text" xml:space="preserve">
      <value>Translate the app</value>
    </data>
-@@ -297,4 +324,1634 @@ Live Tiles are available natively on Windows 10 only.</value>
+@@ -297,4 +324,1640 @@ Live Tiles are available natively on Windows 10 only.</value>
    <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
      <value>Network error, please check your internet connection.</value>
    </data>
@@ -10080,6 +10621,12 @@ index f33f4ba4e67f3f7599f3bf42c94313c226d67f31..b4661a542e1df9a68a56c41aa52d352e
 +  </data>
 +  <data name="ExtraModelsLows" xml:space="preserve">
 +    <value>Lows</value>
++  </data>
++  <data name="ScrollBarLeftName" xml:space="preserve">
++    <value>Scroll left</value>
++  </data>
++  <data name="ScrollBarRightName" xml:space="preserve">
++    <value>Scroll right</value>
 +  </data>
  </root>
 \ No newline at end of file
@@ -13752,10 +14299,10 @@ index 0000000000000000000000000000000000000000..01bded83c4ca2bc5eecb91d9feb429ac
 +}
 diff --git a/FluentWeather/Views/MainPage.More.cs b/FluentWeather/Views/MainPage.More.cs
 new file mode 100644
-index 0000000000000000000000000000000000000000..9b5d7da3f03ca81c7a67949f21d48f1985ff2ad4
+index 0000000000000000000000000000000000000000..be4bdd7a545baed2937b478e1eb279afd5505c0f
 --- /dev/null
 +++ b/FluentWeather/Views/MainPage.More.cs
-@@ -0,0 +1,786 @@
+@@ -0,0 +1,792 @@
 +using FluentWeather.Adapters;
 +using FluentWeather.Controls;
 +using FluentWeather.Helpers;
@@ -14176,6 +14723,12 @@ index 0000000000000000000000000000000000000000..9b5d7da3f03ca81c7a67949f21d48f19
 +                    lines.Add(string.Format(Ci, "MoreThunderRisk".GetLocalized(), thunder) +
 +                              (category != null && thunder > 0 ? " (" + category + ")" : ""));
 +                }
++                else if (new[] { At(part.thunderCategory, dayPart), At(part.thunderCategory, nightPart) }
++                             .Any(c => string.Equals(c, BackupWeatherService.ThunderExpected, StringComparison.Ordinal)))
++                {
++                    // The Open-Meteo backup has no risk number, only the text.
++                    lines.Add(BackupWeatherService.ThunderExpected);
++                }
 +
 +                DayMoreText.Text = string.Join("\n", lines);
 +                DayMoreText.Visibility = Visibility.Visible;
@@ -14543,7 +15096,7 @@ index 0000000000000000000000000000000000000000..9b5d7da3f03ca81c7a67949f21d48f19
 +    }
 +}
 diff --git a/FluentWeather/Views/MainPage.xaml b/FluentWeather/Views/MainPage.xaml
-index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867120e2a4f 100644
+index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..3afde287f33d0376e443fe466401ef99a333b955 100644
 --- a/FluentWeather/Views/MainPage.xaml
 +++ b/FluentWeather/Views/MainPage.xaml
 @@ -57,6 +57,45 @@
@@ -15459,7 +16012,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                                  <TextBlock x:Name="UpdatedOnText" Text="updatedOn"
                                             Style="{StaticResource CaptionTextBlockStyle}"
                                             Opacity="{ThemeResource TextControlBackgroundThemeOpacity}"
-@@ -571,8 +1002,109 @@
+@@ -571,8 +1002,111 @@
                                             RelativePanel.Below="PlaceText"
                                             RelativePanel.AlignLeftWith="PlaceText" />
  
@@ -15485,8 +16038,10 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
 +                                          HorizontalScrollBarVisibility="Auto"
 +                                          VerticalScrollMode="Disabled"
 +                                          VerticalScrollBarVisibility="Disabled">
++                                <!-- The bottom margin of 22 holds the hover scroll bar (16 high) and a gap of 6.
++                                     See HoverScrollBar. -->
 +                                <muxc:ItemsRepeater x:Name="SavedLocationsRepeater"
-+                                                    Margin="0,0,0,8">
++                                                    Margin="0,0,0,22">
 +                                    <muxc:ItemsRepeater.Layout>
 +                                        <muxc:StackLayout Orientation="Horizontal" Spacing="8" />
 +                                    </muxc:ItemsRepeater.Layout>
@@ -15569,14 +16124,16 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                          </Grid>
  
  
-@@ -610,28 +1142,152 @@
+@@ -610,28 +1144,154 @@
                          </RelativePanel>
  
  
 -                        <StackPanel Grid.Row="2"
 +                        <!-- Local build: the detail cards scroll sideways in a narrow window, with a scroll bar
-+                             below them. The bottom margin leaves room for the scroll bar. -->
-+                        <ScrollViewer Grid.Row="2"
++                             below them. The scroll bar shows when the mouse is over the cards. The bottom
++                             margin of 22 holds the bar (16 high) and a gap of 6. See HoverScrollBar. -->
++                        <ScrollViewer x:Name="DetailCardsScroll"
++                                      Grid.Row="2"
 +                                      Margin="0,16,0,0"
 +                                      VerticalScrollMode="Disabled"
 +                                      VerticalScrollBarVisibility="Disabled"
@@ -15587,7 +16144,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
 +                        <StackPanel x:Name="DetailCardsPanel"
                                      Orientation="Horizontal"
 -                                    Margin="0,16,0,0">
-+                                    Margin="0,0,0,14"
++                                    Margin="0,0,0,22"
 +                                    Background="Transparent"
 +                                    AllowDrop="True"
 +                                    DragOver="DetailCardsPanel_DragOver"
@@ -15732,7 +16289,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
-@@ -640,16 +1296,22 @@
+@@ -640,16 +1300,22 @@
                              </controls:DetailChipControl>
  
                              <controls:DetailChipControl
@@ -15759,7 +16316,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
  
                          <Grid Grid.Row="3"
                                Margin="0,32,0,0">
-@@ -660,15 +1322,54 @@
+@@ -660,15 +1326,55 @@
  
                              <TextBlock
                                  Grid.Row="0"
@@ -15800,10 +16357,11 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
 +                                          HorizontalScrollBarVisibility="Auto"
 +                                          ViewChanged="DaysScroll_OnViewChanged">
 +
-+                                <!-- The bottom margin leaves room for the scroll bar below the cards. -->
++                                <!-- The bottom margin of 22 holds the hover scroll bar (16 high) and a gap of 6.
++                                     See HoverScrollBar. -->
 +                                <StackPanel x:Name="DaysRowPanel"
 +                                            Orientation="Horizontal"
-+                                            Margin="0,0,0,14"
++                                            Margin="0,0,0,22"
 +                                            PointerWheelChanged="DaysRowPanel_OnPointerWheelChanged"
 +                                            KeyDown="DaysRowPanel_OnKeyDown">
 +
@@ -15817,7 +16375,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
  
                                  <muxc:ItemsRepeater
                                      x:Name="RepeaterDays">
-@@ -699,6 +1400,13 @@
+@@ -699,6 +1405,13 @@
                                                                     RelativePanel.AlignTopWithPanel="True"
                                                                     RelativePanel.AlignRightWithPanel="True" />
  
@@ -15831,7 +16389,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                                                          <TextBlock
                                                              Text="{x:Bind Temperature }"
                                                              RelativePanel.AlignBottomWithPanel="True"
-@@ -735,6 +1443,8 @@
+@@ -735,6 +1448,8 @@
                                      </muxc:ItemsRepeater.Layout>
                                  </muxc:ItemsRepeater>
  
@@ -15840,7 +16398,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                              </ScrollViewer>
                          </Grid>
  
-@@ -750,10 +1460,29 @@
+@@ -750,10 +1465,29 @@
                                  <TextBlock
                                      x:Name="HourlyTitleText"
                                      x:Uid="HourlyTitleText"
@@ -15872,7 +16430,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                              </RelativePanel>
  
  
-@@ -766,6 +1495,10 @@
+@@ -766,10 +1500,14 @@
                                  BorderThickness="2"
                                  BorderBrush="{ThemeResource MyAcrylicBrush}"
                                  Background="{ThemeResource MyAcrylicBrush}">
@@ -15883,7 +16441,12 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
  
                                  <ListView x:Name="HourlyListview"
  
-@@ -958,6 +1691,17 @@
+-                                          Padding="0,0,0,18"
++                                          Padding="0,0,0,22"
+                                           ScrollViewer.VerticalScrollMode="Disabled"
+                                           ScrollViewer.HorizontalScrollMode="Enabled"
+                                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
+@@ -958,6 +1696,17 @@
                                      </ListView.ItemTemplate>
                                  </ListView>
  
@@ -15901,7 +16464,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                              </Grid>
  
  
-@@ -975,8 +1719,7 @@
+@@ -975,8 +1724,7 @@
                                  <TextBlock
                                      x:Name="WeatherInsightsTitleText"
                                      x:Uid="WeatherInsightsTitleText"
@@ -15911,7 +16474,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
                                      Margin="0,0,0,16" />
  
  
-@@ -1071,6 +1814,16 @@
+@@ -1071,6 +1819,16 @@
                                                     IsTextSelectionEnabled="True"
                                                     RelativePanel.Below="NightSummaryInsightSubtitle" />
  
@@ -15928,7 +16491,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
  
                                      </RelativePanel>
  
-@@ -1325,12 +2078,138 @@
+@@ -1325,12 +2083,138 @@
  
                          </Grid>
  
@@ -16068,7 +16631,7 @@ index d66a0cd0fc178ba9524a19c8396ed7fa86c74d81..f2eea986ea2c1091f0b663b2c5445867
      </Grid>
  
 diff --git a/FluentWeather/Views/MainPage.xaml.cs b/FluentWeather/Views/MainPage.xaml.cs
-index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee2921e1fa72 100644
+index 176da895fa3caa0661528a6db4ef261ba48f5b96..21a756f684506a824656b00c6cbadd73cee09a9e 100644
 --- a/FluentWeather/Views/MainPage.xaml.cs
 +++ b/FluentWeather/Views/MainPage.xaml.cs
 @@ -8,9 +8,11 @@ using FluentWeather.Services;
@@ -16217,7 +16780,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              }
          }
  
-@@ -116,6 +181,10 @@ namespace FluentWeather.Views
+@@ -116,6 +181,18 @@ namespace FluentWeather.Views
  
              InitializeComponent();
  
@@ -16225,10 +16788,18 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
 +            foreach (var title in new[] { PlaceText, DailyForecastTitleText, HourlyTitleText, WeatherInsightsTitleText, RadarTitleText })
 +                TitleShadow.Attach(title);
 +
++            // Local build: the sideways scroll bars of the saved locations, the detail cards, the days
++            // and the hours. Each bar shows when the mouse is over its row. The days row steps by one
++            // card with the arrows, as the arrow keys do.
++            HoverScrollBar.Attach(SavedLocationsScroll, 160);
++            HoverScrollBar.Attach(DetailCardsScroll, 120);
++            HoverScrollBar.Attach(DaysScroll, DayCardPitch, StepDays);
++            HoverScrollBar.Attach(HourlyListview, 200);
++
              DataContext = this; //DataContext = ViewModel;
              Initialize();
          }
-@@ -140,9 +209,16 @@ namespace FluentWeather.Views
+@@ -140,9 +217,16 @@ namespace FluentWeather.Views
              //NavigationService.Navigate(typeof(Views.DashWet));
  
              MainPageViewModel.AppVersionText = GetVersionDescription();
@@ -16245,7 +16816,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              _appViewModel.UpdateUiAction += async () => { await Task.Run(LoadApiData); };
              KeyDown += MainPage_KeyDown;
  
-@@ -164,6 +240,32 @@ namespace FluentWeather.Views
+@@ -164,6 +248,32 @@ namespace FluentWeather.Views
                  }
              };
  
@@ -16278,7 +16849,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private async void RefreshTimerTickEvent(object? sender, object e)
-@@ -171,6 +273,18 @@ namespace FluentWeather.Views
+@@ -171,6 +281,18 @@ namespace FluentWeather.Views
              await LoadApiData();
          }
  
@@ -16297,7 +16868,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          private static string GetVersionDescription()
          {
              var package = Package.Current;
-@@ -192,10 +306,8 @@ namespace FluentWeather.Views
+@@ -192,10 +314,8 @@ namespace FluentWeather.Views
              {
                  try
                  {
@@ -16310,7 +16881,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
                      //&locationType=city (x solo citta)
  
                      if (response.IsSuccessStatusCode)
-@@ -224,12 +336,15 @@ namespace FluentWeather.Views
+@@ -224,12 +344,15 @@ namespace FluentWeather.Views
              AutoSuggestBoxSuggestionChosenEventArgs args)
          {
              var selectedPlaceId = ((SearchedLocation) args.SelectedItem).placeId;
@@ -16328,7 +16899,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              await CoreApplication.MainView.Dispatcher.RunAsync(
                  CoreDispatcherPriority.Normal, () =>
                  {
-@@ -247,22 +362,38 @@ namespace FluentWeather.Views
+@@ -247,22 +370,38 @@ namespace FluentWeather.Views
  
                  var response = await ApiUtils.GetFullData(lastPlaceId);
                  var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -16369,7 +16940,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
                  if (e is HttpRequestException or TaskCanceledException)
                  {
                      await CoreApplication.MainView.Dispatcher.RunAsync(
-@@ -273,7 +404,11 @@ namespace FluentWeather.Views
+@@ -273,7 +412,11 @@ namespace FluentWeather.Views
                              {
                                  Title = "Weather data update failed",
                                  Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
@@ -16382,7 +16953,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
                                  CloseButtonText = "OK",
                                  Tag = "WeatherDataUpdateFailedDialog"
                              };
-@@ -294,13 +429,17 @@ namespace FluentWeather.Views
+@@ -294,13 +437,17 @@ namespace FluentWeather.Views
              }
              finally
              {
@@ -16407,7 +16978,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              }
          }
  
-@@ -382,7 +521,7 @@ namespace FluentWeather.Views
+@@ -382,7 +529,7 @@ namespace FluentWeather.Views
              return storyboard;
          }
  
@@ -16416,7 +16987,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          {
              CrossfadeToImageApiData(rootV3Response);
  
-@@ -396,7 +535,13 @@ namespace FluentWeather.Views
+@@ -396,7 +543,13 @@ namespace FluentWeather.Views
              //update chips
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
  
@@ -16431,7 +17002,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
  
              //join the variables displayName, city, adminDistrict, country together in a single string with a comma between each variable (some may be empty) and remove duplicate names
              string placeName = string.Join(", ",
-@@ -410,6 +555,24 @@ namespace FluentWeather.Views
+@@ -410,6 +563,24 @@ namespace FluentWeather.Views
  
              PlaceText.Text = placeName;
  
@@ -16456,7 +17027,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              MainPhraseText.Text = rootV3Response.v3wxobservationscurrent.cloudCoverPhrase;
  
              CurrentTempText.Text = rootV3Response.v3wxobservationscurrent.temperature + "°" +
-@@ -419,15 +582,19 @@ namespace FluentWeather.Views
+@@ -419,15 +590,19 @@ namespace FluentWeather.Views
                                   rootV3Response.v3wxobservationscurrent.temperatureFeelsLike + "°" +
                                   MeasureUnitUtils.GetTemperatureUnits(currentUnits);
  
@@ -16478,7 +17049,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
                                          MeasureUnitUtils.GetPressureUnits(currentUnits);
  
              VisibilityChipControl.Value = rootV3Response.v3wxobservationscurrent.visibility + " " +
-@@ -439,7 +606,13 @@ namespace FluentWeather.Views
+@@ -439,7 +614,13 @@ namespace FluentWeather.Views
              UVIndexChipControl.Value = rootV3Response.v3wxobservationscurrent.uvIndex + " (" +
                                         rootV3Response.v3wxobservationscurrent.uvDescription + ")";
  
@@ -16492,7 +17063,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              List<DayButtonAdapter> dayButtonAdapters = [];
  
              int i = 0;
-@@ -453,6 +626,13 @@ namespace FluentWeather.Views
+@@ -453,6 +634,13 @@ namespace FluentWeather.Views
  
              //select first day button
              EmulateDayButtonClick(0);
@@ -16506,7 +17077,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private void CrossfadeToImageApiData(RootV3Response? rootV3Response = null)
-@@ -475,6 +655,8 @@ namespace FluentWeather.Views
+@@ -475,6 +663,8 @@ namespace FluentWeather.Views
          {
              if (_lastApiData == null) return;
  
@@ -16515,7 +17086,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              List<HourDataAdapter> hourlyDataAdapters = [];
  
              WetUnits currentUnits = await VariousUtils.GetUnitsCode();
-@@ -486,6 +668,25 @@ namespace FluentWeather.Views
+@@ -486,6 +676,25 @@ namespace FluentWeather.Views
              //subtract daytoload to firstdate to get the index of the first day to load
              int daysDiff = dayToLoad.Date.Subtract(firstDate.Date).Days;
  
@@ -16541,7 +17112,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
              if (daysDiff == -1 ||
                  (daysDiff == 0 &&
                   _lastApiData.v3wxforecasthourly10day.validTimeLocal[0].Hour > 7)) //this means that we are still in a tonight/today state and we add hours only until 7AM
-@@ -512,6 +713,7 @@ namespace FluentWeather.Views
+@@ -512,6 +721,7 @@ namespace FluentWeather.Views
              }
  
              HourlyListview.ItemsSource = hourlyDataAdapters;
@@ -16549,7 +17120,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private async void LoadInsightsData(DateTimeOffset dayToLoad)
-@@ -603,6 +805,9 @@ namespace FluentWeather.Views
+@@ -603,6 +813,9 @@ namespace FluentWeather.Views
  
              var svgImageSource = new SvgImageSource(new Uri($"ms-appx:///Assets/varicons/{moonPhaseIcon}.svg"));
              LunarphaseIcon.Source = svgImageSource;
@@ -16559,7 +17130,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private void DayButtonClick(object sender, RoutedEventArgs e)
-@@ -629,7 +834,13 @@ namespace FluentWeather.Views
+@@ -629,7 +842,13 @@ namespace FluentWeather.Views
              button.Style = (Style) Resources["SelectedDayButtonStyle"];
  
              // Keep track of the selected button
@@ -16573,7 +17144,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private void EmulateDayButtonClick(int index)
-@@ -713,18 +924,19 @@ namespace FluentWeather.Views
+@@ -713,18 +932,19 @@ namespace FluentWeather.Views
                  CrossfadeToImageApiData();
              else
                  CrossfadeToImage(null);
@@ -16602,7 +17173,7 @@ index 176da895fa3caa0661528a6db4ef261ba48f5b96..ffcfca861cfcff7afe47d7622b72ee29
          }
  
          private async void UpdateRefreshTimerSettings(int minutes = -1)
-@@ -742,5 +954,2530 @@ namespace FluentWeather.Views
+@@ -742,5 +962,2530 @@ namespace FluentWeather.Views
  
              await ApplicationData.Current.LocalSettings.SaveAsync("autoRefreshDataMinutes", minutes);
          }

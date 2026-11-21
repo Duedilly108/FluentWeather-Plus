@@ -67,6 +67,23 @@ namespace FluentWeatherLocal
         private const string TrustSwitch = "--trust-cert";
         private const string RemoveCertSwitch = "--remove-cert";
 
+        // Silent mode, for package managers such as Chocolatey and Scoop. /S (also /SILENT, /VERYSILENT and /QUIET)
+        // skips every window and message box and reports the result through the exit code, 0 for success.
+        // /NOSTARTMENU and /NOSTARTUP turn off the two options of the setup window. Messages go to the log file
+        // FluentWeather-Plus-setup.log in the temporary folder.
+        private static bool Silent;
+        private static bool NoStartMenu;
+        private static bool NoStartup;
+
+        private static bool HasSwitch(string[] args, params string[] names)
+        {
+            foreach (string a in args)
+                foreach (string n in names)
+                    if (string.Equals(a, n, StringComparison.OrdinalIgnoreCase))
+                        return true;
+            return false;
+        }
+
         [STAThread]
         private static int Main(string[] args)
         {
@@ -79,6 +96,10 @@ namespace FluentWeatherLocal
             if (args.Length == 3 && args[0] == RemoveCertSwitch)
                 return RunRemoveCertificates(args[1], args[2]);
 
+            Silent = HasSwitch(args, "/S", "/SILENT", "/VERYSILENT", "/QUIET", "-S", "--silent");
+            NoStartMenu = HasSwitch(args, "/NOSTARTMENU");
+            NoStartup = HasSwitch(args, "/NOSTARTUP");
+
             try
             {
 #if UNINSTALL
@@ -89,13 +110,38 @@ namespace FluentWeatherLocal
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Stopped with an error:" + Environment.NewLine + Environment.NewLine + ex.Message,
-                    Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Report("Stopped with an error:" + Environment.NewLine + Environment.NewLine + ex.Message, MessageBoxIcon.Error);
                 return 1;
             }
         }
 
         // ---- Shared helpers -----------------------------------------------------------------------
+
+        // Shows a message box, or in silent mode adds the text to the log file in the temporary folder.
+        private static void Report(string text, MessageBoxIcon icon)
+        {
+            if (!Silent)
+            {
+                MessageBox.Show(text, Title, MessageBoxButtons.OK, icon);
+                return;
+            }
+            try
+            {
+                string log = Path.Combine(Path.GetTempPath(), "FluentWeather-Plus-setup.log");
+                File.AppendAllText(log, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "  " + icon + "  " + text + Environment.NewLine);
+            }
+            catch { }
+        }
+
+        private static bool IsAdministrator()
+        {
+            try
+            {
+                var identity = System.Security.Principal.WindowsIdentity.GetCurrent();
+                return new System.Security.Principal.WindowsPrincipal(identity).IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator);
+            }
+            catch { return false; }
+        }
 
         // The FluentWeather-Plus version of the app in this setup, for example v51. It is the
         // informational version. The build number, for example 2.1.0.51, is the file version.
@@ -342,13 +388,17 @@ namespace FluentWeatherLocal
             List<string> names = GetPayloadNames();
             if (!names.Contains("install-info.json"))
             {
-                MessageBox.Show("This file is incomplete. The setup data is missing.", Title,
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Report("This file is incomplete. The setup data is missing.", MessageBoxIcon.Error);
                 return 1;
             }
 
             bool addStartMenu, startWithWindows;
-            if (!ShowOptions(out addStartMenu, out startWithWindows))
+            if (Silent)
+            {
+                addStartMenu = !NoStartMenu;
+                startWithWindows = !NoStartup;
+            }
+            else if (!ShowOptions(out addStartMenu, out startWithWindows))
                 return 0;
 
             string folder = Path.Combine(Path.GetTempPath(), "FluentWeather-" + Guid.NewGuid().ToString("N").Substring(0, 12));
@@ -360,18 +410,19 @@ namespace FluentWeatherLocal
                 string problem = CheckWindows(info);
                 if (problem != null)
                 {
-                    MessageBox.Show(problem, Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Report(problem, MessageBoxIcon.Error);
                     return 1;
                 }
 
                 string cerPath = Path.Combine(folder, "FluentWeatherLocalBuild.cer");
                 if (!CertificateTrusted(info.Thumbprint))
                 {
-                    int trust = RunElevated(TrustSwitch, cerPath);
+                    // An administrator session, such as an elevated Chocolatey run, adds the certificate directly.
+                    int trust = IsAdministrator() ? RunTrustCertificate(cerPath) : RunElevated(TrustSwitch, cerPath);
                     if (trust == -1 || !CertificateTrusted(info.Thumbprint))
                     {
-                        MessageBox.Show("Administrator approval is needed once, to let Windows accept the app. " +
-                            "Nothing was installed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Report("Administrator approval is needed once, to let Windows accept the app. " +
+                            "Nothing was installed.", MessageBoxIcon.Warning);
                         return 1;
                     }
                 }
@@ -382,11 +433,20 @@ namespace FluentWeatherLocal
 
                 InstallPackage(folder, info);
                 string pfn = CopyFilesAndShortcuts(folder, info, addStartMenu, startWithWindows);
+
+                // A silent setup does not start the app. It may run in an administrator session, and the app must
+                // not start with those rights. The tray icons start at the next sign-in, or from the Start menu.
+                if (Silent)
+                {
+                    Report("FluentWeather-Plus is installed.", MessageBoxIcon.Information);
+                    return 0;
+                }
+
                 StartApp(pfn);
 
-                MessageBox.Show("FluentWeather-Plus is installed and opens now." + Environment.NewLine + Environment.NewLine +
+                Report("FluentWeather-Plus is installed and opens now." + Environment.NewLine + Environment.NewLine +
                     "The tray icons are in the notification area. If you do not see them, click the ^ arrow " +
-                    "next to the clock.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "next to the clock.", MessageBoxIcon.Information);
                 return 0;
             }
             finally
@@ -547,7 +607,7 @@ namespace FluentWeatherLocal
             {
                 key.SetValue("DisplayName", "FluentWeather-Plus with tray icons");
                 key.SetValue("DisplayVersion", info.Version);
-                key.SetValue("Publisher", "duedilly");
+                key.SetValue("Publisher", "Duedilly108");
                 key.SetValue("InstallLocation", InstallDir);
                 key.SetValue("UninstallString", "\"" + uninstaller + "\"");
                 key.SetValue("DisplayIcon", ico);
@@ -578,9 +638,8 @@ namespace FluentWeatherLocal
             string oldBuild = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"FluentWeatherLocal\config.json");
             if (File.Exists(oldBuild))
             {
-                MessageBox.Show("This PC has the FluentWeather local build from Setup.cmd. Remove it in " +
-                    "Settings > Apps > \"FluentWeather local build\". Nothing was changed.", Title,
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Report("This PC has the FluentWeather local build from Setup.cmd. Remove it in " +
+                    "Settings > Apps > \"FluentWeather local build\". Nothing was changed.", MessageBoxIcon.Warning);
                 return 1;
             }
 
@@ -589,7 +648,7 @@ namespace FluentWeatherLocal
                 "settings, the tray icons, the Start menu items and the signing certificate." + Environment.NewLine + Environment.NewLine +
                 "Windows asks for administrator approval once, to remove the certificate." + Environment.NewLine + Environment.NewLine +
                 "Remove FluentWeather-Plus now?";
-            if (MessageBox.Show(question, Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            if (!Silent && MessageBox.Show(question, Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) != DialogResult.Yes)
                 return 0;
 
@@ -604,10 +663,11 @@ namespace FluentWeatherLocal
             catch { }
 
             // The administrator step comes first. If it is declined, nothing is removed.
-            if (RunElevated(RemoveCertSwitch, subject, InstallDir) == -1)
+            int removed = IsAdministrator() ? RunRemoveCertificates(subject, InstallDir) : RunElevated(RemoveCertSwitch, subject, InstallDir);
+            if (removed == -1)
             {
-                MessageBox.Show("Administrator approval is needed to remove the signing certificate. " +
-                    "Nothing was removed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Report("Administrator approval is needed to remove the signing certificate. " +
+                    "Nothing was removed.", MessageBoxIcon.Warning);
                 return 1;
             }
 
@@ -617,7 +677,7 @@ namespace FluentWeatherLocal
             RemoveTrayWorkDir();
             DeleteInstallFiles();
 
-            MessageBox.Show("FluentWeather-Plus is removed.", Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Report("FluentWeather-Plus is removed.", MessageBoxIcon.Information);
             return 0;
         }
 

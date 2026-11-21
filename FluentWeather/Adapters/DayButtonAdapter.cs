@@ -141,7 +141,22 @@ namespace FluentWeather.Adapters
                             thunder = Math.Max(thunder ?? 0, value.Value);
                     }
                     if (thunder is >= 1)
+                    {
                         parts.Add("\u26A1 " + thunder + "/5");
+                    }
+                    else if (thunder == null)
+                    {
+                        // The Open-Meteo backup has no risk number. It marks the day with a bolt when it expects thunder.
+                        foreach (var i in new[] { ItemIndex * 2, ItemIndex * 2 + 1 })
+                        {
+                            var category = part.thunderCategory != null && i < part.thunderCategory.Count ? part.thunderCategory[i] : null;
+                            if (string.Equals(category, FluentWeather.Services.BackupWeatherService.ThunderExpected, StringComparison.Ordinal))
+                            {
+                                parts.Add("\u26A1");
+                                break;
+                            }
+                        }
+                    }
 
                     return string.Join("  ", parts);
                 }

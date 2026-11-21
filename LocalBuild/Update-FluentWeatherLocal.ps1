@@ -59,6 +59,7 @@ $RepoUrl     = 'https://github.com/Gabboxl/FluentWeather'
 $PinnedTag   = '2.1.0'   # FluentWeather-Plus builds on this release only
 $PackageName = 'FluentWeather.LocalBuild'
 $DisplayName = 'FluentWeather-Plus'
+$PublisherDisplayName = 'Duedilly108'   # shown as the publisher in Settings > Apps. Package Name, Publisher and certificate name stay fixed.
 $ProtocolName = 'fluentweather-local'
 $AppServiceName = 'FluentWeatherTrayRefresh'
 $TaskTitle   = 'FluentWeather local update'
@@ -261,6 +262,8 @@ function Set-PackageIdentity([string]$CertSubject, [int]$Revision) {
     $identity.SetAttribute('Name', $PackageName)
     $identity.SetAttribute('Publisher', $CertSubject)
     $props.InnerText = $DisplayName
+    $publisherNode = $xml.SelectSingleNode('/f:Package/f:Properties/f:PublisherDisplayName', $ns)
+    if ($publisherNode) { $publisherNode.InnerText = $PublisherDisplayName }
     $visual.SetAttribute('DisplayName', $DisplayName)
 
     # Register the "fluentweather-local:" link that the tray helper uses to open the app.

@@ -185,6 +185,14 @@ namespace FluentWeather.Views
             foreach (var title in new[] { PlaceText, DailyForecastTitleText, HourlyTitleText, WeatherInsightsTitleText, RadarTitleText })
                 TitleShadow.Attach(title);
 
+            // Local build: the sideways scroll bars of the saved locations, the detail cards, the days
+            // and the hours. Each bar shows when the mouse is over its row. The days row steps by one
+            // card with the arrows, as the arrow keys do.
+            HoverScrollBar.Attach(SavedLocationsScroll, 160);
+            HoverScrollBar.Attach(DetailCardsScroll, 120);
+            HoverScrollBar.Attach(DaysScroll, DayCardPitch, StepDays);
+            HoverScrollBar.Attach(HourlyListview, 200);
+
             DataContext = this; //DataContext = ViewModel;
             Initialize();
         }

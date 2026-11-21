@@ -41,6 +41,12 @@ namespace FluentWeather.Services
         /// </summary>
         public const int CeilingUnknown = -1;
 
+        /// <summary>
+        /// The thunder text of a day part when a thunderstorm weather code is in the forecast. Open-Meteo has no
+        /// thunder risk scale from 0 to 5, so the backup sends this text and no number.
+        /// </summary>
+        public const string ThunderExpected = "Thunder expected";
+
         private static readonly HttpClient Forecast = ApiUtils.CreateClient("https://api.open-meteo.com/");
         private static readonly HttpClient Geocoding = ApiUtils.CreateClient("https://geocoding-api.open-meteo.com/");
         private static readonly SemaphoreSlim StoreLock = new(1, 1);
@@ -741,8 +747,8 @@ namespace FluentWeather.Services
                 dp.temperature.Add(a.Temperature);
                 dp.temperatureHeatIndex.Add(HeatIndex(a.Temperature, a.Humidity));
                 dp.temperatureWindChill.Add(WindChill(a.Temperature, WindMph(a.Wind)));
-                dp.thunderCategory.Add(a.Thunder ? "Thunder expected" : "No thunder");
-                dp.thunderIndex.Add(a.Thunder ? 2 : 0);
+                dp.thunderCategory.Add(a.Thunder ? ThunderExpected : "No thunder");
+                dp.thunderIndex.Add(null);
                 dp.uvDescription.Add(UvText(a.Uv));
                 dp.uvIndex.Add(a.Uv);
                 dp.windDirection.Add(a.Direction);

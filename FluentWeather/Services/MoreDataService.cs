@@ -281,6 +281,9 @@ namespace FluentWeather.Services
         public static Task<V3WxForecastHourly?> GetHourlyAsync(double lat, double lon, WetUnits units) =>
             CachedAsync("hourly" + units, lat, lon, async () =>
             {
+                // While the Open-Meteo backup is in use, weather.com has refused the key, so the line is left out.
+                if (await DataSourceService.IsBackupActiveAsync())
+                    return null;
                 var json = await GetTextAsync(ApiUtils.WeatherComClient, "v3/wx/forecast/hourly/2day?geocode=" + Place(lat, lon) +
                     "&units=" + units + "&language=" + ApiUtils.SystemLanguage + "&format=json&apiKey=" + ApiUtils.WeatherComKey);
                 return json == null ? null : JsonSerializer.Deserialize(json, FluentWeatherJsonContext.Default.V3WxForecastHourly);
@@ -949,6 +952,8 @@ namespace FluentWeather.Services
         // K (tray): rain, snow and ice of the next 12 hours, and the highest chance.
         private static async Task<MoreText?> DescribeNext12Async(MoreContext ctx)
         {
+            if (ctx.Hourly == null && await DataSourceService.IsBackupActiveAsync())
+                return await DescribeNext12FromOpenMeteoAsync(ctx);
             var h = ctx.Hourly ?? await GetHourlyAsync(ctx.Latitude, ctx.Longitude, ctx.Units);
             if (h?.validTimeLocal == null || h.validTimeLocal.Count == 0)
                 return null;
@@ -969,6 +974,44 @@ namespace FluentWeather.Services
                     chance = Math.Max(chance, h.precipChance[i]);
             }
             var line = AmountsText(rain, snow, ice, ctx.Units);
+            line = line.Length == 0 ? F("MoreNext12Dry", chance) : line + ", " + F("MoreNext12Chance", chance);
+            return new MoreText { Value = line, TrayLine = line };
+        }
+
+        // The same line from the Open-Meteo hourly forecast, for the tray's quick refresh while the backup is in use.
+        // All of the precipitation counts as rain, as in the weather.com case without split amounts. Open-Meteo has no ice amount.
+        private static async Task<MoreText?> DescribeNext12FromOpenMeteoAsync(MoreContext ctx)
+        {
+            var json = await GetTextAsync(OpenMeteo, "v1/forecast?" + Point(ctx.Latitude, ctx.Longitude) +
+                "&hourly=precipitation,snowfall,precipitation_probability&forecast_days=2&timezone=auto&precipitation_unit=" +
+                (Imperial(ctx.Units) ? "inch" : "mm"));
+            if (json == null)
+                return null;
+            using var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
+            if (!root.TryGetProperty("hourly", out var hourly) ||
+                !hourly.TryGetProperty("time", out var timeArray) || timeArray.ValueKind != JsonValueKind.Array)
+                return null;
+
+            var times = timeArray.EnumerateArray().Select(x => x.GetString()).ToList();
+            var rainList = Array(hourly, "precipitation");
+            var snowList = Array(hourly, "snowfall");
+            var chanceList = Array(hourly, "precipitation_probability");
+            var localNow = DateTime.UtcNow.AddSeconds(Number(root, "utc_offset_seconds") ?? 0);
+            var start = times.FindIndex(s => DateTime.TryParse(s, CultureInfo.InvariantCulture, DateTimeStyles.None, out var t) && t.AddHours(1) > localNow);
+            if (start < 0)
+                return null;
+
+            var end = Math.Min(times.Count, start + 12);
+            double rain = 0, snow = 0;
+            var chance = 0;
+            for (var i = start; i < end; i++)
+            {
+                rain += At(rainList, i) ?? 0;
+                snow += At(snowList, i) ?? 0;
+                chance = Math.Max(chance, (int) Math.Round(At(chanceList, i) ?? 0));
+            }
+            var line = AmountsText(rain, snow, 0, ctx.Units);
             line = line.Length == 0 ? F("MoreNext12Dry", chance) : line + ", " + F("MoreNext12Chance", chance);
             return new MoreText { Value = line, TrayLine = line };
         }

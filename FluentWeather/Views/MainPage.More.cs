@@ -418,6 +418,12 @@ namespace FluentWeather.Views
                     lines.Add(string.Format(Ci, "MoreThunderRisk".GetLocalized(), thunder) +
                               (category != null && thunder > 0 ? " (" + category + ")" : ""));
                 }
+                else if (new[] { At(part.thunderCategory, dayPart), At(part.thunderCategory, nightPart) }
+                             .Any(c => string.Equals(c, BackupWeatherService.ThunderExpected, StringComparison.Ordinal)))
+                {
+                    // The Open-Meteo backup has no risk number, only the text.
+                    lines.Add(BackupWeatherService.ThunderExpected);
+                }
 
                 DayMoreText.Text = string.Join("\n", lines);
                 DayMoreText.Visibility = Visibility.Visible;

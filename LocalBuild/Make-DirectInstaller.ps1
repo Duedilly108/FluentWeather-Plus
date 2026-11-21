@@ -370,6 +370,11 @@ try {
     Write-Host "    FluentWeather-Plus-Setup-$PlusVersion.exe ($mb MB), FluentWeather-Plus-Uninstall-$PlusVersion.exe and README.txt"
     Write-Ok "Zip of the same three files, to share: $zip"
     Write-Ok "Text for the release page, with the VirusTotal links: $notesFile"
+    # The SHA-256 of the setup file, for the Chocolatey and Scoop templates.
+    $shaFile = Join-Path (Get-DesktopPath) "FluentWeather-Plus-$PlusVersion-SHA256.txt"
+    $shaText = (Get-FileHash -LiteralPath $setupExe -Algorithm SHA256).Hash.ToLowerInvariant() + "  FluentWeather-Plus-Setup-$PlusVersion.exe`r`n"
+    [IO.File]::WriteAllText($shaFile, $shaText, [Text.Encoding]::ASCII)
+    Write-Ok "SHA-256 of the setup file, for the package templates: $shaFile"
     if ($vtStart -ge 0) {
         Write-Host '    README.txt has the VirusTotal links of these two files. Upload both files at'
         Write-Host '    virustotal.com once, so the links show a result.'
