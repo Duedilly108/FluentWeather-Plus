@@ -14,9 +14,27 @@ Download FluentWeather-Plus-Setup-{PLUS}.exe below and double-click it to instal
 
 The README has more screenshots and the full list of features: https://github.com/Duedilly108/FluentWeather-Plus/blob/main/README.md
 
-New in {PLUS}, compared with v51:
+New in {PLUS}, compared with v53:
 
-The sideways scroll bars under the saved locations, the detail cards, the days and the hours stay hidden until the mouse is over their row. A bar then fades in over 0.45 seconds, with an arrow at each end and a faint track. It is 3 points thick and sits 6 points under the buttons. It fades out 0.15 seconds after the mouse leaves.
+The daily forecast shows the moon on every day card, under the temperatures. The card has the moon with its lit part, the name of the phase and the percent lit. The past days have it too. Hovering over a card shows the whole name of the phase. weather.com sends no percentage, so the app computes it from the date. The result can differ from the true phase by a few percent.
+
+The phase name is the weather.com name when weather.com sends it in the app language. In other cases the app uses its own names, which exist in all 33 languages. The past days and the Open-Meteo data source use the app's names. The day cards are 186 points wide.
+
+A moon button to the left of the Full History button turns the moon row on and off. With the row the day cards are 100 points high, and without it 70 points. The choice is kept.
+
+The Moon card has an icon for the last quarter. FluentWeather 2.1.0 had none.
+
+All text that FluentWeather-Plus adds is translated into the 32 other languages of the app. This covers the settings, the cards and their tooltips, the Full History and 10-Day Hourly pages, the alerts, the weather text made from Open-Meteo data, the tray menus, the tray hover panel and the alert bubble. Earlier builds showed this text in English. The tray reads its text from a small file that the app writes in the chosen language. Some texts of FluentWeather 2.1.0 that were still in English in Afrikaans, Danish, Dutch, Finnish, Korean, Norwegian and Swedish are translated too. Setup and the uninstaller stay in English.
+
+The 10-Day Hourly table and the Main and Tray columns of "More data options" are wider, so the translated headers fit. A long label in the tray hover panel wraps onto a second line.
+
+In Automatic mode the app also switches to Open-Meteo when weather.com answers "too many requests" or a server error twice in a row, or does not answer in time while the internet connection works. Before, only a refused key caused the switch. A lost internet connection still never does.
+
+The sideways scroll bars are 5 points thick.
+
+New in v53, compared with v51:
+
+The sideways scroll bars under the saved locations, the detail cards, the days and the hours stay hidden until the mouse is over their row. A bar then fades in over 0.45 seconds, with an arrow at each end and a faint track. It sits 6 points under the buttons and fades out 0.15 seconds after the mouse leaves.
 
 Setup and the uninstaller accept /S for a silent run, for scripts and package managers. /SILENT, /VERYSILENT and /QUIET work the same way. No window appears and the exit code tells the result, 0 for success and 1 for failure. Setup does not start the app in this mode. /NOSTARTMENU and /NOSTARTUP turn off the Start menu items and the startup entry. FluentWeather-Uninstall.exe /S removes the app without a question, including the saved locations and settings.
 

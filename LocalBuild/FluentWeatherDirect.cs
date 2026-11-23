@@ -165,6 +165,14 @@ namespace FluentWeatherLocal
         private static string TrayWorkDir { get { return Path.Combine(LocalAppData, "FluentWeatherLocal"); } }
         private static string StartMenuDir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "FluentWeather-Plus"); } }
 
+        // The PC that builds FluentWeather-Plus with Setup.cmd. Its build installs the app and keeps it
+        // up to date, so this setup has nothing to add there and the uninstaller leaves it alone.
+        private static bool IsBuildPc()
+        {
+            string config = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"FluentWeatherLocal\config.json");
+            return File.Exists(config);
+        }
+
         // The link type that the app's "Show tray icons" button opens.
         private const string TrayProtocolKey = @"Software\Classes\fluentweather-tray";
 
@@ -392,6 +400,12 @@ namespace FluentWeatherLocal
                 return 1;
             }
 
+            if (IsBuildPc())
+            {
+                Report("FluentWeather-Plus is already installed on this PC.", MessageBoxIcon.Information);
+                return 0;
+            }
+
             bool addStartMenu, startWithWindows;
             if (Silent)
             {
@@ -536,10 +550,6 @@ namespace FluentWeatherLocal
             if (info.Architecture == "x64" && osArch != "AMD64" && osArch != "ARM64")
                 return "This setup has the 64-bit version of the app. This PC runs " + osArch + " Windows.";
 
-            string oldBuild = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"FluentWeatherLocal\config.json");
-            if (File.Exists(oldBuild))
-                return "This PC has the FluentWeather local build from Setup.cmd. It already has everything this setup installs.";
-
             return null;
         }
 
@@ -635,12 +645,11 @@ namespace FluentWeatherLocal
 
         private static int Uninstall()
         {
-            string oldBuild = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"FluentWeatherLocal\config.json");
-            if (File.Exists(oldBuild))
+            if (IsBuildPc())
             {
-                Report("This PC has the FluentWeather local build from Setup.cmd. Remove it in " +
-                    "Settings > Apps > \"FluentWeather local build\". Nothing was changed.", MessageBoxIcon.Warning);
-                return 1;
+                Report("FluentWeather-Plus was installed on this PC by its build. To remove it, open Settings > Apps " +
+                    "and uninstall \"FluentWeather-Plus build tools (setup and tray icons)\".", MessageBoxIcon.Information);
+                return 0;
             }
 
             string question =

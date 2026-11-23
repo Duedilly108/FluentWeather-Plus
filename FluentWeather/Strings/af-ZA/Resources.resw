@@ -134,167 +134,2511 @@
     <comment>What's new prompt message primary button text</comment>
   </data>
   <data name="FirstRun_Body.Text" xml:space="preserve">
-    <value>Search and select your location below:</value>
+    <value>Soek en kies jou ligging hieronder:</value>
     <comment>First use prompt message body</comment>
   </data>
   <data name="FirstRunDialog.Title" xml:space="preserve">
-    <value>Welcome to FluentWeather!</value>
+    <value>Welkom by FluentWeather!</value>
     <comment>First use prompt message title</comment>
   </data>
   <data name="FirstRunDialog.PrimaryButtonText" xml:space="preserve">
-    <value>Go ahead!</value>
+    <value>Gaan voort!</value>
     <comment>First use prompt message primary button text</comment>
   </data>
   <data name="SearchAutoSuggestBox.PlaceholderText" xml:space="preserve">
     <value>Search a place...</value>
   </data>
   <data name="FeelsLikeText" xml:space="preserve">
-    <value>Feels like</value>
+    <value>Voel soos</value>
   </data>
   <data name="RunningInsightTitle" xml:space="preserve">
-    <value>Running</value>
+    <value>Draf</value>
   </data>
   <data name="DrivingInsightTitle" xml:space="preserve">
-    <value>Driving</value>
+    <value>Bestuur</value>
   </data>
   <data name="DrySkinInsightTitle" xml:space="preserve">
-    <value>Dry skin</value>
+    <value>Droë vel</value>
   </data>
   <data name="WateringNeedInsightTitle" xml:space="preserve">
-    <value>Watering need</value>
+    <value>Natmaakbehoefte</value>
   </data>
   <data name="WindChipControl.Title" xml:space="preserve">
     <value>Wind</value>
   </data>
   <data name="PressureChipControl.Title" xml:space="preserve">
-    <value>Pressure</value>
+    <value>Lugdruk</value>
   </data>
   <data name="HumidityChipControl.Title" xml:space="preserve">
-    <value>Humidity</value>
+    <value>Humiditeit</value>
   </data>
   <data name="VisibilityChipControl.Title" xml:space="preserve">
-    <value>Visibility</value>
+    <value>Sigbaarheid</value>
   </data>
   <data name="DewPointChipControl.Title" xml:space="preserve">
-    <value>Dew Point</value>
+    <value>Doupunt</value>
   </data>
   <data name="UVIndexChipControl.Title" xml:space="preserve">
-    <value>UV Index</value>
+    <value>UV-indeks</value>
   </data>
   <data name="DailyForecastTitleTextBlock.Text" xml:space="preserve">
-    <value>Daily forecast</value>
+    <value>Daaglikse voorspelling</value>
   </data>
   <data name="HourlyTitleText.Text" xml:space="preserve">
-    <value>Hourly</value>
+    <value>Uurliks</value>
   </data>
   <data name="WeatherInsightsTitleText.Text" xml:space="preserve">
-    <value>Weather Insights</value>
+    <value>Weerinsigte</value>
   </data>
   <data name="DaySummaryInsightTitle.Text" xml:space="preserve">
-    <value>Day Summary</value>
+    <value>Dagopsomming</value>
   </data>
   <data name="DaySummaryInsightSubtitle.Text" xml:space="preserve">
-    <value>Day</value>
+    <value>Dag</value>
   </data>
   <data name="NightSummaryInsightSubtitle.Text" xml:space="preserve">
-    <value>Night</value>
+    <value>Nag</value>
   </data>
   <data name="SunInsightTitle.Text" xml:space="preserve">
-    <value>Sun</value>
+    <value>Son</value>
   </data>
   <data name="SunsetSubtitle.Text" xml:space="preserve">
-    <value>Sunset</value>
+    <value>Sononder</value>
   </data>
   <data name="SunriseSubtitle.Text" xml:space="preserve">
-    <value>Sunrise</value>
+    <value>Sonop</value>
   </data>
   <data name="MoonInsightTitle.Text" xml:space="preserve">
-    <value>Moon</value>
+    <value>Maan</value>
   </data>
   <data name="MoonriseSubtitle.Text" xml:space="preserve">
-    <value>Moonrise</value>
+    <value>Maanopkoms</value>
   </data>
   <data name="MoonsetSubtitle.Text" xml:space="preserve">
-    <value>Moonset</value>
+    <value>Maanondergang</value>
   </data>
   <data name="LunarphaseSubtitle.Text" xml:space="preserve">
-    <value>Lunar phase</value>
+    <value>Maanfase</value>
   </data>
   <data name="UnitsSettingsTitle.Text" xml:space="preserve">
-    <value>Units</value>
+    <value>Eenhede</value>
   </data>
   <data name="AcrylicEffectsSettingsTitle.Text" xml:space="preserve">
-    <value>Acrylic effects</value>
+    <value>Akrieleffekte</value>
   </data>
   <data name="CreditsSettingsTitle.Text" xml:space="preserve">
-    <value>Credits</value>
+    <value>Erkennings</value>
   </data>
   <data name="GithubProjectButton.Text" xml:space="preserve">
-    <value>GitHub project</value>
+    <value>GitHub-projek</value>
   </data>
   <data name="MetricUnitsItem.Content" xml:space="preserve">
-    <value>Metric</value>
+    <value>Metriek</value>
   </data>
   <data name="ImperialUnitsItem.Content" xml:space="preserve">
-    <value>Imperial</value>
+    <value>Imperiaal</value>
   </data>
   <data name="HybridUnitsItem.Content" xml:space="preserve">
-    <value>Hybrid</value>
+    <value>Hibried</value>
   </data>
   <data name="InspiredByRun.Text" xml:space="preserve">
-    <value>UI design inspired by the work of</value>
+    <value>UI-ontwerp geïnspireer deur die werk van</value>
   </data>
   <data name="DevelopedByRun.Text" xml:space="preserve">
-    <value>developed by</value>
+    <value>ontwikkel deur</value>
   </data>
   <data name="TranslateAppText.Text" xml:space="preserve">
-    <value>Translate the app</value>
+    <value>Vertaal die app</value>
   </data>
   <data name="UpdatedOnText" xml:space="preserve">
-    <value>Updated on </value>
+    <value>Bygewerk op</value>
   </data>
   <data name="WeatherLiveTileSettingsText.Text" xml:space="preserve">
-    <value>Weather LiveTile</value>
+    <value>Weer-lewendige teël</value>
   </data>
   <data name="LiveTileInfoIcon.ToolTipService.ToolTip" xml:space="preserve">
-    <value>You have to pin FluentWeather to the start menu first.
+    <value>Jy moet FluentWeather eers aan die Begin-kieslys vaspen.
 
-Live Tiles are available natively on Windows 10 only.</value>
+Lewendige teëls is slegs op Windows 10 beskikbaar.</value>
   </data>
   <data name="NextHours" xml:space="preserve">
-    <value>Next hours:</value>
+    <value>Volgende ure:</value>
   </data>
   <data name="TimeFormatSettingsTitle.Text" xml:space="preserve">
-    <value>Time format</value>
+    <value>Tydformaat</value>
   </data>
   <data name="CloudCoverChipControl.Title" xml:space="preserve">
-    <value>Cloud cover</value>
+    <value>Wolkbedekking</value>
   </data>
   <data name="RainAmountChipControl.Title" xml:space="preserve">
-    <value>Rain amount</value>
+    <value>Reënhoeveelheid</value>
   </data>
   <data name="HourlyDetailedDataTitle.Text" xml:space="preserve">
-    <value>Detailed data</value>
+    <value>Gedetailleerde data</value>
   </data>
   <data name="ViewAllChanges.Text" xml:space="preserve">
-    <value>View all changes</value>
+    <value>Bekyk alle veranderinge</value>
   </data>
   <data name="Segmented24hours.Content" xml:space="preserve">
-    <value>24 hours</value>
+    <value>24 uur</value>
   </data>
   <data name="Segmented12hours.Content" xml:space="preserve">
-    <value>12 hours</value>
+    <value>12 uur</value>
   </data>
   <data name="AutoSuggestBoxSearchHeader.Text" xml:space="preserve">
-    <value>Searching...</value>
+    <value>Soek tans...</value>
   </data>
   <data name="BackgroundImageSettingsTitle.Text" xml:space="preserve">
-    <value>Background image</value>
+    <value>Agtergrondprent</value>
   </data>
   <data name="AutoRefreshSettingsTitle.Text" xml:space="preserve">
-    <value>Auto refresh</value>
+    <value>Outomatiese verfrissing</value>
   </data>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
-    <value>Network error, please check your internet connection.</value>
+    <value>Netwerkfout. Kontroleer asseblief jou internetverbinding.</value>
+  </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Wys of versteek die maanfase op die dagkaarte</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Wys of versteek die maanfase op die dagkaarte</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% verlig</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Nuwemaan</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Wassende sekelmaan</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Eerste kwartier</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Wassende maan</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Volmaan</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Afnemende maan</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Laaste kwartier</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Afnemende sekelmaan</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Kennisgewingarea-ikone</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Wys kennisgewingarea-ikone</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Wys of versteek die ikone vir temperatuur en weer op die taakbalk. Die knoppie volg hul huidige toestand.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Nie geïnstalleer nie</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>bygewerk deur</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Gebaseer op</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Weergawes</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Herlaai</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Instellings</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Stoor hierdie ligging</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Verwyder hierdie ligging uit die gestoorde liggings</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Klik op die ster langs die naam om hierdie ligging te stoor. Gestoorde liggings verskyn hier as knoppies. Klik op 'n knoppie om na daardie ligging oor te skakel. Soek 'n ander ligging en klik op sy ster om dit by te voeg.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Klik op die ster langs die liggingnaam om dit te stoor of te verwyder. Regsklik op 'n liggingknoppie om dit te skuif of te verwyder. Ctrl+1 tot Ctrl+9 skakel tussen liggings.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Versteek hierdie wenk</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Agtergrondkontras</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Oorspronklik</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Donker</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Donkerder</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Lig</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Ligter</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Donker en Donkerder verdonker die agtergrondprent en hou die teks lig. Lig en Ligter maak die prent ligter en gebruik donker teks.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Kaartkleur</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Kaartkleur</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Kleur die kaarte sodat hul teks oor die agtergrondprent leesbaar bly. 0 persent behou die oorspronklike voorkoms.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Gister</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Luggehalte</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Goed</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Redelik</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Matig</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Swak</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Baie swak</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Uiters swak</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Ongesond vir sensitiewes</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Ongesond</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Baie ongesond</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Gevaarlik</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>VSA-luggehalte-indeks</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Europese luggehalte-indeks</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Osoon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Stikstofdioksied</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Luggehaltedata: Open-Meteo.com en die Copernicus-atmosfeermoniteringsdiens (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar en grense NOAA/NWS. Terrein USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Bygewerk</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Laai die radar</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Geen reën of sneeu in hierdie gebied nie. Zoem uit om meer te sien.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Die radar kon nie gelaai word nie. Dit probeer weer by die volgende herlaai.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoem in</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Zoem in</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoem uit</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Zoem uit</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows-verstek</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Gebruik hierdie taal</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Kanselleer</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Herbegin FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Die nuwe taal geld nadat FluentWeather herbegin.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Herbegin nou</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Later</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Uurlikse voorspelling</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 h</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 h</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 h</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Dag wys die ure van die gekose dag. 24, 36 en 48 uur begin nou vir vandag en om middernag vir ander dae.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Grootte van teks en prente</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Minus en Ctrl+Plus verander ook die grootte in stappe van 5%. Ctrl+0 keer terug na 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Skuif links</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Skuif regs</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Verwyder</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Limiet van gestoorde liggings bereik</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Jy kan tot {0} liggings stoor. Verwyder 'n ligging om 'n nuwe een by te voeg.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Terug (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Volledige geskiedenis</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Maand</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Jaar</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Stoor eers 'n ligging. Die geskiedenisvenster wys gestoorde liggings.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Laai</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} dae. {1} deur die toep aangeteken, {2} uit die argief.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Daaglikse hoogste en laagste, grade {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Argiefdata: Open-Meteo.com (CC BY 4.0). Gegenereer met inligting van die Copernicus-klimaatveranderingsdiens. Luggehalte: Open-Meteo, CAMS (vanaf Augustus 2022). Argiefwaardes kom uit 'n weermodel en kan van die aangetekende waardes verskil.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Neerslag</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Toestande</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Bron</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>aangeteken</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>argief</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Helder</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Meestal helder</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Gedeeltelik bewolk</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Betrokke</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Mis</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Motreën</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Reën</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Buie</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Sneeubuie</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Donderstorm</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Onbekend</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Water naby</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Kaart in die hoofvenster</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Lyn in die kennisgewingarea se sweefpaneel</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Water naby</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>wind by die stasie</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>huidige wind vir hierdie ligging, die stasie het geen windsensor nie</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>ligging</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>rukwinde {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Naaste waterstasie met 'n huidige lesing.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Lug by die stasie</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>pas nou</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} min gelede</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} h gelede</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Waterdata: NOAA National Data Buoy Center (ndbc.noaa.gov) en USGS Water Data (waterdata.usgs.gov). Publieke domein.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Golwe</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Volledige geskiedenis</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Daaglikse en uurlikse geskiedenis van hierdie ligging</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Die naaste waterstasie binne 50 km (31 mi) met 'n lesing jonger as 6 uur. NOAA NDBC-boeie en kusstasies dek die kus en die Groot Mere. USGS dek riviere en sommige mere. Op see sonder 'n stasie naby word die seemodel van Open-Meteo gebruik. Merk die lyne onder Besonderhede by wys in die kennisgewingarea-kieslys.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo-seemodel</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo-modelwind, die stasie het geen windsensor nie</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo vir hierdie ligging:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Meer data-opsies</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Hoofvenster</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Kennisgewingarea</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Golwe en seetemperatuur</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Windvoorspelling (rukwinde, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Ander modelle</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Riviervloei</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Stuifmeel</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Golwe</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Windvoorspelling</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Ander modelle</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Riviervloei</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Stuifmeel</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Data: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Golwe</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Deining</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Seeoppervlaktemperatuur</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>see</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Open-Meteo-seemodel vir hierdie ligging.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>tot {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Open-Meteo-windvoorspelling vir hierdie ligging.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Wind nou</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Rukwinde nou</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Sterkste rukwind, volgende 6 uur</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 h maks.</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Wind op 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Vandag se hoogste en laagste volgens drie weermodelle. 'n Groot verskil beteken 'n onseker voorspelling.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Gemodelleerde vloei van die naaste rivier (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Vandag</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Gewoonlik vir hierdie dag</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% van normaal</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Korrels per kubieke meter lug. Die vlakke is benaderd.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Els</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Berk</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Gras</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Byvoet</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Olyf</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrosia</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>laag</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>matig</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>hoog</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>baie hoog</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Wys kennisgewingarea-ikone</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Versteek kennisgewingarea-ikone</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Skuif links</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Skuif regs</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Skuif na begin</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Skuif na einde</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Versteek hierdie kaart</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Voeg kaart by</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Alle kaarte word gewys</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Stel kaarte terug</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Water naby</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Golwe en seetemperatuur</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Windvoorspelling</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Ander modelle</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Riviervloei</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Stuifmeel</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Wind 10 m bo die grond.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Spoed</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Rukwinde</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Windverkoeling</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Relatiewe humiditeit: hoeveel waterdamp die lug bevat, vergeleke met die meeste wat dit by hierdie temperatuur kan bevat.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>droog</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>gemaklik</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>klam</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Hitte-indeks</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV-indeks: die sterkte van die son se ultravioletlig.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>min risiko, geen beskerming nodig nie</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>dra sonskerm en 'n hoed, soek skaduwee om middag</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>beskerming nodig, beperk tyd in die son van 10 tot 4</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>ekstra beskerming nodig, vermy die middagson</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>onbeskermde vel brand binne minute, bly binne om middag</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Sigbaarheid: hoe ver jy duidelik kan sien.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>mis</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>waas of newel</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>matig</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>goed</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Wolkbasis</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>geen lae wolke nie</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>nie beskikbaar nie</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Lugdruk op seevlak.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Nou</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Neiging</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Verandering oor 3 uur</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Dalende druk bring dikwels wolke en reën. Stygende druk bring dikwels opklaring.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Doupunt: die temperatuur waarby dou vorm. Dit wys hoe klam die lug voel.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>droog</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>gemaklik</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>effens klam</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>klam</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>bedompig</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>drukkend</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Temperatuur minus doupunt. Mis is waarskynlik as dit naby 0 is.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Kaartinstellings</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>spoed, rukwinde, rigting</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>relatiewe humiditeit, hitte-indeks</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>sonsterkte en raad</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo-luggehalte</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>naaste waterstasie, NOAA en USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo-golwe en -see</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>sterkste rukwind volgende 6 h, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS en ICON vandag</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo-riviervloei</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>bome, gras en ambrosia</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>afstand, wolkbasis</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>seevlak, 3-uur-neiging</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>gemak, kans op mis</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Bome</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Stuifmeelvlakke van geen tot baie hoog.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Data: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>rukwinde tot {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>sterkste rukwind, volgende 6 uur</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>rukwinde tot {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Dit is 'n modelvoorspelling. Die Wind-kaart wys die wind en rukwinde wat nou gemeet word. Die Water naby-kaart wys die wind wat by die water gemeet word, as die stasie 'n windsensor het.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Weergawe</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Gebaseer op FluentWeather 2.1.0 deur Gabboxl. Bygewerk deur duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus voeg hierdie kenmerke by FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Gestoorde liggings, tot 25, met sleutelbordkortpaaie.
+- Kennisgewingarea-ikone met die temperatuur, 'n weerprent en 'n sweefpaneel met gekose besonderhede.
+- Vorige dae: gister en eergister, langs vandag.
+- Volledige geskiedenis: daaglikse en uurlikse weer van 'n gestoorde ligging tot 1940.
+- 'n Radarkaart vir liggings in die VSA, en luggehalte vir elke ligging.
+- Water naby: die watertemperatuur en wind by die naaste stasie.
+- Ekstra data: golwe, 'n windvoorspelling, ander modelle, riviervloei en stuifmeel.
+- Weerwaarskuwings in die hoofvenster en as 'n kennisgewingborrel.
+- Meer data: lughawe-weer, sneeu, hittestres, storm-energie, grond, vriesvlak,
+  sonskyn, boeie, riviermeters, dagbesonderhede, 'n uurgrafiek en die NWS-bespreking.
+- Besonderheidkaarte met meer besonderhede by wys, in enige volgorde wat jy kies.
+- Instellings vir teksgrootte, agtergrondkontras, kaartkleur en die uurbereik.
+- 'n Taalinstelling, 'n direkte installeerder en 'n omvalverslag.
+- Plus baie verbeterings aan die koppelvlak.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Temperatuur</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Reën en sneeu</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Luggehalte</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Humiditeit</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Lugdruk</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Wolke en son</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Wiel: zoem. Shift+wiel of sleep: rol.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoem in</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoem uit</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Wys die hele jaar</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} tot {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Laai ure</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Klik om op hierdie dag in te zoem.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Temperatuur en doupunt, grade {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Daaglikse sterkste wind en rukwind, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Wind en rukwinde, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Daaglikse neerslag ({0}) en sneeu ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Neerslag ({0}) en sneeu ({1}) per uur</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Daaglikse hoogste {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} per uur</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Daaglikse gemiddelde humiditeit (%) en doupunt</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Humiditeit (%) en doupunt</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Daaglikse gemiddelde seevlakdruk, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Seevlakdruk, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Daaglikse gemiddelde wolkbedekking (%) en sonskynure</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Wolkbedekking (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Rukwinde</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Neerslag</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Humiditeit</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Lugdruk</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Sonskyn (h)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Wolkbedekking</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Temperatuur</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>VSA-AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Europese AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Geen luggehaltedata vir hierdie tydperk nie. Dit begin in Augustus 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Tyd</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Humiditeit</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Rukwind</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Druk</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Wolke</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Son</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Neerslag</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Nog geen data vir hierdie tydperk nie.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Bron van weerdata</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Outomaties</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Outomaties gebruik weather.com en skakel oor na Open-Meteo as weather.com twee keer agtereenvolgens misluk. 'n Verlore internetverbinding tel nie. Dit probeer elke uur weer weather.com. Met Open-Meteo gee die naaste lughawe-verslag binne 50 km die wolkbasis en die gemete lesings. VSA-stuifmeel bly leeg.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Data: Open-Meteo en stasie {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>tot {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>en nog {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Besonderhede ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Versteek besonderhede</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Uitgereik {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Gebied: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Laai die volle teks...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Die volle teks is nie beskikbaar nie.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Bron: weather.com-waarskuwings, van die land se nasionale weerdiens.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Bron: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Hoofvenster</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Kennisgewingarea</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Weerwaarskuwings</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Weer nou (lughawe)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Sneeu, laaste 1, 6 en 24 h</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Hittestres (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Storm-energie en donderrisiko</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Grond en sneeudiepte</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Vriesvlak</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Sonskyn en verdamping</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Boei: golwe, lug en gety</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Riviermeter (VSA)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Dagbesonderhede: donder, sneeu, wind</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Uurgrafiek, volgende 12 h in kennisgewingarea</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Voorspeller se bespreking (VSA)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Waarskuwings in die hoofvenster</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Alle waarskuwings</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Waarskuwings en waaksaamhede</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Slegs waarskuwings</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Hoofvenster wys die item in hierdie venster. 'n Kaart versteek as die ligging geen data het nie. Kennisgewingarea voeg 'n lyn by wat jy in die kennisgewingarea-kieslys onder Besonderhede by wys kan merk. Daardie kieslys stel ook wanneer die waarskuwingsborrel verskyn en hoe lank dit bly. Die eerste vyf items kom van open-meteo.com, met hoogstens een versoek per uur vir elke ligging. Waarskuwings is by verstek aan. Die ander items is by verstek af. Beweeg oor 'n naam om sy bron te sien.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>'n Band onder die liggingnaam vir elke aktiewe waarskuwing. Bron: weather.com, met die National Weather Service as rugsteun vir plekke in die VSA.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Weer en vlugkategorie uit die naaste lughawe-verslag, op die Sigbaarheid-kaart. Die sweefteks voeg die lughawe-voorspelling by. Bron: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Sneeu van die laaste 1, 6 en 24 uur. Bron: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Natbolglobustemperatuur, 'n maatstaf van hittestres vir werk en sport. Bron: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Storm-energie (CAPE) en vandag se donderrisiko. Bronne: Open-Meteo en weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Grondtemperatuur op 6 cm, grondvog en sneeudiepte. Bron: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Die hoogte van die 0-gradevlak. Bron: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Vandag se sonskyn, daglig, sonstraling en verdamping. Bron: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Golwe, golfperiode en -rigting, lug, druk en gety by die naaste NOAA-boei of getystasie binne 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Rivierhoogte, vloei en die laaste 7 dae by die naaste USGS-meter binne 40 km. Slegs VSA.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Donderrisiko en sneeuhoeveelheid op die dagknoppies, en windteks, notas en hoeveelhede in die dagbesonderhede. Bron: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>'n Grafiek onder die uurlikse voorspelling met reën, sneeu, ys, kans, sonskyn en ernstige ure. Die kennisgewingarea-lyn gee die hoeveelhede van die volgende 12 uur.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Die voorspeller se bespreking van die plaaslike kantoor van die National Weather Service, onder die radarkaart. Slegs VSA.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Sneeu, 6 h</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Hittestres</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Storm-energie</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Grond</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Vriesvlak</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Sonskyn</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Boei</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Riviermeter</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>geen reën, sneeu of mis nie</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Lughawe-verslag: {0} ({1}), {2} weg.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Weer:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Vlugkategorie:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>goeie sigbaarheid en wolkbasis</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>marginaal: wolkbasis 1 000 tot 3 000 ft of sigbaarheid 3 tot 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>laag: wolkbasis 500 tot 1 000 ft of sigbaarheid 1 tot 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>baie laag: wolkbasis onder 500 ft of sigbaarheid onder 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Wolkbasis by die lughawe:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Lughawe-voorspelling ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Verslae soos gestuur:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Bron: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Vanaf {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Verandering om {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Soms vanaf {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0}% kans</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>geen wolkbasis</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>wolkbasis {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 h: {0}, 24 h: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Sneeu by die ligging gemeet.
+Laaste uur: {0}
+Laaste 6 uur: {1}
+Laaste 24 uur: {2}
+
+Bron: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 h: {0}, 6 h: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Matig</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Baie hoog</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Uiterst</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Natbol-globetemperatuur (WBGT): {0}, hittestres {1}.
+Dit kombineer temperatuur, humiditeit, wind en son. Riglyne vir werk en sport gebruik dit. Hittestres begin naby 25 C (77 F) en is uiterst bo 32 C (90 F).
+
+Bron: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Baie laag</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Matig</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Uiterst</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Donderstormrisiko {0} van 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} van 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Stormenergie (CAPE) is die energie wat stygende lug kan kry. Donderstorms het dit nodig. Onder 300 J/kg is storms onwaarskynlik. Bo 2 500 J/kg is sterk storms moontlik wanneer iets die lug oplig.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Nou: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Hoogste vandag: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Bronne: Open-Meteo.com (CC BY 4.0) vir die stormenergie, weather.com vir die donderstormrisiko.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Vog {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Sneeudiepte {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Grondtemperatuur op 6 cm diepte: {0}
+Grondvog op 3 tot 9 cm: {1}
+Sneeudiepte: {2}
+
+Die waardes kom uit 'n weermodel en nie van 'n sensor nie. Bron: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, vog {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>By die grond</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>bo seevlak</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Vriesvlak: {0} bo seevlak.
+Bo hierdie hoogte is die lug onder 0 C (32 F). Sneeu wat van bo val, smelt daaronder.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Hoogte van die ligging: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>van {0} daglig</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Sonskyn vandag: {0}
+Daglig vandag: {1}
+Sonstraling nou: {2}
+Verdamping vandag: {3}
+
+Die verdamping is die verwysings-evapotranspirasie (FAO-56). Dit wys hoeveel water 'n grasperk in 'n dag verloor. Bron: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} van {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>elke {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>uit die {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Gety {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), {2} weg, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Golwe:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Lug:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Water:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Lugdruk:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Gety, bo die stasie se nulpunt:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Bron: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Stygend</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Dalend</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Bestendig</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), {2} weg, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Hoogte:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Vloei:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Verandering in die laaste 3 uur: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Laaste 7 dae: {0}, van {1} tot {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Die hoogte word van die meter se nulpunt gemeet en nie van die rivierbedding nie. Bron: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Wind: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Wind in die nag: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Nota: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>sneeu {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Hoeveelhede: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Hoeveelhede: geen</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Stawe: reën (blou), sneeu as water (wit), ys (siaan). Stippellyn: kans. Geel: sonskyn. Rooi merk: uur met ernstige weer.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Reën, sneeu en ys per uur van weather.com. Sneeu word as water geteken, omtrent 10 tot 1. Die stippellyn is die kans op neerslag. Die geel staaf bo is die uur se sonskyn van Open-Meteo. 'n Rooi merk wys 'n uur wat weather.com as ernstig beoordeel.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Totaal van die getoonde ure: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Droog, kans {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>kans {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>reën {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>sneeu {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>ys {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Voorspeller se bespreking, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Uitgereik {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Bron: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Wys alles</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Wys minder</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Onder 0 C by die oppervlak</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Die lug is onder 0 C (32 F) van die grond af op. Sneeu smelt nie op pad af nie.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Bron: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Nou</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>nou</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Golfhoogte, golfperiode, deining en seeoppervlaktemperatuur van die Open-Meteo-seemodel, vir punte op of naby die see. Bron: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Die sterkste rukwind van die volgende 6 uur, die model se rukwind nou en die wind op 80 m. Bron: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vandag se hoogste, laagste en neerslag van die weermodelle ECMWF, GFS en ICON. Bron: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vandag se gemodelleerde riviervloei en die gewone vloei vir die dag (GloFAS). Bron: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vlakke van bome, gras en ambrosia. Bron: weather.com in die VSA en 'n paar ander lande, Open-Meteo in Europa.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 dae per uur</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Elke uur van die voorspelling, omtrent 10 dae</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Terug na die hoofvenster (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Uurlikse voorspelling vir 10 dae</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Lys</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Oorsig</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperatuur</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Voel soos</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Neerslag</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Rukwinde</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Humiditeit</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Wolkbedekking</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Sigbaarheid</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Lugdruk</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Die bladsy wys die uurlikse voorspelling wat die app reeds vir die getoonde ligging gelaai het. 'n Ander ligging word gelaai wanneer dit gekies word. Tye is plaaslik vir die ligging. 'n Klik op die grafiek blaai die lys na daardie uur. In Lys open 'n klik op 'n ry sy ander waardes.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Getoonde ligging</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, bygewerk {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Geen uurlikse voorspelling vir hierdie ligging nie</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Geen rukwinde in hierdie voorspelling nie</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} uur     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} sneeu</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>rukwinde {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>voel {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>reën</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>sneeu</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>neerslag</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Tyd</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Lug</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Voel</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Kans</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Hoev.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Reën</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Ys</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Vog</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Doupt.</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Ruk</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Wolke</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Sig</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Druk</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Voel soos</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Rukwind</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Wolkbedekking</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Sigbaarheid</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperatuur</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Voel soos</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Kans op neerslag</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Reën</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Rukwinde</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperatuur ({0}) en kans op neerslag</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperatuur, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Voel soos en temperatuur, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Reën ({0}) en sneeu ({1}) per uur, en kans op neerslag</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Wind en rukwinde, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Rukwinde, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Humiditeit, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Wolkbedekking, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Sigbaarheid, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Doupunt en temperatuur, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Seevlakdruk, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Hoogtes</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Laagtes</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Blaai links</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Blaai regs</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Sonnig</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Helder</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Meestal sonnig</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Meestal helder</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Gedeeltelik bewolk</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Bewolk</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Meestal bewolk</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Mis</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Vriesende mis</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Ligte motreën</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Motreën</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Swaar motreën</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Vriesende motreën</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Ligte reën</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Reën</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Swaar reën</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Vriesende reën</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Ligte sneeu</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Sneeu</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Swaar sneeu</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Sneeukorrels</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Ligte reënbui</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Reënbui</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Swaar reënbui</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Sneeubui</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Swaar sneeubui</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Donderstorm</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Donderstorm met hael</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Mooi weer</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Vandag</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Vanaand</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Môre</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Môreaand</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0}aand</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Ligte en veranderlike wind.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Wind uit die {0}, {1} tot {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Kans op reën {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Kans op sneeu {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Hoogste {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Laagste {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Donderweer verwag</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Geen donderweer nie</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Uitstekend</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Goed</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Redelik</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Swak</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Baie swak</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Baie laag</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Matig</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Baie hoog</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Uiterst</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Lae kommer</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Matige kommer</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Hoë kommer</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Uiterste kommer</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>NNO</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ONO</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>OSO</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>SO</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>SSO</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SSW</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>SW</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>WSW</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>WNW</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>NW</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>NNW</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>KALM</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>ligte</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>swaar</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>in die omgewing</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>donderstorm</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>buie</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>vlak</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>kolle</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>gedeeltelike</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>lae waaiende</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>waaiende</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>buie van</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>donderstorm met</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>vriesende</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>motreën</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>reën</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>sneeu</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>sneeukorrels</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>yskristalle</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>yskorrels</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>hael</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>klein hael</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>onbekende neerslag</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>newel</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>mis</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>rook</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>vulkaniese as</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>stof</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>sand</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>waas</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>sproei</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>stofwarrels</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>rukwindbuie</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>tregterwolk</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>sandstorm</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>stofstorm</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, rukwinde {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Weerdata kon nie bygewerk word nie</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows het die verbinding met die weerdiens geblokkeer. 'n Brandmuur, antivirusprogram, VPN of instaanbediener blokkeer dalk FluentWeather-Plus. Laat FluentWeather-Plus in daardie program toe, of probeer weer met die VPN afgeskakel.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Ons kon nie die weerdata bywerk nie. Kontroleer jou internetverbinding.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Bou {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Af</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Toestande</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperatuur</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Voel soos</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 h hoogste / laagste</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 h verandering</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Doupunt</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Hitte-indeks</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Windverkoeling</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Humiditeit</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Lugdruk</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Sigbaarheid</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Wolkbasis</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Reën, laaste uur</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Reën, laaste 6 h</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Reën, laaste 24 h</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Sneeu, laaste 24 h</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Sonop</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Sononder</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Maanfase</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Maanopkoms</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Maanondergang</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Waargeneem om</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Naaste stasie</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Watertemperatuur</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Wind by waterstasie</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Golwe en seetemperatuur</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Windvoorspelling (rukwinde, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Ander modelle</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Riviervloei</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Stuifmeel</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Weerwaarskuwing</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Weer nou (lughawe)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Sneeu, laaste 1 h en 6 h</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Donderstormrisiko vandag</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Hittestres (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Vriesvlak</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Grondtemperatuur en -vog</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Sonskyn vandag</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Boei: golwe en gety</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Rivierhoogte en -vloei</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Reën, sneeu en ys volgende 12 h</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>En nog {0} waarskuwing.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>En nog {0} waarskuwings.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>En nog {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Sluit oor {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus-waarskuwing</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Wys besonderhede</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: wag vir die volgende dataverfrissing</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: nog geen data nie. Maak die app een keer oop.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: geen bywerking sedert {0} nie</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, voel soos {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Dieselfde stad as die app.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>In die kennisgewingarea gekies.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Bygewerk {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Weerwaarskuwings</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Wys waarskuwings</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Af</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Waarskuwings</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Waarskuwings en dophoudings</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Alle waarskuwings</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Respekteer Moenie steur nie (gebruik Windows-kennisgewings)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Windows-kennisgewings wag terwyl Moenie steur nie aan is. Die borrel wag nie.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Maak die borrel toe na</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Nooit</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} sekondes</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minuut</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minute</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Liggings</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Die stad wat die kennisgewingarea wys</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Alle gestoorde liggings</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Wys 'n toetswaarskuwing</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Wys hoe 'n waarskuwing met die huidige keuses lyk. Dit is nie 'n regte waarskuwing nie.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Toetswaarskuwing</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>tot {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Jou stad</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Dit is 'n toets. 'n Regte waarskuwing wys hier die opsomming van die weerdiens.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Die app stuur waarskuwings wanneer Weerwaarskuwings se Kennisgewingarea-blokkie in die app-instellings gemerk is.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Maak {0} oop</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Getal wys temperatuur</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Getal wys voel-soos-temperatuur</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Besonderhede by wys</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Wys alles</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Stel terug na verstek</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Geen gestoorde liggings nie. Gebruik die ster in die app.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Kennisgewingarea wys (die app-venster bly toe)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Dieselfde stad as die app</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Herbegin FluentWeather (app en kennisgewingarea-ikone)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Maak FluentWeather-venster toe</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Verlaat kennisgewingarea-ikone</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Begin hulle weer vanaf die Begin-kieslys: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Verlaat kennisgewingarea-ikone en maak FluentWeather toe</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Die app is nog nie geïnstalleer nie. Voer eers sy opstelling uit.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Kon nie herbegin nie. Gebruik die Begin-kieslysitem "Restart FluentWeather".</value>
   </data>
 </root>

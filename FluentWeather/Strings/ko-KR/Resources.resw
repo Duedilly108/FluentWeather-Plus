@@ -286,15 +286,2359 @@
     <value>12시간</value>
   </data>
   <data name="AutoSuggestBoxSearchHeader.Text" xml:space="preserve">
-    <value>Searching...</value>
+    <value>검색 중...</value>
   </data>
   <data name="BackgroundImageSettingsTitle.Text" xml:space="preserve">
-    <value>Background image</value>
+    <value>배경 이미지</value>
   </data>
   <data name="AutoRefreshSettingsTitle.Text" xml:space="preserve">
-    <value>Auto refresh</value>
+    <value>자동 새로 고침</value>
   </data>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
-    <value>Network error, please check your internet connection.</value>
+    <value>네트워크 오류입니다. 인터넷 연결을 확인하세요.</value>
+  </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>날짜 카드에 달의 위상 표시 또는 숨기기</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>날짜 카드에 달의 위상 표시 또는 숨기기</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>밝은 면 {0}%</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>신월</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>초승달</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>상현달</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>차오르는 달</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>보름달</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>기우는 달</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>하현달</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>그믐달</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>알림 영역 아이콘</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>알림 영역 아이콘 표시</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>작업 표시줄의 기온 및 날씨 아이콘을 표시하거나 숨깁니다. 버튼은 현재 상태를 따릅니다.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>설치되지 않음</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>업데이트:</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>기반:</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>이 위치 저장</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>저장된 위치에서 이 위치 제거</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>이 위치를 저장하려면 이름 옆의 별을 클릭하세요. 저장된 위치는 여기에 버튼으로 표시됩니다. 버튼을 클릭하면 해당 위치로 전환됩니다. 다른 위치를 검색한 후 별을 클릭하여 추가하세요.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>위치 이름 옆의 별을 클릭하여 저장하거나 제거합니다. 위치 버튼을 마우스 오른쪽 버튼으로 클릭하여 이동하거나 제거합니다. Ctrl+1부터 Ctrl+9까지 위치를 전환합니다.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>이 팁 숨기기</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>배경 대비</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>원본</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>어둡게</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>더 어둡게</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>밝게</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>더 밝게</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>어둡게와 더 어둡게는 배경 이미지를 어둡게 하고 밝은 텍스트를 유지합니다. 밝게와 더 밝게는 이미지를 밝게 하고 어두운 텍스트를 사용합니다.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>카드 색조</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>카드 색조</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>배경 이미지 위에서도 텍스트를 읽을 수 있도록 카드에 색을 입힙니다. 0퍼센트는 원래 모양을 유지합니다.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>어제</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>대기질</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>좋음</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>다소 나쁨</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>나쁨</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>매우 나쁨</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>극히 나쁨</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>민감군에 해로움</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>해로움</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>매우 해로움</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>위험</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>미국 대기질 지수</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>유럽 대기질 지수</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>오존</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>이산화질소</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>대기질 데이터: Open-Meteo.com 및 코페르니쿠스 대기 모니터링 서비스(CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>레이더</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>레이더 및 경계 NOAA/NWS. 지형 USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>업데이트됨</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>레이더 로드 중</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>이 지역에는 비나 눈이 없습니다. 축소하면 더 넓게 볼 수 있습니다.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>레이더를 로드할 수 없습니다. 다음 새로 고침 때 다시 시도합니다.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>축소</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>축소</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows 기본값</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>이 언어 사용</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>FluentWeather를 다시 시작하시겠습니까?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>새 언어는 FluentWeather를 다시 시작한 후 적용됩니다.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>지금 다시 시작</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>나중에</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>시간별 예보</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24시간</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36시간</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48시간</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>일은 선택한 날의 시간을 표시합니다. 24, 36, 48시간은 오늘은 지금부터, 다른 날은 자정부터 시작합니다.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>텍스트 및 그림 크기</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+빼기와 Ctrl+더하기로도 크기를 5%씩 변경합니다. Ctrl+0을 누르면 100%로 돌아갑니다.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>왼쪽으로 이동</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>오른쪽으로 이동</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>저장된 위치 한도에 도달함</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>위치는 최대 {0}개까지 저장할 수 있습니다. 새 위치를 추가하려면 위치를 제거하세요.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>뒤로(Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>전체 기록</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>월</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>년</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>먼저 위치를 저장하세요. 기록 창에는 저장된 위치가 표시됩니다.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>로드 중</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0}일. 앱 기록 {1}일, 보관 자료 {2}일.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>일별 최고 및 최저, 도 {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>보관 데이터: Open-Meteo.com(CC BY 4.0). 코페르니쿠스 기후 변화 서비스 정보를 사용하여 생성됨. 대기질: Open-Meteo, CAMS(2022년 8월부터). 보관 값은 기상 모델에서 나온 것으로 기록된 값과 다를 수 있습니다.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>최고</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>최저</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>강수</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>날씨</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>출처</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>기록됨</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>보관</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>맑음</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>대체로 맑음</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>구름 조금</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>흐림</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>안개</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>이슬비</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>소나기</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>소낙눈</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>뇌우</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>알 수 없음</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>주변 수역</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>메인 창의 카드</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>알림 영역 호버 패널의 줄</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>주변 수역</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>관측소의 바람</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>이 위치의 현재 바람(관측소에 풍향풍속계가 없음)</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>돌풍 {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>현재 측정값이 있는 가장 가까운 수역 관측소.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>물</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>관측소의 기온</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>방금</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0}분 전</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0}시간 전</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>수역 데이터: NOAA National Data Buoy Center(ndbc.noaa.gov) 및 USGS Water Data(waterdata.usgs.gov). 퍼블릭 도메인.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>파도</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>전체 기록</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>이 위치의 일별 및 시간별 기록</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>뒤로</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>50km(31mi) 이내에서 측정값이 6시간 이내인 가장 가까운 수역 관측소. NOAA NDBC 부이와 해안 관측소가 해안과 오대호를 담당합니다. USGS는 강과 일부 호수를 담당합니다. 근처에 관측소가 없는 바다에서는 Open-Meteo 해양 모델을 사용합니다. 알림 영역 메뉴의 가리킬 때 세부 정보에서 줄을 선택하세요.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo 해양 모델</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo 모델 바람(관측소에 풍향풍속계가 없음)</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>이 위치의 Open-Meteo:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>추가 데이터 옵션</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>메인</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>알림 영역</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>파도 및 해수 온도</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>바람 예보(돌풍, 80m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>기타 모델</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>하천 유량</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>꽃가루</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>파도</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>바람 예보</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>기타 모델</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>하천 유량</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>꽃가루</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>데이터: Open-Meteo.com(CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0}초</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>파도</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>너울</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>해수면 온도</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>바다</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>이 위치의 Open-Meteo 해양 모델.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>최대 {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>이 위치의 Open-Meteo 바람 예보.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>현재 바람</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>현재 돌풍</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>최대 돌풍, 향후 6시간</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6시간 최대</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>80m 고도의 바람</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>세 가지 기상 모델에 따른 오늘의 최고 및 최저. 편차가 크면 예보가 불확실하다는 뜻입니다.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>가장 가까운 하천의 모델 유량(GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>이날의 평년값</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>평년의 {0}%</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>공기 1세제곱미터당 입자 수. 수준은 대략적인 값입니다.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>오리나무</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>자작나무</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>잔디</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>쑥</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>올리브</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>돼지풀</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>낮음</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>높음</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>매우 높음</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>알림 영역 아이콘 표시</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>알림 영역 아이콘 숨기기</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>왼쪽으로 이동</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>오른쪽으로 이동</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>처음으로 이동</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>끝으로 이동</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>이 카드 숨기기</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>카드 추가</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>모든 카드가 표시됨</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>카드 초기화</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>주변 수역</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>파도 및 해수 온도</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>바람 예보</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>기타 모델</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>하천 유량</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>꽃가루</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>지상 10m 높이의 바람.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>풍속</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>풍향</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>체감 온도(바람)</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>상대 습도: 이 기온에서 공기가 담을 수 있는 최대량에 비해 공기 중에 있는 수증기의 양.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>건조</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>쾌적</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>습함</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>열지수</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>자외선 지수: 햇빛의 자외선 세기.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>위험이 낮음, 보호 필요 없음</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>자외선 차단제와 모자를 쓰고 한낮에는 그늘로</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>보호 필요, 오전 10시부터 오후 4시까지 햇빛 노출 줄이기</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>추가 보호 필요, 한낮의 햇빛 피하기</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>보호하지 않은 피부는 몇 분 만에 화상, 한낮에는 실내에 머물기</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>시정: 또렷하게 보이는 거리.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>안개</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>연무 또는 박무</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>좋음</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>운저 고도</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>낮은 구름 없음</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>사용할 수 없음</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>해면 기압.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>추세</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>3시간 변화</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>기압이 내려가면 흔히 구름과 비가 오고, 기압이 오르면 흔히 날씨가 갭니다.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>이슬점: 이슬이 맺히는 온도. 공기가 얼마나 습하게 느껴지는지 보여 줍니다.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>건조</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>쾌적</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>약간 습함</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>습함</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>후텁지근함</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>숨막힘</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>기온에서 이슬점을 뺀 값. 0에 가까우면 안개가 낄 가능성이 큽니다.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>카드 설정</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>풍속, 돌풍, 풍향</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>상대 습도, 열지수</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>햇빛 세기와 조언</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo 대기질</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>가장 가까운 수역 관측소, NOAA 및 USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo 파도와 바다</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>향후 6시간 최대 돌풍, 80m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>오늘의 ECMWF, GFS, ICON</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo 하천 유량</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>나무, 잔디, 돼지풀</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>거리, 운저 고도</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>해면, 3시간 추세</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>쾌적도, 안개 가능성</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>나무</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>꽃가루 수준(없음부터 매우 높음까지).</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>데이터: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>돌풍 최대 {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>최대 돌풍, 향후 6시간</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>돌풍 최대 {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>이것은 모델 예보입니다. 바람 카드는 지금 측정된 바람과 돌풍을 보여 줍니다. 주변 수역 카드는 관측소에 풍속계가 있을 때 물가에서 측정된 바람을 보여 줍니다.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Gabboxl의 FluentWeather 2.1.0 기반. duedilly108이 업데이트함.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus가 FluentWeather 2.1.0에 추가하는 기능:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- 저장된 위치, 최대 25개, 바로 가기 키 포함.
+- 기온, 날씨 그림, 선택한 세부 정보를 보여 주는 호버 패널이 있는 알림 영역 아이콘.
+- 지난날: 오늘 옆에 어제와 그제.
+- 전체 기록: 저장된 위치의 일별 및 시간별 날씨를 1940년까지.
+- 미국 위치의 레이더 지도와 모든 위치의 대기질.
+- 주변 수역: 가장 가까운 관측소의 수온과 바람.
+- 추가 데이터: 파도, 바람 예보, 기타 모델, 하천 유량, 꽃가루.
+- 메인 창과 알림 영역 풍선의 기상 특보.
+- 추가 데이터: 공항 날씨, 눈, 열 스트레스, 뇌우 에너지, 토양, 결빙 고도,
+  일조, 부이, 하천 수위계, 하루 세부 정보, 시간별 차트, NWS 예보 토의.
+- 가리킬 때 더 많은 정보를 보여 주는 세부 카드, 원하는 순서대로.
+- 텍스트 크기, 배경 대비, 카드 색조, 시간 범위 설정.
+- 언어 설정, 직접 설치 프로그램, 충돌 보고서.
+- 그 밖의 많은 GUI 개선.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>비와 눈</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>대기질</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>구름과 햇빛</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>휠: 확대/축소. Shift+휠 또는 끌기: 스크롤.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>축소</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>맞춤</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>1년 전체 보기</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} ~ {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>시간 데이터 로드 중</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>클릭하면 이날을 확대합니다.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>기온과 이슬점, 도 {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>일별 최대 바람과 돌풍, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>바람과 돌풍, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>일별 강수량({0})과 적설량({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>시간별 강수량({0})과 적설량({1})</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>일별 최고 {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>시간별 {0}</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>일평균 습도(%)와 이슬점</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>습도(%)와 이슬점</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>일평균 해면 기압, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>해면 기압, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>일평균 운량(%)과 일조 시간</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>운량(%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>강수량</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>일조(시간)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>운량</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>미국 AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>유럽 AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>이 기간의 대기질 데이터가 없습니다. 데이터는 2022년 8월부터 시작됩니다.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>풍향</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>구름</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>일조</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>강수</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>최고</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>최저</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>이 기간의 데이터가 아직 없습니다.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>날씨 데이터 출처</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>자동은 weather.com을 사용하고, weather.com이 두 번 연속 실패하면 Open-Meteo로 전환합니다. 인터넷 연결 끊김은 포함되지 않습니다. 매시간 weather.com을 다시 시도합니다. Open-Meteo에서는 50km 이내 가장 가까운 공항 보고가 운저 고도와 측정값을 제공합니다. 미국 꽃가루는 비어 있습니다.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>데이터: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>데이터: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>데이터: Open-Meteo 및 관측소 {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>{0}까지</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>외 {0}건</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>세부 정보 ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>세부 정보 숨기기</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>발표 {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>지역: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>전체 텍스트 로드 중...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>전체 텍스트를 사용할 수 없습니다.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>출처: 해당 국가 기상청의 weather.com 특보.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>출처: National Weather Service(api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>메인</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>알림 영역</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>기상 특보</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>현재 날씨(공항)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>눈, 최근 1·6·24시간</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>열 스트레스(WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>뇌우 에너지와 뇌우 위험</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>토양과 적설 깊이</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>결빙 고도</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>일조와 증발</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>부이: 파도, 기온, 조석</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>하천 수위계(미국)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>하루 세부 정보: 뇌우, 눈, 바람</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>시간별 차트, 알림 영역에 향후 12시간</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>예보관 토의(미국)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>메인 창의 특보</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>모든 특보</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>경보 및 주의보</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>경보만</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>메인은 이 창에 항목을 표시합니다. 위치에 데이터가 없으면 카드가 숨겨집니다. 알림 영역은 알림 영역 아이콘 메뉴의 가리킬 때 세부 정보에서 선택할 수 있는 줄을 추가합니다. 이 메뉴에서 특보 풍선이 표시되는 시기와 유지 시간도 설정합니다. 처음 다섯 항목은 open-meteo.com에서 가져오며 위치마다 1시간에 최대 한 번 요청합니다. 특보는 기본적으로 켜져 있습니다. 다른 항목은 기본적으로 꺼져 있습니다. 이름을 가리키면 출처가 표시됩니다.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>활성 특보마다 위치 이름 아래에 띠를 표시합니다. 출처: weather.com(미국 지역은 National Weather Service를 예비로 사용).</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>가장 가까운 공항 보고의 날씨와 비행 등급을 시정 카드에 표시합니다. 가리킬 때 나오는 텍스트에 공항 예보가 추가됩니다. 출처: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>최근 1, 6, 24시간의 눈. 출처: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>습구흑구온도(WBGT), 작업과 운동 시 열 스트레스의 척도. 출처: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>뇌우 에너지(CAPE)와 오늘의 뇌우 위험. 출처: Open-Meteo 및 weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>6cm 깊이의 지온, 토양 수분, 적설 깊이. 출처: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>0도 고도. 출처: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>오늘의 일조, 낮 길이, 일사량, 증발량. 출처: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>50km 이내 가장 가까운 NOAA 부이 또는 조위 관측소의 파도, 파도 주기와 방향, 기온, 기압, 조석.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>40km 이내 가장 가까운 USGS 수위계의 수위, 유량, 최근 7일. 미국만 해당.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>날짜 버튼에 뇌우 위험과 적설량을, 하루 세부 정보에 바람 설명, 메모, 양을 표시합니다. 출처: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>시간별 예보 아래에 비, 눈, 얼음, 확률, 일조, 악천후 시간을 보여 주는 차트. 알림 영역 줄에는 향후 12시간의 양이 표시됩니다.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>레이더 지도 아래에 지역 National Weather Service 사무소 예보관의 토의를 표시합니다. 미국만 해당.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>눈, 6시간</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>열 스트레스</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>뇌우 에너지</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>토양</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>결빙 고도</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>일조</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>부이</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>하천 수위계</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>비, 눈, 안개 없음</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>공항 보고: {0}({1}), {2} 거리.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>날씨:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>비행 등급:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>시정과 운저 고도 양호</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>경계: 운저 1,000~3,000ft 또는 시정 3~5mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>낮음: 운저 500~1,000ft 또는 시정 1~3mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>매우 낮음: 운저 500ft 미만 또는 시정 1mi 미만</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>공항의 운저 고도:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>공항 예보({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>보고 원문:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>출처: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>{0}부터</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>{0}에 변화</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>{0}부터 때때로</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>확률 {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>운저 없음</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>운저 {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1시간: {0}, 24시간: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>해당 위치에서 측정한 눈.
+최근 1시간: {0}
+최근 6시간: {1}
+최근 24시간: {2}
+
+출처: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1시간: {0}, 6시간: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>낮음</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>높음</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>매우 높음</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>위험</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>습구흑구온도(WBGT): {0}, 열 스트레스 {1}.
+기온, 습도, 바람, 햇빛을 결합한 지표입니다. 작업 및 운동 지침에서 사용합니다. 열 스트레스는 25 C(77 F) 부근에서 시작하며 32 C(90 F)를 넘으면 위험 수준입니다.
+
+출처: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>매우 낮음</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>낮음</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>높음</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>위험</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>뇌우 위험 {0}/5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0}/5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>뇌우 에너지(CAPE)는 상승하는 공기가 얻을 수 있는 에너지입니다. 뇌우에는 이 에너지가 필요합니다. 300 J/kg 미만이면 뇌우 가능성이 낮습니다. 2,500 J/kg를 넘으면 무언가가 공기를 들어 올릴 때 강한 뇌우가 발생할 수 있습니다.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>현재: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>오늘 최고: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>출처: 뇌우 에너지는 Open-Meteo.com(CC BY 4.0), 뇌우 위험은 weather.com.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>수분 {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>적설 깊이 {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>6cm 깊이의 지온: {0}
+3~9cm의 토양 수분: {1}
+적설 깊이: {2}
+
+이 값은 센서가 아닌 기상 모델에서 나옵니다. 출처: Open-Meteo.com(CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, 수분 {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>지면</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>해발</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>결빙 고도: 해발 {0}.
+이 높이보다 위에서는 기온이 0 C(32 F) 미만입니다. 위에서 내리는 눈은 이 높이 아래에서 녹습니다.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>위치 고도: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>낮 길이 {0} 중</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>오늘 일조: {0}
+오늘 낮 길이: {1}
+현재 일사량: {2}
+오늘 증발량: {3}
+
+증발량은 기준 증발산량(FAO-56)입니다. 잔디밭이 하루에 잃는 물의 양을 나타냅니다. 출처: Open-Meteo.com(CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{1} 중 {0}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>{0}초마다</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>{0}에서</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>조위 {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0}({1}), {2} 거리, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>파도:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>기온:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>수온:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>기압:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>조위(관측소 기준면 위):</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>출처: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>상승 중</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>하강 중</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>안정</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0}(USGS {1}), {2} 거리, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>수위:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>유량:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>최근 3시간 변화: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>최근 7일: {0}, {1} ~ {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>수위는 하상이 아니라 수위계 기준면에서 측정합니다. 출처: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>바람: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>밤 바람: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>참고: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>눈 {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>양: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>양: 없음</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>막대: 비(파랑), 물로 환산한 눈(흰색), 얼음(청록). 점선: 확률. 노랑: 일조. 빨간 표시: 악천후 시간.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>weather.com의 시간별 비, 눈, 얼음. 눈은 약 10:1로 물로 환산해 표시합니다. 점선은 강수 확률입니다. 위쪽의 노란 막대는 Open-Meteo의 해당 시간 일조입니다. 빨간 표시는 weather.com이 악천후로 평가한 시간을 나타냅니다.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>표시된 시간의 합계: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>건조, 확률 {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>확률 {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>비 {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>눈 {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>얼음 {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>예보관 토의, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>발표 {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>출처: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>모두 표시</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>간단히 표시</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>지면에서 0 C 미만</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>지면부터 위까지 기온이 0 C(32 F) 미만입니다. 눈이 내려오는 동안 녹지 않습니다.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>출처: Open-Meteo.com(CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Open-Meteo 해양 모델의 파고, 파주기, 너울, 해수면 온도. 바다 위나 바다 근처 지점에 해당합니다. 출처: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>향후 6시간의 최대 돌풍, 현재 모델 돌풍, 80m 바람. 출처: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ECMWF, GFS, ICON 기상 모델의 오늘 최고, 최저, 강수량. 출처: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>모델로 계산한 오늘의 하천 유량과 그날의 평상시 유량(GloFAS). 출처: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>나무, 잔디, 돼지풀 수준. 출처: 미국 및 일부 국가에서는 weather.com, 유럽에서는 Open-Meteo.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10일 시간별</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>예보의 모든 시간, 약 10일</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>메인 창으로 돌아가기(Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>뒤로</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10일 시간별 예보</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>목록</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>표</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>개요</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>체감 온도</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>강수량</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>자외선 지수</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>운량</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>시정</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>이 페이지에는 표시된 위치에 대해 앱이 이미 불러온 시간별 예보가 표시됩니다. 다른 위치는 선택할 때 불러옵니다. 시간은 해당 위치의 현지 시간입니다. 차트를 클릭하면 목록이 해당 시간으로 스크롤됩니다. 목록에서 행을 클릭하면 다른 값이 열립니다.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>표시된 위치</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, {1} 업데이트됨</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>이 위치의 시간별 예보가 없습니다</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>이 예보에는 돌풍이 없습니다</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0}시간     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>눈 {0}</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>돌풍 {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>체감 {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>강수</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>하늘</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>체감</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>확률</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>양</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>얼음</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>구름</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>시정</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>체감 온도</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>자외선 지수</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>운량</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>시정</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>체감 온도</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>강수 확률</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>돌풍</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>기온({0})과 강수 확률</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>기온, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>체감 온도와 기온, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>시간별 비({0})와 눈({1}), 강수 확률</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>바람과 돌풍, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>돌풍, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>습도, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>자외선 지수</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>운량, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>시정, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>이슬점과 기온, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>해면 기압, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>최고</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>최저</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>왼쪽으로 스크롤</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>오른쪽으로 스크롤</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>맑음</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>맑음</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>대체로 맑음</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>대체로 맑음</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>구름 조금</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>흐림</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>대체로 흐림</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>안개</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>어는 안개</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>약한 이슬비</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>이슬비</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>강한 이슬비</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>어는 이슬비</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>약한 비</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>강한 비</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>어는 비</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>약한 눈</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>강한 눈</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>싸락눈</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>약한 소나기</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>소나기</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>강한 소나기</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>소낙눈</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>강한 소낙눈</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>뇌우</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>우박을 동반한 뇌우</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>맑음</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>오늘 밤</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>내일</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>내일 밤</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} 밤</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>바람 약하고 방향 일정치 않음.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>{0}풍, {1}~{2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>비 올 확률 {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>눈 올 확률 {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>최고 {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>최저 {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>뇌우 예상</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>뇌우 없음</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>아주 좋음</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>좋음</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>나쁨</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>매우 나쁨</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>매우 낮음</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>낮음</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>높음</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>매우 높음</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>위험</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>우려 낮음</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>우려 보통</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>우려 높음</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>우려 매우 높음</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>북</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>북북동</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>북동</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>동북동</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>동</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>동남동</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>남동</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>남남동</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>남</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>남남서</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>남서</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>서남서</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>서</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>서북서</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>북서</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>북북서</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>고요</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>변동</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>약한</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>강한</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>인근</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>뇌우</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>소나기</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>얕은</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>부분적</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>일부</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>낮은 날린</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>날린</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>소나기성</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>뇌우와</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>어는</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>이슬비</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>비</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>눈</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>싸락눈</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>얼음 결정</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>얼음싸라기</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>우박</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>작은 우박</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>알 수 없는 강수</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>박무</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>안개</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>연기</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>화산재</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>먼지</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>모래</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>연무</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>물보라</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>먼지 회오리</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>스콜</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>깔때기 구름</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>모래 폭풍</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>먼지 폭풍</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, 돌풍 {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>날씨 데이터를 업데이트하지 못했습니다</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows가 날씨 서비스 연결을 차단했습니다. 방화벽, 바이러스 백신 프로그램, VPN 또는 프록시가 FluentWeather-Plus를 차단하고 있을 수 있습니다. 해당 프로그램에서 FluentWeather-Plus를 허용하거나 VPN을 끄고 다시 시도하세요.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>날씨 데이터를 업데이트할 수 없습니다. 인터넷 연결을 확인하세요.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>빌드 {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>끔</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15분</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30분</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1시간</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>날씨</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>기온</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>체감 온도</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24시간 최고 / 최저</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24시간 변화</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>이슬점</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>열지수</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>체감 온도(바람)</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>바람</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>자외선 지수</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>기압</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>시정</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>운저 고도</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>비, 최근 1시간</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>비, 최근 6시간</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>비, 최근 24시간</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>눈, 최근 24시간</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>일출</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>일몰</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>달의 위상</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>월출</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>월몰</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>관측 시각</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>가장 가까운 관측소</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>수온</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>수역 관측소의 바람</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>파도와 해수 온도</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>바람 예보(돌풍, 80m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>기타 모델</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>하천 유량</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>꽃가루</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>기상 특보</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>현재 날씨(공항)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>눈, 최근 1시간 및 6시간</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>오늘 뇌우 위험</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>열 스트레스(WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>결빙 고도</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>지온과 토양 수분</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>오늘 일조</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>부이: 파도와 조위</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>하천 수위와 유량</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>향후 12시간 비, 눈, 얼음</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>특보 {0}건이 더 있습니다.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>특보 {0}건이 더 있습니다.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>외 {0}건.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>{0} 후 닫힘</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus 특보</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>세부 정보 표시</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: 다음 데이터 새로 고침 대기 중</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: 아직 데이터가 없습니다. 앱을 한 번 여세요.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: {0} 이후 업데이트 없음</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, 체감 {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>앱과 같은 도시.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>알림 영역에서 선택함.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>{0} 업데이트됨</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>기상 특보</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>특보 표시</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>끔</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>경보</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>경보 및 주의보</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>모든 특보</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>방해 금지 존중(Windows 알림 사용)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>방해 금지가 켜져 있는 동안 Windows 알림은 대기합니다. 풍선은 대기하지 않습니다.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>풍선 닫기 시간</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>안 함</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0}초</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1분</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0}분</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>알림 영역에 표시할 도시</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>저장된 모든 위치</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>테스트 특보 표시</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>현재 선택으로 특보가 어떻게 보이는지 보여 줍니다. 실제 특보가 아닙니다.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>테스트 특보</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>{0}까지</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>내 도시</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>테스트입니다. 실제 특보에서는 여기에 기상 서비스의 요약이 표시됩니다.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>앱 설정에서 기상 특보의 알림 영역 확인란이 선택되어 있으면 앱이 특보를 보냅니다.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>{0} 열기</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>숫자로 기온 표시</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>숫자로 체감 온도 표시</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>가리킬 때 세부 정보</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>모두 표시</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>기본값으로 재설정</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>저장된 위치가 없습니다. 앱의 별표를 사용하세요.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>알림 영역 표시(앱 창은 닫힌 상태 유지)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>앱과 같은 도시</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>FluentWeather 다시 시작(앱 및 알림 영역 아이콘)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>FluentWeather 창 닫기</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>알림 영역 아이콘 종료</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>시작 메뉴에서 다시 시작하세요: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>알림 영역 아이콘 종료 및 FluentWeather 닫기</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>앱이 아직 설치되지 않았습니다. 먼저 설치 프로그램을 실행하세요.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>다시 시작할 수 없습니다. 시작 메뉴 항목 "Restart FluentWeather"를 사용하세요.</value>
   </data>
 </root>

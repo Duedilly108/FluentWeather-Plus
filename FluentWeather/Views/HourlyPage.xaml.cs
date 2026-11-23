@@ -418,7 +418,7 @@ namespace FluentWeather.Views
             var top = keepPosition ? FirstVisibleRow() : -1;
 
             _layoutVersion++;
-            TableGrid.MinWidth = IsTable ? 1212 : 910;
+            TableGrid.MinWidth = IsTable ? 1246 : 910;
             TableGrid.Width = Math.Max(TableGrid.MinWidth, TableScroll.ActualWidth);
 
             TableHeader.Children.Clear();
@@ -505,7 +505,8 @@ namespace FluentWeather.Views
 
         // Table: time, icon, sky, temperature, feels like, drop, chance, rain, snow, humidity, dew point,
         // arrow, wind, gust, clouds, UV, visibility, pressure.
-        private static readonly double[] TableWidths = [70, 28, -150, 54, 56, 18, 58, 72, 72, 82, 68, 20, 92, 58, 68, 44, 62, 104];
+        // Local build (v55): feels like, rain, snow and visibility are wider so translated headers fit.
+        private static readonly double[] TableWidths = [70, 28, -150, 54, 60, 18, 58, 80, 80, 82, 68, 20, 92, 58, 68, 44, 80, 104];
 
         private void BuildHeader(Grid header)
         {

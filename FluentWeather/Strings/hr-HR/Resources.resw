@@ -297,4 +297,2348 @@ LiveTiles su dostupne samo na Windows 10.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Pogreška mreže, provjerite svoju internetsku vezu.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Prikaži ili sakrij Mjesečevu mijenu na karticama dana</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Prikaži ili sakrij Mjesečevu mijenu na karticama dana</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>osvijetljeno {0} %</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Mlađak</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Rastući srp</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Prva četvrt</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Rastući mjesec</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Uštap</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Opadajući mjesec</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Zadnja četvrt</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Opadajući srp</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Ikone u području obavijesti</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Prikaži ikone u području obavijesti</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Prikazuje ili skriva ikone temperature i vremena na programskoj traci. Gumb prati njihovo trenutačno stanje.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Nije instalirano</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>ažurirao</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Temeljeno na</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Verzije</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Osvježi</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Spremi ovu lokaciju</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Ukloni ovu lokaciju iz spremljenih lokacija</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Da biste spremili ovu lokaciju, kliknite zvjezdicu pokraj njezina naziva. Spremljene lokacije ovdje se prikazuju kao gumbi. Kliknite gumb za prelazak na tu lokaciju. Potražite drugu lokaciju i kliknite njezinu zvjezdicu da biste je dodali.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Kliknite zvjezdicu pokraj naziva lokacije da biste je spremili ili uklonili. Desnom tipkom kliknite gumb lokacije da biste ga premjestili ili uklonili. Ctrl+1 do Ctrl+9 mijenjaju lokaciju.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Sakrij ovaj savjet</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Kontrast pozadine</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Izvorno</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Tamno</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Tamnije</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Svijetlo</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Svjetlije</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Tamno i Tamnije zatamnjuju pozadinsku sliku i zadržavaju svijetli tekst. Svijetlo i Svjetlije posvjetljuju sliku i koriste tamni tekst.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Nijansa kartica</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Nijansa kartica</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Nijansira kartice kako bi njihov tekst ostao čitljiv iznad pozadinske slike. 0 posto zadržava izvorni izgled.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Jučer</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Kvaliteta zraka</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Dobra</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Prihvatljiva</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Umjerena</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Loša</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Vrlo loša</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Iznimno loša</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Nezdrava za osjetljive</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Nezdrava</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Vrlo nezdrava</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Opasna</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Američki indeks kvalitete zraka</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Europski indeks kvalitete zraka</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Dušikov dioksid</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Podaci o kvaliteti zraka: Open-Meteo.com i Copernicusova služba za praćenje atmosfere (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar i granice NOAA/NWS. Teren USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Ažurirano</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Učitavanje radara</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Na ovom području nema kiše ni snijega. Smanjite prikaz da biste vidjeli više.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Radar se nije mogao učitati. Ponovni pokušaj pri sljedećem osvježavanju.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Povećaj</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Povećaj</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Smanji</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Smanji</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Zadano u sustavu Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Koristi ovaj jezik</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Odustani</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Ponovno pokrenuti FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Novi jezik primjenjuje se nakon ponovnog pokretanja aplikacije FluentWeather.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Ponovno pokreni sada</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Kasnije</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Prognoza po satima</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Dan</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 h</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 h</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 h</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Dan prikazuje sate odabranog dana. 24, 36 i 48 sati počinju sada za danas i u ponoć za ostale dane.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Veličina teksta i slika</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+minus i Ctrl+plus također mijenjaju veličinu u koracima od 5 %. Ctrl+0 vraća na 100 %.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Pomakni ulijevo</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Pomakni udesno</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Ukloni</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Dosegnuto je ograničenje spremljenih lokacija</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Možete spremiti do {0} lokacija. Uklonite lokaciju da biste dodali novu.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Natrag (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Cijela povijest</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Mjesec</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Godina</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Najprije spremite lokaciju. Prozor povijesti prikazuje spremljene lokacije.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Učitavanje</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} dana. {1} zabilježila aplikacija, {2} iz arhive.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Dnevni maksimum i minimum, stupnjevi {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Arhivski podaci: Open-Meteo.com (CC BY 4.0). Izrađeno pomoću informacija Copernicusove službe za klimatske promjene. Kvaliteta zraka: Open-Meteo, CAMS (od kolovoza 2022.). Arhivske vrijednosti dolaze iz vremenskog modela i mogu se razlikovati od zabilježenih vrijednosti.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Maks.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Oborine</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Vrijeme</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Izvor</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>zabilježeno</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arhiva</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Vedro</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Pretežno vedro</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Djelomično oblačno</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Oblačno</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Magla</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Rosulja</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Kiša</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Pljuskovi</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Snježni pljuskovi</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Grmljavinsko nevrijeme</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Nepoznato</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Obližnje vode</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Kartica u glavnom prozoru</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Redak na plutajućoj ploči područja obavijesti</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Obližnje vode</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>vjetar na postaji</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>trenutačni vjetar za ovu lokaciju, postaja nema senzor vjetra</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>lokacija</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>udari {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Najbliža vodna postaja s trenutačnim očitanjem.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Voda</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Zrak na postaji</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>upravo sada</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>prije {0} min</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>prije {0} h</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Podaci o vodi: NOAA National Data Buoy Center (ndbc.noaa.gov) i USGS Water Data (waterdata.usgs.gov). Javno dobro.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Valovi</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Cijela povijest</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dnevna i satna povijest ove lokacije</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Natrag</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Najbliža vodna postaja unutar 50 km (31 mi) s očitanjem mlađim od 6 sati. Plutače i obalne postaje NOAA NDBC pokrivaju obale i Velika jezera. USGS pokriva rijeke i neka jezera. Na moru bez obližnje postaje koristi se morski model Open-Meteo. Retke označite u izborniku područja obavijesti pod Pojedinosti pri pokazivanju.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Morski model Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Vjetar iz modela Open-Meteo, postaja nema senzor vjetra</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo za ovu lokaciju:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Dodatne mogućnosti podataka</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Glavni</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Obavijesti</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Valovi i temperatura mora</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Prognoza vjetra (udari, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Ostali modeli</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Protok rijeke</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Pelud</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Valovi</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Prognoza vjetra</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Ostali modeli</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Protok rijeke</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Pelud</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Podaci: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Valovi</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Mrtvo more</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Temperatura površine mora</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>more</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Morski model Open-Meteo za ovu lokaciju.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>do {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Prognoza vjetra Open-Meteo za ovu lokaciju.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Vjetar sada</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Udari sada</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Najjači udar, sljedećih 6 sati</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>maks. 6 h</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Vjetar na 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Današnji maksimum i minimum prema trima vremenskim modelima. Velik raspon znači nesigurnu prognozu.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Modelirani protok najbliže rijeke (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Danas</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Uobičajeno za ovaj dan</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0} % uobičajenog</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Zrnca po kubičnom metru zraka. Razine su približne.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Joha</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Breza</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Trave</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Pelin</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Maslina</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrozija</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Nema</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>niska</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>umjerena</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>visoka</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>vrlo visoka</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Prikaži ikone u području obavijesti</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Sakrij ikone u području obavijesti</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Pomakni ulijevo</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Pomakni udesno</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Pomakni na početak</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Pomakni na kraj</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Sakrij ovu karticu</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Dodaj karticu</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Prikazane su sve kartice</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Vrati kartice</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Obližnje vode</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Valovi i temperatura mora</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Prognoza vjetra</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Ostali modeli</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Protok rijeke</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Pelud</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>nema</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Vjetar na 10 m iznad tla.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Brzina</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Smjer</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Udari</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Osjet hladnoće od vjetra</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Relativna vlažnost: koliko vodene pare zrak sadrži u usporedbi s najvećom količinom koju može sadržavati pri toj temperaturi.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>suho</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>ugodno</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>vlažno</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Toplinski indeks</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV indeks: jakost sunčeve ultraljubičaste svjetlosti.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>mali rizik, zaštita nije potrebna</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>koristite kremu za sunčanje i šešir, u podne potražite hlad</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>potrebna zaštita, ograničite boravak na suncu od 10 do 16 sati</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>potrebna dodatna zaštita, izbjegavajte podnevno sunce</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>nezaštićena koža izgori za nekoliko minuta, u podne ostanite unutra</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Vidljivost: koliko daleko se jasno vidi.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>magla</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>sumaglica</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>umjerena</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>dobra</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Baza oblaka</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>nema niskih oblaka</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>nije dostupno</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Tlak zraka na razini mora.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Sada</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Promjena u 3 sata</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Padajući tlak često donosi oblake i kišu. Rastući tlak često donosi razvedravanje.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Rosište: temperatura pri kojoj nastaje rosa. Pokazuje koliko se zrak čini vlažnim.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>suho</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>ugodno</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>blago vlažno</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>vlažno</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>sparno</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>zagušljivo</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Temperatura umanjena za rosište. Magla je vjerojatna kad je blizu 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Postavke kartice</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>brzina, udari, smjer</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>relativna vlažnost, toplinski indeks</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>jakost sunca i savjeti</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>kvaliteta zraka Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>najbliža vodna postaja, NOAA i USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>valovi i more Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>najjači udar sljedećih 6 h, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS i ICON danas</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>protok rijeka Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>drveće, trave i ambrozija</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>udaljenost, baza oblaka</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>razina mora, trend u 3 sata</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>udobnost, mogućnost magle</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Drveće</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Razine peluda od nikakve do vrlo visoke.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Podaci: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>udari do {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>najjači udar, sljedećih 6 sati</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>udari do {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Ovo je prognoza modela. Kartica Vjetar prikazuje vjetar i udare izmjerene sada. Kartica Obližnje vode prikazuje vjetar izmjeren na vodi kad postaja ima senzor vjetra.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Verzija</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Temeljeno na FluentWeather 2.1.0 autora Gabboxl. Ažurirao duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus dodaje ove značajke u FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Spremljene lokacije, do 25, s tipkovničkim prečacima.
+- Ikone u području obavijesti s temperaturom, slikom vremena i pločom odabranih pojedinosti pri pokazivanju.
+- Prošli dani: jučer i prekjučer, pokraj današnjeg dana.
+- Cijela povijest: dnevno i satno vrijeme spremljene lokacije sve do 1940.
+- Radarska karta za lokacije u SAD-u i kvaliteta zraka za svaku lokaciju.
+- Obližnje vode: temperatura vode i vjetar na najbližoj postaji.
+- Dodatni podaci: valovi, prognoza vjetra, ostali modeli, protok rijeka i pelud.
+- Upozorenja na opasno vrijeme u glavnom prozoru i kao oblačić u području obavijesti.
+- Više podataka: vrijeme na zračnoj luci, snijeg, toplinski stres, energija oluje, tlo, visina nulte izoterme,
+  trajanje sijanja sunca, plutače, vodomjeri, pojedinosti dana, satni grafikon i rasprava NWS-a.
+- Kartice pojedinosti s više podataka pri pokazivanju, poredane kako želite.
+- Postavke veličine teksta, kontrasta pozadine, nijanse kartica i raspona sati.
+- Postavka jezika, izravni instalacijski program i izvješće o padu.
+- Te brojna poboljšanja sučelja.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Kiša i snijeg</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Kvaliteta zraka</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Vlažnost</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Oblaci i sunce</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Kotačić: zumiranje. Shift+kotačić ili povlačenje: pomicanje.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Povećaj</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Smanji</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Prilagodi</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Prikaži cijelu godinu</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} – {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Učitavanje sati</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Kliknite za zumiranje na ovaj dan.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Temperatura i rosište, stupnjevi {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Dnevni najjači vjetar i udar, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Vjetar i udari, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Dnevne oborine ({0}) i snijeg ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Oborine ({0}) i snijeg ({1}) po satu</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Dnevni maksimum {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} po satu</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Dnevna srednja vlažnost (%) i rosište</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Vlažnost (%) i rosište</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Dnevni srednji tlak na razini mora, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Tlak na razini mora, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Dnevna srednja naoblaka (%) i sati sijanja sunca</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Naoblaka (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Udari</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Oborine</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Vlažnost</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Sijanje sunca (h)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Naoblaka</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI SAD</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Europski AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Nema podataka o kvaliteti zraka za ovo razdoblje. Počinju u kolovozu 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Vrijeme</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Vlažnost</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Udar</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Smjer</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Oblaci</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Sunce</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Oborine</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Maks.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Još nema podataka za ovo razdoblje.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Izvor vremenskih podataka</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Automatski</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Automatski koristi weather.com i prelazi na Open-Meteo kad weather.com dvaput zaredom ne uspije. Prekinuta internetska veza ne računa se. weather.com pokušava ponovno svaki sat. S Open-Meteom najbliže izvješće zračne luke unutar 50 km daje bazu oblaka i izmjerene vrijednosti. Pelud za SAD ostaje prazan.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Podaci: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Podaci: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Podaci: Open-Meteo i postaja {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>do {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>i još {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Pojedinosti ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Sakrij pojedinosti</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Izdano {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Područje: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Učitavanje cijelog teksta...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Cijeli tekst nije dostupan.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Izvor: upozorenja weather.com, od nacionalne meteorološke službe zemlje.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Izvor: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Glavni</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Obavijesti</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Upozorenja na opasno vrijeme</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Vrijeme sada (zračna luka)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Snijeg, zadnjih 1, 6 i 24 h</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Toplinski stres (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Energija oluje i rizik od grmljavine</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Tlo i visina snijega</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Visina nulte izoterme</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Sijanje sunca i isparavanje</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Plutača: valovi, zrak i plima</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Vodomjer (SAD)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Pojedinosti dana: grmljavina, snijeg, vjetar</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Satni grafikon, sljedećih 12 h u obavijestima</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Rasprava prognostičara (SAD)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Upozorenja u glavnom prozoru</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Sva upozorenja</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Upozorenja i najave</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Samo upozorenja</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Glavni prikazuje stavku u ovom prozoru. Kartica se skriva kad lokacija nema podataka. Obavijesti dodaje redak koji možete označiti u izborniku ikona u području obavijesti pod Pojedinosti pri pokazivanju. Taj izbornik određuje i kad se pojavljuje oblačić upozorenja i koliko dugo ostaje. Prvih pet stavki dolazi s open-meteo.com, s najviše jednim zahtjevom na sat za svaku lokaciju. Upozorenja su zadano uključena. Ostale stavke su zadano isključene. Postavite pokazivač na naziv da biste vidjeli izvor.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Traka ispod naziva lokacije za svako aktivno upozorenje. Izvor: weather.com, uz National Weather Service kao rezervu za mjesta u SAD-u.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Vrijeme i kategorija leta iz najbližeg izvješća zračne luke, na kartici Vidljivost. Tekst pri pokazivanju dodaje prognozu zračne luke. Izvor: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Snijeg u zadnjih 1, 6 i 24 sata. Izvor: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Temperatura mokrog globusa (WBGT), mjera toplinskog stresa pri radu i sportu. Izvor: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Energija oluje (CAPE) i današnji rizik od grmljavine. Izvori: Open-Meteo i weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Temperatura tla na 6 cm, vlažnost tla i visina snijega. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Visina razine od 0 stupnjeva. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Današnje sijanje sunca, dnevno svjetlo, sunčevo zračenje i isparavanje. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Valovi, razdoblje i smjer valova, zrak, tlak i plima na najbližoj plutači NOAA ili mareografskoj postaji unutar 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Vodostaj, protok i zadnjih 7 dana na najbližem vodomjeru USGS unutar 40 km. Samo SAD.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Rizik od grmljavine i količina snijega na gumbima dana te tekst o vjetru, napomene i količine u pojedinostima dana. Izvor: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Grafikon ispod satne prognoze s kišom, snijegom, ledom, vjerojatnošću, sijanjem sunca i opasnim satima. Redak u obavijestima daje količine za sljedećih 12 sati.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Rasprava prognostičara lokalnog ureda National Weather Service, ispod radarske karte. Samo SAD.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Snijeg, 6 h</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Toplinski stres</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Energija oluje</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Tlo</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Nulta izoterma</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Sijanje sunca</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Plutača</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Vodomjer</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>bez kiše, snijega i magle</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Izvješće zračne luke: {0} ({1}), udaljeno {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Vrijeme:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Kategorija leta:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>dobra vidljivost i baza oblaka</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>granično: baza oblaka 1000 do 3000 ft ili vidljivost 3 do 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>nisko: baza oblaka 500 do 1000 ft ili vidljivost 1 do 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>vrlo nisko: baza oblaka ispod 500 ft ili vidljivost ispod 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Baza oblaka na zračnoj luci:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Prognoza zračne luke ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Izvješća u izvornom obliku:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Izvor: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Od {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Promjena u {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Povremeno od {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0}% vjerojatnost</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>bez baze oblaka</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>baza oblaka {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 h: {0}, 24 h: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Snijeg izmjeren na lokaciji.
+Zadnji sat: {0}
+Zadnjih 6 sati: {1}
+Zadnja 24 sata: {2}
+
+Izvor: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 h: {0}, 6 h: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Nisko</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Umjereno</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Visoko</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Vrlo visoko</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Ekstremno</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Temperatura WBGT (vlažni termometar i crna kugla): {0}, toplinski stres {1}.
+Spaja temperaturu, vlažnost, vjetar i sunce. Smjernice za rad i sport je koriste. Toplinski stres počinje oko 25 C (77 F) i ekstreman je iznad 32 C (90 F).
+
+Izvor: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Vrlo nisko</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Nisko</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Umjereno</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Visoko</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Ekstremno</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Rizik od grmljavine {0} od 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} od 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Energija oluje (CAPE) je energija koju zrak u usponu može dobiti. Grmljavinske oluje je trebaju. Ispod 300 J/kg oluje su malo vjerojatne. Iznad 2.500 J/kg moguće su jake oluje kada nešto podigne zrak.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Sada: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Najviše danas: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Izvori: Open-Meteo.com (CC BY 4.0) za energiju oluje, weather.com za rizik od grmljavine.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Vlaga {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Visina snijega {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>nema</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Temperatura tla na 6 cm dubine: {0}
+Vlažnost tla na 3 do 9 cm: {1}
+Visina snijega: {2}
+
+Vrijednosti dolaze iz meteorološkog modela, a ne sa senzora. Izvor: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, vlaga {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Pri tlu</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>nadmorske visine</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Visina nulte izoterme: {0} nadmorske visine.
+Iznad te visine zrak je ispod 0 C (32 F). Snijeg koji pada odozgo topi se ispod nje.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Nadmorska visina lokacije: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>od {0} dnevnog svjetla</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Sunce danas: {0}
+Dnevno svjetlo danas: {1}
+Sunčevo zračenje sada: {2}
+Isparavanje danas: {3}
+
+Isparavanje je referentna evapotranspiracija (FAO-56). Pokazuje koliko vode travnjak izgubi u jednom danu. Izvor: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} od {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>svakih {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>iz smjera {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Plima {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), udaljeno {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Valovi:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Zrak:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Voda:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Tlak:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Plima, iznad nule postaje:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Izvor: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Raste</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Pada</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Stabilno</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), udaljeno {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Vodostaj:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Protok:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Promjena u zadnja 3 sata: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Zadnjih 7 dana: {0}, od {1} do {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Vodostaj se mjeri od nule vodokaza, a ne od dna rijeke. Izvor: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Vjetar: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Vjetar noću: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Napomena: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>snijeg {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Količine: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Količine: nema</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Stupci: kiša (plavo), snijeg kao voda (bijelo), led (cijan). Isprekidana linija: vjerojatnost. Žuto: sunce. Crvena oznaka: sat s olujnim vremenom.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Kiša, snijeg i led po satu s weather.com. Snijeg je prikazan kao voda, oko 10 prema 1. Isprekidana linija je vjerojatnost oborine. Žuti stupac na vrhu je sunce tog sata s Open-Meteo. Crvena oznaka pokazuje sat koji weather.com ocjenjuje kao olujni.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Zbroj prikazanih sati: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>nema</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Suho, vjerojatnost {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>vjerojatnost {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>kiša {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>snijeg {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>led {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Rasprava prognostičara, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Izdano {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Izvor: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Prikaži sve</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Prikaži manje</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Ispod 0 C pri tlu</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Zrak je ispod 0 C (32 F) od tla prema gore. Snijeg se ne topi pri padanju.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Izvor: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Sada</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>sada</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Visina i period valova, mrtvo more i temperatura površine mora iz morskog modela Open-Meteo, za točke na moru ili blizu mora. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Najjači udar vjetra u sljedećih 6 sati, udar modela sada i vjetar na 80 m. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Današnja najviša, najniža i oborina iz modela ECMWF, GFS i ICON. Izvor: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Današnji modelirani protok rijeke i uobičajeni protok za taj dan (GloFAS). Izvor: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Razine drveća, trava i ambrozije. Izvor: weather.com u SAD-u i nekim drugim zemljama, Open-Meteo u Europi.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 dana po satima</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Svaki sat prognoze, oko 10 dana</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Natrag na glavni prozor (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Natrag</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Prognoza po satima za 10 dana</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Popis</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tablica</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Pregled</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Osjećaj</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Oborina</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Udari</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Vlažnost</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV indeks</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Naoblaka</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Vidljivost</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Stranica prikazuje prognozu po satima koju je aplikacija već učitala za prikazanu lokaciju. Druga lokacija učitava se kada se odabere. Vremena su lokalna za lokaciju. Klik na grafikon pomiče popis na taj sat. U Popisu klik na redak otvara njegove ostale vrijednosti.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Prikazana lokacija</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, ažurirano {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Nema prognoze po satima za ovu lokaciju</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Nema udara u ovoj prognozi</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>nema</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} sati     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} snijega</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>udari {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>osjećaj {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>kiša</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>snijeg</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>oborina</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Vrijeme</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Nebo</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Osjeć.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Vjer.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Kol.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Kiša</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Led</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Vlaga</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Udar</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Oblaci</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Vidlj.</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Osjećaj temperature</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Udar vjetra</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV indeks</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Naoblaka</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Vidljivost</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Osjećaj temperature</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Vjerojatnost oborine</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Kiša</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Udari</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperatura ({0}) i vjerojatnost oborine</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Osjećaj temperature i temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Kiša ({0}) i snijeg ({1}) po satu te vjerojatnost oborine</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Vjetar i udari, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Udari vjetra, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Vlažnost, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV indeks</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Naoblaka, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Vidljivost, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Rosište i temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Tlak na razini mora, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Najviše</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Najniže</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Pomakni ulijevo</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Pomakni udesno</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Sunčano</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Vedro</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Pretežno sunčano</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Pretežno vedro</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Djelomično oblačno</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Oblačno</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Pretežno oblačno</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Magla</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Ledena magla</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Slaba rosulja</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Rosulja</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Jaka rosulja</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Ledena rosulja</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Slaba kiša</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Kiša</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Jaka kiša</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Ledena kiša</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Slab snijeg</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Snijeg</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Jak snijeg</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Zrnati snijeg</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Slab pljusak kiše</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Pljusak kiše</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Jak pljusak kiše</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Snježni pljusak</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Jak snježni pljusak</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Grmljavinsko nevrijeme</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Grmljavinsko nevrijeme s tučom</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Lijepo vrijeme</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Danas</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Večeras</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Sutra</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Sutra navečer</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} navečer</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Vjetar slab i promjenjiv.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Vjetar {0}, {1} do {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Vjerojatnost kiše {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Vjerojatnost snijega {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Najviša {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Najniža {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Očekuje se grmljavina</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Bez grmljavine</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Odlično</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Dobro</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Prosječno</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Loše</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Vrlo loše</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Nema</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Vrlo nisko</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Nisko</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Umjereno</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Visoko</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Vrlo visoko</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Ekstremno</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Niska zabrinutost</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Umjerena zabrinutost</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Visoka zabrinutost</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Ekstremna zabrinutost</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>SSI</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>SI</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ISI</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>IJI</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>JI</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>JJI</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>J</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>JJZ</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>JZ</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>ZJZ</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>ZSZ</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>SZ</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>SSZ</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>TIŠINA</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>PROMJ.</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>slaba</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>jaka</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>u blizini</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>grmljavina</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>pljuskovi</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>plitka</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>krpe</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>djelomična</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>niska vijavica</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>vijavica</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>pljuskovi</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>grmljavina s</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>ledena</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>rosulja</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>kiša</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>snijeg</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>zrnati snijeg</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>ledeni kristali</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>ledena zrna</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>tuča</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>sugradica</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>nepoznata oborina</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>sumaglica</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>magla</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>dim</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>vulkanski pepeo</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>prašina</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>pijesak</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>suha mutnoća</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>morska pjena</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>prašinski vrtlozi</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>olujni udari</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>lijevak oblaka</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>pješčana oluja</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>prašinska oluja</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, udari {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Ažuriranje vremenskih podataka nije uspjelo</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows je blokirao vezu s vremenskom uslugom. Vatrozid, antivirusni program, VPN ili proxy možda blokira FluentWeather-Plus. Dopustite FluentWeather-Plus u tom programu ili pokušajte ponovno s isključenim VPN-om.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Nismo mogli ažurirati vremenske podatke. Provjerite internetsku vezu.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>U redu</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Verzija {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Isključeno</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Uvjeti</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Osjećaj</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 h najviša / najniža</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Promjena u 24 h</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Rosište</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Toplinski indeks</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Hladnoća vjetra</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Vlažnost</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Vjetar</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV indeks</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Tlak</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Vidljivost</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Baza oblaka</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Kiša, zadnji sat</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Kiša, zadnjih 6 h</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Kiša, zadnja 24 h</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Snijeg, zadnja 24 h</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Izlazak sunca</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Zalazak sunca</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Mjesečeva mijena</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Izlazak mjeseca</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Zalazak mjeseca</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Opaženo u</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Najbliža postaja</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Temperatura vode</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Vjetar na vodnoj postaji</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Valovi i temperatura mora</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Prognoza vjetra (udari, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Drugi modeli</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Protok rijeke</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Pelud</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Vremensko upozorenje</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Vrijeme sada (zračna luka)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Snijeg, zadnji 1 h i 6 h</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Rizik od grmljavine danas</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Toplinski stres (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Nulta izoterma</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Temperatura i vlažnost tla</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Sunce danas</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Plutača: valovi i plima</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Vodostaj i protok rijeke</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Kiša, snijeg i led u sljedećih 12 h</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>I još {0} upozorenje.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>I još {0} upozorenja.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>I još {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Zatvara se za {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Upozorenje FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Prikaži pojedinosti</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: čeka se sljedeće osvježavanje podataka</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: još nema podataka. Jednom otvorite aplikaciju.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: nema ažuriranja od {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, osjećaj {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Isti grad kao u aplikaciji.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Odabrano u području obavijesti.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Ažurirano {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Upozorenja na opasno vrijeme</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Prikaži upozorenja</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Isključeno</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Upozorenja</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Upozorenja i najave</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Sva upozorenja</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Poštuj Ne ometaj (koristi obavijesti sustava Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Obavijesti sustava Windows čekaju dok je uključeno Ne ometaj. Oblačić ne čeka.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Zatvori oblačić nakon</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Nikad</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} sekundi</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minute</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minuta</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Lokacije</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Grad koji prikazuje područje obavijesti</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Sve spremljene lokacije</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Prikaži probno upozorenje</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Pokazuje kako upozorenje izgleda s trenutačnim odabirima. Nije stvarno upozorenje.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Probno upozorenje</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>do {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Vaš grad</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Ovo je test. Stvarno upozorenje ovdje prikazuje sažetak vremenske službe.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Aplikacija šalje upozorenja kada je u postavkama aplikacije za Upozorenja na opasno vrijeme označen okvir Obavijesti.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Otvori {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Broj prikazuje temperaturu</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Broj prikazuje osjećaj temperature</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Pojedinosti pri pokazivanju</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Prikaži sve</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Vrati zadano</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Nema spremljenih lokacija. Upotrijebite zvjezdicu u aplikaciji.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Područje obavijesti prikazuje (prozor aplikacije ostaje zatvoren)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Isti grad kao u aplikaciji</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Ponovno pokreni FluentWeather (aplikacija i ikone u području obavijesti)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Zatvori prozor FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Izađi iz ikona u području obavijesti</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Ponovno ih pokrenite iz izbornika Start: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Izađi iz ikona u području obavijesti i zatvori FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Aplikacija još nije instalirana. Najprije pokrenite njezino postavljanje.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Ponovno pokretanje nije uspjelo. Upotrijebite stavku izbornika Start "Restart FluentWeather".</value>
+  </data>
 </root>

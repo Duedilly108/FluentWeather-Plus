@@ -16,9 +16,10 @@ namespace FluentWeather.Services
     /// <summary>
     /// Local build: which source the weather requests use.
     ///
-    /// Automatic (the default) uses weather.com. When weather.com refuses the key twice in a row
-    /// (HTTP 401 or 403, not a lost connection), the app switches to the Open-Meteo backup
-    /// (BackupWeatherService). While on the backup it tries weather.com again once an hour and
+    /// Automatic (the default) uses weather.com. When weather.com fails twice in a row, the app
+    /// switches to the Open-Meteo backup (BackupWeatherService). A failure is a refused key (HTTP 401
+    /// or 403), too many requests (429), a server error (500 to 599) or no answer in time while the
+    /// internet connection works (v55 added the last three). A lost connection never counts. While on the backup it tries weather.com again once an hour and
     /// switches back when weather.com answers. "weather.com only" never switches. "Open-Meteo only"
     /// always uses the backup.
     ///
@@ -55,7 +56,7 @@ namespace FluentWeather.Services
             ActiveSourceChanged?.Invoke(null, EventArgs.Empty);
         }
 
-        /// <summary>True when the backup is in use now, by choice or after weather.com refused the key.</summary>
+        /// <summary>True when the backup is in use now, by choice or after weather.com failed twice.</summary>
         public static async Task<bool> IsBackupActiveAsync()
         {
             var mode = await GetModeAsync();
@@ -95,8 +96,8 @@ namespace FluentWeather.Services
                 ActiveSourceChanged?.Invoke(null, EventArgs.Empty);
         }
 
-        /// <summary>weather.com refused the key. Returns true when the app now uses the backup.</summary>
-        public static async Task<bool> ReportKeyRefusedAsync()
+        /// <summary>weather.com failed (see the class notes). Returns true when the app now uses the backup.</summary>
+        public static async Task<bool> ReportWeatherComFailedAsync()
         {
             if (await GetModeAsync() != DataSourceMode.Automatic)
                 return false;
@@ -110,7 +111,7 @@ namespace FluentWeather.Services
 
             WriteLong(BackupSinceKey, DateTime.UtcNow.Ticks);
             WriteLong(LastRetryKey, DateTime.UtcNow.Ticks);
-            CrashLog.Write(null, "DataSourceService", "weather.com refused the key twice. Switched to the Open-Meteo backup.");
+            CrashLog.Write(null, "DataSourceService", "weather.com failed twice in a row. Switched to the Open-Meteo backup.");
             ActiveSourceChanged?.Invoke(null, EventArgs.Empty);
             return true;
         }

@@ -296,4 +296,2348 @@
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>网络错误，请检查您的网络连接。</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>在日期卡片上显示或隐藏月相</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>在日期卡片上显示或隐藏月相</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>亮面 {0}%</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>新月</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>蛾眉月</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>上弦月</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>盈凸月</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>满月</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>亏凸月</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>下弦月</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>残月</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>通知区域图标</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>显示通知区域图标</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>显示或隐藏任务栏中的温度和天气图标。按钮跟随它们的当前状态。</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>未安装</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>更新者</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>基于</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>保存此位置</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>从已保存位置中删除此位置</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>要保存此位置，请单击其名称旁边的星号。已保存的位置会以按钮的形式显示在这里。单击按钮可切换到该位置。搜索其他位置并单击其星号即可添加。</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>单击位置名称旁边的星号可保存或删除该位置。右键单击位置按钮可移动或删除它。Ctrl+1 到 Ctrl+9 切换位置。</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>隐藏此提示</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>背景对比度</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>原始</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>暗</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>更暗</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>亮</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>更亮</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>“暗”和“更暗”会使背景图像变暗并保留浅色文字。“亮”和“更亮”会使图像变亮并使用深色文字。</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>卡片色调</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>卡片色调</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>为卡片着色，使其文字在背景图像上保持清晰可读。0% 保持原始外观。</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>尚可</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>较差</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>很差</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>极差</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>对敏感人群不健康</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>不健康</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>非常不健康</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>危险</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>美国空气质量指数</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>欧洲空气质量指数</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>臭氧</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>二氧化氮</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>空气质量数据：Open-Meteo.com 和哥白尼大气监测服务 (CC BY 4.0)。</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>雷达</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>雷达和边界：NOAA/NWS。地形：USGS。</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>更新于</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>正在加载雷达</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>此区域没有雨雪。缩小可查看更大范围。</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>无法加载雷达。将在下次刷新时重试。</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>缩小</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>缩小</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows 默认</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>使用此语言</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>重新启动 FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>新语言将在 FluentWeather 重新启动后生效。</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>立即重新启动</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>稍后</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>逐小时预报</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 小时</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 小时</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 小时</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>“日”显示所选日期的各小时。24、36 和 48 小时对今天从现在开始，对其他日期从午夜开始。</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>文字和图片大小</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+减号和 Ctrl+加号也能以 5% 为步长更改大小。Ctrl+0 恢复为 100%。</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>左移</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>右移</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>已达到保存位置的上限</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>最多可以保存 {0} 个位置。删除一个位置即可添加新位置。</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>返回 (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>完整历史</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>请先保存一个位置。历史窗口显示已保存的位置。</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>正在加载</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} 天。应用记录 {1} 天，档案 {2} 天。</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>每日最高和最低，单位 °{0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>档案数据：Open-Meteo.com (CC BY 4.0)。使用哥白尼气候变化服务的信息生成。空气质量：Open-Meteo、CAMS（自 2022 年 8 月起）。档案值来自天气模型，可能与记录值不同。</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>降雪</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>记录</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>档案</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>晴</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>大部晴朗</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>局部多云</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>阴</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>雾</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>毛毛雨</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>阵雨</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>阵雪</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>雷暴</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>附近水域</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>主窗口中的卡片</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>通知区域悬停面板中的行</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>附近水域</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>站点风况</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>此位置的当前风况，站点没有测风传感器</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>阵风 {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>有当前读数的最近水文站。</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>水</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>站点气温</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>刚刚</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} 分钟前</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} 小时前</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>水文数据：NOAA National Data Buoy Center (ndbc.noaa.gov) 和 USGS Water Data (waterdata.usgs.gov)。公共领域。</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>海浪</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>完整历史</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>此位置的每日和逐小时历史</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>50 公里（31 英里）内读数不超过 6 小时的最近水文站。NOAA NDBC 浮标和岸基站覆盖海岸和五大湖。USGS 覆盖河流和部分湖泊。在附近没有站点的海上，使用 Open-Meteo 海洋模型。在通知区域菜单的“悬停详细信息”下勾选这些行。</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo 海洋模型</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo 模型风况，站点没有测风传感器</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>此位置的 Open-Meteo：</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>更多数据选项</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>主窗口</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>通知区域</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>海浪和海水温度</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>风力预报（阵风，80 米）</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>其他模型</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>河流流量</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>海浪</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>风力预报</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>其他模型</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>河流流量</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>数据：Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>海浪</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>涌浪</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>海面温度</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>海</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>此位置的 Open-Meteo 海洋模型。</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>最高 {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>此位置的 Open-Meteo 风力预报。</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>当前风</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>当前阵风</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>最强阵风，未来 6 小时</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 小时最大</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>80 米高度风</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>三个天气模型给出的今日最高和最低。差异越大，预报越不确定。</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>最近河流的模拟流量 (GloFAS)。</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>此日常值</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>常值的 {0}%</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>每立方米空气中的花粉粒数。等级为近似值。</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>桤木</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>桦树</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>禾草</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>艾草</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>橄榄</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>豚草</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>很高</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>显示通知区域图标</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>隐藏通知区域图标</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>左移</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>右移</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>移到开头</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>移到末尾</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>隐藏此卡片</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>添加卡片</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>已显示所有卡片</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>重置卡片</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>附近水域</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>海浪和海水温度</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>风力预报</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>其他模型</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>河流流量</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>离地 10 米高处的风。</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>风速</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>风向</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>风寒温度</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>相对湿度：空气中的水汽量，与此温度下空气所能容纳的最大量相比。</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>干燥</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>舒适</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>潮湿</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>酷热指数</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>紫外线指数：阳光中紫外线的强度。</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>风险低，无需防护</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>涂防晒霜、戴帽子，中午寻找阴凉</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>需要防护，10 点至 16 点减少日晒</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>需要加强防护，避开正午阳光</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>未防护的皮肤几分钟内会晒伤，中午请留在室内</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>能见度：能清楚看到的距离。</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>雾</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>霾或轻雾</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>云底高度</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>无低云</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>海平面气压。</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>当前</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>趋势</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>3 小时变化</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>气压下降常带来云和雨。气压上升常带来天气转晴。</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>露点：结露时的温度。它表示空气感觉有多潮湿。</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>干燥</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>舒适</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>略潮湿</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>潮湿</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>闷热</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>酷闷</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>气温减露点。接近 0 时容易起雾。</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>卡片设置</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>风速、阵风、风向</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>相对湿度、酷热指数</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>阳光强度和建议</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo 空气质量</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>最近水文站，NOAA 和 USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo 海浪和海洋</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>未来 6 小时最强阵风，80 米</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>今日 ECMWF、GFS 和 ICON</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo 河流流量</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>树木、禾草和豚草</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>距离、云底高度</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>海平面、3 小时趋势</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>舒适度、起雾概率</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>树木</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>花粉等级，从无到很高。</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>数据：weather.com。</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>阵风最高 {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>最强阵风，未来 6 小时</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>阵风最高 {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>这是模型预报。“风”卡片显示当前测得的风和阵风。“附近水域”卡片在站点有测风传感器时显示水边测得的风。</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>基于 Gabboxl 的 FluentWeather 2.1.0。由 duedilly108 更新。</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus 为 FluentWeather 2.1.0 添加了以下功能：</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- 已保存的位置，最多 25 个，带键盘快捷键。
+- 通知区域图标，显示温度、天气图片和悬停时显示所选详细信息的面板。
+- 过去几天：今天旁边显示昨天和前天。
+- 完整历史：已保存位置的每日和逐小时天气，最早到 1940 年。
+- 美国位置的雷达地图，以及所有位置的空气质量。
+- 附近水域：最近站点的水温和风。
+- 额外数据：海浪、风力预报、其他模型、河流流量和花粉。
+- 主窗口中和通知区域气泡中的恶劣天气预警。
+- 更多数据：机场天气、降雪、热应激、雷暴能量、土壤、冻结高度、
+  日照、浮标、河流水位站、当日详情、逐小时图表和 NWS 预报讨论。
+- 悬停时显示更多信息的详情卡片，顺序可自选。
+- 文字大小、背景对比度、卡片色调和小时范围的设置。
+- 语言设置、直接安装程序和崩溃报告。
+- 以及许多界面改进。</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>雨和雪</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>云和日照</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>滚轮：缩放。Shift+滚轮或拖动：滚动。</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>缩小</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>适合</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>显示全年</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} 至 {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>正在加载小时数据</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>单击可放大到这一天。</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>温度和露点，单位 °{0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>每日最大风速和阵风，{0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>风和阵风，{0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>每日降水量 ({0}) 和降雪量 ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>每小时降水量 ({0}) 和降雪量 ({1})</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>每日最高 {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>每小时 {0}</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>每日平均湿度 (%) 和露点</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>湿度 (%) 和露点</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>每日平均海平面气压，{0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>海平面气压，{0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>每日平均云量 (%) 和日照时数</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>云量 (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>降水量</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>降雪</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>日照 (小时)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>云量</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>美国 AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>欧洲 AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>此期间没有空气质量数据。数据从 2022 年 8 月开始。</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>风向</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>云</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>日照</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>此期间暂无数据。</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>天气数据来源</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>“自动”使用 weather.com，当 weather.com 连续两次失败时切换到 Open-Meteo。断网不计入。每小时重试一次 weather.com。使用 Open-Meteo 时，50 公里内最近的机场报文提供云底高度和实测值。美国花粉为空。</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>数据：Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>数据：Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>数据：Open-Meteo 和站点 {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>直到 {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>另有 {0} 条</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>详细信息 ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>隐藏详细信息</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>发布于 {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>地区：{0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>正在加载全文...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>全文不可用。</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>来源：weather.com 预警，来自该国的国家气象部门。</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>来源：National Weather Service (api.weather.gov)。</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>主窗口</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>通知区域</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>恶劣天气预警</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>当前天气（机场）</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>降雪，过去 1、6 和 24 小时</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>热应激 (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>雷暴能量和雷暴风险</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>土壤和积雪深度</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>冻结高度</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>日照和蒸发</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>浮标：海浪、气温和潮汐</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>河流水位站（美国）</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>当日详情：雷暴、降雪、风</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>逐小时图表，通知区域显示未来 12 小时</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>预报员讨论（美国）</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>主窗口中的预警</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>所有预警</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>警报和关注</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>仅警报</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>“主窗口”在此窗口中显示该项。位置没有数据时卡片会隐藏。“通知区域”会添加一行，可在通知区域图标菜单的“悬停详细信息”中勾选。该菜单还设置预警气泡何时显示以及停留多久。前五项来自 open-meteo.com，每个位置每小时最多请求一次。预警默认开启。其他项默认关闭。将鼠标悬停在名称上可查看其来源。</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>每个生效的预警在位置名称下方显示一条横幅。来源：weather.com，美国地区以 National Weather Service 作为备用。</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>在“能见度”卡片上显示最近机场报文的天气和飞行类别。悬停文字会加入机场预报。来源：Aviation Weather Center。</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>过去 1、6 和 24 小时的降雪。来源：weather.com。</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>湿球黑球温度 (WBGT)，衡量工作和运动时热应激的指标。来源：weather.com。</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>雷暴能量 (CAPE) 和今日雷暴风险。来源：Open-Meteo 和 weather.com。</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>6 厘米深处的土壤温度、土壤湿度和积雪深度。来源：Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>0 度层的高度。来源：Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>今日日照、白昼时长、太阳辐射和蒸发量。来源：Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>50 公里内最近的 NOAA 浮标或潮位站的海浪、浪周期和方向、气温、气压和潮汐。</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>40 公里内最近的 USGS 水位站的水位、流量和过去 7 天数据。仅限美国。</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>在日期按钮上显示雷暴风险和降雪量，在当日详情中显示风况说明、备注和数量。来源：weather.com。</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>逐小时预报下方的图表，显示雨、雪、冰、概率、日照和恶劣天气时段。通知区域的行给出未来 12 小时的数量。</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>当地 National Weather Service 办公室的预报员讨论，位于雷达地图下方。仅限美国。</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>降雪，6 小时</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>热应激</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>雷暴能量</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>土壤</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>冻结高度</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>日照</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>浮标</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>河流水位站</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>无雨、雪或雾</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>机场报文：{0} ({1})，距离 {2}。</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>天气：</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>飞行类别：</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>能见度和云底高度良好</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>边缘：云底 1,000 至 3,000 英尺或能见度 3 至 5 英里</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>低：云底 500 至 1,000 英尺或能见度 1 至 3 英里</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>很低：云底低于 500 英尺或能见度低于 1 英里</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>机场云底高度：</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>机场预报 ({0}，TAF)：</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>原始报文：</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>来源：Aviation Weather Center，aviationweather.gov。</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>从 {0} 起</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>{0} 时变化</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>{0} 起间或</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>概率 {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>无云底</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>云底 {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 小时：{0}，24 小时：{1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>在该位置测得的降雪。
+过去 1 小时：{0}
+过去 6 小时：{1}
+过去 24 小时：{2}
+
+来源：weather.com。</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 小时：{0}，6 小时：{1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>很高</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>极高</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>湿球黑球温度 (WBGT)：{0}，热应激 {1}。
+它综合了温度、湿度、风和日照。工作和运动准则使用它。热应激约从 25 C (77 F) 开始，高于 32 C (90 F) 为极高。
+
+来源：weather.com。</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>很低</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>极高</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>雷暴风险 {0}/5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0}/5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>雷暴能量 (CAPE) 是上升空气可获得的能量。雷暴需要它。低于 300 J/kg 时不太可能出现雷暴。高于 2,500 J/kg 时，若有因素抬升空气，可能出现强雷暴。</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>当前：{0}，{1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>今日最高：{0}，{1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>来源：雷暴能量来自 Open-Meteo.com (CC BY 4.0)，雷暴风险来自 weather.com。</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>湿度 {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>积雪深度 {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>6 厘米深处土壤温度：{0}
+3 至 9 厘米土壤湿度：{1}
+积雪深度：{2}
+
+这些值来自天气模型，而非传感器。来源：Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}，湿度 {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>地面</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>海拔</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>冻结高度：海拔 {0}。
+高于此高度时气温低于 0 C (32 F)。从上方落下的雪会在此高度以下融化。</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>该位置海拔：{0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>/ 白昼 {0}</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>今日日照：{0}
+今日白昼：{1}
+当前太阳辐射：{2}
+今日蒸发量：{3}
+
+蒸发量为参考蒸散量 (FAO-56)。它表示草坪一天失去多少水。来源：Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>每 {0} 秒</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>来自 {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>潮位 {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1})，距离 {2}，{3}。</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>海浪：</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>气温：</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>水温：</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>气压：</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>潮位（高于站点基准面）：</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>来源：NOAA National Data Buoy Center，ndbc.noaa.gov。</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>上升</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>下降</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>平稳</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1})，距离 {2}，{3}。</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>水位：</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>流量：</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>过去 3 小时变化：{0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>过去 7 天：{0}，从 {1} 到 {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>水位从水位计基准面而非河床量起。来源：U.S. Geological Survey，waterdata.usgs.gov。</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>风：{0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>夜间风：{0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>注：{0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>量：{0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>量：无</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>柱：雨（蓝）、雪折合水量（白）、冰（青）。虚线：概率。黄色：日照。红色标记：恶劣天气时段。</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>来自 weather.com 的每小时雨、雪和冰。雪按水量绘制，约 10 比 1。虚线为降水概率。顶部黄色条为 Open-Meteo 提供的该小时日照。红色标记表示 weather.com 评为恶劣的时段。</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>所示小时合计：{0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>无降水，概率 {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>概率 {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>雨 {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>冰 {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>预报员讨论，NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>发布于 {0}。</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>来源：National Weather Service，api.weather.gov。</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>全部显示</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>收起</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>地面低于 0 C</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>从地面往上气温均低于 0 C (32 F)。雪在下落途中不会融化。</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>来源：Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>当前</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>当前</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>来自 Open-Meteo 海洋模型的浪高、浪周期、涌浪和海面温度，适用于海上或近海地点。来源：Open-Meteo。</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>未来 6 小时最强阵风、当前模型阵风和 80 米风。来源：Open-Meteo。</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>来自 ECMWF、GFS 和 ICON 天气模型的今日最高、最低和降水。来源：Open-Meteo。</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>模型计算的今日河流流量和当日的常见流量 (GloFAS)。来源：Open-Meteo。</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>树木、禾草和豚草等级。来源：美国和部分其他国家为 weather.com，欧洲为 Open-Meteo。</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 天逐小时</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>预报中的每个小时，约 10 天</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>返回主窗口 (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10 天逐小时预报</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>表格</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>概览</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>降水量</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>云量</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>能见度</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>此页面显示应用已为所示位置加载的逐小时预报。选择其他位置时会加载该位置。时间为该位置的当地时间。单击图表可将列表滚动到该小时。在列表中，单击某行可打开其其他值。</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>所示位置</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}，更新于 {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>此位置没有逐小时预报</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>此预报中没有阵风</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} 小时     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>阵风 {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>体感 {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>天空</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>体感</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>概率</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>量</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>冰</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>云</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>能见度</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>云量</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>能见度</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>降水概率</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>阵风</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>温度 ({0}) 和降水概率</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>温度，{0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>体感温度和温度，{0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>每小时雨 ({0}) 和雪 ({1})，以及降水概率</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>风和阵风，{0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>阵风，{0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>湿度，%</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>云量，%</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>能见度，{0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>露点和温度，{0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>海平面气压，{0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>向左滚动</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>向右滚动</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>晴</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>晴朗</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>大部晴</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>大部晴朗</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>局部多云</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>多云</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>大部多云</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>雾</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>冻雾</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>小毛毛雨</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>毛毛雨</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>大毛毛雨</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>冻毛毛雨</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>小雨</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>大雨</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>冻雨</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>小雪</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>大雪</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>米雪</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>小阵雨</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>阵雨</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>强阵雨</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>阵雪</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>强阵雪</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>雷暴</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>雷暴伴有冰雹</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>晴好</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>今晚</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>明天</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>明晚</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0}晚上</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>风力微弱，风向不定。</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>{0}风，{1} 至 {2} {3}。</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>降雨概率 {0}%。</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>降雪概率 {0}%。</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>最高 {0}{1}。</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>最低 {0}{1}。</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>预计有雷</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>无雷</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>极佳</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>较差</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>很差</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>很低</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>很高</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>极高</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>低度关注</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>中度关注</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>高度关注</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>极度关注</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>北</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>北东北</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>东北</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>东东北</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>东</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>东东南</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>东南</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>南东南</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>南</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>南西南</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>西南</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>西西南</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>西</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>西西北</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>西北</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>北西北</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>静风</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>风向不定</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>小</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>大</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>附近</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>雷暴</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>阵性降水</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>浅</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>片状</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>部分</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>低吹</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>高吹</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>阵性</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>雷暴伴</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>冻</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>毛毛雨</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>米雪</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>冰晶</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>冰粒</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>冰雹</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>小冰雹</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>未知降水</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>轻雾</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>雾</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>烟</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>火山灰</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>浮尘</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>沙</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>霾</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>浪花</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>尘卷风</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>飑</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>漏斗云</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>沙暴</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>尘暴</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>，阵风 {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>天气数据更新失败</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows 阻止了与天气服务的连接。防火墙、杀毒软件、VPN 或代理可能阻止了 FluentWeather-Plus。请在该程序中允许 FluentWeather-Plus，或关闭 VPN 后重试。</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>无法更新天气数据。请检查网络连接。</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>版本 {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 分钟</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 分钟</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 小时</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>天气状况</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 小时最高 / 最低</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 小时变化</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>酷热指数</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>风寒温度</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>能见度</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>云底高度</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>降雨，过去 1 小时</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>降雨，过去 6 小时</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>降雨，过去 24 小时</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>降雪，过去 24 小时</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>月相</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>月出</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>月落</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>观测时间</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>最近站点</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>水温</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>水文站的风</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>海浪和海温</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>风力预报（阵风，80 米）</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>其他模型</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>河流流量</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>天气预警</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>当前天气（机场）</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>降雪，过去 1 小时和 6 小时</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>今日雷暴风险</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>热应激 (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>冻结高度</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>土壤温度和湿度</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>今日日照</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>浮标：海浪和潮汐</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>河流水位和流量</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>未来 12 小时雨、雪和冰</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>另有 {0} 条预警。</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>另有 {0} 条预警。</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>另有 {0} 条。</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>{0} 后关闭</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus 预警</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>显示详细信息</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}：正在等待下一次数据刷新</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather：暂无数据。请打开一次应用。</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather：自 {0} 起未更新</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>，体感 {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>与应用相同的城市。</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>在通知区域中选择。</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>更新于 {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>恶劣天气预警</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>显示预警</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>警报</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>警报和关注</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>所有预警</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>遵从“请勿打扰”（使用 Windows 通知）</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>“请勿打扰”开启时，Windows 通知会等待。气泡不会等待。</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>气泡关闭时间</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>从不</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 分钟</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} 分钟</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>通知区域显示的城市</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>所有已保存的位置</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>显示测试预警</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>显示当前选项下预警的外观。这不是真实预警。</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>测试预警</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>直到 {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>你的城市</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>这是测试。真实预警会在这里显示天气服务的摘要。</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>在应用设置中勾选“恶劣天气预警”的“通知区域”框后，应用会发送预警。</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>打开 {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>数字显示温度</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>数字显示体感温度</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>悬停详细信息</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>全部显示</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>恢复默认设置</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>没有已保存的位置。请使用应用中的星标。</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>通知区域显示（应用窗口保持关闭）</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>与应用相同的城市</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>重新启动 FluentWeather（应用和通知区域图标）</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>关闭 FluentWeather 窗口</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>退出通知区域图标</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>可从“开始”菜单重新启动：FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>退出通知区域图标并关闭 FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>应用尚未安装。请先运行其安装程序。</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>无法重新启动。请使用“开始”菜单项“Restart FluentWeather”。</value>
+  </data>
 </root>

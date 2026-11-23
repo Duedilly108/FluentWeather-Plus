@@ -297,4 +297,2348 @@ Live Tiles זמינים באופן טבעי ב-Windows 10 בלבד.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>שגיאת רשת, אנא בדוק את חיבור האינטרנט שלך.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>הצגה או הסתרה של מופע הירח בכרטיסי הימים</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>הצגה או הסתרה של מופע הירח בכרטיסי הימים</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% מואר</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>ירח חדש</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>סהר מתמלא</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>רבע ראשון</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>ירח מתמלא</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>ירח מלא</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>ירח מתמעט</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>רבע אחרון</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>סהר מתמעט</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>סמלים באזור ההודעות</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>הצג סמלים באזור ההודעות</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>מציג או מסתיר את סמלי הטמפרטורה ומזג האוויר בשורת המשימות. הלחצן עוקב אחר מצבם הנוכחי.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>לא מותקן</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>עודכן על ידי</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>מבוסס על</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>גרסאות</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>רענן</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>הגדרות</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>שמור מיקום זה</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>הסר מיקום זה מהמיקומים השמורים</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>כדי לשמור מיקום זה, לחץ על הכוכב שליד שמו. מיקומים שמורים מופיעים כאן כלחצנים. לחץ על לחצן כדי לעבור למיקום זה. חפש מיקום אחר ולחץ על הכוכב שלו כדי להוסיף אותו.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>לחץ על הכוכב שליד שם המיקום כדי לשמור או להסיר אותו. לחץ לחיצה ימנית על לחצן מיקום כדי להזיז או להסיר אותו. Ctrl+1 עד Ctrl+9 מחליפים מיקום.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>הסתר עצה זו</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>ניגודיות הרקע</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>מקורי</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>כהה</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>כהה יותר</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>בהיר</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>בהיר יותר</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>כהה וכהה יותר מצלים את תמונת הרקע ושומרים על טקסט בהיר. בהיר ובהיר יותר מבהירים את התמונה ומשתמשים בטקסט כהה.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>גוון הכרטיסים</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>גוון הכרטיסים</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>צובע את הכרטיסים כדי שהטקסט שלהם יישאר קריא מעל תמונת הרקע. 0 אחוז שומר על המראה המקורי.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>אתמול</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>איכות האוויר</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>טובה</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>סבירה</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>בינונית</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>ירודה</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>ירודה מאוד</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>ירודה ביותר</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>לא בריאה לרגישים</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>לא בריאה</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>לא בריאה מאוד</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>מסוכנת</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>מדד איכות האוויר האמריקאי</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>מדד איכות האוויר האירופי</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>אוזון</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>חנקן דו-חמצני</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>נתוני איכות האוויר: Open-Meteo.com ושירות קופרניקוס לניטור האטמוספרה (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>מכ"ם</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>מכ"ם וגבולות NOAA/NWS. תבליט USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>עודכן</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>טוען את המכ"ם</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>אין גשם או שלג באזור זה. הקטן את התצוגה כדי לראות יותר.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>לא ניתן היה לטעון את המכ"ם. ניסיון נוסף ייעשה ברענון הבא.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>הגדל</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>הגדל</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>הקטן</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>הקטן</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>שפה</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>ברירת המחדל של Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>שפה</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>השתמש בשפה זו</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>להפעיל מחדש את FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>השפה החדשה תחול לאחר הפעלה מחדש של FluentWeather.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>הפעל מחדש עכשיו</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>מאוחר יותר</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>תחזית שעתית</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>יום</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 ש'</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 ש'</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 ש'</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>יום מציג את שעות היום שנבחר. 24, 36 ו-48 שעות מתחילות עכשיו עבור היום ובחצות עבור ימים אחרים.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>גודל טקסט ותמונות</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+מינוס ו-Ctrl+פלוס משנים גם הם את הגודל בצעדים של 5%. Ctrl+0 חוזר ל-100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>הזז שמאלה</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>הזז ימינה</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>הסר</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>הגעת למגבלת המיקומים השמורים</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>ניתן לשמור עד {0} מיקומים. הסר מיקום כדי להוסיף מיקום חדש.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>חזרה (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>היסטוריה מלאה</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>חודש</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>שנה</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>שמור תחילה מיקום. חלון ההיסטוריה מציג מיקומים שמורים.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>טוען</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} ימים. {1} נרשמו על ידי האפליקציה, {2} מהארכיון.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>מקסימום ומינימום יומיים, מעלות {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>נתוני ארכיון: Open-Meteo.com (CC BY 4.0). נוצר באמצעות מידע משירות קופרניקוס לשינויי האקלים. איכות האוויר: Open-Meteo, CAMS (מאוגוסט 2022). ערכי הארכיון מגיעים ממודל מזג אוויר ועשויים להיות שונים מהערכים שנרשמו.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>תאריך</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>מקס'</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>מינ'</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>משקעים</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>מזג אוויר</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>מקור</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>נרשם</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>ארכיון</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>בהיר</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>בהיר בעיקר</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>מעונן חלקית</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>מעונן</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>ערפל</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>טפטוף</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>ממטרים</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>ממטרי שלג</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>סופת רעמים</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>לא ידוע</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>מים בסביבה</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>כרטיס בחלון הראשי</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>שורה בחלונית הריחוף של אזור ההודעות</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>מים בסביבה</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>רוח בתחנה</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>הרוח הנוכחית במיקום זה, לתחנה אין חיישן רוח</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>מיקום</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>משבים {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>תחנת המים הקרובה ביותר עם מדידה עדכנית.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>מים</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>אוויר בתחנה</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>ממש עכשיו</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>לפני {0} דק'</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>לפני {0} ש'</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>נתוני מים: NOAA National Data Buoy Center (ndbc.noaa.gov) ו-USGS Water Data (waterdata.usgs.gov). נחלת הכלל.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>גלים</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>היסטוריה מלאה</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>היסטוריה יומית ושעתית של מיקום זה</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>חזרה</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>תחנת המים הקרובה ביותר בטווח של 50 ק"מ (31 מייל) עם מדידה בת פחות מ-6 שעות. מצופי NOAA NDBC ותחנות החוף מכסים את החופים ואת האגמים הגדולים. USGS מכסה נהרות וכמה אגמים. בים, ללא תחנה קרובה, נעשה שימוש במודל הימי של Open-Meteo. סמן את השורות תחת פרטים בריחוף בתפריט של אזור ההודעות.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>המודל הימי של Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>רוח ממודל Open-Meteo, לתחנה אין חיישן רוח</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo עבור מיקום זה:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>אפשרויות נתונים נוספות</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>ראשי</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>הודעות</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>גלים וטמפרטורת הים</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>תחזית רוח (משבים, 80 מ')</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>מודלים אחרים</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>ספיקת הנהר</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>אבקנים</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>גלים</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>תחזית רוח</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>מודלים אחרים</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>ספיקת הנהר</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>אבקנים</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>נתונים: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} ש'</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>גלים</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>גלי עומק</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>טמפרטורת פני הים</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>ים</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>המודל הימי של Open-Meteo עבור מיקום זה.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>עד {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>תחזית הרוח של Open-Meteo עבור מיקום זה.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>רוח עכשיו</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>משבים עכשיו</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>המשב החזק ביותר, 6 השעות הבאות</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>מקס' 6 ש'</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>רוח בגובה 80 מ'</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>המקסימום והמינימום של היום לפי שלושה מודלים של מזג אוויר. פיזור גדול פירושו תחזית לא ודאית.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>הספיקה המדומה של הנהר הקרוב ביותר (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>היום</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>רגיל ליום זה</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% מהרגיל</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>גרגרים למטר מעוקב של אוויר. הרמות משוערות.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>אלמון</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>שדר</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>עשבים</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>לענה</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>זית</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>אמברוסיה</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>נמוך</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>בינוני</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>גבוה</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>גבוה מאוד</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>הצג סמלים באזור ההודעות</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>הסתר סמלים באזור ההודעות</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>הזז שמאלה</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>הזז ימינה</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>הזז להתחלה</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>הזז לסוף</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>הסתר כרטיס זה</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>הוסף כרטיס</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>כל הכרטיסים מוצגים</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>אפס כרטיסים</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>מים בסביבה</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>גלים וטמפרטורת הים</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>תחזית רוח</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>מודלים אחרים</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>ספיקת הנהר</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>אבקנים</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>רוח בגובה 10 מ' מעל הקרקע.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>מהירות</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>מכיוון</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>משבים</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>צינת רוח</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>לחות יחסית: כמה אדי מים יש באוויר, בהשוואה למקסימום שהוא יכול להכיל בטמפרטורה זו.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>יבש</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>נוח</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>לח</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>מדד חום</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>מדד UV: עוצמת האור האולטרה סגול של השמש.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>סיכון נמוך, אין צורך בהגנה</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>מרחו קרם הגנה וחבשו כובע, חפשו צל בצהריים</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>נדרשת הגנה, הגבילו את השהייה בשמש בין 10 ל-16</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>נדרשת הגנה נוספת, הימנעו משמש הצהריים</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>עור לא מוגן נכווה תוך דקות, הישארו בפנים בצהריים</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>ראות: עד כמה רחוק אפשר לראות בבירור.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>ערפל</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>אובך או ערפל קל</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>בינונית</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>טובה</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>בסיס העננים</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>אין עננים נמוכים</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>לא זמין</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>לחץ האוויר בגובה פני הים.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>עכשיו</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>מגמה</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>שינוי ב-3 שעות</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>לחץ יורד מביא לעתים קרובות עננים וגשם. לחץ עולה מביא לעתים קרובות התבהרות.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>נקודת טל: הטמפרטורה שבה נוצר טל. היא מראה עד כמה האוויר מרגיש לח.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>יבש</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>נוח</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>לח מעט</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>לח</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>מחניק</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>מעיק</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>טמפרטורה פחות נקודת טל. ערפל צפוי כשהערך קרוב ל-0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>הגדרות הכרטיס</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>מהירות, משבים, כיוון</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>לחות יחסית, מדד חום</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>עוצמת השמש והמלצות</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>איכות האוויר של Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>תחנת המים הקרובה, NOAA ו-USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>גלים וים של Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>המשב החזק ב-6 השעות הבאות, 80 מ'</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF,‏ GFS ו-ICON היום</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>ספיקת נהרות של Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>עצים, עשבים ואמברוסיה</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>מרחק, בסיס העננים</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>גובה פני הים, מגמה של 3 שעות</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>נוחות, סיכוי לערפל</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>עצים</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>רמות אבקנים מאין עד גבוה מאוד.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>נתונים: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>משבים עד {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>המשב החזק ביותר, 6 השעות הבאות</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>משבים עד {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>זוהי תחזית מודל. כרטיס הרוח מציג את הרוח והמשבים שנמדדים עכשיו. כרטיס מים בסביבה מציג את הרוח שנמדדה ליד המים, כשלתחנה יש חיישן רוח.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>גרסה</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>מבוסס על FluentWeather 2.1.0 מאת Gabboxl. עודכן על ידי duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus מוסיף את התכונות האלה ל-FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- מיקומים שמורים, עד 25, עם קיצורי מקשים.
+- סמלים באזור ההודעות עם הטמפרטורה, תמונת מזג אוויר וחלונית ריחוף עם פרטים לבחירה.
+- ימים קודמים: אתמול ושלשום, לצד היום.
+- היסטוריה מלאה: מזג אוויר יומי ושעתי של מיקום שמור עד 1940.
+- מפת מכ"ם למיקומים בארה"ב, ואיכות אוויר לכל מיקום.
+- מים בסביבה: טמפרטורת המים והרוח בתחנה הקרובה ביותר.
+- נתונים נוספים: גלים, תחזית רוח, מודלים אחרים, ספיקת נהרות ואבקנים.
+- התראות על מזג אוויר קשה בחלון הראשי וכבועה באזור ההודעות.
+- עוד נתונים: מזג אוויר בשדה התעופה, שלג, עומס חום, אנרגיית סערות, קרקע, גובה הקיפאון,
+  שעות שמש, מצופים, מדי נהר, פרטי יום, תרשים שעתי והדיון של NWS.
+- כרטיסי פרטים עם מידע נוסף בריחוף, בכל סדר שתבחרו.
+- הגדרות לגודל הטקסט, ניגודיות הרקע, גוון הכרטיסים וטווח השעות.
+- הגדרת שפה, מתקין ישיר ודוח קריסה.
+- ועוד שיפורים רבים בממשק.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>טמפרטורה</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>גשם ושלג</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>איכות האוויר</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>עננים ושמש</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>גלגלת: זום. Shift+גלגלת או גרירה: גלילה.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>הגדל</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>הקטן</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>התאם</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>הצג את כל השנה</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} עד {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>טוען שעות</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>לחץ כדי להתמקד ביום זה.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>טמפרטורה ונקודת טל, מעלות {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>הרוח והמשב החזקים ביותר ביום, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>רוח ומשבים, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>משקעים ({0}) ושלג ({1}) יומיים</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>משקעים ({0}) ושלג ({1}) לשעה</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>המקסימום היומי של {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} לשעה</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>לחות יומית ממוצעת (%) ונקודת טל</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>לחות (%) ונקודת טל</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>לחץ יומי ממוצע בגובה פני הים, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>לחץ בגובה פני הים, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>כיסוי עננים יומי ממוצע (%) ושעות שמש</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>כיסוי עננים (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>משבים</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>משקעים</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>שעות שמש (ש')</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>כיסוי עננים</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>טמפרטורה</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI ארה"ב</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>AQI אירופי</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>אין נתוני איכות אוויר לתקופה זו. הם מתחילים באוגוסט 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>שעה</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>טמפ'</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>משב</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>מכיוון</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>עננים</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>שמש</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>משקעים</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>מקס'</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>מינ'</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>אין עדיין נתונים לתקופה זו.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>מקור נתוני מזג האוויר</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>אוטומטי</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>אוטומטי משתמש ב-weather.com ועובר ל-Open-Meteo כש-weather.com נכשל פעמיים ברציפות. ניתוק החיבור לאינטרנט אינו נספר. נעשה ניסיון חוזר ב-weather.com בכל שעה. עם Open-Meteo, דוח שדה התעופה הקרוב בטווח של 50 ק"מ מספק את בסיס העננים ואת הערכים שנמדדו. אבקני ארה"ב נשארים ריקים.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>נתונים: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>נתונים: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>נתונים: Open-Meteo ותחנה {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>עד {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>ועוד {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>פרטים ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>הסתר פרטים</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>פורסם {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>אזור: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>טוען את הטקסט המלא...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>הטקסט המלא אינו זמין.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>מקור: התראות weather.com, משירות מזג האוויר הלאומי של המדינה.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>מקור: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>ראשי</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>הודעות</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>התראות על מזג אוויר קשה</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>מזג האוויר עכשיו (שדה תעופה)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>שלג, 1, 6 ו-24 ש' אחרונות</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>עומס חום (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>אנרגיית סערות וסיכון לרעמים</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>קרקע ועומק שלג</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>גובה הקיפאון</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>שעות שמש והתאדות</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>מצוף: גלים, אוויר וגאות</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>מד נהר (ארה"ב)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>פרטי יום: רעמים, שלג, רוח</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>תרשים שעתי, 12 ש' הבאות באזור ההודעות</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>דיון החזאי (ארה"ב)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>התראות בחלון הראשי</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>כל ההתראות</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>אזהרות ומשמרות</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>אזהרות בלבד</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>ראשי מציג את הפריט בחלון זה. כרטיס מוסתר כשאין למיקום נתונים. הודעות מוסיף שורה שאפשר לסמן בתפריט של סמלי אזור ההודעות תחת פרטים בריחוף. אותו תפריט קובע גם מתי מופיעה בועת ההתראה וכמה זמן היא נשארת. חמשת הפריטים הראשונים מגיעים מ-open-meteo.com, עם בקשה אחת לשעה לכל היותר לכל מיקום. ההתראות פועלות כברירת מחדל. שאר הפריטים כבויים כברירת מחדל. רחפו מעל שם כדי לראות את המקור שלו.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>פס מתחת לשם המיקום עבור כל התראה פעילה. מקור: weather.com, עם National Weather Service כגיבוי למקומות בארה"ב.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>מזג אוויר וקטגוריית טיסה מדוח שדה התעופה הקרוב, בכרטיס הראות. טקסט הריחוף מוסיף את תחזית שדה התעופה. מקור: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>שלג ב-1, 6 ו-24 השעות האחרונות. מקור: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>טמפרטורת כדור רטוב (WBGT), מדד לעומס חום בעבודה ובספורט. מקור: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>אנרגיית סערות (CAPE) וסיכון הרעמים של היום. מקורות: Open-Meteo ו-weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>טמפרטורת הקרקע בעומק 6 ס"מ, לחות הקרקע ועומק השלג. מקור: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>הגובה של מפלס 0 המעלות. מקור: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>שעות השמש של היום, אור יום, קרינת שמש והתאדות. מקור: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>גלים, מחזור וכיוון הגלים, אוויר, לחץ וגאות במצוף NOAA או בתחנת הגאות הקרובים בטווח של 50 ק"מ.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>גובה הנהר, הספיקה ו-7 הימים האחרונים במד USGS הקרוב בטווח של 40 ק"מ. ארה"ב בלבד.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>סיכון לרעמים וכמות שלג על לחצני הימים, וטקסט רוח, הערות וכמויות בפרטי היום. מקור: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>תרשים מתחת לתחזית השעתית עם גשם, שלג, קרח, הסתברות, שעות שמש ושעות קשות. שורת אזור ההודעות נותנת את הכמויות של 12 השעות הבאות.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>דיון החזאי של המשרד המקומי של National Weather Service, מתחת למפת המכ"ם. ארה"ב בלבד.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>שלג, 6 ש'</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>עומס חום</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>אנרגיית סערות</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>קרקע</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>גובה הקיפאון</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>שעות שמש</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>מצוף</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>מד נהר</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>אין גשם, שלג או ערפל</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>דוח שדה תעופה: {0} ({1}), במרחק {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>מזג אוויר:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>קטגוריית טיסה:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>ראות ובסיס עננים טובים</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>גבולי: בסיס עננים 1,000 עד 3,000 רגל או ראות 3 עד 5 מייל</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>נמוך: בסיס עננים 500 עד 1,000 רגל או ראות 1 עד 3 מייל</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>נמוך מאוד: בסיס עננים מתחת ל-500 רגל או ראות מתחת למייל</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>בסיס העננים בשדה התעופה:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>תחזית שדה התעופה ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>הדוחות כפי שנשלחו:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>מקור: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>מ-{0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>שינוי ב-{0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>לפרקים מ-{0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>סיכוי {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>אין בסיס עננים</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>בסיס עננים {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 ש': {0}, 24 ש': {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>שלג שנמדד במיקום.
+השעה האחרונה: {0}
+6 השעות האחרונות: {1}
+24 השעות האחרונות: {2}
+
+מקור: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 ש': {0}, 6 ש': {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>נמוך</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>בינוני</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>גבוה</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>גבוה מאוד</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>קיצוני</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>טמפרטורת כדור רטוב שחור (WBGT): {0}, עומס חום {1}.
+היא משלבת טמפרטורה, לחות, רוח ושמש. הנחיות לעבודה ולספורט משתמשות בה. עומס החום מתחיל סביב 25 C (77 F) והוא קיצוני מעל 32 C (90 F).
+
+מקור: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>נמוך מאוד</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>נמוך</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>בינוני</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>גבוה</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>קיצוני</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>סיכון לסופת רעמים {0} מתוך 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} מתוך 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>אנרגיית סערה (CAPE) היא האנרגיה שאוויר עולה יכול לצבור. סופות רעמים זקוקות לה. מתחת ל-300 J/kg סופות אינן סבירות. מעל 2,500 J/kg ייתכנו סופות חזקות כאשר משהו מרים את האוויר.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>עכשיו: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>הגבוה ביותר היום: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>מקורות: Open-Meteo.com (CC BY 4.0) לאנרגיית הסערה, weather.com לסיכון לסופת רעמים.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>לחות {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>עומק שלג {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>טמפרטורת הקרקע בעומק 6 ס"מ: {0}
+לחות הקרקע ב-3 עד 9 ס"מ: {1}
+עומק שלג: {2}
+
+הערכים מגיעים ממודל מזג אוויר ולא מחיישן. מקור: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, לחות {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>בגובה הקרקע</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>מעל פני הים</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>גובה הקיפאון: {0} מעל פני הים.
+מעל גובה זה האוויר מתחת ל-0 C (32 F). שלג שיורד מלמעלה נמס מתחתיו.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>גובה המיקום: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>מתוך {0} אור יום</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>שעות שמש היום: {0}
+אור יום היום: {1}
+קרינת שמש עכשיו: {2}
+התאדות היום: {3}
+
+ההתאדות היא אוופוטרנספירציית הייחוס (FAO-56). היא מראה כמה מים מאבד דשא ביום. מקור: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} מתוך {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>כל {0} שנ'</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>מכיוון {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>גאות {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), במרחק {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>גלים:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>אוויר:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>מים:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>לחץ:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>גאות, מעל אפס התחנה:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>מקור: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>עולה</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>יורד</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>יציב</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), במרחק {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>מפלס:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>ספיקה:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>שינוי ב-3 השעות האחרונות: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>7 הימים האחרונים: {0}, מ-{1} עד {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>המפלס נמדד מאפס המד ולא מקרקעית הנהר. מקור: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>רוח: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>רוח בלילה: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>הערה: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>שלג {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>כמויות: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>כמויות: אין</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>עמודות: גשם (כחול), שלג כמים (לבן), קרח (טורקיז). קו מקווקו: סיכוי. צהוב: שמש. סימון אדום: שעת מזג אוויר קשה.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>גשם, שלג וקרח לפי שעה מ-weather.com. השלג מוצג כמים, בערך 10 ל-1. הקו המקווקו הוא הסיכוי למשקעים. העמודה הצהובה למעלה היא שעות השמש של השעה מ-Open-Meteo. סימון אדום מראה שעה ש-weather.com מדרג כקשה.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>סכום השעות המוצגות: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>יבש, סיכוי {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>סיכוי {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>גשם {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>שלג {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>קרח {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>דיון החזאי, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>פורסם {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>מקור: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>הצג הכול</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>הצג פחות</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>מתחת ל-0 C בפני הקרקע</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>האוויר מתחת ל-0 C (32 F) מהקרקע ומעלה. השלג אינו נמס בדרך למטה.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>מקור: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>עכשיו</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>עכשיו</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>גובה גלים, מחזור גלים, גלי ים וטמפרטורת פני הים ממודל הים של Open-Meteo, עבור נקודות בים או קרוב אליו. מקור: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>המשב החזק ביותר ב-6 השעות הבאות, משב המודל עכשיו והרוח בגובה 80 מ'. מקור: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>המקסימום, המינימום והמשקעים של היום ממודלי מזג האוויר ECMWF, GFS ו-ICON. מקור: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ספיקת הנהר הממודלת היום והספיקה הרגילה ליום זה (GloFAS). מקור: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>רמות עצים, עשבים ואמברוסיה. מקור: weather.com בארה"ב ובכמה מדינות אחרות, Open-Meteo באירופה.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 ימים לפי שעה</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>כל שעה בתחזית, כ-10 ימים</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>חזרה לחלון הראשי (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>חזרה</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>תחזית לפי שעה ל-10 ימים</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>רשימה</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>טבלה</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>סקירה</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>טמפרטורה</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>מורגשת</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>משקעים</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>משבים</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>מדד UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>כיסוי עננים</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>ראות</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>הדף מציג את התחזית לפי שעה שהיישום כבר טען עבור המיקום המוצג. מיקום אחר נטען כאשר בוחרים בו. השעות מקומיות למיקום. לחיצה על התרשים גוללת את הרשימה לאותה שעה. ברשימה, לחיצה על שורה פותחת את שאר הערכים שלה.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>המיקום המוצג</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, עודכן {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>אין תחזית לפי שעה למיקום זה</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>אין משבים בתחזית זו</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} שעות     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} שלג</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>משבים {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>מורגשת {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>משקעים</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>שעה</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>שמיים</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>טמפ'</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>מורגש</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>סיכוי</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>כמות</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>קרח</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>נק' טל</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>משב</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>עננים</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>ראות</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>טמפרטורה מורגשת</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>משב רוח</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>מדד UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>כיסוי עננים</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>ראות</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>טמפרטורה</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>טמפרטורה מורגשת</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>סיכוי למשקעים</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>משבים</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>טמפרטורה ({0}) וסיכוי למשקעים</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>טמפרטורה, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>טמפרטורה מורגשת וטמפרטורה, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>גשם ({0}) ושלג ({1}) לשעה, וסיכוי למשקעים</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>רוח ומשבים, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>משבי רוח, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>לחות, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>מדד UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>כיסוי עננים, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>ראות, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>נקודת טל וטמפרטורה, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>לחץ בגובה פני הים, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>מקסימום</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>מינימום</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>גלול שמאלה</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>גלול ימינה</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>שמשי</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>בהיר</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>שמשי בעיקר</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>בהיר בעיקר</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>מעונן חלקית</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>מעונן</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>מעונן בעיקר</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>ערפל</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>ערפל קופא</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>טפטוף קל</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>טפטוף</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>טפטוף כבד</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>טפטוף קופא</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>גשם קל</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>גשם כבד</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>גשם קופא</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>שלג קל</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>שלג כבד</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>גרגרי שלג</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>ממטר גשם קל</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>ממטר גשם</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>ממטר גשם כבד</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>ממטר שלג</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>ממטר שלג כבד</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>סופת רעמים</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>סופת רעמים עם ברד</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>נאה</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>היום</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>הלילה</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>מחר</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>מחר בלילה</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} בלילה</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>רוחות חלשות ומשתנות.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>רוחות {0}, {1} עד {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>סיכוי לגשם {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>סיכוי לשלג {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>מקסימום {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>מינימום {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>צפויים רעמים</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>אין רעמים</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>מצוין</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>טוב</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>סביר</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>גרוע</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>גרוע מאוד</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>אין</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>נמוך מאוד</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>נמוך</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>בינוני</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>גבוה</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>גבוה מאוד</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>קיצוני</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>דאגה נמוכה</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>דאגה בינונית</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>דאגה גבוהה</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>דאגה קיצונית</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>צ</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>צצמז</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>צמז</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>מזצמז</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>מז</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>מזדמז</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>דמז</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>דדמז</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>ד</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>דדמע</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>דמע</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>מעדמע</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>מע</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>מעצמע</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>צמע</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>צצמע</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>שקט</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>משתנה</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>קל</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>כבד</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>בסביבה</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>סופת רעמים</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>ממטרים</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>רדוד</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>כתמי</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>חלקי</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>נסחף נמוך</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>מתעופף</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>ממטרי</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>סופת רעמים עם</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>קופא</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>טפטוף</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>גשם</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>שלג</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>גרגרי שלג</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>גבישי קרח</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>כדוריות קרח</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>ברד</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>ברד קטן</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>משקעים לא ידועים</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>אובך לח</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>ערפל</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>עשן</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>אפר געשי</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>אבק</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>חול</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>אובך</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>רסס</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>מערבולות אבק</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>משבי סערה</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>ענן משפך</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>סופת חול</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>סופת אבק</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, משבים {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>עדכון נתוני מזג האוויר נכשל</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows חסם את החיבור לשירות מזג האוויר. ייתכן שחומת אש, תוכנת אנטי-וירוס, VPN או שרת proxy חוסמים את FluentWeather-Plus. אפשר את FluentWeather-Plus באותה תוכנה, או נסה שוב כשה-VPN כבוי.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>לא הצלחנו לעדכן את נתוני מזג האוויר. בדוק את החיבור לאינטרנט.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>גרסה {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 דק'</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 דק'</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>שעה</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>תנאים</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>טמפרטורה</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>מורגשת</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>מקס' / מינ' 24 ש'</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>שינוי ב-24 ש'</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>נקודת טל</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>מדד חום</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>צינת רוח</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>לחות</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>רוח</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>מדד UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>לחץ</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>ראות</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>בסיס עננים</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>גשם, השעה האחרונה</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>גשם, 6 השעות האחרונות</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>גשם, 24 השעות האחרונות</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>שלג, 24 השעות האחרונות</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>זריחה</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>שקיעה</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>מופע הירח</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>זריחת הירח</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>שקיעת הירח</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>נצפה ב-</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>התחנה הקרובה</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>טמפרטורת המים</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>רוח בתחנת המים</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>גלים וטמפרטורת הים</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>תחזית רוח (משבים, 80 מ')</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>מודלים אחרים</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>ספיקת נהר</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>אבקה</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>התראת מזג אוויר</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>מזג האוויר עכשיו (שדה תעופה)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>שלג, השעה האחרונה ו-6 שעות</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>סיכון לרעמים היום</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>עומס חום (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>גובה הקיפאון</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>טמפרטורת הקרקע ולחותה</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>שמש היום</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>מצוף: גלים וגאות</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>מפלס הנהר וספיקתו</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>גשם, שלג וקרח ב-12 השעות הבאות</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>ועוד {0} התראה.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>ועוד {0} התראות.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>ועוד {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>ייסגר בעוד {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>התראת FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>הצג פרטים</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: ממתין לרענון הנתונים הבא</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: אין עדיין נתונים. פתח את היישום פעם אחת.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: אין עדכון מאז {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, מורגשת {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>אותה עיר כמו ביישום.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>נבחר באזור ההודעות.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>עודכן {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>התראות על מזג אוויר קשה</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>הצג התראות</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>אזהרות</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>אזהרות ומעקבים</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>כל ההתראות</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>כבד את 'נא לא להפריע' (השתמש בהודעות Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>הודעות Windows ממתינות כל עוד 'נא לא להפריע' פועל. הבועה אינה ממתינה.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>סגור את הבועה לאחר</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>אף פעם</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} שניות</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>דקה אחת</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} דקות</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>מיקומים</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>העיר שאזור ההודעות מציג</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>כל המיקומים השמורים</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>הצג התראת בדיקה</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>מראה כיצד נראית התראה עם הבחירות הנוכחיות. זו אינה התראה אמיתית.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>התראת בדיקה</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>עד {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>העיר שלך</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>זוהי בדיקה. התראה אמיתית מציגה כאן את התקציר של שירות מזג האוויר.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>היישום שולח התראות כאשר התיבה 'הודעות' של 'התראות על מזג אוויר קשה' מסומנת בהגדרות היישום.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>פתח את {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>המספר מציג טמפרטורה</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>המספר מציג טמפרטורה מורגשת</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>פרטים בריחוף</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>הצג הכול</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>אפס לברירות המחדל</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>אין מיקומים שמורים. השתמש בכוכב ביישום.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>אזור ההודעות מציג (חלון היישום נשאר סגור)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>אותה עיר כמו ביישום</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>הפעל מחדש את FluentWeather (היישום וסמלי אזור ההודעות)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>סגור את חלון FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>צא מסמלי אזור ההודעות</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>הפעל אותם שוב מתפריט התחל: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>צא מסמלי אזור ההודעות וסגור את FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>היישום עדיין לא מותקן. הפעל קודם את תוכנית ההתקנה שלו.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>לא ניתן להפעיל מחדש. השתמש בפריט "Restart FluentWeather" בתפריט התחל.</value>
+  </data>
 </root>

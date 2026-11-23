@@ -297,4 +297,2348 @@
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Сетевая ошибка, проверьте подключение к Интернету.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Показать или скрыть фазу Луны на карточках дней</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Показать или скрыть фазу Луны на карточках дней</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>освещено {0}%</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Новолуние</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Растущий серп</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Первая четверть</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Растущая луна</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Полнолуние</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Убывающая луна</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Последняя четверть</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Убывающий серп</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Значки в области уведомлений</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Показать значки в области уведомлений</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Показывает или скрывает значки температуры и погоды на панели задач. Кнопка отражает их текущее состояние.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Не установлено</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>обновил</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>На основе</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Версии</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Сохранить это место</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Удалить это место из сохранённых мест</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Чтобы сохранить это место, нажмите звёздочку рядом с его названием. Сохранённые места появляются здесь в виде кнопок. Нажмите кнопку, чтобы перейти к этому месту. Найдите другое место и нажмите его звёздочку, чтобы добавить его.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Нажмите звёздочку рядом с названием места, чтобы сохранить или удалить его. Щёлкните правой кнопкой по кнопке места, чтобы переместить или удалить её. Ctrl+1 – Ctrl+9 переключают места.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Скрыть эту подсказку</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Контраст фона</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Исходный</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Тёмный</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Темнее</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Светлый</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Светлее</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Тёмный и Темнее затемняют фоновое изображение и сохраняют светлый текст. Светлый и Светлее осветляют изображение и используют тёмный текст.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Оттенок карточек</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Оттенок карточек</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Подкрашивает карточки, чтобы их текст оставался читаемым поверх фонового изображения. 0 процентов сохраняет исходный вид.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Качество воздуха</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Хорошее</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Удовлетворительное</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Умеренное</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Плохое</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Очень плохое</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Крайне плохое</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Вредно для чувствительных</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Вредное</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Очень вредное</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Опасное</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Индекс качества воздуха США</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Европейский индекс качества воздуха</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Озон</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Диоксид азота</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Данные о качестве воздуха: Open-Meteo.com и служба мониторинга атмосферы Copernicus (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Радар</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Радар и границы NOAA/NWS. Рельеф USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Обновлено</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Загрузка радара</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>В этой области нет дождя или снега. Уменьшите масштаб, чтобы увидеть больше.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Не удалось загрузить радар. Повторная попытка при следующем обновлении.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Как в Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Использовать этот язык</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Перезапустить FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Новый язык применится после перезапуска FluentWeather.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Перезапустить сейчас</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Позже</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Почасовой прогноз</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 ч</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 ч</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 ч</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>День показывает часы выбранного дня. 24, 36 и 48 часов начинаются сейчас для сегодняшнего дня и в полночь для остальных дней.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Размер текста и изображений</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+минус и Ctrl+плюс также меняют размер с шагом 5%. Ctrl+0 возвращает 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Переместить влево</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Переместить вправо</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Достигнут предел сохранённых мест</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Можно сохранить до {0} мест. Удалите место, чтобы добавить новое.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Назад (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Полная история</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Сначала сохраните место. Окно истории показывает сохранённые места.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Загрузка</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} дн. {1} записано приложением, {2} из архива.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Дневной максимум и минимум, градусы {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Архивные данные: Open-Meteo.com (CC BY 4.0). Создано с использованием информации службы Copernicus по изменению климата. Качество воздуха: Open-Meteo, CAMS (с августа 2022 г.). Архивные значения получены из погодной модели и могут отличаться от записанных значений.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Макс.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Мин.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Осадки</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>записано</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>архив</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Ясно</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Преимущественно ясно</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Переменная облачность</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Пасмурно</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Туман</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Морось</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Дождь</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Ливни</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Снегопады</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Гроза</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Водоёмы рядом</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Карточка в главном окне</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Строка во всплывающей панели области уведомлений</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Водоёмы рядом</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>ветер на станции</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>текущий ветер для этого места, у станции нет датчика ветра</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>место</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>порывы {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Ближайшая водная станция с текущим измерением.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Вода</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Воздух на станции</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>только что</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} мин назад</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} ч назад</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Данные о воде: NOAA National Data Buoy Center (ndbc.noaa.gov) и USGS Water Data (waterdata.usgs.gov). Общественное достояние.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Волны</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Полная история</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ежедневная и почасовая история этого места</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Ближайшая водная станция в радиусе 50 км (31 миля) с измерением не старше 6 часов. Буи и береговые станции NOAA NDBC охватывают побережья и Великие озёра. USGS охватывает реки и некоторые озёра. В море, если рядом нет станции, используется морская модель Open-Meteo. Отметьте строки в меню области уведомлений в пункте Сведения при наведении.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Морская модель Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Ветер по модели Open-Meteo, у станции нет датчика ветра</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo для этого места:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Дополнительные данные</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Главное</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Волны и температура моря</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Прогноз ветра (порывы, 80 м)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Другие модели</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Расход реки</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Пыльца</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Волны</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Прогноз ветра</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Другие модели</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Расход реки</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Пыльца</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Данные: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} с</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Волны</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Зыбь</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Температура поверхности моря</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>море</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Морская модель Open-Meteo для этого места.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>до {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Прогноз ветра Open-Meteo для этого места.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Ветер сейчас</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Порывы сейчас</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Сильнейший порыв, ближайшие 6 часов</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>макс. 6 ч</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Ветер на высоте 80 м</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Сегодняшние максимум и минимум по трём погодным моделям. Большой разброс означает неуверенный прогноз.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Смоделированный расход ближайшей реки (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Обычно для этого дня</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% от обычного</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Пыльцевых зёрен на кубический метр воздуха. Уровни приблизительны.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Ольха</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Берёза</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Злаки</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Полынь</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Олива</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Амброзия</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>низкий</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>умеренный</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>высокий</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>очень высокий</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Показать значки в области уведомлений</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Скрыть значки в области уведомлений</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Переместить влево</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Переместить вправо</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Переместить в начало</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Переместить в конец</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Скрыть эту карточку</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Добавить карточку</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Показаны все карточки</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Сбросить карточки</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Водоёмы рядом</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Волны и температура моря</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Прогноз ветра</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Другие модели</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Расход реки</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Пыльца</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Ветер на высоте 10 м над землёй.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Порывы</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Ветро-холодовой индекс</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Относительная влажность: сколько водяного пара содержит воздух по сравнению с максимумом, который он может содержать при этой температуре.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>сухо</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>комфортно</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>влажно</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Индекс жары</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>УФ-индекс: интенсивность ультрафиолетового излучения солнца.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>небольшой риск, защита не нужна</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>используйте солнцезащитный крем и шляпу, в полдень ищите тень</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>нужна защита, ограничьте пребывание на солнце с 10 до 16 часов</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>нужна усиленная защита, избегайте полуденного солнца</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>незащищённая кожа обгорает за минуты, в полдень оставайтесь в помещении</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Видимость: как далеко видно отчётливо.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>туман</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>дымка</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>умеренная</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>хорошая</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Нижняя граница облаков</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>нет низких облаков</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>недоступно</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Атмосферное давление на уровне моря.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Сейчас</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Тенденция</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Изменение за 3 часа</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Падающее давление часто приносит облака и дождь. Растущее давление часто приносит прояснение.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Точка росы: температура, при которой образуется роса. Показывает, насколько влажным ощущается воздух.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>сухо</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>комфортно</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>слегка влажно</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>влажно</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>душно</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>гнетуще</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Температура минус точка росы. Туман вероятен, когда значение близко к 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Настройки карточки</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>скорость, порывы, направление</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>относительная влажность, индекс жары</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>сила солнца и советы</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>качество воздуха от Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>ближайшая водная станция, NOAA и USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>волны и море от Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>сильнейший порыв за 6 ч, 80 м</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS и ICON сегодня</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>расход рек от Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>деревья, злаки и амброзия</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>расстояние, нижняя граница облаков</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>уровень моря, тенденция за 3 часа</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>комфорт, вероятность тумана</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Деревья</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Уровни пыльцы от отсутствия до очень высокого.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Данные: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>порывы до {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>сильнейший порыв, ближайшие 6 часов</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>порывы до {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Это прогноз модели. Карточка Ветер показывает ветер и порывы, измеренные сейчас. Карточка Водоёмы рядом показывает ветер, измеренный у воды, если у станции есть датчик ветра.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>На основе FluentWeather 2.1.0 от Gabboxl. Обновил duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus добавляет в FluentWeather 2.1.0 следующие функции:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Сохранённые места, до 25, с сочетаниями клавиш.
+- Значки в области уведомлений с температурой, изображением погоды и панелью выбранных сведений при наведении.
+- Прошедшие дни: вчера и позавчера, рядом с сегодняшним днём.
+- Полная история: ежедневная и почасовая погода сохранённого места с 1940 года.
+- Карта радара для мест в США и качество воздуха для любого места.
+- Водоёмы рядом: температура воды и ветер на ближайшей станции.
+- Дополнительные данные: волны, прогноз ветра, другие модели, расход рек и пыльца.
+- Предупреждения о непогоде в главном окне и в виде всплывающего уведомления.
+- Ещё данные: погода в аэропорту, снег, тепловая нагрузка, энергия гроз, почва, уровень замерзания,
+  солнечное сияние, буи, гидропосты, сведения о дне, почасовой график и обсуждение NWS.
+- Карточки сведений с подробностями при наведении, в любом порядке.
+- Настройки размера текста, контраста фона, оттенка карточек и диапазона часов.
+- Настройка языка, прямой установщик и отчёт о сбоях.
+- А также множество улучшений интерфейса.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Дождь и снег</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Качество воздуха</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Облака и солнце</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Колесо: масштаб. Shift+колесо или перетаскивание: прокрутка.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Вместить</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Показать весь год</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} – {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Загрузка часов</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Нажмите, чтобы приблизить этот день.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Температура и точка росы, градусы {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Сильнейший ветер и порыв за день, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Ветер и порывы, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Суточные осадки ({0}) и снег ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Осадки ({0}) и снег ({1}) за час</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Суточный максимум {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} за час</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Средняя суточная влажность (%) и точка росы</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Влажность (%) и точка росы</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Среднее суточное давление на уровне моря, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Давление на уровне моря, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Средняя суточная облачность (%) и часы солнечного сияния</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Облачность (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Порывы</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Осадки</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Солнце (ч)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Облачность</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI США</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Европейский AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Нет данных о качестве воздуха за этот период. Они начинаются с августа 2022 года.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Темп.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Порыв</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Облака</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Солнце</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Осадки</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Макс.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Мин.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Данных за этот период пока нет.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Источник данных о погоде</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Автоматически</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Автоматически используется weather.com, а при двух сбоях weather.com подряд приложение переключается на Open-Meteo. Потеря подключения к интернету не считается. Каждый час weather.com пробуется снова. С Open-Meteo ближайшая аэропортовая сводка в радиусе 50 км даёт нижнюю границу облаков и измеренные значения. Пыльца для США остаётся пустой.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Данные: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Данные: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Данные: Open-Meteo и станция {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>до {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>и ещё {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Подробнее ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Скрыть подробности</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Выпущено {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Район: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Загрузка полного текста...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Полный текст недоступен.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Источник: предупреждения weather.com от национальной метеослужбы страны.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Источник: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Главное</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Предупреждения о непогоде</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Погода сейчас (аэропорт)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Снег за 1, 6 и 24 ч</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Тепловая нагрузка (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Энергия гроз и риск гроз</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Почва и высота снега</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Уровень замерзания</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Солнечное сияние и испарение</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Буй: волны, воздух и прилив</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Гидропост (США)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Сведения о дне: гроза, снег, ветер</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Почасовой график, ближайшие 12 ч в уведомлениях</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Обсуждение синоптика (США)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Предупреждения в главном окне</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Все предупреждения</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Предупреждения и оповещения</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Только предупреждения</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Главное показывает элемент в этом окне. Карточка скрывается, если для места нет данных. Уведомления добавляет строку, которую можно отметить в меню значков в области уведомлений в пункте Сведения при наведении. В этом меню также задаётся, когда появляется всплывающее предупреждение и сколько оно остаётся на экране. Первые пять элементов берутся с open-meteo.com, не чаще одного запроса в час для каждого места. Предупреждения включены по умолчанию. Остальные элементы по умолчанию выключены. Наведите указатель на название, чтобы увидеть источник.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Полоса под названием места для каждого действующего предупреждения. Источник: weather.com, с National Weather Service в качестве резерва для мест в США.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Погода и категория полётов из ближайшей аэропортовой сводки на карточке Видимость. Текст при наведении добавляет прогноз аэропорта. Источник: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Снег за последние 1, 6 и 24 часа. Источник: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Температура влажного шарового термометра (WBGT), мера тепловой нагрузки при работе и спорте. Источник: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Энергия гроз (CAPE) и сегодняшний риск гроз. Источники: Open-Meteo и weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Температура почвы на глубине 6 см, влажность почвы и высота снега. Источник: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Высота уровня 0 градусов. Источник: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Сегодняшнее солнечное сияние, светлое время суток, солнечная радиация и испарение. Источник: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Волны, период и направление волн, воздух, давление и прилив у ближайшего буя NOAA или приливной станции в радиусе 50 км.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Уровень воды, расход и последние 7 дней на ближайшем гидропосту USGS в радиусе 40 км. Только США.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Риск гроз и количество снега на кнопках дней, а также описание ветра, примечания и количества в сведениях о дне. Источник: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>График под почасовым прогнозом с дождём, снегом, льдом, вероятностью, солнечным сиянием и опасными часами. Строка в уведомлениях даёт количества на ближайшие 12 часов.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Обсуждение синоптика местного отделения National Weather Service под картой радара. Только США.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Снег, 6 ч</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Тепловая нагрузка</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Энергия гроз</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Почва</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Уровень замерзания</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Солнечное сияние</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Буй</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Гидропост</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>без дождя, снега и тумана</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Сводка аэропорта: {0} ({1}), расстояние {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Погода:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Категория полётов:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>хорошая видимость и высокая облачность</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>ограниченная: нижняя граница облаков 1000–3000 фт или видимость 3–5 миль</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>низкая: нижняя граница облаков 500–1000 фт или видимость 1–3 мили</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>очень низкая: нижняя граница облаков ниже 500 фт или видимость меньше 1 мили</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Нижняя граница облаков в аэропорту:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Прогноз аэропорта ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Сводки в исходном виде:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Источник: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>С {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Изменение в {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Временами с {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>Вероятность {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>нет нижней границы облаков</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>нижняя граница облаков {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 ч: {0}, 24 ч: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Снег, измеренный в месте.
+Последний час: {0}
+Последние 6 часов: {1}
+Последние 24 часа: {2}
+
+Источник: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 ч: {0}, 6 ч: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Умеренный</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Очень высокий</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Экстремальный</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Температура WBGT (влажный термометр и чёрный шар): {0}, тепловая нагрузка {1}.
+Она объединяет температуру, влажность, ветер и солнце. Её используют нормы для работы и спорта. Тепловая нагрузка начинается около 25 C (77 F) и становится экстремальной выше 32 C (90 F).
+
+Источник: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Очень низкий</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Умеренный</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Экстремальный</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Риск грозы {0} из 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} из 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Энергия грозы (CAPE) — это энергия, которую может получить поднимающийся воздух. Грозам она нужна. Ниже 300 Дж/кг грозы маловероятны. Выше 2500 Дж/кг возможны сильные грозы, когда что-то поднимает воздух.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Сейчас: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Максимум сегодня: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Источники: Open-Meteo.com (CC BY 4.0) для энергии грозы, weather.com для риска грозы.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Влажность {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Высота снега {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Температура почвы на глубине 6 см: {0}
+Влажность почвы на 3–9 см: {1}
+Высота снега: {2}
+
+Значения получены из погодной модели, а не с датчика. Источник: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, влажность {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>У земли</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>над уровнем моря</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Уровень замерзания: {0} над уровнем моря.
+Выше этой высоты воздух ниже 0 C (32 F). Снег, падающий сверху, тает ниже неё.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Высота места: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>из {0} светового дня</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Солнце сегодня: {0}
+Световой день сегодня: {1}
+Солнечная радиация сейчас: {2}
+Испарение сегодня: {3}
+
+Испарение — это эталонная эвапотранспирация (FAO-56). Она показывает, сколько воды газон теряет за день. Источник: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} из {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>каждые {0} с</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>с направления {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Прилив {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), в {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Волны:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Воздух:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Вода:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Давление:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Прилив, выше нуля станции:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Источник: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Растёт</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Падает</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Стабильно</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), в {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Уровень:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Расход:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Изменение за последние 3 часа: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Последние 7 дней: {0}, от {1} до {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Уровень отсчитывается от нуля водомерного поста, а не от дна реки. Источник: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Ветер: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Ветер ночью: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Примечание: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>снег {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Количество: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Количество: нет</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Столбцы: дождь (синий), снег в пересчёте на воду (белый), лёд (голубой). Пунктир: вероятность. Жёлтый: солнце. Красная метка: час опасной погоды.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Дождь, снег и лёд по часам от weather.com. Снег показан в пересчёте на воду, примерно 10 к 1. Пунктирная линия — вероятность осадков. Жёлтая полоса вверху — солнце за час от Open-Meteo. Красная метка показывает час, который weather.com оценивает как опасный.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Сумма показанных часов: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Сухо, вероятность {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>вероятность {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>дождь {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>снег {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>лёд {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Обсуждение синоптика, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Выпущено {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Источник: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Показать все</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Показать меньше</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Ниже 0 C у поверхности</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Воздух ниже 0 C (32 F) от земли и выше. Снег не тает при падении.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Источник: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Сейчас</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>сейчас</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Высота и период волн, зыбь и температура поверхности моря из морской модели Open-Meteo для точек на море или рядом с ним. Источник: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Самый сильный порыв за следующие 6 часов, порыв по модели сейчас и ветер на 80 м. Источник: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Сегодняшний максимум, минимум и осадки по моделям ECMWF, GFS и ICON. Источник: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Сегодняшний модельный расход реки и обычный расход для этого дня (GloFAS). Источник: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Уровни деревьев, злаков и амброзии. Источник: weather.com в США и некоторых других странах, Open-Meteo в Европе.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 дней по часам</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Каждый час прогноза, около 10 дней</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Назад в главное окно (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Почасовой прогноз на 10 дней</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Список</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Таблица</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Обзор</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Ощущается</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Осадки</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Порывы</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>УФ-индекс</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Облачность</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Видимость</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Страница показывает почасовой прогноз, который приложение уже загрузило для показанного места. Другое место загружается, когда его выбирают. Время местное для места. Щелчок по графику прокручивает список к этому часу. В режиме «Список» щелчок по строке открывает её остальные значения.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Показанное место</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, обновлено {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Нет почасового прогноза для этого места</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>В этом прогнозе нет порывов</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} ч     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} снега</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>порывы {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>ощущается {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>дождь</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>снег</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>осадки</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Небо</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Темп.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Ощущ.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Вер.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Кол.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Дождь</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Лёд</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Влажн.</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Т. росы</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Порыв</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Облака</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>УФ</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Видим.</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Давл.</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Ощущается как</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Порыв ветра</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>УФ-индекс</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Облачность</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Видимость</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Ощущается как</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Вероятность осадков</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Дождь</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Порывы</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Температура ({0}) и вероятность осадков</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Температура, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Ощущаемая и фактическая температура, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Дождь ({0}) и снег ({1}) по часам и вероятность осадков</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Ветер и порывы, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Порывы ветра, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Влажность, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>УФ-индекс</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Облачность, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Видимость, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Точка росы и температура, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Давление на уровне моря, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Максимумы</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Минимумы</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Прокрутить влево</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Прокрутить вправо</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Солнечно</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Ясно</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Преимущественно солнечно</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Преимущественно ясно</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Переменная облачность</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Облачно</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Преимущественно облачно</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Туман</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Переохлаждённый туман</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Слабая морось</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Морось</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Сильная морось</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Ледяная морось</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Небольшой дождь</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Дождь</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Сильный дождь</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Ледяной дождь</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Небольшой снег</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Снег</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Сильный снег</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Снежная крупа</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Небольшой ливень</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Ливень</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Сильный ливень</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Снегопад</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Сильный снегопад</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Гроза</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Гроза с градом</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Ясно</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Сегодня вечером</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Завтра</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Завтра вечером</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0}, вечер</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Ветер слабый, переменных направлений.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Ветер {0}, от {1} до {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Вероятность дождя {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Вероятность снега {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Максимум {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Минимум {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Ожидается гроза</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Без грозы</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Отлично</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Удовлетворительно</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Плохо</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Очень плохо</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Очень низкий</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Умеренный</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Очень высокий</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Экстремальный</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Низкая опасность</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Умеренная опасность</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Высокая опасность</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Экстремальная опасность</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>ССВ</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>СВ</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ВСВ</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ВЮВ</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>ЮВ</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>ЮЮВ</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>Ю</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>ЮЮЗ</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>ЮЗ</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>ЗЮЗ</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>З</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>ЗСЗ</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>СЗ</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>ССЗ</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>ШТИЛЬ</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>ПЕРЕМ.</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>слабый</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>сильный</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>поблизости</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>гроза</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>ливни</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>поземный</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>клочья</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>частичный</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>позёмок</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>метель</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>ливневый</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>гроза с</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>переохлаждённый</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>морось</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>дождь</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>снег</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>снежные зёрна</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>ледяные иглы</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>ледяной дождь</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>град</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>снежная крупа</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>неизвестные осадки</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>дымка</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>туман</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>дым</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>вулканический пепел</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>пыль</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>песок</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>мгла</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>брызги</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>пыльные вихри</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>шквалы</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>воронкообразное облако</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>песчаная буря</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>пыльная буря</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, порывы {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Не удалось обновить данные о погоде</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows заблокировала подключение к службе погоды. FluentWeather-Plus может блокировать брандмауэр, антивирус, VPN или прокси-сервер. Разрешите FluentWeather-Plus в этой программе или повторите попытку с отключённым VPN.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Не удалось обновить данные о погоде. Проверьте подключение к интернету.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Сборка {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Выкл.</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 мин</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 мин</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 ч</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Условия</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Ощущается</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Макс. / мин. за 24 ч</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Изменение за 24 ч</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Точка росы</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Индекс жары</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Ветро-холодовой индекс</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>УФ-индекс</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Видимость</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Нижняя граница облаков</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Дождь, последний час</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Дождь, последние 6 ч</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Дождь, последние 24 ч</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Снег, последние 24 ч</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Восход солнца</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Заход солнца</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Фаза Луны</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Восход Луны</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Заход Луны</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Наблюдение в</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Ближайшая станция</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Температура воды</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Ветер на водной станции</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Волны и температура моря</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Прогноз ветра (порывы, 80 м)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Другие модели</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Расход реки</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Пыльца</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Погодное предупреждение</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Погода сейчас (аэропорт)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Снег, последние 1 ч и 6 ч</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Риск грозы сегодня</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Тепловая нагрузка (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Уровень замерзания</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Температура и влажность почвы</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Солнце сегодня</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Буй: волны и прилив</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Уровень и расход реки</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Дождь, снег и лёд за следующие 12 ч</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>И ещё {0} предупреждение.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>И ещё предупреждений: {0}.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>И ещё {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Закроется через {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Предупреждение FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Показать подробности</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: ожидание следующего обновления данных</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: данных пока нет. Откройте приложение один раз.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: нет обновлений с {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, ощущается как {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Тот же город, что и в приложении.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Выбрано в области уведомлений.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Обновлено {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Предупреждения о непогоде</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Показывать предупреждения</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Выкл.</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Предупреждения</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Предупреждения и оповещения</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Все предупреждения</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Учитывать режим «Не беспокоить» (использовать уведомления Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Уведомления Windows ждут, пока включён режим «Не беспокоить». Всплывающее окно не ждёт.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Закрывать всплывающее окно через</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Никогда</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} с</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 мин</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} мин</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Места</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Город в области уведомлений</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Все сохранённые места</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Показать тестовое предупреждение</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Показывает, как выглядит предупреждение с текущими настройками. Это не настоящее предупреждение.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Тестовое предупреждение</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>до {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Ваш город</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Это тест. Настоящее предупреждение показывает здесь сводку службы погоды.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Приложение отправляет предупреждения, когда в параметрах приложения у пункта «Предупреждения о непогоде» отмечен флажок «Уведомления».</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Открыть {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Число показывает температуру</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Число показывает ощущаемую температуру</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Сведения при наведении</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Показать все</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Сбросить по умолчанию</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Нет сохранённых мест. Используйте звёздочку в приложении.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Область уведомлений показывает (окно приложения остаётся закрытым)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Тот же город, что и в приложении</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Перезапустить FluentWeather (приложение и значки в области уведомлений)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Закрыть окно FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Закрыть значки в области уведомлений</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Снова запустите их из меню «Пуск»: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Закрыть значки в области уведомлений и окно FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Приложение ещё не установлено. Сначала запустите его установку.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Не удалось перезапустить. Используйте пункт меню «Пуск» «Restart FluentWeather».</value>
+  </data>
 </root>

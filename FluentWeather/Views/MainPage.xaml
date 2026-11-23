@@ -627,10 +627,10 @@
                                                                 x:Name="AutoRefreshSegmented"
                                                                 SelectionChanged="AutoRefreshSegmented_OnSelectionChanged"
                                                                 d:DataContext="{d:DesignInstance views:MainPage }">
-                                                                <controls1:SegmentedItem Content="Off" />
-                                                                <controls1:SegmentedItem Content="15 min" />
-                                                                <controls1:SegmentedItem Content="30 min" />
-                                                                <controls1:SegmentedItem Content="1 h" />
+                                                                <controls1:SegmentedItem x:Uid="AutoRefreshOff" Content="Off" />
+                                                                <controls1:SegmentedItem x:Uid="AutoRefresh15" Content="15 min" />
+                                                                <controls1:SegmentedItem x:Uid="AutoRefresh30" Content="30 min" />
+                                                                <controls1:SegmentedItem x:Uid="AutoRefresh60" Content="1 h" />
                                                             </controls1:Segmented>
                                                         </StackPanel>
                                                         <!-- Language of the app and of the weather text. Opens a separate
@@ -737,8 +737,8 @@
                                                         <Grid Grid.Row="0" ColumnSpacing="16">
                                                             <Grid.ColumnDefinitions>
                                                                 <ColumnDefinition Width="*" />
-                                                                <ColumnDefinition Width="56" />
-                                                                <ColumnDefinition Width="56" />
+                                                                <ColumnDefinition Width="80" />
+                                                                <ColumnDefinition Width="80" />
                                                             </Grid.ColumnDefinitions>
                                                             <Grid.RowDefinitions>
                                                                     <RowDefinition Height="Auto" />
@@ -751,31 +751,31 @@
                                                             </Grid.RowDefinitions>
                                                             <TextBlock x:Uid="ExtraSettingsTitle"
                                                                        Style="{StaticResource SettingsHeaderStyle}" />
-                                                            <TextBlock Grid.Column="1" x:Uid="ExtraMainHeader" FontSize="12" Opacity="0.75"
+                                                            <TextBlock Grid.Column="1" x:Uid="ExtraMainHeader" FontSize="12" Opacity="0.75" TextWrapping="WrapWholeWords" TextAlignment="Center"
                                                                        HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,6" />
-                                                            <TextBlock Grid.Column="2" x:Uid="ExtraTrayHeader" FontSize="12" Opacity="0.75"
+                                                            <TextBlock Grid.Column="2" x:Uid="ExtraTrayHeader" FontSize="12" Opacity="0.75" TextWrapping="WrapWholeWords" TextAlignment="Center"
                                                                        HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,6" />
-                                                                <TextBlock Grid.Row="1" x:Uid="ExtraMarineLabel" FontSize="13" VerticalAlignment="Center" />
+                                                                <TextBlock Grid.Row="1" x:Uid="ExtraMarineLabel" FontSize="13" VerticalAlignment="Center" TextWrapping="WrapWholeWords" />
                                                                 <CheckBox Grid.Row="1" Grid.Column="1" Tag="Marine.main" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="1" Grid.Column="2" Tag="Marine.tray" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
-                                                                <TextBlock Grid.Row="2" x:Uid="ExtraWindLabel" FontSize="13" VerticalAlignment="Center" />
+                                                                <TextBlock Grid.Row="2" x:Uid="ExtraWindLabel" FontSize="13" VerticalAlignment="Center" TextWrapping="WrapWholeWords" />
                                                                 <CheckBox Grid.Row="2" Grid.Column="1" Tag="Wind.main" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="2" Grid.Column="2" Tag="Wind.tray" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
-                                                                <TextBlock Grid.Row="3" x:Uid="ExtraModelsLabel" FontSize="13" VerticalAlignment="Center" />
+                                                                <TextBlock Grid.Row="3" x:Uid="ExtraModelsLabel" FontSize="13" VerticalAlignment="Center" TextWrapping="WrapWholeWords" />
                                                                 <CheckBox Grid.Row="3" Grid.Column="1" Tag="Models.main" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="3" Grid.Column="2" Tag="Models.tray" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
-                                                                <TextBlock Grid.Row="4" x:Uid="ExtraRiverLabel" FontSize="13" VerticalAlignment="Center" />
+                                                                <TextBlock Grid.Row="4" x:Uid="ExtraRiverLabel" FontSize="13" VerticalAlignment="Center" TextWrapping="WrapWholeWords" />
                                                                 <CheckBox Grid.Row="4" Grid.Column="1" Tag="River.main" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="4" Grid.Column="2" Tag="River.tray" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
-                                                                <TextBlock Grid.Row="5" x:Uid="ExtraPollenLabel" FontSize="13" VerticalAlignment="Center" />
+                                                                <TextBlock Grid.Row="5" x:Uid="ExtraPollenLabel" FontSize="13" VerticalAlignment="Center" TextWrapping="WrapWholeWords" />
                                                                 <CheckBox Grid.Row="5" Grid.Column="1" Tag="Pollen.main" MinWidth="0" Padding="6,0,0,0"
                                                                           HorizontalAlignment="Center" Loaded="ExtraCheckBox_Loaded" Click="ExtraCheckBox_Click" />
                                                                 <CheckBox Grid.Row="5" Grid.Column="2" Tag="Pollen.tray" MinWidth="0" Padding="6,0,0,0"
@@ -1333,12 +1333,28 @@
                                 Margin="0,0,0,16" />
 
                             <!-- Local build: opens the history page of the shown location. See HistoryPage. -->
+                            <!-- Local build (v54): the moon button turns the moon row of the day buttons on and off.
+                                 It sits left of the history button. Both keep the place of the old history button. -->
+                            <StackPanel Grid.Row="0"
+                                        Orientation="Horizontal"
+                                        Spacing="8"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Top"
+                                        Margin="0,-4,32,12">
+                            <ToggleButton x:Name="MoonRowToggle"
+                                          VerticalAlignment="Stretch"
+                                          MinWidth="40"
+                                          Padding="10,2,10,4"
+                                          Background="{StaticResource TitleButtonAcrylicBrush}"
+                                          BorderBrush="#1AFFFFFF"
+                                          BorderThickness="1"
+                                          x:Uid="MoonRowToggle"
+                                          Click="MoonRowToggle_OnClick">
+                                <FontIcon FontFamily="{StaticResource FluentIcons}" Glyph="&#xE708;" FontSize="16"
+                                          VerticalAlignment="Center" Margin="0,2,0,0" />
+                            </ToggleButton>
                             <Button x:Name="HistoryOpenButton"
-                                    Grid.Row="0"
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Top"
                                     Padding="12,2,10,4"
-                                    Margin="0,-4,32,12"
                                     Background="{StaticResource TitleButtonAcrylicBrush}"
                                     BorderBrush="#1AFFFFFF"
                                     BorderThickness="1"
@@ -1352,6 +1368,7 @@
                                               VerticalAlignment="Center" Margin="0,2,0,0" />
                                 </StackPanel>
                             </Button>
+                            </StackPanel>
 
                             <ScrollViewer x:Name="DaysScroll"
                                           Grid.Row="1"
@@ -1385,11 +1402,20 @@
                                                     DataContext="{x:Bind}"
                                                     HorizontalContentAlignment="Stretch"
                                                     VerticalContentAlignment="Stretch"
-                                                    Width="135"
-                                                    Height="70"
+                                                    Width="186"
+                                                    Height="{x:Bind CardHeight}"
+                                                    ToolTipService.ToolTip="{x:Bind MoonToolTip}"
                                                     Click="DayButtonClick">
                                                 <Button.Content>
-                                                    <RelativePanel HorizontalAlignment="Stretch"
+                                                    <!-- Local build (v54): row 0 holds the day, the icons and the temperatures. Row 1 holds the moon row. -->
+                                                    <Grid HorizontalAlignment="Stretch"
+                                                          VerticalAlignment="Stretch">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <RelativePanel Grid.Row="0"
+                                                                   HorizontalAlignment="Stretch"
                                                                    VerticalAlignment="Stretch">
 
                                                         <Image x:Name="mainIcon"
@@ -1436,6 +1462,11 @@
                                                             RelativePanel.AlignRightWithPanel="True">
                                                         </TextBlock>
                                                     </RelativePanel>
+                                                    <ContentPresenter Grid.Row="1"
+                                                                      Tag="moon"
+                                                                      Content="{x:Bind MoonRow}"
+                                                                      Visibility="{x:Bind MoonRowVisibility}" />
+                                                    </Grid>
                                                 </Button.Content>
 
                                             </Button>

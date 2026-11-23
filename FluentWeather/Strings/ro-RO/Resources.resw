@@ -297,4 +297,2348 @@ Dalele Live sunt disponibile doar pe Windows 10.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Eroare de rețea, vă rugăm să verificați conexiunea la internet.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Afișează sau ascunde faza lunii pe cardurile zilelor</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Afișează sau ascunde faza lunii pe cardurile zilelor</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% iluminată</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Lună nouă</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Semilună în creștere</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Primul pătrar</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Lună în creștere</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Lună plină</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Lună în descreștere</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Ultimul pătrar</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Semilună în descreștere</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Pictograme în zona de notificare</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Afișează pictogramele de notificare</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Afișează sau ascunde pictogramele de temperatură și condiții din bara de activități. Butonul urmează starea lor actuală.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Neinstalat</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>actualizat de</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Bazat pe</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Versiuni</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Reîmprospătează</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Salvează această locație</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Elimină această locație din locațiile salvate</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Pentru a salva această locație, faceți clic pe steaua de lângă nume. Locațiile salvate apar aici ca butoane. Faceți clic pe un buton pentru a trece la acea locație. Căutați o altă locație și faceți clic pe steaua ei pentru a o adăuga.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Faceți clic pe steaua de lângă numele locației pentru a o salva sau elimina. Faceți clic dreapta pe un buton de locație pentru a-l muta sau elimina. Ctrl+1 până la Ctrl+9 schimbă locația.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Ascunde acest sfat</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Contrastul fundalului</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Întunecat</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Mai întunecat</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Luminos</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Mai luminos</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Întunecat și Mai întunecat umbresc imaginea de fundal și păstrează textul deschis. Luminos și Mai luminos luminează imaginea și folosesc text închis.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Nuanța cardurilor</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Nuanța cardurilor</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Nuanțează cardurile pentru ca textul lor să rămână lizibil peste imaginea de fundal. 0 la sută păstrează aspectul original.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Ieri</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Calitatea aerului</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Bună</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Acceptabilă</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Moderată</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Slabă</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Foarte slabă</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Extrem de slabă</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Nesănătoasă pentru sensibili</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Nesănătoasă</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Foarte nesănătoasă</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Periculoasă</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Indicele american al calității aerului</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Indicele european al calității aerului</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Dioxid de azot</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Date despre calitatea aerului: Open-Meteo.com și Serviciul Copernicus de monitorizare a atmosferei (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar și granițe NOAA/NWS. Relief USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Actualizat</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Se încarcă radarul</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Nu plouă și nu ninge în această zonă. Micșorați pentru a vedea mai mult.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Radarul nu a putut fi încărcat. Se reîncearcă la următoarea reîmprospătare.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mărește</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Mărește</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Micșorează</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Micșorează</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Limbă</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Implicită Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Limbă</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Folosește această limbă</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Anulează</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Reporniți FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Noua limbă se aplică după repornirea FluentWeather.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Repornește acum</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Mai târziu</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Prognoză orară</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Zi</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 h</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 h</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 h</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Zi afișează orele zilei selectate. 24, 36 și 48 de ore încep acum pentru azi și la miezul nopții pentru celelalte zile.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Dimensiunea textului și a imaginilor</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Minus și Ctrl+Plus schimbă și ele dimensiunea în pași de 5%. Ctrl+0 revine la 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Mută la stânga</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Mută la dreapta</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Elimină</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Limita de locații salvate a fost atinsă</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Puteți salva până la {0} locații. Eliminați o locație pentru a adăuga una nouă.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Înapoi (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Istoric complet</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Lună</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>An</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Salvați mai întâi o locație. Fereastra istoricului afișează locațiile salvate.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Se încarcă</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} zile. {1} înregistrate de aplicație, {2} din arhivă.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Maxima și minima zilnică, grade {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Date de arhivă: Open-Meteo.com (CC BY 4.0). Generat folosind informații ale Serviciului Copernicus privind schimbările climatice. Calitatea aerului: Open-Meteo, CAMS (din august 2022). Valorile de arhivă provin dintr-un model meteo și pot diferi de valorile înregistrate.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Precip.</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Zăpadă</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Condiții</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Sursă</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>înregistrat</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arhivă</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Senin</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Predominant senin</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Parțial noros</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Acoperit</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Ceață</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Burniță</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Ploaie</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Ninsoare</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Averse</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Averse de ninsoare</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Furtună</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Necunoscut</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Ape din apropiere</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Card în fereastra principală</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Linie în panoul flotant din zona de notificare</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Ape din apropiere</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>vânt la stație</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>vântul actual pentru această locație, stația nu are senzor de vânt</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>locație</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>rafale {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Cea mai apropiată stație de apă cu o citire actuală.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Apă</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Aer la stație</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>chiar acum</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>acum {0} min</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>acum {0} h</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Date despre apă: NOAA National Data Buoy Center (ndbc.noaa.gov) și USGS Water Data (waterdata.usgs.gov). Domeniu public.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Valuri</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Istoric complet</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Istoricul zilnic și orar al acestei locații</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Înapoi</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Cea mai apropiată stație de apă pe o rază de 50 km (31 mi), cu o citire mai recentă de 6 ore. Geamandurile și stațiile de coastă NOAA NDBC acoperă coastele și Marile Lacuri. USGS acoperă râuri și unele lacuri. Pe mare, fără o stație apropiată, se folosește modelul marin Open-Meteo. Bifați liniile la Detalii la trecerea mouse-ului, în meniul zonei de notificare.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Modelul marin Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Vânt din modelul Open-Meteo, stația nu are senzor de vânt</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo pentru această locație:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Mai multe opțiuni de date</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Notificare</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Valuri și temperatura mării</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Prognoza vântului (rafale, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Alte modele</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Debitul râului</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Valuri</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Prognoza vântului</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Alte modele</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Debitul râului</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Date: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Valuri</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Hulă</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Temperatura la suprafața mării</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>mare</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Modelul marin Open-Meteo pentru această locație.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>până la {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Prognoza vântului Open-Meteo pentru această locație.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Vânt acum</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Rafale acum</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Cea mai puternică rafală, următoarele 6 ore</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>max. 6 h</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Vânt la 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Maxima și minima de azi după trei modele meteo. O dispersie mare înseamnă o prognoză nesigură.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Debitul modelat al celui mai apropiat râu (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Obișnuit pentru această zi</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% din obișnuit</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Granule pe metru cub de aer. Nivelurile sunt aproximative.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Arin</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Mesteacăn</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Graminee</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Pelin</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Măslin</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrozie</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Niciunul</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>scăzut</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>moderat</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>ridicat</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>foarte ridicat</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Afișează pictogramele de notificare</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Ascunde pictogramele de notificare</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Mută la stânga</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Mută la dreapta</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Mută la început</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Mută la sfârșit</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Ascunde acest card</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Adaugă un card</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Toate cardurile sunt afișate</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Resetează cardurile</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Ape din apropiere</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Valuri și temperatura mării</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Prognoza vântului</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Alte modele</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Debitul râului</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>niciunul</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Vânt la 10 m deasupra solului.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Viteză</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Din</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Rafale</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Răcire prin vânt</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Umiditate relativă: câtă vapori de apă conține aerul, comparat cu maximul pe care îl poate conține la această temperatură.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>uscat</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>confortabil</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>umed</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Indice de căldură</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>Indice UV: intensitatea luminii ultraviolete a soarelui.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>risc mic, nu e nevoie de protecție</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>folosiți cremă de protecție și pălărie, căutați umbra la amiază</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>protecție necesară, limitați timpul la soare între 10 și 16</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>protecție suplimentară necesară, evitați soarele de la amiază</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>pielea neprotejată se arde în câteva minute, stați în interior la amiază</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Vizibilitate: cât de departe se vede clar.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>ceață</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>pâclă sau negură</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>moderată</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>bună</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Plafon de nori</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>fără nori joși</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>indisponibil</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Presiunea aerului la nivelul mării.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Acum</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Tendință</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Variație în 3 ore</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Presiunea în scădere aduce adesea nori și ploaie. Presiunea în creștere aduce adesea înseninare.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Punct de rouă: temperatura la care se formează roua. Arată cât de umed se simte aerul.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>uscat</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>confortabil</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>ușor umed</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>umed</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>înăbușitor</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>apăsător</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Temperatura minus punctul de rouă. Ceața este probabilă când valoarea e aproape de 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Setările cardului</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>viteză, rafale, direcție</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>umiditate relativă, indice de căldură</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>intensitatea soarelui și sfaturi</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>calitatea aerului Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>cea mai apropiată stație de apă, NOAA și USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>valuri și mare Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>cea mai puternică rafală următoarele 6 h, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS și ICON azi</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>debitul râurilor Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>arbori, graminee și ambrozie</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>distanță, plafon de nori</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>nivelul mării, tendință pe 3 ore</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>confort, șansă de ceață</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Arbori</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Niveluri de polen de la niciunul la foarte ridicat.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Date: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>rafale de până la {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>cea mai puternică rafală, următoarele 6 ore</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>rafale de până la {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Aceasta este o prognoză de model. Cardul Vânt arată vântul și rafalele măsurate acum. Cardul Ape din apropiere arată vântul măsurat la apă, când stația are senzor de vânt.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Versiune</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Bazat pe FluentWeather 2.1.0 de Gabboxl. Actualizat de duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus adaugă aceste funcții la FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Locații salvate, până la 25, cu comenzi rapide de la tastatură.
+- Pictograme de notificare cu temperatura, o imagine a vremii și un panou cu detaliile alese la trecerea mouse-ului.
+- Zile trecute: ieri și alaltăieri, lângă azi.
+- Istoric complet: vremea zilnică și orară a unei locații salvate până în 1940.
+- O hartă radar pentru locațiile din SUA și calitatea aerului pentru fiecare locație.
+- Ape din apropiere: temperatura apei și vântul la cea mai apropiată stație.
+- Date suplimentare: valuri, prognoza vântului, alte modele, debitul râurilor și polen.
+- Avertizări meteo în fereastra principală și ca balon de notificare.
+- Mai multe date: vremea pe aeroport, zăpadă, stres termic, energie de furtună, sol, izoterma de 0 °C,
+  durata de strălucire a soarelui, geamanduri, mire hidrometrice, detalii zilnice, un grafic orar și discuția NWS.
+- Carduri de detalii cu mai multe informații la trecerea mouse-ului, în orice ordine doriți.
+- Setări pentru dimensiunea textului, contrastul fundalului, nuanța cardurilor și intervalul orar.
+- O setare de limbă, un program de instalare direct și un raport de blocare.
+- Plus multe îmbunătățiri ale interfeței.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Temperatură</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Ploaie și zăpadă</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Calitatea aerului</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Umiditate</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Nori și soare</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Rotiță: zoom. Shift+rotiță sau tragere: derulare.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mărește</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Micșorează</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Potrivire</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Afișează tot anul</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} – {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Se încarcă orele</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Faceți clic pentru a mări această zi.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Temperatură și punct de rouă, grade {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Cel mai puternic vânt și rafală zilnică, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Vânt și rafale, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Precipitații ({0}) și zăpadă ({1}) zilnice</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Precipitații ({0}) și zăpadă ({1}) pe oră</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Maxim zilnic {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} pe oră</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Umiditatea medie zilnică (%) și punctul de rouă</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Umiditate (%) și punct de rouă</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Presiunea medie zilnică la nivelul mării, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Presiunea la nivelul mării, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Nebulozitatea medie zilnică (%) și orele de soare</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Nebulozitate (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Rafale</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Precipitații</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Zăpadă</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Umiditate</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Soare (h)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Nebulozitate</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Temperatură</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI SUA</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>AQI european</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Nu există date despre calitatea aerului pentru această perioadă. Ele încep în august 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Umiditate</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Rafală</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Din</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Nori</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Soare</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Precip.</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Încă nu există date pentru această perioadă.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Sursa datelor meteo</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Automat</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Automat folosește weather.com și trece la Open-Meteo când weather.com eșuează de două ori la rând. O conexiune la internet pierdută nu contează. Reîncearcă weather.com în fiecare oră. Cu Open-Meteo, cel mai apropiat raport de aeroport pe o rază de 50 km oferă plafonul de nori și valorile măsurate. Polenul din SUA rămâne gol.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Date: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Date: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Date: Open-Meteo și stația {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>până la {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>și încă {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Detalii ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Ascunde detaliile</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Emisă {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Zona: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Se încarcă textul complet...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Textul complet nu este disponibil.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Sursa: avertizările weather.com, de la serviciul meteorologic național al țării.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Sursa: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Notificare</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Avertizări meteo</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Vremea acum (aeroport)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Zăpadă, ultimele 1, 6 și 24 h</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Stres termic (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Energie de furtună și risc de furtună</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Sol și grosimea zăpezii</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Izoterma de 0 °C</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Strălucirea soarelui și evaporare</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Geamandură: valuri, aer și maree</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Miră hidrometrică (SUA)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Detalii zilnice: furtună, zăpadă, vânt</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Grafic orar, următoarele 12 h în notificare</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Discuția prognozistului (SUA)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Avertizări în fereastra principală</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Toate avertizările</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Avertizări și atenționări</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Doar avertizări</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Principal afișează elementul în această fereastră. Un card se ascunde când locația nu are date. Notificare adaugă o linie pe care o puteți bifa în meniul pictogramelor de notificare, la Detalii la trecerea mouse-ului. Acest meniu stabilește și când apare balonul de avertizare și cât timp rămâne. Primele cinci elemente provin de la open-meteo.com, cu cel mult o cerere pe oră pentru fiecare locație. Avertizările sunt activate implicit. Celelalte elemente sunt dezactivate implicit. Treceți mouse-ul peste un nume pentru a-i vedea sursa.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>O bandă sub numele locației pentru fiecare avertizare activă. Sursa: weather.com, cu National Weather Service ca rezervă pentru locurile din SUA.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Vremea și categoria de zbor din cel mai apropiat raport de aeroport, pe cardul Vizibilitate. Textul la trecerea mouse-ului adaugă prognoza aeroportului. Sursa: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Zăpada din ultimele 1, 6 și 24 de ore. Sursa: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Temperatura WBGT (termometru umed și glob), o măsură a stresului termic la muncă și sport. Sursa: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Energia de furtună (CAPE) și riscul de furtună de azi. Surse: Open-Meteo și weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Temperatura solului la 6 cm, umiditatea solului și grosimea zăpezii. Sursa: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Altitudinea izotermei de 0 grade. Sursa: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Strălucirea soarelui de azi, lumina zilei, radiația solară și evaporarea. Sursa: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Valuri, perioada și direcția valurilor, aer, presiune și maree la cea mai apropiată geamandură NOAA sau stație maregrafică pe o rază de 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Nivelul și debitul râului și ultimele 7 zile la cea mai apropiată miră USGS pe o rază de 40 km. Doar SUA.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Riscul de furtună și cantitatea de zăpadă pe butoanele zilelor, plus textul vântului, note și cantități în detaliile zilnice. Sursa: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Un grafic sub prognoza orară cu ploaie, zăpadă, gheață, probabilitate, strălucirea soarelui și ore severe. Linia de notificare dă cantitățile din următoarele 12 ore.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Discuția prognozistului de la biroul local al National Weather Service, sub harta radar. Doar SUA.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Zăpadă, 6 h</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Stres termic</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Energie de furtună</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Izoterma de 0 °C</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Soare</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Geamandură</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Miră hidrometrică</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>fără ploaie, zăpadă sau ceață</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Raport de aeroport: {0} ({1}), la {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Vremea:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Categoria de zbor:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>vizibilitate și plafon bune</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>marginal: plafon de 1.000 până la 3.000 ft sau vizibilitate de 3 până la 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>scăzut: plafon de 500 până la 1.000 ft sau vizibilitate de 1 până la 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>foarte scăzut: plafon sub 500 ft sau vizibilitate sub 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Plafonul de nori la aeroport:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Prognoza aeroportului ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Rapoarte în original:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Sursa: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>De la {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Schimbare la {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Uneori de la {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>Probabilitate {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>fără plafon</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>plafon {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 h: {0}, 24 h: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Zăpadă măsurată în locație.
+Ultima oră: {0}
+Ultimele 6 ore: {1}
+Ultimele 24 de ore: {2}
+
+Sursă: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 h: {0}, 6 h: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Scăzut</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Ridicat</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Foarte ridicat</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Extrem</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Temperatura WBGT (termometru umed și glob negru): {0}, stres termic {1}.
+Combină temperatura, umiditatea, vântul și soarele. Regulile pentru muncă și sport o folosesc. Stresul termic începe în jur de 25 C (77 F) și este extrem peste 32 C (90 F).
+
+Sursă: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Foarte scăzut</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Scăzut</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Ridicat</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Extrem</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Risc de furtună {0} din 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} din 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Energia de furtună (CAPE) este energia pe care o poate câștiga aerul ascendent. Furtunile au nevoie de ea. Sub 300 J/kg furtunile sunt puțin probabile. Peste 2.500 J/kg sunt posibile furtuni puternice când ceva ridică aerul.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Acum: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Maximul de azi: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Surse: Open-Meteo.com (CC BY 4.0) pentru energia de furtună, weather.com pentru riscul de furtună.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Umiditate {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Grosimea zăpezii {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>niciuna</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Temperatura solului la 6 cm: {0}
+Umiditatea solului la 3-9 cm: {1}
+Grosimea zăpezii: {2}
+
+Valorile provin dintr-un model meteo, nu de la un senzor. Sursă: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, umiditate {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>La sol</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>deasupra nivelului mării</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Nivelul de îngheț: {0} deasupra nivelului mării.
+Deasupra acestei înălțimi aerul este sub 0 C (32 F). Zăpada care cade de sus se topește sub acest nivel.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Altitudinea locației: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>din {0} de lumină</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Soare azi: {0}
+Lumină naturală azi: {1}
+Radiație solară acum: {2}
+Evaporare azi: {3}
+
+Evaporarea este evapotranspirația de referință (FAO-56). Arată câtă apă pierde un gazon într-o zi. Sursă: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} din {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>la fiecare {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>dinspre {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Maree {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), la {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Valuri:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Aer:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Apă:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Presiune:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Maree, deasupra cotei zero a stației:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Sursă: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>În creștere</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>În scădere</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Stabil</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), la {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Nivel:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Debit:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Schimbare în ultimele 3 ore: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Ultimele 7 zile: {0}, de la {1} la {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Nivelul se măsoară de la cota zero a mirei, nu de la albia râului. Sursă: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Vânt: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Vânt noaptea: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Notă: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>zăpadă {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Cantități: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Cantități: niciuna</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Bare: ploaie (albastru), zăpadă ca apă (alb), gheață (cyan). Linie punctată: probabilitate. Galben: soare. Marcaj roșu: oră cu vreme severă.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Ploaie, zăpadă și gheață pe oră de la weather.com. Zăpada este desenată ca apă, aproximativ 10 la 1. Linia punctată este probabilitatea de precipitații. Bara galbenă de sus este soarele orei de la Open-Meteo. Un marcaj roșu arată o oră pe care weather.com o consideră severă.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Totalul orelor afișate: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>niciuna</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Uscat, probabilitate {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>probabilitate {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>ploaie {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>zăpadă {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>gheață {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Discuția prognozatorului, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Emis {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Sursă: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Afișează tot</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Afișează mai puțin</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Sub 0 C la suprafață</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Aerul este sub 0 C (32 F) de la sol în sus. Zăpada nu se topește în cădere.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Sursă: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Acum</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>acum</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Înălțimea și perioada valurilor, hula și temperatura suprafeței mării din modelul marin Open-Meteo, pentru puncte pe mare sau aproape de ea. Sursă: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cea mai puternică rafală din următoarele 6 ore, rafala modelului acum și vântul la 80 m. Sursă: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Maxima, minima și precipitațiile de azi din modelele ECMWF, GFS și ICON. Sursă: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Debitul râului modelat azi și debitul obișnuit pentru ziua respectivă (GloFAS). Sursă: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Nivelurile pentru copaci, graminee și ambrozie. Sursă: weather.com în SUA și în alte câteva țări, Open-Meteo în Europa.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>Orar 10 zile</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Fiecare oră a prognozei, aproximativ 10 zile</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Înapoi la fereastra principală (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Înapoi</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Prognoză orară pe 10 zile</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Listă</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Prezentare generală</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperatură</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Resimțită</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Precipitații</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Rafale</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Umiditate</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>Indice UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Nebulozitate</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Vizibilitate</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Pagina arată prognoza orară pe care aplicația a încărcat-o deja pentru locația afișată. O altă locație se încarcă atunci când este aleasă. Orele sunt locale pentru locație. Un clic pe grafic derulează lista la ora respectivă. În Listă, un clic pe un rând deschide celelalte valori.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Locația afișată</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, actualizat {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Nu există prognoză orară pentru această locație</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Nu există rafale în această prognoză</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>niciuna</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} ore     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} zăpadă</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>rafale {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>resimțită {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>ploaie</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>zăpadă</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>precipitații</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Cer</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Resimț.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Prob.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Cant.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Ploaie</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Zăpadă</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Gheață</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Umid.</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>P. rouă</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Rafală</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Nori</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Viz.</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Temperatura resimțită</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Rafală de vânt</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>Indice UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Nebulozitate</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Vizibilitate</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperatură</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Temperatura resimțită</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Probabilitatea precipitațiilor</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Ploaie</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Zăpadă</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Rafale</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperatură ({0}) și probabilitatea precipitațiilor</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperatură, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Temperatura resimțită și temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Ploaie ({0}) și zăpadă ({1}) pe oră și probabilitatea precipitațiilor</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Vânt și rafale, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Rafale de vânt, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Umiditate, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>Indice UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Nebulozitate, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Vizibilitate, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Punct de rouă și temperatură, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Presiunea la nivelul mării, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Maxime</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Minime</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Derulează la stânga</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Derulează la dreapta</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Însorit</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Senin</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Predominant însorit</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Predominant senin</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Parțial noros</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Noros</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Predominant noros</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Ceață</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Ceață cu depuneri</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Burniță slabă</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Burniță</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Burniță puternică</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Burniță înghețată</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Ploaie slabă</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Ploaie</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Ploaie puternică</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Ploaie înghețată</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Ninsoare slabă</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Ninsoare</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Ninsoare puternică</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Grăunțe de zăpadă</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Aversă slabă de ploaie</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Aversă de ploaie</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Aversă puternică de ploaie</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Aversă de ninsoare</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Aversă puternică de ninsoare</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Furtună</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Furtună cu grindină</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Vreme frumoasă</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Astăzi</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Diseară</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Mâine</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Mâine seară</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} seara</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Vânt slab și variabil.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Vânt din {0}, {1} până la {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Probabilitate de ploaie {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Probabilitate de ninsoare {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Maxima {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Minima {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Se așteaptă furtună</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Fără furtună</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Excelent</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Bun</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Acceptabil</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Slab</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Foarte slab</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Niciunul</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Foarte scăzut</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Scăzut</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Ridicat</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Foarte ridicat</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Extrem</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Îngrijorare scăzută</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Îngrijorare moderată</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Îngrijorare ridicată</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Îngrijorare extremă</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>NNE</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>NE</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ENE</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ESE</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>SE</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>SSE</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SSV</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>SV</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>VSV</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>VNV</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>NV</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>NNV</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>CALM</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>slabă</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>puternică</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>în apropiere</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>furtună</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>averse</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>joasă</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>bancuri de</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>parțială</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>viscol jos de</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>viscol de</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>averse de</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>furtună cu</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>care îngheață</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>burniță</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>ploaie</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>ninsoare</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>grăunțe de zăpadă</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>cristale de gheață</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>granule de gheață</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>grindină</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>măzăriche</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>precipitații necunoscute</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>aer cețos</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>ceață</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>fum</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>cenușă vulcanică</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>praf</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>nisip</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>pâclă</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>stropi</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>vârtejuri de praf</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>vijelii</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>nor pâlnie</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>furtună de nisip</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>furtună de praf</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, rafale {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Actualizarea datelor meteo nu a reușit</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows a blocat conexiunea la serviciul meteo. Un firewall, un antivirus, un VPN sau un proxy poate bloca FluentWeather-Plus. Permiteți FluentWeather-Plus în acel program sau încercați din nou cu VPN-ul oprit.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Nu am putut actualiza datele meteo. Verificați conexiunea la internet.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Versiunea {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Oprit</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Condiții</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperatură</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Resimțită</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Max. / min. 24 h</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Schimbare în 24 h</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Punct de rouă</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Indice de căldură</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Răcire prin vânt</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Umiditate</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>Indice UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Presiune</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Vizibilitate</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Plafon de nori</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Ploaie, ultima oră</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Ploaie, ultimele 6 h</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Ploaie, ultimele 24 h</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Ninsoare, ultimele 24 h</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Răsărit</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Apus</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Faza lunii</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Răsăritul lunii</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Apusul lunii</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Observat la</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Cea mai apropiată stație</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Temperatura apei</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Vânt la stația de apă</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Valuri și temperatura mării</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Prognoza vântului (rafale, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Alte modele</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Debitul râului</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Avertizare meteo</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Vremea acum (aeroport)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Ninsoare, ultima 1 h și 6 h</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Risc de furtună azi</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Stres termic (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Nivel de îngheț</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Temperatura și umiditatea solului</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Soare azi</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Geamandură: valuri și maree</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Nivelul și debitul râului</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Ploaie, ninsoare și gheață în următoarele 12 h</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Și încă {0} avertizare.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Și încă {0} avertizări.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Și încă {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Se închide în {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Avertizare FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Afișează detaliile</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: se așteaptă următoarea actualizare a datelor</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: încă nu există date. Deschideți aplicația o dată.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: nicio actualizare din {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, resimțită {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Același oraș ca în aplicație.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Ales în zona de notificare.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Actualizat {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Avertizări meteo</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Afișează avertizările</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Oprit</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Avertizări</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Avertizări și atenționări</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Toate avertizările</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Respectă Nu deranjați (folosește notificările Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Notificările Windows așteaptă cât timp Nu deranjați este activ. Balonul nu așteaptă.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Închide balonul după</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Niciodată</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} secunde</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minut</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minute</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Locații</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Orașul afișat în zona de notificare</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Toate locațiile salvate</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Afișează o avertizare de test</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Arată cum arată o avertizare cu opțiunile curente. Nu este o avertizare reală.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Avertizare de test</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>până la {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Orașul dvs.</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Acesta este un test. O avertizare reală afișează aici rezumatul serviciului meteo.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Aplicația trimite avertizări când caseta Notificare de la Avertizări meteo este bifată în setările aplicației.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Deschide {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Numărul arată temperatura</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Numărul arată temperatura resimțită</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Detalii la trecerea mouse-ului</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Afișează tot</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Resetează la valorile implicite</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Nu există locații salvate. Folosiți steaua din aplicație.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Zona de notificare afișează (fereastra aplicației rămâne închisă)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Același oraș ca în aplicație</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Repornește FluentWeather (aplicația și pictogramele din zona de notificare)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Închide fereastra FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Ieși din pictogramele zonei de notificare</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Porniți-le din nou din meniul Start: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Ieși din pictogramele zonei de notificare și închide FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Aplicația nu este încă instalată. Rulați mai întâi programul ei de instalare.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Repornirea nu a reușit. Folosiți elementul din meniul Start „Restart FluentWeather”.</value>
+  </data>
 </root>

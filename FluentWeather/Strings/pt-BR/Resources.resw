@@ -299,4 +299,2348 @@ Os blocos dinâmicos estão disponíveis nativamente apenas no Windows 10.
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Erro de rede. Verifique sua conexão com a internet.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mostrar ou ocultar a fase da lua nos cartões dos dias</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Mostrar ou ocultar a fase da lua nos cartões dos dias</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% iluminada</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Lua nova</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Lua crescente</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Quarto crescente</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Crescente gibosa</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Lua cheia</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Minguante gibosa</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Quarto minguante</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Lua minguante</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Ícones da área de notificação</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Mostrar ícones de notificação</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Mostra ou oculta os ícones de temperatura e condições na barra de tarefas. O botão acompanha o estado atual deles.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Não instalado</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>atualizado por</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Baseado em</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Versões</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Salvar este local</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Remover este local dos locais salvos</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Para salvar este local, clique na estrela ao lado do nome. Os locais salvos aparecem aqui como botões. Clique em um botão para mudar para esse local. Pesquise outro local e clique na estrela dele para adicioná-lo.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Clique na estrela ao lado do nome do local para salvá-lo ou removê-lo. Clique com o botão direito em um botão de local para movê-lo ou removê-lo. Ctrl+1 a Ctrl+9 trocam de local.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Ocultar esta dica</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Contraste do fundo</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Mais escuro</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Mais claro</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Escuro e Mais escuro sombreiam a imagem de fundo e mantêm o texto claro. Claro e Mais claro clareiam a imagem e usam texto escuro.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Tonalidade dos cartões</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Tonalidade dos cartões</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Tinge os cartões para que o texto continue legível sobre a imagem de fundo. 0 por cento mantém a aparência original.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Ontem</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Qualidade do ar</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Boa</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Razoável</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Moderada</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Ruim</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Muito ruim</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Extremamente ruim</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Insalubre para sensíveis</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Insalubre</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Muito insalubre</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Perigosa</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Índice de qualidade do ar dos EUA</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Índice europeu de qualidade do ar</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozônio</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Dióxido de nitrogênio</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Dados de qualidade do ar: Open-Meteo.com e o Serviço de Monitoramento Atmosférico Copernicus (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar e fronteiras NOAA/NWS. Relevo USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Atualizado</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Carregando o radar</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Sem chuva ou neve nesta área. Diminua o zoom para ver mais.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Não foi possível carregar o radar. Nova tentativa na próxima atualização.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Aumentar zoom</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Aumentar zoom</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Diminuir zoom</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Diminuir zoom</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Padrão do Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Usar este idioma</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Reiniciar o FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>O novo idioma é aplicado depois que o FluentWeather reinicia.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Reiniciar agora</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Mais tarde</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Previsão por hora</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 h</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 h</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 h</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Dia mostra as horas do dia selecionado. 24, 36 e 48 horas começam agora para hoje e à meia-noite para os outros dias.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Tamanho do texto e das imagens</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Menos e Ctrl+Mais também mudam o tamanho em passos de 5%. Ctrl+0 volta a 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Mover para a esquerda</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Mover para a direita</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Limite de locais salvos atingido</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Você pode salvar até {0} locais. Remova um local para adicionar um novo.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Voltar (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Histórico completo</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Mês</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Salve um local primeiro. A janela de histórico mostra os locais salvos.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Carregando</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} dias. {1} registrados pelo app, {2} do arquivo.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Máxima e mínima diárias, graus {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Dados de arquivo: Open-Meteo.com (CC BY 4.0). Gerado com informações do Serviço de Mudanças Climáticas Copernicus. Qualidade do ar: Open-Meteo, CAMS (desde agosto de 2022). Os valores de arquivo vêm de um modelo meteorológico e podem diferir dos valores registrados.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Máx.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Mín.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Precip.</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Condições</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Fonte</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>registrado</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arquivo</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Céu limpo</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Predominantemente limpo</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Parcialmente nublado</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Encoberto</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Nevoeiro</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Garoa</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Chuva</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Pancadas de chuva</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Pancadas de neve</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Trovoada</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Desconhecido</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Água próxima</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Cartão na janela principal</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Linha no painel flutuante da área de notificação</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Água próxima</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>vento na estação</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>vento atual para este local, a estação não tem sensor de vento</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>local</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>rajadas {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Estação de água mais próxima com uma leitura atual.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Água</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Ar na estação</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>agora mesmo</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>há {0} min</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>há {0} h</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Dados de água: NOAA National Data Buoy Center (ndbc.noaa.gov) e USGS Water Data (waterdata.usgs.gov). Domínio público.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Ondas</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Histórico completo</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Histórico diário e por hora deste local</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>A estação de água mais próxima num raio de 50 km (31 mi) com uma leitura de menos de 6 horas. As boias e estações costeiras da NOAA NDBC cobrem as costas e os Grandes Lagos. O USGS cobre rios e alguns lagos. No mar, sem estação próxima, é usado o modelo marinho do Open-Meteo. Marque as linhas em Detalhes ao passar o mouse, no menu da área de notificação.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Modelo marinho do Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Vento do modelo Open-Meteo, a estação não tem sensor de vento</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo para este local:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Mais opções de dados</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Notificação</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Ondas e temperatura do mar</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Previsão do vento (rajadas, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Outros modelos</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Vazão do rio</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Pólen</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Ondas</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Previsão do vento</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Outros modelos</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Vazão do rio</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Pólen</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Dados: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Ondas</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Ondulação</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Temperatura da superfície do mar</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>mar</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Modelo marinho do Open-Meteo para este local.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>até {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Previsão do vento do Open-Meteo para este local.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Vento agora</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Rajadas agora</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Rajada mais forte, próximas 6 horas</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>máx. 6 h</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Vento a 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Máxima e mínima de hoje segundo três modelos meteorológicos. Uma grande dispersão indica uma previsão incerta.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Vazão modelada do rio mais próximo (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Hoje</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Normal para este dia</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% do normal</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Grãos por metro cúbico de ar. Os níveis são aproximados.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Amieiro</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Bétula</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Gramíneas</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Artemísia</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Oliveira</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrósia</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>baixo</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>moderado</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>alto</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>muito alto</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Mostrar ícones de notificação</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Ocultar ícones de notificação</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Mover para a esquerda</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Mover para a direita</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Mover para o início</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Mover para o fim</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Ocultar este cartão</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Adicionar cartão</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Todos os cartões estão visíveis</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Redefinir cartões</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Água próxima</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Ondas e temperatura do mar</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Previsão do vento</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Outros modelos</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Vazão do rio</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Pólen</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>nenhum</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Vento a 10 m acima do solo.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Velocidade</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Rajadas</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Sensação térmica do vento</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Umidade relativa: quanto vapor de água o ar contém, em comparação com o máximo que ele pode conter nesta temperatura.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>seco</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>confortável</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>úmido</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Índice de calor</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>Índice UV: a intensidade da luz ultravioleta do sol.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>pouco risco, nenhuma proteção necessária</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>use protetor solar e chapéu, procure sombra ao meio-dia</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>proteção necessária, limite o tempo ao sol das 10 às 16 h</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>proteção extra necessária, evite o sol do meio-dia</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>a pele desprotegida queima em minutos, fique em ambiente fechado ao meio-dia</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Visibilidade: até que distância se enxerga com clareza.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>nevoeiro</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>névoa</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>moderada</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>boa</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Teto de nuvens</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>sem nuvens baixas</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>não disponível</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Pressão atmosférica ao nível do mar.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Agora</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Tendência</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Variação em 3 horas</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Pressão em queda costuma trazer nuvens e chuva. Pressão em alta costuma trazer melhora do tempo.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Ponto de orvalho: a temperatura em que o orvalho se forma. Mostra o quanto o ar parece úmido.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>seco</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>confortável</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>levemente úmido</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>úmido</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>abafado</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>opressivo</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Temperatura menos ponto de orvalho. Nevoeiro é provável quando está perto de 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Configurações do cartão</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>velocidade, rajadas, direção</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>umidade relativa, índice de calor</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>intensidade do sol e conselhos</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>qualidade do ar do Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>estação de água mais próxima, NOAA e USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>ondas e mar do Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>rajada máxima próximas 6 h, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS e ICON hoje</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>vazão de rios do Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>árvores, gramíneas e ambrósia</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>distância, teto de nuvens</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>nível do mar, tendência de 3 horas</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>conforto, chance de nevoeiro</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Árvores</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Níveis de pólen de nenhum a muito alto.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Dados: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>rajadas até {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>rajada máxima, próximas 6 horas</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>rajadas até {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Esta é uma previsão de modelo. O cartão Vento mostra o vento e as rajadas medidos agora. O cartão Água próxima mostra o vento medido na água, quando a estação tem sensor de vento.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Versão</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Baseado no FluentWeather 2.1.0 de Gabboxl. Atualizado por duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>O FluentWeather-Plus adiciona estes recursos ao FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Locais salvos, até 25, com atalhos de teclado.
+- Ícones de notificação com a temperatura, uma imagem do tempo e um painel flutuante com os detalhes escolhidos.
+- Dias anteriores: ontem e anteontem, ao lado de hoje.
+- Histórico completo: tempo diário e por hora de um local salvo desde 1940.
+- Um mapa de radar para locais dos EUA e a qualidade do ar para todos os locais.
+- Água próxima: a temperatura da água e o vento na estação mais próxima.
+- Dados extras: ondas, previsão do vento, outros modelos, vazão de rios e pólen.
+- Alertas de tempo severo na janela principal e como balão de notificação.
+- Mais dados: tempo do aeroporto, neve, estresse térmico, energia de tempestade, solo, nível de congelamento,
+  insolação, boias, réguas de rios, detalhes do dia, um gráfico por hora e a discussão do NWS.
+- Cartões de detalhes com mais informações ao passar o mouse, na ordem que você escolher.
+- Configurações de tamanho do texto, contraste do fundo, tonalidade dos cartões e intervalo de horas.
+- Uma configuração de idioma, um instalador direto e um relatório de falhas.
+- E muitas melhorias na interface.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Chuva e neve</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Qualidade do ar</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Nuvens e sol</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Roda: zoom. Shift+roda ou arrastar: rolar.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Aumentar zoom</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Diminuir zoom</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Ajustar</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mostrar o ano todo</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} a {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Carregando horas</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Clique para ampliar este dia.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Temperatura e ponto de orvalho, graus {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Vento e rajada máximos diários, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Vento e rajadas, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Precipitação ({0}) e neve ({1}) diárias</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Precipitação ({0}) e neve ({1}) por hora</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Máximo diário de {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} por hora</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Umidade média diária (%) e ponto de orvalho</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Umidade (%) e ponto de orvalho</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Pressão média diária ao nível do mar, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Pressão ao nível do mar, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Nebulosidade média diária (%) e horas de sol</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Nebulosidade (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Rajadas</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Precipitação</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Insolação (h)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Nebulosidade</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>IQA dos EUA</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>IQA europeu</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Sem dados de qualidade do ar para este período. Eles começam em agosto de 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Rajada</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Nuvens</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Precip.</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Máx.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Mín.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Ainda não há dados para este período.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Fonte dos dados do tempo</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Automático</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Automático usa o weather.com e muda para o Open-Meteo quando o weather.com falha duas vezes seguidas. Uma conexão de internet perdida não conta. Ele tenta o weather.com de novo a cada hora. Com o Open-Meteo, o boletim do aeroporto mais próximo num raio de 50 km fornece o teto de nuvens e as medições. O pólen dos EUA fica vazio.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Dados: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Dados: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Dados: Open-Meteo e estação {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>até {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>e mais {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Detalhes ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Ocultar detalhes</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Emitido {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Área: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Carregando o texto completo...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>O texto completo não está disponível.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Fonte: alertas do weather.com, do serviço meteorológico nacional do país.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Fonte: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Notificação</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Alertas de tempo severo</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Tempo agora (aeroporto)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Neve, últimas 1, 6 e 24 h</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Estresse térmico (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Energia de tempestade e risco de trovoada</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Solo e profundidade da neve</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Nível de congelamento</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Insolação e evaporação</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Boia: ondas, ar e maré</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Régua de rio (EUA)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Detalhes do dia: trovoada, neve, vento</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Gráfico por hora, próximas 12 h na notificação</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Discussão do meteorologista (EUA)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Alertas na janela principal</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Todos os alertas</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Avisos e vigilâncias</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Somente avisos</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Principal mostra o item nesta janela. Um cartão fica oculto quando o local não tem dados. Notificação adiciona uma linha que você pode marcar no menu dos ícones de notificação, em Detalhes ao passar o mouse. Esse menu também define quando o balão de alerta aparece e por quanto tempo fica. Os cinco primeiros itens vêm do open-meteo.com, com no máximo uma solicitação por hora para cada local. Os alertas ficam ativados por padrão. Os outros itens ficam desativados por padrão. Passe o mouse sobre um nome para ver a fonte.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Uma faixa abaixo do nome do local para cada alerta ativo. Fonte: weather.com, com o National Weather Service como reserva para locais dos EUA.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Tempo e categoria de voo do boletim do aeroporto mais próximo, no cartão Visibilidade. O texto flutuante acrescenta a previsão do aeroporto. Fonte: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Neve das últimas 1, 6 e 24 horas. Fonte: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Temperatura de globo e bulbo úmido, uma medida do estresse térmico para trabalho e esporte. Fonte: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Energia de tempestade (CAPE) e o risco de trovoada de hoje. Fontes: Open-Meteo e weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Temperatura do solo a 6 cm, umidade do solo e profundidade da neve. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>A altura do nível de 0 grau. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Insolação de hoje, luz do dia, radiação solar e evaporação. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Ondas, período e direção das ondas, ar, pressão e maré na boia da NOAA ou estação maregráfica mais próxima num raio de 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Altura e vazão do rio e os últimos 7 dias na régua do USGS mais próxima num raio de 40 km. Somente EUA.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Risco de trovoada e quantidade de neve nos botões dos dias, e texto do vento, observações e quantidades nos detalhes do dia. Fonte: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Um gráfico abaixo da previsão por hora com chuva, neve, gelo, probabilidade, insolação e horas severas. A linha de notificação dá as quantidades das próximas 12 horas.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>A discussão do meteorologista do escritório local do National Weather Service, abaixo do mapa de radar. Somente EUA.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Neve, 6 h</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Estresse térmico</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Energia de tempestade</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Solo</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Nível de congelamento</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Insolação</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Boia</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Régua de rio</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>sem chuva, neve ou nevoeiro</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Boletim do aeroporto: {0} ({1}), a {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Tempo:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Categoria de voo:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>boa visibilidade e teto</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>marginal: teto de 1.000 a 3.000 ft ou visibilidade de 3 a 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>baixo: teto de 500 a 1.000 ft ou visibilidade de 1 a 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>muito baixo: teto abaixo de 500 ft ou visibilidade abaixo de 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Teto de nuvens no aeroporto:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Previsão do aeroporto ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Boletins originais:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Fonte: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>A partir de {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Mudança às {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Às vezes a partir das {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0}% de probabilidade</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>sem teto</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>teto {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 h: {0}, 24 h: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Neve medida no local.
+Última hora: {0}
+Últimas 6 horas: {1}
+Últimas 24 horas: {2}
+
+Fonte: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 h: {0}, 6 h: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Baixo</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Moderado</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Muito alto</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Extremo</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Temperatura de globo e bulbo úmido: {0}, estresse térmico {1}.
+Ela combina temperatura, umidade, vento e sol. As normas de trabalho e esporte a usam. O estresse térmico começa perto de 25 C (77 F) e é extremo acima de 32 C (90 F).
+
+Fonte: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Muito baixo</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Baixo</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Moderado</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Extremo</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Risco de trovoada {0} de 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} de 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>A energia de tempestade (CAPE) é a energia que o ar ascendente pode ganhar. As trovoadas precisam dela. Abaixo de 300 J/kg as trovoadas são improváveis. Acima de 2.500 J/kg trovoadas fortes são possíveis quando algo eleva o ar.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Agora: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Máximo hoje: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Fontes: Open-Meteo.com (CC BY 4.0) para a energia de tempestade, weather.com para o risco de trovoada.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Umidade {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Profundidade da neve {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>nenhuma</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Temperatura do solo a 6 cm: {0}
+Umidade do solo de 3 a 9 cm: {1}
+Profundidade da neve: {2}
+
+Os valores vêm de um modelo meteorológico e não de um sensor. Fonte: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, umidade {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>No solo</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>acima do nível do mar</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Nível de congelamento: {0} acima do nível do mar.
+Acima desta altura o ar está abaixo de 0 C (32 F). A neve que cai de cima derrete abaixo dela.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Altitude do local: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>de {0} de luz do dia</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Sol hoje: {0}
+Luz do dia hoje: {1}
+Radiação solar agora: {2}
+Evaporação hoje: {3}
+
+A evaporação é a evapotranspiração de referência (FAO-56). Ela indica quanta água um gramado perde em um dia. Fonte: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} de {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>a cada {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>de {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Maré {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), a {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Ondas:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Ar:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Água:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Pressão:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Maré, acima do zero da estação:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Fonte: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Subindo</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Descendo</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Estável</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), a {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Vazão:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Variação nas últimas 3 horas: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Últimos 7 dias: {0}, de {1} a {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>A altura é medida a partir do zero da régua e não do leito do rio. Fonte: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Vento: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Vento à noite: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Observação: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>neve {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Quantidades: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Quantidades: nenhuma</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Barras: chuva (azul), neve como água (branco), gelo (ciano). Linha tracejada: probabilidade. Amarelo: sol. Marca vermelha: hora de tempo severo.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Chuva, neve e gelo por hora do weather.com. A neve é desenhada como água, cerca de 10 para 1. A linha tracejada é a probabilidade de precipitação. A barra amarela no topo é o sol da hora do Open-Meteo. Uma marca vermelha mostra uma hora que o weather.com classifica como severa.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Total das horas mostradas: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>nenhuma</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Seco, probabilidade {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>probabilidade {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>chuva {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>neve {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>gelo {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Discussão do meteorologista, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Emitido {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Fonte: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Mostrar tudo</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Mostrar menos</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Abaixo de 0 C na superfície</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>O ar está abaixo de 0 C (32 F) desde o solo. A neve não derrete na descida.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Fonte: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Agora</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>agora</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Altura e período das ondas, swell e temperatura da superfície do mar do modelo marinho do Open-Meteo, para pontos no mar ou perto dele. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>A rajada mais forte das próximas 6 horas, a rajada do modelo agora e o vento a 80 m. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Máxima, mínima e precipitação de hoje dos modelos ECMWF, GFS e ICON. Fonte: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vazão do rio modelada hoje e a vazão usual para o dia (GloFAS). Fonte: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Níveis de árvores, gramíneas e ambrósia. Fonte: weather.com nos EUA e em alguns outros países, Open-Meteo na Europa.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>Por hora 10 dias</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cada hora da previsão, cerca de 10 dias</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Voltar para a janela principal (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Previsão por hora de 10 dias</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tabela</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Visão geral</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Sensação</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Precipitação</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Rajadas</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>Índice UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Nebulosidade</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Visibilidade</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>A página mostra a previsão por hora que o aplicativo já carregou para o local mostrado. Outro local é carregado quando é escolhido. Os horários são locais do lugar. Um clique no gráfico rola a lista até essa hora. Em Lista, um clique em uma linha abre seus outros valores.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Local mostrado</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, atualizado {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Sem previsão por hora para este local</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Sem rajadas nesta previsão</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>nenhuma</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} horas     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} de neve</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>rajadas {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>sensação {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>chuva</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>neve</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>precipitação</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Céu</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Sens.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Prob.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Quant.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Chuva</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Gelo</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Orvalho</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Rajada</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Nuvens</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Visib.</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Sensação térmica</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Rajada de vento</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>Índice UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Nebulosidade</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Visibilidade</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Sensação térmica</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Probabilidade de precipitação</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Chuva</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Rajadas</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperatura ({0}) e probabilidade de precipitação</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Sensação térmica e temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Chuva ({0}) e neve ({1}) por hora, e probabilidade de precipitação</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Vento e rajadas, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Rajadas de vento, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Umidade, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>Índice UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Nebulosidade, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Visibilidade, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Ponto de orvalho e temperatura, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Pressão ao nível do mar, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Máximas</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Mínimas</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Rolar para a esquerda</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Rolar para a direita</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Ensolarado</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Céu limpo</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Predominantemente ensolarado</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Predominantemente limpo</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Parcialmente nublado</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Nublado</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Predominantemente nublado</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Nevoeiro</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Nevoeiro congelante</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Garoa fraca</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Garoa</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Garoa forte</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Garoa congelante</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Chuva fraca</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Chuva</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Chuva forte</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Chuva congelante</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Neve fraca</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Neve</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Neve forte</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Grãos de neve</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Pancada de chuva fraca</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Pancada de chuva</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Pancada de chuva forte</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Pancada de neve</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Pancada de neve forte</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Trovoada</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Trovoada com granizo</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Tempo bom</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Hoje</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Esta noite</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Amanhã</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Amanhã à noite</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} à noite</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Ventos fracos e variáveis.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Ventos de {0} de {1} a {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Chance de chuva {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Chance de neve {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Máxima {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Mínima {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Trovoada prevista</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Sem trovoada</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Excelente</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Bom</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Razoável</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Ruim</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Muito ruim</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Muito baixo</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Baixo</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Moderado</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Muito alto</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Extremo</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Preocupação baixa</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Preocupação moderada</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Preocupação alta</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Preocupação extrema</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>NNE</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>NE</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ENE</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ESE</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>SE</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>SSE</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SSO</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>SO</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>OSO</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>ONO</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>NNO</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>CALMO</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>fraca</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>forte</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>nas proximidades</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>trovoada</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>pancadas</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>rasa</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>bancos de</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>parcial</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>baixa de</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>alta de</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>pancadas de</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>trovoada com</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>congelante</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>garoa</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>chuva</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>neve</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>grãos de neve</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>cristais de gelo</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>pelotas de gelo</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>granizo</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>granizo pequeno</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>precipitação desconhecida</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>névoa úmida</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>nevoeiro</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>fumaça</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>cinza vulcânica</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>poeira</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>areia</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>névoa seca</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>borrifo</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>redemoinhos de poeira</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>rajadas fortes</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>nuvem funil</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>tempestade de areia</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>tempestade de poeira</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, rajadas {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Falha ao atualizar os dados do tempo</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>O Windows bloqueou a conexão com o serviço de tempo. Um firewall, antivírus, VPN ou proxy pode estar bloqueando o FluentWeather-Plus. Permita o FluentWeather-Plus nesse programa ou tente novamente com a VPN desligada.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Não foi possível atualizar os dados do tempo. Verifique sua conexão com a Internet.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Desligado</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Condições</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Sensação térmica</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Máx. / mín. em 24 h</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Variação em 24 h</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Ponto de orvalho</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Índice de calor</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Sensação pelo vento</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Umidade</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Vento</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>Índice UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Pressão</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Visibilidade</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Teto de nuvens</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Chuva, última hora</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Chuva, últimas 6 h</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Chuva, últimas 24 h</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Neve, últimas 24 h</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Nascer do sol</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Pôr do sol</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Fase da lua</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Nascer da lua</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Pôr da lua</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Observado às</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Estação mais próxima</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Temperatura da água</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Vento na estação de água</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Ondas e temperatura do mar</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Previsão do vento (rajadas, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Outros modelos</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Vazão do rio</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Pólen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Alerta de tempo</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Tempo agora (aeroporto)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Neve, última 1 h e 6 h</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Risco de trovoada hoje</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Estresse térmico (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Nível de congelamento</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Temperatura e umidade do solo</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Sol hoje</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Boia: ondas e maré</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Nível e vazão do rio</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Chuva, neve e gelo nas próximas 12 h</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>E mais {0} alerta.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>E mais {0} alertas.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>E mais {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Fecha em {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Alerta do FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Mostrar detalhes</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: aguardando a próxima atualização de dados</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: ainda sem dados. Abra o aplicativo uma vez.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: sem atualização desde {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, sensação {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Mesma cidade do aplicativo.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Escolhida na área de notificação.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Atualizado {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Alertas de tempo severo</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Mostrar alertas</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Desligado</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Avisos</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Avisos e observações</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Todos os alertas</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Respeitar Não incomodar (usar notificações do Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>As notificações do Windows aguardam enquanto Não incomodar está ativado. O balão não aguarda.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Fechar o balão após</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Nunca</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} segundos</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minuto</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minutos</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Locais</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>A cidade mostrada na área de notificação</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Todos os locais salvos</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Mostrar um alerta de teste</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Mostra a aparência de um alerta com as opções atuais. Não é um alerta real.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Alerta de teste</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>até {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Sua cidade</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Isto é um teste. Um alerta real mostra aqui o resumo do serviço de tempo.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>O aplicativo envia alertas quando a caixa Notificação de Alertas de tempo severo está marcada nas configurações do aplicativo.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Abrir {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>O número mostra a temperatura</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>O número mostra a sensação térmica</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Detalhes ao passar o mouse</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Mostrar tudo</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Restaurar padrões</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Nenhum local salvo. Use a estrela no aplicativo.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>A área de notificação mostra (a janela do aplicativo permanece fechada)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Mesma cidade do aplicativo</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Reiniciar o FluentWeather (aplicativo e ícones da área de notificação)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Fechar a janela do FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Sair dos ícones da área de notificação</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Inicie-os novamente pelo menu Iniciar: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Sair dos ícones da área de notificação e fechar o FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>O aplicativo ainda não está instalado. Execute primeiro a instalação.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Não foi possível reiniciar. Use o item do menu Iniciar "Restart FluentWeather".</value>
+  </data>
 </root>

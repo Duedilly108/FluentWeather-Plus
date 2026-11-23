@@ -1,3 +1,4 @@
+using FluentWeather.Helpers;
 using FluentWeather.Utils;
 using System;
 using System.Collections.Concurrent;
@@ -261,8 +262,9 @@ namespace FluentWeather.Services
             return new TafReport { Id = Text(t, "icaoId") ?? "", Raw = Text(t, "rawTAF") ?? "", Periods = periods };
         }
 
-        // Weather codes of airport reports in words. The words are English, as in the reports.
-        // "-SN BR" becomes "light snow, mist".
+        // Weather codes of airport reports in words. "-SN BR" becomes "light snow, mist" in English.
+        // Local build (v55): each word comes from the string resources (key "Wx" + code) in the
+        // language of the app. The words below are the English fallback.
         private static readonly Dictionary<string, string> WxWords = new()
         {
             ["MI"] = "shallow", ["BC"] = "patches of", ["PR"] = "partial", ["DR"] = "drifting", ["BL"] = "blowing",
@@ -284,19 +286,19 @@ namespace FluentWeather.Services
             {
                 var g = raw;
                 var words = new List<string>();
-                if (g.StartsWith("-")) { words.Add("light"); g = g[1..]; }
-                else if (g.StartsWith("+")) { words.Add("heavy"); g = g[1..]; }
+                if (g.StartsWith("-")) { words.Add(Loc.Get("WxLight", "light")); g = g[1..]; }
+                else if (g.StartsWith("+")) { words.Add(Loc.Get("WxHeavy", "heavy")); g = g[1..]; }
                 var nearby = false;
                 if (g.StartsWith("VC")) { nearby = true; g = g[2..]; }
-                if (g == "TS") { words.Add("thunderstorm"); g = ""; }
-                if (g == "SH") { words.Add("showers"); g = ""; }
+                if (g == "TS") { words.Add(Loc.Get("WxThunderstorm", "thunderstorm")); g = ""; }
+                if (g == "SH") { words.Add(Loc.Get("WxShowers", "showers")); g = ""; }
                 for (var i = 0; i + 2 <= g.Length; i += 2)
                 {
                     var code = g.Substring(i, 2);
-                    words.Add(WxWords.TryGetValue(code, out var word) ? word : code);
+                    words.Add(WxWords.TryGetValue(code, out var word) ? Loc.Get("Wx" + code, word) : code);
                 }
                 if (nearby)
-                    words.Add("nearby");
+                    words.Add(Loc.Get("WxNearby", "nearby"));
                 if (words.Count > 0)
                     groups.Add(string.Join(" ", words));
             }

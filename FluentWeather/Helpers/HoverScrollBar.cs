@@ -27,7 +27,7 @@ namespace FluentWeather.Helpers
     /// </summary>
     public sealed class HoverScrollBar
     {
-        public const double BarThickness = 3;
+        public const double BarThickness = 5;
         public const double ArrowSize = 16;
         public const double BarHeight = ArrowSize;
         public const double Gap = 6;

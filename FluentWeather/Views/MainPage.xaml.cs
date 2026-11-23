@@ -193,6 +193,9 @@ namespace FluentWeather.Views
             HoverScrollBar.Attach(DaysScroll, DayCardPitch, StepDays);
             HoverScrollBar.Attach(HourlyListview, 200);
 
+            // Local build (v54): the moon button shows whether the day buttons have a moon row.
+            MoonRowToggle.IsChecked = DayButtonAdapter.ShowMoon;
+
             DataContext = this; //DataContext = ViewModel;
             Initialize();
         }
@@ -290,7 +293,7 @@ namespace FluentWeather.Views
         private static string GetFullVersionDescription()
         {
             var version = Package.Current.Id.Version;
-            return $"Build {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
+            return Loc.Format("VersionBuild", "Build {0}", $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}");
         }
 
         private static string GetVersionDescription()
@@ -410,14 +413,14 @@ namespace FluentWeather.Views
                         {
                             ContentDialog noWifiDialog = new()
                             {
-                                Title = "Weather data update failed",
+                                Title = Loc.Get("UpdateFailedTitle", "Weather data update failed"),
                                 Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
                                 // Local build: error 10013 means Windows blocked the connection. The internet can still work.
                                 Content = (ApiUtils.IsConnectionBlocked(e)
-                                              ? "Windows blocked the connection to the weather service. A firewall, antivirus program, VPN or proxy may be blocking FluentWeather-Plus. Allow FluentWeather-Plus in that program, or try again with the VPN turned off.\n\n"
-                                              : "We couldn't update weather data. Verify your internet connection.\n\n")
+                                              ? Loc.Get("UpdateFailedBlocked", "Windows blocked the connection to the weather service. A firewall, antivirus program, VPN or proxy may be blocking FluentWeather-Plus. Allow FluentWeather-Plus in that program, or try again with the VPN turned off.") + "\n\n"
+                                              : Loc.Get("UpdateFailedNoInternet", "We couldn't update weather data. Verify your internet connection.") + "\n\n")
                                           + e.InnerException?.Message,
-                                CloseButtonText = "OK",
+                                CloseButtonText = Loc.Get("DialogOk", "OK"),
                                 Tag = "WeatherDataUpdateFailedDialog"
                             };
                         
@@ -621,6 +624,9 @@ namespace FluentWeather.Views
             // Local build: the "Day details" setting adds thunder and snow marks to the buttons.
             DayButtonAdapter.ShowBadges = await MoreDataService.IsOnAsync(MoreItem.Days, false);
             DayButtonAdapter.Units = currentUnits;
+            // Local build (v54): the moon row of the day buttons, set with the moon button.
+            DayButtonAdapter.ShowMoon = MoonCards.IsOn();
+            MoonRowToggle.IsChecked = DayButtonAdapter.ShowMoon;
             List<DayButtonAdapter> dayButtonAdapters = [];
 
             int i = 0;
@@ -804,12 +810,11 @@ namespace FluentWeather.Views
                 ? "--"
                 : await VariousUtils.GetTimeBasedOnUserSettings(moonsetTime.Value.DateTime);
 
-            //lunar phase
-            var lunarPhase = _lastApiData.v3wxforecastdaily10day.moonPhase[indexOfDayDailyData];
-            LunarphaseText.Text = lunarPhase;
-
-            //moon phase icon
-            var moonPhaseIcon = _lastApiData.v3wxforecastdaily10day.moonPhaseCode[indexOfDayDailyData];
+            // Local build (v55): weather.com's phase name when it is in the language of the app, the app's
+            // own name otherwise (MoonMath.DisplayName). A missing code falls back to the computed phase.
+            var moonAge = MoonMath.AgeAtLocalNoon(_lastApiData.v3wxforecastdaily10day.validTimeLocal[indexOfDayDailyData]);
+            var moonPhaseIcon = MoonMath.CodeOrComputed(_lastApiData.v3wxforecastdaily10day.moonPhaseCode[indexOfDayDailyData], moonAge);
+            LunarphaseText.Text = MoonMath.DisplayName(_lastApiData.v3wxforecastdaily10day.moonPhase[indexOfDayDailyData], moonPhaseIcon, moonAge);
 
             var svgImageSource = new SvgImageSource(new Uri($"ms-appx:///Assets/varicons/{moonPhaseIcon}.svg"));
             LunarphaseIcon.Source = svgImageSource;
@@ -2303,7 +2308,8 @@ namespace FluentWeather.Views
                 var wind = "TipWindIntro".GetLocalized() + "\n" +
                            "TipWindSpeed".GetLocalized() + ": " + obs.windSpeed + speed + "\n" +
                            "TipWindDirection".GetLocalized() + ": " + obs.windDirectionCardinal +
-                           (obs.windDirectionCardinal is "CALM" or "VAR" ? "" : " (" + obs.windDirection + "°)");
+                           (obs.windDirectionCardinal is "CALM" or "VAR" || obs.windDirectionCardinal == Loc.Get("DirCalm", "CALM") || obs.windDirectionCardinal == Loc.Get("DirVariable", "VAR")
+                               ? "" : " (" + obs.windDirection + "°)");
                 wind += "\n" + "TipWindGusts".GetLocalized() + ": " + (obs.windGust != null ? obs.windGust + speed : "TipNone".GetLocalized());
                 if (obs.temperatureWindChill < obs.temperature)
                     wind += "\n" + "TipWindChill".GetLocalized() + ": " + obs.temperatureWindChill + degrees;
@@ -2916,32 +2922,100 @@ namespace FluentWeather.Views
                 panel.Children.Add(drop);
             }
 
+            // Local build (v54): the recorded days hold no moon data, so the phase comes from the date.
+            var age = MoonMath.AgeAtLocalNoon(new DateTimeOffset(date, locationNow.Offset));
+            var moonPercent = MoonMath.LitPercent(age);
+            var moonName = MoonMath.PhaseName(MoonMath.PhaseCode(age));
+            var moonRow = MoonCards.CreateRow(moonName, moonPercent, MoonMath.IsWaxing(age));
+            moonRow.Visibility = DayButtonAdapter.ShowMoon ? Visibility.Visible : Visibility.Collapsed;
+            Grid.SetRow(panel, 0);
+            Grid.SetRow(moonRow, 1);
+
+            var content = new Grid
+            {
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch
+            };
+            content.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            content.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+            content.Children.Add(panel);
+            content.Children.Add(moonRow);
+
+            var description = string.IsNullOrEmpty(record.Phrase) ? title : title + ": " + record.Phrase;
             var card = new Button
             {
-                Width = 135,
-                Height = 70,
+                Width = MoonCards.CardWidth,
+                Height = DayButtonAdapter.ShowMoon ? MoonCards.HeightWithMoon : MoonCards.HeightWithoutMoon,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Stretch,
                 VerticalContentAlignment = VerticalAlignment.Stretch,
-                Content = panel
+                Content = content,
+                Tag = (description, moonName + ", " + MoonCards.LitText(moonPercent), temperatures)
             };
 
-            var description = string.IsNullOrEmpty(record.Phrase) ? title : title + ": " + record.Phrase;
-            ToolTipService.SetToolTip(card, description);
-            AutomationProperties.SetName(card, description + ", " + temperatures);
+            ApplyPastCardTips(card);
             return card;
         }
 
+        /// <summary>
+        /// Local build (v54): the hover text and the screen reader name of a past day card. They
+        /// include the moon phase while the moon row is on.
+        /// </summary>
+        private static void ApplyPastCardTips(Button card)
+        {
+            if (card.Tag is not ValueTuple<string, string, string> tips)
+                return;
+
+            var showMoon = DayButtonAdapter.ShowMoon;
+            ToolTipService.SetToolTip(card, showMoon ? tips.Item1 + "\n" + tips.Item2 : tips.Item1);
+            AutomationProperties.SetName(card, tips.Item1 + ", " + tips.Item3 + (showMoon ? ", " + tips.Item2 : ""));
+        }
+
+        // --- Moon row on the day cards (v54) ---
+        // The moon button in the title of the daily forecast turns the moon row of every day card on
+        // and off. The cards that exist change in place, so the selected day and the scroll position stay.
+        // Cards that the row makes later take the setting from DayButtonAdapter.ShowMoon.
+
+        private void MoonRowToggle_OnClick(object sender, RoutedEventArgs e)
+        {
+            var on = MoonRowToggle.IsChecked == true;
+            MoonCards.SetOn(on);
+            DayButtonAdapter.ShowMoon = on;
+            ApplyMoonRow();
+        }
+
+        private void ApplyMoonRow()
+        {
+            var on = DayButtonAdapter.ShowMoon;
+
+            var count = RepeaterDays.ItemsSourceView?.Count ?? 0;
+            for (var i = 0; i < count; i++)
+            {
+                if (RepeaterDays.TryGetElement(i) is Button dayButton)
+                {
+                    MoonCards.SetRowVisible(dayButton, on);
+                    if (dayButton.DataContext is DayButtonAdapter adapter)
+                        ToolTipService.SetToolTip(dayButton, adapter.MoonToolTip);
+                }
+            }
+
+            foreach (var pastCard in PastDaysPanel.Children.OfType<Button>())
+            {
+                MoonCards.SetRowVisible(pastCard, on);
+                ApplyPastCardTips(pastCard);
+            }
+        }
+
         // --- Day row scrolling ---
-        // Every day card is 135 pixels wide with 8 pixels between cards, the past day cards too.
-        // So each card starts at a multiple of 143 pixels. The row can be scrolled freely with the
+        // Every day card is 186 pixels wide with 8 pixels between cards, the past day cards too.
+        // So each card starts at a multiple of 194 pixels. The row can be scrolled freely with the
         // scroll bar, touch or a touchpad. When the scroll ends it moves to the nearest card, so no
         // card is left cut off. Each mouse wheel notch over the row moves it by exactly one card,
         // whatever the Windows wheel setting is. The arrow keys move one card, Home and End go to
         // the ends. When all days fit, the row does not scroll and the wheel scrolls the page.
 
-        private const double DayCardPitch = 143;
+        private const double DayCardPitch = MoonCards.CardWidth + 8;
         private const int WheelNotch = 120;
 
         private int _dayWheelDelta;

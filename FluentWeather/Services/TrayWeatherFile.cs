@@ -44,6 +44,7 @@ namespace FluentWeather.Services
         {
             try
             {
+                await TrayStringsFile.EnsureAsync();
                 var units = await VariousUtils.GetUnitsCode();
                 var daily = data.v3wxforecastdaily10day;
                 var point = data.v3locationpoint?.LocationV3;
@@ -69,6 +70,7 @@ namespace FluentWeather.Services
         {
             try
             {
+                await TrayStringsFile.EnsureAsync();
                 var placeId = await ApplicationData.Current.LocalSettings.ReadAsync<string>("lastPlaceId");
                 if (string.IsNullOrEmpty(placeId))
                     return;
@@ -406,7 +408,7 @@ namespace FluentWeather.Services
 
             var wind = (obs.windDirectionCardinal + " " + obs.windSpeed + " " + MeasureUnitUtils.GetWindSpeedUnits(units)).Trim();
             if (obs.windGust.HasValue)
-                wind += ", gusts " + obs.windGust.Value;
+                wind += Loc.Format("TrayGustsSuffix", ", gusts {0}", obs.windGust.Value);
             Add("Wind", wind);
 
             Add("UV", obs.uvIndex + (string.IsNullOrEmpty(obs.uvDescription) ? string.Empty : " (" + obs.uvDescription + ")"));

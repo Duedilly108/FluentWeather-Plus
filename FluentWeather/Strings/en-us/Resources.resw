@@ -1244,7 +1244,7 @@ Live Tiles are available natively on Windows 10 only.</value>
     <value>Open-Meteo</value>
   </data>
   <data name="DataSourceHint.Text" xml:space="preserve">
-    <value>Automatic uses weather.com and switches to Open-Meteo if weather.com stops accepting the app. It tries weather.com again every hour. With Open-Meteo the nearest airport report within 50 km gives the cloud ceiling and the measured readings. US pollen stays empty, and the forecast text is in English.</value>
+    <value>Automatic uses weather.com and switches to Open-Meteo when weather.com fails twice in a row. A lost internet connection does not count. It tries weather.com again every hour. With Open-Meteo the nearest airport report within 50 km gives the cloud ceiling and the measured readings. US pollen stays empty.</value>
   </data>
   <data name="DataSourceNote.Text" xml:space="preserve">
     <value>Data: Open-Meteo</value>
@@ -1959,5 +1959,686 @@ Evaporation is the reference evapotranspiration (FAO-56). It tells how much wate
   </data>
   <data name="ScrollBarRightName" xml:space="preserve">
     <value>Scroll right</value>
+  </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Show or hide the moon phase on the day cards</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Show or hide the moon phase on the day cards</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% lit</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>New Moon</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Waxing Crescent</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>First Quarter</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Waxing Gibbous</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Full Moon</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Waning Gibbous</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Last Quarter</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Waning Crescent</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Sunny</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Mostly Sunny</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Mostly Clear</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Partly Cloudy</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Cloudy</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Mostly Cloudy</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Fog</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Freezing Fog</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Light Drizzle</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Drizzle</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Heavy Drizzle</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Freezing Drizzle</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Light Rain</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Rain</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Heavy Rain</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Freezing Rain</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Light Snow</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Heavy Snow</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Snow Grains</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Light Rain Shower</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Rain Shower</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Heavy Rain Shower</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Snow Shower</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Heavy Snow Shower</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Thunderstorm</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Thunderstorm with Hail</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Tonight</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Tomorrow night</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} night</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Winds light and variable.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Winds {0} at {1} to {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Chance of rain {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Chance of snow {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>High {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Low {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Thunder expected</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>No thunder</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Very Poor</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Very Low</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Very High</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Low Concern</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Moderate Concern</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>High Concern</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Extreme Concern</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>NNE</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>NE</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ENE</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ESE</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>SE</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>SSE</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SSW</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>SW</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>WSW</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>WNW</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>NW</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>NNW</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>CALM</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>light</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>heavy</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>nearby</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>thunderstorm</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>showers</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>shallow</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>patches of</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>partial</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>drifting</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>blowing</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>showers of</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>thunderstorm with</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>freezing</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>drizzle</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>rain</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>snow</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>snow grains</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>ice crystals</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>ice pellets</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>hail</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>small hail</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>unknown precipitation</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>mist</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>fog</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>smoke</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>volcanic ash</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>dust</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>sand</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>haze</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>spray</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>dust whirls</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>squalls</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>funnel cloud</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>sandstorm</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>dust storm</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, gusts {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Weather data update failed</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows blocked the connection to the weather service. A firewall, antivirus program, VPN or proxy may be blocking FluentWeather-Plus. Allow FluentWeather-Plus in that program, or try again with the VPN turned off.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>We couldn't update weather data. Verify your internet connection.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Feels like</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 h high / low</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 h change</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Dew point</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Heat index</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Wind chill</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV index</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Cloud ceiling</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Rain, last hour</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Rain, last 6 h</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Rain, last 24 h</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Snow, last 24 h</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Moon phase</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Moonrise</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Moonset</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Observed at</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Nearest station</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Water temperature</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Wind at water station</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Waves and sea temperature</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Wind forecast (gusts, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Other models</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>River flow</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Weather alert</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Weather now (airport)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Snow, last 1 h and 6 h</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Thunder risk today</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Heat stress (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Freezing level</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Soil temperature and moisture</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Sunshine today</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Buoy: waves and tide</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>River height and flow</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Next 12 h rain, snow and ice</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>And {0} more alert.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>And {0} more alerts.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>And {0} more.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Closes in {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus alert</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Show details</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: waiting for the next data refresh</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: no data yet. Open the app once.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: no update since {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, feels like {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Same city as the app.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Chosen in the tray.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Updated {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Severe weather alerts</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Show alerts</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Warnings and watches</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>All alerts</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Honor Do Not Disturb (use Windows notifications)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Windows notifications wait while Do Not Disturb is on. The bubble does not wait.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Close the bubble after</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} seconds</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minute</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>The city the tray shows</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>All saved locations</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Show a test alert</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Shows how an alert looks with the current choices. It is not a real alert.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Test alert</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>until {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Your city</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>This is a test. A real alert shows the summary of the weather service here.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>The app sends alerts when Severe weather alerts has its Tray box ticked in the app settings.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Open {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Number shows temperature</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Number shows feels-like temperature</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Hover details</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Show all</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Reset to defaults</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>No saved locations. Use the star in the app.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Tray shows (the app window stays closed)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Same city as the app</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Restart FluentWeather (app and tray icons)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Close FluentWeather window</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Exit tray icons</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Start them again from the Start menu: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Exit tray icons and close FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>The app is not installed yet. Run its setup first.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Could not restart. Use the Start menu item "Restart FluentWeather".</value>
   </data>
 </root>

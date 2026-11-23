@@ -575,7 +575,7 @@ function Write-Config($Cert) {
     } | ConvertTo-Json | Set-Content -LiteralPath $ConfigPath -Encoding UTF8
 }
 
-# Adds "FluentWeather local build" to Settings > Apps, so it can be removed from there.
+# Adds "FluentWeather-Plus build tools (setup and tray icons)" to Settings > Apps, so it can be removed from there.
 # The FluentWeather-Plus app has its own entry. Removing that one removes only the app.
 function Register-UninstallEntry {
     $setupPath = Join-Path $InstallDir 'Setup-FluentWeatherLocal.ps1'
@@ -596,7 +596,7 @@ function Register-UninstallEntry {
     foreach ($name in 'NoModify', 'NoRepair') {
         New-ItemProperty -Path $UninstallKey -Name $name -Value 1 -PropertyType DWord -Force | Out-Null
     }
-    Write-Ok 'Added "FluentWeather local build" to Settings > Apps. Uninstall it there to remove everything.'
+    Write-Ok 'Added "FluentWeather-Plus build tools (setup and tray icons)" to Settings > Apps. Uninstall it there to remove everything.'
 }
 
 # Start menu item that builds the single-file installer on the Desktop.

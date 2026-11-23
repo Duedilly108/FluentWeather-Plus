@@ -281,7 +281,8 @@ namespace FluentWeather.Services
         {
             string[] names = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
             var index = (int) Math.Round(((degrees % 360) + 360) % 360 / 22.5) % 16;
-            return names[index];
+            // Local build (v55): the letters are in the language of the app, for example "SO" for SE in German.
+            return Loc.Get("Dir" + names[index], names[index]);
         }
 
         // --- Open-Meteo Marine ---

@@ -297,4 +297,2348 @@
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Σφάλμα δικτύου, παρακαλούμε ελέγξτε τη σύνδεσή σας στο διαδίκτυο.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Εμφάνιση ή απόκρυψη της φάσης της Σελήνης στις κάρτες ημερών</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Εμφάνιση ή απόκρυψη της φάσης της Σελήνης στις κάρτες ημερών</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% φωτισμένη</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Νέα Σελήνη</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Αύξων μηνίσκος</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Πρώτο τέταρτο</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Αύξουσα αμφίκυρτη</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Πανσέληνος</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Φθίνουσα αμφίκυρτη</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Τελευταίο τέταρτο</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Φθίνων μηνίσκος</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Εικονίδια περιοχής ειδοποιήσεων</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Εμφάνιση εικονιδίων ειδοποιήσεων</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Εμφανίζει ή αποκρύπτει τα εικονίδια θερμοκρασίας και καιρού στη γραμμή εργασιών. Το κουμπί ακολουθεί την τρέχουσα κατάστασή τους.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Δεν έχει εγκατασταθεί</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>ενημέρωση από</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Βασισμένο στο</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Εκδόσεις</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ανανέωση</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ρυθμίσεις</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Αποθήκευση αυτής της τοποθεσίας</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Κατάργηση αυτής της τοποθεσίας από τις αποθηκευμένες</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Για να αποθηκεύσετε αυτήν την τοποθεσία, κάντε κλικ στο αστέρι δίπλα στο όνομά της. Οι αποθηκευμένες τοποθεσίες εμφανίζονται εδώ ως κουμπιά. Κάντε κλικ σε ένα κουμπί για να μεταβείτε σε εκείνη την τοποθεσία. Αναζητήστε άλλη τοποθεσία και κάντε κλικ στο αστέρι της για να την προσθέσετε.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Κάντε κλικ στο αστέρι δίπλα στο όνομα της τοποθεσίας για να την αποθηκεύσετε ή να την καταργήσετε. Κάντε δεξί κλικ σε ένα κουμπί τοποθεσίας για να το μετακινήσετε ή να το καταργήσετε. Τα Ctrl+1 έως Ctrl+9 αλλάζουν τοποθεσία.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Απόκρυψη αυτής της συμβουλής</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Αντίθεση φόντου</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Αρχικό</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Σκούρο</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Πιο σκούρο</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Ανοιχτό</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Πιο ανοιχτό</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Τα Σκούρο και Πιο σκούρο σκιάζουν την εικόνα φόντου και κρατούν ανοιχτόχρωμο κείμενο. Τα Ανοιχτό και Πιο ανοιχτό φωτίζουν την εικόνα και χρησιμοποιούν σκούρο κείμενο.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Απόχρωση καρτών</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Απόχρωση καρτών</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Χρωματίζει τις κάρτες ώστε το κείμενό τους να μένει ευανάγνωστο πάνω στην εικόνα φόντου. Το 0 τοις εκατό διατηρεί την αρχική εμφάνιση.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Χθες</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Ποιότητα αέρα</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Καλή</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Ικανοποιητική</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Μέτρια</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Κακή</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Πολύ κακή</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Εξαιρετικά κακή</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Βλαβερή για ευαίσθητους</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Βλαβερή</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Πολύ βλαβερή</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Επικίνδυνη</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Δείκτης ποιότητας αέρα ΗΠΑ</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Ευρωπαϊκός δείκτης ποιότητας αέρα</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Όζον</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Διοξείδιο του αζώτου</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Δεδομένα ποιότητας αέρα: Open-Meteo.com και Υπηρεσία Παρακολούθησης Ατμόσφαιρας Copernicus (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Ραντάρ</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Ραντάρ και σύνορα NOAA/NWS. Ανάγλυφο USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Ενημερώθηκε</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Φόρτωση του ραντάρ</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Δεν υπάρχει βροχή ή χιόνι σε αυτήν την περιοχή. Σμικρύνετε για να δείτε περισσότερα.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η φόρτωση του ραντάρ. Νέα προσπάθεια στην επόμενη ανανέωση.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Μεγέθυνση</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Μεγέθυνση</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Σμίκρυνση</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Σμίκρυνση</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Γλώσσα</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Προεπιλογή των Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Γλώσσα</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Χρήση αυτής της γλώσσας</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Άκυρο</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Επανεκκίνηση του FluentWeather;</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Η νέα γλώσσα ισχύει μετά την επανεκκίνηση του FluentWeather.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Επανεκκίνηση τώρα</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Αργότερα</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Ωριαία πρόγνωση</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Ημέρα</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 ώ.</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 ώ.</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 ώ.</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Η επιλογή Ημέρα δείχνει τις ώρες της επιλεγμένης ημέρας. Οι 24, 36 και 48 ώρες ξεκινούν τώρα για σήμερα και τα μεσάνυχτα για τις άλλες ημέρες.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Μέγεθος κειμένου και εικόνων</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Τα Ctrl+Πλην και Ctrl+Συν αλλάζουν επίσης το μέγεθος σε βήματα 5%. Το Ctrl+0 επαναφέρει στο 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Μετακίνηση αριστερά</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Μετακίνηση δεξιά</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Κατάργηση</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Συμπληρώθηκε το όριο αποθηκευμένων τοποθεσιών</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Μπορείτε να αποθηκεύσετε έως {0} τοποθεσίες. Καταργήστε μία για να προσθέσετε νέα.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Πίσω (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Πλήρες ιστορικό</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Έτος</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Αποθηκεύστε πρώτα μια τοποθεσία. Το παράθυρο ιστορικού δείχνει τις αποθηκευμένες τοποθεσίες.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Φόρτωση</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} ημέρες. {1} καταγεγραμμένες από την εφαρμογή, {2} από το αρχείο.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Ημερήσια μέγιστη και ελάχιστη, βαθμοί {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Δεδομένα αρχείου: Open-Meteo.com (CC BY 4.0). Δημιουργήθηκε με πληροφορίες της Υπηρεσίας Κλιματικής Αλλαγής Copernicus. Ποιότητα αέρα: Open-Meteo, CAMS (από τον Αύγουστο του 2022). Οι τιμές του αρχείου προέρχονται από μετεωρολογικό μοντέλο και μπορεί να διαφέρουν από τις καταγεγραμμένες τιμές.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Ημερομηνία</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Μέγ.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Ελάχ.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Υετός</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Καιρός</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Πηγή</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>καταγραφή</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>αρχείο</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Αίθριος</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Κυρίως αίθριος</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Μερικώς νεφελώδης</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Συννεφιά</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Ομίχλη</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Ψιχάλα</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Βροχή</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Μπόρες</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Χιονόμπορες</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Καταιγίδα</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Άγνωστο</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Κοντινά νερά</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Κάρτα στο κύριο παράθυρο</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Γραμμή στο αναδυόμενο πλαίσιο της περιοχής ειδοποιήσεων</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Κοντινά νερά</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>άνεμος στον σταθμό</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>τρέχων άνεμος για αυτήν την τοποθεσία, ο σταθμός δεν έχει αισθητήρα ανέμου</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>τοποθεσία</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>ριπές {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Πλησιέστερος υδρολογικός σταθμός με τρέχουσα μέτρηση.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Νερό</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Αέρας στον σταθμό</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>μόλις τώρα</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>πριν από {0} λεπ.</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>πριν από {0} ώ.</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Δεδομένα νερού: NOAA National Data Buoy Center (ndbc.noaa.gov) και USGS Water Data (waterdata.usgs.gov). Δημόσιος τομέας.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Κύματα</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Πλήρες ιστορικό</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ημερήσιο και ωριαίο ιστορικό αυτής της τοποθεσίας</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Πίσω</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Ο πλησιέστερος υδρολογικός σταθμός σε ακτίνα 50 km (31 mi) με μέτρηση νεότερη των 6 ωρών. Οι σημαδούρες και οι παράκτιοι σταθμοί NOAA NDBC καλύπτουν τις ακτές και τις Μεγάλες Λίμνες. Το USGS καλύπτει ποτάμια και ορισμένες λίμνες. Στη θάλασσα, χωρίς κοντινό σταθμό, χρησιμοποιείται το θαλάσσιο μοντέλο του Open-Meteo. Επιλέξτε τις γραμμές στο στοιχείο Λεπτομέρειες κατά την κατάδειξη, στο μενού της περιοχής ειδοποιήσεων.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Θαλάσσιο μοντέλο Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Άνεμος από το μοντέλο Open-Meteo, ο σταθμός δεν έχει αισθητήρα ανέμου</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo για αυτήν την τοποθεσία:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Περισσότερες επιλογές δεδομένων</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Κύριο</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Ειδοποιήσεις</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Κύματα και θερμοκρασία θάλασσας</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Πρόγνωση ανέμου (ριπές, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Άλλα μοντέλα</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Παροχή ποταμού</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Γύρη</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Κύματα</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Πρόγνωση ανέμου</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Άλλα μοντέλα</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Παροχή ποταμού</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Γύρη</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Δεδομένα: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} δ.</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Κύματα</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Αποθαλασσία</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Θερμοκρασία επιφάνειας θάλασσας</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>θάλασσα</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Θαλάσσιο μοντέλο Open-Meteo για αυτήν την τοποθεσία.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>έως {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Πρόγνωση ανέμου Open-Meteo για αυτήν την τοποθεσία.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Άνεμος τώρα</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Ριπές τώρα</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Ισχυρότερη ριπή, επόμενες 6 ώρες</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>μέγ. 6 ώ.</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Άνεμος στα 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Η σημερινή μέγιστη και ελάχιστη από τρία μετεωρολογικά μοντέλα. Μεγάλη διασπορά σημαίνει αβέβαιη πρόγνωση.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Μοντελοποιημένη παροχή του πλησιέστερου ποταμού (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Σήμερα</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Συνήθης για αυτήν την ημέρα</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% του συνήθους</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Κόκκοι ανά κυβικό μέτρο αέρα. Τα επίπεδα είναι κατά προσέγγιση.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Σκλήθρο</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Σημύδα</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Αγρωστώδη</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Αρτεμισία</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Ελιά</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Αμβροσία</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Κανένα</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>χαμηλό</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>μέτριο</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>υψηλό</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>πολύ υψηλό</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Εμφάνιση εικονιδίων ειδοποιήσεων</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Απόκρυψη εικονιδίων ειδοποιήσεων</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Μετακίνηση αριστερά</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Μετακίνηση δεξιά</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Μετακίνηση στην αρχή</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Μετακίνηση στο τέλος</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Απόκρυψη αυτής της κάρτας</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Προσθήκη κάρτας</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Εμφανίζονται όλες οι κάρτες</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Επαναφορά καρτών</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Κοντινά νερά</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Κύματα και θερμοκρασία θάλασσας</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Πρόγνωση ανέμου</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Άλλα μοντέλα</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Παροχή ποταμού</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Γύρη</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>κανένα</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Άνεμος στα 10 m πάνω από το έδαφος.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Ταχύτητα</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Από</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Ριπές</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Ψυχρότητα ανέμου</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Σχετική υγρασία: πόσους υδρατμούς περιέχει ο αέρας σε σύγκριση με το μέγιστο που μπορεί να περιέχει σε αυτήν τη θερμοκρασία.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>ξηρό</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>άνετο</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>υγρό</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Δείκτης θερμότητας</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>Δείκτης UV: η ένταση της υπεριώδους ακτινοβολίας του ήλιου.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>μικρός κίνδυνος, δεν χρειάζεται προστασία</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>αντηλιακό και καπέλο, αναζητήστε σκιά το μεσημέρι</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>χρειάζεται προστασία, περιορίστε την έκθεση στον ήλιο από 10 έως 4</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>χρειάζεται επιπλέον προστασία, αποφύγετε τον μεσημεριανό ήλιο</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>το απροστάτευτο δέρμα καίγεται σε λίγα λεπτά, μείνετε μέσα το μεσημέρι</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Ορατότητα: πόσο μακριά βλέπει κανείς καθαρά.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>ομίχλη</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>αχλή ή καταχνιά</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>μέτρια</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>καλή</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Βάση νεφών</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>χωρίς χαμηλά σύννεφα</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>μη διαθέσιμο</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Ατμοσφαιρική πίεση στη στάθμη της θάλασσας.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Τώρα</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Τάση</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Μεταβολή σε 3 ώρες</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Η πτώση της πίεσης φέρνει συχνά σύννεφα και βροχή. Η άνοδος της πίεσης φέρνει συχνά καλυτέρευση.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Σημείο δρόσου: η θερμοκρασία στην οποία σχηματίζεται δροσιά. Δείχνει πόσο υγρός φαίνεται ο αέρας.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>ξηρό</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>άνετο</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>ελαφρώς υγρό</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>υγρό</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>αποπνικτικό</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>καταπιεστικό</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Θερμοκρασία μείον σημείο δρόσου. Η ομίχλη είναι πιθανή όταν η τιμή είναι κοντά στο 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Ρυθμίσεις κάρτας</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>ταχύτητα, ριπές, διεύθυνση</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>σχετική υγρασία, δείκτης θερμότητας</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>ένταση ήλιου και συμβουλές</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>ποιότητα αέρα Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>πλησιέστερος υδρολογικός σταθμός, NOAA και USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>κύματα και θάλασσα Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>ισχυρότερη ριπή επόμενες 6 ώ., 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS και ICON σήμερα</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>παροχή ποταμών Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>δέντρα, αγρωστώδη και αμβροσία</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>απόσταση, βάση νεφών</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>στάθμη θάλασσας, τάση 3 ωρών</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>άνεση, πιθανότητα ομίχλης</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Δέντρα</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Επίπεδα γύρης από κανένα έως πολύ υψηλό.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Δεδομένα: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>ριπές έως {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>ισχυρότερη ριπή, επόμενες 6 ώρες</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>ριπές έως {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Πρόκειται για πρόγνωση μοντέλου. Η κάρτα Άνεμος δείχνει τον άνεμο και τις ριπές που μετρώνται τώρα. Η κάρτα Κοντινά νερά δείχνει τον άνεμο που μετριέται στο νερό, όταν ο σταθμός έχει αισθητήρα ανέμου.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Έκδοση</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Βασισμένο στο FluentWeather 2.1.0 του Gabboxl. Ενημέρωση από duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>Το FluentWeather-Plus προσθέτει αυτές τις λειτουργίες στο FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Αποθηκευμένες τοποθεσίες, έως 25, με συντομεύσεις πληκτρολογίου.
+- Εικονίδια ειδοποιήσεων με τη θερμοκρασία, μια εικόνα καιρού και ένα πλαίσιο επιλεγμένων λεπτομερειών κατά την κατάδειξη.
+- Προηγούμενες ημέρες: χθες και προχθές, δίπλα στο σήμερα.
+- Πλήρες ιστορικό: ημερήσιος και ωριαίος καιρός μιας αποθηκευμένης τοποθεσίας έως το 1940.
+- Χάρτης ραντάρ για τοποθεσίες στις ΗΠΑ και ποιότητα αέρα για κάθε τοποθεσία.
+- Κοντινά νερά: η θερμοκρασία του νερού και ο άνεμος στον πλησιέστερο σταθμό.
+- Επιπλέον δεδομένα: κύματα, πρόγνωση ανέμου, άλλα μοντέλα, παροχή ποταμών και γύρη.
+- Προειδοποιήσεις επικίνδυνου καιρού στο κύριο παράθυρο και ως συννεφάκι ειδοποίησης.
+- Περισσότερα δεδομένα: καιρός αεροδρομίου, χιόνι, θερμική καταπόνηση, ενέργεια καταιγίδας, έδαφος, ισόθερμη 0 °C,
+  ηλιοφάνεια, σημαδούρες, σταθμήμετρα ποταμών, λεπτομέρειες ημέρας, ωριαίο γράφημα και η ανάλυση της NWS.
+- Κάρτες λεπτομερειών με περισσότερα στοιχεία κατά την κατάδειξη, με όποια σειρά θέλετε.
+- Ρυθμίσεις για μέγεθος κειμένου, αντίθεση φόντου, απόχρωση καρτών και εύρος ωρών.
+- Ρύθμιση γλώσσας, πρόγραμμα άμεσης εγκατάστασης και αναφορά σφαλμάτων.
+- Και πολλές βελτιώσεις στη διεπαφή.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Θερμοκρασία</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Βροχή και χιόνι</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Ποιότητα αέρα</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Υγρασία</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Σύννεφα και ήλιος</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Τροχός: ζουμ. Shift+τροχός ή σύρσιμο: κύλιση.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Μεγέθυνση</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Σμίκρυνση</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Προσαρμογή</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Εμφάνιση όλου του έτους</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} έως {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Φόρτωση ωρών</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Κάντε κλικ για ζουμ σε αυτήν την ημέρα.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Θερμοκρασία και σημείο δρόσου, βαθμοί {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Ημερήσιος ισχυρότερος άνεμος και ριπή, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Άνεμος και ριπές, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Ημερήσιος υετός ({0}) και χιόνι ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Υετός ({0}) και χιόνι ({1}) ανά ώρα</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Ημερήσιο μέγιστο {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} ανά ώρα</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Ημερήσια μέση υγρασία (%) και σημείο δρόσου</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Υγρασία (%) και σημείο δρόσου</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Ημερήσια μέση πίεση στη στάθμη της θάλασσας, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Πίεση στη στάθμη της θάλασσας, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Ημερήσια μέση νεφοκάλυψη (%) και ώρες ηλιοφάνειας</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Νεφοκάλυψη (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Ριπές</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Υετός</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Υγρασία</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Ηλιοφάνεια (ώ.)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Νεφοκάλυψη</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Θερμοκρασία</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI ΗΠΑ</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Ευρωπαϊκός AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Δεν υπάρχουν δεδομένα ποιότητας αέρα για αυτήν την περίοδο. Ξεκινούν τον Αύγουστο του 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Ώρα</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Θερμ.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Υγρασία</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Ριπή</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Από</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Σύννεφα</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Ήλιος</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Υετός</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Μέγ.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Ελάχ.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Δεν υπάρχουν ακόμη δεδομένα για αυτήν την περίοδο.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Πηγή μετεωρολογικών δεδομένων</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Αυτόματα</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Η επιλογή Αυτόματα χρησιμοποιεί το weather.com και αλλάζει στο Open-Meteo όταν το weather.com αποτύχει δύο φορές στη σειρά. Η απώλεια σύνδεσης στο διαδίκτυο δεν μετράει. Δοκιμάζει ξανά το weather.com κάθε ώρα. Με το Open-Meteo, το πλησιέστερο δελτίο αεροδρομίου σε ακτίνα 50 km δίνει τη βάση νεφών και τις μετρήσεις. Η γύρη των ΗΠΑ μένει κενή.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Δεδομένα: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Δεδομένα: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Δεδομένα: Open-Meteo και σταθμός {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>έως {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>και {0} ακόμη</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Λεπτομέρειες ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Απόκρυψη λεπτομερειών</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Εκδόθηκε {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Περιοχή: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Φόρτωση πλήρους κειμένου...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Το πλήρες κείμενο δεν είναι διαθέσιμο.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Πηγή: προειδοποιήσεις weather.com, από την εθνική μετεωρολογική υπηρεσία της χώρας.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Πηγή: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Κύριο</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Ειδοποιήσεις</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Προειδοποιήσεις επικίνδυνου καιρού</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Καιρός τώρα (αεροδρόμιο)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Χιόνι, τελευταίες 1, 6 και 24 ώ.</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Θερμική καταπόνηση (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Ενέργεια καταιγίδας και κίνδυνος καταιγίδας</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Έδαφος και ύψος χιονιού</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Ισόθερμη 0 °C</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Ηλιοφάνεια και εξάτμιση</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Σημαδούρα: κύματα, αέρας και παλίρροια</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Σταθμήμετρο ποταμού (ΗΠΑ)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Λεπτομέρειες ημέρας: καταιγίδα, χιόνι, άνεμος</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Ωριαίο γράφημα, επόμενες 12 ώ. στις ειδοποιήσεις</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Ανάλυση του προγνώστη (ΗΠΑ)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Προειδοποιήσεις στο κύριο παράθυρο</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Όλες οι προειδοποιήσεις</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Προειδοποιήσεις και επιφυλακές</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Μόνο προειδοποιήσεις</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Το Κύριο εμφανίζει το στοιχείο σε αυτό το παράθυρο. Μια κάρτα κρύβεται όταν η τοποθεσία δεν έχει δεδομένα. Οι Ειδοποιήσεις προσθέτουν μια γραμμή που μπορείτε να επιλέξετε στο μενού των εικονιδίων ειδοποιήσεων, στο στοιχείο Λεπτομέρειες κατά την κατάδειξη. Το ίδιο μενού ορίζει πότε εμφανίζεται το συννεφάκι προειδοποίησης και πόσο μένει. Τα πρώτα πέντε στοιχεία προέρχονται από το open-meteo.com, με το πολύ ένα αίτημα την ώρα για κάθε τοποθεσία. Οι προειδοποιήσεις είναι ενεργές από προεπιλογή. Τα άλλα στοιχεία είναι ανενεργά από προεπιλογή. Τοποθετήστε τον δείκτη σε ένα όνομα για να δείτε την πηγή του.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Μια λωρίδα κάτω από το όνομα της τοποθεσίας για κάθε ενεργή προειδοποίηση. Πηγή: weather.com, με την National Weather Service ως εφεδρεία για μέρη στις ΗΠΑ.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Καιρός και κατηγορία πτήσης από το πλησιέστερο δελτίο αεροδρομίου, στην κάρτα Ορατότητα. Το κείμενο κατάδειξης προσθέτει την πρόγνωση του αεροδρομίου. Πηγή: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Χιόνι των τελευταίων 1, 6 και 24 ωρών. Πηγή: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Θερμοκρασία υγρού σφαιρικού θερμομέτρου (WBGT), μέτρο θερμικής καταπόνησης για εργασία και αθλητισμό. Πηγή: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Ενέργεια καταιγίδας (CAPE) και ο σημερινός κίνδυνος καταιγίδας. Πηγές: Open-Meteo και weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Θερμοκρασία εδάφους στα 6 cm, υγρασία εδάφους και ύψος χιονιού. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Το ύψος της ισόθερμης των 0 βαθμών. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Σημερινή ηλιοφάνεια, διάρκεια ημέρας, ηλιακή ακτινοβολία και εξάτμιση. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Κύματα, περίοδος και διεύθυνση κυμάτων, αέρας, πίεση και παλίρροια στην πλησιέστερη σημαδούρα NOAA ή παλιρροιογραφικό σταθμό σε ακτίνα 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Στάθμη, παροχή ποταμού και οι τελευταίες 7 ημέρες στο πλησιέστερο σταθμήμετρο USGS σε ακτίνα 40 km. Μόνο ΗΠΑ.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Κίνδυνος καταιγίδας και ποσότητα χιονιού στα κουμπιά ημερών, και κείμενο ανέμου, σημειώσεις και ποσότητες στις λεπτομέρειες ημέρας. Πηγή: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Ένα γράφημα κάτω από την ωριαία πρόγνωση με βροχή, χιόνι, πάγο, πιθανότητα, ηλιοφάνεια και επικίνδυνες ώρες. Η γραμμή ειδοποιήσεων δίνει τις ποσότητες των επόμενων 12 ωρών.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Η ανάλυση του προγνώστη του τοπικού γραφείου της National Weather Service, κάτω από τον χάρτη ραντάρ. Μόνο ΗΠΑ.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Χιόνι, 6 ώ.</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Θερμική καταπόνηση</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Ενέργεια καταιγίδας</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Έδαφος</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Ισόθερμη 0 °C</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Ηλιοφάνεια</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Σημαδούρα</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Σταθμήμετρο ποταμού</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>χωρίς βροχή, χιόνι ή ομίχλη</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Δελτίο αεροδρομίου: {0} ({1}), σε απόσταση {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Καιρός:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Κατηγορία πτήσης:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>καλή ορατότητα και βάση νεφών</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>οριακή: βάση νεφών 1.000 έως 3.000 ft ή ορατότητα 3 έως 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>χαμηλή: βάση νεφών 500 έως 1.000 ft ή ορατότητα 1 έως 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>πολύ χαμηλή: βάση νεφών κάτω από 500 ft ή ορατότητα κάτω από 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Βάση νεφών στο αεροδρόμιο:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Πρόγνωση αεροδρομίου ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Δελτία όπως εστάλησαν:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Πηγή: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Από {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Αλλαγή στις {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Κατά διαστήματα από {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>Πιθανότητα {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>χωρίς βάση νεφών</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>βάση νεφών {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 ώ: {0}, 24 ώ: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Χιόνι που μετρήθηκε στην τοποθεσία.
+Τελευταία ώρα: {0}
+Τελευταίες 6 ώρες: {1}
+Τελευταίες 24 ώρες: {2}
+
+Πηγή: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 ώ: {0}, 6 ώ: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Χαμηλό</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Μέτριο</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Υψηλό</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Πολύ υψηλό</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Ακραίο</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Θερμοκρασία WBGT (υγρό θερμόμετρο και μαύρη σφαίρα): {0}, θερμική καταπόνηση {1}.
+Συνδυάζει θερμοκρασία, υγρασία, άνεμο και ήλιο. Οι οδηγίες για εργασία και αθλητισμό τη χρησιμοποιούν. Η θερμική καταπόνηση αρχίζει κοντά στους 25 C (77 F) και είναι ακραία πάνω από 32 C (90 F).
+
+Πηγή: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Πολύ χαμηλό</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Χαμηλό</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Μέτριο</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Υψηλό</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Ακραίο</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Κίνδυνος καταιγίδας {0} από 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} από 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Η ενέργεια καταιγίδας (CAPE) είναι η ενέργεια που μπορεί να κερδίσει ο ανερχόμενος αέρας. Οι καταιγίδες τη χρειάζονται. Κάτω από 300 J/kg οι καταιγίδες είναι απίθανες. Πάνω από 2.500 J/kg είναι πιθανές ισχυρές καταιγίδες όταν κάτι ανυψώνει τον αέρα.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Τώρα: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Μέγιστο σήμερα: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Πηγές: Open-Meteo.com (CC BY 4.0) για την ενέργεια καταιγίδας, weather.com για τον κίνδυνο καταιγίδας.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Υγρασία {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Ύψος χιονιού {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>κανένα</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Θερμοκρασία εδάφους σε βάθος 6 cm: {0}
+Υγρασία εδάφους σε 3 έως 9 cm: {1}
+Ύψος χιονιού: {2}
+
+Οι τιμές προέρχονται από μετεωρολογικό μοντέλο και όχι από αισθητήρα. Πηγή: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, υγρασία {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Στο έδαφος</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>πάνω από τη θάλασσα</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Ισόθερμος 0: {0} πάνω από τη στάθμη της θάλασσας.
+Πάνω από αυτό το ύψος ο αέρας είναι κάτω από 0 C (32 F). Το χιόνι που πέφτει από ψηλά λιώνει κάτω από αυτό.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Υψόμετρο τοποθεσίας: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>από {0} φως ημέρας</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Ηλιοφάνεια σήμερα: {0}
+Φως ημέρας σήμερα: {1}
+Ηλιακή ακτινοβολία τώρα: {2}
+Εξάτμιση σήμερα: {3}
+
+Η εξάτμιση είναι η εξατμισοδιαπνοή αναφοράς (FAO-56). Δείχνει πόσο νερό χάνει ένα γκαζόν σε μία ημέρα. Πηγή: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} από {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>κάθε {0} s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>από {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Παλίρροια {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), σε απόσταση {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Κύματα:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Αέρας:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Νερό:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Πίεση:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Παλίρροια, πάνω από το μηδέν του σταθμού:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Πηγή: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Ανοδική</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Καθοδική</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Σταθερή</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), σε απόσταση {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Στάθμη:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Παροχή:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Αλλαγή τις τελευταίες 3 ώρες: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Τελευταίες 7 ημέρες: {0}, από {1} έως {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Η στάθμη μετριέται από το μηδέν του σταθμημέτρου και όχι από τον πυθμένα του ποταμού. Πηγή: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Άνεμος: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Άνεμος τη νύχτα: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Σημείωση: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>χιόνι {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Ποσότητες: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Ποσότητες: καμία</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Ράβδοι: βροχή (μπλε), χιόνι ως νερό (λευκό), πάγος (κυανό). Διακεκομμένη γραμμή: πιθανότητα. Κίτρινο: ηλιοφάνεια. Κόκκινο σημάδι: ώρα έντονων φαινομένων.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Βροχή, χιόνι και πάγος ανά ώρα από το weather.com. Το χιόνι σχεδιάζεται ως νερό, περίπου 10 προς 1. Η διακεκομμένη γραμμή είναι η πιθανότητα υετού. Η κίτρινη ράβδος επάνω είναι η ηλιοφάνεια της ώρας από το Open-Meteo. Ένα κόκκινο σημάδι δείχνει ώρα που το weather.com χαρακτηρίζει έντονη.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Σύνολο των ωρών που εμφανίζονται: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>καμία</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Ξηρό, πιθανότητα {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>πιθανότητα {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>βροχή {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>χιόνι {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>πάγος {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Ανάλυση μετεωρολόγου, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Εκδόθηκε {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Πηγή: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Εμφάνιση όλων</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Εμφάνιση λιγότερων</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Κάτω από 0 C στην επιφάνεια</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Ο αέρας είναι κάτω από 0 C (32 F) από το έδαφος και πάνω. Το χιόνι δεν λιώνει καθώς πέφτει.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Πηγή: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Τώρα</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>τώρα</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ύψος και περίοδος κυμάτων, αποθαλασσία και θερμοκρασία επιφάνειας θάλασσας από το θαλάσσιο μοντέλο του Open-Meteo, για σημεία στη θάλασσα ή κοντά της. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Η ισχυρότερη ριπή των επόμενων 6 ωρών, η ριπή του μοντέλου τώρα και ο άνεμος στα 80 m. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Σημερινή μέγιστη, ελάχιστη και υετός από τα μοντέλα ECMWF, GFS και ICON. Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Σημερινή μοντελοποιημένη παροχή ποταμού και η συνήθης παροχή για την ημέρα (GloFAS). Πηγή: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Επίπεδα δέντρων, αγρωστωδών και αμβροσίας. Πηγή: weather.com στις ΗΠΑ και σε ορισμένες άλλες χώρες, Open-Meteo στην Ευρώπη.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 ημέρες ανά ώρα</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Κάθε ώρα της πρόγνωσης, περίπου 10 ημέρες</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Επιστροφή στο κύριο παράθυρο (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Πίσω</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Ωριαία πρόγνωση 10 ημερών</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Λίστα</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Πίνακας</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Επισκόπηση</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Θερμοκρασία</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Αίσθηση</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Υετός</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Ριπές</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Υγρασία</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>Δείκτης UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Νεφοκάλυψη</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Ορατότητα</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Η σελίδα δείχνει την ωριαία πρόγνωση που η εφαρμογή έχει ήδη φορτώσει για την τοποθεσία που εμφανίζεται. Άλλη τοποθεσία φορτώνεται όταν επιλεγεί. Οι ώρες είναι τοπικές για την τοποθεσία. Ένα κλικ στο γράφημα κυλά τη λίστα σε εκείνη την ώρα. Στη Λίστα, ένα κλικ σε γραμμή ανοίγει τις άλλες τιμές της.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Τοποθεσία που εμφανίζεται</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, ενημέρωση {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Δεν υπάρχει ωριαία πρόγνωση για αυτή την τοποθεσία</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Δεν υπάρχουν ριπές σε αυτή την πρόγνωση</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>καμία</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} ώρες     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} χιόνι</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>ριπές {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>αίσθηση {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>βροχή</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>χιόνι</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>υετός</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Ώρα</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Ουρανός</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Θερμ.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Αίσθ.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Πιθ.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Ποσ.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Βροχή</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Πάγος</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Υγρ.</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Σ. δρόσ.</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Ριπή</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Νέφη</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Ορατ.</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Αίσθηση θερμοκρασίας</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Ριπή ανέμου</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>Δείκτης UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Νεφοκάλυψη</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Ορατότητα</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Θερμοκρασία</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Αίσθηση θερμοκρασίας</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Πιθανότητα υετού</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Βροχή</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Ριπές</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Θερμοκρασία ({0}) και πιθανότητα υετού</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Θερμοκρασία, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Αίσθηση θερμοκρασίας και θερμοκρασία, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Βροχή ({0}) και χιόνι ({1}) ανά ώρα, και πιθανότητα υετού</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Άνεμος και ριπές, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Ριπές ανέμου, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Υγρασία, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>Δείκτης UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Νεφοκάλυψη, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Ορατότητα, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Σημείο δρόσου και θερμοκρασία, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Πίεση στη στάθμη της θάλασσας, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Μέγιστες</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Ελάχιστες</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Κύλιση αριστερά</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Κύλιση δεξιά</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Ηλιόλουστο</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Αίθριο</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Κυρίως ηλιόλουστο</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Κυρίως αίθριο</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Λίγα σύννεφα</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Συννεφιά</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Κυρίως συννεφιά</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Ομίχλη</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Παγωμένη ομίχλη</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Ασθενές ψιχάλισμα</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Ψιχάλισμα</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Έντονο ψιχάλισμα</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Παγωμένο ψιχάλισμα</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Ασθενής βροχή</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Βροχή</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Έντονη βροχή</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Παγωμένη βροχή</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Ασθενής χιονόπτωση</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Χιόνι</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Έντονη χιονόπτωση</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Χιονόκοκκοι</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Ασθενής μπόρα</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Μπόρα</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Έντονη μπόρα</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Μπόρα χιονιού</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Έντονη μπόρα χιονιού</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Καταιγίδα</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Καταιγίδα με χαλάζι</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Καλός καιρός</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Σήμερα</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Απόψε</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Αύριο</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Αύριο το βράδυ</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} βράδυ</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Άνεμοι ασθενείς και μεταβλητοί.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Άνεμοι {0}, {1} έως {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Πιθανότητα βροχής {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Πιθανότητα χιονιού {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Μέγιστη {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Ελάχιστη {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Αναμένεται καταιγίδα</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Χωρίς καταιγίδα</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Άριστο</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Καλό</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Μέτριο</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Κακό</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Πολύ κακό</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Κανένα</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Πολύ χαμηλό</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Χαμηλό</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Μέτριο</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Υψηλό</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Πολύ υψηλό</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Ακραίο</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Χαμηλή ανησυχία</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Μέτρια ανησυχία</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Υψηλή ανησυχία</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Ακραία ανησυχία</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>Β</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>ΒΒΑ</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>ΒΑ</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ΑΒΑ</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>Α</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ΑΝΑ</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>ΝΑ</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>ΝΝΑ</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>Ν</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>ΝΝΔ</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>ΝΔ</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>ΔΝΔ</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>Δ</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>ΔΒΔ</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>ΒΔ</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>ΒΒΔ</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>ΝΗΝΕΜΙΑ</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>ΜΕΤΑΒΛ.</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>ασθενής</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>έντονη</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>κοντά</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>καταιγίδα</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>μπόρες</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>ρηχή</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>κομμάτια</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>μερική</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>χαμηλή χιονοθύελλα</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>χιονοθύελλα</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>μπόρες</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>καταιγίδα με</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>παγωμένη</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>ψιχάλα</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>βροχή</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>χιόνι</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>χιονόκοκκοι</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>κρύσταλλοι πάγου</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>σφαιρίδια πάγου</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>χαλάζι</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>μικρό χαλάζι</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>άγνωστος υετός</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>αχλύς</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>ομίχλη</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>καπνός</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>ηφαιστειακή τέφρα</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>σκόνη</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>άμμος</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>καταχνιά</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>σταγονίδια θάλασσας</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>στρόβιλοι σκόνης</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>μπουρίνια</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>χωνοειδές νέφος</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>αμμοθύελλα</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>θύελλα σκόνης</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, ριπές {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Η ενημέρωση των δεδομένων καιρού απέτυχε</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Τα Windows απέκλεισαν τη σύνδεση με την υπηρεσία καιρού. Ένα τείχος προστασίας, ένα πρόγραμμα προστασίας από ιούς, ένα VPN ή ένας διακομιστής μεσολάβησης ίσως αποκλείει το FluentWeather-Plus. Επιτρέψτε το FluentWeather-Plus σε εκείνο το πρόγραμμα ή δοκιμάστε ξανά με το VPN απενεργοποιημένο.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η ενημέρωση των δεδομένων καιρού. Ελέγξτε τη σύνδεσή σας στο Internet.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Έκδοση {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Ανενεργό</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 λεπ.</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 λεπ.</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 ώρα</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Συνθήκες</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Θερμοκρασία</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Αίσθηση</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Μέγ. / ελάχ. 24 ωρών</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Μεταβολή 24 ωρών</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Σημείο δρόσου</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Δείκτης θερμότητας</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Ψυχρότητα ανέμου</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Υγρασία</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Άνεμος</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>Δείκτης UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Πίεση</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Ορατότητα</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Βάση νεφών</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Βροχή, τελευταία ώρα</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Βροχή, τελευταίες 6 ώρες</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Βροχή, τελευταίες 24 ώρες</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Χιόνι, τελευταίες 24 ώρες</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Ανατολή ηλίου</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Δύση ηλίου</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Φάση σελήνης</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Ανατολή σελήνης</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Δύση σελήνης</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Παρατήρηση στις</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Πλησιέστερος σταθμός</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Θερμοκρασία νερού</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Άνεμος στον σταθμό νερού</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Κύματα και θερμοκρασία θάλασσας</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Πρόγνωση ανέμου (ριπές, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Άλλα μοντέλα</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Παροχή ποταμού</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Γύρη</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Προειδοποίηση καιρού</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Καιρός τώρα (αεροδρόμιο)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Χιόνι, τελευταία 1 ώρα και 6 ώρες</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Κίνδυνος καταιγίδας σήμερα</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Θερμική καταπόνηση (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Ισόθερμος 0</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Θερμοκρασία και υγρασία εδάφους</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Ηλιοφάνεια σήμερα</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Σημαδούρα: κύματα και παλίρροια</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Στάθμη και παροχή ποταμού</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Βροχή, χιόνι και πάγος τις επόμενες 12 ώρες</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Και {0} ακόμη προειδοποίηση.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Και {0} ακόμη προειδοποιήσεις.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Και {0} ακόμη.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Κλείνει σε {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Προειδοποίηση FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Εμφάνιση λεπτομερειών</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: αναμονή για την επόμενη ανανέωση δεδομένων</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: δεν υπάρχουν ακόμη δεδομένα. Ανοίξτε την εφαρμογή μία φορά.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: καμία ενημέρωση από {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, αίσθηση {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Ίδια πόλη με την εφαρμογή.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Επιλέχθηκε στην περιοχή ειδοποιήσεων.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Ενημέρωση {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Προειδοποιήσεις επικίνδυνου καιρού</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Εμφάνιση προειδοποιήσεων</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Ανενεργό</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Προειδοποιήσεις</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Προειδοποιήσεις και επιτηρήσεις</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Όλες οι προειδοποιήσεις</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Τήρηση της λειτουργίας Μην ενοχλείτε (χρήση ειδοποιήσεων Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Οι ειδοποιήσεις των Windows περιμένουν όσο είναι ενεργή η λειτουργία Μην ενοχλείτε. Το συννεφάκι δεν περιμένει.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Κλείσιμο του συννεφακίου μετά από</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Ποτέ</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} δευτερόλεπτα</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 λεπτό</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} λεπτά</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Τοποθεσίες</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Η πόλη που εμφανίζει η περιοχή ειδοποιήσεων</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Όλες οι αποθηκευμένες τοποθεσίες</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Εμφάνιση δοκιμαστικής προειδοποίησης</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Δείχνει πώς φαίνεται μια προειδοποίηση με τις τρέχουσες επιλογές. Δεν είναι πραγματική προειδοποίηση.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Δοκιμαστική προειδοποίηση</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>έως {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Η πόλη σας</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Αυτή είναι δοκιμή. Μια πραγματική προειδοποίηση εμφανίζει εδώ τη σύνοψη της υπηρεσίας καιρού.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Η εφαρμογή στέλνει προειδοποιήσεις όταν στις ρυθμίσεις της εφαρμογής είναι επιλεγμένο το πλαίσιο Ειδοποιήσεις για τις Προειδοποιήσεις επικίνδυνου καιρού.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Άνοιγμα {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Ο αριθμός δείχνει τη θερμοκρασία</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Ο αριθμός δείχνει την αίσθηση θερμοκρασίας</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Λεπτομέρειες κατά την κατάδειξη</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Εμφάνιση όλων</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Επαναφορά προεπιλογών</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Δεν υπάρχουν αποθηκευμένες τοποθεσίες. Χρησιμοποιήστε το αστέρι στην εφαρμογή.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Η περιοχή ειδοποιήσεων εμφανίζει (το παράθυρο της εφαρμογής μένει κλειστό)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Ίδια πόλη με την εφαρμογή</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Επανεκκίνηση του FluentWeather (εφαρμογή και εικονίδια περιοχής ειδοποιήσεων)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Κλείσιμο του παραθύρου FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Έξοδος από τα εικονίδια περιοχής ειδοποιήσεων</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Ξεκινήστε τα ξανά από το μενού Έναρξη: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Έξοδος από τα εικονίδια περιοχής ειδοποιήσεων και κλείσιμο του FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Η εφαρμογή δεν έχει εγκατασταθεί ακόμη. Εκτελέστε πρώτα την εγκατάστασή της.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η επανεκκίνηση. Χρησιμοποιήστε το στοιχείο «Restart FluentWeather» του μενού Έναρξη.</value>
+  </data>
 </root>

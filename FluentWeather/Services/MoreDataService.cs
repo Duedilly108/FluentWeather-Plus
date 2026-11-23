@@ -281,7 +281,7 @@ namespace FluentWeather.Services
         public static Task<V3WxForecastHourly?> GetHourlyAsync(double lat, double lon, WetUnits units) =>
             CachedAsync("hourly" + units, lat, lon, async () =>
             {
-                // While the Open-Meteo backup is in use, weather.com has refused the key, so the line is left out.
+                // While the Open-Meteo backup is in use, weather.com has failed, so the line is left out.
                 if (await DataSourceService.IsBackupActiveAsync())
                     return null;
                 var json = await GetTextAsync(ApiUtils.WeatherComClient, "v3/wx/forecast/hourly/2day?geocode=" + Place(lat, lon) +

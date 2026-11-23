@@ -297,4 +297,2348 @@ Canlı Kutucuklar orijinal haliyle yalnızca Windows 10'da mevcuttur.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Ağ hatası. Lütfen internet bağlantınızı kontrol edin.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Gün kartlarında ay evresini göster veya gizle</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Gün kartlarında ay evresini göster veya gizle</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>%{0} aydınlık</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Yeni ay</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Büyüyen hilal</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>İlk dördün</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Büyüyen ay</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Dolunay</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Küçülen ay</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Son dördün</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Küçülen hilal</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Bildirim alanı simgeleri</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Bildirim alanı simgelerini göster</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Görev çubuğundaki sıcaklık ve hava durumu simgelerini gösterir veya gizler. Düğme onların geçerli durumunu izler.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Yüklü değil</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>güncelleyen</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Temel aldığı</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Sürümler</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Yenile</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Bu konumu kaydet</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Bu konumu kayıtlı konumlardan kaldır</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Bu konumu kaydetmek için adının yanındaki yıldıza tıklayın. Kayıtlı konumlar burada düğme olarak görünür. O konuma geçmek için bir düğmeye tıklayın. Başka bir konum arayın ve eklemek için yıldızına tıklayın.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Konumu kaydetmek veya kaldırmak için konum adının yanındaki yıldıza tıklayın. Taşımak veya kaldırmak için bir konum düğmesine sağ tıklayın. Ctrl+1 ile Ctrl+9 arası konum değiştirir.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Bu ipucunu gizle</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Arka plan karşıtlığı</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Özgün</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Koyu</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Daha koyu</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Daha açık</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Koyu ve Daha koyu, arka plan resmini gölgeler ve açık renkli metni korur. Açık ve Daha açık, resmi aydınlatır ve koyu renkli metin kullanır.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Kart tonu</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Kart tonu</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Metinleri arka plan resmi üzerinde okunabilir kalsın diye kartları renklendirir. Yüzde 0 özgün görünümü korur.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Dün</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Hava kalitesi</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Makul</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Kötü</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Çok kötü</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Son derece kötü</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Hassaslar için sağlıksız</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Sağlıksız</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Çok sağlıksız</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Tehlikeli</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>ABD hava kalitesi indeksi</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Avrupa hava kalitesi indeksi</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Azot dioksit</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Hava kalitesi verileri: Open-Meteo.com ve Copernicus Atmosfer İzleme Hizmeti (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar ve sınırlar NOAA/NWS. Arazi USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Güncellendi</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Radar yükleniyor</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Bu bölgede yağmur veya kar yok. Daha fazlasını görmek için uzaklaştırın.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Radar yüklenemedi. Bir sonraki yenilemede yeniden denenecek.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Yakınlaştır</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Yakınlaştır</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Uzaklaştır</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Uzaklaştır</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows varsayılanı</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Bu dili kullan</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>FluentWeather yeniden başlatılsın mı?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Yeni dil, FluentWeather yeniden başladıktan sonra geçerli olur.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Şimdi yeniden başlat</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Daha sonra</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Saatlik tahmin</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Gün</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 sa</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 sa</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 sa</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Gün, seçilen günün saatlerini gösterir. 24, 36 ve 48 saat bugün için şimdi, diğer günler için gece yarısı başlar.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Metin ve resim boyutu</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Eksi ve Ctrl+Artı da boyutu %5'lik adımlarla değiştirir. Ctrl+0 %100'e döndürür.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Sola taşı</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Sağa taşı</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Kayıtlı konum sınırına ulaşıldı</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>En fazla {0} konum kaydedebilirsiniz. Yeni bir konum eklemek için bir konumu kaldırın.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Geri (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Tüm geçmiş</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Yıl</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Önce bir konum kaydedin. Geçmiş penceresi kayıtlı konumları gösterir.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Yükleniyor</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} gün. {1} uygulama tarafından kaydedildi, {2} arşivden.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Günlük en yüksek ve en düşük, derece {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Arşiv verileri: Open-Meteo.com (CC BY 4.0). Copernicus İklim Değişikliği Hizmeti bilgileri kullanılarak oluşturuldu. Hava kalitesi: Open-Meteo, CAMS (Ağustos 2022'den itibaren). Arşiv değerleri bir hava durumu modelinden gelir ve kaydedilen değerlerden farklı olabilir.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>En yüksek</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>En düşük</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Yağış</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Hava</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Kaynak</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>kaydedildi</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arşiv</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Çoğunlukla açık</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Parçalı bulutlu</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Sis</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Çisenti</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Yağmur</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Sağanak</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Kar sağanağı</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Gök gürültülü fırtına</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Yakındaki sular</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Ana penceredeki kart</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Bildirim alanı açılır panelinde satır</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Yakındaki sular</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>istasyondaki rüzgâr</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>bu konumun geçerli rüzgârı, istasyonda rüzgâr sensörü yok</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>konum</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>hamleler {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Güncel ölçümü olan en yakın su istasyonu.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>İstasyondaki hava</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>az önce</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} dk önce</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} sa önce</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Su verileri: NOAA National Data Buoy Center (ndbc.noaa.gov) ve USGS Water Data (waterdata.usgs.gov). Kamu malı.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Dalgalar</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Tüm geçmiş</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Bu konumun günlük ve saatlik geçmişi</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>50 km (31 mi) içinde, ölçümü 6 saatten yeni olan en yakın su istasyonu. NOAA NDBC şamandıraları ve kıyı istasyonları kıyıları ve Büyük Göller'i kapsar. USGS nehirleri ve bazı gölleri kapsar. Yakında istasyon olmayan açık denizde Open-Meteo deniz modeli kullanılır. Satırları bildirim alanı menüsünde Üzerine gelince ayrıntılar altında işaretleyin.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo deniz modeli</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo model rüzgârı, istasyonda rüzgâr sensörü yok</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Bu konum için Open-Meteo:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Daha fazla veri seçeneği</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Ana</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Bildirim</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Dalgalar ve deniz sıcaklığı</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Rüzgâr tahmini (hamleler, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Diğer modeller</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Nehir debisi</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Dalgalar</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Rüzgâr tahmini</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Diğer modeller</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Nehir debisi</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Veriler: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} sn</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Dalgalar</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Soluğan</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Deniz yüzeyi sıcaklığı</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>deniz</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Bu konum için Open-Meteo deniz modeli.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>{0} değerine kadar</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Bu konum için Open-Meteo rüzgâr tahmini.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Şimdiki rüzgâr</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Şimdiki hamleler</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>En güçlü hamle, sonraki 6 saat</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 sa en çok</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>80 m'de rüzgâr</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Üç hava durumu modeline göre bugünün en yüksek ve en düşük değeri. Geniş bir fark belirsiz bir tahmin anlamına gelir.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>En yakın nehrin modellenmiş debisi (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Bugün</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Bu gün için olağan</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>Olağanın %{0} kadarı</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Metreküp havada tane sayısı. Düzeyler yaklaşıktır.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Kızılağaç</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Huş</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Çimen</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Pelin</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Zeytin</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrosia</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Yok</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>düşük</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>orta</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>yüksek</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>çok yüksek</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Bildirim alanı simgelerini göster</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Bildirim alanı simgelerini gizle</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Sola taşı</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Sağa taşı</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Başa taşı</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Sona taşı</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Bu kartı gizle</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Kart ekle</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Tüm kartlar gösteriliyor</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Kartları sıfırla</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Yakındaki sular</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Dalgalar ve deniz sıcaklığı</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Rüzgâr tahmini</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Diğer modeller</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Nehir debisi</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Yerden 10 m yükseklikte rüzgâr.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Hız</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Yön</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Hamleler</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Rüzgâr soğuğu</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Bağıl nem: havanın bu sıcaklıkta taşıyabileceği en fazla miktara göre ne kadar su buharı içerdiği.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>kuru</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>rahat</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>nemli</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Sıcaklık indeksi</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV indeksi: güneşin morötesi ışığının gücü.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>az risk, korunma gerekmez</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>güneş kremi ve şapka kullanın, öğle saatlerinde gölgede kalın</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>korunma gerekli, 10 ile 16 arasında güneşte kalma süresini kısıtlayın</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>ek korunma gerekli, öğle güneşinden kaçının</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>korunmasız cilt dakikalar içinde yanar, öğle saatlerinde içeride kalın</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Görüş mesafesi: ne kadar uzağın net görülebildiği.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>sis</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>pus veya hafif sis</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>orta</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>iyi</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Bulut tabanı</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>alçak bulut yok</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>mevcut değil</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Deniz seviyesindeki hava basıncı.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Şimdi</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Eğilim</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>3 saatteki değişim</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Düşen basınç çoğu zaman bulut ve yağmur getirir. Yükselen basınç çoğu zaman açılma getirir.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Çiy noktası: çiyin oluştuğu sıcaklık. Havanın ne kadar nemli hissettirdiğini gösterir.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>kuru</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>rahat</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>biraz nemli</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>nemli</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>bunaltıcı</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>boğucu</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Sıcaklık eksi çiy noktası. 0'a yakınken sis olasılığı yüksektir.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Kart ayarları</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>hız, hamleler, yön</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>bağıl nem, sıcaklık indeksi</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>güneşin gücü ve öneriler</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo hava kalitesi</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>en yakın su istasyonu, NOAA ve USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo dalgalar ve deniz</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>sonraki 6 sa en güçlü hamle, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>bugün ECMWF, GFS ve ICON</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo nehir debisi</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>ağaç, çimen ve ambrosia</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>mesafe, bulut tabanı</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>deniz seviyesi, 3 saatlik eğilim</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>konfor, sis olasılığı</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Ağaç</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Yok ile çok yüksek arasında polen düzeyleri.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Veriler: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>hamleler {0} değerine kadar</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>en güçlü hamle, sonraki 6 saat</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>hamleler {0} değerine kadar</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Bu bir model tahminidir. Rüzgâr kartı şu anda ölçülen rüzgârı ve hamleleri gösterir. Yakındaki sular kartı, istasyonda rüzgâr sensörü varsa suda ölçülen rüzgârı gösterir.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Sürüm</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Gabboxl'un FluentWeather 2.1.0 sürümünü temel alır. Güncelleyen: duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus, FluentWeather 2.1.0'a şu özellikleri ekler:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Kayıtlı konumlar, en fazla 25, klavye kısayollarıyla.
+- Sıcaklık, bir hava durumu resmi ve üzerine gelince seçilen ayrıntıları gösteren bir panelle bildirim alanı simgeleri.
+- Geçmiş günler: dün ve evvelsi gün, bugünün yanında.
+- Tüm geçmiş: kayıtlı bir konumun 1940'a kadar günlük ve saatlik hava durumu.
+- ABD konumları için radar haritası ve her konum için hava kalitesi.
+- Yakındaki sular: en yakın istasyondaki su sıcaklığı ve rüzgâr.
+- Ek veriler: dalgalar, rüzgâr tahmini, diğer modeller, nehir debisi ve polen.
+- Ana pencerede ve bildirim balonu olarak şiddetli hava uyarıları.
+- Daha fazla veri: havalimanı hava durumu, kar, ısı stresi, fırtına enerjisi, toprak, donma seviyesi,
+  güneşlenme, şamandıralar, nehir göstergeleri, gün ayrıntıları, saatlik grafik ve NWS tartışması.
+- Üzerine gelince daha fazla ayrıntı gösteren, istediğiniz sırada ayrıntı kartları.
+- Metin boyutu, arka plan karşıtlığı, kart tonu ve saat aralığı ayarları.
+- Bir dil ayarı, doğrudan yükleyici ve çökme raporu.
+- Ayrıca birçok arayüz iyileştirmesi.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Yağmur ve kar</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Hava kalitesi</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Bulut ve güneş</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Tekerlek: yakınlaştırma. Shift+tekerlek veya sürükleme: kaydırma.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Yakınlaştır</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Uzaklaştır</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Sığdır</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tüm yılı göster</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Saatler yükleniyor</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Bu güne yakınlaştırmak için tıklayın.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Sıcaklık ve çiy noktası, derece {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Günlük en güçlü rüzgâr ve hamle, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Rüzgâr ve hamleler, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Günlük yağış ({0}) ve kar ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Saatlik yağış ({0}) ve kar ({1})</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Günlük en yüksek {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>Saatlik {0}</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Günlük ortalama nem (%) ve çiy noktası</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Nem (%) ve çiy noktası</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Günlük ortalama deniz seviyesi basıncı, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Deniz seviyesi basıncı, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Günlük ortalama bulutluluk (%) ve güneşlenme saatleri</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Bulutluluk (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Hamleler</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Yağış</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Güneşlenme (sa)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Bulutluluk</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>ABD AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Avrupa AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Bu dönem için hava kalitesi verisi yok. Veriler Ağustos 2022'de başlar.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Sıc.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Hamle</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Yön</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Bulut</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Güneş</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Yağış</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>En yüksek</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>En düşük</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Bu dönem için henüz veri yok.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Hava durumu veri kaynağı</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Otomatik, weather.com kullanır ve weather.com art arda iki kez başarısız olursa Open-Meteo'ya geçer. Kopan internet bağlantısı sayılmaz. weather.com her saat yeniden denenir. Open-Meteo ile 50 km içindeki en yakın havalimanı raporu bulut tabanını ve ölçülen değerleri verir. ABD poleni boş kalır.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Veriler: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Veriler: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Veriler: Open-Meteo ve {0} istasyonu</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>{0} saatine kadar</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>ve {0} tane daha</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Ayrıntılar ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Ayrıntıları gizle</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Yayımlanma {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Bölge: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Tam metin yükleniyor...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Tam metin kullanılamıyor.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Kaynak: weather.com uyarıları, ülkenin ulusal meteoroloji servisinden.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Kaynak: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Ana</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Bildirim</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Şiddetli hava uyarıları</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Şimdiki hava (havalimanı)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Kar, son 1, 6 ve 24 sa</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Isı stresi (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Fırtına enerjisi ve gök gürültüsü riski</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Toprak ve kar derinliği</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Donma seviyesi</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Güneşlenme ve buharlaşma</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Şamandıra: dalgalar, hava ve gelgit</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Nehir göstergesi (ABD)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Gün ayrıntıları: gök gürültüsü, kar, rüzgâr</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Saatlik grafik, bildirimde sonraki 12 sa</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Tahmincinin tartışması (ABD)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Ana penceredeki uyarılar</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Tüm uyarılar</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Uyarılar ve ön uyarılar</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Yalnızca uyarılar</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Ana, öğeyi bu pencerede gösterir. Konumda veri yoksa kart gizlenir. Bildirim, bildirim alanı simgesi menüsünde Üzerine gelince ayrıntılar altında işaretleyebileceğiniz bir satır ekler. Bu menü uyarı balonunun ne zaman görüneceğini ve ne kadar kalacağını da belirler. İlk beş öğe open-meteo.com'dan gelir, her konum için saatte en fazla bir istekle. Uyarılar varsayılan olarak açıktır. Diğer öğeler varsayılan olarak kapalıdır. Kaynağını görmek için bir adın üzerine gelin.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Her etkin uyarı için konum adının altında bir şerit. Kaynak: weather.com, ABD'deki yerler için yedek olarak National Weather Service.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>En yakın havalimanı raporundan hava durumu ve uçuş kategorisi, Görüş mesafesi kartında. Üzerine gelince görünen metin havalimanı tahminini ekler. Kaynak: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Son 1, 6 ve 24 saatin karı. Kaynak: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Islak termometre küre sıcaklığı (WBGT), iş ve spor için ısı stresinin bir ölçüsü. Kaynak: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Fırtına enerjisi (CAPE) ve bugünün gök gürültüsü riski. Kaynaklar: Open-Meteo ve weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>6 cm'de toprak sıcaklığı, toprak nemi ve kar derinliği. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>0 derece seviyesinin yüksekliği. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Bugünün güneşlenmesi, gün ışığı, güneş ışınımı ve buharlaşma. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>50 km içindeki en yakın NOAA şamandırası veya gelgit istasyonunda dalgalar, dalga periyodu ve yönü, hava, basınç ve gelgit.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>40 km içindeki en yakın USGS göstergesinde nehir seviyesi, debi ve son 7 gün. Yalnızca ABD.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Gün düğmelerinde gök gürültüsü riski ve kar miktarı, gün ayrıntılarında rüzgâr metni, notlar ve miktarlar. Kaynak: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Saatlik tahminin altında yağmur, kar, buz, olasılık, güneşlenme ve şiddetli saatleri gösteren bir grafik. Bildirim satırı sonraki 12 saatin miktarlarını verir.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Yerel National Weather Service ofisinin tahminci tartışması, radar haritasının altında. Yalnızca ABD.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Kar, 6 sa</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Isı stresi</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Fırtına enerjisi</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Toprak</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Donma seviyesi</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Güneşlenme</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Şamandıra</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Nehir göstergesi</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>yağmur, kar veya sis yok</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Havalimanı raporu: {0} ({1}), {2} uzaklıkta.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Hava:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Uçuş kategorisi:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>iyi görüş ve bulut tabanı</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>sınırda: bulut tabanı 1.000-3.000 ft veya görüş 3-5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>düşük: bulut tabanı 500-1.000 ft veya görüş 1-3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>çok düşük: bulut tabanı 500 ft altında veya görüş 1 mi altında</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Havalimanında bulut tabanı:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Havalimanı tahmini ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Gönderildiği gibi raporlar:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Kaynak: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>{0} itibarıyla</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>{0} saatinde değişim</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Zaman zaman {0} itibarıyla</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>%{0} olasılık</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>bulut tabanı yok</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>bulut tabanı {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 sa: {0}, 24 sa: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Konumda ölçülen kar.
+Son saat: {0}
+Son 6 saat: {1}
+Son 24 saat: {2}
+
+Kaynak: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 sa: {0}, 6 sa: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Çok yüksek</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Aşırı</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Islak termometre küre sıcaklığı (WBGT): {0}, ısı stresi {1}.
+Sıcaklığı, nemi, rüzgârı ve güneşi birleştirir. İş ve spor yönergeleri bunu kullanır. Isı stresi 25 C (77 F) civarında başlar ve 32 C (90 F) üzerinde aşırıdır.
+
+Kaynak: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Çok düşük</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Aşırı</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Fırtına riski 5 üzerinden {0}</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>5 üzerinden {0}</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Fırtına enerjisi (CAPE), yükselen havanın kazanabileceği enerjidir. Gök gürültülü fırtınalar buna ihtiyaç duyar. 300 J/kg altında fırtına olası değildir. 2.500 J/kg üzerinde, havayı bir şey yükseltirse şiddetli fırtınalar olabilir.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Şimdi: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Bugün en yüksek: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Kaynaklar: fırtına enerjisi için Open-Meteo.com (CC BY 4.0), fırtına riski için weather.com.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Nem {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Kar derinliği {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>6 cm derinlikte toprak sıcaklığı: {0}
+3-9 cm'de toprak nemi: {1}
+Kar derinliği: {2}
+
+Değerler bir sensörden değil, bir hava modelinden gelir. Kaynak: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, nem {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Yerde</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>deniz seviyesinden yukarıda</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Donma seviyesi: deniz seviyesinden {0} yukarıda.
+Bu yüksekliğin üstünde hava 0 C (32 F) altındadır. Yukarıdan düşen kar bunun altında erir.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Konumun yüksekliği: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>{0} gün ışığının</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Bugün güneşlenme: {0}
+Bugün gün ışığı: {1}
+Şu anki güneş ışınımı: {2}
+Bugün buharlaşma: {3}
+
+Buharlaşma, referans evapotranspirasyondur (FAO-56). Bir çimin bir günde ne kadar su kaybettiğini gösterir. Kaynak: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>her {0} sn</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>{0} yönünden</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Gelgit {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), {2} uzakta, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Dalgalar:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Hava:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Su:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Basınç:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Gelgit, istasyon sıfır noktasının üstünde:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Kaynak: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Yükseliyor</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Düşüyor</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Sabit</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), {2} uzakta, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Su seviyesi:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Debi:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Son 3 saatteki değişim: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Son 7 gün: {0}, {1} ile {2} arası</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Seviye, nehir yatağından değil, ölçer sıfır noktasından ölçülür. Kaynak: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Rüzgâr: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Gece rüzgârı: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Not: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>kar {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Miktarlar: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Miktarlar: yok</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Çubuklar: yağmur (mavi), su olarak kar (beyaz), buz (camgöbeği). Kesik çizgi: olasılık. Sarı: güneşlenme. Kırmızı işaret: şiddetli hava saati.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>weather.com'dan saatlik yağmur, kar ve buz. Kar su olarak çizilir, yaklaşık 10'a 1. Kesik çizgi yağış olasılığıdır. Üstteki sarı çubuk, Open-Meteo'dan saatin güneşlenmesidir. Kırmızı işaret, weather.com'un şiddetli olarak derecelendirdiği bir saati gösterir.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Gösterilen saatlerin toplamı: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Kuru, olasılık %{0}</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>olasılık %{0}</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>yağmur {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>kar {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>buz {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Tahminci değerlendirmesi, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Yayımlandı: {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Kaynak: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Tümünü göster</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Daha az göster</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Yüzeyde 0 C altında</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Hava yerden yukarıya 0 C (32 F) altındadır. Kar düşerken erimez.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Kaynak: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Şimdi</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>şimdi</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Denizde veya denize yakın noktalar için Open-Meteo deniz modelinden dalga yüksekliği, dalga periyodu, ölü dalga ve deniz yüzeyi sıcaklığı. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Önümüzdeki 6 saatin en güçlü hamlesi, şu anki model hamlesi ve 80 m'deki rüzgâr. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ECMWF, GFS ve ICON hava modellerinden bugünün en yüksek, en düşük ve yağışı. Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Bugünün modellenmiş nehir debisi ve gün için olağan debi (GloFAS). Kaynak: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ağaç, çimen ve kanarya otu düzeyleri. Kaynak: ABD'de ve birkaç başka ülkede weather.com, Avrupa'da Open-Meteo.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 gün saatlik</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tahminin her saati, yaklaşık 10 gün</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ana pencereye dön (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10 günlük saatlik tahmin</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tablo</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Genel bakış</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Hissedilen</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Yağış</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Hamleler</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV indeksi</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Bulut örtüsü</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Görüş mesafesi</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Sayfa, uygulamanın gösterilen konum için zaten yüklediği saatlik tahmini gösterir. Başka bir konum seçildiğinde yüklenir. Saatler konumun yerel saatidir. Grafiğe tıklamak listeyi o saate kaydırır. Liste'de bir satıra tıklamak diğer değerlerini açar.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Gösterilen konum</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, güncellendi {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Bu konum için saatlik tahmin yok</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Bu tahminde hamle yok</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} saat     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} kar</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>hamleler {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>hissedilen {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>yağmur</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>kar</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>yağış</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Gökyüzü</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Sıc.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Hiss.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Olas.</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Miktar</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Yağmur</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Buz</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Çiy n.</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Hamle</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Bulut</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Görüş</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Hissedilen</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Rüzgâr hamlesi</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV indeksi</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Bulut örtüsü</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Görüş mesafesi</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Hissedilen</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Yağış olasılığı</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Yağmur</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Hamleler</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Sıcaklık ({0}) ve yağış olasılığı</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Sıcaklık, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Hissedilen ve gerçek sıcaklık, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Saatlik yağmur ({0}) ve kar ({1}) ile yağış olasılığı</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Rüzgâr ve hamleler, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Rüzgâr hamleleri, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Nem, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV indeksi</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Bulut örtüsü, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Görüş mesafesi, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Çiy noktası ve sıcaklık, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Deniz seviyesi basıncı, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>En yüksekler</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>En düşükler</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Sola kaydır</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Sağa kaydır</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Güneşli</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Çoğunlukla güneşli</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Çoğunlukla açık</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Parçalı bulutlu</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Bulutlu</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Çoğunlukla bulutlu</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Sis</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Donan sis</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Hafif çisenti</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Çisenti</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Yoğun çisenti</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Donan çisenti</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Hafif yağmur</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Yağmur</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Şiddetli yağmur</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Donan yağmur</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Hafif kar</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Kar</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Yoğun kar</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Kar taneleri</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Hafif sağanak</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Sağanak</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Şiddetli sağanak</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Kar sağanağı</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Yoğun kar sağanağı</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Gök gürültülü fırtına</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Dolulu gök gürültülü fırtına</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Güzel hava</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Bugün</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Bu gece</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Yarın</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Yarın gece</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} gecesi</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Rüzgâr hafif ve değişken.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Rüzgâr {0} yönünden, {1} ile {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Yağmur olasılığı %{0}.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Kar olasılığı %{0}.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>En yüksek {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>En düşük {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Gök gürültüsü bekleniyor</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Gök gürültüsü yok</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Mükemmel</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Kötü</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Çok kötü</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Yok</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Çok düşük</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Çok yüksek</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Aşırı</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Düşük endişe</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Orta endişe</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Yüksek endişe</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Aşırı endişe</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>KKD</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>KD</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>DKD</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>DGD</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>GD</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>GGD</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>GGB</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>BGB</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>BKB</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>KKB</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>SAKİN</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>DEĞİŞKEN</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>hafif</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>yoğun</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>yakınlarda</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>gök gürültülü fırtına</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>sağanaklar</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>sığ</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>yer yer</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>kısmi</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>alçak savrulan</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>savrulan</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>sağanak</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>gök gürültülü fırtına ve</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>donan</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>çisenti</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>yağmur</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>kar</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>kar taneleri</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>buz kristalleri</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>buz taneleri</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>dolu</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>küçük dolu</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>bilinmeyen yağış</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>pus</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>sis</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>duman</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>volkanik kül</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>toz</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>kum</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>kuru pus</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>serpinti</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>toz girdapları</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>bora</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>huni bulut</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>kum fırtınası</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>toz fırtınası</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, hamleler {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Hava durumu verileri güncellenemedi</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows hava durumu hizmetine bağlantıyı engelledi. Bir güvenlik duvarı, virüsten koruma programı, VPN veya proxy FluentWeather-Plus'ı engelliyor olabilir. Bu programda FluentWeather-Plus'a izin verin veya VPN kapalıyken yeniden deneyin.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Hava durumu verileri güncellenemedi. İnternet bağlantınızı kontrol edin.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Derleme {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 dk</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 dk</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 sa</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Koşullar</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Hissedilen</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 sa en yüksek / en düşük</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 sa değişim</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Çiy noktası</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Isı indeksi</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Rüzgâr soğutması</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Rüzgâr</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV indeksi</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Basınç</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Görüş mesafesi</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Bulut tabanı</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Yağmur, son saat</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Yağmur, son 6 sa</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Yağmur, son 24 sa</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Kar, son 24 sa</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Gün doğumu</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Gün batımı</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Ay evresi</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Ay doğuşu</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Ay batışı</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Gözlem saati</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>En yakın istasyon</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Su sıcaklığı</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Su istasyonunda rüzgâr</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Dalgalar ve deniz sıcaklığı</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Rüzgâr tahmini (hamleler, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Diğer modeller</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Nehir debisi</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Hava durumu uyarısı</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Şu anki hava (havalimanı)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Kar, son 1 sa ve 6 sa</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Bugün gök gürültüsü riski</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Isı stresi (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Donma seviyesi</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Toprak sıcaklığı ve nemi</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Bugün güneşlenme</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Şamandıra: dalgalar ve gelgit</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Nehir seviyesi ve debisi</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Sonraki 12 sa yağmur, kar ve buz</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Ve {0} uyarı daha.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Ve {0} uyarı daha.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Ve {0} tane daha.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>{0} içinde kapanır</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus uyarısı</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Ayrıntıları göster</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: sonraki veri yenilemesi bekleniyor</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: henüz veri yok. Uygulamayı bir kez açın.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: {0} itibarıyla güncelleme yok</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, hissedilen {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Uygulamayla aynı şehir.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Bildirim alanında seçildi.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Güncellendi {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Şiddetli hava uyarıları</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Uyarıları göster</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Uyarılar</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Uyarılar ve izlemeler</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Tüm uyarılar</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Rahatsız Etmeyin'e uy (Windows bildirimlerini kullan)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Rahatsız Etmeyin açıkken Windows bildirimleri bekler. Balon beklemez.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Balonu şu süreden sonra kapat</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Asla</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} saniye</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 dakika</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} dakika</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Konumlar</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Bildirim alanının gösterdiği şehir</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Tüm kayıtlı konumlar</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Test uyarısı göster</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Geçerli seçimlerle bir uyarının nasıl göründüğünü gösterir. Gerçek bir uyarı değildir.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Test uyarısı</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>{0} saatine kadar</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Şehriniz</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Bu bir testtir. Gerçek bir uyarı burada hava durumu hizmetinin özetini gösterir.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Uygulama, uygulama ayarlarında Şiddetli hava uyarıları satırındaki Bildirim kutusu işaretli olduğunda uyarı gönderir.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>{0} aç</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Sayı sıcaklığı gösterir</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Sayı hissedilen sıcaklığı gösterir</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Üzerine gelince ayrıntılar</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Tümünü göster</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Varsayılanlara sıfırla</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Kayıtlı konum yok. Uygulamadaki yıldızı kullanın.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Bildirim alanı şunu gösterir (uygulama penceresi kapalı kalır)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Uygulamayla aynı şehir</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>FluentWeather'ı yeniden başlat (uygulama ve bildirim alanı simgeleri)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>FluentWeather penceresini kapat</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Bildirim alanı simgelerinden çık</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Başlat menüsünden yeniden başlatın: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Bildirim alanı simgelerinden çık ve FluentWeather'ı kapat</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Uygulama henüz yüklenmedi. Önce kurulumunu çalıştırın.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Yeniden başlatılamadı. Başlat menüsündeki "Restart FluentWeather" öğesini kullanın.</value>
+  </data>
 </root>

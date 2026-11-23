@@ -43,9 +43,10 @@ namespace FluentWeather.Services
 
         /// <summary>
         /// The thunder text of a day part when a thunderstorm weather code is in the forecast. Open-Meteo has no
-        /// thunder risk scale from 0 to 5, so the backup sends this text and no number.
+        /// thunder risk scale from 0 to 5, so the backup sends this text and no number. It is in the language of
+        /// the app (v55). The code compares day part texts with it, and both come from the same resources.
         /// </summary>
-        public const string ThunderExpected = "Thunder expected";
+        public static string ThunderExpected => Loc.Get("OmThunderExpected", "Thunder expected");
 
         private static readonly HttpClient Forecast = ApiUtils.CreateClient("https://api.open-meteo.com/");
         private static readonly HttpClient Geocoding = ApiUtils.CreateClient("https://geocoding-api.open-meteo.com/");
@@ -542,7 +543,7 @@ namespace FluentWeather.Services
                     validTimeUtc = Utc(Offset(_nowLocal)),
                     visibility = visibility,
                     windDirection = (int) Math.Round(direction),
-                    windDirectionCardinal = speedMph < 1 ? "CALM" : variableWind ? "VAR" : WaterService.Cardinal(direction),
+                    windDirectionCardinal = speedMph < 1 ? Loc.Get("DirCalm", "CALM") : variableWind ? Loc.Get("DirVariable", "VAR") : WaterService.Cardinal(direction),
                     windGust = windGust,
                     windSpeed = (int) Math.Round(windSpeed),
                     wxPhraseLong = Wmo.Phrase(code, isDay),
@@ -639,11 +640,12 @@ namespace FluentWeather.Services
                             if (t >= start && t < start.AddHours(12))
                                 part.Hours.Add(i);
                         }
+                        // Local build (v55): the names are in the language of the app. weather.com sends them that way too.
                         part.Name = d switch
                         {
-                            0 => day ? "Today" : "Tonight",
-                            1 => day ? "Tomorrow" : "Tomorrow night",
-                            _ => start.ToString("dddd", CultureInfo.InvariantCulture) + (day ? "" : " night")
+                            0 => day ? Loc.Get("OmToday", "Today") : Loc.Get("OmTonight", "Tonight"),
+                            1 => day ? Loc.Get("OmTomorrow", "Tomorrow") : Loc.Get("OmTomorrowNight", "Tomorrow night"),
+                            _ => day ? WeekdayName(start) : Loc.Format("OmWeekdayNight", "{0} night", WeekdayName(start))
                         };
                         _parts.Add(part);
                     }
@@ -689,7 +691,7 @@ namespace FluentWeather.Services
                     daily.calendarDayTemperatureMin.Add(calendar.Count > 0 ? (int) Math.Round(calendar.Min(i => V(_h.Temperature, i))) : min ?? 0);
                     daily.dayOfWeek.Add(date.ToString("dddd", CultureInfo.InvariantCulture));
                     daily.expirationTimeUtc.Add(Expire);
-                    daily.moonPhase.Add(Moon.PhaseName(age));
+                    daily.moonPhase.Add(MoonMath.PhaseName(Moon.PhaseCode(age)));
                     daily.moonPhaseCode.Add(Moon.PhaseCode(age));
                     daily.moonPhaseDay.Add((int) Math.Round(age) % 30);
                     daily.moonriseTimeLocal.Add(moonrise == null ? null : Offset(moonrise.Value));
@@ -747,7 +749,7 @@ namespace FluentWeather.Services
                 dp.temperature.Add(a.Temperature);
                 dp.temperatureHeatIndex.Add(HeatIndex(a.Temperature, a.Humidity));
                 dp.temperatureWindChill.Add(WindChill(a.Temperature, WindMph(a.Wind)));
-                dp.thunderCategory.Add(a.Thunder ? ThunderExpected : "No thunder");
+                dp.thunderCategory.Add(a.Thunder ? ThunderExpected : Loc.Get("OmNoThunder", "No thunder"));
                 dp.thunderIndex.Add(null);
                 dp.uvDescription.Add(UvText(a.Uv));
                 dp.uvIndex.Add(a.Uv);
@@ -807,33 +809,38 @@ namespace FluentWeather.Services
 
             private string Unit => Imperial ? "F" : "C";
 
+            // "Partly Cloudy" becomes "Partly cloudy" in English. Other languages keep their phrases as written.
             private static string Sentence(string phrase) =>
-                phrase.Length == 0 ? phrase : phrase.Substring(0, 1) + phrase.Substring(1).ToLowerInvariant();
+                phrase.Length == 0 || !Loc.IsEnglish ? phrase : phrase.Substring(0, 1) + phrase.Substring(1).ToLowerInvariant();
+
+            // English day names stay as before. Other languages use the day names of their culture.
+            private static string WeekdayName(DateTime date) =>
+                date.ToString("dddd", Loc.IsEnglish ? CultureInfo.InvariantCulture : Loc.Culture);
             private string WindUnit => _units switch { "e" or "h" => "mph", "s" => "m/s", _ => "km/h" };
 
             private string WindPhrase(PartValues a)
             {
                 if (WindMph(a.WindMax) < 6)
-                    return "Winds light and variable.";
+                    return Loc.Get("OmWindsLight", "Winds light and variable.");
                 var low = (int) Math.Round(a.Wind / 5) * 5;
                 var high = Math.Max(low + 5, (int) Math.Round(a.WindMax / 5) * 5);
-                return "Winds " + WaterService.Cardinal(a.Direction) + " at " + low + " to " + high + " " + WindUnit + ".";
+                return Loc.Format("OmWinds", "Winds {0} at {1} to {2} {3}.", WaterService.Cardinal(a.Direction), low, high, WindUnit);
             }
 
             private string PartNarrative(Part part, PartValues a)
             {
                 var text = Sentence(Wmo.Phrase(a.Code, part.Day)) + ". ";
                 if (a.Chance >= 30)
-                    text += "Chance of " + (a.Snow > 0 ? "snow" : "rain") + " " + a.Chance + "%. ";
-                text += (part.Day ? "High " : "Low ") + a.Temperature + Unit + ". " + WindPhrase(a);
+                    text += (a.Snow > 0 ? Loc.Format("OmChanceSnow", "Chance of snow {0}%.", a.Chance) : Loc.Format("OmChanceRain", "Chance of rain {0}%.", a.Chance)) + " ";
+                text += (part.Day ? Loc.Format("OmHigh", "High {0}{1}.", a.Temperature, Unit) : Loc.Format("OmLow", "Low {0}{1}.", a.Temperature, Unit)) + " " + WindPhrase(a);
                 return text;
             }
 
             private string DayNarrative(Part dayPart, int? max, int? min)
             {
                 var phrase = dayPart.Hours.Count > 0 ? Sentence(Wmo.Phrase(Aggregate(dayPart).Code, true)) + ". " : "";
-                var high = max != null ? "High " + max + Unit + ". " : "";
-                var low = min != null ? "Low " + min + Unit + "." : "";
+                var high = max != null ? Loc.Format("OmHigh", "High {0}{1}.", max, Unit) + " " : "";
+                var low = min != null ? Loc.Format("OmLow", "Low {0}{1}.", min, Unit) : "";
                 return (phrase + high + low).Trim();
             }
 
@@ -874,7 +881,8 @@ namespace FluentWeather.Services
                     score -= a.Thunder ? 2 : 0;
                     return (int) Math.Max(1, Math.Min(10, Math.Round(score)));
                 }).ToList();
-                var categories = values.Select(v => v >= 9 ? "Excellent" : v >= 7 ? "Good" : v >= 5 ? "Fair" : v >= 3 ? "Poor" : "Very Poor").ToList();
+                var categories = values.Select(v => v >= 9 ? Loc.Get("OmRunExcellent", "Excellent") : v >= 7 ? Loc.Get("OmRunGood", "Good")
+                    : v >= 5 ? Loc.Get("OmRunFair", "Fair") : v >= 3 ? Loc.Get("OmRunPoor", "Poor") : Loc.Get("OmRunVeryPoor", "Very Poor")).ToList();
                 return new V2idxRunDaypartResult
                 {
                     metadata = Meta(),
@@ -913,7 +921,8 @@ namespace FluentWeather.Services
                     {
                         fcstValid = valid, fcstValidLocal = local, dayInd = ind, num = num, daypartName = names,
                         drivingDifficultyIndex = values,
-                        drivingDifficultyCategory = values.Select(v => v == 0 ? "None" : v <= 2 ? "Low" : v <= 4 ? "Moderate" : v == 5 ? "High" : "Very High").ToList()
+                        drivingDifficultyCategory = values.Select(v => v == 0 ? Loc.Get("OmLevelNone", "None") : v <= 2 ? Loc.Get("OmLevelLow", "Low")
+                            : v <= 4 ? Loc.Get("OmLevelModerate", "Moderate") : v == 5 ? Loc.Get("OmLevelHigh", "High") : Loc.Get("OmLevelVeryHigh", "Very High")).ToList()
                     }
                 };
             }
@@ -937,7 +946,8 @@ namespace FluentWeather.Services
                     {
                         fcstValid = valid, fcstValidLocal = local, dayInd = ind, num = num, daypartName = names,
                         drySkinIndex = values,
-                        drySkinCategory = values.Select(v => v <= 3 ? "Low Concern" : v <= 6 ? "Moderate Concern" : v <= 8 ? "High Concern" : "Extreme Concern").ToList()
+                        drySkinCategory = values.Select(v => v <= 3 ? Loc.Get("OmConcernLow", "Low Concern") : v <= 6 ? Loc.Get("OmConcernModerate", "Moderate Concern")
+                            : v <= 8 ? Loc.Get("OmConcernHigh", "High Concern") : Loc.Get("OmConcernExtreme", "Extreme Concern")).ToList()
                     }
                 };
             }
@@ -960,7 +970,8 @@ namespace FluentWeather.Services
                     {
                         fcstValid = valid, fcstValidLocal = local, dayInd = ind, num = num, daypartName = names,
                         wateringNeedsIndex = values,
-                        wateringNeedsCategory = values.Select(v => v <= 1 ? "Very Low" : v <= 3 ? "Low" : v <= 5 ? "Moderate" : v <= 7 ? "High" : "Very High").ToList()
+                        wateringNeedsCategory = values.Select(v => v <= 1 ? Loc.Get("OmLevelVeryLow", "Very Low") : v <= 3 ? Loc.Get("OmLevelLow", "Low")
+                            : v <= 5 ? Loc.Get("OmLevelModerate", "Moderate") : v <= 7 ? Loc.Get("OmLevelHigh", "High") : Loc.Get("OmLevelVeryHigh", "Very High")).ToList()
                     }
                 };
             }
@@ -1021,10 +1032,12 @@ namespace FluentWeather.Services
             }
 
             private static string UvText(int uv) =>
-                uv <= 2 ? "Low" : uv <= 5 ? "Moderate" : uv <= 7 ? "High" : uv <= 10 ? "Very High" : "Extreme";
+                uv <= 2 ? Loc.Get("OmLevelLow", "Low") : uv <= 5 ? Loc.Get("OmLevelModerate", "Moderate") : uv <= 7 ? Loc.Get("OmLevelHigh", "High")
+                : uv <= 10 ? Loc.Get("OmLevelVeryHigh", "Very High") : Loc.Get("OmLevelExtreme", "Extreme");
 
             private static string CloudPhrase(double cover) =>
-                cover < 13 ? "Clear" : cover < 38 ? "Mostly Clear" : cover < 63 ? "Partly Cloudy" : cover < 88 ? "Mostly Cloudy" : "Cloudy";
+                cover < 13 ? Loc.Get("OmClear", "Clear") : cover < 38 ? Loc.Get("OmMostlyClear", "Mostly Clear") : cover < 63 ? Loc.Get("OmPartlyCloudy", "Partly Cloudy")
+                : cover < 88 ? Loc.Get("OmMostlyCloudy", "Mostly Cloudy") : Loc.Get("OmCloudy", "Cloudy");
         }
 
         private static DateTime? ParseLocal(string? text) =>
@@ -1078,35 +1091,36 @@ namespace FluentWeather.Services
                 _ => day ? 34 : 33
             };
 
+            // Local build (v55): the phrases are in the language of the app, like the phrases of weather.com.
             public static string Phrase(int code, bool day) => code switch
             {
-                0 => day ? "Sunny" : "Clear",
-                1 => day ? "Mostly Sunny" : "Mostly Clear",
-                2 => "Partly Cloudy",
-                3 => "Cloudy",
-                4 => "Mostly Cloudy",
-                45 => "Fog",
-                48 => "Freezing Fog",
-                51 => "Light Drizzle",
-                53 => "Drizzle",
-                55 => "Heavy Drizzle",
-                56 or 57 => "Freezing Drizzle",
-                61 => "Light Rain",
-                63 => "Rain",
-                65 => "Heavy Rain",
-                66 or 67 => "Freezing Rain",
-                71 => "Light Snow",
-                73 => "Snow",
-                75 => "Heavy Snow",
-                77 => "Snow Grains",
-                80 => "Light Rain Shower",
-                81 => "Rain Shower",
-                82 => "Heavy Rain Shower",
-                85 => "Snow Shower",
-                86 => "Heavy Snow Shower",
-                95 => "Thunderstorm",
-                96 or 99 => "Thunderstorm with Hail",
-                _ => day ? "Fair" : "Fair"
+                0 => day ? Loc.Get("OmSunny", "Sunny") : Loc.Get("OmClear", "Clear"),
+                1 => day ? Loc.Get("OmMostlySunny", "Mostly Sunny") : Loc.Get("OmMostlyClear", "Mostly Clear"),
+                2 => Loc.Get("OmPartlyCloudy", "Partly Cloudy"),
+                3 => Loc.Get("OmCloudy", "Cloudy"),
+                4 => Loc.Get("OmMostlyCloudy", "Mostly Cloudy"),
+                45 => Loc.Get("OmFog", "Fog"),
+                48 => Loc.Get("OmFreezingFog", "Freezing Fog"),
+                51 => Loc.Get("OmLightDrizzle", "Light Drizzle"),
+                53 => Loc.Get("OmDrizzle", "Drizzle"),
+                55 => Loc.Get("OmHeavyDrizzle", "Heavy Drizzle"),
+                56 or 57 => Loc.Get("OmFreezingDrizzle", "Freezing Drizzle"),
+                61 => Loc.Get("OmLightRain", "Light Rain"),
+                63 => Loc.Get("OmRain", "Rain"),
+                65 => Loc.Get("OmHeavyRain", "Heavy Rain"),
+                66 or 67 => Loc.Get("OmFreezingRain", "Freezing Rain"),
+                71 => Loc.Get("OmLightSnow", "Light Snow"),
+                73 => Loc.Get("OmSnow", "Snow"),
+                75 => Loc.Get("OmHeavySnow", "Heavy Snow"),
+                77 => Loc.Get("OmSnowGrains", "Snow Grains"),
+                80 => Loc.Get("OmLightRainShower", "Light Rain Shower"),
+                81 => Loc.Get("OmRainShower", "Rain Shower"),
+                82 => Loc.Get("OmHeavyRainShower", "Heavy Rain Shower"),
+                85 => Loc.Get("OmSnowShower", "Snow Shower"),
+                86 => Loc.Get("OmHeavySnowShower", "Heavy Snow Shower"),
+                95 => Loc.Get("OmThunderstorm", "Thunderstorm"),
+                96 or 99 => Loc.Get("OmThunderstormHail", "Thunderstorm with Hail"),
+                _ => Loc.Get("OmFair", "Fair")
             };
         }
 
@@ -1134,18 +1148,6 @@ namespace FluentWeather.Services
                 < 23.1 => "LQ",
                 < 28.5 => "WNC",
                 _ => "N"
-            };
-
-            public static string PhaseName(double age) => PhaseCode(age) switch
-            {
-                "N" => "New Moon",
-                "WXC" => "Waxing Crescent",
-                "FQ" => "First Quarter",
-                "WXG" => "Waxing Gibbous",
-                "F" => "Full Moon",
-                "WNG" => "Waning Gibbous",
-                "LQ" => "Last Quarter",
-                _ => "Waning Crescent"
             };
 
             /// <summary>Moonrise and moonset on a local date, found in 10-minute steps.</summary>

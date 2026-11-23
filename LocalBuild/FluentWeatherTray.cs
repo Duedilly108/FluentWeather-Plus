@@ -189,9 +189,76 @@ namespace FluentWeatherLocal
         }
     }
 
+    // Texts of the tray in the language of the app (v55). The app writes them to tray-strings.txt in its
+    // LocalState folder, one "key=value" line each, with "\n" for a line break. A missing file or key
+    // shows the English text of this program.
+    internal static class Tr
+    {
+        private static Dictionary<string, string> _map = new Dictionary<string, string>(StringComparer.Ordinal);
+        private static DateTime _stamp = DateTime.MinValue;
+        private static string _path;
+
+        // Reads the file again when it changed. Called at start and with every refresh of the icons.
+        public static void Refresh(string path)
+        {
+            try
+            {
+                if (path == null || !File.Exists(path))
+                    return;
+                var stamp = File.GetLastWriteTimeUtc(path);
+                if (stamp == _stamp && path == _path)
+                    return;
+                var map = new Dictionary<string, string>(StringComparer.Ordinal);
+                using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete))
+                using (var reader = new StreamReader(stream, Encoding.UTF8))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        var i = line.IndexOf('=');
+                        if (i <= 0)
+                            continue;
+                        map[line.Substring(0, i)] = line.Substring(i + 1).Replace("\\n", "\n");
+                    }
+                }
+                _map = map;
+                _stamp = stamp;
+                _path = path;
+            }
+            catch (Exception)
+            {
+                // The texts in use stay.
+            }
+        }
+
+        public static string T(string key, string english)
+        {
+            string value;
+            return _map.TryGetValue(key, out value) && value.Length > 0 ? value : english;
+        }
+
+        public static string F(string key, string english, params object[] values)
+        {
+            try
+            {
+                return string.Format(CultureInfo.CurrentCulture, T(key, english), values);
+            }
+            catch (FormatException)
+            {
+                return string.Format(CultureInfo.CurrentCulture, english, values);
+            }
+        }
+    }
+
     // The details the hover panel can show, in display order, with their labels.
     internal static class DetailCatalog
     {
+        // The label of a detail in the language of the app.
+        public static string Label(string[] entry)
+        {
+            return Tr.T("TrayDetail" + entry[0], entry[1]);
+        }
+
         public static readonly string[][] All =
         {
             new[] { "Conditions", "Conditions" },
@@ -817,14 +884,14 @@ namespace FluentWeatherLocal
 
         internal static string MoonPhaseName(double phase)
         {
-            if (phase < 0.03 || phase > 0.97) return "New moon";
-            if (phase < 0.22) return "Waxing crescent";
-            if (phase < 0.28) return "First quarter";
-            if (phase < 0.47) return "Waxing gibbous";
-            if (phase < 0.53) return "Full moon";
-            if (phase < 0.72) return "Waning gibbous";
-            if (phase < 0.78) return "Last quarter";
-            return "Waning crescent";
+            if (phase < 0.03 || phase > 0.97) return Tr.T("MoonPhaseNew", "New moon");
+            if (phase < 0.22) return Tr.T("MoonPhaseWaxingCrescent", "Waxing crescent");
+            if (phase < 0.28) return Tr.T("MoonPhaseFirstQuarter", "First quarter");
+            if (phase < 0.47) return Tr.T("MoonPhaseWaxingGibbous", "Waxing gibbous");
+            if (phase < 0.53) return Tr.T("MoonPhaseFull", "Full moon");
+            if (phase < 0.72) return Tr.T("MoonPhaseWaningGibbous", "Waning gibbous");
+            if (phase < 0.78) return Tr.T("MoonPhaseLastQuarter", "Last quarter");
+            return Tr.T("MoonPhaseWaningCrescent", "Waning crescent");
         }
 
         // The lit part of a moon disc. Null at new moon.
@@ -1228,7 +1295,9 @@ namespace FluentWeatherLocal
                 {
                     var right = width - pad - (BesidePicture(y) ? picture : 0);
                     var valueWidth = right - (pad + _labelWidth + gap);
-                    var h = Math.Max(_lineHeight, WrappedHeight(g, row.Value, body, valueWidth) + Scale(3));
+                    // A long translated label wraps onto more lines instead of ending in "...".
+                    var labelHeight = WrappedHeight(g, row.Key, body, _labelWidth + Scale(2)) + Scale(3);
+                    var h = Math.Max(Math.Max(_lineHeight, labelHeight), WrappedHeight(g, row.Value, body, valueWidth) + Scale(3));
                     _rowHeights.Add(h);
                     y += h;
                 }
@@ -1313,8 +1382,8 @@ namespace FluentWeatherLocal
                     var row = _rows[i];
                     var h = i < _rowHeights.Count ? _rowHeights[i] : _lineHeight;
                     var right = BesidePicture(y) ? textRight : Width - pad;
-                    TextRenderer.DrawText(g, row.Key, body, new Rectangle(pad, y, _labelWidth + Scale(2), _lineHeight), dim,
-                        TextFlags | TextFormatFlags.EndEllipsis);
+                    TextRenderer.DrawText(g, row.Key, body, new Rectangle(pad, y, _labelWidth + Scale(2), h), dim,
+                        TextFlags | TextFormatFlags.WordBreak);
                     TextRenderer.DrawText(g, row.Value, body, new Rectangle(pad + _labelWidth + gap, y, right - pad - _labelWidth - gap, h),
                         fore, TextFlags | TextFormatFlags.WordBreak);
                     y += h;
@@ -1457,7 +1526,7 @@ namespace FluentWeatherLocal
 
         private string MoreText
         {
-            get { return _more > 0 ? "And " + _more + (_more == 1 ? " more alert." : " more alerts.") : string.Empty; }
+            get { return _more > 0 ? (_more == 1 ? Tr.F("TrayAlertMoreOne", "And {0} more alert.", _more) : Tr.F("TrayAlertMoreMany", "And {0} more alerts.", _more)) : string.Empty; }
         }
 
         public void SetContent(AlertInfo alert, int more, bool lightTheme)
@@ -1471,7 +1540,7 @@ namespace FluentWeatherLocal
         public void SetCountdown(TimeSpan? left)
         {
             var text = left.HasValue
-                ? "Closes in " + ((int)left.Value.TotalMinutes).ToString(CultureInfo.InvariantCulture) + ":" + left.Value.Seconds.ToString("00", CultureInfo.InvariantCulture)
+                ? Tr.F("TrayClosesIn", "Closes in {0}", ((int)left.Value.TotalMinutes).ToString(CultureInfo.InvariantCulture) + ":" + left.Value.Seconds.ToString("00", CultureInfo.InvariantCulture))
                 : string.Empty;
             if (text == _countdown)
                 return;
@@ -1494,7 +1563,7 @@ namespace FluentWeatherLocal
                 var left = Scale(18);
                 var textWidth = width - left - Scale(14);
                 var y = Scale(10);
-                y += Measure(g, "FluentWeather-Plus alert", small, textWidth) + Scale(6);
+                y += Measure(g, Tr.T("TrayAlertHeader", "FluentWeather-Plus alert"), small, textWidth) + Scale(6);
                 y += Measure(g, _alert.Name, name, textWidth) + Scale(2);
                 y += Measure(g, _alert.Place, body, textWidth) + Scale(6);
                 y += Measure(g, Line2, body, textWidth) + Scale(6);
@@ -1502,7 +1571,7 @@ namespace FluentWeatherLocal
                     y += Measure(g, _alert.Source, small, textWidth) + Scale(4);
                 if (_more > 0)
                     y += Measure(g, MoreText, small, textWidth) + Scale(4);
-                y += Scale(6) + Measure(g, "Show details", body, textWidth) + Scale(12);
+                y += Scale(6) + Measure(g, Tr.T("TrayShowDetails", "Show details"), body, textWidth) + Scale(12);
                 _height = y;
                 Size = new Size(width, _height);
             }
@@ -1559,8 +1628,8 @@ namespace FluentWeatherLocal
                 var y = Scale(10);
                 var flags = TextFlags | TextFormatFlags.WordBreak;
 
-                var h = Measure(g, "FluentWeather-Plus alert", small, textWidth);
-                TextRenderer.DrawText(g, "FluentWeather-Plus alert", small, new Rectangle(left, y, textWidth, h), LabelColor, flags);
+                var h = Measure(g, Tr.T("TrayAlertHeader", "FluentWeather-Plus alert"), small, textWidth);
+                TextRenderer.DrawText(g, Tr.T("TrayAlertHeader", "FluentWeather-Plus alert"), small, new Rectangle(left, y, textWidth, h), LabelColor, flags);
                 _closeRect = new Rectangle(Width - Scale(34), Scale(4), Scale(28), Scale(24));
                 TextRenderer.DrawText(g, "\u2715", body, _closeRect, LabelColor,
                     TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPrefix);
@@ -1588,9 +1657,9 @@ namespace FluentWeatherLocal
                     y += h + Scale(4);
                 }
                 y += Scale(6);
-                var linkSize = TextRenderer.MeasureText(g, "Show details", link, Size.Empty, TextFlags);
+                var linkSize = TextRenderer.MeasureText(g, Tr.T("TrayShowDetails", "Show details"), link, Size.Empty, TextFlags);
                 _detailsRect = new Rectangle(left, y, linkSize.Width, linkSize.Height);
-                TextRenderer.DrawText(g, "Show details", link, _detailsRect, LinkColor, TextFlags);
+                TextRenderer.DrawText(g, Tr.T("TrayShowDetails", "Show details"), link, _detailsRect, LinkColor, TextFlags);
                 _countdownRect = new Rectangle(left + linkSize.Width + Scale(8), y, Width - left - linkSize.Width - Scale(8) - Scale(14), linkSize.Height);
                 if (_countdown.Length > 0)
                     TextRenderer.DrawText(g, _countdown, small, _countdownRect, LabelColor, TextFlags | TextFormatFlags.Right);
@@ -1880,6 +1949,7 @@ namespace FluentWeatherLocal
 
         private void Refresh(bool force)
         {
+            Tr.Refresh(GetLocalStatePath("tray-strings.txt"));
             string waitingFor;
             var reading = GetDisplayReading(out waitingFor);
             var size = NativeMethods.GetSmallIconSize();
@@ -1906,10 +1976,10 @@ namespace FluentWeatherLocal
                 newPicture = LoadAppIcon(size);
                 newNumber = RenderNumber("--", size, light);
                 tip = waitingFor != null
-                    ? waitingFor + ": waiting for the next data refresh"
+                    ? Tr.F("TrayWaiting", "{0}: waiting for the next data refresh", waitingFor)
                     : reading == null
-                        ? "FluentWeather: no data yet. Open the app once."
-                        : "FluentWeather: no update since " + reading.WrittenUtc.ToLocalTime().ToString("g", CultureInfo.CurrentCulture);
+                        ? Tr.T("TrayNoData", "FluentWeather: no data yet. Open the app once.")
+                        : Tr.F("TrayNoUpdateSince", "FluentWeather: no update since {0}", reading.WrittenUtc.ToLocalTime().ToString("g", CultureInfo.CurrentCulture));
             }
             else
             {
@@ -2041,19 +2111,19 @@ namespace FluentWeatherLocal
                 {
                     var phase = WeatherArt.MoonPhase(DateTime.UtcNow);
                     var lit = (int)Math.Round(100 * (1 - Math.Cos(2 * Math.PI * phase)) / 2);
-                    rows.Add(new KeyValuePair<string, string>(entry[1], WeatherArt.MoonPhaseName(phase) + ", " + lit + "% lit"));
+                    rows.Add(new KeyValuePair<string, string>(DetailCatalog.Label(entry), WeatherArt.MoonPhaseName(phase) + ", " + Tr.F("MoonLitFormat", "{0}% lit", lit)));
                 }
                 else if (r.Details.TryGetValue(entry[0], out value))
                 {
-                    rows.Add(new KeyValuePair<string, string>(entry[1], value));
+                    rows.Add(new KeyValuePair<string, string>(DetailCatalog.Label(entry), value));
                 }
             }
             if (rows.Count == 0)
-                rows.Add(new KeyValuePair<string, string>("Temperature", r.Temp + Degree + r.Unit + ", feels like " + r.Feels + Degree + r.Unit));
+                rows.Add(new KeyValuePair<string, string>(Tr.T("TrayDetailTemperature", "Temperature"), r.Temp + Degree + r.Unit + Tr.F("TrayFeelsLikeSuffix", ", feels like {0}", r.Feels + Degree + r.Unit)));
 
             var title = string.IsNullOrEmpty(r.FullPlace) ? r.Place : r.FullPlace;
-            var footer = (_trayCity == AppCity ? "Same city as the app. " : "Chosen in the tray. ") +
-                         "Updated " + r.WrittenUtc.ToLocalTime().ToString("t", CultureInfo.CurrentCulture);
+            var footer = (_trayCity == AppCity ? Tr.T("TrayFooterSameCity", "Same city as the app.") : Tr.T("TrayFooterChosen", "Chosen in the tray.")) + " " +
+                         Tr.F("TrayFooterUpdated", "Updated {0}", r.WrittenUtc.ToLocalTime().ToString("t", CultureInfo.CurrentCulture));
             var kind = WeatherArt.FromReading(r.IconCode, r.Phrase, r.IsNight);
             _hover.SetContent(title, rows, footer, kind, light, r.Latitude);
         }
@@ -2062,7 +2132,7 @@ namespace FluentWeatherLocal
         {
             // Tooltips in .NET Framework are limited to 63 characters.
             var unit = Degree + r.Unit;
-            var line1 = r.Place + ": " + r.Temp + unit + ", feels like " + r.Feels + unit;
+            var line1 = r.Place + ": " + r.Temp + unit + Tr.F("TrayFeelsLikeSuffix", ", feels like {0}", r.Feels + unit);
             var line2 = r.Phrase + ", " + r.ObservedLocal.ToString("t", CultureInfo.CurrentCulture);
             return line1 + "\n" + line2;
         }
@@ -2705,7 +2775,7 @@ namespace FluentWeatherLocal
                 _balloonAlert = alert;
                 var text = alert.Place + "\n" + (alert.Until.Length > 0 ? Capital(alert.Until) + ". " : string.Empty) + alert.Summary;
                 if (more > 0)
-                    text += "\n" + string.Format(CultureInfo.InvariantCulture, "And {0} more.", more);
+                    text += "\n" + Tr.F("TrayAlertMoreShort", "And {0} more.", more);
                 if (text.Length > 250)
                     text = text.Substring(0, 249) + "\u2026";
                 _numberIcon.ShowBalloonTip(10000, alert.Name, text, alert.Significance == "W" ? ToolTipIcon.Error : ToolTipIcon.Warning);
@@ -2781,11 +2851,11 @@ namespace FluentWeatherLocal
 
         private ToolStripMenuItem BuildAlertMenu()
         {
-            var menu = new ToolStripMenuItem("Severe weather alerts");
+            var menu = new ToolStripMenuItem(Tr.T("TrayAlertsMenu", "Severe weather alerts"));
 
-            var show = new ToolStripMenuItem("Show alerts");
-            foreach (var choice in new[] { new[] { "off", "Off" }, new[] { "warnings", "Warnings" },
-                         new[] { "watches", "Warnings and watches" }, new[] { "all", "All alerts" } })
+            var show = new ToolStripMenuItem(Tr.T("TrayShowAlerts", "Show alerts"));
+            foreach (var choice in new[] { new[] { "off", Tr.T("TrayAlertsOff", "Off") }, new[] { "warnings", Tr.T("TrayAlertsWarnings", "Warnings") },
+                         new[] { "watches", Tr.T("TrayAlertsWatches", "Warnings and watches") }, new[] { "all", Tr.T("TrayAlertsAll", "All alerts") } })
             {
                 var value = choice[0];
                 var item = new ToolStripMenuItem(choice[1]);
@@ -2795,18 +2865,19 @@ namespace FluentWeatherLocal
             }
             menu.DropDownItems.Add(show);
 
-            var dnd = new ToolStripMenuItem("Honor Do Not Disturb (use Windows notifications)");
+            var dnd = new ToolStripMenuItem(Tr.T("TrayDnd", "Honor Do Not Disturb (use Windows notifications)"));
             dnd.Checked = _alertDnd;
-            dnd.ToolTipText = "Windows notifications wait while Do Not Disturb is on. The bubble does not wait.";
+            dnd.ToolTipText = Tr.T("TrayDndTip", "Windows notifications wait while Do Not Disturb is on. The bubble does not wait.");
             dnd.Click += delegate { SetAlertSetting(delegate { _alertDnd = !_alertDnd; }); };
             menu.DropDownItems.Add(dnd);
 
-            var close = new ToolStripMenuItem("Close the bubble after");
+            var close = new ToolStripMenuItem(Tr.T("TrayCloseAfter", "Close the bubble after"));
             close.Enabled = !_alertDnd;
             foreach (var seconds in new[] { 0, 30, 60, 300, 900 })
             {
                 var value = seconds;
-                var text = value == 0 ? "Never" : value < 60 ? value + " seconds" : value == 60 ? "1 minute" : (value / 60) + " minutes";
+                var text = value == 0 ? Tr.T("TrayNever", "Never") : value < 60 ? Tr.F("TraySeconds", "{0} seconds", value)
+                    : value == 60 ? Tr.T("TrayOneMinute", "1 minute") : Tr.F("TrayMinutes", "{0} minutes", value / 60);
                 var item = new ToolStripMenuItem(text);
                 item.Checked = _alertCloseSeconds == value;
                 item.Click += delegate { SetAlertSetting(delegate { _alertCloseSeconds = value; }); };
@@ -2814,37 +2885,37 @@ namespace FluentWeatherLocal
             }
             menu.DropDownItems.Add(close);
 
-            var places = new ToolStripMenuItem("Locations");
-            var shownPlace = new ToolStripMenuItem("The city the tray shows");
+            var places = new ToolStripMenuItem(Tr.T("TrayLocations", "Locations"));
+            var shownPlace = new ToolStripMenuItem(Tr.T("TrayShownCity", "The city the tray shows"));
             shownPlace.Checked = !_alertAllPlaces;
             shownPlace.Click += delegate { SetAlertSetting(delegate { _alertAllPlaces = false; }); };
             places.DropDownItems.Add(shownPlace);
-            var allPlaces = new ToolStripMenuItem("All saved locations");
+            var allPlaces = new ToolStripMenuItem(Tr.T("TrayAllSaved", "All saved locations"));
             allPlaces.Checked = _alertAllPlaces;
             allPlaces.Click += delegate { SetAlertSetting(delegate { _alertAllPlaces = true; }); };
             places.DropDownItems.Add(allPlaces);
             menu.DropDownItems.Add(places);
 
             menu.DropDownItems.Add(new ToolStripSeparator());
-            var test = new ToolStripMenuItem("Show a test alert");
-            test.ToolTipText = "Shows how an alert looks with the current choices. It is not a real alert.";
+            var test = new ToolStripMenuItem(Tr.T("TrayTestAlert", "Show a test alert"));
+            test.ToolTipText = Tr.T("TrayTestAlertTip", "Shows how an alert looks with the current choices. It is not a real alert.");
             test.Click += delegate
             {
                 var sample = new AlertInfo();
                 sample.Key = "test";
                 sample.Significance = "W";
                 sample.Severity = 2;
-                sample.Name = "Test alert";
-                sample.Until = "until " + DateTime.Now.AddHours(6).ToString("ddd t", CultureInfo.CurrentCulture);
-                sample.Place = _lastReading != null ? (string.IsNullOrEmpty(_lastReading.FullPlace) ? _lastReading.Place : _lastReading.FullPlace) : "Your city";
+                sample.Name = Tr.T("TrayTestName", "Test alert");
+                sample.Until = Tr.F("TrayTestUntil", "until {0}", DateTime.Now.AddHours(6).ToString("ddd t", CultureInfo.CurrentCulture));
+                sample.Place = _lastReading != null ? (string.IsNullOrEmpty(_lastReading.FullPlace) ? _lastReading.Place : _lastReading.FullPlace) : Tr.T("TrayTestPlace", "Your city");
                 sample.PlaceId = _lastReading != null ? _lastReading.PlaceId : string.Empty;
-                sample.Summary = "This is a test. A real alert shows the summary of the weather service here.";
+                sample.Summary = Tr.T("TrayTestSummary", "This is a test. A real alert shows the summary of the weather service here.");
                 sample.Source = "FluentWeather-Plus";
                 ShowAlert(sample, 0);
             };
             menu.DropDownItems.Add(test);
 
-            var note = new ToolStripMenuItem("The app sends alerts when Severe weather alerts has its Tray box ticked in the app settings.");
+            var note = new ToolStripMenuItem(Tr.T("TrayAlertNote", "The app sends alerts when Severe weather alerts has its Tray box ticked in the app settings."));
             note.Enabled = false;
             menu.DropDownItems.Add(note);
 
@@ -2874,28 +2945,28 @@ namespace FluentWeatherLocal
         {
             _menu.Items.Clear();
 
-            var open = new ToolStripMenuItem("Open " + AppTitle);
+            var open = new ToolStripMenuItem(Tr.F("TrayOpen", "Open {0}", AppTitle));
             open.Font = new Font(open.Font, FontStyle.Bold);
             open.Click += delegate { OpenApp(); };
             _menu.Items.Add(open);
             _menu.Items.Add(new ToolStripSeparator());
 
-            var showTemp = new ToolStripMenuItem("Number shows temperature");
+            var showTemp = new ToolStripMenuItem(Tr.T("TrayNumberTemp", "Number shows temperature"));
             showTemp.Checked = !_showFeelsLike;
             showTemp.Click += delegate { SaveShowFeelsLike(false); };
             _menu.Items.Add(showTemp);
 
-            var showFeels = new ToolStripMenuItem("Number shows feels-like temperature");
+            var showFeels = new ToolStripMenuItem(Tr.T("TrayNumberFeels", "Number shows feels-like temperature"));
             showFeels.Checked = _showFeelsLike;
             showFeels.Click += delegate { SaveShowFeelsLike(true); };
             _menu.Items.Add(showFeels);
 
             // Hover details: tick the lines to show. The submenu stays open while you tick several.
-            var details = new ToolStripMenuItem("Hover details");
+            var details = new ToolStripMenuItem(Tr.T("TrayHoverDetails", "Hover details"));
             foreach (var entry in DetailCatalog.All)
             {
                 var key = entry[0];
-                var item = new ToolStripMenuItem(entry[1]);
+                var item = new ToolStripMenuItem(DetailCatalog.Label(entry));
                 item.Checked = _hoverDetails.Contains(key);
                 item.Click += delegate
                 {
@@ -2907,7 +2978,7 @@ namespace FluentWeatherLocal
                 details.DropDownItems.Add(item);
             }
             details.DropDownItems.Add(new ToolStripSeparator());
-            var showAll = new ToolStripMenuItem("Show all");
+            var showAll = new ToolStripMenuItem(Tr.T("TrayShowAll", "Show all"));
             showAll.Click += delegate
             {
                 _hoverDetails = new List<string>();
@@ -2915,7 +2986,7 @@ namespace FluentWeatherLocal
                 SaveSettings();
             };
             details.DropDownItems.Add(showAll);
-            var defaults = new ToolStripMenuItem("Reset to defaults");
+            var defaults = new ToolStripMenuItem(Tr.T("TrayResetDefaults", "Reset to defaults"));
             defaults.Click += delegate { _hoverDetails = new List<string>(DetailCatalog.Defaults); SaveSettings(); };
             details.DropDownItems.Add(defaults);
             details.DropDown.Closing += (sender, e) =>
@@ -2931,18 +3002,18 @@ namespace FluentWeatherLocal
             var locations = ReadSavedLocations();
             if (locations.Count == 0)
             {
-                var none = new ToolStripMenuItem("No saved locations. Use the star in the app.");
+                var none = new ToolStripMenuItem(Tr.T("TrayNoLocations", "No saved locations. Use the star in the app."));
                 none.Enabled = false;
                 _menu.Items.Add(none);
             }
             else
             {
-                var header = new ToolStripMenuItem("Tray shows (the app window stays closed)");
+                var header = new ToolStripMenuItem(Tr.T("TrayShowsHeader", "Tray shows (the app window stays closed)"));
                 header.Enabled = false;
                 _menu.Items.Add(header);
 
                 var current = ReadWeather();
-                var sameAsApp = new ToolStripMenuItem("    Same city as the app" +
+                var sameAsApp = new ToolStripMenuItem("    " + Tr.T("TraySameAsApp", "Same city as the app") +
                     (current != null ? "  (" + EscapeMenuText(current.Place) + ")" : string.Empty));
                 sameAsApp.Checked = _trayCity == AppCity;
                 sameAsApp.Click += delegate { SetTrayCity(AppCity); };
@@ -2966,22 +3037,22 @@ namespace FluentWeatherLocal
 
             _menu.Items.Add(new ToolStripSeparator());
 
-            var restart = new ToolStripMenuItem("Restart FluentWeather (app and tray icons)");
+            var restart = new ToolStripMenuItem(Tr.T("TrayRestart", "Restart FluentWeather (app and tray icons)"));
             restart.Click += delegate { RestartAll(); };
             _menu.Items.Add(restart);
 
             var appRunning = AppControl.FindAppProcesses().Count > 0;
-            var closeApp = new ToolStripMenuItem("Close FluentWeather window");
+            var closeApp = new ToolStripMenuItem(Tr.T("TrayCloseWindow", "Close FluentWeather window"));
             closeApp.Enabled = appRunning;
             closeApp.Click += delegate { AppControl.CloseApp(); };
             _menu.Items.Add(closeApp);
 
-            var exit = new ToolStripMenuItem("Exit tray icons");
-            exit.ToolTipText = "Start them again from the Start menu: FluentWeather tray icons";
+            var exit = new ToolStripMenuItem(Tr.T("TrayExit", "Exit tray icons"));
+            exit.ToolTipText = Tr.T("TrayExitTip", "Start them again from the Start menu: FluentWeather tray icons");
             exit.Click += delegate { ExitThread(); };
             _menu.Items.Add(exit);
 
-            var exitBoth = new ToolStripMenuItem("Exit tray icons and close FluentWeather");
+            var exitBoth = new ToolStripMenuItem(Tr.T("TrayExitBoth", "Exit tray icons and close FluentWeather"));
             exitBoth.Enabled = appRunning;
             exitBoth.Click += delegate { AppControl.CloseApp(); ExitThread(); };
             _menu.Items.Add(exitBoth);
@@ -3081,7 +3152,7 @@ namespace FluentWeatherLocal
             catch (Win32Exception)
             {
                 _numberIcon.ShowBalloonTip(5000, AppTitle,
-                    "The app is not installed yet. Run its setup first.",
+                    Tr.T("TrayAppNotInstalled", "The app is not installed yet. Run its setup first."),
                     ToolTipIcon.Warning);
             }
         }
@@ -3099,7 +3170,7 @@ namespace FluentWeatherLocal
             }
             catch (Exception)
             {
-                _numberIcon.ShowBalloonTip(5000, AppTitle, "Could not restart. Use the Start menu item \"Restart FluentWeather\".", ToolTipIcon.Error);
+                _numberIcon.ShowBalloonTip(5000, AppTitle, Tr.T("TrayRestartFailed", "Could not restart. Use the Start menu item \"Restart FluentWeather\"."), ToolTipIcon.Error);
             }
         }
 

@@ -297,4 +297,2348 @@ Live Tiles vốn chỉ khả dụng trên Windows 10.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Lỗi mạng, vui lòng kiểm tra kết nối internet của bạn.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Hiện hoặc ẩn pha mặt trăng trên thẻ ngày</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Hiện hoặc ẩn pha mặt trăng trên thẻ ngày</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>Sáng {0}%</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Trăng non</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Lưỡi liềm đầu tháng</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Thượng huyền</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Trăng khuyết đầu tháng</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Trăng tròn</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Trăng khuyết cuối tháng</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Hạ huyền</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Lưỡi liềm cuối tháng</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Biểu tượng vùng thông báo</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Hiện biểu tượng vùng thông báo</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Hiện hoặc ẩn các biểu tượng nhiệt độ và thời tiết trên thanh tác vụ. Nút theo trạng thái hiện tại của chúng.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Chưa cài đặt</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>cập nhật bởi</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Dựa trên</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Làm mới</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Lưu vị trí này</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Xóa vị trí này khỏi các vị trí đã lưu</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Để lưu vị trí này, hãy bấm vào ngôi sao cạnh tên của nó. Các vị trí đã lưu xuất hiện ở đây dưới dạng nút. Bấm vào một nút để chuyển đến vị trí đó. Tìm một vị trí khác và bấm vào ngôi sao của nó để thêm.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Bấm vào ngôi sao cạnh tên vị trí để lưu hoặc xóa vị trí. Bấm chuột phải vào nút vị trí để di chuyển hoặc xóa nút. Ctrl+1 đến Ctrl+9 chuyển vị trí.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Ẩn mẹo này</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Độ tương phản nền</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Gốc</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Tối</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Tối hơn</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Sáng</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Sáng hơn</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Tối và Tối hơn làm tối ảnh nền và giữ chữ sáng. Sáng và Sáng hơn làm sáng ảnh và dùng chữ tối.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Sắc màu thẻ</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Sắc màu thẻ</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Tô màu các thẻ để chữ trên thẻ vẫn dễ đọc trên ảnh nền. 0 phần trăm giữ giao diện gốc.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Hôm qua</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Chất lượng không khí</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Tốt</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Khá</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Kém</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Rất kém</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Cực kỳ kém</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Có hại cho người nhạy cảm</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Có hại</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Rất có hại</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Nguy hại</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Chỉ số chất lượng không khí Hoa Kỳ</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Chỉ số chất lượng không khí châu Âu</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ôzôn</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Nitơ điôxít</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Dữ liệu chất lượng không khí: Open-Meteo.com và Dịch vụ Giám sát Khí quyển Copernicus (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar và đường biên NOAA/NWS. Địa hình USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Đã cập nhật</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Đang tải radar</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Không có mưa hoặc tuyết trong khu vực này. Thu nhỏ để xem thêm.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Không thể tải radar. Sẽ thử lại ở lần làm mới tiếp theo.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Phóng to</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Phóng to</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Thu nhỏ</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Thu nhỏ</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Mặc định của Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Dùng ngôn ngữ này</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Khởi động lại FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Ngôn ngữ mới được áp dụng sau khi FluentWeather khởi động lại.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Khởi động lại ngay</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Để sau</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Dự báo theo giờ</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 giờ</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 giờ</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 giờ</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Ngày hiển thị các giờ của ngày đã chọn. 24, 36 và 48 giờ bắt đầu từ bây giờ cho hôm nay và từ nửa đêm cho các ngày khác.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Cỡ chữ và hình ảnh</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Trừ và Ctrl+Cộng cũng thay đổi kích thước theo bước 5%. Ctrl+0 trở về 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Di chuyển sang trái</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Di chuyển sang phải</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Đã đạt giới hạn vị trí đã lưu</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Bạn có thể lưu tối đa {0} vị trí. Xóa một vị trí để thêm vị trí mới.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Quay lại (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Toàn bộ lịch sử</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Hãy lưu một vị trí trước. Cửa sổ lịch sử hiển thị các vị trí đã lưu.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Đang tải</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} ngày. {1} do ứng dụng ghi lại, {2} từ kho lưu trữ.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Cao nhất và thấp nhất hằng ngày, độ {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Dữ liệu lưu trữ: Open-Meteo.com (CC BY 4.0). Được tạo bằng thông tin của Dịch vụ Biến đổi Khí hậu Copernicus. Chất lượng không khí: Open-Meteo, CAMS (từ tháng 8 năm 2022). Giá trị lưu trữ lấy từ mô hình thời tiết và có thể khác giá trị đã ghi lại.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Cao</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Thấp</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Lượng mưa</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Thời tiết</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Nguồn</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>đã ghi</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>lưu trữ</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Quang đãng</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Phần lớn quang đãng</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Có mây rải rác</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>U ám</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Sương mù</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Mưa phùn</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Mưa</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Mưa rào</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Mưa tuyết rào</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Dông</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Không rõ</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Vùng nước gần đây</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Thẻ trong cửa sổ chính</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Dòng trong bảng di chuột của vùng thông báo</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Vùng nước gần đây</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>gió tại trạm</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>gió hiện tại cho vị trí này, trạm không có cảm biến gió</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>vị trí</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>gió giật {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Trạm quan trắc nước gần nhất có số đo hiện tại.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Nước</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Không khí tại trạm</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>vừa xong</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} phút trước</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} giờ trước</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Dữ liệu nước: NOAA National Data Buoy Center (ndbc.noaa.gov) và USGS Water Data (waterdata.usgs.gov). Phạm vi công cộng.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Sóng</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Toàn bộ lịch sử</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lịch sử theo ngày và theo giờ của vị trí này</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Trạm quan trắc nước gần nhất trong bán kính 50 km (31 dặm) có số đo chưa quá 6 giờ. Phao và trạm ven bờ NOAA NDBC bao phủ bờ biển và Ngũ Đại Hồ. USGS bao phủ sông và một số hồ. Trên biển, khi không có trạm gần, mô hình biển của Open-Meteo được dùng. Đánh dấu các dòng trong mục Chi tiết khi di chuột của menu vùng thông báo.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Mô hình biển Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Gió theo mô hình Open-Meteo, trạm không có cảm biến gió</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo cho vị trí này:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Tùy chọn dữ liệu khác</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Chính</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Sóng và nhiệt độ nước biển</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Dự báo gió (gió giật, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Mô hình khác</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Lưu lượng sông</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Phấn hoa</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Sóng</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Dự báo gió</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Mô hình khác</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Lưu lượng sông</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Phấn hoa</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Dữ liệu: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} giây</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Sóng</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Sóng lừng</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Nhiệt độ mặt nước biển</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>biển</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Mô hình biển Open-Meteo cho vị trí này.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>đến {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Dự báo gió Open-Meteo cho vị trí này.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Gió hiện tại</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Gió giật hiện tại</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Gió giật mạnh nhất, 6 giờ tới</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>tối đa 6 giờ</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Gió ở độ cao 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Cao nhất và thấp nhất hôm nay theo ba mô hình thời tiết. Chênh lệch lớn nghĩa là dự báo không chắc chắn.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Lưu lượng mô hình của con sông gần nhất (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Hôm nay</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Mức thường gặp của ngày này</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% mức thường gặp</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Số hạt trên mỗi mét khối không khí. Các mức chỉ là ước lượng.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Tống quán sủi</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Bạch dương</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Cỏ</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Ngải cứu</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Ô liu</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Cỏ phấn hương</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Không có</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>thấp</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>trung bình</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>cao</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>rất cao</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Hiện biểu tượng vùng thông báo</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Ẩn biểu tượng vùng thông báo</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Di chuyển sang trái</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Di chuyển sang phải</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Di chuyển lên đầu</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Di chuyển xuống cuối</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Ẩn thẻ này</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Thêm thẻ</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Đang hiển thị tất cả các thẻ</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Đặt lại các thẻ</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Vùng nước gần đây</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Sóng và nhiệt độ nước biển</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Dự báo gió</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Mô hình khác</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Lưu lượng sông</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Phấn hoa</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>không có</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Gió ở độ cao 10 m so với mặt đất.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Tốc độ gió</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Hướng</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Nhiệt độ cảm nhận do gió</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Độ ẩm tương đối: lượng hơi nước trong không khí so với lượng tối đa không khí có thể chứa ở nhiệt độ này.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>Khô</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>Dễ chịu</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>Ẩm</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Chỉ số nóng</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>Chỉ số UV: cường độ tia cực tím của ánh nắng.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>Rủi ro thấp, không cần bảo vệ</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>Dùng kem chống nắng và mũ, tìm bóng râm vào buổi trưa</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>Cần bảo vệ, hạn chế ra nắng từ 10 giờ đến 16 giờ</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>Cần bảo vệ thêm, tránh nắng giữa trưa</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>Da không được bảo vệ bị cháy nắng trong vài phút, ở trong nhà vào buổi trưa</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Tầm nhìn: khoảng cách có thể nhìn rõ.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>Sương mù</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>Mù hoặc sương mỏng</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>Tốt</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Trần mây</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>Không có mây thấp</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>Không có</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Áp suất mực nước biển.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Hiện tại</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Xu hướng</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Thay đổi 3 giờ</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Áp suất giảm thường mang lại mây và mưa. Áp suất tăng thường mang lại trời quang.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Điểm sương: nhiệt độ mà sương hình thành. Nó cho biết không khí ẩm đến mức nào.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>Khô</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>Dễ chịu</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>Hơi ẩm</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>Ẩm</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>Oi bức</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>Rất oi bức</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Nhiệt độ trừ điểm sương. Gần 0 nghĩa là dễ có sương mù.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Cài đặt thẻ</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>Tốc độ gió, gió giật, hướng</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>Độ ẩm tương đối, chỉ số nóng</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>Cường độ nắng và lời khuyên</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Chất lượng không khí Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>Trạm nước gần nhất, NOAA và USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Sóng và biển Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>Gió giật mạnh nhất 6 giờ tới, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS và ICON hôm nay</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Lưu lượng sông Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>Cây, cỏ và cỏ phấn hương</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>Khoảng cách, trần mây</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>Mực nước biển, xu hướng 3 giờ</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>Mức dễ chịu, khả năng sương mù</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Cây</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Mức phấn hoa, từ không có đến rất cao.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Dữ liệu: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>Gió giật đến {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>Gió giật mạnh nhất, 6 giờ tới</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>Gió giật đến {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Đây là dự báo mô hình. Thẻ Gió hiển thị gió và gió giật đo được lúc này. Thẻ Nước gần đây hiển thị gió đo tại mặt nước khi trạm có cảm biến gió.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Dựa trên FluentWeather 2.1.0 của Gabboxl. Được duedilly108 cập nhật.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus bổ sung các tính năng sau cho FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Vị trí đã lưu, tối đa 25, có phím tắt.
+- Biểu tượng vùng thông báo với nhiệt độ, hình thời tiết và bảng chi tiết khi di chuột hiển thị các chi tiết bạn chọn.
+- Các ngày trước: hôm qua và hôm kia bên cạnh hôm nay.
+- Toàn bộ lịch sử: thời tiết theo ngày và theo giờ của vị trí đã lưu từ năm 1940.
+- Bản đồ radar cho vị trí ở Mỹ và chất lượng không khí cho mọi vị trí.
+- Nước gần đây: nhiệt độ nước và gió từ trạm gần nhất.
+- Dữ liệu bổ sung: sóng, dự báo gió, các mô hình khác, lưu lượng sông và phấn hoa.
+- Cảnh báo thời tiết khắc nghiệt trong cửa sổ chính và trong bong bóng vùng thông báo.
+- Thêm dữ liệu: thời tiết sân bay, tuyết, căng thẳng nhiệt, năng lượng dông, đất, độ cao đóng băng,
+  nắng, phao, trạm đo sông, chi tiết ngày, biểu đồ theo giờ và thảo luận dự báo NWS.
+- Thẻ chi tiết hiển thị thêm khi di chuột, theo thứ tự bạn chọn.
+- Cài đặt cỡ chữ, độ tương phản nền, màu thẻ và khoảng giờ.
+- Cài đặt ngôn ngữ, trình cài đặt trực tiếp và báo cáo sự cố.
+- Và nhiều cải tiến giao diện khác.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Mưa và tuyết</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Chất lượng không khí</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Mây và nắng</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Con lăn: phóng to/thu nhỏ. Shift+con lăn hoặc kéo: cuộn.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Phóng to</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Thu nhỏ</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Vừa khít</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Hiển thị cả năm</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} đến {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Đang tải dữ liệu theo giờ</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Bấm để phóng to ngày này.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Nhiệt độ và điểm sương, độ {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Gió và gió giật tối đa hằng ngày, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Gió và gió giật, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Lượng mưa ({0}) và tuyết ({1}) hằng ngày</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Lượng mưa ({0}) và tuyết ({1}) mỗi giờ</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>{0} tối đa hằng ngày</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} mỗi giờ</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Độ ẩm trung bình hằng ngày (%) và điểm sương</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Độ ẩm (%) và điểm sương</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Áp suất mực nước biển trung bình hằng ngày, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Áp suất mực nước biển, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Lượng mây trung bình hằng ngày (%) và số giờ nắng</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Lượng mây (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Lượng mưa</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Nắng (giờ)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Lượng mây</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI Mỹ</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>AQI châu Âu</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Không có dữ liệu chất lượng không khí cho khoảng thời gian này. Dữ liệu bắt đầu từ tháng 8 năm 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Hướng</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Mây</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Nắng</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Mưa</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Cao</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Thấp</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Chưa có dữ liệu cho khoảng thời gian này.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Nguồn dữ liệu thời tiết</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Tự động</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Tự động dùng weather.com và chuyển sang Open-Meteo khi weather.com lỗi hai lần liên tiếp. Mất kết nối Internet không được tính. Ứng dụng thử lại weather.com mỗi giờ. Với Open-Meteo, bản tin sân bay gần nhất trong vòng 50 km cung cấp trần mây và số đo. Phấn hoa Mỹ để trống.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Dữ liệu: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Dữ liệu: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Dữ liệu: Open-Meteo và trạm {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>Đến {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>thêm {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Chi tiết ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Ẩn chi tiết</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Phát hành {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Khu vực: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Đang tải toàn văn...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Không có toàn văn.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Nguồn: cảnh báo weather.com từ cơ quan khí tượng quốc gia.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Nguồn: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Chính</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Vùng thông báo</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Cảnh báo thời tiết khắc nghiệt</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Thời tiết hiện tại (sân bay)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Tuyết, 1, 6 và 24 giờ qua</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Căng thẳng nhiệt (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Năng lượng dông và nguy cơ dông</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Đất và độ sâu tuyết</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Độ cao đóng băng</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Nắng và bốc hơi</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Phao: sóng, nhiệt độ không khí và thủy triều</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Trạm đo sông (Mỹ)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Chi tiết ngày: dông, tuyết, gió</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Biểu đồ theo giờ, 12 giờ tới trong vùng thông báo</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Thảo luận của dự báo viên (Mỹ)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Cảnh báo trong cửa sổ chính</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Mọi cảnh báo</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Cảnh báo và theo dõi</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Chỉ cảnh báo</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Chính hiển thị mục trong cửa sổ này. Thẻ sẽ ẩn khi vị trí không có dữ liệu. Vùng thông báo thêm một dòng mà bạn có thể đánh dấu trong Chi tiết khi di chuột, trên menu biểu tượng vùng thông báo. Menu đó cũng đặt thời điểm bong bóng cảnh báo xuất hiện và thời gian hiển thị. Năm mục đầu tiên lấy từ open-meteo.com, mỗi vị trí tối đa một yêu cầu mỗi giờ. Cảnh báo được bật theo mặc định. Các mục khác tắt theo mặc định. Di chuột lên tên để xem nguồn.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Một dải dưới tên vị trí cho mỗi cảnh báo đang có hiệu lực. Nguồn: weather.com, với National Weather Service làm dự phòng cho khu vực Mỹ.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Thời tiết và hạng bay từ bản tin sân bay gần nhất trên thẻ Tầm nhìn. Văn bản khi di chuột thêm dự báo sân bay. Nguồn: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Tuyết trong 1, 6 và 24 giờ qua. Nguồn: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Nhiệt độ cầu ướt cầu đen (WBGT), thước đo căng thẳng nhiệt khi làm việc và thể thao. Nguồn: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Năng lượng dông (CAPE) và nguy cơ dông hôm nay. Nguồn: Open-Meteo và weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Nhiệt độ đất ở độ sâu 6 cm, độ ẩm đất và độ sâu tuyết. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Độ cao của mức 0 độ. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Số giờ nắng, độ dài ban ngày, bức xạ mặt trời và bốc hơi hôm nay. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Sóng, chu kỳ và hướng sóng, nhiệt độ không khí, áp suất và thủy triều từ phao NOAA hoặc trạm thủy triều gần nhất trong vòng 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Mực nước, lưu lượng và 7 ngày qua từ trạm đo USGS gần nhất trong vòng 40 km. Chỉ ở Mỹ.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Nguy cơ dông và lượng tuyết trên các nút ngày, cùng câu mô tả gió, ghi chú và lượng trong chi tiết ngày. Nguồn: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Biểu đồ dưới dự báo theo giờ cho thấy các giờ có mưa, tuyết, băng, xác suất, nắng và thời tiết khắc nghiệt. Dòng trong vùng thông báo cho biết lượng trong 12 giờ tới.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Thảo luận của dự báo viên từ văn phòng National Weather Service địa phương, dưới bản đồ radar. Chỉ ở Mỹ.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Tuyết, 6 giờ</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Căng thẳng nhiệt</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Năng lượng dông</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Đất</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Độ cao đóng băng</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Nắng</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Phao</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Trạm đo sông</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>Không mưa, tuyết hay sương mù</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Bản tin sân bay: {0} ({1}), cách {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Thời tiết:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Hạng bay:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>Tầm nhìn và trần mây tốt</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>Cận biên: trần 1.000 đến 3.000 ft hoặc tầm nhìn 3 đến 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>Thấp: trần 500 đến 1.000 ft hoặc tầm nhìn 1 đến 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>Rất thấp: trần dưới 500 ft hoặc tầm nhìn dưới 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Trần mây tại sân bay:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Dự báo sân bay ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Bản tin gốc:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Nguồn: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Từ {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Thay đổi lúc {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Thỉnh thoảng từ {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>Khả năng {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>không có trần mây</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>trần mây {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 giờ: {0}, 24 giờ: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Tuyết đo được tại vị trí.
+Giờ qua: {0}
+6 giờ qua: {1}
+24 giờ qua: {2}
+
+Nguồn: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 giờ: {0}, 6 giờ: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Thấp</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Cao</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Rất cao</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Cực cao</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Nhiệt độ cầu ướt cầu đen (WBGT): {0}, căng thẳng nhiệt {1}.
+Chỉ số này kết hợp nhiệt độ, độ ẩm, gió và nắng. Các hướng dẫn cho công việc và thể thao dùng chỉ số này. Căng thẳng nhiệt bắt đầu gần 25 C (77 F) và ở mức cực cao trên 32 C (90 F).
+
+Nguồn: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Rất thấp</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Thấp</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Cao</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Cực cao</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Nguy cơ dông {0}/5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0}/5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Năng lượng dông (CAPE) là năng lượng mà không khí bốc lên có thể nhận được. Dông cần năng lượng này. Dưới 300 J/kg thì khó có dông. Trên 2.500 J/kg có thể có dông mạnh khi có tác nhân nâng không khí lên.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Hiện tại: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Cao nhất hôm nay: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Nguồn: Open-Meteo.com (CC BY 4.0) cho năng lượng dông, weather.com cho nguy cơ dông.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Độ ẩm {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Độ sâu tuyết {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>không có</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Nhiệt độ đất ở độ sâu 6 cm: {0}
+Độ ẩm đất ở 3 đến 9 cm: {1}
+Độ sâu tuyết: {2}
+
+Các giá trị đến từ mô hình thời tiết, không đến từ cảm biến. Nguồn: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, độ ẩm {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Ở mặt đất</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>so với mực nước biển</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Độ cao đóng băng: {0} so với mực nước biển.
+Trên độ cao này không khí dưới 0 C (32 F). Tuyết rơi từ trên cao tan ở bên dưới độ cao này.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Độ cao của vị trí: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>trên {0} ban ngày</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Nắng hôm nay: {0}
+Ban ngày hôm nay: {1}
+Bức xạ mặt trời hiện tại: {2}
+Bốc hơi hôm nay: {3}
+
+Bốc hơi là lượng bốc thoát hơi nước tham chiếu (FAO-56). Nó cho biết một bãi cỏ mất bao nhiêu nước trong một ngày. Nguồn: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} trên {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>mỗi {0} giây</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>từ hướng {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Thủy triều {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), cách {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Sóng:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Không khí:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Nước:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Áp suất:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Thủy triều, trên mốc không của trạm:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Nguồn: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Đang lên</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Đang xuống</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Ổn định</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), cách {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Mực nước:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Lưu lượng:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Thay đổi trong 3 giờ qua: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>7 ngày qua: {0}, từ {1} đến {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Mực nước được đo từ mốc không của trạm đo, không phải từ đáy sông. Nguồn: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Gió: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Gió ban đêm: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Ghi chú: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>tuyết {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Lượng: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Lượng: không có</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Cột: mưa (xanh dương), tuyết quy ra nước (trắng), băng (lục lam). Đường nét đứt: khả năng. Vàng: nắng. Dấu đỏ: giờ có thời tiết khắc nghiệt.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Mưa, tuyết và băng mỗi giờ từ weather.com. Tuyết được vẽ quy ra nước, khoảng 10 trên 1. Đường nét đứt là khả năng mưa. Cột vàng ở trên cùng là nắng của giờ đó từ Open-Meteo. Dấu đỏ cho biết giờ mà weather.com đánh giá là khắc nghiệt.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Tổng các giờ hiển thị: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>không có</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Khô, khả năng {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>khả năng {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>mưa {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>tuyết {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>băng {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Thảo luận của dự báo viên, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Phát hành {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Nguồn: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Hiện tất cả</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Hiện ít hơn</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Dưới 0 C ở mặt đất</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Không khí dưới 0 C (32 F) từ mặt đất trở lên. Tuyết không tan khi rơi xuống.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Nguồn: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Hiện tại</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>hiện tại</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Độ cao sóng, chu kỳ sóng, sóng lừng và nhiệt độ mặt biển từ mô hình biển của Open-Meteo, cho các điểm trên biển hoặc gần biển. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Gió giật mạnh nhất trong 6 giờ tới, gió giật của mô hình lúc này và gió ở độ cao 80 m. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Nhiệt độ cao, thấp và lượng mưa hôm nay từ các mô hình ECMWF, GFS và ICON. Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lưu lượng sông mô phỏng hôm nay và lưu lượng thông thường của ngày đó (GloFAS). Nguồn: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mức phấn hoa cây, cỏ và cỏ phấn hương. Nguồn: weather.com ở Mỹ và một số nước khác, Open-Meteo ở châu Âu.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 ngày theo giờ</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mỗi giờ của dự báo, khoảng 10 ngày</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Quay lại cửa sổ chính (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Dự báo theo giờ 10 ngày</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Bảng</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Tổng quan</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Cảm nhận</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Lượng mưa</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>Chỉ số UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Lượng mây</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Tầm nhìn</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Trang này hiển thị dự báo theo giờ mà ứng dụng đã tải cho vị trí đang hiển thị. Vị trí khác được tải khi được chọn. Thời gian là giờ địa phương của vị trí. Bấm vào biểu đồ sẽ cuộn danh sách đến giờ đó. Trong Danh sách, bấm vào một hàng sẽ mở các giá trị khác của hàng đó.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Vị trí đang hiển thị</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, cập nhật {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Không có dự báo theo giờ cho vị trí này</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Không có gió giật trong dự báo này</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>không có</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} giờ     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} tuyết</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>gió giật {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>cảm nhận {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>mưa</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>tuyết</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>lượng mưa</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Bầu trời</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Nhiệt</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Cảm nhận</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Khả năng</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Lượng</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Mưa</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Băng</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Đ. sương</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Giật</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Mây</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Tầm nhìn</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Nhiệt độ cảm nhận</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>Chỉ số UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Lượng mây</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Tầm nhìn</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Nhiệt độ cảm nhận</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Khả năng mưa</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Mưa</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Gió giật</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Nhiệt độ ({0}) và khả năng mưa</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Nhiệt độ, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Nhiệt độ cảm nhận và nhiệt độ, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Mưa ({0}) và tuyết ({1}) mỗi giờ, và khả năng mưa</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Gió và gió giật, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Gió giật, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Độ ẩm, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>Chỉ số UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Lượng mây, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Tầm nhìn, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Điểm sương và nhiệt độ, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Áp suất mực nước biển, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Cao nhất</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Thấp nhất</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Cuộn sang trái</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Cuộn sang phải</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Nắng</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Quang đãng</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Phần lớn nắng</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Phần lớn quang đãng</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Có mây rải rác</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Nhiều mây</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Phần lớn nhiều mây</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Sương mù</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Sương mù đóng băng</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Mưa phùn nhẹ</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Mưa phùn</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Mưa phùn dày</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Mưa phùn đóng băng</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Mưa nhỏ</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Mưa</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Mưa to</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Mưa đóng băng</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Tuyết nhẹ</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Tuyết</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Tuyết dày</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Tuyết hạt</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Mưa rào nhẹ</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Mưa rào</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Mưa rào to</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Mưa tuyết rào</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Mưa tuyết rào dày</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Dông</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Dông kèm mưa đá</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Trời đẹp</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Hôm nay</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Tối nay</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Ngày mai</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Tối mai</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>Tối {0}</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Gió nhẹ, hướng thay đổi.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Gió {0}, {1} đến {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Khả năng mưa {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Khả năng có tuyết {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Cao nhất {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Thấp nhất {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Dự kiến có dông</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Không có dông</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Rất tốt</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Tốt</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Kém</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Rất kém</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Không có</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Rất thấp</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Thấp</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Trung bình</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Cao</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Rất cao</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Cực cao</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Mức lo ngại thấp</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Mức lo ngại trung bình</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Mức lo ngại cao</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Mức lo ngại cực cao</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>BĐB</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>ĐB</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ĐĐB</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>Đ</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ĐĐN</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>ĐN</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>NĐN</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>NTN</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>TN</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>TTN</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>TTB</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>BTB</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>LẶNG GIÓ</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>THAY ĐỔI</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>nhẹ</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>mạnh</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>gần đó</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>dông</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>mưa rào</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>nông</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>từng mảng</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>một phần</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>thổi thấp</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>thổi bay</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>mưa rào</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>dông kèm</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>đóng băng</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>mưa phùn</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>mưa</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>tuyết</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>tuyết hạt</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>tinh thể băng</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>hạt băng</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>mưa đá</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>mưa đá nhỏ</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>giáng thủy không rõ</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>sương mỏng</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>sương mù</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>khói</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>tro núi lửa</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>bụi</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>cát</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>mù khô</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>bụi nước</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>lốc bụi</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>gió giật mạnh</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>mây phễu</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>bão cát</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>bão bụi</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, gió giật {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Cập nhật dữ liệu thời tiết thất bại</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows đã chặn kết nối tới dịch vụ thời tiết. Tường lửa, phần mềm diệt vi-rút, VPN hoặc proxy có thể đang chặn FluentWeather-Plus. Hãy cho phép FluentWeather-Plus trong chương trình đó, hoặc thử lại khi đã tắt VPN.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Không thể cập nhật dữ liệu thời tiết. Hãy kiểm tra kết nối Internet.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Bản dựng {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 phút</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 phút</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 giờ</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Nhiệt độ</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Cảm nhận</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Cao / thấp 24 giờ</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Thay đổi 24 giờ</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Điểm sương</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Chỉ số nóng</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Nhiệt độ cảm nhận do gió</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Gió</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>Chỉ số UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Áp suất</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Tầm nhìn</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Trần mây</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Mưa, giờ qua</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Mưa, 6 giờ qua</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Mưa, 24 giờ qua</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Tuyết, 24 giờ qua</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Mặt trời mọc</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Mặt trời lặn</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Pha mặt trăng</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Trăng mọc</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Trăng lặn</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Quan trắc lúc</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Trạm gần nhất</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Nhiệt độ nước</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Gió tại trạm nước</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Sóng và nhiệt độ biển</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Dự báo gió (gió giật, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Các mô hình khác</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Lưu lượng sông</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Phấn hoa</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Cảnh báo thời tiết</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Thời tiết hiện tại (sân bay)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Tuyết, 1 giờ và 6 giờ qua</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Nguy cơ dông hôm nay</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Căng thẳng nhiệt (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Độ cao đóng băng</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Nhiệt độ và độ ẩm đất</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Nắng hôm nay</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Phao: sóng và thủy triều</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Mực nước và lưu lượng sông</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Mưa, tuyết và băng trong 12 giờ tới</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Và {0} cảnh báo khác.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Và {0} cảnh báo khác.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Và {0} mục khác.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Đóng sau {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Cảnh báo FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Hiện chi tiết</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: đang chờ lần làm mới dữ liệu tiếp theo</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: chưa có dữ liệu. Hãy mở ứng dụng một lần.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: không có cập nhật từ {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, cảm nhận {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Cùng thành phố với ứng dụng.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Đã chọn trong vùng thông báo.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Cập nhật {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Cảnh báo thời tiết khắc nghiệt</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Hiện cảnh báo</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Cảnh báo nguy hiểm</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Cảnh báo nguy hiểm và theo dõi</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Mọi cảnh báo</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Tôn trọng Không làm phiền (dùng thông báo Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Thông báo Windows chờ trong khi Không làm phiền đang bật. Bong bóng không chờ.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Đóng bong bóng sau</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Không bao giờ</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} giây</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 phút</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} phút</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Thành phố hiển thị trong vùng thông báo</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Mọi vị trí đã lưu</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Hiện cảnh báo thử</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Cho thấy cảnh báo trông như thế nào với các lựa chọn hiện tại. Đây không phải cảnh báo thật.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Cảnh báo thử</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>đến {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Thành phố của bạn</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Đây là bản thử. Cảnh báo thật hiển thị ở đây phần tóm tắt của dịch vụ thời tiết.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Ứng dụng gửi cảnh báo khi ô Thông báo của Cảnh báo thời tiết khắc nghiệt được chọn trong cài đặt ứng dụng.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Mở {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Số hiển thị nhiệt độ</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Số hiển thị nhiệt độ cảm nhận</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Chi tiết khi di chuột</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Hiện tất cả</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Đặt lại mặc định</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Không có vị trí đã lưu. Dùng ngôi sao trong ứng dụng.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Vùng thông báo hiển thị (cửa sổ ứng dụng vẫn đóng)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Cùng thành phố với ứng dụng</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Khởi động lại FluentWeather (ứng dụng và biểu tượng vùng thông báo)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Đóng cửa sổ FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Thoát biểu tượng vùng thông báo</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Khởi động lại chúng từ menu Start: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Thoát biểu tượng vùng thông báo và đóng FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Ứng dụng chưa được cài đặt. Hãy chạy trình cài đặt trước.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Không thể khởi động lại. Hãy dùng mục "Restart FluentWeather" trong menu Start.</value>
+  </data>
 </root>

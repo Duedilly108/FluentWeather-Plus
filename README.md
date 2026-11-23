@@ -23,12 +23,14 @@ If preferred, to build the app from the source code on your own Windows PC, foll
 * An air quality card for every location.
 * Severe weather alerts under the location name, and as a bubble or a Windows notification from the tray.
 * The past two days in the daily forecast.
+* The moon on every day card, with the name of its phase and the percent lit.
 * Optional cards for nearby water, waves, wind gusts, other forecast models, river flow and pollen.
 * Optional more data for the main window and the tray: airport weather and forecast, recent snow, heat stress, storm energy, soil, freezing level, sunshine, buoys, river gauges, day details, an hourly chart and the forecaster's discussion.
 * Detail cards that can be dragged, hidden or added, with more detail on hover.
 * A backup weather source, Open-Meteo with the nearest airport report, if weather.com stops working.
 * Settings for text size, background contrast, card tint, forecast length and language.
 * A resizable window that remembers its size and position.
+* All added text, including the tray menus and hover panel, in the same 33 languages as the original app.
 * Many additional GUI refinements.
 
 ## Features of the original FluentWeather
@@ -64,9 +66,11 @@ v51 shows the location name and the section titles in a larger font, gives the F
 
 v53 adds a silent setup for scripts and package managers, a thunder bolt and a "Next 12 h" tray line for the Open-Meteo data source, and sideways scroll bars that show when the mouse is over a row.
 
+v55 adds the moon to the daily forecast. Each day card shows the moon, the name of its phase and the percent lit, and a moon button next to the Full History button turns that row off. It adds the missing last quarter moon icon. All text that FluentWeather-Plus adds, including the tray icon menus and hover panel, is now translated into the 32 other languages of the app. The app also switches to Open-Meteo when weather.com is overloaded, has a server error or does not answer.
+
 ## Credits
 
-* FluentWeather-Plus v53 updated by duedilly108
+* FluentWeather-Plus v55 updated by duedilly108
 
 * Based on FluentWeather v2.1.0 developed by Gabboxl
 

@@ -297,4 +297,2348 @@
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>ネットワーク エラー: インターネット接続をご確認ください。</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>日別カードの月相を表示または非表示にする</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>日別カードの月相を表示または非表示にする</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>輝面 {0}%</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>新月</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>三日月</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>上弦の月</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>満ちていく月</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>満月</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>欠けていく月</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>下弦の月</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>有明月</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>通知領域のアイコン</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>通知領域のアイコンを表示</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>タスク バーの気温と天気のアイコンを表示または非表示にします。ボタンは現在の状態に従います。</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>未インストール</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>更新者</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>ベース</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>この場所を保存</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>この場所を保存済みの場所から削除</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>この場所を保存するには、名前の横の星をクリックします。保存した場所はここにボタンとして表示されます。ボタンをクリックするとその場所に切り替わります。別の場所を検索し、その星をクリックすると追加されます。</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>場所の名前の横の星をクリックすると、保存または削除できます。場所のボタンを右クリックすると、移動または削除できます。Ctrl+1 から Ctrl+9 で場所を切り替えます。</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>このヒントを非表示</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>背景のコントラスト</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>元のまま</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>暗い</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>より暗い</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>明るい</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>より明るい</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>「暗い」と「より暗い」は背景画像を暗くし、明るい文字を保ちます。「明るい」と「より明るい」は画像を明るくし、暗い文字を使います。</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>カードの色合い</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>カードの色合い</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>背景画像の上でも文字が読みやすいように、カードに色を付けます。0 パーセントで元の見た目のままです。</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>昨日</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>大気質</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>良い</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>中程度</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>悪い</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>非常に悪い</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>極めて悪い</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>敏感な人に有害</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>有害</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>非常に有害</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>危険</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>米国の大気質指数</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>欧州の大気質指数</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>オゾン</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>二酸化窒素</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>大気質データ: Open-Meteo.com とコペルニクス大気監視サービス (CC BY 4.0)。</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>レーダー</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>レーダーと境界: NOAA/NWS。地形: USGS。</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>レーダーを読み込み中</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>この地域に雨や雪はありません。縮小すると広い範囲を表示できます。</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>レーダーを読み込めませんでした。次回の更新時に再試行します。</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows の既定</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>この言語を使用</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>FluentWeather を再起動しますか?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>新しい言語は FluentWeather の再起動後に適用されます。</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>今すぐ再起動</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>後で</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>1 時間ごとの予報</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 時間</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 時間</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 時間</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>「日」は選択した日の時間を表示します。24、36、48 時間は、今日は現在から、他の日は午前 0 時から始まります。</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>文字と画像のサイズ</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+マイナスと Ctrl+プラスでも 5% ずつサイズを変更できます。Ctrl+0 で 100% に戻ります。</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>左へ移動</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>右へ移動</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>保存できる場所の上限に達しました</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>保存できる場所は {0} か所までです。新しい場所を追加するには、場所を削除してください。</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>戻る (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>全履歴</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>まず場所を保存してください。履歴ウィンドウには保存した場所が表示されます。</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>読み込み中</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} 日。アプリの記録 {1} 日、アーカイブ {2} 日。</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>日ごとの最高と最低、度 {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>アーカイブ データ: Open-Meteo.com (CC BY 4.0)。コペルニクス気候変動サービスの情報を使用して作成。大気質: Open-Meteo、CAMS (2022 年 8 月以降)。アーカイブの値は気象モデルによるもので、記録された値と異なる場合があります。</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>日付</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>天気</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>出典</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>記録</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>アーカイブ</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>快晴</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>おおむね晴れ</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>晴れ時々曇り</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>曇り</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>霧</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>霧雨</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>にわか雨</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>にわか雪</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>雷雨</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>近くの水域</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>メイン ウィンドウのカード</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>通知領域のホバー パネルの行</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>近くの水域</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>観測所の風</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>この場所の現在の風 (観測所に風センサーがありません)</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>突風 {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>現在の測定値がある最寄りの水域観測所。</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>水</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>観測所の気温</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>たった今</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} 分前</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} 時間前</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>水域データ: NOAA National Data Buoy Center (ndbc.noaa.gov) と USGS Water Data (waterdata.usgs.gov)。パブリック ドメイン。</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>波</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>全履歴</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>この場所の日別と時間別の履歴</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>50 km (31 mi) 以内で、6 時間以内の測定値がある最寄りの水域観測所。NOAA NDBC のブイと沿岸観測所は沿岸部と五大湖をカバーします。USGS は河川と一部の湖をカバーします。近くに観測所がない海上では Open-Meteo の海洋モデルを使います。通知領域のメニューの「ポイント時の詳細」で行にチェックを付けます。</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo 海洋モデル</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo モデルの風 (観測所に風センサーがありません)</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>この場所の Open-Meteo:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>その他のデータ オプション</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>メイン</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>通知領域</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>波と海水温</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>風の予報 (突風、80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>その他のモデル</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>河川流量</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>波</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>風の予報</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>その他のモデル</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>河川流量</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>データ: Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>波</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>うねり</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>海面水温</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>海</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>この場所の Open-Meteo 海洋モデル。</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>最大 {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>この場所の Open-Meteo 風予報。</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>現在の風</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>現在の突風</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>最大突風、今後 6 時間</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 時間最大</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>高度 80 m の風</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>3 つの気象モデルによる今日の最高と最低。ばらつきが大きいほど予報は不確かです。</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>最寄りの河川のモデル流量 (GloFAS)。</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>この日の平年値</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>平年の {0}%</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>空気 1 立方メートルあたりの粒数。レベルは目安です。</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>ハンノキ</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>シラカバ</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>イネ科</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>ヨモギ</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>オリーブ</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>ブタクサ</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>少ない</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>やや多い</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>多い</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>非常に多い</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>通知領域のアイコンを表示</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>通知領域のアイコンを非表示</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>左へ移動</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>右へ移動</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>先頭へ移動</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>末尾へ移動</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>このカードを非表示</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>カードを追加</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>すべてのカードが表示されています</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>カードをリセット</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>近くの水域</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>波と海水温</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>風の予報</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>その他のモデル</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>河川流量</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>地上 10 m の風。</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>風速</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>風向</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>体感温度 (風)</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>相対湿度: この気温で空気が含むことのできる最大量に対する、空気中の水蒸気の量。</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>乾燥</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>快適</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>湿っぽい</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>暑さ指数</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV インデックス: 太陽の紫外線の強さ。</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>リスクは低く、対策は不要</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>日焼け止めと帽子を使い、正午ごろは日陰へ</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>対策が必要、10 時から 16 時の日光を避ける</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>十分な対策が必要、正午の日差しを避ける</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>無防備な肌は数分で日焼け、正午ごろは屋内へ</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>視程: はっきり見える距離。</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>霧</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>もや</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>雲底高度</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>低い雲なし</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>利用不可</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>海面気圧。</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>傾向</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>3 時間の変化</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>気圧が下がると雲や雨になりやすく、上がると晴れやすくなります。</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>露点: 露ができる温度。空気の湿っぽさの目安です。</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>乾燥</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>快適</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>やや湿っぽい</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>湿っぽい</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>蒸し暑い</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>非常に蒸し暑い</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>気温と露点の差。0 に近いと霧が出やすくなります。</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>カードの設定</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>風速、突風、風向</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>相対湿度、暑さ指数</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>日差しの強さと注意</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo の大気質</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>最寄りの水域観測所、NOAA と USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo の波と海</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>今後 6 時間の最大突風、80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>今日の ECMWF、GFS、ICON</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo の河川流量</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>樹木、イネ科、ブタクサ</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>距離、雲底高度</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>海面、3 時間の傾向</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>快適さ、霧の可能性</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>樹木</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>花粉の量 (なし～非常に多い)。</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>データ: weather.com。</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>突風 最大 {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>最大突風、今後 6 時間</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>突風 最大 {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>これはモデル予報です。「風」カードには現在測定中の風と突風が表示されます。「近くの水域」カードには、観測所に風センサーがある場合に水辺で測定された風が表示されます。</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Gabboxl による FluentWeather 2.1.0 がベース。duedilly108 が更新。</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus は FluentWeather 2.1.0 に次の機能を追加します:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- 保存した場所 (最大 25 か所、キーボード ショートカット付き)。
+- 気温、天気の画像、選んだ詳細を表示するホバー パネル付きの通知領域アイコン。
+- 過去の日: 今日の横に昨日と一昨日。
+- 全履歴: 保存した場所の日別・時間別の天気を 1940 年までさかのぼって表示。
+- 米国の場所のレーダー マップと、すべての場所の大気質。
+- 近くの水域: 最寄りの観測所の水温と風。
+- 追加データ: 波、風の予報、その他のモデル、河川流量、花粉。
+- メイン ウィンドウと通知領域のバルーンでの気象警報。
+- その他のデータ: 空港の天気、雪、暑熱ストレス、雷雨エネルギー、土壌、凍結高度、
+  日照、ブイ、河川水位計、日の詳細、時間別グラフ、NWS の予報解説。
+- ポイント時に詳細が表示される詳細カード (順序は自由)。
+- 文字サイズ、背景のコントラスト、カードの色合い、時間範囲の設定。
+- 言語設定、直接インストーラー、クラッシュ レポート。
+- そのほか多くの GUI の改良。</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>雨と雪</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>大気質</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>雲と日照</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>ホイール: ズーム。Shift+ホイールまたはドラッグ: スクロール。</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>全体表示</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>1 年全体を表示</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} ～ {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>時間データを読み込み中</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>クリックするとこの日を拡大します。</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>気温と露点、度 {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>日ごとの最大風速と最大突風、{0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>風と突風、{0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>日ごとの降水量 ({0}) と降雪量 ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>1 時間ごとの降水量 ({0}) と降雪量 ({1})</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>日ごとの最大 {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>1 時間ごとの {0}</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>日平均湿度 (%) と露点</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>湿度 (%) と露点</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>日平均海面気圧、{0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>海面気圧、{0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>日平均雲量 (%) と日照時間</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>雲量 (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>降水量</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>日照 (時間)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>雲量</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>米国 AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>欧州 AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>この期間の大気質データはありません。データは 2022 年 8 月から始まります。</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>時刻</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>風向</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>雲</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>日照</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>この期間のデータはまだありません。</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>気象データの提供元</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>「自動」は weather.com を使い、weather.com が 2 回続けて失敗すると Open-Meteo に切り替えます。インターネット接続の切断は数えません。weather.com は 1 時間ごとに再試行します。Open-Meteo の場合、50 km 以内の最寄りの空港の通報から雲底高度と測定値を取得します。米国の花粉は空欄になります。</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>データ: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>データ: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>データ: Open-Meteo と観測所 {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>{0} まで</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>ほか {0} 件</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>詳細 ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>詳細を隠す</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>発表 {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>地域: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>全文を読み込み中...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>全文は利用できません。</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>出典: weather.com の警報 (各国の気象機関から)。</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>出典: National Weather Service (api.weather.gov)。</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>メイン</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>通知領域</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>気象警報</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>現在の天気 (空港)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>雪、過去 1・6・24 時間</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>暑熱ストレス (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>雷雨エネルギーと雷のリスク</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>土壌と積雪深</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>凍結高度</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>日照と蒸発</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>ブイ: 波、気温、潮位</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>河川水位計 (米国)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>日の詳細: 雷、雪、風</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>時間別グラフ、通知領域に今後 12 時間</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>予報官の解説 (米国)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>メイン ウィンドウの警報</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>すべての警報</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>警報と注意報</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>警報のみ</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>「メイン」はこのウィンドウに項目を表示します。場所のデータがない場合、カードは非表示になります。「通知領域」は、通知領域アイコンのメニューの「ポイント時の詳細」でチェックできる行を追加します。このメニューでは、警報バルーンを表示するタイミングと表示時間も設定します。最初の 5 項目は open-meteo.com から取得し、場所ごとに 1 時間に 1 回までリクエストします。警報は既定でオンです。その他の項目は既定でオフです。名前をポイントすると出典が表示されます。</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>有効な警報ごとに場所の名前の下に帯を表示します。出典: weather.com (米国の場所では National Weather Service を予備として使用)。</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>「視程」カードに最寄りの空港の通報から天気と飛行区分を表示します。ポイント時のテキストには空港の予報が加わります。出典: Aviation Weather Center。</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>過去 1・6・24 時間の降雪。出典: weather.com。</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>湿球黒球温度 (WBGT)。仕事やスポーツでの暑熱ストレスの指標です。出典: weather.com。</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>雷雨エネルギー (CAPE) と今日の雷のリスク。出典: Open-Meteo と weather.com。</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>深さ 6 cm の地温、土壌水分、積雪深。出典: Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>0 度の高度。出典: Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>今日の日照、昼の長さ、日射量、蒸発量。出典: Open-Meteo。</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>50 km 以内の最寄りの NOAA ブイまたは潮位観測所の波、波の周期と向き、気温、気圧、潮位。</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>40 km 以内の最寄りの USGS 水位計の水位、流量、過去 7 日間。米国のみ。</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>日のボタンに雷のリスクと降雪量、日の詳細に風の説明、注記、量を表示します。出典: weather.com。</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>時間別予報の下に、雨、雪、氷、確率、日照、荒天の時間を示すグラフを表示します。通知領域の行には今後 12 時間の量が表示されます。</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>レーダー マップの下に、地域の National Weather Service 事務所の予報官による解説を表示します。米国のみ。</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>雪、6 時間</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>暑熱ストレス</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>雷雨エネルギー</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>土壌</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>凍結高度</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>日照</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>ブイ</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>河川水位計</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>雨、雪、霧なし</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>空港の通報: {0} ({1})、{2} の距離。</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>天気:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>飛行区分:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>視程と雲底高度は良好</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>境界: 雲底 1,000～3,000 ft または視程 3～5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>低い: 雲底 500～1,000 ft または視程 1～3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>非常に低い: 雲底 500 ft 未満または視程 1 mi 未満</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>空港の雲底高度:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>空港の予報 ({0}、TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>通報の原文:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>出典: Aviation Weather Center、aviationweather.gov。</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>{0} から</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>{0} に変化</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>{0} から時々</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>確率 {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>雲底なし</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>雲底 {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 時間: {0}、24 時間: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>その場所で測定された雪。
+過去 1 時間: {0}
+過去 6 時間: {1}
+過去 24 時間: {2}
+
+出典: weather.com。</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 時間: {0}、6 時間: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>低い</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>中程度</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>高い</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>非常に高い</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>極めて高い</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>湿球黒球温度 (WBGT): {0}、暑熱ストレス {1}。
+気温、湿度、風、日射を組み合わせた指標です。仕事やスポーツの指針で使われます。暑熱ストレスは 25 C (77 F) 付近で始まり、32 C (90 F) を超えると極めて高くなります。
+
+出典: weather.com。</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>非常に低い</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>低い</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>中程度</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>高い</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>極めて高い</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>雷のリスク 5 段階中 {0}</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>5 段階中 {0}</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>雷雨エネルギー (CAPE) は、上昇する空気が得られるエネルギーです。雷雨にはこれが必要です。300 J/kg 未満では雷雨は起こりにくくなります。2,500 J/kg を超えると、何かが空気を持ち上げたときに強い雷雨が起こり得ます。</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>現在: {0}、{1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>今日の最大: {0}、{1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>出典: 雷雨エネルギーは Open-Meteo.com (CC BY 4.0)、雷のリスクは weather.com。</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>水分 {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>積雪深 {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>深さ 6 cm の地温: {0}
+深さ 3～9 cm の土壌水分: {1}
+積雪深: {2}
+
+値はセンサーではなく気象モデルによるものです。出典: Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}、水分 {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>地上</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>海抜</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>凍結高度: 海抜 {0}。
+この高さより上では気温が 0 C (32 F) 未満です。上空から降る雪はこの高さより下で融けます。</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>この場所の標高: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>昼の長さ {0} のうち</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>今日の日照: {0}
+今日の昼の長さ: {1}
+現在の日射量: {2}
+今日の蒸発量: {3}
+
+蒸発量は基準蒸発散量 (FAO-56) です。芝生が 1 日に失う水の量を表します。出典: Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{1} 中 {0}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>{0} 秒ごと</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>{0} から</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>潮位 {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1})、{2} の距離、{3}。</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>波:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>気温:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>水温:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>気圧:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>潮位 (観測所の基準面から):</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>出典: NOAA National Data Buoy Center、ndbc.noaa.gov。</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>上昇中</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>下降中</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>横ばい</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1})、{2} の距離、{3}。</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>水位:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>流量:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>過去 3 時間の変化: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>過去 7 日間: {0}、{1} ～ {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>水位は河床からではなく、水位計の基準面から測定されます。出典: U.S. Geological Survey、waterdata.usgs.gov。</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>風: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>夜の風: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>注記: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>量: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>量: なし</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>棒: 雨 (青)、水換算の雪 (白)、氷 (シアン)。破線: 確率。黄色: 日照。赤い印: 荒天の時間。</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>weather.com による 1 時間ごとの雨、雪、氷。雪は水換算 (約 10 対 1) で表示します。破線は降水確率です。上部の黄色の棒は Open-Meteo によるその時間の日照です。赤い印は weather.com が荒天と評価した時間を示します。</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>表示中の時間の合計: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>降水なし、確率 {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>確率 {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>雨 {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>氷 {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>予報官の解説、NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>発表 {0}。</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>出典: National Weather Service、api.weather.gov。</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>すべて表示</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>表示を減らす</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>地上で 0 C 未満</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>地上から上空まで気温が 0 C (32 F) 未満です。雪は落ちる途中で融けません。</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>出典: Open-Meteo.com (CC BY 4.0)。</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Open-Meteo の海洋モデルによる波高、波の周期、うねり、海面水温。海上または海の近くの地点が対象です。出典: Open-Meteo。</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>今後 6 時間の最大突風、現在のモデルの突風、80 m の風。出典: Open-Meteo。</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ECMWF、GFS、ICON の各気象モデルによる今日の最高、最低、降水量。出典: Open-Meteo。</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>モデルによる今日の河川流量と、その日の通常の流量 (GloFAS)。出典: Open-Meteo。</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>樹木、イネ科、ブタクサのレベル。出典: 米国と一部の国では weather.com、欧州では Open-Meteo。</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 日間の時間別</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>予報の各時間、約 10 日間</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>メイン ウィンドウに戻る (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10 日間の時間別予報</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>リスト</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>概要</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>降水量</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV インデックス</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>雲量</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>視程</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>このページには、表示中の場所についてアプリが読み込み済みの時間別予報を表示します。別の場所は選んだときに読み込まれます。時刻はその場所の現地時刻です。グラフをクリックすると、リストがその時間までスクロールします。リストでは、行をクリックするとその他の値が開きます。</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>表示中の場所</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}、{1} に更新</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>この場所の時間別予報はありません</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>この予報には突風がありません</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} 時間     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>雪 {0}</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>突風 {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>体感 {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>降水</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>時刻</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>空</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>体感</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>確率</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>量</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>氷</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>雲</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>視程</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV インデックス</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>雲量</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>視程</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>降水確率</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>突風</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>気温 ({0}) と降水確率</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>気温、{0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>体感温度と気温、{0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>1 時間ごとの雨 ({0}) と雪 ({1})、降水確率</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>風と突風、{0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>突風、{0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>湿度、%</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV インデックス</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>雲量、%</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>視程、{0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>露点と気温、{0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>海面気圧、{0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>左へスクロール</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>右へスクロール</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>晴れ</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>快晴</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>おおむね晴れ</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>おおむね快晴</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>晴れ時々曇り</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>曇り</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>おおむね曇り</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>霧</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>着氷性の霧</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>弱い霧雨</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>霧雨</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>強い霧雨</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>着氷性の霧雨</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>小雨</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>大雨</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>着氷性の雨</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>小雪</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>大雪</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>霧雪</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>弱いにわか雨</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>にわか雨</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>強いにわか雨</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>にわか雪</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>強いにわか雪</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>雷雨</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>ひょうを伴う雷雨</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>晴れ</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>今夜</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>明日</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>明日の夜</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0}の夜</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>風は弱く、風向は不定。</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>{0}の風、{1}～{2} {3}。</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>雨の確率 {0}%。</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>雪の確率 {0}%。</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>最高 {0}{1}。</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>最低 {0}{1}。</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>雷の可能性あり</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>雷なし</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>最適</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>不良</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>非常に不良</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>非常に低い</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>低い</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>中程度</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>高い</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>非常に高い</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>極めて高い</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>懸念 低</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>懸念 中</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>懸念 高</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>懸念 極めて高</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>北</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>北北東</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>北東</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>東北東</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>東</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>東南東</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>南東</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>南南東</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>南</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>南南西</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>南西</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>西南西</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>西</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>西北西</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>北西</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>北北西</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>静穏</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>不定</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>弱い</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>強い</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>付近で</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>雷雨</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>しゅう雨</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>低い</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>散在する</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>部分的な</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>低い地ふぶき</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>高い地ふぶき</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>しゅう雨性の</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>雷雨と</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>着氷性の</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>霧雨</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>雨</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>雪</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>霧雪</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>細氷</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>凍雨</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>ひょう</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>あられ</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>不明な降水</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>もや</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>霧</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>煙</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>火山灰</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>ちり</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>砂</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>煙霧</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>しぶき</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>じん旋風</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>スコール</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>漏斗雲</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>砂嵐</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>砂じん嵐</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>、突風 {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>気象データの更新に失敗しました</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows が気象サービスへの接続をブロックしました。ファイアウォール、ウイルス対策ソフト、VPN、またはプロキシが FluentWeather-Plus をブロックしている可能性があります。そのプログラムで FluentWeather-Plus を許可するか、VPN をオフにしてもう一度お試しください。</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>気象データを更新できませんでした。インターネット接続を確認してください。</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>ビルド {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 分</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 分</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 時間</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>天気</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>気温</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>体感温度</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 時間の最高 / 最低</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 時間の変化</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>露点</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>暑さ指数</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>体感温度 (風)</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>風</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV インデックス</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>気圧</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>視程</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>雲底高度</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>雨、過去 1 時間</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>雨、過去 6 時間</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>雨、過去 24 時間</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>雪、過去 24 時間</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>日の出</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>日の入り</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>月齢</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>月の出</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>月の入り</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>観測時刻</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>最寄りの観測所</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>水温</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>水域観測所の風</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>波と海水温</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>風の予報 (突風、80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>その他のモデル</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>河川流量</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>花粉</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>気象警報</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>現在の天気 (空港)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>雪、過去 1 時間と 6 時間</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>今日の雷のリスク</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>暑熱ストレス (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>凍結高度</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>地温と土壌水分</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>今日の日照</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>ブイ: 波と潮位</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>河川の水位と流量</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>今後 12 時間の雨、雪、氷</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>ほかに {0} 件の警報があります。</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>ほかに {0} 件の警報があります。</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>ほか {0} 件。</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>{0} 後に閉じます</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus の警報</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>詳細を表示</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: 次のデータ更新を待っています</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: データがまだありません。アプリを一度開いてください。</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: {0} 以降更新されていません</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>、体感 {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>アプリと同じ都市。</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>通知領域で選択。</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>{0} に更新</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>気象警報</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>警報を表示</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>警報</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>警報と注意報</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>すべての警報</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>応答不可を尊重 (Windows の通知を使用)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>応答不可がオンの間、Windows の通知は待機します。バルーンは待機しません。</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>バルーンを閉じるまでの時間</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>閉じない</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 分</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} 分</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>通知領域に表示する都市</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>保存したすべての場所</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>テスト警報を表示</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>現在の設定で警報がどのように表示されるかを示します。実際の警報ではありません。</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>テスト警報</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>{0} まで</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>あなたの都市</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>これはテストです。実際の警報では、ここに気象サービスの概要が表示されます。</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>アプリの設定で「気象警報」の「通知領域」のチェック ボックスがオンのとき、アプリは警報を送ります。</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>{0} を開く</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>数字は気温を表示</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>数字は体感温度を表示</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>ポイント時の詳細</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>すべて表示</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>既定値に戻す</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>保存した場所がありません。アプリの星を使ってください。</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>通知領域の表示 (アプリ ウィンドウは閉じたまま)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>アプリと同じ都市</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>FluentWeather を再起動 (アプリと通知領域アイコン)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>FluentWeather ウィンドウを閉じる</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>通知領域アイコンを終了</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>スタート メニューから再び起動できます: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>通知領域アイコンを終了し、FluentWeather を閉じる</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>アプリはまだインストールされていません。先にセットアップを実行してください。</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>再起動できませんでした。スタート メニューの「Restart FluentWeather」を使ってください。</value>
+  </data>
 </root>

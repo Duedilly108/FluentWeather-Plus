@@ -297,4 +297,2348 @@ Live Tiles hanya tersedia di Windows 10.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Kesalahan jaringan, mohon periksa koneksi internet Anda.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tampilkan atau sembunyikan fase bulan di kartu hari</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Tampilkan atau sembunyikan fase bulan di kartu hari</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% diterangi</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Bulan baru</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Sabit awal</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Kuartal awal</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Cembung awal</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Purnama</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Cembung akhir</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Kuartal akhir</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Sabit akhir</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Ikon area notifikasi</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Tampilkan ikon area notifikasi</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Menampilkan atau menyembunyikan ikon suhu dan cuaca di bilah tugas. Tombol mengikuti keadaannya saat ini.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Tidak terinstal</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>diperbarui oleh</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Berdasarkan</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Versi</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Segarkan</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Simpan lokasi ini</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Hapus lokasi ini dari lokasi tersimpan</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Untuk menyimpan lokasi ini, klik bintang di samping namanya. Lokasi tersimpan muncul di sini sebagai tombol. Klik tombol untuk beralih ke lokasi itu. Cari lokasi lain dan klik bintangnya untuk menambahkannya.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Klik bintang di samping nama lokasi untuk menyimpan atau menghapusnya. Klik kanan tombol lokasi untuk memindahkan atau menghapusnya. Ctrl+1 hingga Ctrl+9 beralih lokasi.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Sembunyikan tips ini</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Kontras latar belakang</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Asli</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Gelap</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Lebih gelap</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Terang</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Lebih terang</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Gelap dan Lebih gelap menggelapkan gambar latar belakang dan mempertahankan teks terang. Terang dan Lebih terang mencerahkan gambar dan menggunakan teks gelap.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Warna kartu</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Warna kartu</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Mewarnai kartu agar teksnya tetap terbaca di atas gambar latar belakang. 0 persen mempertahankan tampilan asli.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Kemarin</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Kualitas udara</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Baik</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Cukup</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Sedang</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Buruk</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Sangat buruk</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Sangat buruk sekali</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Tidak sehat bagi kelompok sensitif</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Tidak sehat</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Sangat tidak sehat</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Berbahaya</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Indeks kualitas udara AS</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Indeks kualitas udara Eropa</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Nitrogen dioksida</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Data kualitas udara: Open-Meteo.com dan Layanan Pemantauan Atmosfer Copernicus (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar dan batas NOAA/NWS. Medan USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Diperbarui</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Memuat radar</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Tidak ada hujan atau salju di area ini. Perkecil untuk melihat lebih banyak.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Radar tidak dapat dimuat. Akan dicoba lagi pada penyegaran berikutnya.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Perbesar</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Perbesar</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Perkecil</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Perkecil</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Default Windows</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Gunakan bahasa ini</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Mulai ulang FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Bahasa baru berlaku setelah FluentWeather dimulai ulang.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Mulai ulang sekarang</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Nanti</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Prakiraan per jam</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Hari</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 jam</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 jam</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 jam</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Hari menampilkan jam-jam dari hari yang dipilih. 24, 36, dan 48 jam dimulai sekarang untuk hari ini dan pada tengah malam untuk hari lain.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Ukuran teks dan gambar</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Minus dan Ctrl+Plus juga mengubah ukuran dalam langkah 5%. Ctrl+0 kembali ke 100%.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Pindahkan ke kiri</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Pindahkan ke kanan</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Hapus</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Batas lokasi tersimpan tercapai</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Anda dapat menyimpan hingga {0} lokasi. Hapus satu lokasi untuk menambahkan lokasi baru.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kembali (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Riwayat lengkap</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Bulan</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Tahun</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Simpan lokasi terlebih dahulu. Jendela riwayat menampilkan lokasi tersimpan.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Memuat</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} hari. {1} dicatat oleh aplikasi, {2} dari arsip.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Suhu tertinggi dan terendah harian, derajat {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Data arsip: Open-Meteo.com (CC BY 4.0). Dibuat menggunakan informasi Layanan Perubahan Iklim Copernicus. Kualitas udara: Open-Meteo, CAMS (sejak Agustus 2022). Nilai arsip berasal dari model cuaca dan dapat berbeda dari nilai yang dicatat.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Tanggal</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Tinggi</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Rendah</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Presipitasi</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Cuaca</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Sumber</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>tercatat</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arsip</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Cerah</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Sebagian besar cerah</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Berawan sebagian</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Mendung</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Kabut</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Gerimis</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Hujan</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Hujan lokal</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Hujan salju lokal</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Badai petir</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Tidak diketahui</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Perairan terdekat</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Kartu di jendela utama</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Baris di panel arahkan area notifikasi</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Perairan terdekat</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>angin di stasiun</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>angin saat ini untuk lokasi ini, stasiun tidak memiliki sensor angin</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>lokasi</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>hembusan {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Stasiun air terdekat dengan pembacaan terkini.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Air</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Udara di stasiun</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>baru saja</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} mnt lalu</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} jam lalu</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Data air: NOAA National Data Buoy Center (ndbc.noaa.gov) dan USGS Water Data (waterdata.usgs.gov). Domain publik.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Gelombang</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Riwayat lengkap</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Riwayat harian dan per jam lokasi ini</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Kembali</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Stasiun air terdekat dalam radius 50 km (31 mil) dengan pembacaan yang berumur kurang dari 6 jam. Pelampung dan stasiun pantai NOAA NDBC mencakup pesisir dan Danau-Danau Besar. USGS mencakup sungai dan beberapa danau. Di laut tanpa stasiun di dekatnya, model laut Open-Meteo digunakan. Centang baris di bawah Detail saat diarahkan pada menu area notifikasi.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Model laut Open-Meteo</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Angin model Open-Meteo, stasiun tidak memiliki sensor angin</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo untuk lokasi ini:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Opsi data lainnya</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Utama</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Notifikasi</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Gelombang dan suhu laut</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Prakiraan angin (hembusan, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Model lain</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Debit sungai</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Serbuk sari</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Gelombang</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Prakiraan angin</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Model lain</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Debit sungai</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Serbuk sari</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Data: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} dtk</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Gelombang</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Alun</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Suhu permukaan laut</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>laut</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Model laut Open-Meteo untuk lokasi ini.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>hingga {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Prakiraan angin Open-Meteo untuk lokasi ini.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Angin sekarang</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Hembusan sekarang</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Hembusan terkuat, 6 jam ke depan</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>maks 6 jam</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Angin pada 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Suhu tertinggi dan terendah hari ini dari tiga model cuaca. Sebaran yang lebar berarti prakiraan tidak pasti.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Debit modelan sungai terdekat (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Hari ini</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Biasanya untuk hari ini</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0}% dari biasanya</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Butir per meter kubik udara. Tingkatnya merupakan perkiraan.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Alnus (alder)</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Betula (birch)</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Rumput</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Artemisia (mugwort)</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Zaitun</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrosia (ragweed)</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Tidak ada</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>rendah</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>sedang</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>tinggi</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>sangat tinggi</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Tampilkan ikon area notifikasi</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Sembunyikan ikon area notifikasi</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Pindahkan ke kiri</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Pindahkan ke kanan</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Pindahkan ke awal</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Pindahkan ke akhir</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Sembunyikan kartu ini</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Tambahkan kartu</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Semua kartu ditampilkan</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Atur ulang kartu</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Perairan terdekat</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Gelombang dan suhu laut</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Prakiraan angin</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Model lain</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Debit sungai</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Serbuk sari</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>tidak ada</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Angin pada ketinggian 10 m di atas tanah.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Kecepatan angin</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Arah</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Suhu rasa angin</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Kelembapan relatif: jumlah uap air di udara dibandingkan jumlah maksimum yang dapat ditampung udara pada suhu ini.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>Kering</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>Nyaman</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>Lembap</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Indeks panas</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>Indeks UV: kekuatan sinar ultraviolet matahari.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>Risiko rendah, tidak perlu perlindungan</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>Gunakan tabir surya dan topi, cari tempat teduh saat siang</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>Perlu perlindungan, batasi paparan matahari pukul 10.00 sampai 16.00</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>Perlu perlindungan ekstra, hindari matahari siang</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>Kulit tanpa perlindungan terbakar dalam beberapa menit, tetap di dalam ruangan saat siang</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Jarak pandang: seberapa jauh Anda dapat melihat dengan jelas.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>Kabut</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>Kabut asap atau kabut tipis</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>Sedang</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>Baik</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Plafon awan</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>Tidak ada awan rendah</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>Tidak tersedia</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Tekanan permukaan laut.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Saat ini</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Tren</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Perubahan 3 jam</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Tekanan turun sering membawa awan dan hujan. Tekanan naik sering membawa cuaca cerah.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Titik embun: suhu saat embun terbentuk. Ini menunjukkan seberapa lembap udara terasa.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>Kering</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>Nyaman</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>Agak lembap</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>Lembap</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>Gerah</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>Sangat gerah</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Suhu dikurangi titik embun. Mendekati 0 berarti kabut mungkin terjadi.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Pengaturan kartu</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>Kecepatan angin, embusan, arah</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>Kelembapan relatif, indeks panas</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>Kekuatan matahari dan saran</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Kualitas udara Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>Stasiun air terdekat, NOAA dan USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Gelombang dan laut Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>Embusan terkuat 6 jam ke depan, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS, dan ICON hari ini</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Debit sungai Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>Pohon, rumput, dan ragweed</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>Jarak, plafon awan</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>Permukaan laut, tren 3 jam</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>Kenyamanan, peluang kabut</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Pohon</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Tingkat serbuk sari, dari tidak ada hingga sangat tinggi.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Data: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>Embusan hingga {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>Embusan terkuat, 6 jam ke depan</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>Embusan hingga {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Ini adalah prakiraan model. Kartu Angin menampilkan angin dan embusan yang diukur sekarang. Kartu Perairan terdekat menampilkan angin yang diukur di tepi air bila stasiun memiliki sensor angin.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Versi</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Berdasarkan FluentWeather 2.1.0 oleh Gabboxl. Diperbarui oleh duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus menambahkan fitur berikut ke FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Lokasi tersimpan, hingga 25, dengan pintasan keyboard.
+- Ikon area notifikasi dengan suhu, gambar cuaca, dan panel detail saat diarahkan yang menampilkan detail pilihan Anda.
+- Hari sebelumnya: kemarin dan dua hari lalu di samping hari ini.
+- Riwayat Lengkap: cuaca harian dan per jam untuk lokasi tersimpan sejak 1940.
+- Peta radar untuk lokasi AS dan kualitas udara untuk semua lokasi.
+- Perairan terdekat: suhu air dan angin dari stasiun terdekat.
+- Data ekstra: gelombang, prakiraan angin, model lain, debit sungai, dan serbuk sari.
+- Peringatan cuaca buruk di jendela utama dan dalam balon area notifikasi.
+- Data lainnya: cuaca bandara, salju, stres panas, energi badai petir, tanah, ketinggian beku,
+  sinar matahari, pelampung, pengukur sungai, detail hari, grafik per jam, dan diskusi prakiraan NWS.
+- Kartu detail yang menampilkan lebih banyak saat diarahkan, dalam urutan pilihan Anda.
+- Pengaturan ukuran teks, kontras latar, warna kartu, dan rentang jam.
+- Pengaturan bahasa, penginstal langsung, dan laporan kerusakan.
+- Dan banyak perbaikan GUI lainnya.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Hujan dan salju</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Kualitas udara</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Kelembapan</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Awan dan sinar matahari</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Roda: zoom. Shift+roda atau seret: gulir.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Perbesar</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Perkecil</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Paskan</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tampilkan setahun penuh</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} hingga {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Memuat data per jam</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Klik untuk memperbesar hari ini.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Suhu dan titik embun, derajat {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Angin dan embusan maksimum harian, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Angin dan embusan, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Curah hujan ({0}) dan salju ({1}) harian</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Curah hujan ({0}) dan salju ({1}) per jam</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>{0} maksimum harian</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} per jam</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Kelembapan rata-rata harian (%) dan titik embun</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Kelembapan (%) dan titik embun</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Tekanan permukaan laut rata-rata harian, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Tekanan permukaan laut, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Tutupan awan rata-rata harian (%) dan jam sinar matahari</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Tutupan awan (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Curah hujan</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Kelembapan</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Sinar matahari (jam)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Tutupan awan</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI AS</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>AQI Eropa</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Tidak ada data kualitas udara untuk periode ini. Data dimulai pada Agustus 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Waktu</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Kelembapan</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Arah</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Awan</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Sinar matahari</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Hujan</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Tertinggi</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Terendah</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Belum ada data untuk periode ini.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Sumber data cuaca</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Otomatis</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Otomatis menggunakan weather.com dan beralih ke Open-Meteo bila weather.com gagal dua kali berturut-turut. Koneksi internet yang terputus tidak dihitung. Aplikasi mencoba weather.com lagi setiap jam. Dengan Open-Meteo, laporan bandara terdekat dalam 50 km memberikan plafon awan dan hasil pengukuran. Serbuk sari AS tetap kosong.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Data: Open-Meteo dan stasiun {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>Hingga {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>{0} lagi</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Detail ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Sembunyikan detail</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Diterbitkan {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Wilayah: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Memuat teks lengkap...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Teks lengkap tidak tersedia.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Sumber: peringatan weather.com dari layanan cuaca nasional negara tersebut.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Sumber: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Utama</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Area notifikasi</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Peringatan cuaca buruk</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Cuaca saat ini (bandara)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Salju, 1, 6, dan 24 jam terakhir</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Stres panas (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Energi badai petir dan risiko badai</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Tanah dan kedalaman salju</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Ketinggian beku</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Sinar matahari dan penguapan</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Pelampung: gelombang, suhu udara, dan pasang surut</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Pengukur sungai (AS)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Detail hari: badai petir, salju, angin</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Grafik per jam, 12 jam ke depan di area notifikasi</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Diskusi prakirawan (AS)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Peringatan di jendela utama</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Semua peringatan</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Peringatan dan pengawasan</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Hanya peringatan</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Utama menampilkan item di jendela ini. Kartu disembunyikan bila lokasi tidak memiliki data. Area notifikasi menambahkan baris yang dapat Anda centang di Detail saat diarahkan, pada menu ikon area notifikasi. Menu itu juga mengatur kapan balon peringatan muncul dan berapa lama tetap tampil. Lima item pertama berasal dari open-meteo.com, paling banyak satu permintaan per jam per lokasi. Peringatan aktif secara default. Item lain nonaktif secara default. Arahkan ke nama untuk melihat sumbernya.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Satu pita di bawah nama lokasi untuk setiap peringatan aktif. Sumber: weather.com, dengan National Weather Service sebagai cadangan untuk wilayah AS.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Cuaca dan kategori penerbangan dari laporan bandara terdekat di kartu Jarak pandang. Teks saat diarahkan menambahkan prakiraan bandara. Sumber: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Salju dalam 1, 6, dan 24 jam terakhir. Sumber: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Suhu bola basah bola hitam (WBGT), ukuran stres panas untuk kerja dan olahraga. Sumber: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Energi badai petir (CAPE) dan risiko badai hari ini. Sumber: Open-Meteo dan weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Suhu tanah pada kedalaman 6 cm, kelembapan tanah, dan kedalaman salju. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Ketinggian level 0 derajat. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Sinar matahari, panjang siang, radiasi matahari, dan penguapan hari ini. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Gelombang, periode dan arah gelombang, suhu udara, tekanan, dan pasang surut dari pelampung NOAA atau stasiun pasang surut terdekat dalam 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Tinggi muka air, debit, dan 7 hari terakhir dari pengukur USGS terdekat dalam 40 km. Hanya AS.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Risiko badai petir dan jumlah salju pada tombol hari, serta kalimat angin, catatan, dan jumlah di detail hari. Sumber: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Grafik di bawah prakiraan per jam yang menunjukkan jam hujan, salju, es, peluang, sinar matahari, dan cuaca buruk. Baris area notifikasi memberikan jumlah 12 jam ke depan.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Diskusi prakirawan dari kantor National Weather Service setempat, di bawah peta radar. Hanya AS.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Salju, 6 jam</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Stres panas</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Energi badai petir</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Tanah</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Ketinggian beku</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Sinar matahari</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Pelampung</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Pengukur sungai</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>Tidak ada hujan, salju, atau kabut</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Laporan bandara: {0} ({1}), berjarak {2}.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Cuaca:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Kategori penerbangan:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>Jarak pandang dan plafon awan baik</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>Marginal: plafon 1.000 hingga 3.000 ft atau jarak pandang 3 hingga 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>Rendah: plafon 500 hingga 1.000 ft atau jarak pandang 1 hingga 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>Sangat rendah: plafon di bawah 500 ft atau jarak pandang di bawah 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Plafon awan di bandara:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Prakiraan bandara ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Laporan asli:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Sumber: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Mulai {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Berubah pada {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Sesekali mulai {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>Peluang {0}%</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>tanpa plafon awan</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>plafon awan {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 j: {0}, 24 j: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Salju yang diukur di lokasi.
+Jam terakhir: {0}
+6 jam terakhir: {1}
+24 jam terakhir: {2}
+
+Sumber: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 j: {0}, 6 j: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Rendah</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Sedang</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Tinggi</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Sangat tinggi</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Suhu bola basah bola hitam (WBGT): {0}, stres panas {1}.
+Ini menggabungkan suhu, kelembapan, angin, dan matahari. Pedoman kerja dan olahraga menggunakannya. Stres panas dimulai sekitar 25 C (77 F) dan ekstrem di atas 32 C (90 F).
+
+Sumber: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Sangat rendah</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Rendah</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Sedang</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Tinggi</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Risiko badai petir {0} dari 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} dari 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Energi badai (CAPE) adalah energi yang dapat diperoleh udara yang naik. Badai petir membutuhkannya. Di bawah 300 J/kg badai kecil kemungkinannya. Di atas 2.500 J/kg badai kuat mungkin terjadi bila ada yang mengangkat udara.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Sekarang: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Tertinggi hari ini: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Sumber: Open-Meteo.com (CC BY 4.0) untuk energi badai, weather.com untuk risiko badai petir.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Kelembapan {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Kedalaman salju {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>tidak ada</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Suhu tanah pada kedalaman 6 cm: {0}
+Kelembapan tanah pada 3 hingga 9 cm: {1}
+Kedalaman salju: {2}
+
+Nilai berasal dari model cuaca, bukan dari sensor. Sumber: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, kelembapan {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Di permukaan tanah</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>di atas permukaan laut</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Ketinggian beku: {0} di atas permukaan laut.
+Di atas ketinggian ini udara di bawah 0 C (32 F). Salju yang jatuh dari atas mencair di bawahnya.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Ketinggian lokasi: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>dari {0} siang hari</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Sinar matahari hari ini: {0}
+Panjang siang hari ini: {1}
+Radiasi matahari sekarang: {2}
+Penguapan hari ini: {3}
+
+Penguapan adalah evapotranspirasi acuan (FAO-56). Ini menunjukkan berapa banyak air yang hilang dari rumput dalam sehari. Sumber: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} dari {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>setiap {0} dtk</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>dari {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Pasang surut {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), berjarak {2}, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Gelombang:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Udara:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Air:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Tekanan:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Pasang surut, di atas titik nol stasiun:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Sumber: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Naik</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Turun</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Stabil</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), berjarak {2}, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Tinggi muka air:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Debit:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Perubahan dalam 3 jam terakhir: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>7 hari terakhir: {0}, dari {1} hingga {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Tinggi muka air diukur dari titik nol pengukur, bukan dari dasar sungai. Sumber: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Angin: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Angin malam hari: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Catatan: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>salju {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Jumlah: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Jumlah: tidak ada</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Batang: hujan (biru), salju sebagai air (putih), es (sian). Garis putus-putus: peluang. Kuning: sinar matahari. Tanda merah: jam cuaca buruk.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Hujan, salju, dan es per jam dari weather.com. Salju digambar sebagai air, sekitar 10 banding 1. Garis putus-putus adalah peluang presipitasi. Batang kuning di atas adalah sinar matahari jam tersebut dari Open-Meteo. Tanda merah menunjukkan jam yang dinilai weather.com sebagai cuaca buruk.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Total jam yang ditampilkan: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>tidak ada</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Kering, peluang {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>peluang {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>hujan {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>salju {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>es {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Diskusi prakirawan, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Diterbitkan {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Sumber: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Tampilkan semua</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Tampilkan lebih sedikit</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Di bawah 0 C di permukaan</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Udara di bawah 0 C (32 F) dari tanah ke atas. Salju tidak mencair saat turun.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Sumber: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Sekarang</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>sekarang</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tinggi gelombang, periode gelombang, alun, dan suhu permukaan laut dari model laut Open-Meteo, untuk titik di laut atau dekat laut. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Embusan terkuat 6 jam ke depan, embusan model sekarang, dan angin pada 80 m. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Suhu tertinggi, terendah, dan presipitasi hari ini dari model cuaca ECMWF, GFS, dan ICON. Sumber: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Debit sungai hasil model hari ini dan debit biasa untuk hari tersebut (GloFAS). Sumber: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tingkat pohon, rumput, dan ragweed. Sumber: weather.com di AS dan beberapa negara lain, Open-Meteo di Eropa.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 hari per jam</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Setiap jam prakiraan, sekitar 10 hari</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kembali ke jendela utama (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Kembali</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Prakiraan per jam 10 hari</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Daftar</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Ringkasan</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Terasa seperti</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Presipitasi</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Kelembapan</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>Indeks UV</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Tutupan awan</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Jarak pandang</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Halaman ini menampilkan prakiraan per jam yang sudah dimuat aplikasi untuk lokasi yang ditampilkan. Lokasi lain dimuat saat dipilih. Waktu adalah waktu setempat lokasi. Klik pada grafik menggulir daftar ke jam tersebut. Di Daftar, klik pada baris membuka nilai lainnya.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Lokasi yang ditampilkan</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, diperbarui {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Tidak ada prakiraan per jam untuk lokasi ini</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Tidak ada embusan dalam prakiraan ini</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>tidak ada</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} jam     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} salju</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>embusan {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>terasa {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>hujan</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>salju</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>presipitasi</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Waktu</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Langit</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Terasa</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Peluang</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Jumlah</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Hujan</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Es</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Lembap</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>T. embun</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Awan</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Pandang</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Terasa seperti</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Embusan angin</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>Indeks UV</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Tutupan awan</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Jarak pandang</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Terasa seperti</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Peluang presipitasi</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Hujan</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Embusan</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Suhu ({0}) dan peluang presipitasi</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Suhu, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Suhu terasa dan suhu, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Hujan ({0}) dan salju ({1}) per jam, serta peluang presipitasi</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Angin dan embusan, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Embusan angin, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Kelembapan, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>Indeks UV</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Tutupan awan, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Jarak pandang, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Titik embun dan suhu, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Tekanan permukaan laut, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Tertinggi</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Terendah</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Gulir ke kiri</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Gulir ke kanan</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Cerah</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Cerah</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Sebagian besar cerah</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Sebagian besar cerah</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Berawan sebagian</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Berawan</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Sebagian besar berawan</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Kabut</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Kabut beku</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Gerimis ringan</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Gerimis</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Gerimis lebat</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Gerimis beku</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Hujan ringan</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Hujan</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Hujan lebat</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Hujan beku</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Salju ringan</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Salju</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Salju lebat</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Butiran salju</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Hujan deras ringan</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Hujan deras</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Hujan deras lebat</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Hujan salju</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Hujan salju lebat</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Badai petir</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Badai petir disertai hujan es</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Cerah berawan</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Hari ini</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Malam ini</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Besok</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Besok malam</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} malam</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Angin lemah dan berubah-ubah.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Angin dari {0}, {1} hingga {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Peluang hujan {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Peluang salju {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Tertinggi {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Terendah {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Diperkirakan ada petir</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Tidak ada petir</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Sangat baik</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Baik</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Cukup</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Buruk</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Sangat buruk</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Tidak ada</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Sangat rendah</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Rendah</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Sedang</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Tinggi</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Sangat tinggi</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Kekhawatiran rendah</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Kekhawatiran sedang</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Kekhawatiran tinggi</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Kekhawatiran ekstrem</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>UTL</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>TL</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>TTg</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>Tg</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>STg</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SBD</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>BD</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>BBD</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>BBL</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>BL</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>UBL</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>TENANG</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>BERUBAH</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>ringan</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>lebat</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>di sekitar</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>badai petir</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>hujan deras</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>dangkal</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>petak</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>sebagian</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>tertiup rendah</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>tertiup</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>hujan deras</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>badai petir disertai</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>beku</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>gerimis</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>hujan</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>salju</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>butiran salju</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>kristal es</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>butiran es</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>hujan es</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>hujan es kecil</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>presipitasi tidak diketahui</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>kabut tipis</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>kabut</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>asap</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>abu vulkanik</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>debu</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>pasir</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>kabut asap</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>semburan air</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>pusaran debu</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>angin kencang</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>awan corong</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>badai pasir</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>badai debu</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, embusan {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Pembaruan data cuaca gagal</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows memblokir koneksi ke layanan cuaca. Firewall, program antivirus, VPN, atau proxy mungkin memblokir FluentWeather-Plus. Izinkan FluentWeather-Plus di program tersebut, atau coba lagi dengan VPN dimatikan.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Kami tidak dapat memperbarui data cuaca. Periksa koneksi internet Anda.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Mati</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 mnt</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 mnt</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 j</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Kondisi</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Suhu</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Terasa seperti</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>Tertinggi / terendah 24 j</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>Perubahan 24 j</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Titik embun</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Indeks panas</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Suhu rasa angin</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Kelembapan</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Angin</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>Indeks UV</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Tekanan</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Jarak pandang</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Plafon awan</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Hujan, jam terakhir</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Hujan, 6 j terakhir</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Hujan, 24 j terakhir</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Salju, 24 j terakhir</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Matahari terbit</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Matahari terbenam</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Fase bulan</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Bulan terbit</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Bulan terbenam</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Diamati pukul</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Stasiun terdekat</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Suhu air</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Angin di stasiun air</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Gelombang dan suhu laut</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Prakiraan angin (embusan, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Model lain</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Debit sungai</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Serbuk sari</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Peringatan cuaca</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Cuaca sekarang (bandara)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Salju, 1 j dan 6 j terakhir</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Risiko badai petir hari ini</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Stres panas (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Ketinggian beku</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Suhu dan kelembapan tanah</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Sinar matahari hari ini</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Pelampung: gelombang dan pasang surut</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Tinggi dan debit sungai</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Hujan, salju, dan es 12 j ke depan</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Dan {0} peringatan lagi.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Dan {0} peringatan lagi.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Dan {0} lagi.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Tutup dalam {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>Peringatan FluentWeather-Plus</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Tampilkan detail</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: menunggu penyegaran data berikutnya</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: belum ada data. Buka aplikasi sekali.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: tidak ada pembaruan sejak {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, terasa {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Kota yang sama dengan aplikasi.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Dipilih di area notifikasi.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Diperbarui {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Peringatan cuaca buruk</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Tampilkan peringatan</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Mati</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Peringatan bahaya</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Peringatan bahaya dan waspada</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Semua peringatan</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Patuhi Jangan Ganggu (gunakan notifikasi Windows)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Notifikasi Windows menunggu selama Jangan Ganggu aktif. Balon tidak menunggu.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Tutup balon setelah</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Tidak pernah</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} detik</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 menit</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} menit</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Lokasi</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Kota yang ditampilkan area notifikasi</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Semua lokasi tersimpan</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Tampilkan peringatan uji</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Menunjukkan tampilan peringatan dengan pilihan saat ini. Ini bukan peringatan sungguhan.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Peringatan uji</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>hingga {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Kota Anda</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Ini adalah uji. Peringatan sungguhan menampilkan ringkasan layanan cuaca di sini.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Aplikasi mengirim peringatan bila kotak Notifikasi pada Peringatan cuaca buruk dicentang di pengaturan aplikasi.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Buka {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Angka menampilkan suhu</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Angka menampilkan suhu terasa</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Detail saat diarahkan</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Tampilkan semua</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Atur ulang ke default</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Tidak ada lokasi tersimpan. Gunakan bintang di aplikasi.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Area notifikasi menampilkan (jendela aplikasi tetap tertutup)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Kota yang sama dengan aplikasi</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Mulai ulang FluentWeather (aplikasi dan ikon area notifikasi)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Tutup jendela FluentWeather</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Keluar dari ikon area notifikasi</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Mulai lagi dari menu Start: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Keluar dari ikon area notifikasi dan tutup FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Aplikasi belum diinstal. Jalankan penyiapannya terlebih dahulu.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Tidak dapat memulai ulang. Gunakan item menu Start "Restart FluentWeather".</value>
+  </data>
 </root>

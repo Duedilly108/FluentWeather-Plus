@@ -1,7 +1,9 @@
-﻿using FluentWeather.Models;
+﻿using FluentWeather.Helpers;
+using FluentWeather.Models;
 using FluentWeather.Utils;
 using System;
 using System.Globalization;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace FluentWeather.Adapters
@@ -94,6 +96,53 @@ namespace FluentWeather.Adapters
 
         /// <summary>Local build: the unit setting, for the snow range unit.</summary>
         public static WetUnits Units = WetUnits.e;
+
+        /// <summary>
+        /// Local build (v54): when true, the buttons show the moon row and are 100 high. When false
+        /// they are 70 high. The main page sets it from the moon button in the daily forecast title.
+        /// </summary>
+        public static bool ShowMoon = MoonCards.IsOn();
+
+        /// <summary>The height of the button, with or without the moon row.</summary>
+        public double CardHeight => ShowMoon ? MoonCards.HeightWithMoon : MoonCards.HeightWithoutMoon;
+
+        public Visibility MoonRowVisibility => ShowMoon ? Visibility.Visible : Visibility.Collapsed;
+
+        /// <summary>The age of the moon at noon of this day.</summary>
+        private double MoonAge => MoonMath.AgeAtLocalNoon(CurrentObject.validTimeLocal[ItemIndex]);
+
+        private int MoonPercent => MoonMath.LitPercent(MoonAge);
+
+        /// <summary>
+        /// The name of the moon phase (v55). It is weather.com's name when weather.com sends it in the
+        /// language of the app. Otherwise it is the app's own name, which exists in all 33 languages.
+        /// See MoonMath.DisplayName.
+        /// </summary>
+        public string MoonName
+        {
+            get
+            {
+                string? name = null;
+                string? code = null;
+                try
+                {
+                    name = CurrentObject.moonPhase?[ItemIndex];
+                    code = CurrentObject.moonPhaseCode?[ItemIndex];
+                }
+                catch (Exception)
+                {
+                    // The computed phase is used.
+                }
+
+                return MoonMath.DisplayName(name, code, MoonAge);
+            }
+        }
+
+        /// <summary>The hover text of the button: the whole name of the phase and the lit percentage. Empty when the moon row is off.</summary>
+        public string? MoonToolTip => ShowMoon ? MoonName + "\n" + MoonCards.LitText(MoonPercent) : null;
+
+        /// <summary>The moon row of the button. A new row is made on every call.</summary>
+        public UIElement MoonRow => MoonCards.CreateRow(MoonName, MoonPercent, MoonMath.IsWaxing(MoonAge));
 
         /// <summary>
         /// Local build: "❄ 1-3 in" when weather.com expects snow, and "⚡ 3/5" when the thunder risk

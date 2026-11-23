@@ -280,21 +280,2365 @@ Live Tiles er kun tilgængelige på Windows 10.</value>
     <value>Se alle ændringer</value>
   </data>
   <data name="Segmented24hours.Content" xml:space="preserve">
-    <value>24 hours</value>
+    <value>24 timer</value>
   </data>
   <data name="Segmented12hours.Content" xml:space="preserve">
-    <value>12 hours</value>
+    <value>12 timer</value>
   </data>
   <data name="AutoSuggestBoxSearchHeader.Text" xml:space="preserve">
-    <value>Searching...</value>
+    <value>Søger...</value>
   </data>
   <data name="BackgroundImageSettingsTitle.Text" xml:space="preserve">
-    <value>Background image</value>
+    <value>Baggrundsbillede</value>
   </data>
   <data name="AutoRefreshSettingsTitle.Text" xml:space="preserve">
-    <value>Auto refresh</value>
+    <value>Automatisk opdatering</value>
   </data>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
-    <value>Network error, please check your internet connection.</value>
+    <value>Netværksfejl. Kontrollér din internetforbindelse.</value>
+  </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vis eller skjul månefasen på dagskortene</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Vis eller skjul månefasen på dagskortene</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0} % oplyst</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Nymåne</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Tiltagende månesegl</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Første kvarter</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Tiltagende måne</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Fuldmåne</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Aftagende måne</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Sidste kvarter</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Aftagende månesegl</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Ikoner i meddelelsesområdet</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Vis ikoner i meddelelsesområdet</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Viser eller skjuler ikonerne for temperatur og vejr på proceslinjen. Knappen følger deres aktuelle tilstand.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Ikke installeret</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>opdateret af</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Baseret på</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Versioner</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Opdater</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Gem denne placering</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Fjern denne placering fra de gemte placeringer</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>Klik på stjernen ud for navnet for at gemme denne placering. Gemte placeringer vises her som knapper. Klik på en knap for at skifte til den placering. Søg efter en anden placering, og klik på dens stjerne for at tilføje den.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Klik på stjernen ud for placeringens navn for at gemme eller fjerne den. Højreklik på en placeringsknap for at flytte eller fjerne den. Ctrl+1 til Ctrl+9 skifter placering.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Skjul dette tip</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Baggrundskontrast</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Mørk</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Mørkere</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Lys</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Lysere</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>Mørk og Mørkere skygger baggrundsbilledet og beholder lys tekst. Lys og Lysere gør billedet lysere og bruger mørk tekst.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Korttone</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Korttone</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Toner kortene, så deres tekst forbliver læselig over baggrundsbilledet. 0 procent bevarer det oprindelige udseende.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>I går</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Luftkvalitet</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>God</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Rimelig</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Dårlig</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Meget dårlig</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Ekstremt dårlig</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Usund for følsomme</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Usund</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Meget usund</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Farlig</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Amerikansk luftkvalitetsindeks</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Europæisk luftkvalitetsindeks</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ozon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Nitrogendioxid</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Luftkvalitetsdata: Open-Meteo.com og Copernicus' atmosfæreovervågningstjeneste (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar og grænser NOAA/NWS. Terræn USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Opdateret</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Indlæser radaren</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Ingen regn eller sne i dette område. Zoom ud for at se mere.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>Radaren kunne ikke indlæses. Der prøves igen ved næste opdatering.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom ind</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Zoom ind</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom ud</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Zoom ud</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Sprog</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows-standard</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Sprog</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Brug dette sprog</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Genstart FluentWeather?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Det nye sprog træder i kraft, når FluentWeather genstarter.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Genstart nu</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Senere</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Timeprognose</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 t</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 t</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 t</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>Dag viser timerne for den valgte dag. 24, 36 og 48 timer starter nu for i dag og ved midnat for andre dage.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Størrelse på tekst og billeder</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>Ctrl+Minus og Ctrl+Plus ændrer også størrelsen i trin på 5 %. Ctrl+0 vender tilbage til 100 %.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Flyt til venstre</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Flyt til højre</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Fjern</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Grænsen for gemte placeringer er nået</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Du kan gemme op til {0} placeringer. Fjern en placering for at tilføje en ny.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tilbage (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Fuld historik</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Måned</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>År</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Gem først en placering. Historikvinduet viser gemte placeringer.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Indlæser</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} dage. {1} registreret af appen, {2} fra arkivet.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Dagens højeste og laveste, grader {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Arkivdata: Open-Meteo.com (CC BY 4.0). Genereret med oplysninger fra Copernicus' klimaændringstjeneste. Luftkvalitet: Open-Meteo, CAMS (fra august 2022). Arkivværdier stammer fra en vejrmodel og kan afvige fra de registrerede værdier.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Høj</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Nedbør</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Vejr</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Kilde</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>registreret</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>arkiv</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Klart</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Overvejende klart</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Delvis skyet</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Overskyet</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Tåge</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Støvregn</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Regn</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Byger</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Snebyger</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Tordenvejr</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Ukendt</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Vand i nærheden</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Kort i hovedvinduet</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Linje i meddelelsesområdets svævepanel</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Vand i nærheden</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>vind ved stationen</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>aktuel vind for denne placering, stationen har ingen vindmåler</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>placering</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>vindstød {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>Nærmeste vandstation med en aktuel måling.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Vand</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Luft ved stationen</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>lige nu</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>for {0} min. siden</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>for {0} t siden</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Vanddata: NOAA National Data Buoy Center (ndbc.noaa.gov) og USGS Water Data (waterdata.usgs.gov). Offentlig ejendom.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Bølger</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Fuld historik</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Daglig og timevis historik for denne placering</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Tilbage</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>Den nærmeste vandstation inden for 50 km (31 mi) med en måling, der er under 6 timer gammel. NOAA NDBC-bøjer og kyststationer dækker kysterne og De Store Søer. USGS dækker floder og nogle søer. På havet uden en station i nærheden bruges Open-Meteos havmodel. Sæt flueben ved linjerne under Detaljer ved peg i menuen i meddelelsesområdet.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteos havmodel</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Vind fra Open-Meteo-modellen, stationen har ingen vindmåler</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo for denne placering:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>Flere dataindstillinger</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Hovedvindue</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Meddelelsesområde</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Bølger og havtemperatur</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Vindprognose (vindstød, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Andre modeller</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Vandføring</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Bølger</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Vindprognose</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Andre modeller</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Vandføring</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Data: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Bølger</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Dønning</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Havoverfladetemperatur</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>hav</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Open-Meteos havmodel for denne placering.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>op til {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Open-Meteos vindprognose for denne placering.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Vind nu</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Vindstød nu</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Kraftigste vindstød, næste 6 timer</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 t maks.</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Vind i 80 m</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>Dagens højeste og laveste fra tre vejrmodeller. En stor spredning betyder en usikker prognose.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>Modelleret vandføring i den nærmeste flod (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>I dag</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Normalt for denne dag</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>{0} % af normalen</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Korn pr. kubikmeter luft. Niveauerne er omtrentlige.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>El</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Birk</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Græs</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Bynke</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Oliven</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Ambrosie</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>lav</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>moderat</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>høj</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>meget høj</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Vis ikoner i meddelelsesområdet</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Skjul ikoner i meddelelsesområdet</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Flyt til venstre</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Flyt til højre</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Flyt til starten</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Flyt til slutningen</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Skjul dette kort</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Tilføj kort</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Alle kort vises</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Nulstil kort</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Vand i nærheden</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Bølger og havtemperatur</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Vindprognose</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Andre modeller</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Vandføring</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>ingen</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Vind 10 m over jorden.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Hastighed</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Vindafkøling</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Relativ luftfugtighed: hvor meget vanddamp luften indeholder sammenlignet med det maksimale, den kan indeholde ved denne temperatur.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>tør</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>behagelig</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>fugtig</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Varmeindeks</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV-indeks: styrken af solens ultraviolette lys.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>lille risiko, ingen beskyttelse nødvendig</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>brug solcreme og hat, søg skygge midt på dagen</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>beskyttelse nødvendig, begræns tiden i solen fra kl. 10 til 16</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>ekstra beskyttelse nødvendig, undgå middagssolen</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>ubeskyttet hud forbrændes på minutter, bliv indenfor midt på dagen</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Sigtbarhed: hvor langt man kan se tydeligt.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>tåge</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>dis</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>moderat</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>god</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Skybase</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>ingen lave skyer</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>ikke tilgængelig</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Lufttryk ved havniveau.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Tendens</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Ændring over 3 timer</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>Faldende tryk bringer ofte skyer og regn. Stigende tryk bringer ofte opklaring.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Dugpunkt: den temperatur, hvor der dannes dug. Det viser, hvor fugtig luften føles.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>tør</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>behagelig</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>lidt fugtig</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>fugtig</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>trykkende</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>kvælende</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Temperatur minus dugpunkt. Tåge er sandsynlig, når den er nær 0.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Kortindstillinger</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>hastighed, vindstød, retning</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>relativ luftfugtighed, varmeindeks</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>solstyrke og råd</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>luftkvalitet fra Open-Meteo</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>nærmeste vandstation, NOAA og USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>bølger og hav fra Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>kraftigste vindstød næste 6 t, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS og ICON i dag</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>vandføring fra Open-Meteo</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>træer, græs og ambrosie</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>afstand, skybase</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>havniveau, tendens over 3 timer</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>komfort, risiko for tåge</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Træer</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Pollenniveauer fra ingen til meget høj.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Data: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>vindstød op til {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>kraftigste vindstød, næste 6 timer</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>vindstød op til {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Dette er en modelprognose. Kortet Vind viser den vind og de vindstød, der måles nu. Kortet Vand i nærheden viser den vind, der måles ved vandet, når stationen har en vindmåler.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Baseret på FluentWeather 2.1.0 af Gabboxl. Opdateret af duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>FluentWeather-Plus tilføjer disse funktioner til FluentWeather 2.1.0:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Gemte placeringer, op til 25, med tastaturgenveje.
+- Ikoner i meddelelsesområdet med temperaturen, et vejrbillede og et svævepanel med valgte detaljer.
+- Tidligere dage: i går og i forgårs, ved siden af i dag.
+- Fuld historik: dagligt og timevist vejr for en gemt placering tilbage til 1940.
+- Et radarkort for placeringer i USA og luftkvaliteten for alle placeringer.
+- Vand i nærheden: vandtemperaturen og vinden ved den nærmeste station.
+- Ekstra data: bølger, en vindprognose, andre modeller, vandføring og pollen.
+- Vejrvarsler i hovedvinduet og som boble i meddelelsesområdet.
+- Flere data: lufthavnsvejr, sne, varmebelastning, tordenenergi, jord, frysegrænse,
+  solskin, bøjer, vandstandsmålere, dagsdetaljer, et timediagram og NWS-diskussionen.
+- Detaljekort med flere detaljer ved peg, i den rækkefølge du vælger.
+- Indstillinger for tekststørrelse, baggrundskontrast, korttone og timeinterval.
+- En sprogindstilling, et direkte installationsprogram og en nedbrudsrapport.
+- Samt mange forbedringer af brugerfladen.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Regn og sne</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Luftkvalitet</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Luftfugtighed</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Lufttryk</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Skyer og sol</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Hjul: zoom. Skift+hjul eller træk: rul.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom ind</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom ud</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Tilpas</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vis hele året</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} til {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Indlæser timer</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Klik for at zoome ind på denne dag.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Temperatur og dugpunkt, grader {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Dagens kraftigste vind og vindstød, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Vind og vindstød, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Daglig nedbør ({0}) og sne ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Nedbør ({0}) og sne ({1}) pr. time</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Dagligt maksimum {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} pr. time</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Daglig gennemsnitlig luftfugtighed (%) og dugpunkt</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Luftfugtighed (%) og dugpunkt</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Dagligt gennemsnitligt lufttryk ved havniveau, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Lufttryk ved havniveau, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Dagligt gennemsnitligt skydække (%) og solskinstimer</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Skydække (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Nedbør</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Luftfugtighed</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Lufttryk</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Solskin (t)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Skydække</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>AQI USA</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Europæisk AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Ingen luftkvalitetsdata for denne periode. De begynder i august 2022.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Fugtighed</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Tryk</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Skyer</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Nedbør</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Høj</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Endnu ingen data for denne periode.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Kilde til vejrdata</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Automatisk</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Automatisk bruger weather.com og skifter til Open-Meteo, når weather.com fejler to gange i træk. En mistet internetforbindelse tæller ikke. weather.com prøves igen hver time. Med Open-Meteo giver den nærmeste lufthavnsrapport inden for 50 km skybasen og målingerne. Pollen i USA forbliver tomme.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Data: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Data: Open-Meteo og station {0}</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>indtil {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>og {0} mere</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Detaljer ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Skjul detaljer</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Udsendt {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Område: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>Indlæser hele teksten...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>Hele teksten er ikke tilgængelig.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Kilde: varsler fra weather.com, fra landets nationale vejrtjeneste.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Kilde: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Hovedvindue</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Meddelelsesområde</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Vejrvarsler</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Vejret nu (lufthavn)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Sne, seneste 1, 6 og 24 t</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Varmebelastning (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Tordenenergi og tordenrisiko</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Jord og snedybde</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Frysegrænse</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Solskin og fordampning</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Bøje: bølger, luft og tidevand</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Vandstandsmåler (USA)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Dagsdetaljer: torden, sne, vind</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Timediagram, næste 12 t i meddelelsesområdet</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Meteorologens diskussion (USA)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Varsler i hovedvinduet</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Alle varsler</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Varsler og varsler om mulig fare</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Kun varsler</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>Hovedvindue viser punktet i dette vindue. Et kort skjules, når placeringen ikke har data. Meddelelsesområde tilføjer en linje, som du kan sætte flueben ved i menuen for ikonerne i meddelelsesområdet under Detaljer ved peg. Menuen indstiller også, hvornår varselsboblen vises, og hvor længe den bliver. De første fem punkter kommer fra open-meteo.com med højst én forespørgsel i timen for hver placering. Varsler er slået til som standard. De andre punkter er slået fra som standard. Peg på et navn for at se kilden.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Et bånd under placeringens navn for hvert aktivt varsel. Kilde: weather.com med National Weather Service som reserve for steder i USA.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Vejr og flyvekategori fra den nærmeste lufthavnsrapport på kortet Sigtbarhed. Teksten ved peg tilføjer lufthavnens prognose. Kilde: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Sne i de seneste 1, 6 og 24 timer. Kilde: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Vådkugleglobetemperatur, et mål for varmebelastning ved arbejde og sport. Kilde: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Tordenenergi (CAPE) og dagens tordenrisiko. Kilder: Open-Meteo og weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Jordtemperatur i 6 cm, jordfugtighed og snedybde. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>Højden af 0-gradersniveauet. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>Dagens solskin, dagslys, solindstråling og fordampning. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Bølger, bølgeperiode og -retning, luft, lufttryk og tidevand ved den nærmeste NOAA-bøje eller tidevandsstation inden for 50 km.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Vandstand, vandføring og de seneste 7 dage ved den nærmeste USGS-måler inden for 40 km. Kun USA.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Tordenrisiko og snemængde på dagsknapperne samt vindtekst, noter og mængder i dagsdetaljerne. Kilde: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Et diagram under timeprognosen med regn, sne, is, sandsynlighed, solskin og timer med uvejr. Linjen i meddelelsesområdet giver mængderne for de næste 12 timer.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>Meteorologens diskussion fra det lokale kontor under National Weather Service, under radarkortet. Kun USA.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Sne, 6 t</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Varmebelastning</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Tordenenergi</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Jord</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Frysegrænse</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Solskin</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Bøje</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Vandstandsmåler</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>ingen regn, sne eller tåge</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Lufthavnsrapport: {0} ({1}), {2} væk.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Vejr:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Flyvekategori:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>god sigtbarhed og skybase</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>marginal: skybase 1.000 til 3.000 ft eller sigtbarhed 3 til 5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>lav: skybase 500 til 1.000 ft eller sigtbarhed 1 til 3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>meget lav: skybase under 500 ft eller sigtbarhed under 1 mi</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Skybase i lufthavnen:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Lufthavnsprognose ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Rapporter som sendt:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Kilde: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Fra {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Skift kl. {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Til tider fra {0}</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0} % chance</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>intet skydække</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>skybase {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 t: {0}, 24 t: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>Sne målt på stedet.
+Sidste time: {0}
+Sidste 6 timer: {1}
+Sidste 24 timer: {2}
+
+Kilde: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 t: {0}, 6 t: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Høj</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Meget høj</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>Vådkugle-globetemperatur: {0}, varmestress {1}.
+Den kombinerer temperatur, luftfugtighed, vind og sol. Retningslinjer for arbejde og sport bruger den. Varmestress begynder omkring 25 C (77 F) og er ekstrem over 32 C (90 F).
+
+Kilde: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Meget lav</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Høj</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Tordenrisiko {0} af 5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0} af 5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>Tordenenergi (CAPE) er den energi, som stigende luft kan opnå. Tordenvejr kræver den. Under 300 J/kg er tordenvejr usandsynligt. Over 2.500 J/kg er kraftigt tordenvejr muligt, når noget løfter luften.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Nu: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Højest i dag: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Kilder: Open-Meteo.com (CC BY 4.0) for tordenenergien, weather.com for tordenrisikoen.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Fugt {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Snedybde {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>ingen</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Jordtemperatur i 6 cm dybde: {0}
+Jordfugtighed i 3 til 9 cm: {1}
+Snedybde: {2}
+
+Værdierne kommer fra en vejrmodel og ikke fra en sensor. Kilde: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, fugt {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>Ved jorden</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>over havet</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Frysegrænse: {0} over havet.
+Over denne højde er luften under 0 C (32 F). Sne, der falder ovenfra, smelter under den.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>Stedets højde: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>af {0} dagslys</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Solskin i dag: {0}
+Dagslys i dag: {1}
+Solstråling nu: {2}
+Fordampning i dag: {3}
+
+Fordampningen er referencefordampningen (FAO-56). Den angiver, hvor meget vand en græsplæne mister på en dag. Kilde: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0} af {1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>hvert {0}. s</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>fra {0}</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Tidevand {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), {2} væk, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Bølger:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Luft:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Vand:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Lufttryk:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Tidevand, over stationens nulpunkt:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Kilde: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Stigende</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Faldende</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Stabil</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), {2} væk, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Vandstand:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Vandføring:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Ændring de sidste 3 timer: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Sidste 7 dage: {0}, fra {1} til {2}</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>Vandstanden måles fra målerens nulpunkt og ikke fra flodbunden. Kilde: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Vind: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Vind om natten: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Bemærk: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>sne {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Mængder: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Mængder: ingen</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Søjler: regn (blå), sne som vand (hvid), is (cyan). Stiplet linje: chance. Gul: solskin. Rødt mærke: time med voldsomt vejr.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Regn, sne og is pr. time fra weather.com. Sne vises som vand, cirka 10 til 1. Den stiplede linje er nedbørschancen. Den gule søjle øverst er timens solskin fra Open-Meteo. Et rødt mærke viser en time, som weather.com vurderer som voldsom.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>Sum af de viste timer: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>ingen</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Tørt, chance {0} %</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>chance {0} %</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>regn {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>sne {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>is {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Meteorologens vurdering, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Udsendt {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Kilde: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Vis alle</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Vis færre</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>Under 0 C ved overfladen</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>Luften er under 0 C (32 F) fra jorden og op. Sne smelter ikke på vej ned.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Kilde: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>nu</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Bølgehøjde, bølgeperiode, dønning og havoverfladetemperatur fra Open-Meteos havmodel, for punkter på eller nær havet. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Det kraftigste vindstød de næste 6 timer, modellens vindstød nu og vinden i 80 m. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dagens høj, lav og nedbør fra vejrmodellerne ECMWF, GFS og ICON. Kilde: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dagens modellerede vandføring og den normale vandføring for dagen (GloFAS). Kilde: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Niveauer for træer, græs og bynke-ambrosie. Kilde: weather.com i USA og nogle andre lande, Open-Meteo i Europa.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 dage pr. time</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Hver time i prognosen, cirka 10 dage</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tilbage til hovedvinduet (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Tilbage</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>Timeprognose for 10 dage</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Oversigt</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Føles som</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Nedbør</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Luftfugtighed</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Skydække</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Sigtbarhed</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Lufttryk</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Siden viser den timeprognose, som appen allerede har hentet for det viste sted. Et andet sted hentes, når det vælges. Tiderne er lokale for stedet. Et klik på diagrammet ruller listen til den time. I Liste åbner et klik på en række dens andre værdier.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Vist sted</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, opdateret {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Ingen timeprognose for dette sted</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Ingen vindstød i denne prognose</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>ingen</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} timer     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} sne</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>vindstød {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>føles {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>regn</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>sne</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>nedbør</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Himmel</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Temp.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Føles</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Chance</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Mængde</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Regn</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Is</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Fugt</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Dugpkt.</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Stød</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Skyer</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Sigt</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Tryk</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Føles som</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Skydække</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Sigtbarhed</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Føles som</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Nedbørschance</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Regn</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Vindstød</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Temperatur ({0}) og nedbørschance</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Temperatur, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Føles som og temperatur, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Regn ({0}) og sne ({1}) pr. time, og nedbørschance</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Vind og vindstød, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Vindstød, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Luftfugtighed, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Skydække, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Sigtbarhed, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Dugpunkt og temperatur, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Lufttryk ved havniveau, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Højeste</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Laveste</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Rul til venstre</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Rul til højre</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Solrigt</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Klart</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Overvejende solrigt</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Overvejende klart</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Delvis skyet</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Skyet</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Overvejende skyet</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Tåge</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Frysende tåge</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Let støvregn</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Støvregn</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Kraftig støvregn</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Frysende støvregn</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Let regn</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Regn</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Kraftig regn</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Isslag</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Let sne</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Sne</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Kraftig sne</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Kornsne</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Let regnbyge</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Regnbyge</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Kraftig regnbyge</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Snebyge</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Kraftig snebyge</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Tordenvejr</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Tordenvejr med hagl</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Fint vejr</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>I dag</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>I nat</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>I morgen</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>I morgen nat</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} nat</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Svag og skiftende vind.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>Vind fra {0}, {1} til {2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Chance for regn {0} %.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Chance for sne {0} %.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Højeste {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Laveste {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Torden ventet</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Ingen torden</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Fremragende</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>God</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Rimelig</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Dårlig</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Meget dårlig</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Meget lav</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Moderat</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Høj</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Meget høj</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Ekstrem</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Lav bekymring</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Moderat bekymring</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Høj bekymring</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Ekstrem bekymring</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>NNØ</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>NØ</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>ØNØ</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>Ø</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>ØSØ</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>SØ</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>SSØ</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>SSV</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>SV</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>VSV</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>VNV</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>NV</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>NNV</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>STILLE</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>let</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>kraftig</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>i nærheden</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>tordenvejr</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>byger</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>lavtliggende</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>pletter af</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>delvis</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>lavt fygende</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>fygende</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>byger af</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>tordenvejr med</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>frysende</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>støvregn</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>regn</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>sne</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>kornsne</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>iskrystaller</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>iskorn</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>hagl</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>småhagl</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>ukendt nedbør</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>dis</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>tåge</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>røg</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>vulkansk aske</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>støv</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>sand</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>tørdis</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>sprøjt</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>støvhvirvler</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>byger med kraftig vind</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>tragtsky</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>sandstorm</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>støvstorm</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, vindstød {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Opdatering af vejrdata mislykkedes</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>Windows blokerede forbindelsen til vejrtjenesten. En firewall, et antivirusprogram, en VPN eller en proxy blokerer muligvis FluentWeather-Plus. Tillad FluentWeather-Plus i det program, eller prøv igen med VPN slået fra.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Vejrdata kunne ikke opdateres. Kontrollér din internetforbindelse.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 min.</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 min.</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 t.</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Forhold</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Temperatur</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Føles som</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 t høj / lav</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 t ændring</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Dugpunkt</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Varmeindeks</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Vindafkøling</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Luftfugtighed</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Vind</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV-indeks</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Lufttryk</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Sigtbarhed</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Skybase</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Regn, sidste time</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Regn, sidste 6 t</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Regn, sidste 24 t</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Sne, sidste 24 t</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Solopgang</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Solnedgang</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Månefase</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Måneopgang</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Månenedgang</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Observeret kl.</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Nærmeste station</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Vandtemperatur</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Vind ved vandstation</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Bølger og havtemperatur</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Vindprognose (vindstød, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Andre modeller</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Vandføring</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Vejrvarsel</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Vejret nu (lufthavn)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Sne, sidste 1 t og 6 t</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Tordenrisiko i dag</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Varmestress (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Frysegrænse</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Jordtemperatur og -fugtighed</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Solskin i dag</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Bøje: bølger og tidevand</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Vandstand og vandføring</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Regn, sne og is de næste 12 t</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>Og {0} varsel mere.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>Og {0} varsler mere.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>Og {0} mere.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Lukker om {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus-varsel</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Vis detaljer</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: venter på næste dataopdatering</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: ingen data endnu. Åbn appen én gang.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: ingen opdatering siden {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, føles som {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Samme by som appen.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Valgt i meddelelsesområdet.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Opdateret {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Vejrvarsler</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Vis varsler</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Advarsler</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Advarsler og opmærksomhed</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Alle varsler</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Respektér Forstyr ikke (brug Windows-meddelelser)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>Windows-meddelelser venter, mens Forstyr ikke er slået til. Boblen venter ikke.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Luk boblen efter</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Aldrig</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} sekunder</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 minut</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} minutter</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Placeringer</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Den by, meddelelsesområdet viser</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Alle gemte placeringer</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Vis et testvarsel</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Viser, hvordan et varsel ser ud med de aktuelle valg. Det er ikke et rigtigt varsel.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Testvarsel</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>indtil {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Din by</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Dette er en test. Et rigtigt varsel viser her vejrtjenestens resumé.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Appen sender varsler, når feltet Meddelelsesområde ved Vejrvarsler er markeret i appens indstillinger.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Åbn {0}</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>Tallet viser temperatur</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>Tallet viser føles som-temperatur</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Detaljer ved peg</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Vis alle</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Nulstil til standard</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Ingen gemte placeringer. Brug stjernen i appen.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Meddelelsesområdet viser (appvinduet forbliver lukket)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Samme by som appen</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>Genstart FluentWeather (app og ikoner i meddelelsesområdet)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>Luk FluentWeather-vinduet</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Afslut ikoner i meddelelsesområdet</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Start dem igen fra menuen Start: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Afslut ikoner i meddelelsesområdet og luk FluentWeather</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Appen er ikke installeret endnu. Kør først dens installation.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Kunne ikke genstarte. Brug punktet "Restart FluentWeather" i menuen Start.</value>
   </data>
 </root>

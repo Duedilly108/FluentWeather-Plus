@@ -154,31 +154,75 @@ namespace FluentWeather.Utils
         // --- Local build: the weather data source (see DataSourceService and BackupWeatherService) ---
 
         /// <summary>
-        /// Sends a weather.com request, or builds the reply from the Open-Meteo backup. A weather.com
-        /// reply that refuses the key (401 or 403) counts toward the switch to the backup. Other
-        /// failures, such as a lost connection, are reported as before and never switch. A good
-        /// weather.com reply also remembers the place for the backup.
+        /// Local build (v55): the weather.com answers that count toward the switch to the Open-Meteo
+        /// backup. They are a refused key (401 or 403), too many requests (429) and a server error
+        /// (500 to 599). Other answers, such as 404, do not count.
+        /// </summary>
+        private static bool CountsTowardSwitch(System.Net.HttpStatusCode status)
+        {
+            var code = (int) status;
+            return code is 401 or 403 or 429 or (>= 500 and <= 599);
+        }
+
+        /// <summary>
+        /// Local build (v55): true when weather.com did not answer in time while Windows reports a
+        /// working internet connection. A lost connection does not count, so it never switches the source.
+        /// </summary>
+        private static bool IsWeatherComTimeout(Exception e)
+        {
+            if (e is not TaskCanceledException)
+                return false;
+            try
+            {
+                var profile = Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile();
+                return profile?.GetNetworkConnectivityLevel() == Windows.Networking.Connectivity.NetworkConnectivityLevel.InternetAccess;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Sends a weather.com request, or builds the reply from the Open-Meteo backup. A failed
+        /// weather.com request counts toward the switch to the backup when weather.com refuses the
+        /// key, answers 429 or a server error, or does not answer in time (see CountsTowardSwitch and
+        /// IsWeatherComTimeout). The second such failure in a row switches. A lost connection is
+        /// reported as before and never switches. A good weather.com reply also remembers the place
+        /// for the backup.
         /// </summary>
         private static async Task<HttpResponseMessage> FromSourceAsync(Func<Task<HttpResponseMessage>> weatherCom, Func<Task<string?>> backup)
         {
             if (await Services.DataSourceService.ShouldTryWeatherComAsync())
             {
-                var response = await weatherCom();
-                if (response.IsSuccessStatusCode)
+                HttpResponseMessage? response = null;
+                try
                 {
-                    Services.DataSourceService.ReportWeatherComSuccess();
-                    var json = await response.Content.ReadAsStringAsync();
-                    _ = Services.BackupWeatherService.RememberFromWeatherComAsync(json);
-                    return Json(json);
+                    response = await weatherCom();
+                }
+                catch (Exception e) when (IsWeatherComTimeout(e))
+                {
+                    if (!await Services.DataSourceService.ReportWeatherComFailedAsync())
+                        throw;
                 }
 
-                var refused = response.StatusCode is System.Net.HttpStatusCode.Unauthorized or System.Net.HttpStatusCode.Forbidden;
-                if (!refused || !await Services.DataSourceService.ReportKeyRefusedAsync())
+                if (response != null)
                 {
-                    response.EnsureSuccessStatusCode();
-                    return response;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Services.DataSourceService.ReportWeatherComSuccess();
+                        var json = await response.Content.ReadAsStringAsync();
+                        _ = Services.BackupWeatherService.RememberFromWeatherComAsync(json);
+                        return Json(json);
+                    }
+
+                    if (!CountsTowardSwitch(response.StatusCode) || !await Services.DataSourceService.ReportWeatherComFailedAsync())
+                    {
+                        response.EnsureSuccessStatusCode();
+                        return response;
+                    }
+                    response.Dispose();
                 }
-                response.Dispose();
             }
 
             var built = await backup();
@@ -196,18 +240,30 @@ namespace FluentWeather.Utils
             if (await Services.DataSourceService.ShouldTryWeatherComAsync())
             {
                 // The full address: the base address of SharedClient ends in /v2/, and the search is under /v3/.
-                var response = await GetWithRetryAsync(SharedClient, "https://api.weather.com/v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
+                HttpResponseMessage? response = null;
+                try
+                {
+                    response = await GetWithRetryAsync(SharedClient, "https://api.weather.com/v3/location/searchflat?query=" + Uri.EscapeDataString(query) +
                                                                      "&language=" + SystemLanguage +
                                                                      "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230&format=json");
-                if (response.IsSuccessStatusCode)
-                {
-                    Services.DataSourceService.ReportWeatherComSuccess();
-                    return response;
                 }
-                var refused = response.StatusCode is System.Net.HttpStatusCode.Unauthorized or System.Net.HttpStatusCode.Forbidden;
-                if (!refused || !await Services.DataSourceService.ReportKeyRefusedAsync())
-                    return response;
-                response.Dispose();
+                catch (Exception e) when (IsWeatherComTimeout(e))
+                {
+                    if (!await Services.DataSourceService.ReportWeatherComFailedAsync())
+                        throw;
+                }
+
+                if (response != null)
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Services.DataSourceService.ReportWeatherComSuccess();
+                        return response;
+                    }
+                    if (!CountsTowardSwitch(response.StatusCode) || !await Services.DataSourceService.ReportWeatherComFailedAsync())
+                        return response;
+                    response.Dispose();
+                }
             }
             return Json(await Services.BackupWeatherService.SearchJsonAsync(query, SystemLanguage));
         }
@@ -285,7 +341,7 @@ namespace FluentWeather.Utils
                                 + "&language=" + SystemLanguage + "&apiKey=793db2b6128c4bc2bdb2b6128c0bc230";
 
                     var response = await GetWithRetryAsync(SharedClient, "aggcommon/v3-wx-observations-current;v3-location-point;v3-wx-forecast-daily-3day;v2idxPollenDaypart10" + query);
-                    if (!response.IsSuccessStatusCode && response.StatusCode is not (System.Net.HttpStatusCode.Unauthorized or System.Net.HttpStatusCode.Forbidden))
+                    if (!response.IsSuccessStatusCode && !CountsTowardSwitch(response.StatusCode))
                     {
                         response.Dispose();
                         response = await GetWithRetryAsync(SharedClient, "aggcommon/v3-wx-observations-current;v3-location-point" + query);

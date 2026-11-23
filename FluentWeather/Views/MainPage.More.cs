@@ -668,9 +668,10 @@ namespace FluentWeather.Views
             if (sender is not Grid grid || grid.Children.Count > 0)
                 return;
 
+            // Local build (v55): the Main and Tray columns are 80 wide, the same as in the XAML, so translated headers fit.
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(56) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(56) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(80) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(80) });
             var row = 0;
 
             void AddRow() => grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });

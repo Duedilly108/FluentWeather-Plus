@@ -297,4 +297,2348 @@ Az élő csempék natívan csak a Windows 10 rendszeren érhetőek el.</value>
   <data name="AutoSuggestBoxSearchErrorText.Text" xml:space="preserve">
     <value>Hálózati hiba, kérjük, ellenőrizze az internetkapcsolatát.</value>
   </data>
+  <data name="MoonRowToggle.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Holdfázis megjelenítése vagy elrejtése a napkártyákon</value>
+  </data>
+  <data name="MoonRowToggle.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Holdfázis megjelenítése vagy elrejtése a napkártyákon</value>
+  </data>
+  <data name="MoonLitFormat" xml:space="preserve">
+    <value>{0}% megvilágítva</value>
+  </data>
+  <data name="MoonPhaseNew" xml:space="preserve">
+    <value>Újhold</value>
+  </data>
+  <data name="MoonPhaseWaxingCrescent" xml:space="preserve">
+    <value>Növő sarló</value>
+  </data>
+  <data name="MoonPhaseFirstQuarter" xml:space="preserve">
+    <value>Első negyed</value>
+  </data>
+  <data name="MoonPhaseWaxingGibbous" xml:space="preserve">
+    <value>Növő hold</value>
+  </data>
+  <data name="MoonPhaseFull" xml:space="preserve">
+    <value>Telihold</value>
+  </data>
+  <data name="MoonPhaseWaningGibbous" xml:space="preserve">
+    <value>Fogyó hold</value>
+  </data>
+  <data name="MoonPhaseLastQuarter" xml:space="preserve">
+    <value>Utolsó negyed</value>
+  </data>
+  <data name="MoonPhaseWaningCrescent" xml:space="preserve">
+    <value>Fogyó sarló</value>
+  </data>
+  <data name="TraySettingsTitle.Text" xml:space="preserve">
+    <value>Értesítési terület ikonjai</value>
+  </data>
+  <data name="ShowTrayButton.Content" xml:space="preserve">
+    <value>Értesítési ikonok megjelenítése</value>
+  </data>
+  <data name="ShowTrayHint.Text" xml:space="preserve">
+    <value>Megjeleníti vagy elrejti a hőmérséklet és az időjárás ikonjait a tálcán. A gomb az aktuális állapotukat követi.</value>
+  </data>
+  <data name="TrayNotInstalledText" xml:space="preserve">
+    <value>Nincs telepítve</value>
+  </data>
+  <data name="UpdatedByRun.Text" xml:space="preserve">
+    <value>frissítette</value>
+  </data>
+  <data name="BasedOnRun.Text" xml:space="preserve">
+    <value>Alapja</value>
+  </data>
+  <data name="VersionsLinkText.Text" xml:space="preserve">
+    <value>Verziók</value>
+  </data>
+  <data name="RefreshButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Frissítés</value>
+  </data>
+  <data name="AppbarSettingsButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="PinLocationTooltip" xml:space="preserve">
+    <value>Hely mentése</value>
+  </data>
+  <data name="UnpinLocationTooltip" xml:space="preserve">
+    <value>Hely eltávolítása a mentett helyek közül</value>
+  </data>
+  <data name="SavedLocationsEmptyHint" xml:space="preserve">
+    <value>A hely mentéséhez kattintson a neve melletti csillagra. A mentett helyek itt gombokként jelennek meg. Kattintson egy gombra a helyre váltáshoz. Keressen egy másik helyet, és kattintson a csillagára a hozzáadásához.</value>
+  </data>
+  <data name="SavedLocationsTip" xml:space="preserve">
+    <value>Kattintson a hely neve melletti csillagra a mentéshez vagy eltávolításhoz. Kattintson a jobb gombbal egy helygombra az áthelyezéshez vagy eltávolításhoz. A Ctrl+1–Ctrl+9 helyet vált.</value>
+  </data>
+  <data name="SavedLocationsHintClose" xml:space="preserve">
+    <value>Tipp elrejtése</value>
+  </data>
+  <data name="BackgroundContrastSettingsTitle.Text" xml:space="preserve">
+    <value>Háttér kontrasztja</value>
+  </data>
+  <data name="BackgroundContrastOriginal.Content" xml:space="preserve">
+    <value>Eredeti</value>
+  </data>
+  <data name="BackgroundContrastDark.Content" xml:space="preserve">
+    <value>Sötét</value>
+  </data>
+  <data name="BackgroundContrastDarker.Content" xml:space="preserve">
+    <value>Sötétebb</value>
+  </data>
+  <data name="BackgroundContrastLight.Content" xml:space="preserve">
+    <value>Világos</value>
+  </data>
+  <data name="BackgroundContrastLighter.Content" xml:space="preserve">
+    <value>Világosabb</value>
+  </data>
+  <data name="BackgroundContrastHint.Text" xml:space="preserve">
+    <value>A Sötét és a Sötétebb árnyékolja a háttérképet, és megtartja a világos szöveget. A Világos és a Világosabb kivilágosítja a képet, és sötét szöveget használ.</value>
+  </data>
+  <data name="CardTintSettingsTitle.Text" xml:space="preserve">
+    <value>Kártyák színezése</value>
+  </data>
+  <data name="CardTintSlider.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Kártyák színezése</value>
+  </data>
+  <data name="CardTintHint.Text" xml:space="preserve">
+    <value>Színezi a kártyákat, hogy szövegük olvasható maradjon a háttérképen. 0 százalék megtartja az eredeti megjelenést.</value>
+  </data>
+  <data name="PastDaysYesterday" xml:space="preserve">
+    <value>Tegnap</value>
+  </data>
+  <data name="AirQualityChipControl.Title" xml:space="preserve">
+    <value>Levegőminőség</value>
+  </data>
+  <data name="AirQualityGood" xml:space="preserve">
+    <value>Jó</value>
+  </data>
+  <data name="AirQualityFair" xml:space="preserve">
+    <value>Elfogadható</value>
+  </data>
+  <data name="AirQualityModerate" xml:space="preserve">
+    <value>Mérsékelt</value>
+  </data>
+  <data name="AirQualityPoor" xml:space="preserve">
+    <value>Rossz</value>
+  </data>
+  <data name="AirQualityVeryPoor" xml:space="preserve">
+    <value>Nagyon rossz</value>
+  </data>
+  <data name="AirQualityExtremelyPoor" xml:space="preserve">
+    <value>Rendkívül rossz</value>
+  </data>
+  <data name="AirQualityUnhealthySensitive" xml:space="preserve">
+    <value>Egészségtelen érzékenyeknek</value>
+  </data>
+  <data name="AirQualityUnhealthy" xml:space="preserve">
+    <value>Egészségtelen</value>
+  </data>
+  <data name="AirQualityVeryUnhealthy" xml:space="preserve">
+    <value>Nagyon egészségtelen</value>
+  </data>
+  <data name="AirQualityHazardous" xml:space="preserve">
+    <value>Veszélyes</value>
+  </data>
+  <data name="AirQualityUsScale" xml:space="preserve">
+    <value>Amerikai levegőminőségi index</value>
+  </data>
+  <data name="AirQualityEuScale" xml:space="preserve">
+    <value>Európai levegőminőségi index</value>
+  </data>
+  <data name="AirQualityOzone" xml:space="preserve">
+    <value>Ózon</value>
+  </data>
+  <data name="AirQualityNitrogenDioxide" xml:space="preserve">
+    <value>Nitrogén-dioxid</value>
+  </data>
+  <data name="AirQualityCredit" xml:space="preserve">
+    <value>Levegőminőségi adatok: Open-Meteo.com és a Copernicus légkörmegfigyelési szolgálat (CC BY 4.0).</value>
+  </data>
+  <data name="RadarTitleText.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="RadarCreditText.Text" xml:space="preserve">
+    <value>Radar és határok: NOAA/NWS. Domborzat: USGS.</value>
+  </data>
+  <data name="RadarUpdatedText" xml:space="preserve">
+    <value>Frissítve</value>
+  </data>
+  <data name="RadarLoadingText" xml:space="preserve">
+    <value>Radar betöltése</value>
+  </data>
+  <data name="RadarNoEchoesText" xml:space="preserve">
+    <value>Ezen a területen nincs eső vagy hó. Kicsinyítsen a több látásához.</value>
+  </data>
+  <data name="RadarFailedText" xml:space="preserve">
+    <value>A radart nem sikerült betölteni. A következő frissítéskor újra próbálkozik.</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="RadarZoomInButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kicsinyítés</value>
+  </data>
+  <data name="RadarZoomOutButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Kicsinyítés</value>
+  </data>
+  <data name="LanguageSettingsTitle.Text" xml:space="preserve">
+    <value>Nyelv</value>
+  </data>
+  <data name="LanguageDefaultItem" xml:space="preserve">
+    <value>Windows alapértelmezett</value>
+  </data>
+  <data name="LanguagePickerTitle" xml:space="preserve">
+    <value>Nyelv</value>
+  </data>
+  <data name="LanguagePickerUse" xml:space="preserve">
+    <value>Nyelv használata</value>
+  </data>
+  <data name="LanguagePickerCancel" xml:space="preserve">
+    <value>Mégse</value>
+  </data>
+  <data name="LanguageRestartTitle" xml:space="preserve">
+    <value>Újraindítja a FluentWeathert?</value>
+  </data>
+  <data name="LanguageRestartText" xml:space="preserve">
+    <value>Az új nyelv a FluentWeather újraindítása után lép érvénybe.</value>
+  </data>
+  <data name="LanguageRestartNow" xml:space="preserve">
+    <value>Újraindítás most</value>
+  </data>
+  <data name="LanguageRestartLater" xml:space="preserve">
+    <value>Később</value>
+  </data>
+  <data name="HourlyRangeSettingsTitle.Text" xml:space="preserve">
+    <value>Óránkénti előrejelzés</value>
+  </data>
+  <data name="HourlyRangeDay.Content" xml:space="preserve">
+    <value>Nap</value>
+  </data>
+  <data name="HourlyRange24.Content" xml:space="preserve">
+    <value>24 ó</value>
+  </data>
+  <data name="HourlyRange36.Content" xml:space="preserve">
+    <value>36 ó</value>
+  </data>
+  <data name="HourlyRange48.Content" xml:space="preserve">
+    <value>48 ó</value>
+  </data>
+  <data name="HourlyRangeHint.Text" xml:space="preserve">
+    <value>A Nap a kiválasztott nap óráit mutatja. A 24, 36 és 48 óra mára most kezdődik, a többi napra éjfélkor.</value>
+  </data>
+  <data name="UiSizeSettingsTitle.Text" xml:space="preserve">
+    <value>Szöveg és képek mérete</value>
+  </data>
+  <data name="UiSizeSettingsHint.Text" xml:space="preserve">
+    <value>A Ctrl+mínusz és a Ctrl+plusz 5%-os lépésekben is módosítja a méretet. A Ctrl+0 visszaáll 100%-ra.</value>
+  </data>
+  <data name="SavedLocationMoveLeft" xml:space="preserve">
+    <value>Áthelyezés balra</value>
+  </data>
+  <data name="SavedLocationMoveRight" xml:space="preserve">
+    <value>Áthelyezés jobbra</value>
+  </data>
+  <data name="SavedLocationRemove" xml:space="preserve">
+    <value>Eltávolítás</value>
+  </data>
+  <data name="SavedLocationShortcutHint" xml:space="preserve">
+    <value>Ctrl+{0}</value>
+  </data>
+  <data name="SavedLocationsFullTitle" xml:space="preserve">
+    <value>Elérte a mentett helyek korlátját</value>
+  </data>
+  <data name="SavedLocationsFullText" xml:space="preserve">
+    <value>Legfeljebb {0} helyet menthet. Új hely hozzáadásához távolítson el egyet.</value>
+  </data>
+  <data name="HistoryBackButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vissza (Esc)</value>
+  </data>
+  <data name="HistoryTitle.Text" xml:space="preserve">
+    <value>Teljes előzmények</value>
+  </data>
+  <data name="HistoryRangeMonth.Content" xml:space="preserve">
+    <value>Hónap</value>
+  </data>
+  <data name="HistoryRangeYear.Content" xml:space="preserve">
+    <value>Év</value>
+  </data>
+  <data name="HistoryNoLocations" xml:space="preserve">
+    <value>Előbb mentsen egy helyet. Az előzmények ablak a mentett helyeket mutatja.</value>
+  </data>
+  <data name="HistoryLoading" xml:space="preserve">
+    <value>Betöltés</value>
+  </data>
+  <data name="HistoryStatus" xml:space="preserve">
+    <value>{0} nap. {1} az alkalmazás rögzítette, {2} az archívumból.</value>
+  </data>
+  <data name="HistoryChartTitle" xml:space="preserve">
+    <value>Napi maximum és minimum, fok {0}</value>
+  </data>
+  <data name="HistoryCredit.Text" xml:space="preserve">
+    <value>Archív adatok: Open-Meteo.com (CC BY 4.0). A Copernicus éghajlatváltozási szolgálat adatainak felhasználásával készült. Levegőminőség: Open-Meteo, CAMS (2022 augusztusától). Az archív értékek időjárási modellből származnak, és eltérhetnek a rögzített értékektől.</value>
+  </data>
+  <data name="HistoryColDate" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="HistoryColHigh" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="HistoryColLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryColRain" xml:space="preserve">
+    <value>Csap.</value>
+  </data>
+  <data name="HistoryColSnow" xml:space="preserve">
+    <value>Hó</value>
+  </data>
+  <data name="HistoryColWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HistoryColConditions" xml:space="preserve">
+    <value>Időjárás</value>
+  </data>
+  <data name="HistoryColSource" xml:space="preserve">
+    <value>Forrás</value>
+  </data>
+  <data name="HistorySourceRecorded" xml:space="preserve">
+    <value>rögzített</value>
+  </data>
+  <data name="HistorySourceArchive" xml:space="preserve">
+    <value>archív</value>
+  </data>
+  <data name="HistoryWmoClear" xml:space="preserve">
+    <value>Derült</value>
+  </data>
+  <data name="HistoryWmoMainlyClear" xml:space="preserve">
+    <value>Többnyire derült</value>
+  </data>
+  <data name="HistoryWmoPartlyCloudy" xml:space="preserve">
+    <value>Részben felhős</value>
+  </data>
+  <data name="HistoryWmoOvercast" xml:space="preserve">
+    <value>Borult</value>
+  </data>
+  <data name="HistoryWmoFog" xml:space="preserve">
+    <value>Köd</value>
+  </data>
+  <data name="HistoryWmoDrizzle" xml:space="preserve">
+    <value>Szitálás</value>
+  </data>
+  <data name="HistoryWmoRain" xml:space="preserve">
+    <value>Eső</value>
+  </data>
+  <data name="HistoryWmoSnow" xml:space="preserve">
+    <value>Hó</value>
+  </data>
+  <data name="HistoryWmoShowers" xml:space="preserve">
+    <value>Záporok</value>
+  </data>
+  <data name="HistoryWmoSnowShowers" xml:space="preserve">
+    <value>Hózáporok</value>
+  </data>
+  <data name="HistoryWmoThunderstorm" xml:space="preserve">
+    <value>Zivatar</value>
+  </data>
+  <data name="HistoryWmoUnknown" xml:space="preserve">
+    <value>Ismeretlen</value>
+  </data>
+  <data name="WaterSettingsTitle.Text" xml:space="preserve">
+    <value>Közeli vizek</value>
+  </data>
+  <data name="WaterCardToggle.Header" xml:space="preserve">
+    <value>Kártya a főablakban</value>
+  </data>
+  <data name="WaterTrayToggle.Header" xml:space="preserve">
+    <value>Sor az értesítési terület lebegő paneljén</value>
+  </data>
+  <data name="WaterCardTitle.Text" xml:space="preserve">
+    <value>Közeli vizek</value>
+  </data>
+  <data name="WaterWindStation" xml:space="preserve">
+    <value>szél az állomáson</value>
+  </data>
+  <data name="WaterWindForecast" xml:space="preserve">
+    <value>aktuális szél ezen a helyen, az állomásnak nincs szélérzékelője</value>
+  </data>
+  <data name="WaterWindForecastShort" xml:space="preserve">
+    <value>hely</value>
+  </data>
+  <data name="WaterGust" xml:space="preserve">
+    <value>széllökések {0}</value>
+  </data>
+  <data name="WaterTipIntro" xml:space="preserve">
+    <value>A legközelebbi vízállomás aktuális méréssel.</value>
+  </data>
+  <data name="WaterTipWater" xml:space="preserve">
+    <value>Víz</value>
+  </data>
+  <data name="WaterTipWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="WaterTipAir" xml:space="preserve">
+    <value>Levegő az állomáson</value>
+  </data>
+  <data name="WaterJustNow" xml:space="preserve">
+    <value>épp most</value>
+  </data>
+  <data name="WaterMinutesAgo" xml:space="preserve">
+    <value>{0} perce</value>
+  </data>
+  <data name="WaterHoursAgo" xml:space="preserve">
+    <value>{0} órája</value>
+  </data>
+  <data name="WaterCredit" xml:space="preserve">
+    <value>Vízadatok: NOAA National Data Buoy Center (ndbc.noaa.gov) és USGS Water Data (waterdata.usgs.gov). Közkincs.</value>
+  </data>
+  <data name="WaterTipWaves" xml:space="preserve">
+    <value>Hullámok</value>
+  </data>
+  <data name="HistoryOpenText.Text" xml:space="preserve">
+    <value>Teljes előzmények</value>
+  </data>
+  <data name="HistoryOpenButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>A hely napi és óránkénti előzményei</value>
+  </data>
+  <data name="HistoryBackText.Text" xml:space="preserve">
+    <value>Vissza</value>
+  </data>
+  <data name="WaterHint.Text" xml:space="preserve">
+    <value>A legközelebbi vízállomás 50 km-en (31 mi) belül, 6 óránál frissebb méréssel. A NOAA NDBC bóják és parti állomások lefedik a partokat és a Nagy-tavakat. Az USGS folyókat és néhány tavat fed le. A tengeren, ha nincs közeli állomás, az Open-Meteo tengeri modelljét használja. A sorokat az értesítési terület menüjének Részletek rámutatáskor pontjában jelölje be.</value>
+  </data>
+  <data name="WaterMarineModel" xml:space="preserve">
+    <value>Open-Meteo tengeri modell</value>
+  </data>
+  <data name="WaterWindModel" xml:space="preserve">
+    <value>Open-Meteo modellszél, az állomásnak nincs szélérzékelője</value>
+  </data>
+  <data name="WaterTipModel" xml:space="preserve">
+    <value>Open-Meteo erre a helyre:</value>
+  </data>
+  <data name="ExtraSettingsTitle.Text" xml:space="preserve">
+    <value>További adatbeállítások</value>
+  </data>
+  <data name="ExtraMainHeader.Text" xml:space="preserve">
+    <value>Fő</value>
+  </data>
+  <data name="ExtraTrayHeader.Text" xml:space="preserve">
+    <value>Értesítés</value>
+  </data>
+  <data name="ExtraMarineLabel.Text" xml:space="preserve">
+    <value>Hullámok és tengerhőmérséklet</value>
+  </data>
+  <data name="ExtraWindLabel.Text" xml:space="preserve">
+    <value>Szél-előrejelzés (széllökések, 80 m)</value>
+  </data>
+  <data name="ExtraModelsLabel.Text" xml:space="preserve">
+    <value>Más modellek</value>
+  </data>
+  <data name="ExtraRiverLabel.Text" xml:space="preserve">
+    <value>Folyó vízhozama</value>
+  </data>
+  <data name="ExtraPollenLabel.Text" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="ExtraMarineChip.Title" xml:space="preserve">
+    <value>Hullámok</value>
+  </data>
+  <data name="ExtraWindChip.Title" xml:space="preserve">
+    <value>Szél-előrejelzés</value>
+  </data>
+  <data name="ExtraModelsChip.Title" xml:space="preserve">
+    <value>Más modellek</value>
+  </data>
+  <data name="ExtraRiverChip.Title" xml:space="preserve">
+    <value>Folyó vízhozama</value>
+  </data>
+  <data name="ExtraPollenChip.Title" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="ExtraCredit" xml:space="preserve">
+    <value>Adatok: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="ExtraPeriod" xml:space="preserve">
+    <value>{0} mp</value>
+  </data>
+  <data name="ExtraWaves" xml:space="preserve">
+    <value>Hullámok</value>
+  </data>
+  <data name="ExtraSwell" xml:space="preserve">
+    <value>Hullámzás</value>
+  </data>
+  <data name="ExtraSeaTemp" xml:space="preserve">
+    <value>Tengerfelszín hőmérséklete</value>
+  </data>
+  <data name="ExtraSeaShort" xml:space="preserve">
+    <value>tenger</value>
+  </data>
+  <data name="ExtraMarineTip" xml:space="preserve">
+    <value>Az Open-Meteo tengeri modellje erre a helyre.</value>
+  </data>
+  <data name="ExtraGustsValue" xml:space="preserve">
+    <value>legfeljebb {0}</value>
+  </data>
+  <data name="ExtraWindTip" xml:space="preserve">
+    <value>Az Open-Meteo szél-előrejelzése erre a helyre.</value>
+  </data>
+  <data name="ExtraWindNow" xml:space="preserve">
+    <value>Szél most</value>
+  </data>
+  <data name="ExtraGustsNow" xml:space="preserve">
+    <value>Széllökések most</value>
+  </data>
+  <data name="ExtraGusts6h" xml:space="preserve">
+    <value>Legerősebb széllökés, következő 6 óra</value>
+  </data>
+  <data name="ExtraGusts6hShort" xml:space="preserve">
+    <value>6 ó max.</value>
+  </data>
+  <data name="ExtraWind80m" xml:space="preserve">
+    <value>Szél 80 m-en</value>
+  </data>
+  <data name="ExtraModelsTip" xml:space="preserve">
+    <value>A mai maximum és minimum három időjárási modell szerint. A nagy szórás bizonytalan előrejelzést jelent.</value>
+  </data>
+  <data name="ExtraRiverTip" xml:space="preserve">
+    <value>A legközelebbi folyó modellezett vízhozama (GloFAS).</value>
+  </data>
+  <data name="ExtraRiverToday" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="ExtraRiverMedian" xml:space="preserve">
+    <value>Szokásos erre a napra</value>
+  </data>
+  <data name="ExtraRiverPercent" xml:space="preserve">
+    <value>A szokásos {0}%-a</value>
+  </data>
+  <data name="ExtraPollenTip" xml:space="preserve">
+    <value>Szemcse köbméterenként. A szintek hozzávetőlegesek.</value>
+  </data>
+  <data name="PollenAlder" xml:space="preserve">
+    <value>Éger</value>
+  </data>
+  <data name="PollenBirch" xml:space="preserve">
+    <value>Nyír</value>
+  </data>
+  <data name="PollenGrass" xml:space="preserve">
+    <value>Fűfélék</value>
+  </data>
+  <data name="PollenMugwort" xml:space="preserve">
+    <value>Üröm</value>
+  </data>
+  <data name="PollenOlive" xml:space="preserve">
+    <value>Olajfa</value>
+  </data>
+  <data name="PollenRagweed" xml:space="preserve">
+    <value>Parlagfű</value>
+  </data>
+  <data name="PollenNone" xml:space="preserve">
+    <value>Nincs</value>
+  </data>
+  <data name="PollenLow" xml:space="preserve">
+    <value>alacsony</value>
+  </data>
+  <data name="PollenModerate" xml:space="preserve">
+    <value>mérsékelt</value>
+  </data>
+  <data name="PollenHigh" xml:space="preserve">
+    <value>magas</value>
+  </data>
+  <data name="PollenVeryHigh" xml:space="preserve">
+    <value>nagyon magas</value>
+  </data>
+  <data name="ShowTrayButtonText" xml:space="preserve">
+    <value>Értesítési ikonok megjelenítése</value>
+  </data>
+  <data name="HideTrayButtonText" xml:space="preserve">
+    <value>Értesítési ikonok elrejtése</value>
+  </data>
+  <data name="CardMoveLeft" xml:space="preserve">
+    <value>Áthelyezés balra</value>
+  </data>
+  <data name="CardMoveRight" xml:space="preserve">
+    <value>Áthelyezés jobbra</value>
+  </data>
+  <data name="CardMoveStart" xml:space="preserve">
+    <value>Áthelyezés az elejére</value>
+  </data>
+  <data name="CardMoveEnd" xml:space="preserve">
+    <value>Áthelyezés a végére</value>
+  </data>
+  <data name="CardHide" xml:space="preserve">
+    <value>Kártya elrejtése</value>
+  </data>
+  <data name="CardAdd" xml:space="preserve">
+    <value>Kártya hozzáadása</value>
+  </data>
+  <data name="CardAddNone" xml:space="preserve">
+    <value>Minden kártya látható</value>
+  </data>
+  <data name="CardReset" xml:space="preserve">
+    <value>Kártyák visszaállítása</value>
+  </data>
+  <data name="WaterCardTitleName" xml:space="preserve">
+    <value>Közeli vizek</value>
+  </data>
+  <data name="ExtraMarineLabelName" xml:space="preserve">
+    <value>Hullámok és tengerhőmérséklet</value>
+  </data>
+  <data name="ExtraWindLabelName" xml:space="preserve">
+    <value>Szél-előrejelzés</value>
+  </data>
+  <data name="ExtraModelsLabelName" xml:space="preserve">
+    <value>Más modellek</value>
+  </data>
+  <data name="ExtraRiverLabelName" xml:space="preserve">
+    <value>Folyó vízhozama</value>
+  </data>
+  <data name="ExtraPollenLabelName" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="TipNone" xml:space="preserve">
+    <value>nincs</value>
+  </data>
+  <data name="TipWindIntro" xml:space="preserve">
+    <value>Szél 10 méterrel a talaj felett.</value>
+  </data>
+  <data name="TipWindSpeed" xml:space="preserve">
+    <value>Sebesség</value>
+  </data>
+  <data name="TipWindDirection" xml:space="preserve">
+    <value>Irány</value>
+  </data>
+  <data name="TipWindGusts" xml:space="preserve">
+    <value>Széllökések</value>
+  </data>
+  <data name="TipWindChill" xml:space="preserve">
+    <value>Szélhűtés</value>
+  </data>
+  <data name="TipHumidityIntro" xml:space="preserve">
+    <value>Relatív páratartalom: mennyi vízgőzt tartalmaz a levegő ahhoz a legnagyobb mennyiséghez képest, amelyet ezen a hőmérsékleten tartalmazni tud.</value>
+  </data>
+  <data name="TipHumidityDry" xml:space="preserve">
+    <value>száraz</value>
+  </data>
+  <data name="TipHumidityComfortable" xml:space="preserve">
+    <value>kellemes</value>
+  </data>
+  <data name="TipHumidityHumid" xml:space="preserve">
+    <value>párás</value>
+  </data>
+  <data name="TipHeatIndex" xml:space="preserve">
+    <value>Hőindex</value>
+  </data>
+  <data name="TipDewPoint" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="TipUvIntro" xml:space="preserve">
+    <value>UV-index: a nap ultraibolya fényének erőssége.</value>
+  </data>
+  <data name="TipUvLow" xml:space="preserve">
+    <value>kis kockázat, nincs szükség védelemre</value>
+  </data>
+  <data name="TipUvModerate" xml:space="preserve">
+    <value>használjon napkrémet és kalapot, délben keressen árnyékot</value>
+  </data>
+  <data name="TipUvHigh" xml:space="preserve">
+    <value>védelem szükséges, 10 és 16 óra között korlátozza a napozást</value>
+  </data>
+  <data name="TipUvVeryHigh" xml:space="preserve">
+    <value>fokozott védelem szükséges, kerülje a déli napot</value>
+  </data>
+  <data name="TipUvExtreme" xml:space="preserve">
+    <value>a védtelen bőr percek alatt leég, délben maradjon bent</value>
+  </data>
+  <data name="TipVisibilityIntro" xml:space="preserve">
+    <value>Látótávolság: milyen messzire lehet tisztán látni.</value>
+  </data>
+  <data name="TipVisibilityFog" xml:space="preserve">
+    <value>köd</value>
+  </data>
+  <data name="TipVisibilityHaze" xml:space="preserve">
+    <value>pára vagy párásság</value>
+  </data>
+  <data name="TipVisibilityModerate" xml:space="preserve">
+    <value>közepes</value>
+  </data>
+  <data name="TipVisibilityGood" xml:space="preserve">
+    <value>jó</value>
+  </data>
+  <data name="TipCloudCeiling" xml:space="preserve">
+    <value>Felhőalap</value>
+  </data>
+  <data name="TipCeilingNone" xml:space="preserve">
+    <value>nincsenek alacsony felhők</value>
+  </data>
+  <data name="TipCeilingUnknown" xml:space="preserve">
+    <value>nem érhető el</value>
+  </data>
+  <data name="TipPressureIntro" xml:space="preserve">
+    <value>Légnyomás tengerszinten.</value>
+  </data>
+  <data name="TipPressureNow" xml:space="preserve">
+    <value>Most</value>
+  </data>
+  <data name="TipPressureTrend" xml:space="preserve">
+    <value>Tendencia</value>
+  </data>
+  <data name="TipPressureChange" xml:space="preserve">
+    <value>Változás 3 óra alatt</value>
+  </data>
+  <data name="TipPressureMeaning" xml:space="preserve">
+    <value>A csökkenő légnyomás gyakran felhőt és esőt hoz. Az emelkedő légnyomás gyakran kiderülést hoz.</value>
+  </data>
+  <data name="TipDewIntro" xml:space="preserve">
+    <value>Harmatpont: az a hőmérséklet, amelyen harmat képződik. Megmutatja, mennyire érződik párásnak a levegő.</value>
+  </data>
+  <data name="TipDewDry" xml:space="preserve">
+    <value>száraz</value>
+  </data>
+  <data name="TipDewComfortable" xml:space="preserve">
+    <value>kellemes</value>
+  </data>
+  <data name="TipDewSlightlyHumid" xml:space="preserve">
+    <value>enyhén párás</value>
+  </data>
+  <data name="TipDewHumid" xml:space="preserve">
+    <value>párás</value>
+  </data>
+  <data name="TipDewMuggy" xml:space="preserve">
+    <value>fülledt</value>
+  </data>
+  <data name="TipDewOppressive" xml:space="preserve">
+    <value>nyomasztó</value>
+  </data>
+  <data name="TipDewSpread" xml:space="preserve">
+    <value>Hőmérséklet mínusz harmatpont. 0 közelében köd valószínű.</value>
+  </data>
+  <data name="CardSettings" xml:space="preserve">
+    <value>Kártyabeállítások</value>
+  </data>
+  <data name="CardInfoWind" xml:space="preserve">
+    <value>sebesség, széllökések, irány</value>
+  </data>
+  <data name="CardInfoHumidity" xml:space="preserve">
+    <value>relatív páratartalom, hőindex</value>
+  </data>
+  <data name="CardInfoUVIndex" xml:space="preserve">
+    <value>napsugárzás erőssége és tanácsok</value>
+  </data>
+  <data name="CardInfoAirQuality" xml:space="preserve">
+    <value>Open-Meteo levegőminőség</value>
+  </data>
+  <data name="CardInfoWater" xml:space="preserve">
+    <value>legközelebbi vízállomás, NOAA és USGS</value>
+  </data>
+  <data name="CardInfoExtraMarine" xml:space="preserve">
+    <value>Open-Meteo hullámok és tenger</value>
+  </data>
+  <data name="CardInfoExtraWind" xml:space="preserve">
+    <value>legerősebb széllökés 6 órán belül, 80 m</value>
+  </data>
+  <data name="CardInfoExtraModels" xml:space="preserve">
+    <value>ECMWF, GFS és ICON ma</value>
+  </data>
+  <data name="CardInfoExtraRiver" xml:space="preserve">
+    <value>Open-Meteo folyóvízhozam</value>
+  </data>
+  <data name="CardInfoExtraPollen" xml:space="preserve">
+    <value>fák, fűfélék és parlagfű</value>
+  </data>
+  <data name="CardInfoVisibility" xml:space="preserve">
+    <value>távolság, felhőalap</value>
+  </data>
+  <data name="CardInfoPressure" xml:space="preserve">
+    <value>tengerszint, 3 órás tendencia</value>
+  </data>
+  <data name="CardInfoDewPoint" xml:space="preserve">
+    <value>komfort, ködesély</value>
+  </data>
+  <data name="PollenTree" xml:space="preserve">
+    <value>Fák</value>
+  </data>
+  <data name="ExtraPollenUsTip" xml:space="preserve">
+    <value>Pollenszintek a nincs-től a nagyon magasig.</value>
+  </data>
+  <data name="ExtraPollenUsCredit" xml:space="preserve">
+    <value>Adatok: weather.com.</value>
+  </data>
+  <data name="WindCardGusts" xml:space="preserve">
+    <value>széllökések legfeljebb {0}</value>
+  </data>
+  <data name="ExtraWindNote" xml:space="preserve">
+    <value>legerősebb széllökés, következő 6 óra</value>
+  </data>
+  <data name="ExtraWindForecastValue" xml:space="preserve">
+    <value>széllökések legfeljebb {0}</value>
+  </data>
+  <data name="ExtraWindWhere" xml:space="preserve">
+    <value>Ez modell-előrejelzés. A Szél kártya a most mért szelet és széllökéseket mutatja. A Közeli vizek kártya a víznél mért szelet mutatja, ha az állomásnak van szélérzékelője.</value>
+  </data>
+  <data name="PlusWhatsNewVersion" xml:space="preserve">
+    <value>Verzió</value>
+  </data>
+  <data name="PlusWhatsNewCredit.Text" xml:space="preserve">
+    <value>Alapja a Gabboxl által készített FluentWeather 2.1.0. Frissítette: duedilly108.</value>
+  </data>
+  <data name="PlusWhatsNewIntro.Text" xml:space="preserve">
+    <value>A FluentWeather-Plus ezekkel a funkciókkal bővíti a FluentWeather 2.1.0-t:</value>
+  </data>
+  <data name="PlusWhatsNewBody" xml:space="preserve">
+    <value>- Mentett helyek, legfeljebb 25, billentyűparancsokkal.
+- Értesítési ikonok a hőmérséklettel, időjárásképpel és a kiválasztott részletek rámutatáskor megjelenő paneljével.
+- Elmúlt napok: tegnap és tegnapelőtt, a mai nap mellett.
+- Teljes előzmények: egy mentett hely napi és óránkénti időjárása 1940-ig visszamenőleg.
+- Radartérkép az egyesült államokbeli helyekhez és levegőminőség minden helyhez.
+- Közeli vizek: a vízhőmérséklet és a szél a legközelebbi állomáson.
+- További adatok: hullámok, szél-előrejelzés, más modellek, folyóvízhozam és pollen.
+- Időjárási figyelmeztetések a főablakban és buborékként az értesítési területen.
+- Még több adat: repülőtéri időjárás, hó, hőterhelés, zivatarenergia, talaj, fagyszint,
+  napsütés, bóják, vízmércék, napi részletek, óránkénti diagram és az NWS-elemzés.
+- Részletkártyák rámutatáskor további részletekkel, tetszőleges sorrendben.
+- Beállítások a szövegmérethez, a háttér kontrasztjához, a kártyák színezéséhez és az órák tartományához.
+- Nyelvi beállítás, közvetlen telepítő és összeomlási jelentés.
+- Valamint sok felületi finomítás.</value>
+  </data>
+  <data name="HistoryChartTemperature.Content" xml:space="preserve">
+    <value>Hőmérséklet</value>
+  </data>
+  <data name="HistoryChartWind.Content" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HistoryChartPrecip.Content" xml:space="preserve">
+    <value>Eső és hó</value>
+  </data>
+  <data name="HistoryChartAir.Content" xml:space="preserve">
+    <value>Levegőminőség</value>
+  </data>
+  <data name="HistoryChartHumidity.Content" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="HistoryChartPressure.Content" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="HistoryChartClouds.Content" xml:space="preserve">
+    <value>Felhők és napsütés</value>
+  </data>
+  <data name="HistoryZoomHint.Text" xml:space="preserve">
+    <value>Görgő: nagyítás. Shift+görgő vagy húzás: görgetés.</value>
+  </data>
+  <data name="HistoryZoomIn.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="HistoryZoomOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kicsinyítés</value>
+  </data>
+  <data name="HistoryZoomFit.Content" xml:space="preserve">
+    <value>Igazítás</value>
+  </data>
+  <data name="HistoryZoomFit.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Az egész év megjelenítése</value>
+  </data>
+  <data name="HistoryRangeTo" xml:space="preserve">
+    <value>{0} – {1}</value>
+  </data>
+  <data name="HistoryLoadingHours" xml:space="preserve">
+    <value>Órák betöltése</value>
+  </data>
+  <data name="HistoryClickForHours" xml:space="preserve">
+    <value>Kattintson a nap nagyításához.</value>
+  </data>
+  <data name="HistoryTitleTemperatureHourly" xml:space="preserve">
+    <value>Hőmérséklet és harmatpont, fok {0}</value>
+  </data>
+  <data name="HistoryTitleWind" xml:space="preserve">
+    <value>Napi legerősebb szél és széllökés, {0}</value>
+  </data>
+  <data name="HistoryTitleWindHourly" xml:space="preserve">
+    <value>Szél és széllökések, {0}</value>
+  </data>
+  <data name="HistoryTitlePrecip" xml:space="preserve">
+    <value>Napi csapadék ({0}) és hó ({1})</value>
+  </data>
+  <data name="HistoryTitlePrecipHourly" xml:space="preserve">
+    <value>Csapadék ({0}) és hó ({1}) óránként</value>
+  </data>
+  <data name="HistoryTitleAir" xml:space="preserve">
+    <value>Napi legmagasabb {0}</value>
+  </data>
+  <data name="HistoryTitleAirHourly" xml:space="preserve">
+    <value>{0} óránként</value>
+  </data>
+  <data name="HistoryTitleHumidity" xml:space="preserve">
+    <value>Napi átlagos páratartalom (%) és harmatpont</value>
+  </data>
+  <data name="HistoryTitleHumidityHourly" xml:space="preserve">
+    <value>Páratartalom (%) és harmatpont</value>
+  </data>
+  <data name="HistoryTitlePressure" xml:space="preserve">
+    <value>Napi átlagos tengerszinti légnyomás, {0}</value>
+  </data>
+  <data name="HistoryTitlePressureHourly" xml:space="preserve">
+    <value>Tengerszinti légnyomás, {0}</value>
+  </data>
+  <data name="HistoryTitleClouds" xml:space="preserve">
+    <value>Napi átlagos felhőzet (%) és napsütéses órák</value>
+  </data>
+  <data name="HistoryTitleCloudsHourly" xml:space="preserve">
+    <value>Felhőzet (%)</value>
+  </data>
+  <data name="HistoryLegendGusts" xml:space="preserve">
+    <value>Széllökések</value>
+  </data>
+  <data name="HistoryLegendWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HistoryLegendPrecip" xml:space="preserve">
+    <value>Csapadék</value>
+  </data>
+  <data name="HistoryLegendSnow" xml:space="preserve">
+    <value>Hó</value>
+  </data>
+  <data name="HistoryLegendHumidity" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="HistoryLegendDewPoint" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="HistoryLegendPressure" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="HistoryLegendSun" xml:space="preserve">
+    <value>Napsütés (ó)</value>
+  </data>
+  <data name="HistoryLegendCloud" xml:space="preserve">
+    <value>Felhőzet</value>
+  </data>
+  <data name="HistoryLegendTemperature" xml:space="preserve">
+    <value>Hőmérséklet</value>
+  </data>
+  <data name="HistoryUsAqi" xml:space="preserve">
+    <value>USA AQI</value>
+  </data>
+  <data name="HistoryEuAqi" xml:space="preserve">
+    <value>Európai AQI</value>
+  </data>
+  <data name="HistoryNoAirData" xml:space="preserve">
+    <value>Erre az időszakra nincs levegőminőségi adat. Az adatok 2022 augusztusában kezdődnek.</value>
+  </data>
+  <data name="HistoryColTime" xml:space="preserve">
+    <value>Idő</value>
+  </data>
+  <data name="HistoryColTemperature" xml:space="preserve">
+    <value>Hőm.</value>
+  </data>
+  <data name="HistoryColDewPoint" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="HistoryColHumidity" xml:space="preserve">
+    <value>Pára</value>
+  </data>
+  <data name="HistoryColGust" xml:space="preserve">
+    <value>Lökés</value>
+  </data>
+  <data name="HistoryColFrom" xml:space="preserve">
+    <value>Irány</value>
+  </data>
+  <data name="HistoryColPressure" xml:space="preserve">
+    <value>Nyomás</value>
+  </data>
+  <data name="HistoryColCloud" xml:space="preserve">
+    <value>Felhő</value>
+  </data>
+  <data name="HistoryColSun" xml:space="preserve">
+    <value>Nap</value>
+  </data>
+  <data name="HistoryColPrecip" xml:space="preserve">
+    <value>Csap.</value>
+  </data>
+  <data name="HistoryLegendHigh" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="HistoryLegendLow" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Erre az időszakra még nincs adat.</value>
+  </data>
+  <data name="DataSourceSettingsTitle.Text" xml:space="preserve">
+    <value>Időjárási adatok forrása</value>
+  </data>
+  <data name="DataSourceAutomatic.Content" xml:space="preserve">
+    <value>Automatikus</value>
+  </data>
+  <data name="DataSourceWeatherCom.Content" xml:space="preserve">
+    <value>weather.com</value>
+  </data>
+  <data name="DataSourceOpenMeteo.Content" xml:space="preserve">
+    <value>Open-Meteo</value>
+  </data>
+  <data name="DataSourceHint.Text" xml:space="preserve">
+    <value>Az Automatikus a weather.comot használja, és Open-Meteóra vált, ha a weather.com kétszer egymás után hibázik. Az internetkapcsolat megszakadása nem számít. Óránként újra megpróbálja a weather.comot. Open-Meteo esetén az 50 km-en belüli legközelebbi repülőtéri jelentés adja a felhőalapot és a mért értékeket. Az amerikai pollen üres marad.</value>
+  </data>
+  <data name="DataSourceNote.Text" xml:space="preserve">
+    <value>Adatok: Open-Meteo</value>
+  </data>
+  <data name="DataNoteOpenMeteo" xml:space="preserve">
+    <value>Adatok: Open-Meteo</value>
+  </data>
+  <data name="DataNoteStation" xml:space="preserve">
+    <value>Adatok: Open-Meteo és {0} állomás</value>
+  </data>
+  <data name="AlertUntil" xml:space="preserve">
+    <value>eddig: {0}</value>
+  </data>
+  <data name="AlertMore" xml:space="preserve">
+    <value>és még {0}</value>
+  </data>
+  <data name="AlertShowDetails" xml:space="preserve">
+    <value>Részletek ›</value>
+  </data>
+  <data name="AlertHideDetails" xml:space="preserve">
+    <value>Részletek elrejtése</value>
+  </data>
+  <data name="AlertIssued" xml:space="preserve">
+    <value>Kiadva: {0}</value>
+  </data>
+  <data name="AlertArea" xml:space="preserve">
+    <value>Terület: {0}</value>
+  </data>
+  <data name="AlertLoading" xml:space="preserve">
+    <value>A teljes szöveg betöltése...</value>
+  </data>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>A teljes szöveg nem érhető el.</value>
+  </data>
+  <data name="AlertCreditWeatherCom" xml:space="preserve">
+    <value>Forrás: weather.com figyelmeztetések, az ország nemzeti meteorológiai szolgálatától.</value>
+  </data>
+  <data name="AlertCreditNws" xml:space="preserve">
+    <value>Forrás: National Weather Service (api.weather.gov).</value>
+  </data>
+  <data name="MoreMainHeader" xml:space="preserve">
+    <value>Fő</value>
+  </data>
+  <data name="MoreTrayHeader" xml:space="preserve">
+    <value>Értesítés</value>
+  </data>
+  <data name="MoreAlertsLabel" xml:space="preserve">
+    <value>Időjárási figyelmeztetések</value>
+  </data>
+  <data name="MoreAirportLabel" xml:space="preserve">
+    <value>Időjárás most (repülőtér)</value>
+  </data>
+  <data name="MoreSnowLabel" xml:space="preserve">
+    <value>Hó, utolsó 1, 6 és 24 ó</value>
+  </data>
+  <data name="MoreHeatLabel" xml:space="preserve">
+    <value>Hőterhelés (WBGT)</value>
+  </data>
+  <data name="MoreStormLabel" xml:space="preserve">
+    <value>Zivatarenergia és zivatarkockázat</value>
+  </data>
+  <data name="MoreGroundLabel" xml:space="preserve">
+    <value>Talaj és hóvastagság</value>
+  </data>
+  <data name="MoreFreezingLabel" xml:space="preserve">
+    <value>Fagyszint</value>
+  </data>
+  <data name="MoreSunLabel" xml:space="preserve">
+    <value>Napsütés és párolgás</value>
+  </data>
+  <data name="MoreBuoyLabel" xml:space="preserve">
+    <value>Bója: hullámok, levegő és árapály</value>
+  </data>
+  <data name="MoreGaugeLabel" xml:space="preserve">
+    <value>Vízmérce (USA)</value>
+  </data>
+  <data name="MoreDaysLabel" xml:space="preserve">
+    <value>Napi részletek: zivatar, hó, szél</value>
+  </data>
+  <data name="MoreHourlyLabel" xml:space="preserve">
+    <value>Óránkénti diagram, következő 12 ó az értesítési területen</value>
+  </data>
+  <data name="MoreDiscussionLabel" xml:space="preserve">
+    <value>Az előrejelző elemzése (USA)</value>
+  </data>
+  <data name="MoreAlertLevelLabel" xml:space="preserve">
+    <value>Figyelmeztetések a főablakban</value>
+  </data>
+  <data name="MoreAlertLevelAll" xml:space="preserve">
+    <value>Minden figyelmeztetés</value>
+  </data>
+  <data name="MoreAlertLevelWatches" xml:space="preserve">
+    <value>Figyelmeztetések és előrejelzések</value>
+  </data>
+  <data name="MoreAlertLevelWarnings" xml:space="preserve">
+    <value>Csak figyelmeztetések</value>
+  </data>
+  <data name="MoreHint" xml:space="preserve">
+    <value>A Fő az elemet ebben az ablakban jeleníti meg. Egy kártya elrejtődik, ha a helynek nincs adata. Az Értesítés egy sort ad hozzá, amelyet az értesítési ikonok menüjében a Részletek rámutatáskor alatt jelölhet be. Ez a menü azt is beállítja, mikor jelenik meg a figyelmeztető buborék, és meddig marad. Az első öt elem az open-meteo.com oldalról származik, helyenként óránként legfeljebb egy kéréssel. A figyelmeztetések alapértelmezés szerint be vannak kapcsolva. A többi elem alapértelmezés szerint ki van kapcsolva. Mutasson egy névre a forrása megjelenítéséhez.</value>
+  </data>
+  <data name="CardInfoMoreAlerts" xml:space="preserve">
+    <value>Egy sáv a hely neve alatt minden aktív figyelmeztetéshez. Forrás: weather.com, egyesült államokbeli helyeknél a National Weather Service tartalékkal.</value>
+  </data>
+  <data name="CardInfoMoreAirport" xml:space="preserve">
+    <value>Időjárás és repülési kategória a legközelebbi repülőtéri jelentésből a Látótávolság kártyán. A rámutatáskor megjelenő szöveg hozzáadja a repülőtéri előrejelzést. Forrás: Aviation Weather Center.</value>
+  </data>
+  <data name="CardInfoMoreSnow" xml:space="preserve">
+    <value>Az elmúlt 1, 6 és 24 óra hava. Forrás: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHeat" xml:space="preserve">
+    <value>Nedves gömbhőmérséklet, a hőterhelés mértéke munkához és sporthoz. Forrás: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreStorm" xml:space="preserve">
+    <value>Zivatarenergia (CAPE) és a mai zivatarkockázat. Források: Open-Meteo és weather.com.</value>
+  </data>
+  <data name="CardInfoMoreGround" xml:space="preserve">
+    <value>Talajhőmérséklet 6 cm-en, talajnedvesség és hóvastagság. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreFreezing" xml:space="preserve">
+    <value>A 0 fokos szint magassága. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreSun" xml:space="preserve">
+    <value>A mai napsütés, nappali világosság, napsugárzás és párolgás. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="CardInfoMoreBuoy" xml:space="preserve">
+    <value>Hullámok, hullámperiódus és -irány, levegő, légnyomás és árapály a legközelebbi, 50 km-en belüli NOAA-bójánál vagy árapálymérő állomásnál.</value>
+  </data>
+  <data name="CardInfoMoreGauge" xml:space="preserve">
+    <value>Vízállás, vízhozam és az utolsó 7 nap a legközelebbi, 40 km-en belüli USGS-vízmércénél. Csak USA.</value>
+  </data>
+  <data name="CardInfoMoreDays" xml:space="preserve">
+    <value>Zivatarkockázat és hómennyiség a napgombokon, valamint szélleírás, megjegyzések és mennyiségek a napi részletekben. Forrás: weather.com.</value>
+  </data>
+  <data name="CardInfoMoreHourly" xml:space="preserve">
+    <value>Diagram az óránkénti előrejelzés alatt esővel, hóval, jéggel, valószínűséggel, napsütéssel és veszélyes órákkal. Az értesítési sor a következő 12 óra mennyiségeit adja meg.</value>
+  </data>
+  <data name="CardInfoMoreDiscussion" xml:space="preserve">
+    <value>A National Weather Service helyi irodájának előrejelzői elemzése a radartérkép alatt. Csak USA.</value>
+  </data>
+  <data name="MoreSnowChip.Title" xml:space="preserve">
+    <value>Hó, 6 ó</value>
+  </data>
+  <data name="MoreHeatChip.Title" xml:space="preserve">
+    <value>Hőterhelés</value>
+  </data>
+  <data name="MoreStormChip.Title" xml:space="preserve">
+    <value>Zivatarenergia</value>
+  </data>
+  <data name="MoreGroundChip.Title" xml:space="preserve">
+    <value>Talaj</value>
+  </data>
+  <data name="MoreFreezingChip.Title" xml:space="preserve">
+    <value>Fagyszint</value>
+  </data>
+  <data name="MoreSunChip.Title" xml:space="preserve">
+    <value>Napsütés</value>
+  </data>
+  <data name="MoreBuoyChip.Title" xml:space="preserve">
+    <value>Bója</value>
+  </data>
+  <data name="MoreGaugeChip.Title" xml:space="preserve">
+    <value>Vízmérce</value>
+  </data>
+  <data name="MoreAirportNoWeather" xml:space="preserve">
+    <value>nincs eső, hó vagy köd</value>
+  </data>
+  <data name="MoreAirportTipStation" xml:space="preserve">
+    <value>Repülőtéri jelentés: {0} ({1}), {2} távolságra.</value>
+  </data>
+  <data name="MoreAirportTipWeather" xml:space="preserve">
+    <value>Időjárás:</value>
+  </data>
+  <data name="MoreAirportTipCategory" xml:space="preserve">
+    <value>Repülési kategória:</value>
+  </data>
+  <data name="MoreCategoryVFR" xml:space="preserve">
+    <value>jó látótávolság és felhőalap</value>
+  </data>
+  <data name="MoreCategoryMVFR" xml:space="preserve">
+    <value>határeset: felhőalap 1000–3000 ft vagy látótávolság 3–5 mi</value>
+  </data>
+  <data name="MoreCategoryIFR" xml:space="preserve">
+    <value>alacsony: felhőalap 500–1000 ft vagy látótávolság 1–3 mi</value>
+  </data>
+  <data name="MoreCategoryLIFR" xml:space="preserve">
+    <value>nagyon alacsony: felhőalap 500 ft alatt vagy látótávolság 1 mi alatt</value>
+  </data>
+  <data name="MoreAirportTipCeiling" xml:space="preserve">
+    <value>Felhőalap a repülőtéren:</value>
+  </data>
+  <data name="MoreAirportTipTaf" xml:space="preserve">
+    <value>Repülőtéri előrejelzés ({0}, TAF):</value>
+  </data>
+  <data name="MoreAirportTipRaw" xml:space="preserve">
+    <value>Jelentések eredeti formában:</value>
+  </data>
+  <data name="MoreAirportCredit" xml:space="preserve">
+    <value>Forrás: Aviation Weather Center, aviationweather.gov.</value>
+  </data>
+  <data name="MoreTafFrom" xml:space="preserve">
+    <value>Ettől: {0}</value>
+  </data>
+  <data name="MoreTafBecoming" xml:space="preserve">
+    <value>Változás: {0}</value>
+  </data>
+  <data name="MoreTafTempo" xml:space="preserve">
+    <value>Időnként {0}-tól</value>
+  </data>
+  <data name="MoreTafChance" xml:space="preserve">
+    <value>{0}% esély</value>
+  </data>
+  <data name="MoreTafNoCeiling" xml:space="preserve">
+    <value>nincs felhőalap</value>
+  </data>
+  <data name="MoreTafCeiling" xml:space="preserve">
+    <value>felhőalap {0}</value>
+  </data>
+  <data name="MoreSnowNote" xml:space="preserve">
+    <value>1 ó: {0}, 24 ó: {1}</value>
+  </data>
+  <data name="MoreSnowTip" xml:space="preserve">
+    <value>A helyen mért hó.
+Elmúlt óra: {0}
+Elmúlt 6 óra: {1}
+Elmúlt 24 óra: {2}
+
+Forrás: weather.com.</value>
+  </data>
+  <data name="MoreSnowTray" xml:space="preserve">
+    <value>1 ó: {0}, 6 ó: {1}</value>
+  </data>
+  <data name="MoreHeatLow" xml:space="preserve">
+    <value>Alacsony</value>
+  </data>
+  <data name="MoreHeatModerate" xml:space="preserve">
+    <value>Mérsékelt</value>
+  </data>
+  <data name="MoreHeatHigh" xml:space="preserve">
+    <value>Magas</value>
+  </data>
+  <data name="MoreHeatVeryHigh" xml:space="preserve">
+    <value>Nagyon magas</value>
+  </data>
+  <data name="MoreHeatExtreme" xml:space="preserve">
+    <value>Szélsőséges</value>
+  </data>
+  <data name="MoreHeatTip" xml:space="preserve">
+    <value>WBGT-hőmérséklet (nedves és fekete gömb): {0}, hőterhelés {1}.
+A hőmérsékletet, a páratartalmat, a szelet és a napsütést egyesíti. A munkára és a sportra vonatkozó irányelvek használják. A hőterhelés 25 C (77 F) körül kezdődik, és 32 C (90 F) felett szélsőséges.
+
+Forrás: weather.com.</value>
+  </data>
+  <data name="MoreCapeVeryLow" xml:space="preserve">
+    <value>Nagyon alacsony</value>
+  </data>
+  <data name="MoreCapeLow" xml:space="preserve">
+    <value>Alacsony</value>
+  </data>
+  <data name="MoreCapeModerate" xml:space="preserve">
+    <value>Mérsékelt</value>
+  </data>
+  <data name="MoreCapeHigh" xml:space="preserve">
+    <value>Magas</value>
+  </data>
+  <data name="MoreCapeExtreme" xml:space="preserve">
+    <value>Szélsőséges</value>
+  </data>
+  <data name="MoreThunderRisk" xml:space="preserve">
+    <value>Zivatarkockázat {0}/5</value>
+  </data>
+  <data name="MoreThunderTray" xml:space="preserve">
+    <value>{0}/5</value>
+  </data>
+  <data name="MoreStormTipIntro" xml:space="preserve">
+    <value>A zivatarenergia (CAPE) az az energia, amelyet a felszálló levegő nyerhet. A zivatarokhoz szükség van rá. 300 J/kg alatt a zivatar valószínűtlen. 2500 J/kg felett erős zivatarok lehetségesek, ha valami megemeli a levegőt.</value>
+  </data>
+  <data name="MoreStormTipNow" xml:space="preserve">
+    <value>Most: {0}, {1}</value>
+  </data>
+  <data name="MoreStormTipMax" xml:space="preserve">
+    <value>Ma a legmagasabb: {0}, {1}</value>
+  </data>
+  <data name="MoreStormCredit" xml:space="preserve">
+    <value>Források: Open-Meteo.com (CC BY 4.0) a zivatarenergiához, weather.com a zivatarkockázathoz.</value>
+  </data>
+  <data name="MoreGroundMoisture" xml:space="preserve">
+    <value>Nedvesség {0}</value>
+  </data>
+  <data name="MoreGroundSnow" xml:space="preserve">
+    <value>Hóvastagság {0}</value>
+  </data>
+  <data name="MoreGroundNoSnow" xml:space="preserve">
+    <value>nincs</value>
+  </data>
+  <data name="MoreGroundTip" xml:space="preserve">
+    <value>Talajhőmérséklet 6 cm mélyen: {0}
+Talajnedvesség 3-9 cm-en: {1}
+Hóvastagság: {2}
+
+Az értékek időjárási modellből származnak, nem érzékelőből. Forrás: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreGroundTray" xml:space="preserve">
+    <value>{0}, nedvesség {1}</value>
+  </data>
+  <data name="MoreFreezingAtGround" xml:space="preserve">
+    <value>A talajon</value>
+  </data>
+  <data name="MoreFreezingAboveSea" xml:space="preserve">
+    <value>tengerszint felett</value>
+  </data>
+  <data name="MoreFreezingTip" xml:space="preserve">
+    <value>Fagyszint: {0} tengerszint felett.
+E magasság felett a levegő 0 C (32 F) alatti. A felülről hulló hó alatta elolvad.</value>
+  </data>
+  <data name="MoreFreezingElevation" xml:space="preserve">
+    <value>A hely magassága: {0}</value>
+  </data>
+  <data name="MoreSunOfDaylight" xml:space="preserve">
+    <value>/ {0} nappali fény</value>
+  </data>
+  <data name="MoreSunTip" xml:space="preserve">
+    <value>Napsütés ma: {0}
+Nappali fény ma: {1}
+Napsugárzás most: {2}
+Párolgás ma: {3}
+
+A párolgás a referencia-evapotranspiráció (FAO-56). Megmutatja, mennyi vizet veszít egy pázsit egy nap alatt. Forrás: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreSunTray" xml:space="preserve">
+    <value>{0}/{1}</value>
+  </data>
+  <data name="MoreBuoyEvery" xml:space="preserve">
+    <value>{0} másodpercenként</value>
+  </data>
+  <data name="MoreBuoyFrom" xml:space="preserve">
+    <value>{0} felől</value>
+  </data>
+  <data name="MoreBuoyTide" xml:space="preserve">
+    <value>Árapály {0}</value>
+  </data>
+  <data name="MoreBuoyTipStation" xml:space="preserve">
+    <value>{0} ({1}), {2} távolságra, {3}.</value>
+  </data>
+  <data name="MoreBuoyTipWaves" xml:space="preserve">
+    <value>Hullámok:</value>
+  </data>
+  <data name="MoreBuoyTipAir" xml:space="preserve">
+    <value>Levegő:</value>
+  </data>
+  <data name="MoreBuoyTipWater" xml:space="preserve">
+    <value>Víz:</value>
+  </data>
+  <data name="MoreBuoyTipPressure" xml:space="preserve">
+    <value>Légnyomás:</value>
+  </data>
+  <data name="MoreBuoyTipTide" xml:space="preserve">
+    <value>Árapály, az állomás nullpontja felett:</value>
+  </data>
+  <data name="MoreBuoyCredit" xml:space="preserve">
+    <value>Forrás: NOAA National Data Buoy Center, ndbc.noaa.gov.</value>
+  </data>
+  <data name="MoreGaugeRising" xml:space="preserve">
+    <value>Emelkedő</value>
+  </data>
+  <data name="MoreGaugeFalling" xml:space="preserve">
+    <value>Csökkenő</value>
+  </data>
+  <data name="MoreGaugeSteady" xml:space="preserve">
+    <value>Állandó</value>
+  </data>
+  <data name="MoreGaugeTipStation" xml:space="preserve">
+    <value>{0} (USGS {1}), {2} távolságra, {3}.</value>
+  </data>
+  <data name="MoreGaugeTipHeight" xml:space="preserve">
+    <value>Vízállás:</value>
+  </data>
+  <data name="MoreGaugeTipFlow" xml:space="preserve">
+    <value>Vízhozam:</value>
+  </data>
+  <data name="MoreGaugeTipChange" xml:space="preserve">
+    <value>Változás az elmúlt 3 órában: {0}</value>
+  </data>
+  <data name="MoreGaugeTipWeek" xml:space="preserve">
+    <value>Elmúlt 7 nap: {0}, {1} és {2} között</value>
+  </data>
+  <data name="MoreGaugeCredit" xml:space="preserve">
+    <value>A vízállást a vízmérce nullpontjától mérik, nem a mederfenéktől. Forrás: U.S. Geological Survey, waterdata.usgs.gov.</value>
+  </data>
+  <data name="MoreDayWind" xml:space="preserve">
+    <value>Szél: {0}</value>
+  </data>
+  <data name="MoreDayWindNight" xml:space="preserve">
+    <value>Szél éjjel: {0}</value>
+  </data>
+  <data name="MoreDayNote" xml:space="preserve">
+    <value>Megjegyzés: {0}</value>
+  </data>
+  <data name="MoreDaySnowRange" xml:space="preserve">
+    <value>hó {0}</value>
+  </data>
+  <data name="MoreDayAmounts" xml:space="preserve">
+    <value>Mennyiségek: {0}</value>
+  </data>
+  <data name="MoreDayNoAmounts" xml:space="preserve">
+    <value>Mennyiségek: nincs</value>
+  </data>
+  <data name="MoreChartLegend" xml:space="preserve">
+    <value>Oszlopok: eső (kék), hó vízként (fehér), jég (cián). Szaggatott vonal: esély. Sárga: napsütés. Piros jel: veszélyes időjárású óra.</value>
+  </data>
+  <data name="MoreChartTip" xml:space="preserve">
+    <value>Óránkénti eső, hó és jég a weather.com-tól. A hó vízként jelenik meg, körülbelül 10:1 arányban. A szaggatott vonal a csapadék esélye. A felső sárga sáv az óra napsütése az Open-Meteótól. A piros jel olyan órát mutat, amelyet a weather.com veszélyesnek minősít.</value>
+  </data>
+  <data name="MoreChartTotal" xml:space="preserve">
+    <value>A megjelenített órák összege: {0}</value>
+  </data>
+  <data name="MoreChartNone" xml:space="preserve">
+    <value>nincs</value>
+  </data>
+  <data name="MoreNext12Dry" xml:space="preserve">
+    <value>Száraz, esély {0}%</value>
+  </data>
+  <data name="MoreNext12Chance" xml:space="preserve">
+    <value>esély {0}%</value>
+  </data>
+  <data name="MoreAmountRain" xml:space="preserve">
+    <value>eső {0}</value>
+  </data>
+  <data name="MoreAmountSnow" xml:space="preserve">
+    <value>hó {0}</value>
+  </data>
+  <data name="MoreAmountIce" xml:space="preserve">
+    <value>jég {0}</value>
+  </data>
+  <data name="MoreDiscussionTitle" xml:space="preserve">
+    <value>Előrejelző elemzése, NWS {0}</value>
+  </data>
+  <data name="MoreDiscussionIssued" xml:space="preserve">
+    <value>Kiadva: {0}.</value>
+  </data>
+  <data name="MoreDiscussionCredit" xml:space="preserve">
+    <value>Forrás: National Weather Service, api.weather.gov.</value>
+  </data>
+  <data name="MoreDiscussionShowAll" xml:space="preserve">
+    <value>Összes megjelenítése</value>
+  </data>
+  <data name="MoreDiscussionShowLess" xml:space="preserve">
+    <value>Kevesebb megjelenítése</value>
+  </data>
+  <data name="MoreFreezingAtGroundNote" xml:space="preserve">
+    <value>0 C alatt a felszínen</value>
+  </data>
+  <data name="MoreFreezingTipGround" xml:space="preserve">
+    <value>A levegő a talajtól felfelé 0 C (32 F) alatti. A hó hullás közben nem olvad el.</value>
+  </data>
+  <data name="MoreFreezingCredit" xml:space="preserve">
+    <value>Forrás: Open-Meteo.com (CC BY 4.0).</value>
+  </data>
+  <data name="MoreTafNow" xml:space="preserve">
+    <value>Most</value>
+  </data>
+  <data name="MoreTafNowLower" xml:space="preserve">
+    <value>most</value>
+  </data>
+  <data name="ExtraMarineLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Hullámmagasság, hullámperiódus, hullámzás és tengerfelszín-hőmérséklet az Open-Meteo tengeri modelljéből, tengeren vagy annak közelében lévő pontokra. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="ExtraWindLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>A következő 6 óra legerősebb széllökése, a modell mostani széllökése és a szél 80 m-en. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="ExtraModelsLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>A mai maximum, minimum és csapadék az ECMWF, GFS és ICON modellekből. Forrás: Open-Meteo.</value>
+  </data>
+  <data name="ExtraRiverLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>A mai modellezett folyóvízhozam és a napra jellemző szokásos vízhozam (GloFAS). Forrás: Open-Meteo.</value>
+  </data>
+  <data name="ExtraPollenLabel.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Fák, fűfélék és parlagfű szintje. Forrás: weather.com az USA-ban és néhány más országban, Open-Meteo Európában.</value>
+  </data>
+  <data name="HourlyPageOpenText.Text" xml:space="preserve">
+    <value>10 nap óránként</value>
+  </data>
+  <data name="HourlyPageOpenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Az előrejelzés minden órája, körülbelül 10 nap</value>
+  </data>
+  <data name="HourlyPageBackButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vissza a főablakhoz (Esc)</value>
+  </data>
+  <data name="HourlyPageBackText.Text" xml:space="preserve">
+    <value>Vissza</value>
+  </data>
+  <data name="HourlyPageTitle.Text" xml:space="preserve">
+    <value>10 napos óránkénti előrejelzés</value>
+  </data>
+  <data name="HourlyPageViewList.Content" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="HourlyPageViewTable.Content" xml:space="preserve">
+    <value>Táblázat</value>
+  </data>
+  <data name="HourlyPageChartOverview.Content" xml:space="preserve">
+    <value>Áttekintés</value>
+  </data>
+  <data name="HourlyPageChartTemperature.Content" xml:space="preserve">
+    <value>Hőmérséklet</value>
+  </data>
+  <data name="HourlyPageChartFeelsLike.Content" xml:space="preserve">
+    <value>Hőérzet</value>
+  </data>
+  <data name="HourlyPageChartPrecip.Content" xml:space="preserve">
+    <value>Csapadék</value>
+  </data>
+  <data name="HourlyPageChartWind.Content" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HourlyPageChartGusts.Content" xml:space="preserve">
+    <value>Széllökések</value>
+  </data>
+  <data name="HourlyPageChartHumidity.Content" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="HourlyPageChartUv.Content" xml:space="preserve">
+    <value>UV-index</value>
+  </data>
+  <data name="HourlyPageChartClouds.Content" xml:space="preserve">
+    <value>Felhőzet</value>
+  </data>
+  <data name="HourlyPageChartVisibility.Content" xml:space="preserve">
+    <value>Látótávolság</value>
+  </data>
+  <data name="HourlyPageChartDewPoint.Content" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="HourlyPageChartPressure.Content" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="HourlyPageCredit.Text" xml:space="preserve">
+    <value>Az oldal azt az óránkénti előrejelzést mutatja, amelyet az alkalmazás már betöltött a megjelenített helyhez. Más hely a kiválasztásakor töltődik be. Az időpontok a hely helyi idejében értendők. A diagramra kattintva a lista az adott órához görget. A Lista nézetben egy sorra kattintva megnyílnak a további értékei.</value>
+  </data>
+  <data name="HourlyPageShownPlace" xml:space="preserve">
+    <value>Megjelenített hely</value>
+  </data>
+  <data name="HourlyPageStatus" xml:space="preserve">
+    <value>{0}, frissítve: {1}</value>
+  </data>
+  <data name="HourlyPageNoData" xml:space="preserve">
+    <value>Ehhez a helyhez nincs óránkénti előrejelzés</value>
+  </data>
+  <data name="HourlyPageNoGusts" xml:space="preserve">
+    <value>Ebben az előrejelzésben nincs széllökés</value>
+  </data>
+  <data name="HourlyPageNone" xml:space="preserve">
+    <value>nincs</value>
+  </data>
+  <data name="HourlyPageDayHeader" xml:space="preserve">
+    <value>{0} óra     {1}° / {2}°</value>
+  </data>
+  <data name="HourlyPageAmountSnow" xml:space="preserve">
+    <value>{0} hó</value>
+  </data>
+  <data name="HourlyPageGusts" xml:space="preserve">
+    <value>széllökések {0}</value>
+  </data>
+  <data name="HourlyPageReadoutFeels" xml:space="preserve">
+    <value>hőérzet {0}°</value>
+  </data>
+  <data name="HourlyPageTypeRain" xml:space="preserve">
+    <value>eső</value>
+  </data>
+  <data name="HourlyPageTypeSnow" xml:space="preserve">
+    <value>hó</value>
+  </data>
+  <data name="HourlyPageTypePrecip" xml:space="preserve">
+    <value>csapadék</value>
+  </data>
+  <data name="HourlyPageColTime" xml:space="preserve">
+    <value>Idő</value>
+  </data>
+  <data name="HourlyPageColSky" xml:space="preserve">
+    <value>Égbolt</value>
+  </data>
+  <data name="HourlyPageColTemp" xml:space="preserve">
+    <value>Hőm.</value>
+  </data>
+  <data name="HourlyPageColFeels" xml:space="preserve">
+    <value>Hőérz.</value>
+  </data>
+  <data name="HourlyPageColChance" xml:space="preserve">
+    <value>Esély</value>
+  </data>
+  <data name="HourlyPageColAmount" xml:space="preserve">
+    <value>Menny.</value>
+  </data>
+  <data name="HourlyPageColRain" xml:space="preserve">
+    <value>Eső</value>
+  </data>
+  <data name="HourlyPageColSnow" xml:space="preserve">
+    <value>Hó</value>
+  </data>
+  <data name="HourlyPageColIce" xml:space="preserve">
+    <value>Jég</value>
+  </data>
+  <data name="HourlyPageColHumidity" xml:space="preserve">
+    <value>Pára</value>
+  </data>
+  <data name="HourlyPageColDew" xml:space="preserve">
+    <value>Harmatp.</value>
+  </data>
+  <data name="HourlyPageColWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HourlyPageColGust" xml:space="preserve">
+    <value>Lökés</value>
+  </data>
+  <data name="HourlyPageColClouds" xml:space="preserve">
+    <value>Felhők</value>
+  </data>
+  <data name="HourlyPageColUv" xml:space="preserve">
+    <value>UV</value>
+  </data>
+  <data name="HourlyPageColVis" xml:space="preserve">
+    <value>Látás</value>
+  </data>
+  <data name="HourlyPageColPressure" xml:space="preserve">
+    <value>Nyomás</value>
+  </data>
+  <data name="HourlyPageDetFeels" xml:space="preserve">
+    <value>Hőérzet</value>
+  </data>
+  <data name="HourlyPageDetGust" xml:space="preserve">
+    <value>Széllökés</value>
+  </data>
+  <data name="HourlyPageDetDew" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="HourlyPageDetUv" xml:space="preserve">
+    <value>UV-index</value>
+  </data>
+  <data name="HourlyPageDetClouds" xml:space="preserve">
+    <value>Felhőzet</value>
+  </data>
+  <data name="HourlyPageDetVis" xml:space="preserve">
+    <value>Látótávolság</value>
+  </data>
+  <data name="HourlyPageLegendTemperature" xml:space="preserve">
+    <value>Hőmérséklet</value>
+  </data>
+  <data name="HourlyPageLegendFeels" xml:space="preserve">
+    <value>Hőérzet</value>
+  </data>
+  <data name="HourlyPageLegendChance" xml:space="preserve">
+    <value>Csapadék esélye</value>
+  </data>
+  <data name="HourlyPageLegendRain" xml:space="preserve">
+    <value>Eső</value>
+  </data>
+  <data name="HourlyPageLegendSnow" xml:space="preserve">
+    <value>Hó</value>
+  </data>
+  <data name="HourlyPageLegendWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="HourlyPageLegendGust" xml:space="preserve">
+    <value>Széllökések</value>
+  </data>
+  <data name="HourlyPageLegendDew" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="HourlyPageTitleOverview" xml:space="preserve">
+    <value>Hőmérséklet ({0}) és csapadék esélye</value>
+  </data>
+  <data name="HourlyPageTitleTemperature" xml:space="preserve">
+    <value>Hőmérséklet, {0}</value>
+  </data>
+  <data name="HourlyPageTitleFeels" xml:space="preserve">
+    <value>Hőérzet és hőmérséklet, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePrecip" xml:space="preserve">
+    <value>Eső ({0}) és hó ({1}) óránként, valamint csapadék esélye</value>
+  </data>
+  <data name="HourlyPageTitleWind" xml:space="preserve">
+    <value>Szél és széllökések, {0}</value>
+  </data>
+  <data name="HourlyPageTitleGusts" xml:space="preserve">
+    <value>Széllökések, {0}</value>
+  </data>
+  <data name="HourlyPageTitleHumidity" xml:space="preserve">
+    <value>Páratartalom, %</value>
+  </data>
+  <data name="HourlyPageTitleUv" xml:space="preserve">
+    <value>UV-index</value>
+  </data>
+  <data name="HourlyPageTitleClouds" xml:space="preserve">
+    <value>Felhőzet, %</value>
+  </data>
+  <data name="HourlyPageTitleVisibility" xml:space="preserve">
+    <value>Látótávolság, {0}</value>
+  </data>
+  <data name="HourlyPageTitleDew" xml:space="preserve">
+    <value>Harmatpont és hőmérséklet, {0}</value>
+  </data>
+  <data name="HourlyPageTitlePressure" xml:space="preserve">
+    <value>Tengerszinti légnyomás, {0}</value>
+  </data>
+  <data name="ExtraModelsHighs" xml:space="preserve">
+    <value>Maximumok</value>
+  </data>
+  <data name="ExtraModelsLows" xml:space="preserve">
+    <value>Minimumok</value>
+  </data>
+  <data name="ScrollBarLeftName" xml:space="preserve">
+    <value>Görgetés balra</value>
+  </data>
+  <data name="ScrollBarRightName" xml:space="preserve">
+    <value>Görgetés jobbra</value>
+  </data>
+  <data name="OmSunny" xml:space="preserve">
+    <value>Napos</value>
+  </data>
+  <data name="OmClear" xml:space="preserve">
+    <value>Derült</value>
+  </data>
+  <data name="OmMostlySunny" xml:space="preserve">
+    <value>Többnyire napos</value>
+  </data>
+  <data name="OmMostlyClear" xml:space="preserve">
+    <value>Többnyire derült</value>
+  </data>
+  <data name="OmPartlyCloudy" xml:space="preserve">
+    <value>Változóan felhős</value>
+  </data>
+  <data name="OmCloudy" xml:space="preserve">
+    <value>Felhős</value>
+  </data>
+  <data name="OmMostlyCloudy" xml:space="preserve">
+    <value>Többnyire felhős</value>
+  </data>
+  <data name="OmFog" xml:space="preserve">
+    <value>Köd</value>
+  </data>
+  <data name="OmFreezingFog" xml:space="preserve">
+    <value>Zúzmarás köd</value>
+  </data>
+  <data name="OmLightDrizzle" xml:space="preserve">
+    <value>Gyenge szitálás</value>
+  </data>
+  <data name="OmDrizzle" xml:space="preserve">
+    <value>Szitálás</value>
+  </data>
+  <data name="OmHeavyDrizzle" xml:space="preserve">
+    <value>Erős szitálás</value>
+  </data>
+  <data name="OmFreezingDrizzle" xml:space="preserve">
+    <value>Ónos szitálás</value>
+  </data>
+  <data name="OmLightRain" xml:space="preserve">
+    <value>Gyenge eső</value>
+  </data>
+  <data name="OmRain" xml:space="preserve">
+    <value>Eső</value>
+  </data>
+  <data name="OmHeavyRain" xml:space="preserve">
+    <value>Erős eső</value>
+  </data>
+  <data name="OmFreezingRain" xml:space="preserve">
+    <value>Ónos eső</value>
+  </data>
+  <data name="OmLightSnow" xml:space="preserve">
+    <value>Gyenge havazás</value>
+  </data>
+  <data name="OmSnow" xml:space="preserve">
+    <value>Havazás</value>
+  </data>
+  <data name="OmHeavySnow" xml:space="preserve">
+    <value>Erős havazás</value>
+  </data>
+  <data name="OmSnowGrains" xml:space="preserve">
+    <value>Szemcsés hó</value>
+  </data>
+  <data name="OmLightRainShower" xml:space="preserve">
+    <value>Gyenge zápor</value>
+  </data>
+  <data name="OmRainShower" xml:space="preserve">
+    <value>Zápor</value>
+  </data>
+  <data name="OmHeavyRainShower" xml:space="preserve">
+    <value>Erős zápor</value>
+  </data>
+  <data name="OmSnowShower" xml:space="preserve">
+    <value>Hózápor</value>
+  </data>
+  <data name="OmHeavySnowShower" xml:space="preserve">
+    <value>Erős hózápor</value>
+  </data>
+  <data name="OmThunderstorm" xml:space="preserve">
+    <value>Zivatar</value>
+  </data>
+  <data name="OmThunderstormHail" xml:space="preserve">
+    <value>Zivatar jégesővel</value>
+  </data>
+  <data name="OmFair" xml:space="preserve">
+    <value>Derült</value>
+  </data>
+  <data name="OmToday" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="OmTonight" xml:space="preserve">
+    <value>Ma éjjel</value>
+  </data>
+  <data name="OmTomorrow" xml:space="preserve">
+    <value>Holnap</value>
+  </data>
+  <data name="OmTomorrowNight" xml:space="preserve">
+    <value>Holnap éjjel</value>
+  </data>
+  <data name="OmWeekdayNight" xml:space="preserve">
+    <value>{0} éjjel</value>
+  </data>
+  <data name="OmWindsLight" xml:space="preserve">
+    <value>Gyenge, változó irányú szél.</value>
+  </data>
+  <data name="OmWinds" xml:space="preserve">
+    <value>{0} szél, {1}–{2} {3}.</value>
+  </data>
+  <data name="OmChanceRain" xml:space="preserve">
+    <value>Eső esélye {0}%.</value>
+  </data>
+  <data name="OmChanceSnow" xml:space="preserve">
+    <value>Havazás esélye {0}%.</value>
+  </data>
+  <data name="OmHigh" xml:space="preserve">
+    <value>Legmagasabb {0}{1}.</value>
+  </data>
+  <data name="OmLow" xml:space="preserve">
+    <value>Legalacsonyabb {0}{1}.</value>
+  </data>
+  <data name="OmThunderExpected" xml:space="preserve">
+    <value>Zivatar várható</value>
+  </data>
+  <data name="OmNoThunder" xml:space="preserve">
+    <value>Nincs zivatar</value>
+  </data>
+  <data name="OmRunExcellent" xml:space="preserve">
+    <value>Kiváló</value>
+  </data>
+  <data name="OmRunGood" xml:space="preserve">
+    <value>Jó</value>
+  </data>
+  <data name="OmRunFair" xml:space="preserve">
+    <value>Közepes</value>
+  </data>
+  <data name="OmRunPoor" xml:space="preserve">
+    <value>Gyenge</value>
+  </data>
+  <data name="OmRunVeryPoor" xml:space="preserve">
+    <value>Nagyon gyenge</value>
+  </data>
+  <data name="OmLevelNone" xml:space="preserve">
+    <value>Nincs</value>
+  </data>
+  <data name="OmLevelVeryLow" xml:space="preserve">
+    <value>Nagyon alacsony</value>
+  </data>
+  <data name="OmLevelLow" xml:space="preserve">
+    <value>Alacsony</value>
+  </data>
+  <data name="OmLevelModerate" xml:space="preserve">
+    <value>Mérsékelt</value>
+  </data>
+  <data name="OmLevelHigh" xml:space="preserve">
+    <value>Magas</value>
+  </data>
+  <data name="OmLevelVeryHigh" xml:space="preserve">
+    <value>Nagyon magas</value>
+  </data>
+  <data name="OmLevelExtreme" xml:space="preserve">
+    <value>Szélsőséges</value>
+  </data>
+  <data name="OmConcernLow" xml:space="preserve">
+    <value>Alacsony kockázat</value>
+  </data>
+  <data name="OmConcernModerate" xml:space="preserve">
+    <value>Mérsékelt kockázat</value>
+  </data>
+  <data name="OmConcernHigh" xml:space="preserve">
+    <value>Magas kockázat</value>
+  </data>
+  <data name="OmConcernExtreme" xml:space="preserve">
+    <value>Szélsőséges kockázat</value>
+  </data>
+  <data name="DirN" xml:space="preserve">
+    <value>É</value>
+  </data>
+  <data name="DirNNE" xml:space="preserve">
+    <value>ÉÉK</value>
+  </data>
+  <data name="DirNE" xml:space="preserve">
+    <value>ÉK</value>
+  </data>
+  <data name="DirENE" xml:space="preserve">
+    <value>KÉK</value>
+  </data>
+  <data name="DirE" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="DirESE" xml:space="preserve">
+    <value>KDK</value>
+  </data>
+  <data name="DirSE" xml:space="preserve">
+    <value>DK</value>
+  </data>
+  <data name="DirSSE" xml:space="preserve">
+    <value>DDK</value>
+  </data>
+  <data name="DirS" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="DirSSW" xml:space="preserve">
+    <value>DDNy</value>
+  </data>
+  <data name="DirSW" xml:space="preserve">
+    <value>DNy</value>
+  </data>
+  <data name="DirWSW" xml:space="preserve">
+    <value>NyDNy</value>
+  </data>
+  <data name="DirW" xml:space="preserve">
+    <value>Ny</value>
+  </data>
+  <data name="DirWNW" xml:space="preserve">
+    <value>NyÉNy</value>
+  </data>
+  <data name="DirNW" xml:space="preserve">
+    <value>ÉNy</value>
+  </data>
+  <data name="DirNNW" xml:space="preserve">
+    <value>ÉÉNy</value>
+  </data>
+  <data name="DirCalm" xml:space="preserve">
+    <value>SZÉLCSEND</value>
+  </data>
+  <data name="DirVariable" xml:space="preserve">
+    <value>VÁLT.</value>
+  </data>
+  <data name="WxLight" xml:space="preserve">
+    <value>gyenge</value>
+  </data>
+  <data name="WxHeavy" xml:space="preserve">
+    <value>erős</value>
+  </data>
+  <data name="WxNearby" xml:space="preserve">
+    <value>a közelben</value>
+  </data>
+  <data name="WxThunderstorm" xml:space="preserve">
+    <value>zivatar</value>
+  </data>
+  <data name="WxShowers" xml:space="preserve">
+    <value>záporok</value>
+  </data>
+  <data name="WxMI" xml:space="preserve">
+    <value>sekély</value>
+  </data>
+  <data name="WxBC" xml:space="preserve">
+    <value>foltokban</value>
+  </data>
+  <data name="WxPR" xml:space="preserve">
+    <value>részleges</value>
+  </data>
+  <data name="WxDR" xml:space="preserve">
+    <value>alacsony hófúvás</value>
+  </data>
+  <data name="WxBL" xml:space="preserve">
+    <value>hófúvás</value>
+  </data>
+  <data name="WxSH" xml:space="preserve">
+    <value>zápor:</value>
+  </data>
+  <data name="WxTS" xml:space="preserve">
+    <value>zivatar és</value>
+  </data>
+  <data name="WxFZ" xml:space="preserve">
+    <value>ónos</value>
+  </data>
+  <data name="WxDZ" xml:space="preserve">
+    <value>szitálás</value>
+  </data>
+  <data name="WxRA" xml:space="preserve">
+    <value>eső</value>
+  </data>
+  <data name="WxSN" xml:space="preserve">
+    <value>hó</value>
+  </data>
+  <data name="WxSG" xml:space="preserve">
+    <value>szemcsés hó</value>
+  </data>
+  <data name="WxIC" xml:space="preserve">
+    <value>jégkristályok</value>
+  </data>
+  <data name="WxPL" xml:space="preserve">
+    <value>jégdara</value>
+  </data>
+  <data name="WxGR" xml:space="preserve">
+    <value>jégeső</value>
+  </data>
+  <data name="WxGS" xml:space="preserve">
+    <value>hódara</value>
+  </data>
+  <data name="WxUP" xml:space="preserve">
+    <value>ismeretlen csapadék</value>
+  </data>
+  <data name="WxBR" xml:space="preserve">
+    <value>pára</value>
+  </data>
+  <data name="WxFG" xml:space="preserve">
+    <value>köd</value>
+  </data>
+  <data name="WxFU" xml:space="preserve">
+    <value>füst</value>
+  </data>
+  <data name="WxVA" xml:space="preserve">
+    <value>vulkáni hamu</value>
+  </data>
+  <data name="WxDU" xml:space="preserve">
+    <value>por</value>
+  </data>
+  <data name="WxSA" xml:space="preserve">
+    <value>homok</value>
+  </data>
+  <data name="WxHZ" xml:space="preserve">
+    <value>száraz homály</value>
+  </data>
+  <data name="WxPY" xml:space="preserve">
+    <value>vízpermet</value>
+  </data>
+  <data name="WxPO" xml:space="preserve">
+    <value>porforgatagok</value>
+  </data>
+  <data name="WxSQ" xml:space="preserve">
+    <value>szélrohamok</value>
+  </data>
+  <data name="WxFC" xml:space="preserve">
+    <value>tölcsérfelhő</value>
+  </data>
+  <data name="WxSS" xml:space="preserve">
+    <value>homokvihar</value>
+  </data>
+  <data name="WxDS" xml:space="preserve">
+    <value>porvihar</value>
+  </data>
+  <data name="TrayGustsSuffix" xml:space="preserve">
+    <value>, széllökések {0}</value>
+  </data>
+  <data name="UpdateFailedTitle" xml:space="preserve">
+    <value>Nem sikerült frissíteni az időjárási adatokat</value>
+  </data>
+  <data name="UpdateFailedBlocked" xml:space="preserve">
+    <value>A Windows letiltotta a kapcsolatot az időjárási szolgáltatással. Lehet, hogy tűzfal, víruskereső, VPN vagy proxy blokkolja a FluentWeather-Plus alkalmazást. Engedélyezze a FluentWeather-Plus alkalmazást abban a programban, vagy próbálja újra kikapcsolt VPN-nel.</value>
+  </data>
+  <data name="UpdateFailedNoInternet" xml:space="preserve">
+    <value>Nem sikerült frissíteni az időjárási adatokat. Ellenőrizze az internetkapcsolatot.</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VersionBuild" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="AutoRefreshOff.Content" xml:space="preserve">
+    <value>Ki</value>
+  </data>
+  <data name="AutoRefresh15.Content" xml:space="preserve">
+    <value>15 perc</value>
+  </data>
+  <data name="AutoRefresh30.Content" xml:space="preserve">
+    <value>30 perc</value>
+  </data>
+  <data name="AutoRefresh60.Content" xml:space="preserve">
+    <value>1 óra</value>
+  </data>
+  <data name="TrayDetailConditions" xml:space="preserve">
+    <value>Körülmények</value>
+  </data>
+  <data name="TrayDetailTemperature" xml:space="preserve">
+    <value>Hőmérséklet</value>
+  </data>
+  <data name="TrayDetailFeelsLike" xml:space="preserve">
+    <value>Hőérzet</value>
+  </data>
+  <data name="TrayDetailHighLow" xml:space="preserve">
+    <value>24 órás max. / min.</value>
+  </data>
+  <data name="TrayDetailChange24h" xml:space="preserve">
+    <value>24 órás változás</value>
+  </data>
+  <data name="TrayDetailDewPoint" xml:space="preserve">
+    <value>Harmatpont</value>
+  </data>
+  <data name="TrayDetailHeatIndex" xml:space="preserve">
+    <value>Hőindex</value>
+  </data>
+  <data name="TrayDetailWindChill" xml:space="preserve">
+    <value>Szélhűtés</value>
+  </data>
+  <data name="TrayDetailHumidity" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="TrayDetailWind" xml:space="preserve">
+    <value>Szél</value>
+  </data>
+  <data name="TrayDetailUV" xml:space="preserve">
+    <value>UV-index</value>
+  </data>
+  <data name="TrayDetailPressure" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="TrayDetailVisibility" xml:space="preserve">
+    <value>Látótávolság</value>
+  </data>
+  <data name="TrayDetailCloudCeiling" xml:space="preserve">
+    <value>Felhőalap</value>
+  </data>
+  <data name="TrayDetailRain1h" xml:space="preserve">
+    <value>Eső, elmúlt óra</value>
+  </data>
+  <data name="TrayDetailRain6h" xml:space="preserve">
+    <value>Eső, elmúlt 6 óra</value>
+  </data>
+  <data name="TrayDetailRain24h" xml:space="preserve">
+    <value>Eső, elmúlt 24 óra</value>
+  </data>
+  <data name="TrayDetailSnow24h" xml:space="preserve">
+    <value>Hó, elmúlt 24 óra</value>
+  </data>
+  <data name="TrayDetailSunrise" xml:space="preserve">
+    <value>Napkelte</value>
+  </data>
+  <data name="TrayDetailSunset" xml:space="preserve">
+    <value>Napnyugta</value>
+  </data>
+  <data name="TrayDetailMoon" xml:space="preserve">
+    <value>Holdfázis</value>
+  </data>
+  <data name="TrayDetailMoonrise" xml:space="preserve">
+    <value>Holdkelte</value>
+  </data>
+  <data name="TrayDetailMoonset" xml:space="preserve">
+    <value>Holdnyugta</value>
+  </data>
+  <data name="TrayDetailObserved" xml:space="preserve">
+    <value>Megfigyelve</value>
+  </data>
+  <data name="TrayDetailStation" xml:space="preserve">
+    <value>Legközelebbi állomás</value>
+  </data>
+  <data name="TrayDetailWaterTemp" xml:space="preserve">
+    <value>Vízhőmérséklet</value>
+  </data>
+  <data name="TrayDetailWaterWind" xml:space="preserve">
+    <value>Szél a vízállomáson</value>
+  </data>
+  <data name="TrayDetailExtraMarine" xml:space="preserve">
+    <value>Hullámok és tengerhőmérséklet</value>
+  </data>
+  <data name="TrayDetailExtraWind" xml:space="preserve">
+    <value>Szél-előrejelzés (lökések, 80 m)</value>
+  </data>
+  <data name="TrayDetailExtraModels" xml:space="preserve">
+    <value>Más modellek</value>
+  </data>
+  <data name="TrayDetailExtraRiver" xml:space="preserve">
+    <value>Folyó vízhozama</value>
+  </data>
+  <data name="TrayDetailExtraPollen" xml:space="preserve">
+    <value>Pollen</value>
+  </data>
+  <data name="TrayDetailAlert" xml:space="preserve">
+    <value>Időjárási figyelmeztetés</value>
+  </data>
+  <data name="TrayDetailMoreAirport" xml:space="preserve">
+    <value>Időjárás most (repülőtér)</value>
+  </data>
+  <data name="TrayDetailMoreSnow" xml:space="preserve">
+    <value>Hó, elmúlt 1 és 6 óra</value>
+  </data>
+  <data name="TrayDetailMoreStorm" xml:space="preserve">
+    <value>Zivatarkockázat ma</value>
+  </data>
+  <data name="TrayDetailMoreHeat" xml:space="preserve">
+    <value>Hőterhelés (WBGT)</value>
+  </data>
+  <data name="TrayDetailMoreFreezing" xml:space="preserve">
+    <value>Fagyszint</value>
+  </data>
+  <data name="TrayDetailMoreGround" xml:space="preserve">
+    <value>Talajhőmérséklet és -nedvesség</value>
+  </data>
+  <data name="TrayDetailMoreSun" xml:space="preserve">
+    <value>Napsütés ma</value>
+  </data>
+  <data name="TrayDetailMoreBuoy" xml:space="preserve">
+    <value>Bója: hullámok és árapály</value>
+  </data>
+  <data name="TrayDetailMoreGauge" xml:space="preserve">
+    <value>Folyó vízállása és vízhozama</value>
+  </data>
+  <data name="TrayDetailMoreHourly" xml:space="preserve">
+    <value>Eső, hó és jég a következő 12 órában</value>
+  </data>
+  <data name="TrayAlertMoreOne" xml:space="preserve">
+    <value>És még {0} figyelmeztetés.</value>
+  </data>
+  <data name="TrayAlertMoreMany" xml:space="preserve">
+    <value>És még {0} figyelmeztetés.</value>
+  </data>
+  <data name="TrayAlertMoreShort" xml:space="preserve">
+    <value>És még {0}.</value>
+  </data>
+  <data name="TrayClosesIn" xml:space="preserve">
+    <value>Bezárul: {0}</value>
+  </data>
+  <data name="TrayAlertHeader" xml:space="preserve">
+    <value>FluentWeather-Plus figyelmeztetés</value>
+  </data>
+  <data name="TrayShowDetails" xml:space="preserve">
+    <value>Részletek megjelenítése</value>
+  </data>
+  <data name="TrayWaiting" xml:space="preserve">
+    <value>{0}: várakozás a következő adatfrissítésre</value>
+  </data>
+  <data name="TrayNoData" xml:space="preserve">
+    <value>FluentWeather: még nincs adat. Nyissa meg egyszer az alkalmazást.</value>
+  </data>
+  <data name="TrayNoUpdateSince" xml:space="preserve">
+    <value>FluentWeather: nincs frissítés ennyi óta: {0}</value>
+  </data>
+  <data name="TrayFeelsLikeSuffix" xml:space="preserve">
+    <value>, hőérzet {0}</value>
+  </data>
+  <data name="TrayFooterSameCity" xml:space="preserve">
+    <value>Ugyanaz a város, mint az alkalmazásban.</value>
+  </data>
+  <data name="TrayFooterChosen" xml:space="preserve">
+    <value>Az értesítési területen kiválasztva.</value>
+  </data>
+  <data name="TrayFooterUpdated" xml:space="preserve">
+    <value>Frissítve: {0}</value>
+  </data>
+  <data name="TrayAlertsMenu" xml:space="preserve">
+    <value>Időjárási figyelmeztetések</value>
+  </data>
+  <data name="TrayShowAlerts" xml:space="preserve">
+    <value>Figyelmeztetések megjelenítése</value>
+  </data>
+  <data name="TrayAlertsOff" xml:space="preserve">
+    <value>Ki</value>
+  </data>
+  <data name="TrayAlertsWarnings" xml:space="preserve">
+    <value>Riasztások</value>
+  </data>
+  <data name="TrayAlertsWatches" xml:space="preserve">
+    <value>Riasztások és előrejelzések</value>
+  </data>
+  <data name="TrayAlertsAll" xml:space="preserve">
+    <value>Minden figyelmeztetés</value>
+  </data>
+  <data name="TrayDnd" xml:space="preserve">
+    <value>Ne zavarjanak mód tiszteletben tartása (Windows-értesítések használata)</value>
+  </data>
+  <data name="TrayDndTip" xml:space="preserve">
+    <value>A Windows-értesítések várnak, amíg a Ne zavarjanak be van kapcsolva. A buborék nem vár.</value>
+  </data>
+  <data name="TrayCloseAfter" xml:space="preserve">
+    <value>Buborék bezárása ennyi idő után</value>
+  </data>
+  <data name="TrayNever" xml:space="preserve">
+    <value>Soha</value>
+  </data>
+  <data name="TraySeconds" xml:space="preserve">
+    <value>{0} másodperc</value>
+  </data>
+  <data name="TrayOneMinute" xml:space="preserve">
+    <value>1 perc</value>
+  </data>
+  <data name="TrayMinutes" xml:space="preserve">
+    <value>{0} perc</value>
+  </data>
+  <data name="TrayLocations" xml:space="preserve">
+    <value>Helyek</value>
+  </data>
+  <data name="TrayShownCity" xml:space="preserve">
+    <value>Az értesítési területen látható város</value>
+  </data>
+  <data name="TrayAllSaved" xml:space="preserve">
+    <value>Minden mentett hely</value>
+  </data>
+  <data name="TrayTestAlert" xml:space="preserve">
+    <value>Tesztfigyelmeztetés megjelenítése</value>
+  </data>
+  <data name="TrayTestAlertTip" xml:space="preserve">
+    <value>Megmutatja, hogyan néz ki egy figyelmeztetés a jelenlegi beállításokkal. Ez nem valódi figyelmeztetés.</value>
+  </data>
+  <data name="TrayTestName" xml:space="preserve">
+    <value>Tesztfigyelmeztetés</value>
+  </data>
+  <data name="TrayTestUntil" xml:space="preserve">
+    <value>eddig: {0}</value>
+  </data>
+  <data name="TrayTestPlace" xml:space="preserve">
+    <value>Az Ön városa</value>
+  </data>
+  <data name="TrayTestSummary" xml:space="preserve">
+    <value>Ez egy teszt. Egy valódi figyelmeztetés itt az időjárási szolgáltatás összefoglalóját mutatja.</value>
+  </data>
+  <data name="TrayAlertNote" xml:space="preserve">
+    <value>Az alkalmazás akkor küld figyelmeztetéseket, ha az alkalmazás beállításaiban az Időjárási figyelmeztetések sorban be van jelölve az Értesítés négyzet.</value>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>{0} megnyitása</value>
+  </data>
+  <data name="TrayNumberTemp" xml:space="preserve">
+    <value>A szám a hőmérsékletet mutatja</value>
+  </data>
+  <data name="TrayNumberFeels" xml:space="preserve">
+    <value>A szám a hőérzetet mutatja</value>
+  </data>
+  <data name="TrayHoverDetails" xml:space="preserve">
+    <value>Részletek rámutatáskor</value>
+  </data>
+  <data name="TrayShowAll" xml:space="preserve">
+    <value>Összes megjelenítése</value>
+  </data>
+  <data name="TrayResetDefaults" xml:space="preserve">
+    <value>Alapértékek visszaállítása</value>
+  </data>
+  <data name="TrayNoLocations" xml:space="preserve">
+    <value>Nincsenek mentett helyek. Használja a csillagot az alkalmazásban.</value>
+  </data>
+  <data name="TrayShowsHeader" xml:space="preserve">
+    <value>Az értesítési terület ezt mutatja (az alkalmazásablak zárva marad)</value>
+  </data>
+  <data name="TraySameAsApp" xml:space="preserve">
+    <value>Ugyanaz a város, mint az alkalmazásban</value>
+  </data>
+  <data name="TrayRestart" xml:space="preserve">
+    <value>FluentWeather újraindítása (alkalmazás és értesítési ikonok)</value>
+  </data>
+  <data name="TrayCloseWindow" xml:space="preserve">
+    <value>FluentWeather ablak bezárása</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Kilépés az értesítési ikonokból</value>
+  </data>
+  <data name="TrayExitTip" xml:space="preserve">
+    <value>Indítsa el újra őket a Start menüből: FluentWeather tray icons</value>
+  </data>
+  <data name="TrayExitBoth" xml:space="preserve">
+    <value>Kilépés az értesítési ikonokból és a FluentWeather bezárása</value>
+  </data>
+  <data name="TrayAppNotInstalled" xml:space="preserve">
+    <value>Az alkalmazás még nincs telepítve. Először futtassa a telepítőjét.</value>
+  </data>
+  <data name="TrayRestartFailed" xml:space="preserve">
+    <value>Nem sikerült újraindítani. Használja a Start menü „Restart FluentWeather” elemét.</value>
+  </data>
 </root>

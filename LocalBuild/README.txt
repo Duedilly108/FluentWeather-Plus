@@ -97,13 +97,13 @@ What the other person should know:
 Direct installer (to share the app you built)
 ---------------------------------------------
 Start menu > "Make FluentWeather direct installer" makes a folder on your Desktop:
-    FluentWeather-Plus\FluentWeather-Plus-Setup-v53.exe
-    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v53.exe
+    FluentWeather-Plus\FluentWeather-Plus-Setup-v55.exe
+    FluentWeather-Plus\FluentWeather-Plus-Uninstall-v55.exe
     FluentWeather-Plus\README.txt
-and a zip of these three files, FluentWeather-Plus-v53.zip. The version is the last
-part of the build number, so build 2.1.0.53 is v53. Each build on your PC adds one.
+and a zip of these three files, FluentWeather-Plus-v55.zip. The version is the last
+part of the build number, so build 2.1.0.55 is v55. Each build on your PC adds one.
 The build number is also in README.txt and in Properties > Details of both programs.
-It also writes FluentWeather-Plus-v53-release-notes.txt on the Desktop. Copy its text into
+It also writes FluentWeather-Plus-v55-release-notes.txt on the Desktop. Copy its text into
 the description of the GitHub release. It has the VirusTotal links of both files filled in.
 
 The setup holds the app as it is built and installed on your PC, signed again with
@@ -126,8 +126,6 @@ What the other person should know:
     Start menu > FluentWeather-Plus > Uninstall FluentWeather-Plus, or Settings > Apps.
     The setup and the uninstaller are not signed by a publisher, so SmartScreen
     shows "Windows protected your PC". They select More info, then Run anyway.
-    Do not run the direct installer on your own PC. It stops there, because your PC
-    already has the build.
 
 
 Where the files go
